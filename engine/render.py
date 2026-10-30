@@ -596,7 +596,7 @@ def render(ep, out):
             if b.get("text"):
                 draw_caption(fr, b["text"], lt, b.get("text_y", 0.66), b.get("text_size", 150))
             draw_hud(fr, ep["day"], clock + lt, ep["subtitle"])
-            if b.get("tick", True) and i % FPS == 0:
+            if b.get("tick", False) and i % FPS == 0:
                 events.append((t0 + lt, "tick", 0.6))
             fl = 0.0
             if b.get("flash_in"):

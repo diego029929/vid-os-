@@ -1,7 +1,7 @@
 # Routine quotidienne : 3 vidéos par jour
 
 Ce fichier est le mode d'emploi de la routine Claude qui tourne chaque matin.
-Objectif : créer 3 épisodes d'une minute et les programmer dans Metricool à
+Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricool à
 **10:00, 12:00 et 17:00 (Europe/Paris)** le jour même, sans intervention humaine.
 
 ## Contexte fixe
@@ -14,7 +14,7 @@ Objectif : créer 3 épisodes d'une minute et les programmer dans Metricool à
   `media` avant d'ajouter les nouvelles (libère de l'espace).
 - On ne commite **jamais** de MP4 sur `main`.
 - Moteur : `python3 engine/render.py episodes/epNN.json /chemin/sortie.mp4`
-  (environ 6 min par épisode d'une minute).
+  (environ 9 min par épisode de 1 min 30).
 - Épisodes = fichiers JSON dans `episodes/`. Lire `episodes/ep01.json` comme
   exemple complet du format (scènes, texte, `*mots rouges*`, personnage,
   choix A/B, `record` + `rewind`, bruitages).
@@ -30,18 +30,37 @@ Objectif : créer 3 épisodes d'une minute et les programmer dans Metricool à
 
 1. `getBrandSettings` (Metricool) : noter les réseaux reliés. TikTok toujours ;
    ajouter Instagram (type `REEL`) seulement s'il apparaît dans `networksData`.
+1b. **Analyser les résultats TikTok** (demande de Fio : adapter les vidéos
+   au fil du temps). Avec `getAnalyticsAvailableMetrics` puis
+   `getAnalyticsDataByMetrics` (réseau tiktok, 14 derniers jours), relever
+   pour chaque vidéo publiée : vues, temps de visionnage moyen / taux de
+   complétion si dispo, likes, commentaires, partages. Mettre à jour
+   `series/insights.md` (tableau par épisode + 3 à 5 conclusions concrètes :
+   quels types d'accroche, de règle, de décor, de durée marchent le mieux).
+   Appliquer ces conclusions aux épisodes du jour et noter dans
+   `insights.md` ce qui a été changé. Ne pas changer de format radicalement
+   sur un seul résultat : il faut une tendance sur plusieurs vidéos.
 2. Lire `series/state.json` et le plan de la série. Écrire les 3 prochains
    épisodes (`episodes/epNN.json`, NN = numéro global sur 2 chiffres ou plus) :
-   - durée totale entre **58 et 62 secondes** : le moteur allonge un plan
+   - durée totale entre **85 et 95 secondes** : le moteur allonge un plan
      si la voix off est plus longue que lui et affiche « durée totale » ;
      ajuster le script si on sort de la fourchette ;
    - chaque plan avec `text` est lu par la voix off (effet mégaphone ajouté
      par le moteur). `"voice": "..."` remplace le texte lu, `"voice": ""`
      coupe la voix sur ce plan (ex. bruitages « TOC TOC ») ;
-   - accroche forte dans les 2 premières secondes ;
-   - une règle, un choix A/B avec compte à rebours, la mauvaise option jouée
-     puis `rewind`, la bonne option, un suspense, puis « ABONNE-TOI POUR LA
-     SUITE » et « A OU B ? RÉPONDS EN COMMENTAIRE » ;
+   - pas de bip à chaque seconde : ne jamais mettre `"tick": true`. Le
+     compte à rebours visuel du choix (`countdown`) reste ;
+   - accroche forte dans les 2 premières secondes ; si l'épisode précédent
+     finissait sur une question, commencer par sa réponse (« Ceux qui ont
+     dit B avaient raison... ») ;
+   - structure : accroche, mise en place, règle, situation, **choix A/B**
+     avec compte à rebours, mauvaise option jouée puis `rewind`, bonne
+     option, développement (l'histoire avance, nouvelle tension), suspense ;
+   - **fin cohérente** : la question finale « A OU B ? RÉPONDS EN
+     COMMENTAIRE » doit porter sur un **nouveau dilemme non résolu** (le
+     prochain choix de l'histoire, montré avec les cartes A/B sans
+     réponse), jamais sur un choix déjà révélé dans la vidéo. Puis
+     « ABONNE-TOI POUR LA SUITE » ;
    - remplir `title` (≤ 80 caractères, sert de titre TikTok) et `caption`
      (texte du post avec 4 à 6 hashtags) ;
    - garder la continuité (jour, horloge `clock_start`, personnage).
@@ -53,7 +72,7 @@ Objectif : créer 3 épisodes d'une minute et les programmer dans Metricool à
    Il est permis d'ajouter des décors dans `engine/render.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
 4. Rendre les 3 vidéos (le moteur doit afficher `voix off : piper`) dans un dossier temporaire. Pour chacune, vérifier
-   avec ffprobe la durée (58–62 s) et faire une planche contact
+   avec ffprobe la durée (85–95 s) et faire une planche contact
    (`ffmpeg -vf "fps=1/2.5,scale=216:-1,tile=6x4"`) puis la **regarder** :
    texte lisible, rien de coupé, le texte ne cache pas le visage du personnage, pas de mot avec un astérisque visible.
    Corriger et relancer si besoin.
@@ -76,7 +95,7 @@ Objectif : créer 3 épisodes d'une minute et les programmer dans Metricool à
    - `tiktokData` : `{"title": <title>, "privacyOption": "PUBLIC_TO_EVERYONE", "isAigc": true}` ;
    - si Instagram : `instagramData` : `{"type": "REEL", "isAiGenerated": true}`.
    Vérifier dans la réponse que `media` pointe vers `static.metricool.com`.
-7. Commiter sur `main` les JSON d'épisodes, `series/state.json` (incrémenter
+7. Commiter sur `main` les JSON d'épisodes, `series/insights.md`, `series/state.json` (incrémenter
    les compteurs, ajouter les 3 épisodes à `published`) et les éventuels
    changements du moteur, puis `git push origin main`.
 7b. Si la programmation Metricool est refusée par la vérification des
