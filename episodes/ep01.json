@@ -4,14 +4,14 @@
  "subtitle": "RÈGLE N°1 · LE CIEL VERT",
  "clock_start": 22140,
  "title": "Le ciel devient vert. Quelqu'un frappe. Tu fais quoi ?",
- "caption": "Jour 3 après la fin. La radio a donné une seule règle... A ou B ? 👇 #histoire #apocalypse #survie #creepy #choix",
+ "caption": "Jour 3 après la fin. Le ciel devient vert et quelqu'un frappe... Tu ouvres ou pas ? A ou B 👇 #histoire #apocalypse #survie #creepy #choix #pourtoi",
  "beats": [
   {
    "scene": "city",
    "params": {
     "sky": "rouge"
    },
-   "dur": 2.2,
+   "dur": 2.6,
    "text": "LE MONDE A FINI IL Y A *3 JOURS*.",
    "char": {
     "expr": "suspicious",
@@ -62,6 +62,33 @@
    "text": "QUI RÉPÈTE DES *RÈGLES*.",
    "text_y": 0.8,
    "zoom": 1.12
+  },
+  {
+   "scene": "radio",
+   "dur": 1.7,
+   "text": "« ICI LA STATION *7*. »",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "radio",
+   "dur": 1.9,
+   "text": "« SI VOUS ENTENDEZ CE MESSAGE... »",
+   "text_y": 0.8,
+   "zoom": 1.1
+  },
+  {
+   "scene": "radio",
+   "dur": 2.0,
+   "text": "« VOICI LES RÈGLES POUR *SURVIVRE*. »",
+   "text_y": 0.8,
+   "zoom": 1.14
   },
   {
    "scene": "dark",
@@ -115,6 +142,37 @@
    "params": {
     "sky": "nuit"
    },
+   "dur": 2.0,
+   "text": "TU AS BARRICADÉ LA *FENÊTRE*.",
+   "text_y": 0.4,
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "params": {
+    "sky": "nuit"
+   },
+   "dur": 2.2,
+   "text": "IL TE RESTE *2 JOURS* DE NOURRITURE.",
+   "text_y": 0.4,
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "bunker",
+   "params": {
+    "sky": "nuit"
+   },
    "dur": 1.5,
    "text": "CE SOIR...",
    "char": {
@@ -123,7 +181,7 @@
     "scale": 0.8,
     "y": 0.9
    },
-   "text_y": 0.48
+   "text_y": 0.4
   },
   {
    "scene": "bunker",
@@ -146,7 +204,7 @@
      0.8
     ]
    ],
-   "text_y": 0.48
+   "text_y": 0.4
   },
   {
    "scene": "door",
@@ -175,6 +233,24 @@
    "text_y": 0.86,
    "text_size": 110,
    "zoom": 1.12
+  },
+  {
+   "scene": "door",
+   "params": {
+    "sky": "vert"
+   },
+   "dur": 2.4,
+   "text": "CETTE VOIX... C'EST CELLE DE *TA SŒUR*.",
+   "text_y": 0.84,
+   "text_size": 110,
+   "zoom": 1.18,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ]
   },
   {
    "scene": "dark",
@@ -309,6 +385,25 @@
   },
   {
    "scene": "hide",
+   "dur": 1.8,
+   "text": "TU RETIENS TA *RESPIRATION*.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "closed",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "hide",
    "dur": 1.6,
    "text": "LES COUPS *S'ARRÊTENT*.",
    "text_y": 0.32,
@@ -343,7 +438,7 @@
      10
     ]
    },
-   "dur": 2.4,
+   "dur": 3.0,
    "text": "« JE SAIS QUE TU ES *LÀ*. »",
    "text_y": 0.5,
    "glitch": 0.15,
@@ -358,13 +453,19 @@
   },
   {
    "scene": "dark",
-   "dur": 2.0,
+   "dur": 2.5,
    "text": "RÈGLE N°2 DANS LA *PROCHAINE* VIDÉO.",
    "text_y": 0.5
   },
   {
    "scene": "dark",
-   "dur": 2.5,
+   "dur": 2.0,
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "text_y": 0.5
+  },
+  {
+   "scene": "dark",
+   "dur": 3.0,
    "text": "ET TOI : *A* OU *B* ? RÉPONDS EN COMMENTAIRE",
    "text_y": 0.5,
    "text_size": 120

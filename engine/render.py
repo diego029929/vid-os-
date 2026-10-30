@@ -483,7 +483,7 @@ def render(ep, out):
     wav = os.path.join(tmp, "a.wav")
     proc = subprocess.Popen(
         ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-         "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "24",
+         "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "slow", "-crf", "30",
          "-pix_fmt", "yuv420p", os.path.join(tmp, "v.mp4")],
         stdin=subprocess.PIPE)
     bg_cache, char_cache, recorded, rec_clock = {}, {}, {}, {}
