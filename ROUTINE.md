@@ -79,5 +79,9 @@ Objectif : créer 3 épisodes d'une minute et les programmer dans Metricool à
 7. Commiter sur `main` les JSON d'épisodes, `series/state.json` (incrémenter
    les compteurs, ajouter les 3 épisodes à `published`) et les éventuels
    changements du moteur, puis `git push origin main`.
+7b. Si la programmation Metricool est refusée par la vérification des
+   permissions, demander à Fio avec UNE carte de décision (« Publier les 3
+   vidéos du jour ? » Oui / Non), puis programmer dès son accord, en
+   décalant vers le prochain horaire libre si un créneau est passé.
 8. En cas d'échec (rendu, push ou Metricool), ne rien publier de bancal :
    s'arrêter et expliquer le problème dans le compte rendu de la session.
