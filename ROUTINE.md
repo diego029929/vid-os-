@@ -23,11 +23,21 @@ Objectif : créer 3 épisodes d'une minute et les programmer dans Metricool à
 
 ## Étapes
 
+0. Préparer la voix off : `pip install -q piper-tts espeakng-loader` puis
+   `./engine/get_voice.sh`. Si le téléchargement échoue (huggingface.co
+   bloqué), NE PAS publier : s'arrêter et le signaler (la voix de secours
+   eSpeak est trop robotique pour être publiée).
+
 1. `getBrandSettings` (Metricool) : noter les réseaux reliés. TikTok toujours ;
    ajouter Instagram (type `REEL`) seulement s'il apparaît dans `networksData`.
 2. Lire `series/state.json` et le plan de la série. Écrire les 3 prochains
    épisodes (`episodes/epNN.json`, NN = numéro global sur 2 chiffres ou plus) :
-   - durée totale entre **58 et 62 secondes** (somme des `dur`) ;
+   - durée totale entre **58 et 62 secondes** : le moteur allonge un plan
+     si la voix off est plus longue que lui et affiche « durée totale » ;
+     ajuster le script si on sort de la fourchette ;
+   - chaque plan avec `text` est lu par la voix off (effet mégaphone ajouté
+     par le moteur). `"voice": "..."` remplace le texte lu, `"voice": ""`
+     coupe la voix sur ce plan (ex. bruitages « TOC TOC ») ;
    - accroche forte dans les 2 premières secondes ;
    - une règle, un choix A/B avec compte à rebours, la mauvaise option jouée
      puis `rewind`, la bonne option, un suspense, puis « ABONNE-TOI POUR LA
@@ -42,7 +52,7 @@ Objectif : créer 3 épisodes d'une minute et les programmer dans Metricool à
    `series/apres-la-fin.md`, 7 à 10 épisodes) et mettre à jour `state.json`.
    Il est permis d'ajouter des décors dans `engine/render.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
-4. Rendre les 3 vidéos dans un dossier temporaire. Pour chacune, vérifier
+4. Rendre les 3 vidéos (le moteur doit afficher `voix off : piper`) dans un dossier temporaire. Pour chacune, vérifier
    avec ffprobe la durée (58–62 s) et faire une planche contact
    (`ffmpeg -vf "fps=1/2.5,scale=216:-1,tile=6x4"`) puis la **regarder** :
    texte lisible, rien de coupé, le texte ne cache pas le visage du personnage, pas de mot avec un astérisque visible.

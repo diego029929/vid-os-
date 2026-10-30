@@ -451,7 +451,7 @@ SFX = {
 }
 
 
-def build_audio(total, events, path):
+def build_audio(total, events, path, voice_track=None):
     n = int(total * SR)
     t = np.arange(n) / SR
     # ambiance : drone grave qui respire + souffle
@@ -466,6 +466,11 @@ def build_audio(total, events, path):
         if i < n:
             out[i:j] += s[: j - i]
     out = np.tanh(out * 1.2) * 0.85
+    if voice_track is not None:
+        # on baisse l'ambiance pendant que la voix parle
+        env = np.convolve(np.abs(voice_track[:n]) > 0.02, np.ones(SR // 5) / (SR // 5), mode="same")
+        out = out * (1 - 0.45 * np.clip(env * 3, 0, 1)) + voice_track[:n] * 1.6
+        out = np.clip(out, -1, 1)
     pcm = (out * 32767).astype(np.int16)
     with wave.open(path, "wb") as wf:
         wf.setnchannels(1)
@@ -476,9 +481,43 @@ def build_audio(total, events, path):
 
 # ---------------------------------------------------------------- rendu
 
+def prepare_voice(beats):
+    """Synthétise la voix off de chaque plan et allonge les plans trop courts."""
+    import voice
+    clips = {}
+    for i, b in enumerate(beats):
+        if b.get("type") == "rewind":
+            continue
+        line = b.get("voice", b.get("text", ""))
+        if not line:
+            continue
+        audio = voice.synth(line)
+        clips[i] = audio
+        need = round(len(audio) / SR + 0.35, 2)
+        if b["dur"] < need:
+            b["dur"] = need
+    print(f"voix off : {voice.engine_name()}, {len(clips)} répliques")
+    return clips
+
+
+def voice_track(beats, clips, total, tmp):
+    import voice
+    track = np.zeros(int(total * SR) + SR, np.float32)
+    t0 = 0.0
+    for i, b in enumerate(beats):
+        if i in clips:
+            a = clips[i]
+            j = int((t0 + 0.12) * SR)
+            track[j:j + len(a)] += a[: len(track) - j]
+        t0 += b["dur"]
+    return voice.megaphone(track, tmp)
+
+
 def render(ep, out):
     beats = ep["beats"]
+    clips = prepare_voice(beats) if ep.get("voiceover", True) else {}
     total = sum(b["dur"] for b in beats)
+    print(f"durée totale : {total:.1f} s")
     tmp = tempfile.mkdtemp()
     wav = os.path.join(tmp, "a.wav")
     proc = subprocess.Popen(
@@ -574,7 +613,7 @@ def render(ep, out):
         t0 += b["dur"]
     proc.stdin.close()
     proc.wait()
-    build_audio(total, events, wav)
+    build_audio(total, events, wav, voice_track(beats, clips, total, tmp) if clips else None)
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", os.path.join(tmp, "v.mp4"), "-i", wav,
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", out], check=True)
 

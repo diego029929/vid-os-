@@ -221,7 +221,8 @@
      0.05,
      1.0
     ]
-   ]
+   ],
+   "voice": ""
   },
   {
    "scene": "door",
@@ -468,7 +469,8 @@
    "dur": 3.0,
    "text": "ET TOI : *A* OU *B* ? RÉPONDS EN COMMENTAIRE",
    "text_y": 0.5,
-   "text_size": 120
+   "text_size": 120,
+   "voice": "Et toi, A ou B ? Réponds en commentaire."
   }
  ]
 }
