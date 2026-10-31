@@ -24,7 +24,7 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
 ## Étapes
 
 0. Préparer la voix off : `pip install -q piper-tts espeakng-loader` puis
-   `./engine/get_voice.sh`. Si le téléchargement échoue (huggingface.co
+   `./engine/get_voice.sh` (voix et hauteur réglées dans `engine/voice_config.json`). Si le téléchargement échoue (huggingface.co
    bloqué), NE PAS publier : s'arrêter et le signaler (la voix de secours
    eSpeak est trop robotique pour être publiée).
 

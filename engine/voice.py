@@ -5,6 +5,7 @@ engine/get_voice.sh dans assets/voices/). Secours : eSpeak NG (plus
 robotique), utilisé seulement si le modèle Piper est absent.
 """
 import ctypes
+import json
 import os
 import re
 import subprocess
@@ -13,12 +14,21 @@ import wave
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL = os.path.join(ROOT, "assets", "voices", "fr_FR-siwis-medium.onnx")
+with open(os.path.join(ROOT, "engine", "voice_config.json")) as _fh:
+    CONFIG = json.load(_fh)
+# VOICE / VOICE_PITCH en variables d'environnement permettent de comparer des voix
+VOICE = os.environ.get("VOICE", CONFIG["voice"])
+PITCH = float(os.environ.get("VOICE_PITCH", CONFIG.get("pitch", 1.0)))
+SPEED = float(CONFIG.get("speed", 1.0))
+MODEL = os.path.join(ROOT, "assets", "voices", VOICE + ".onnx")
 SR = 44100
 
-# effet mégaphone : bande étroite, saturation douce, petit écho
-MEGAPHONE = ("highpass=f=420,lowpass=f=3400,volume=7dB,"
-             "asoftclip=type=tanh,aecho=0.8:0.5:22:0.22,volume=-3dB")
+# voix plus grave : on baisse la hauteur sans changer le débit (pitch < 1)
+DEEPEN = f"asetrate={SR}*{PITCH},aresample={SR},atempo={1 / PITCH * SPEED:.4f},"
+# effet mégaphone léger : on garde les graves pour une voix profonde,
+# saturation douce et petit écho
+MEGAPHONE = (DEEPEN + "highpass=f=160,lowpass=f=4200,bass=g=4:f=140,volume=5dB,"
+             "asoftclip=type=tanh,aecho=0.8:0.45:22:0.18,volume=-3dB")
 
 
 def clean(text):
