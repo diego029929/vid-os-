@@ -30,16 +30,37 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
 
 1. `getBrandSettings` (Metricool) : noter les réseaux reliés. TikTok toujours ;
    ajouter Instagram (type `REEL`) seulement s'il apparaît dans `networksData`.
-1b. **Analyser les résultats TikTok** (demande de Fio : adapter les vidéos
-   au fil du temps). Avec `getAnalyticsAvailableMetrics` puis
-   `getAnalyticsDataByMetrics` (réseau tiktok, 14 derniers jours), relever
-   pour chaque vidéo publiée : vues, temps de visionnage moyen / taux de
-   complétion si dispo, likes, commentaires, partages. Mettre à jour
-   `series/insights.md` (tableau par épisode + 3 à 5 conclusions concrètes :
-   quels types d'accroche, de règle, de décor, de durée marchent le mieux).
-   Appliquer ces conclusions aux épisodes du jour et noter dans
-   `insights.md` ce qui a été changé. Ne pas changer de format radicalement
-   sur un seul résultat : il faut une tendance sur plusieurs vidéos.
+1b. **Analyser les résultats et adapter** (demande de Fio : améliorer les
+   vidéos selon les stats).
+   - Métriques (`getAnalyticsDataByMetrics`, 14 derniers jours) :
+     TikTok `TKPO02, TKPO05, TKPO06, TKPO07, TKPO08, TKPO09, TKPO10,
+     TKPO11, TKPO13, TKPO15, TKPO16` ; Instagram Reels `IGRE02, IGRE03,
+     IGRE23, IGRE11, IGRE10, IGRE07, IGRE21, IGRE12, IGRE24, IGRE27,
+     IGRE28`. Metricool met 24 à 48 h à remonter une vidéo TikTok : ne
+     juger une vidéo qu'après 48 h.
+   - Rapprocher chaque ligne d'un épisode (date/heure + légende) et remplir
+     le tableau de `series/insights.md` : vues, likes, commentaires,
+     partages, taux de vue complète / temps moyen si dispo, et pour
+     Instagram vues, rétention, partages, enregistrements.
+   - **Score** de chaque vidéo = vues × (1 + 5 × (commentaires + partages)
+     / vues). Comparer à la médiane des vidéos de la série.
+   - **Test du jour** : chaque jour, les 3 vidéos testent UNE seule
+     variable à la fois (ex. type d'accroche : question / phrase choc /
+     « tu as 3 secondes » ; décor d'ouverture ; longueur 75 vs 90 s ;
+     légende courte vs longue). Noter dans `insights.md` la variable
+     testée et la version utilisée par chaque vidéo.
+   - **Règles de décision** (sur au moins 3 vidéos jugées) :
+     - une version dont le score dépasse la médiane de +30 % sur 2 tests
+       devient la règle par défaut (l'écrire dans « Règles actives ») ;
+     - si le taux de vue complète < 20 % ou le temps moyen < 40 % de la
+       durée : raccourcir de 10 s et accélérer les 10 premières secondes ;
+     - si le temps moyen > 70 % de la durée : on peut allonger de 10 s ;
+     - si les commentaires sont faibles (< 1 % des vues) : rendre le
+       dilemme final plus clivant et le poser en début ET en fin de vidéo ;
+     - si un épisode fait < 50 % de la médiane : noter pourquoi (accroche,
+       sujet) et éviter ce type le lendemain.
+   - Toujours appliquer les « Règles actives » de `insights.md` aux
+     épisodes du jour, et écrire en une ligne ce qui a changé.
 2. Lire `series/state.json` et le plan de la série. Écrire les 3 prochains
    épisodes (`episodes/epNN.json`, NN = numéro global sur 2 chiffres ou plus) :
    - durée totale entre **85 et 95 secondes** : le moteur allonge un plan
@@ -61,6 +82,9 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
      prochain choix de l'histoire, montré avec les cartes A/B sans
      réponse), jamais sur un choix déjà révélé dans la vidéo. Puis
      « ABONNE-TOI POUR LA SUITE » ;
+   - commencer `title` par « Partie N · » (N = numéro d'épisode dans la
+     série) et mettre « PARTIE N » dans `subtitle` : les séries numérotées
+     poussent à regarder les autres épisodes ;
    - remplir `title` (≤ 80 caractères, sert de titre TikTok) et `caption`
      (texte du post avec 4 à 6 hashtags) ;
    - garder la continuité (jour, horloge `clock_start`, personnage).

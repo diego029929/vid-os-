@@ -31,6 +31,18 @@ Vidéos plus anciennes du compte (avant la série, relevé du 31/10 sur 14 jours
 Metricool ne remonte pas encore le temps de visionnage ni le taux de
 complétion pour ce compte.
 
+## Meilleurs horaires TikTok (Metricool, audience du compte)
+
+Pics chaque jour à **10 h**, **12 h** et **18 h** (18 h > 17 h tous les jours ;
+creux à 11 h, 13 h-14 h et après 21 h).
+
+## Règles actives
+
+- Vidéos de 85 à 95 s (les plus longues du compte font au moins aussi bien).
+- Question finale simple « A ou B ? » sur un nouveau dilemme.
+- Ouverture par la réponse de l'épisode précédent.
+- Titre « Partie N · ... » et « PARTIE N » à l'écran (à partir du 01/11).
+
 ## Conclusions et changements appliqués
 
 ### 31/10 (épisodes 2, 3, 4)
