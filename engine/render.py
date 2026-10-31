@@ -124,7 +124,26 @@ def scene_city(p):
         x = rnd.uniform(w * 0.3, w * 0.7)
         y = rnd.uniform(h * 0.78, h * 0.95)
         d.line([(x, y), (x + rnd.uniform(-90, 90), y + rnd.uniform(20, 80))], fill=(10, 8, 10), width=8)
+    if p.get("figure"):
+        # silhouette immobile dans la rue : [x, taille]
+        fx, fs = p["figure"]
+        silhouette(d, w * fx, h * 0.9, h * 0.3 * fs)
     return img
+
+
+def silhouette(d, x, foot_y, height, col=(4, 3, 5)):
+    """Silhouette noire debout, bras le long du corps."""
+    hr = height * 0.11
+    top = foot_y - height
+    lw = max(6, int(height * 0.045))
+    d.ellipse([x - hr, top, x + hr, top + 2 * hr], fill=col)
+    neck, hip = top + 2 * hr, top + height * 0.58
+    d.line([(x, neck), (x, hip)], fill=col, width=lw)
+    for sx in (-1, 1):
+        d.line([(x, neck + hr * 0.6), (x + sx * hr * 1.1, hip + hr * 0.4)], fill=col, width=lw)
+        d.line([(x, hip), (x + sx * hr * 0.8, foot_y)], fill=col, width=lw)
+        # deux yeux pâles
+        d.ellipse([x + sx * hr * 0.4 - hr * 0.12, top + hr * 0.85, x + sx * hr * 0.4 + hr * 0.12, top + hr * 1.1], fill=(235, 235, 220))
 
 
 def scene_bunker(p):
@@ -143,6 +162,11 @@ def scene_bunker(p):
     if sky == "vert":
         img = glow(img, (w * 0.5, h * 0.3), w * 0.9, (90, 230, 90), 0.35)
         d = ImageDraw.Draw(img)
+    if p.get("light"):
+        # lumière blanche qui approche derrière la fenêtre (0 à 1)
+        k = p["light"]
+        img = glow(img, (w * 0.62, h * 0.3), w * (0.25 + 0.5 * k), (240, 240, 210), 0.35 + 0.5 * k)
+        d = ImageDraw.Draw(img)
     fr = (55, 50, 58)
     d.rectangle([wx0 - 24, wy0 - 24, wx1 + 24, wy1 + 24], outline=fr, width=40)
     d.line([(w * 0.5, wy0), (w * 0.5, wy1)], fill=fr, width=26)
@@ -157,6 +181,9 @@ def scene_bunker(p):
     d.rounded_rectangle([w * 0.66, h * 0.545, w * 0.88, h * 0.6], radius=30, fill=(80, 70, 60))
     d.ellipse([w * 0.68, h * 0.553, w * 0.75, h * 0.592], fill=(30, 28, 26))
     d.rectangle([w * 0.77, h * 0.56, w * 0.86, h * 0.575], fill=(255, 190, 90))
+    if p.get("dark"):
+        # toutes les lumières éteintes (0 à 1)
+        img = Image.blend(img, Image.new("RGB", img.size, (0, 0, 0)), p["dark"])
     return img
 
 

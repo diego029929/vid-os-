@@ -2,9 +2,36 @@
   "current_series": "apres-la-fin",
   "series_file": "series/apres-la-fin.md",
   "series_episode_count": 9,
-  "next_episode_in_series": 2,
-  "next_global_episode": 2,
+  "next_episode_in_series": 5,
+  "next_global_episode": 5,
   "published": [
-    {"global": 1, "series": "apres-la-fin", "episode": 1, "file": "episodes/ep01.json", "slot": "2026-10-30T13:31:00 Europe/Paris"}
+    {
+      "global": 1,
+      "series": "apres-la-fin",
+      "episode": 1,
+      "file": "episodes/ep01.json",
+      "slot": "2026-10-30T13:31:00 Europe/Paris"
+    },
+    {
+      "global": 2,
+      "series": "apres-la-fin",
+      "episode": 2,
+      "file": "episodes/ep02.json",
+      "slot": "2026-10-31T10:00:00 Europe/Paris"
+    },
+    {
+      "global": 3,
+      "series": "apres-la-fin",
+      "episode": 3,
+      "file": "episodes/ep03.json",
+      "slot": "2026-10-31T12:00:00 Europe/Paris"
+    },
+    {
+      "global": 4,
+      "series": "apres-la-fin",
+      "episode": 4,
+      "file": "episodes/ep04.json",
+      "slot": "2026-10-31T17:00:00 Europe/Paris"
+    }
   ]
 }

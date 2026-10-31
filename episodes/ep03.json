@@ -1,0 +1,622 @@
+{
+ "series": "APRÈS LA FIN",
+ "day": 4,
+ "subtitle": "RÈGLE N°3 · LE SILENCE",
+ "clock_start": 10920,
+ "title": "La radio se tait. Une lumière approche. Lampe ou noir ?",
+ "caption": "Jour 4 après la fin. La radio s'est coupée net et une lumière approche de l'abri... Tu allumes ou tu restes dans le noir ? A ou B 👇 #histoire #apocalypse #survie #horreur #choix #pourtoi",
+ "beats": [
+  {
+   "scene": "bunker",
+   "dur": 3.43,
+   "text": "CEUX QUI ONT DIT *B* AVAIENT RAISON.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.6
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "flash_in": true,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.86,
+   "text": "MAIS TU NE LE SAIS PAS *ENCORE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.6
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.57,
+   "text": "3 H DU MATIN. JOUR *4*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "radio",
+   "dur": 2.86,
+   "text": "LA RADIO NE DIT *PLUS RIEN*.",
+   "text_y": 0.8,
+   "zoom": 1.1
+  },
+  {
+   "scene": "radio",
+   "dur": 3.15,
+   "text": "PAS UN MOT. PAS UN GRÉSILLEMENT.",
+   "text_y": 0.8,
+   "text_size": 120,
+   "zoom": 1.14
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.57,
+   "text": "TU RELIS TON *CARNET*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.57,
+   "text": "LA STATION 7 L'AVAIT DIT...",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "dark",
+   "dur": 1.86,
+   "text": "RÈGLE N°3 :",
+   "text_y": 0.5,
+   "text_size": 170,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.57,
+   "text": "SI LA RADIO *SE TAIT*,",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     60,
+     60,
+     60
+    ]
+   }
+  },
+  {
+   "scene": "dark",
+   "dur": 2.86,
+   "text": "ÉTEINS *TOUTES* LES LUMIÈRES.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     60,
+     60,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 1.86,
+   "text": "*TOUTES*.",
+   "text_y": 0.5,
+   "text_size": 170,
+   "params": {
+    "glow": [
+     60,
+     60,
+     60
+    ]
+   },
+   "zoom": 1.15
+  },
+  {
+   "scene": "bunker",
+   "dur": 3.15,
+   "text": "DEHORS, LA *LUMIÈRE* SE RAPPROCHE.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.75
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.86,
+   "text": "BLANCHE. LENTE. *SANS BRUIT*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.85
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.12
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.57,
+   "text": "PEUT-ÊTRE DES *SECOURS* ?",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.85
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 3.43,
+   "text": "ET TA PETITE LAMPE EST *ENCORE ALLUMÉE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.9
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9,
+    "tremble": true
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.0,
+   "text": "TU FAIS QUOI ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "FAIRE SIGNE AVEC TA LAMPE",
+    "b": "TOUT ÉTEINDRE",
+    "countdown": 3
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ],
+    [
+     "heart",
+     1,
+     1.0
+    ],
+    [
+     "heart",
+     2,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "FAIRE SIGNE AVEC TA LAMPE",
+    "b": "TOUT ÉTEINDRE",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.29,
+   "text": "TU AGITES TA LAMPE...",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 1.0
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.2,
+   "record": "bad"
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.86,
+   "text": "LA LUMIÈRE *S'ARRÊTE*. ELLE T'A VU.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 1.0
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "shake": 10,
+   "record": "bad"
+  },
+  {
+   "scene": "dark",
+   "dur": 2.29,
+   "text": "*MAUVAIS CHOIX*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     255,
+     40,
+     40
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "scale": 0.7,
+    "y": 0.98
+   },
+   "flash_in": true,
+   "glitch": 0.4,
+   "glitch_end": true,
+   "sfx": [
+    [
+     "glitch",
+     0,
+     1.0
+    ],
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "bad"
+  },
+  {
+   "type": "rewind",
+   "of": "bad",
+   "dur": 1.5,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "FAIRE SIGNE AVEC TA LAMPE",
+    "b": "TOUT ÉTEINDRE",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.29,
+   "text": "TU ÉTEINS *TOUT*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.9,
+    "dark": 0.6
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.5
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.29,
+   "text": "TU NE BOUGES PLUS.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.9,
+    "dark": 0.7
+   },
+   "char": {
+    "expr": "closed",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 3.15,
+   "text": "LA LUMIÈRE PASSE *DEVANT LA FENÊTRE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 1.0,
+    "dark": 0.5
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.15,
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.15,
+   "text": "ELLE HÉSITE...",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 1.0,
+    "dark": 0.5
+   },
+   "char": {
+    "expr": "closed",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.43,
+   "text": "PUIS ELLE *S'ÉLOIGNE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.4,
+    "dark": 0.6
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.29,
+   "text": "TU RESPIRES ENFIN.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "dark": 0.7
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "dark",
+   "dur": 2.0,
+   "text": "CRAC.",
+   "text_y": 0.5,
+   "text_size": 170,
+   "shake": 14,
+   "voice": "",
+   "sfx": [
+    [
+     "knock",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.86,
+   "text": "DES *PAS*... SUR LE TOIT.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     120,
+     10,
+     10
+    ]
+   },
+   "sfx": [
+    [
+     "knock",
+     0.3,
+     0.5
+    ]
+   ],
+   "zoom": 1.12
+  },
+  {
+   "scene": "dark",
+   "dur": 2.29,
+   "text": "LENTS. LOURDS.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     120,
+     10,
+     10
+    ]
+   },
+   "sfx": [
+    [
+     "knock",
+     0.2,
+     0.5
+    ]
+   ]
+  },
+  {
+   "scene": "hide",
+   "dur": 3.43,
+   "text": "ILS S'ARRÊTENT PILE *AU-DESSUS DE TOI*.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "scared",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92,
+    "tremble": true
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ],
+   "zoom": 1.15
+  },
+  {
+   "scene": "dark",
+   "dur": 3.6,
+   "text": "TU FAIS QUOI ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "MONTER VOIR CE QUE C'EST",
+    "b": "NE PAS BOUGER JUSQU'AU JOUR"
+   },
+   "voice": "Tu montes voir ce que c'est, ou tu ne bouges pas jusqu'au jour ?",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.43,
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "text_y": 0.5,
+   "text_size": 120
+  },
+  {
+   "scene": "dark",
+   "dur": 3.15,
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "text_y": 0.5
+  }
+ ]
+}
