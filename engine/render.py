@@ -412,7 +412,7 @@ _yy, _xx = np.mgrid[0:H, 0:W]
 _VIG = (1 - 0.55 * np.clip(((_xx - W / 2) / (W * 0.75)) ** 2 + ((_yy - H / 2) / (H * 0.7)) ** 2, 0, 1))[..., None].astype(np.float32)
 
 
-def finish(frame, n, glitch=0.0, vhs=False, flash=0.0):
+def finish(frame, n, glitch=0.0, vhs=False, flash=0.0, flash_level=255):
     a = np.asarray(frame.convert("RGB")).astype(np.float32)
     a *= _VIG
     g = _GRAIN[n % len(_GRAIN)]
@@ -431,7 +431,7 @@ def finish(frame, n, glitch=0.0, vhs=False, flash=0.0):
         a[y:y + 30] = a[y:y + 30] * 0.4 + 120
         a[..., 1] *= 0.92
     if flash > 0:
-        a = a * (1 - flash) + 255 * flash
+        a = a * (1 - flash) + flash_level * flash
     return np.clip(a, 0, 255).astype(np.uint8)
 
 
@@ -631,7 +631,8 @@ def render(ep, out):
             g = b.get("glitch", 0.0)
             if b.get("glitch_end"):
                 g = max(g, max(0.0, (lt - (b["dur"] - 0.4)) / 0.4))
-            arr = finish(fr, n, glitch=g, flash=fl)
+            # jamais d'écran blanc au tout début : le premier plan s'ouvre depuis le noir
+            arr = finish(fr, n, glitch=g, flash=fl, flash_level=0 if t0 == 0 else 255)
             if rec is not None:
                 rec.append(arr)
             proc.stdin.write(arr.tobytes())

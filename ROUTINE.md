@@ -71,7 +71,10 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
      coupe la voix sur ce plan (ex. bruitages « TOC TOC ») ;
    - pas de bip à chaque seconde : ne jamais mettre `"tick": true`. Le
      compte à rebours visuel du choix (`countdown`) reste ;
-   - accroche forte dans les 2 premières secondes ; si l'épisode précédent
+   - accroche forte dans les 2 premières secondes, **jamais de fond blanc
+     au début** (demande de Fio : le moteur ouvre le premier plan depuis le
+     noir ; ne pas utiliser de décor clair ni de flash blanc dans les 3
+     premières secondes) ; si l'épisode précédent
      finissait sur une question, commencer par sa réponse (« Ceux qui ont
      dit B avaient raison... ») ;
    - structure : accroche, mise en place, règle, situation, **choix A/B**
