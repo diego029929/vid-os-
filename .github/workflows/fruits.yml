@@ -1,0 +1,99 @@
+name: Vidéos fruits
+
+# Rend les épisodes fruits (images IA gratuites + voix edge-tts + sous-titres)
+# et publie les MP4 sur la branche media-fruits, d'où Metricool les récupère :
+# https://raw.githubusercontent.com/diego029929/vid-os-/media-fruits/<id>.mp4
+
+on:
+  push:
+    paths:
+      - "fruits/episodes/**"
+  workflow_dispatch:
+    inputs:
+      episodes:
+        description: "Épisodes à rendre (ex. f001 f002), vide = ceux du dernier push"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fruits-render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Outils
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg libass9 > /dev/null
+          pip install -q edge-tts
+
+      - name: Choisir les épisodes
+        id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.episodes }}" ]; then
+            list=""
+            for e in ${{ github.event.inputs.episodes }}; do list="$list fruits/episodes/$e.json"; done
+          else
+            before="${{ github.event.before }}"
+            if [ -n "$before" ] && git cat-file -e "$before" 2>/dev/null; then
+              list=$(git diff --name-only --diff-filter=AM "$before" "${{ github.sha }}" -- fruits/episodes/ | grep '\.json$' || true)
+            else
+              list=$(git diff --name-only --diff-filter=AM origin/main "${{ github.sha }}" -- fruits/episodes/ | grep '\.json$' || true)
+            fi
+          fi
+          echo "list=$(echo $list)" >> "$GITHUB_OUTPUT"
+          echo "Épisodes : $list"
+
+      - name: Rendu
+        if: steps.pick.outputs.list != ''
+        env:
+          POLLINATIONS_TOKEN: ${{ secrets.POLLINATIONS_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          mkdir -p out
+          for f in ${{ steps.pick.outputs.list }}; do
+            id=$(basename "$f" .json)
+            python3 fruits/render.py "$f" "out/$id.mp4"
+            ffmpeg -v error -y -i "out/$id.mp4" -vf "fps=1/2.5,scale=216:-1,tile=6x4" -frames:v 1 "out/$id-planche.jpg"
+            ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "out/$id.mp4" > "out/$id.duree.txt"
+          done
+          ls -la out
+
+      - name: Publier sur media-fruits
+        if: steps.pick.outputs.list != ''
+        run: |
+          git config user.name "vid-os bot"
+          git config user.email "actions@users.noreply.github.com"
+          mv out /tmp/out
+          if git ls-remote --exit-code origin media-fruits > /dev/null; then
+            git fetch --depth 1 origin media-fruits
+            git checkout -B media-fruits FETCH_HEAD
+          else
+            git checkout --orphan media-fruits
+            git rm -rqf .
+          fi
+          # garde seulement les 8 derniers épisodes (Metricool copie le fichier en programmant)
+          ls f*.mp4 2>/dev/null | sort | head -n -8 | while read v; do git rm -q "$v" "${v%.mp4}-planche.jpg" "${v%.mp4}.duree.txt" 2>/dev/null || rm -f "$v"; done
+          cp /tmp/out/* .
+          git add -f *.mp4 *.jpg *.txt
+          git commit -qm "Vidéos fruits : ${{ steps.pick.outputs.list }}" || echo "rien à commiter"
+          for i in 1 2 3 4; do git push origin media-fruits && break; sleep $((i*4)); git pull --rebase origin media-fruits; done
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.pick.outputs.list != ''
+        with:
+          name: videos-fruits
+          path: |
+            out
+            /tmp/out
+          retention-days: 7

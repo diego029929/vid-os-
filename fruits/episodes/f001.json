@@ -1,0 +1,87 @@
+{
+ "series": "La banane en or",
+ "part": 1,
+ "part_label": "PARTIE 1",
+ "seed": 4242,
+ "title": "Partie 1 · Papa Ananas vend la maison pour une banane en or 🍍",
+ "caption": "Partie 1 · Papa Ananas a fait le pire investissement de sa vie… Tu aurais fait quoi à la place de Kiwi ? 👇 #fruits #ia #histoire #pourtoi #drole",
+ "characters": {
+  "papa": {
+   "name": "Papa Ananas",
+   "look": "Papa Ananas, a big chubby anthropomorphic pineapple dad with spiky green leaves as hair, bushy eyebrows, a thick brown mustache, wearing a stained white tank top and grey sweatpants",
+   "voice": "fr-FR-HenriNeural", "rate": "+8%", "pitch": "-12Hz"
+  },
+  "kiwi": {
+   "name": "Kiwi",
+   "look": "Kiwi, a small cute anthropomorphic kiwi fruit boy, about 8 years old, fuzzy brown skin, big round eyes, wearing a red hoodie and sneakers",
+   "voice": "fr-FR-RemyMultilingualNeural", "rate": "+12%", "pitch": "+18Hz"
+  },
+  "maman": {
+   "name": "Maman Pêche",
+   "look": "Maman Peche, an elegant anthropomorphic peach mom with rosy pink fuzzy skin, a green leaf on her head, wearing a yellow apron",
+   "voice": "fr-FR-DeniseNeural", "rate": "+8%", "pitch": "+0Hz"
+  },
+  "vendeur": {
+   "name": "Le vendeur",
+   "look": "a shady anthropomorphic grape bunch salesman wearing sunglasses, a purple suit and golden chains",
+   "voice": "fr-FR-HenriNeural", "rate": "+18%", "pitch": "+6Hz"
+  }
+ },
+ "scenes": [
+  {
+   "setting": "a cozy messy family living room, warm evening light",
+   "cast": ["papa", "kiwi"],
+   "shots": [
+    {"action": "Papa Ananas proudly holds up a shiny golden banana in a glass box, beaming with pride, while little Kiwi stares at it in shock"},
+    {"action": "close-up of little Kiwi looking horrified with his mouth wide open, Papa Ananas grinning in the background"}
+   ],
+   "lines": [
+    {"who": "papa", "text": "Kiwi, j'ai vendu la maison.", "hl": ["vendu", "maison"]},
+    {"who": "kiwi", "text": "Quoi ?! Mais pour acheter quoi ?", "hl": ["quoi"]},
+    {"who": "papa", "text": "Une banane en or massif. On est riches, mon fils.", "hl": ["banane", "riches"]},
+    {"who": "kiwi", "text": "Papa… on dort où ce soir ?", "hl": ["dort"]}
+   ]
+  },
+  {
+   "setting": "a dark rainy city street at night with neon signs",
+   "cast": ["papa", "vendeur"],
+   "shots": [
+    {"action": "flashback: a shady grape bunch salesman in sunglasses whispers to Papa Ananas in a dark alley, showing him a glowing golden banana inside an open briefcase"},
+    {"action": "Papa Ananas hands a huge stack of cash and house keys to the grinning grape salesman"}
+   ],
+   "lines": [
+    {"who": "vendeur", "text": "Cette banane vaut un million. Demain, deux millions.", "hl": ["million", "deux"]},
+    {"who": "papa", "text": "Et après-demain ?", "hl": ["après-demain"]},
+    {"who": "vendeur", "text": "Après-demain, je serai loin. Euh… je veux dire, tu seras riche !", "hl": ["loin", "riche"]},
+    {"who": "papa", "text": "Tope là, prends les clés !", "hl": ["clés"]}
+   ]
+  },
+  {
+   "setting": "the doorway of the family house, morning",
+   "cast": ["maman", "papa", "kiwi"],
+   "shots": [
+    {"action": "furious Maman Peche stands in the doorway with her hands on her hips, glaring at Papa Ananas who hides the golden banana behind his back, Kiwi peeking from behind her"},
+    {"action": "Maman Peche taps the golden banana and a piece of gold paint flakes off revealing a normal yellow banana underneath, Papa Ananas looks devastated"}
+   ],
+   "lines": [
+    {"who": "maman", "text": "Pourquoi il y a un camion de déménagement devant chez nous ?", "hl": ["camion"]},
+    {"who": "papa", "text": "Chérie, regarde : de l'or massif !", "hl": ["or"]},
+    {"who": "maman", "text": "C'est de la peinture. Elle s'en va avec le doigt.", "hl": ["peinture"]},
+    {"who": "papa", "text": "Non… ma banane… mon million…", "hl": ["million"]}
+   ]
+  },
+  {
+   "setting": "a city sidewalk next to a cardboard box, sunset",
+   "cast": ["kiwi", "papa"],
+   "shots": [
+    {"action": "little Kiwi with a determined look holds the fake golden banana and points at a sign that says nothing, Papa Ananas sits sadly on a cardboard box behind him"}
+   ],
+   "lines": [
+    {"who": "kiwi", "text": "Papa, j'ai une idée pour récupérer la maison.", "hl": ["idée", "maison"]},
+    {"who": "papa", "text": "Laquelle, mon fils ?", "hl": []},
+    {"who": "kiwi", "text": "On va la revendre… au vendeur de raisins.", "hl": ["revendre", "raisins"]},
+    {"who": "kiwi", "text": "Abonne-toi pour la partie 2 !", "hl": ["partie", "2"]}
+   ]
+  }
+ ]
+}
