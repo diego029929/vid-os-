@@ -59,6 +59,8 @@ jobs:
         env:
           POLLINATIONS_TOKEN: ${{ secrets.POLLINATIONS_TOKEN }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: |
           mkdir -p out
           for f in ${{ steps.pick.outputs.list }}; do

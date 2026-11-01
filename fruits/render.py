@@ -86,6 +86,19 @@ def _huggingface(prompt, seed):
                  "Accept": "image/png"}, body)
 
 
+def _cloudflare(prompt, seed):
+    """Workers AI (offre gratuite : 10 000 neurones par jour, ~150 images FLUX)."""
+    import base64
+    acc, tok = os.environ["CF_ACCOUNT_ID"], os.environ["CF_API_TOKEN"]
+    body = json.dumps({"prompt": prompt[:2000], "steps": 8, "seed": seed}).encode()
+    raw = _get(f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/run/@cf/black-forest-labs/flux-1-schnell",
+               {"Authorization": f"Bearer {tok}", "Content-Type": "application/json"}, body)
+    res = json.loads(raw)
+    if not res.get("success", True) or "result" not in res:
+        raise RuntimeError(str(res.get("errors"))[:300])
+    return base64.b64decode(res["result"]["image"])
+
+
 def _placeholder(prompt, path):
     """Image de test (FAKE_IMAGES=1) : dégradé coloré, pas d'appel réseau."""
     h = hashlib.md5(prompt.encode()).digest()
@@ -107,7 +120,10 @@ def fetch_image(prompt, seed, path):
         _placeholder(prompt, cached)
         shutil.copy(cached, path)
         return "test"
-    providers = [("pollinations", _pollinations)]
+    providers = []
+    if os.environ.get("CF_ACCOUNT_ID") and os.environ.get("CF_API_TOKEN"):
+        providers.append(("cloudflare", _cloudflare))
+    providers.append(("pollinations", _pollinations))
     if os.environ.get("HF_TOKEN"):
         providers.append(("huggingface", _huggingface))
     errors = []
