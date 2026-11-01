@@ -403,7 +403,7 @@ HEAD = {"face": (700, 560, 420), "back": (700, 630, 352), "sit": (470, 400, 240)
 
 def chunks(text):
     """Découpe le texte affiché en morceaux de 1 à 2 mots (les petits mots s'accrochent)."""
-    words = text.split()
+    words = [w for w in text.replace("«", "").replace("»", "").split() if w]
     out, cur = [], []
     for wd in words:
         cur.append(wd)
