@@ -49,7 +49,7 @@ RADIO = (DEEPEN + "highpass=f=300,lowpass=f=3400,acompressor=threshold=-22dB:rat
          "asoftclip=type=tanh,volume=3dB")
 # radio douce : couleur radio sans écraser la voix, petite pièce autour
 RADIO_SOFT = (DEEPEN + "highpass=f=180,lowpass=f=5200,equalizer=f=1800:t=q:w=1.2:g=3,"
-              "bass=g=2:f=220,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=150,"
+              "acompressor=threshold=-20dB:ratio=2.5:attack=8:release=150,"
               "aecho=0.8:0.5:18:0.08,volume=3dB")
 
 
@@ -80,7 +80,7 @@ def _synth_piper(text):
 _cb = None
 # Chatterbox : voix neuronale récente, bien plus naturelle (≈ 8x plus lent que le temps réel sur CPU).
 # Elle copie le timbre d'un court enregistrement de référence.
-CB_REF = os.path.join(ROOT, "assets", "ref", CONFIG.get("reference", "ref-pierre.wav"))
+CB_REF = os.path.join(ROOT, "assets", "ref", os.environ.get("VOICE_REF", CONFIG.get("reference", "ref-pierre.wav")))
 CB_EXAG = float(os.environ.get("VOICE_EXAG", CONFIG.get("exaggeration", 0.6)))
 CB_CFG = float(os.environ.get("VOICE_CFG", CONFIG.get("cfg", 0.4)))
 
