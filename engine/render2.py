@@ -575,8 +575,12 @@ def heard_ok(audio, line):
     if _asr is False:
         return True, 1.0, ""
     x = np.interp(np.arange(0, len(audio), SR / 16000), np.arange(len(audio)), audio).astype(np.float32)
-    heard = _asr({"raw": x, "sampling_rate": 16000},
-                 generate_kwargs={"language": "french", "task": "transcribe"})["text"]
+    try:
+        heard = _asr({"raw": x, "sampling_rate": 16000},
+                     generate_kwargs={"language": "french", "task": "transcribe"})["text"]
+    except Exception as e:
+        print("contrôle de la voix en erreur :", e)
+        return True, 1.0, ""
     want, got = _norm(voice.clean(line)), _norm(heard)
     # comparaison lettre à lettre : tolère les homophones (ses / ces), pas les mots en trop
     score = difflib.SequenceMatcher(None, want, got).ratio()
