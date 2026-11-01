@@ -162,6 +162,12 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    avec ffprobe la durée (85–95 s) et faire une planche contact
    (`ffmpeg -vf "fps=1/2.5,scale=216:-1,tile=6x4"`) puis la **regarder** :
    texte lisible, rien de coupé, le texte ne cache pas le visage du personnage, pas de mot avec un astérisque visible.
+   **Écouter la voix** : si Whisper est disponible (`pip install -q openai-whisper`,
+   modèle small, langue fr), transcrire chaque vidéo et comparer au texte :
+   un mot répété, bégayé ou incompréhensible = relancer le rendu de cet
+   épisode (le moteur retire déjà les répliques au débit anormal, mais pas
+   toutes). Écrire les nombres pour qu'ils se lisent bien (le moteur les
+   convertit en lettres).
    Corriger et relancer si besoin.
 5. Publier les fichiers sur la branche `media` (sans jamais forcer le push) :
    ```
