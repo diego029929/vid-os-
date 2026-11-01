@@ -559,7 +559,12 @@ def prepare_voice(beats):
         clips[i] = audio
         if voice.TIGHT:
             # plan calé sur la voix : pas de blanc entre les phrases
-            b["dur"] = round(max(len(audio) / SR + 0.18, 0.9), 2)
+            # (sauf les plans de choix, dont le compte à rebours garde son temps)
+            tight = len(audio) / SR + 0.18
+            if "choice" in b:
+                tight = max(tight, b["dur"])
+            last_sfx = max([s[1] for s in b.get("sfx", [])], default=0)
+            b["dur"] = round(max(tight, 0.9, last_sfx + 0.3), 2)
         else:
             need = round(len(audio) / SR + 0.35, 2)
             if b["dur"] < need:

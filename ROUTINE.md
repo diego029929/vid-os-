@@ -23,10 +23,12 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
 
 ## Étapes
 
-0. Préparer la voix off : `pip install -q piper-tts espeakng-loader` puis
-   `./engine/get_voice.sh` (voix et hauteur réglées dans `engine/voice_config.json`). Si le téléchargement échoue (huggingface.co
-   bloqué), NE PAS publier : s'arrêter et le signaler (la voix de secours
-   eSpeak est trop robotique pour être publiée).
+0. Préparer la voix off : `pip install -q chatterbox-tts` (voix naturelle
+   « M » choisie par Fio le 01/11 : timbre `assets/ref/ref-pierre-moyen.wav`,
+   effet radio douce, 20 % plus rapide, plans calés sur la voix ; tout est
+   réglé dans `engine/voice_config.json`, ne pas changer sans Fio). Le modèle
+   se télécharge depuis huggingface.co au premier rendu. Si l'installation ou
+   le téléchargement échoue, NE PAS publier : s'arrêter et le signaler.
 
 1. `getBrandSettings` (Metricool) : noter les réseaux reliés. TikTok toujours ;
    ajouter Instagram (type `REEL`) seulement s'il apparaît dans `networksData`.
@@ -63,10 +65,20 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
      épisodes du jour, et écrire en une ligne ce qui a changé.
 2. Lire `series/state.json` et le plan de la série. Écrire les 3 prochains
    épisodes (`episodes/epNN.json`, NN = numéro global sur 2 chiffres ou plus) :
-   - durée totale entre **85 et 95 secondes** : le moteur allonge un plan
-     si la voix off est plus longue que lui et affiche « durée totale » ;
-     ajuster le script si on sort de la fourchette ;
-   - chaque plan avec `text` est lu par la voix off (effet mégaphone ajouté
+   - durée totale entre **85 et 95 secondes** : chaque plan dure le temps
+     de sa réplique (le champ `dur` sert de minimum seulement pour les plans
+     de choix), donc la durée dépend surtout du NOMBRE de répliques. Viser
+     environ 40 à 45 plans parlés ; le moteur affiche « durée totale » :
+     ajouter ou retirer des plans si on sort de la fourchette ;
+   - **texte qui a du sens** (demande de Fio, 01/11) : chaque réplique est
+     une phrase complète et compréhensible seule ou avec la précédente ;
+     jamais de morceau de phrase coupé sur deux plans (pas de « NE REGARDE
+     JAMAIS » / « LES SILHOUETTES ») : mettre la phrase entière dans un
+     seul plan, ou découper l'affichage avec `"voice"` qui porte la phrase
+     complète. Avant le rendu, relire toutes les répliques à la suite comme
+     un texte lu à voix haute : l'histoire doit se suivre, sans saut
+     logique, sans mot manquant, et chaque règle ou choix doit être clair ;
+   - chaque plan avec `text` est lu par la voix off (effet ajouté
      par le moteur). `"voice": "..."` remplace le texte lu, `"voice": ""`
      coupe la voix sur ce plan (ex. bruitages « TOC TOC ») ;
    - pas de bip à chaque seconde : ne jamais mettre `"tick": true`. Le
@@ -98,7 +110,7 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    `series/apres-la-fin.md`, 7 à 10 épisodes) et mettre à jour `state.json`.
    Il est permis d'ajouter des décors dans `engine/render.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
-4. Rendre les 3 vidéos (le moteur doit afficher `voix off : piper`) dans un dossier temporaire. Pour chacune, vérifier
+4. Rendre les 3 vidéos (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 15 à 20 min : le lancer en arrière-plan et attendre la fin. Pour chacune, vérifier
    avec ffprobe la durée (85–95 s) et faire une planche contact
    (`ffmpeg -vf "fps=1/2.5,scale=216:-1,tile=6x4"`) puis la **regarder** :
    texte lisible, rien de coupé, le texte ne cache pas le visage du personnage, pas de mot avec un astérisque visible.

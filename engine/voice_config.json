@@ -1,5 +1,9 @@
 {
-  "voice": "fr_FR-tom-medium",
-  "pitch": 0.88,
+  "voice": "chatterbox",
+  "reference": "ref-pierre-moyen.wav",
+  "effect": "radio_douce",
+  "tempo": 1.2,
+  "tight": true,
+  "pitch": 1.0,
   "speed": 1.0
 }
