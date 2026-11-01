@@ -553,24 +553,40 @@ def prepare_voice(beats):
             b.setdefault("dur", 1.2)
             continue
         a = squeeze(voice.synth(line))
-        # Chatterbox bégaie parfois (répète un bout de phrase) : la réplique est alors
-        # anormalement longue pour son nombre de lettres. On la retire jusqu'à 3 fois.
-        letters = max(4, len(voice.clean(line)))
-        tries = 0
-        while voice.engine_name() == "chatterbox" and len(a) / SR > 0.115 * letters + 0.5 and tries < 3:
-            tries += 1
-            voice.RETRY = tries
-            b2 = squeeze(voice.synth(line))
-            voice.RETRY = 0
-            print(f"  réplique retirée ({len(a) / SR:.1f} s → {len(b2) / SR:.1f} s) : {line[:40]}")
-            if len(b2) < len(a):
-                a = b2
         clips[i] = a
         need = len(a) / SR + 0.03
         if "choice" in b:
             need = max(need, b.get("dur", 0))
         last_sfx = max([s[1] for s in b.get("sfx", [])], default=0)
         b["dur"] = round(max(need, 0.6, last_sfx + 0.3), 2)
+    # Chatterbox bégaie parfois (répète un bout de phrase) ou baragouine : la réplique a
+    # alors une durée anormale pour son nombre de lettres. On compare chaque réplique au
+    # débit médian de l'épisode et on retire celles qui s'en écartent (4 essais max).
+    if voice.engine_name() == "chatterbox" and len(clips) >= 5:
+        def rate(k, a):
+            return len(a) / SR / max(4, len(voice.clean(beats[k].get("voice", beats[k].get("text", "")))))
+        med = float(np.median([rate(k, a) for k, a in clips.items()]))
+        for k, a in list(clips.items()):
+            r = rate(k, a) / med
+            if 0.65 <= r <= 1.25:
+                continue
+            line = beats[k].get("voice", beats[k].get("text", ""))
+            best = a
+            for t in range(1, 5):
+                voice.RETRY = t
+                c = squeeze(voice.synth(line))
+                voice.RETRY = 0
+                if abs(rate(k, c) / med - 1) < abs(rate(k, best) / med - 1):
+                    best = c
+                if 0.75 <= rate(k, best) / med <= 1.2:
+                    break
+            print(f"  réplique retirée (débit x{r:.2f} → x{rate(k, best) / med:.2f}) : {line[:45]}")
+            clips[k] = best
+            need = len(best) / SR + 0.03
+            if "choice" in beats[k] and "countdown" in beats[k]["choice"]:
+                need = max(need, 3.2)
+            last_sfx = max([s[1] for s in beats[k].get("sfx", [])], default=0)
+            beats[k]["dur"] = round(max(need, 0.6, last_sfx + 0.3), 2)
     print(f"voix off : {voice.engine_name()}, {len(clips)} répliques")
     return clips
 

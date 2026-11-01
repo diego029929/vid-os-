@@ -198,6 +198,27 @@
    }
   },
   {
+   "scene": "rue",
+   "params": {
+    "seed": 4
+   },
+   "text": "LA PORTIÈRE EST OUVERTE. PERSONNE DEDANS.",
+   "cam": {
+    "z": [
+     1.42,
+     1.3
+    ],
+    "x": [
+     0.72,
+     0.7
+    ],
+    "y": [
+     0.72,
+     0.7
+    ]
+   }
+  },
+  {
    "scene": "radio",
    "text": "TU L'ALLUMES. ELLE *GRÉSILLE*.",
    "cam": {
@@ -277,6 +298,37 @@
      0.5
     ]
    ]
+  },
+  {
+   "scene": "flou",
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "text": "UNE VOIX DE FEMME. CALME. TROP CALME.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.18
+    ]
+   }
   },
   {
    "scene": "flou",
@@ -447,6 +499,25 @@
      1.08
     ]
    }
+  },
+  {
+   "scene": "radio",
+   "text": "ET LES DEUX PARLENT EN MÊME TEMPS.",
+   "shake": 6,
+   "glitch": 0.2,
+   "cam": {
+    "z": [
+     1.05,
+     1.2
+    ]
+   },
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.7
+    ]
+   ]
   },
   {
    "scene": "rue",
@@ -652,6 +723,42 @@
      60
     ]
    },
+   "text": "TU VEUX COURIR. TES JAMBES NE BOUGENT PLUS.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "look": [
+     0,
+     0.3
+    ]
+   },
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
    "text": "ELLES *SE RAPPROCHENT*. SANS UN BRUIT.",
    "char": {
     "pose": "face",
@@ -756,6 +863,29 @@
     "y": [
      0.5,
      0.44
+    ]
+   }
+  },
+  {
+   "scene": "rue",
+   "text": "TU NE TE RETOURNES PAS UNE SEULE FOIS.",
+   "char": {
+    "pose": "back",
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "head": [
+     0.5,
+     0.5,
+     0.22
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.0
     ]
    }
   },
@@ -928,6 +1058,30 @@
   },
   {
    "scene": "flou",
+   "text": "TU NE TE SOUVIENS PAS LES AVOIR NOTÉS.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.06,
+     1.14
+    ]
+   }
+  },
+  {
+   "scene": "flou",
    "text": "DE *TA MAIN*. À LA DERNIÈRE PAGE.",
    "char": {
     "pose": "face",
@@ -999,6 +1153,33 @@
     "y": [
      0.45,
      0.4
+    ]
+   }
+  },
+  {
+   "scene": "rue",
+   "params": {
+    "green": true
+   },
+   "text": "QUELQU'UN T'ATTEND LÀ-HAUT.",
+   "char": {
+    "pose": "stand",
+    "expr": "wide",
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.1
     ]
    }
   },
@@ -1109,6 +1290,27 @@
      1.12
     ]
    }
+  },
+  {
+   "scene": "radio",
+   "text": "« ELLE EST LÀ-HAUT », DIT LA VOIX.",
+   "cam": {
+    "z": [
+     1.15,
+     1.28
+    ],
+    "x": [
+     0.6,
+     0.65
+    ]
+   },
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.4
+    ]
+   ]
   },
   {
    "scene": "flou",
