@@ -13,22 +13,25 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
   chaque exécution les vidéos précédentes sont **supprimées** de la branche
   `media` avant d'ajouter les nouvelles (libère de l'espace).
 - On ne commite **jamais** de MP4 sur `main`.
-- Moteur : `python3 engine/render.py episodes/epNN.json /chemin/sortie.mp4`
-  (environ 9 min par épisode de 1 min 30).
-- Épisodes = fichiers JSON dans `episodes/`. Lire `episodes/ep01.json` comme
-  exemple complet du format (scènes, texte, `*mots rouges*`, personnage,
-  choix A/B, `record` + `rewind`, bruitages).
+- Moteur : `python3 engine/render2.py episodes/epNN.json /chemin/sortie.mp4`
+  (style 2, depuis le 02/11 ; l'ancien `engine/render.py` ne sert plus que
+  pour les anciens épisodes).
+- Épisodes = fichiers JSON dans `episodes/`. Lire `episodes/essai-style2.json`
+  comme exemple complet du format style 2 (décors, cadrages, caméra, texte,
+  `*mots rouges*`, choix A/B, `record` + `rewind`, bruitages).
 - État de la série : `series/state.json`. Plan de la série : fichier indiqué
   dans `series_file`.
 
 ## Étapes
 
-0. Préparer la voix off : `pip install -q chatterbox-tts` (voix naturelle
-   « M » choisie par Fio le 01/11 : timbre `assets/ref/ref-pierre-moyen.wav`,
-   effet radio douce, 20 % plus rapide, plans calés sur la voix ; tout est
-   réglé dans `engine/voice_config.json`, ne pas changer sans Fio). Le modèle
-   se télécharge depuis huggingface.co au premier rendu. Si l'installation ou
-   le téléchargement échoue, NE PAS publier : s'arrêter et le signaler.
+0. Préparer la voix off : `pip install -q chatterbox-tts`. Voix validée par
+   Fio le 01/11 (essai « V1 ») : Chatterbox, timbre
+   `assets/ref/ref-pierre-moyen.wav`, exagération 0.6, **30 % plus rapide,
+   sans effet radio**, pauses raccourcies. Le moteur `engine/render2.py`
+   règle tout seul la vitesse (1.3) et l'effet (« leger ») : ne pas changer
+   sans Fio. Le modèle se télécharge depuis huggingface.co au premier rendu.
+   Si l'installation ou le téléchargement échoue, NE PAS publier : s'arrêter
+   et le signaler.
 
 1. `getBrandSettings` (Metricool) : noter les réseaux reliés. TikTok toujours ;
    ajouter Instagram (type `REEL`) seulement s'il apparaît dans `networksData`.
@@ -64,12 +67,40 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    - Toujours appliquer les « Règles actives » de `insights.md` aux
      épisodes du jour, et écrire en une ligne ce qui a changé.
 2. Lire `series/state.json` et le plan de la série. Écrire les 3 prochains
-   épisodes (`episodes/epNN.json`, NN = numéro global sur 2 chiffres ou plus) :
+   épisodes (`episodes/epNN.json`, NN = numéro global sur 2 chiffres ou plus).
+   **Style 2 obligatoire depuis le 02/11** (demande de Fio, d'après une vidéo
+   de référence : gros plans, rythme rapide, sous-titres mot par mot) : mettre
+   `"style": 2` et suivre le format de `episodes/essai-style2.json` (voir aussi
+   l'en-tête de `engine/render2.py`) :
+   - **plans très courts** : une phrase de 3 à 8 mots par plan, qui se lit
+     en 1 à 2,5 s. Viser **45 à 55 plans** pour 85-95 s. Pas de `dur` sauf
+     sur les plans de choix (compte à rebours : `"dur": 3.2`) ;
+   - **cadrage TikTok** : changer de cadrage à CHAQUE plan, jamais deux fois
+     le même d'affilée. Gros plan visage (`"pose": "face"`, `"head": [0.5,
+     0.36, 0.3]`), vue de dos (`"pose": "back"`, `"head": [0.5, 0.5, 0.2]`),
+     plan large debout (`"pose": "stand"`, `"head": [0.5, 0.42, 0.14]`),
+     assis (`"pose": "sit"`), ou objet seul (radio, porte...). Les têtes
+     restent au centre (u entre 0.4 et 0.6, v entre 0.3 et 0.55) : la
+     colonne de droite et le bas de l'écran sont couverts par TikTok. Le
+     moteur place lui-même sous-titres, cartes A/B et horloge dans la zone
+     sûre ; sur les plans de choix mettre `"text_y": 0.2` ;
+   - mouvement de caméra différent à chaque plan avec `"cam"` (zoom avant,
+     zoom arrière, petit panoramique), `"shake"` pour les moments de peur ;
+   - décors du style 2 : `chambre`, `fenetre`, `rue`, `flou` (fond pour les
+     gros plans, `"params": {"light": [r,g,b]}` pour la couleur), `porte`,
+     `radio` ; les anciens décors restent possibles (recolorés) ;
+   - expressions : `normal`, `side` (méfiant), `wide` (choqué, avec
+     `"look"`), `scared`, `closed`. Héros : `"hoodie": [235,120,35]`
+     (orange) ; autres personnages : autre couleur ;
+   - **écrire les heures et nombres pour qu'ils soient bien lus** : le moteur
+     lit « 6 H 12 » comme « 6 heures 12 », mais éviter les abréviations
+     (écrire « KILOMÈTRES », « NUMÉRO ») ; en cas de doute, mettre la phrase
+     à lire dans `"voice"`.
+   Règles qui restent valables :
    - durée totale entre **85 et 95 secondes** : chaque plan dure le temps
-     de sa réplique (le champ `dur` sert de minimum seulement pour les plans
-     de choix), donc la durée dépend surtout du NOMBRE de répliques. Viser
-     environ 40 à 45 plans parlés ; le moteur affiche « durée totale » :
-     ajouter ou retirer des plans si on sort de la fourchette ;
+     de sa réplique, donc la durée dépend surtout du NOMBRE de répliques ;
+     le moteur affiche « durée totale » : ajouter ou retirer des plans si on
+     sort de la fourchette ;
    - **texte qui a du sens** (demande de Fio, 01/11) : chaque réplique est
      une phrase complète et compréhensible seule ou avec la précédente ;
      jamais de morceau de phrase coupé sur deux plans (pas de « NE REGARDE
@@ -78,8 +109,7 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
      complète. Avant le rendu, relire toutes les répliques à la suite comme
      un texte lu à voix haute : l'histoire doit se suivre, sans saut
      logique, sans mot manquant, et chaque règle ou choix doit être clair ;
-   - chaque plan avec `text` est lu par la voix off (effet ajouté
-     par le moteur). `"voice": "..."` remplace le texte lu, `"voice": ""`
+   - chaque plan avec `text` est lu par la voix off. `"voice": "..."` remplace le texte lu, `"voice": ""`
      coupe la voix sur ce plan (ex. bruitages « TOC TOC ») ;
    - pas de bip à chaque seconde : ne jamais mettre `"tick": true`. Le
      compte à rebours visuel du choix (`countdown`) reste ;
@@ -108,9 +138,10 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    (personnages bâton, décors soignés, règles, choix A/B) mais avec un autre
    univers : écrire `series/<slug>.md` (même structure que
    `series/apres-la-fin.md`, 7 à 10 épisodes) et mettre à jour `state.json`.
-   Il est permis d'ajouter des décors dans `engine/render.py` (nouvelle
+   Il est permis d'ajouter des décors dans `engine/render2.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
-4. Rendre les 3 vidéos (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 15 à 20 min : le lancer en arrière-plan et attendre la fin. Pour chacune, vérifier
+4. Rendre les 3 vidéos avec `python3 engine/render2.py episodes/epNN.json /tmp/epNN.mp4`
+   (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin. Pour chacune, vérifier
    avec ffprobe la durée (85–95 s) et faire une planche contact
    (`ffmpeg -vf "fps=1/2.5,scale=216:-1,tile=6x4"`) puis la **regarder** :
    texte lisible, rien de coupé, le texte ne cache pas le visage du personnage, pas de mot avec un astérisque visible.
