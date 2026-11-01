@@ -117,8 +117,25 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
      au début** (demande de Fio : le moteur ouvre le premier plan depuis le
      noir ; ne pas utiliser de décor clair ni de flash blanc dans les 3
      premières secondes) ; si l'épisode précédent
-     finissait sur une question, commencer par sa réponse (« Ceux qui ont
-     dit B avaient raison... ») ;
+     finissait sur une question, sa réponse se voit dans l'action du début
+     (on montre ce que le héros a choisi et ce qui se passe), pas avec une
+     phrase sur les commentaires ;
+   - **chaque épisode se comprend seul** (demande de Fio, 01/11) : un
+     spectateur qui tombe dessus sans avoir vu les autres doit tout capter.
+     MAIS **jamais de résumé** (« précédemment... », « dans l'épisode
+     d'avant... » : Fio trouve ça nul). À la place, écrire mieux :
+     - la situation est posée dans l'accroche, au présent, en une phrase
+       concrète (« Imagine. Il est 6 heures. T'as plus d'abri. ») ;
+     - chaque personnage, objet ou règle est présenté au moment où il
+       apparaît, en quelques mots glissés dans l'action (« la radio de la
+       Station 7, celle qui donne les règles », « ta sœur, disparue depuis
+       trois jours ») ;
+     - jamais de mot qui renvoie à un épisode précédent sans être expliqué
+       (« le carnet », « l'inconnu », « la voix ») : dire ce que c'est ;
+     - au moment du choix A/B, le spectateur doit savoir exactement ce qui
+       est en jeu, sans rien connaître d'avant ;
+     - test avant rendu : relire le script comme quelqu'un qui n'a vu
+       aucun épisode ; chaque phrase doit se comprendre ;
    - structure : accroche, mise en place, règle, situation, **choix A/B**
      avec compte à rebours, mauvaise option jouée puis `rewind`, bonne
      option, développement (l'histoire avance, nouvelle tension), suspense ;
