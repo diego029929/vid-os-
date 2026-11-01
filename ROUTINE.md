@@ -154,7 +154,7 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    `series_episode_count`, inventer une nouvelle histoire dans le même style
    (personnages bâton, décors soignés, règles, choix A/B) mais avec un autre
    univers : écrire `series/<slug>.md` (même structure que
-   `series/apres-la-fin.md`, 7 à 10 épisodes) et mettre à jour `state.json`.
+   `series/apres-la-fin.md`, **5 ou 6 épisodes**, choix de Fio le 01/11) et mettre à jour `state.json`.
    Il est permis d'ajouter des décors dans `engine/render2.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
 4. Rendre les 3 vidéos avec `python3 engine/render2.py episodes/epNN.json /tmp/epNN.mp4`
