@@ -128,6 +128,12 @@ def scene_city(p):
         # silhouette immobile dans la rue : [x, taille]
         fx, fs = p["figure"]
         silhouette(d, w * fx, h * 0.9, h * 0.3 * fs)
+    if p.get("orb"):
+        # lumière verte flottante : [x, y] (fractions de l'écran)
+        ox, oy = p["orb"]
+        img = glow(img, (w * ox, h * oy), w * 0.35, (90, 255, 110), 0.55)
+        d = ImageDraw.Draw(img)
+        d.ellipse([w * ox - 34, h * oy - 34, w * ox + 34, h * oy + 34], fill=(200, 255, 200))
     return img
 
 
@@ -256,7 +262,34 @@ def scene_hide(p):
     return img
 
 
+def scene_notebook(p):
+    # carnet ouvert sur une table, éclairé à la lampe
+    w, h = W * SS, H * SS
+    img = gradient(w, h, (34, 24, 18), (10, 8, 6))
+    img = glow(img, (w * 0.5, h * 0.55), w * 0.75, (255, 180, 90), 0.4)
+    d = ImageDraw.Draw(img)
+    x0, x1, y0, y1 = w * 0.08, w * 0.92, h * 0.42, h * 0.84
+    d.rectangle([x0 - 20, y0 - 20, x1 + 20, y1 + 20], fill=(70, 40, 30))
+    for a, b in ((x0, w * 0.5 - 6), (w * 0.5 + 6, x1)):
+        d.rectangle([a, y0, b, y1], fill=(225, 214, 186))
+        rnd = random.Random(int(a))
+        for yy in np.arange(y0 + 90, y1 - 40, 64):
+            d.line([(a + 30, yy), (b - 30, yy)], fill=(170, 180, 200), width=4)
+            xx = a + 50
+            end = b - rnd.uniform(60, 260)
+            while xx < end:
+                ln = rnd.uniform(40, 130)
+                d.line([(xx, yy - 18), (min(end, xx + ln), yy - 14 + rnd.uniform(-6, 6))], fill=(40, 40, 70), width=7)
+                xx += ln + 26
+    d.line([(w * 0.5, y0), (w * 0.5, y1)], fill=(120, 100, 80), width=14)
+    if p.get("red"):
+        # dernière ligne soulignée en rouge
+        d.line([(w * 0.55, y1 - 110), (x1 - 40, y1 - 100)], fill=RED, width=14)
+    return img
+
+
 SCENES = {
+    "notebook": scene_notebook,
     "city": scene_city, "bunker": scene_bunker, "door": scene_door,
     "radio": scene_radio, "dark": scene_dark, "hide": scene_hide,
 }
@@ -302,6 +335,10 @@ def character(expr="normal", hoodie=(230, 120, 30), pose="stand", blink=False):
         elif expr == "scared":
             d.ellipse([ex - 50 * s, ey - 52 * s, ex + 50 * s, ey + 52 * s], fill=WHITE)
             d.ellipse([ex - 13 * s, ey - 13 * s, ex + 13 * s, ey + 13 * s], fill=blk)
+        elif expr == "stare":
+            # yeux grands ouverts, pupilles minuscules, ne cligne jamais
+            d.ellipse([ex - 46 * s, ey - 46 * s, ex + 46 * s, ey + 46 * s], fill=WHITE)
+            d.ellipse([ex - 7 * s, ey - 7 * s, ex + 7 * s, ey + 7 * s], fill=blk)
         elif expr == "suspicious":
             d.ellipse([ex - 40 * s, ey - 26 * s, ex + 40 * s, ey + 26 * s], fill=WHITE)
             d.ellipse([ex - 4 * s, ey - 16 * s, ex + 26 * s, ey + 16 * s], fill=blk)
@@ -589,7 +626,6 @@ def render(ep, out):
             big = SCENES[b.get("scene", "dark")](b.get("params", {}))
             bg_cache[key] = big.resize((int(W * 1.12), int(H * 1.12)), Image.LANCZOS)
         bg = bg_cache[key]
-        ch = b.get("char")
         rec = recorded.setdefault(b["record"], []) if b.get("record") else None
         if b.get("record"):
             rec_clock.setdefault(b["record"], clock)
@@ -605,17 +641,16 @@ def render(ep, out):
                 amp = b["shake"] * (1 - k * 0.5)
                 sx, sy = int(random.uniform(-amp, amp)), int(random.uniform(-amp, amp))
             fr = bg.crop((ox + sx, oy + sy, ox + sx + cw, oy + sy + chh)).resize((W, H), Image.BILINEAR).convert("RGBA")
-            if ch:
+            for ch in [c for c in (b.get("char"), b.get("char2")) if c]:
                 blink = ch.get("expr", "normal") == "normal" and (i % 75) in (60, 61, 62)
-                ck = (ch.get("expr", "normal"), ch.get("pose", "stand"), blink)
+                ck = (ch.get("expr", "normal"), ch.get("pose", "stand"), blink, tuple(ch.get("hoodie", (230, 120, 30))))
                 if ck not in char_cache:
-                    char_cache[ck] = character(ck[0], pose=ck[1], blink=blink)
+                    char_cache[ck] = character(ck[0], hoodie=ck[3], pose=ck[1], blink=blink)
                 cimg = char_cache[ck]
                 sc = ch.get("scale", 1.0) * (1 + 0.012 * math.sin(lt * 3))
                 cimg2 = cimg.resize((int(cimg.width * sc), int(cimg.height * sc)), Image.BILINEAR)
-                if ch.get("tremble"):
-                    sx += random.randint(-4, 4)
-                cx = int(W * ch.get("x", 0.5) - cimg2.width / 2) + sx
+                tx = random.randint(-4, 4) if ch.get("tremble") else 0
+                cx = int(W * ch.get("x", 0.5) - cimg2.width / 2) + sx + tx
                 cy = int(H * ch.get("y", 0.95) - cimg2.height)
                 fr.paste(cimg2, (cx, cy), cimg2)
             if b.get("choice"):
