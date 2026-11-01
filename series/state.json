@@ -2,8 +2,8 @@
   "current_series": "apres-la-fin",
   "series_file": "series/apres-la-fin.md",
   "series_episode_count": 9,
-  "next_episode_in_series": 8,
-  "next_global_episode": 8,
+  "next_episode_in_series": 9,
+  "next_global_episode": 9,
   "published": [
     {
       "global": 1,
@@ -53,6 +53,14 @@
       "episode": 7,
       "file": "episodes/ep07.json",
       "slot": "2026-11-01T17:00:00 Europe/Paris"
+    },
+    {
+      "global": 8,
+      "series": "apres-la-fin",
+      "episode": 8,
+      "file": "episodes/ep08.json",
+      "slot": "2026-11-01T22:21:00 Europe/Paris",
+      "note": "style 2, publié à la demande de Fio (rendu ep08s2, version avant ajout de 8 plans)"
     }
   ]
 }
