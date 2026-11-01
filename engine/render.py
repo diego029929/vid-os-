@@ -520,9 +520,13 @@ def prepare_voice(beats):
             continue
         audio = voice.synth(line)
         clips[i] = audio
-        need = round(len(audio) / SR + 0.35, 2)
-        if b["dur"] < need:
-            b["dur"] = need
+        if voice.TIGHT:
+            # plan calé sur la voix : pas de blanc entre les phrases
+            b["dur"] = round(max(len(audio) / SR + 0.18, 0.9), 2)
+        else:
+            need = round(len(audio) / SR + 0.35, 2)
+            if b["dur"] < need:
+                b["dur"] = need
     print(f"voix off : {voice.engine_name()}, {len(clips)} répliques")
     return clips
 
@@ -534,7 +538,7 @@ def voice_track(beats, clips, total, tmp):
     for i, b in enumerate(beats):
         if i in clips:
             a = clips[i]
-            j = int((t0 + 0.12) * SR)
+            j = int((t0 + (0.04 if voice.TIGHT else 0.12)) * SR)
             track[j:j + len(a)] += a[: len(track) - j]
         t0 += b["dur"]
     return voice.megaphone(track, tmp)

@@ -28,6 +28,10 @@ FX = os.environ.get("VOICE_FX", CONFIG.get("effect", "megaphone"))
 # débit de lecture de Piper (> 1 = plus lent, plus posé) et expressivité
 LENGTH = float(os.environ.get("VOICE_LENGTH", CONFIG.get("length", 1.0)))
 EXPRESS = float(os.environ.get("VOICE_EXPRESS", CONFIG.get("expressivity", 0.667)))
+# accélère chaque réplique sans changer la hauteur (1.2 = 20 % plus rapide)
+TEMPO = float(os.environ.get("VOICE_TEMPO", CONFIG.get("tempo", 1.0)))
+# "serré" : chaque plan dure juste le temps de la réplique, pour que ça s'enchaîne
+TIGHT = os.environ.get("VOICE_TIGHT", str(CONFIG.get("tight", False))).lower() in ("1", "true", "oui")
 RHYTHM = float(os.environ.get("VOICE_RHYTHM", CONFIG.get("rhythm", 0.8)))
 MODEL = os.path.join(ROOT, "assets", "voices", VOICE + ".onnx")
 SR = 44100
@@ -143,8 +147,20 @@ def synth(text):
     # retire les silences au début et à la fin
     idx = np.where(np.abs(audio) > 0.01)[0]
     if len(idx):
-        audio = audio[max(0, idx[0] - 200): idx[-1] + 2000]
+        audio = audio[max(0, idx[0] - 200): idx[-1] + 1200]
+    if TEMPO != 1.0:
+        audio = _tempo(audio, TEMPO)
     return audio
+
+
+def _tempo(audio, factor):
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        src, dst = os.path.join(d, "a.wav"), os.path.join(d, "b.wav")
+        write_wav(src, audio)
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", src, "-af", f"atempo={factor:.3f}", dst], check=True)
+        with wave.open(dst) as wf:
+            return np.frombuffer(wf.readframes(wf.getnframes()), np.int16).astype(np.float32) / 32768
 
 
 def megaphone(track, tmpdir):
