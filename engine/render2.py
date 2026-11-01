@@ -542,6 +542,54 @@ def squeeze(a, max_gap=0.10, min_gap=0.16):
     return out.astype(np.float32)
 
 
+_asr = None
+
+
+def _norm(t):
+    import re
+    import voice
+    t = t.lower().replace("’", "'")
+    t = re.sub(r"\d{1,3}", lambda m: voice.nombre(int(m.group())), t)
+    import unicodedata
+    t = unicodedata.normalize("NFD", t)
+    t = "".join(c for c in t if unicodedata.category(c) != "Mn")
+    t = re.sub(r"[^a-z ]", " ", t)
+    return " ".join(t.split())
+
+
+def heard_ok(audio, line):
+    """Fait écouter la réplique par Whisper et la compare au texte. Renvoie (ok, score, entendu)."""
+    global _asr
+    import difflib
+    import voice
+    if os.environ.get("VOICE_ASR", "1") == "0":
+        return True, 1.0, ""
+    if _asr is None:
+        try:
+            from transformers import pipeline
+            _asr = pipeline("automatic-speech-recognition", model="openai/whisper-small", device=-1)
+            print("contrôle de la voix : whisper-small")
+        except Exception as e:  # pas de Whisper : on garde seulement le contrôle de débit
+            print("contrôle de la voix indisponible :", e)
+            _asr = False
+    if _asr is False:
+        return True, 1.0, ""
+    x = np.interp(np.arange(0, len(audio), SR / 16000), np.arange(len(audio)), audio).astype(np.float32)
+    heard = _asr({"raw": x, "sampling_rate": 16000},
+                 generate_kwargs={"language": "french", "task": "transcribe"})["text"]
+    want, got = _norm(voice.clean(line)), _norm(heard)
+    # comparaison lettre à lettre : tolère les homophones (ses / ces), pas les mots en trop
+    score = difflib.SequenceMatcher(None, want, got).ratio()
+    ok = score >= 0.85 and len(got) <= len(want) * 1.2 + 4
+
+    def doubles(t):
+        w = t.split()
+        return sum(1 for i in range(1, len(w)) if w[i] == w[i - 1])
+    if doubles(got) > doubles(want):  # mot répété (« plus, plus ») = bégaiement
+        ok = False
+    return ok, score, heard
+
+
 def prepare_voice(beats):
     import voice
     clips = {}
@@ -587,6 +635,38 @@ def prepare_voice(beats):
                 need = max(need, 3.2)
             last_sfx = max([s[1] for s in beats[k].get("sfx", [])], default=0)
             beats[k]["dur"] = round(max(need, 0.6, last_sfx + 0.3), 2)
+    # Contrôle à l'oreille (Whisper) : chaque réplique doit être comprise mot pour mot,
+    # sans mot répété ni parasite. Sinon on la refait (6 tirages max, on garde la meilleure).
+    if voice.engine_name() == "chatterbox":
+        bad = []
+        for k, a in list(clips.items()):
+            line = beats[k].get("voice", beats[k].get("text", ""))
+            ok, score, heard = heard_ok(a, line)
+            t = 0
+            best = (score, a, heard)
+            while not ok and t < 6:
+                t += 1
+                voice.RETRY = 10 + t
+                c = squeeze(voice.synth(line))
+                voice.RETRY = 0
+                ok, score, heard = heard_ok(c, line)
+                if score > best[0] or ok:
+                    best = (score, c, heard)
+            if t:
+                print(f"  réplique refaite {t} fois (score {best[0]:.2f}) : {line[:45]} → entendu « {best[2].strip()[:50]} »")
+            if not ok and best[0] < 0.85:
+                bad.append((line, best[2]))
+            if t:
+                clips[k] = best[1]
+                need = len(best[1]) / SR + 0.03
+                if "choice" in beats[k] and "countdown" in beats[k]["choice"]:
+                    need = max(need, 3.2)
+                last_sfx = max([s[1] for s in beats[k].get("sfx", [])], default=0)
+                beats[k]["dur"] = round(max(need, 0.6, last_sfx + 0.3), 2)
+        if bad:
+            print("RÉPLIQUES ENCORE MAL LUES (à réécrire plus simplement) :")
+            for line, heard in bad:
+                print(f"  - {line}  →  entendu « {heard.strip()} »")
     print(f"voix off : {voice.engine_name()}, {len(clips)} répliques")
     return clips
 
