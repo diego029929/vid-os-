@@ -57,6 +57,33 @@ RADIO_SOFT = (DEEPEN + "highpass=f=180,lowpass=f=5200,equalizer=f=1800:t=q:w=1.2
               "aecho=0.8:0.5:18:0.08,volume=3dB")
 
 
+_U = "zéro un deux trois quatre cinq six sept huit neuf dix onze douze treize quatorze quinze seize".split()
+_D = {2: "vingt", 3: "trente", 4: "quarante", 5: "cinquante", 6: "soixante", 8: "quatre-vingt"}
+
+
+def nombre(n):
+    """Nombre entier en toutes lettres (0 à 999), en français. La voix lit mal les chiffres (« 7 »)."""
+    if n < 17:
+        return _U[n]
+    if n < 20:
+        return "dix-" + _U[n - 10]
+    if n < 100:
+        d, u = divmod(n, 10)
+        if d in (7, 9):
+            base = _D[6 if d == 7 else 8]
+            r = n - (60 if d == 7 else 80)
+            return base + ("-et-" if r == 11 and d == 7 else "-") + nombre(r)
+        word = _D[d]
+        if u == 0:
+            return word + ("s" if d == 8 else "")
+        return word + ("-et-" if u == 1 and d != 8 else "-") + _U[u]
+    if n < 1000:
+        c, r = divmod(n, 100)
+        head = "cent" if c == 1 else _U[c] + " cent" + ("s" if r == 0 else "")
+        return head + ("" if r == 0 else " " + nombre(r))
+    return str(n)
+
+
 def clean(text):
     """Texte affiché → texte à lire."""
     t = text.replace("*", "").replace("«", "").replace("»", "")
@@ -69,6 +96,8 @@ def clean(text):
     t = re.sub(r"(\d)\s*%", r"\1 pour cent", t)
     t = re.sub(r"\b(\d+)\s*km\b", r"\1 kilomètres", t, flags=re.I)
     t = re.sub(r"\b(\d+)\s*m\b", r"\1 mètres", t)
+    t = re.sub(r"\b1 (heure|minute|seconde|nuit|semaine)\b", r"une \1", t)
+    t = re.sub(r"\d{1,3}", lambda m: nombre(int(m.group())), t)
     t = t.replace("...", ",").replace("…", ",")
     t = re.sub(r"\s+", " ", t).strip(" :")
     return t.lower().capitalize()
@@ -90,6 +119,7 @@ def _synth_piper(text):
 
 
 _cb = None
+RETRY = 0  # change le tirage aléatoire quand une réplique sort bégayée
 # Chatterbox : voix neuronale récente, bien plus naturelle (≈ 8x plus lent que le temps réel sur CPU).
 # Elle copie le timbre d'un court enregistrement de référence.
 CB_REF = os.path.join(ROOT, "assets", "ref", os.environ.get("VOICE_REF", CONFIG.get("reference", "ref-pierre.wav")))
@@ -103,7 +133,7 @@ def _synth_chatterbox(text):
     from chatterbox.mtl_tts import ChatterboxMultilingualTTS
     if _cb is None:
         _cb = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
-    torch.manual_seed(zlib.crc32(text.encode()))
+    torch.manual_seed(zlib.crc32(text.encode()) + 7919 * RETRY)
     w = _cb.generate(text, language_id="fr", audio_prompt_path=CB_REF,
                      exaggeration=CB_EXAG, cfg_weight=CB_CFG)
     return w.squeeze(0).numpy().astype(np.float32), _cb.sr

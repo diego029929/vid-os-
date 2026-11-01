@@ -315,6 +315,7 @@ def scene_old(name):
 
 SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, "flou": scene_flou,
           "porte": scene_porte, "radio": scene_radio}
+NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
 
@@ -552,6 +553,18 @@ def prepare_voice(beats):
             b.setdefault("dur", 1.2)
             continue
         a = squeeze(voice.synth(line))
+        # Chatterbox bégaie parfois (répète un bout de phrase) : la réplique est alors
+        # anormalement longue pour son nombre de lettres. On la retire jusqu'à 3 fois.
+        letters = max(4, len(voice.clean(line)))
+        tries = 0
+        while voice.engine_name() == "chatterbox" and len(a) / SR > 0.115 * letters + 0.5 and tries < 3:
+            tries += 1
+            voice.RETRY = tries
+            b2 = squeeze(voice.synth(line))
+            voice.RETRY = 0
+            print(f"  réplique retirée ({len(a) / SR:.1f} s → {len(b2) / SR:.1f} s) : {line[:40]}")
+            if len(b2) < len(a):
+                a = b2
         clips[i] = a
         need = len(a) / SR + 0.03
         if "choice" in b:
@@ -624,7 +637,7 @@ def compose(b, cache):
     if key in cache:
         return cache[key]
     scene = b.get("scene", "flou")
-    bg = bloom(SCENES[scene](b.get("params", {})).convert("RGB"))
+    bg = bloom(SCENES[scene](b.get("params", {})).convert("RGB"), 0.55 if scene in NEW_SCENES else 0.12)
     chars = [c for c in (b.get("char"), b.get("char2")) if c]
     # profondeur de champ : le décor est flou derrière un personnage en gros plan
     close = [c for c in chars if c.get("pose") in ("face", "back") or c.get("head", [0, 0, 0])[2] >= 0.2]
