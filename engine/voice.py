@@ -61,6 +61,14 @@ def clean(text):
     """Texte affiché → texte à lire."""
     t = text.replace("*", "").replace("«", "").replace("»", "")
     t = re.sub(r"N°\s*(\d+)", r"numéro \1", t)
+    # heures : « 6 H 12 » → « 6 heures 12 », « 1 H » → « une heure »
+    t = re.sub(r"\b1\s*[hH]\s*(\d{2})\b", r"une heure \1", t)
+    t = re.sub(r"\b(\d{1,2})\s*[hH]\s*(\d{2})\b", r"\1 heures \2", t)
+    t = re.sub(r"\b1\s*[hH]\b", "une heure", t)
+    t = re.sub(r"\b(\d{1,2})\s*[hH]\b", r"\1 heures", t)
+    t = re.sub(r"(\d)\s*%", r"\1 pour cent", t)
+    t = re.sub(r"\b(\d+)\s*km\b", r"\1 kilomètres", t, flags=re.I)
+    t = re.sub(r"\b(\d+)\s*m\b", r"\1 mètres", t)
     t = t.replace("...", ",").replace("…", ",")
     t = re.sub(r"\s+", " ", t).strip(" :")
     return t.lower().capitalize()

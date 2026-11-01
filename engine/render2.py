@@ -220,6 +220,23 @@ def scene_rue(p):
                     d.rectangle(c.box(wu, wv, wu + 0.015 * near + 0.005, wv + 0.012 * near + 0.004), fill=(255, 190, 110))
             del u
     d.polygon([c.P(0.46, 0.66), c.P(0.54, 0.66), c.P(1.2, 1.0), c.P(-0.2, 1.0)], fill=(30, 22, 44))
+    # marquage au sol effacé
+    for k in range(6):
+        v0 = 0.68 + k * 0.05 * (1 + k * 0.25)
+        d.polygon([c.P(0.497 - 0.002 * k, v0), c.P(0.503 + 0.002 * k, v0), c.P(0.505 + 0.004 * k, v0 + 0.02 + 0.006 * k),
+                   c.P(0.495 - 0.004 * k, v0 + 0.02 + 0.006 * k)], fill=(70, 56, 80))
+    # lampadaires éteints et câbles
+    for side, u in ((-1, 0.16), (1, 0.84)):
+        d.line([c.P(u, 0.95), c.P(u, 0.40)], fill=(16, 12, 26), width=22)
+        d.line([c.P(u, 0.40), c.P(u - side * 0.08, 0.38)], fill=(16, 12, 26), width=18)
+    for k in range(3):
+        d.line([c.P(0.16, 0.41 + k * 0.012), c.P(0.5, 0.47 + k * 0.01), c.P(0.84, 0.41 + k * 0.012)], fill=(20, 14, 30), width=5, joint="curve")
+    # voiture abandonnée
+    d.rounded_rectangle(c.box(0.60, 0.72, 0.86, 0.775), radius=30, fill=(18, 13, 28))
+    d.rounded_rectangle(c.box(0.64, 0.695, 0.80, 0.73), radius=24, fill=(18, 13, 28))
+    d.polygon([c.P(0.66, 0.70), c.P(0.70, 0.70), c.P(0.70, 0.725), c.P(0.655, 0.725)], fill=(90, 60, 80))
+    for u in (0.65, 0.81):
+        d.ellipse(c.box(u - 0.025, 0.76, u + 0.025, 0.76 + 0.05 * CW / CH), fill=(8, 6, 14))
     d.rectangle(c.box(0, 0.66, 1, 0.665), fill=(50, 30, 60))
     c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.55, 1.1, 0.72), fill=(255, 170, 130, 90)), 0.03)
     if p.get("green"):
@@ -361,14 +378,14 @@ def hero(pose="stand", expr="normal", hoodie=(240, 190, 40), look=(0.0, 0.0), bl
         cx = 700 * s
     if pose == "face":
         d.rounded_rectangle([cx - 690 * s, 1040 * s, cx + 690 * s, 2600 * s], radius=380 * s, fill=hood)
-        d.rounded_rectangle([cx - 690 * s, 1500 * s, cx + 690 * s, 2600 * s], radius=200 * s, fill=shade)
         d.ellipse([cx - 360 * s, 880 * s, cx + 360 * s, 1220 * s], fill=deep)
         d.line([(cx - 130 * s, 1140 * s), (cx - 160 * s, 1460 * s)], fill=deep, width=20 * s)
         d.line([(cx + 130 * s, 1140 * s), (cx + 160 * s, 1460 * s)], fill=deep, width=20 * s)
+        for fx in (-1, 1):
+            d.arc([cx + fx * 380 * s - 260 * s, 1300 * s, cx + fx * 380 * s + 260 * s, 1900 * s], 200 if fx < 0 else 280, 260 if fx < 0 else 340, fill=shade, width=16 * s)
         head(cx, 560 * s, 420 * s)
     elif pose == "back":
         d.rounded_rectangle([cx - 690 * s, 1000 * s, cx + 690 * s, 2600 * s], radius=400 * s, fill=hood)
-        d.rounded_rectangle([cx - 690 * s, 1500 * s, cx + 690 * s, 2600 * s], radius=200 * s, fill=shade)
         d.ellipse([cx - 320 * s, 820 * s, cx + 320 * s, 1280 * s], fill=deep)
         d.ellipse([cx - 240 * s, 900 * s, cx + 240 * s, 1220 * s], fill=shade)
         d.ellipse([cx - 360 * s, 270 * s, cx + 360 * s, 990 * s], fill=rim)
@@ -378,7 +395,6 @@ def hero(pose="stand", expr="normal", hoodie=(240, 190, 40), look=(0.0, 0.0), bl
         d.line([(cx - 90 * s, 1010 * s), (cx + 170 * s, 1030 * s), (cx + 190 * s, 1380 * s)], fill=blk, width=44 * s, joint="curve")
         d.line([(cx + 10 * s, 1010 * s), (cx + 260 * s, 1040 * s), (cx + 280 * s, 1380 * s)], fill=blk, width=44 * s, joint="curve")
         d.rounded_rectangle([cx - 200 * s, 640 * s, cx + 150 * s, 1060 * s], radius=120 * s, fill=hood)
-        d.rounded_rectangle([cx - 200 * s, 900 * s, cx + 150 * s, 1060 * s], radius=80 * s, fill=shade)
         d.ellipse([cx - 230 * s, 560 * s, cx + 170 * s, 820 * s], fill=deep)
         d.line([(cx + 60 * s, 720 * s), (cx + 120 * s, 980 * s), (cx + 200 * s, 1000 * s)], fill=blk, width=28 * s, joint="curve")
         head(cx - 30 * s, 400 * s, 240 * s)
@@ -388,7 +404,6 @@ def hero(pose="stand", expr="normal", hoodie=(240, 190, 40), look=(0.0, 0.0), bl
         d.line([(cx - 170 * s, 700 * s), (cx - 230 * s, 1000 * s)], fill=blk, width=30 * s)
         d.line([(cx + 170 * s, 700 * s), (cx + 230 * s, 1000 * s)], fill=blk, width=30 * s)
         d.rounded_rectangle([cx - 190 * s, 620 * s, cx + 190 * s, 1090 * s], radius=130 * s, fill=hood)
-        d.rounded_rectangle([cx - 190 * s, 930 * s, cx + 190 * s, 1090 * s], radius=80 * s, fill=shade)
         d.rounded_rectangle([cx - 100 * s, 870 * s, cx + 100 * s, 960 * s], radius=30 * s, fill=deep)
         d.ellipse([cx - 230 * s, 540 * s, cx + 230 * s, 800 * s], fill=deep)
         head(cx, 380 * s, 250 * s)
@@ -441,7 +456,7 @@ def caption_img(items, size=150):
         return _cap_cache[key]
     f = font(size)
     txt = " ".join(w for w, _ in items)
-    while f.getlength(txt) > W - 120 and size > 70:
+    while f.getlength(txt) > W - 300 and size > 70:  # zone sûre TikTok (boutons à droite)
         size -= 8
         f = font(size)
     tw = int(f.getlength(txt)) + 60
@@ -470,7 +485,7 @@ def draw_clock(frame, clock_s):
     txt = f"{hh:02d}:{mm:02d}:{ss:02d}"
     f = font(104)
     d = ImageDraw.Draw(frame)
-    d.text(((W - f.getlength(txt)) / 2, 120), txt, font=f, fill=WHITE, stroke_width=6, stroke_fill=(0, 0, 0))
+    d.text(((W - f.getlength(txt)) / 2, 160), txt, font=f, fill=WHITE, stroke_width=6, stroke_fill=(0, 0, 0))
 
 
 def draw_choice(frame, a, b, t, picked=None, count=None, enter=True):
@@ -479,24 +494,52 @@ def draw_choice(frame, a, b, t, picked=None, count=None, enter=True):
     fl, ft = font(150), font(96)
     for i, (lab, txt, col) in enumerate((("A", a, (214, 48, 58)), ("B", b, (52, 98, 214)))):
         k = R.ease_out(min(1, max(0, (t - i * 0.12) / 0.28))) if enter else 1
-        y0 = 600 + i * 470
+        y0 = 560 + i * 450
         x_off = (1 - k) * (-W if i == 0 else W)
-        box = [70 + x_off, y0, W - 70 + x_off, y0 + 400]
+        box = [60 + x_off, y0, W - 170 + x_off, y0 + 390]  # libère la colonne des boutons TikTok
         dim = picked is not None and picked != lab
         fill = R.mix(col, (25, 20, 40), 0.7) if dim else col
         d.rounded_rectangle(box, radius=56, fill=fill, outline=WHITE if picked == lab else (10, 8, 20),
                             width=16 if picked == lab else 8)
         d.text((box[0] + 50, y0 + 110), lab, font=fl, fill=WHITE, stroke_width=7, stroke_fill=(0, 0, 0))
         f = ft
-        while f.getlength(txt) > W - 400 and f.size > 56:
+        while f.getlength(txt) > W - 520 and f.size > 50:
             f = font(f.size - 6)
         d.text((box[0] + 230, y0 + 200 - f.size * 0.7), txt, font=f, fill=WHITE, stroke_width=6, stroke_fill=(0, 0, 0))
     if count is not None:
         fc = font(190)
-        d.text(((W - fc.getlength(count)) / 2, 1530), count, font=fc, fill=WHITE, stroke_width=9, stroke_fill=(0, 0, 0))
+        d.text(((W - 110 - fc.getlength(count)) / 2, 1440), count, font=fc, fill=WHITE, stroke_width=9, stroke_fill=(0, 0, 0))
 
 
 # ------------------------------------------------------------------ voix
+
+def squeeze(a, max_gap=0.10, min_gap=0.16):
+    """Raccourcit les silences dans une réplique (pauses de virgule / point trop longues)."""
+    if len(a) < SR // 5:
+        return a
+    hop = SR // 100
+    n = len(a) // hop
+    rms = np.sqrt(np.mean(a[: n * hop].reshape(n, hop) ** 2, axis=1))
+    thr = max(0.006, 0.05 * rms.max())
+    silent = rms < thr
+    keep = np.ones(len(a), bool)
+    i = 0
+    while i < n:
+        if silent[i]:
+            j = i
+            while j < n and silent[j]:
+                j += 1
+            if (j - i) * hop > min_gap * SR:
+                cut0 = i * hop + int(max_gap * SR / 2)
+                cut1 = j * hop - int(max_gap * SR / 2)
+                keep[cut0:cut1] = False
+            i = j
+        else:
+            i += 1
+    out = a[keep]
+    # fondu de 5 ms aux jonctions pour éviter les clics
+    return out.astype(np.float32)
+
 
 def prepare_voice(beats):
     import voice
@@ -508,9 +551,9 @@ def prepare_voice(beats):
         if not line:
             b.setdefault("dur", 1.2)
             continue
-        a = voice.synth(line)
+        a = squeeze(voice.synth(line))
         clips[i] = a
-        need = len(a) / SR + 0.06
+        need = len(a) / SR + 0.03
         if "choice" in b:
             need = max(need, b.get("dur", 0))
         last_sfx = max([s[1] for s in b.get("sfx", [])], default=0)
@@ -526,7 +569,7 @@ def voice_track(beats, clips, total, tmp):
     for i, b in enumerate(beats):
         if i in clips:
             a = clips[i]
-            j = int((t0 + 0.02) * SR)
+            j = int((t0 + 0.01) * SR)
             track[j:j + len(a)] += a[: len(track) - j]
         t0 += b["dur"]
     return voice.megaphone(track, tmp)
@@ -534,15 +577,65 @@ def voice_track(beats, clips, total, tmp):
 
 # ------------------------------------------------------------------ rendu
 
+# lumière principale de chaque décor (pour éclairer le personnage)
+LIGHT = {"chambre": (170, 160, 255), "fenetre": (180, 170, 255), "rue": (255, 150, 90), "flou": FIRE,
+         "porte": (255, 170, 90), "radio": FIRE}
+# poussière / braises qui flottent dans l'air
+DUST = {"rue": ((255, 150, 70), 46, -1), "chambre": ((210, 200, 255), 30, 1), "fenetre": ((210, 200, 255), 30, 1),
+        "flou": ((255, 200, 140), 26, -1), "porte": ((255, 190, 120), 26, 1), "radio": ((255, 190, 120), 22, 1)}
+
+
+def bloom(img, amount=0.55):
+    """Halo autour des zones lumineuses (lune, fenêtres, feu) : rendu plus « caméra »."""
+    a = np.asarray(img).astype(np.float32)
+    lum = a.max(axis=2, keepdims=True)
+    bright = np.clip((lum - 150) / 105, 0, 1) * a
+    small = Image.fromarray(bright.astype(np.uint8)).resize((img.width // 4, img.height // 4), Image.BILINEAR)
+    small = small.filter(ImageFilter.GaussianBlur(14)).resize(img.size, Image.BILINEAR)
+    out = a + np.asarray(small).astype(np.float32) * amount
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
+
+
+def light_char(hc, color, side=-1):
+    """Éclaire le personnage : dégradé de lumière sur le sweat + liseré coloré côté lumière."""
+    a = np.asarray(hc).astype(np.float32)
+    h, w = a.shape[:2]
+    alpha = a[..., 3:4] / 255
+    xx = np.linspace(0, 1, w)[None, :, None]
+    yy = np.linspace(0, 1, h)[:, None, None]
+    lit = (1 - xx) if side < 0 else xx
+    g = 0.78 + 0.42 * lit - 0.22 * yy
+    cloth = (a[..., :3].max(axis=2, keepdims=True) > 45)
+    rgb = np.where(cloth, a[..., :3] * g, a[..., :3])
+    # liseré : bord de la silhouette, plus fort du côté de la lumière
+    al = Image.fromarray(a[..., 3].astype(np.uint8))
+    k = max(5, (w // 60) | 1)
+    edge = np.asarray(al).astype(np.float32) - np.asarray(al.filter(ImageFilter.MinFilter(k))).astype(np.float32)
+    edge = np.asarray(Image.fromarray(np.clip(edge, 0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(k / 3))).astype(np.float32) / 255
+    rim = (edge * (0.25 + 0.75 * lit[..., 0]))[..., None]
+    rgb = rgb + np.array(color, np.float32)[None, None, :] * rim * 0.9
+    out = np.concatenate([np.clip(rgb, 0, 255), alpha * 255], axis=2).astype(np.uint8)
+    return Image.fromarray(out, "RGBA")
+
+
 def compose(b, cache):
+    """Renvoie (décor, [personnages, personnages yeux fermés]) en deux calques pour la profondeur."""
     key = json.dumps([b.get("scene", "flou"), b.get("params", {}), b.get("char"), b.get("char2")], sort_keys=True)
     if key in cache:
         return cache[key]
-    base = SCENES[b.get("scene", "flou")](b.get("params", {})).convert("RGBA")
-    variants = []
+    scene = b.get("scene", "flou")
+    bg = bloom(SCENES[scene](b.get("params", {})).convert("RGB"))
+    chars = [c for c in (b.get("char"), b.get("char2")) if c]
+    # profondeur de champ : le décor est flou derrière un personnage en gros plan
+    close = [c for c in chars if c.get("pose") in ("face", "back") or c.get("head", [0, 0, 0])[2] >= 0.2]
+    blur = b.get("dof", 7 if close else (2.5 if chars else 0))
+    if blur:
+        bg = bg.filter(ImageFilter.GaussianBlur(blur))
+    light = tuple(b.get("params", {}).get("light", LIGHT.get(scene, FIRE)))
+    layers = []
     for blink in (False, True):
-        img = base.copy()
-        for ch in [c for c in (b.get("char"), b.get("char2")) if c]:
+        fg = Image.new("RGBA", (CW, CH), (0, 0, 0, 0))
+        for ch in chars:
             hc = hero(ch.get("pose", "stand"), ch.get("expr", "normal"), tuple(ch.get("hoodie", (240, 190, 40))),
                       tuple(ch.get("look", (0, 0))), blink=blink and ch.get("expr", "normal") in ("normal", "side"))
             if "head" in ch:
@@ -565,11 +658,43 @@ def compose(b, cache):
                     hc = hc.transpose(Image.FLIP_LEFT_RIGHT)
                 x = int(CW * ch.get("x", 0.5) - hc.width / 2)
                 y = int(CH * ch.get("y", 1.0) - hc.height)
-            # ombre douce au sol
-            img.paste(hc, (x, y), hc)
-        variants.append(img.convert("RGB"))
-    cache[key] = variants
-    return variants
+            hc = light_char(hc, light, ch.get("light_side", -1))
+            if ch.get("pose", "stand") in ("stand", "sit"):
+                # ombre de contact au sol
+                sh = Image.new("RGBA", (CW, CH), (0, 0, 0, 0))
+                ImageDraw.Draw(sh).ellipse([x + hc.width * 0.18, y + hc.height * 0.95, x + hc.width * 0.82,
+                                            y + hc.height * 1.03], fill=(0, 0, 0, 150))
+                fg.alpha_composite(sh.filter(ImageFilter.GaussianBlur(hc.width * 0.04)))
+            # ombre portée douce derrière le personnage (le détache du décor)
+            shadow = Image.new("RGBA", hc.size, (0, 0, 0, 0))
+            shadow.putalpha(hc.getchannel("A").point(lambda v: v * 0.45))
+            shadow = shadow.filter(ImageFilter.GaussianBlur(max(4, hc.width // 40)))
+            fg.alpha_composite(shadow, (max(0, x + hc.width // 50), max(0, y + hc.width // 60)))
+            fg.alpha_composite(hc, (x, y)) if x >= 0 and y >= 0 else fg.paste(hc, (x, y), hc)
+        layers.append(fg if chars else None)
+    cache[key] = (bg, layers)
+    return cache[key]
+
+
+def particles(fr, b, bi, lt):
+    color, n, direction = DUST.get(b.get("scene", "flou"), ((230, 220, 255), 24, 1))
+    if b.get("particles") is False:
+        return
+    rnd = np.random.default_rng(bi * 7 + 3)
+    x0 = rnd.uniform(0, W, n)
+    y0 = rnd.uniform(0, H, n)
+    sp = rnd.uniform(25, 90, n)
+    r = rnd.uniform(2, 7, n)
+    ph = rnd.uniform(0, 6.28, n)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    for i in range(n):
+        x = x0[i] + 18 * math.sin(lt * 1.3 + ph[i])
+        y = (y0[i] + direction * sp[i] * lt) % H
+        al = int(70 + 120 * (0.5 + 0.5 * math.sin(lt * 2 + ph[i])))
+        d.ellipse([x - r[i], y - r[i], x + r[i], y + r[i]], fill=color + (al,))
+    layer = layer.filter(ImageFilter.GaussianBlur(1.6))
+    fr.paste(layer, (0, 0), layer)
 
 
 def camera(b, k):
@@ -645,8 +770,18 @@ def render(ep, out):
                 oy += random.uniform(-1, 1) * b["shake"]
                 ox, oy = min(max(0, ox), CW - cw), min(max(0, oy), CH - chh)
             blink = (n % 84) in (0, 1, 2, 3)
-            src = imgs[1 if blink else 0]
-            fr = src.resize((W, H), Image.BILINEAR, box=(ox, oy, ox + cw, oy + chh))
+            bg, fgs = imgs
+            fr = bg.resize((W, H), Image.BILINEAR, box=(ox, oy, ox + cw, oy + chh))
+            fg = fgs[1 if blink else 0]
+            if fg is not None:
+                # parallaxe : le personnage (premier plan) bouge un peu plus que le décor
+                pz = 1 + (z - 1) * 1.35
+                pw, ph = CW / (K * pz), CH / (K * pz)
+                px = min(max(0, cx * CW - pw / 2 + (ox - (cx * CW - cw / 2))), CW - pw)
+                py = min(max(0, cy * CH - ph / 2 + (oy - (cy * CH - chh / 2))), CH - ph)
+                layer = fg.resize((W, H), Image.BILINEAR, box=(px, py, px + pw, py + ph))
+                fr.paste(layer, (0, 0), layer)
+            particles(fr, b, bi, lt)
             if lt < 0.1 and bi > 0:
                 fr = fr.filter(ImageFilter.GaussianBlur(14 * (1 - lt / 0.1)))
             if b.get("choice"):
