@@ -2,7 +2,7 @@
 
 Ce fichier est le mode d'emploi de la routine Claude qui tourne chaque matin.
 Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricool à
-**10:00, 12:00 et 17:00 (Europe/Paris)** le jour même, sans intervention humaine.
+**10:00, 12:00 et 18:00 (Europe/Paris)** le jour même, sans intervention humaine.
 
 ## Contexte fixe
 
@@ -125,7 +125,7 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    git checkout main
    ```
 6. Programmer chaque vidéo avec `createScheduledPost` :
-   - `date` / `publicationDate` : aujourd'hui 10:00, 12:00, 17:00 Europe/Paris
+   - `date` / `publicationDate` : aujourd'hui 10:00, 12:00, 18:00 Europe/Paris (choisi par Fio le 01/11 : pics d'audience Metricool à 10h, 12h et 18h)
      (si un horaire est déjà passé, utiliser le prochain horaire libre et
      décaler) ;
    - `autoPublish: true`, `draft: false` ;
