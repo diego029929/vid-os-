@@ -24,7 +24,10 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
 
 ## Étapes
 
-0. Préparer la voix off : `pip install -q chatterbox-tts`. Voix validée par
+0. Préparer la voix off, en installant d'abord torch en version CPU (sinon
+   pip télécharge la version GPU de plusieurs Go et bloque plus de 30 min) :
+   `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu`
+   puis `pip install -q chatterbox-tts` (≈ 2 min au total). Voix validée par
    Fio le 01/11 (essai « V1 ») : Chatterbox, timbre
    `assets/ref/ref-pierre-moyen.wav`, exagération 0.6, **30 % plus rapide,
    sans effet radio**, pauses raccourcies. Le moteur `engine/render2.py`
