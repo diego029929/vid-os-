@@ -231,3 +231,25 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    décalant vers le prochain horaire libre si un créneau est passé.
 8. En cas d'échec (rendu, push ou Metricool), ne rien publier de bancal :
    s'arrêter et expliquer le problème dans le compte rendu de la session.
+
+## Conseils retenus le 02/11 (fiche partagée par Fio)
+
+S'appliquent aux épisodes ET aux courtes « SURVIS ? » :
+- **Ancrer en France** : lieux réels et reconnaissables (Paris, Lyon,
+  Marseille, une ligne de RER, un TGV Paris-Marseille…), cités dès
+  l'accroche. Le spectateur se projette et identifie ses amis.
+- **Accroche 0-1 s** : l'image la plus forte de la vidéo d'abord + un texte
+  court qui donne lieu et urgence (ex. « LYON, 3 H 12. IL RESTE 9 MINUTES. »),
+  sans jamais reprendre la même formule. 1-3 s : une phrase qui promet ce
+  qu'on va découvrir.
+- **Escalade** : chaque plan plus intense que le précédent, un plan toutes
+  les 2-3 s.
+- **Faire participer** : la question finale peut proposer de choisir la
+  suite (« QUELLE VILLE ENSUITE ? », « QUEL DANGER POUR LE N° SUIVANT ? »).
+  Si un commentaire propose une ville ou une idée, la routine peut s'en
+  servir et le dire (« VOUS AVEZ CHOISI MARSEILLE »).
+- **Hashtags** : 3 à 5 ciblés, dont le nom de la ville (#fiction #survie
+  #horreur #marseille…), pas de longue liste.
+- **Fiction** : écrire « FICTION » discrètement au début. Ne jamais imiter un
+  vrai journal télé, un logo de média ou une alerte officielle, et ne rien
+  faire sur une catastrophe réelle en cours.
