@@ -1,0 +1,1266 @@
+{
+ "series": "LE TRAIN DE NUIT",
+ "day": 1,
+ "subtitle": "PARTIE 1",
+ "clock_start": 12780,
+ "title": "Partie 1 · Tu te réveilles seul dans un train. Ne regarde pas ton reflet.",
+ "caption": "Partie 1 du Train de nuit. 3 h 33, un train vide, une affiche de règles… et ton reflet qui ne bouge plus comme toi. Tu regardes ou pas ? A ou B 👇 #histoire #creepy #horreur #train #pourtoi",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "wagon",
+   "text": "IL EST *3 H 33*. TU TE RÉVEILLES DANS UN TRAIN.",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "stand",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "DANS UNE MINUTE, TU VAS DEVOIR CHOISIR : *REGARDER* OU PAS.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "LE WAGON EST VIDE. IL N'Y A PERSONNE.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "DEHORS, TOUT EST NOIR. LE TRAIN NE RALENTIT JAMAIS.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU NE TE SOUVIENS PAS D'ÊTRE MONTÉ ICI.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.5,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "TON TÉLÉPHONE N'A PLUS DE RÉSEAU. PLUS DE BATTERIE.",
+   "char": {
+    "pose": "sit",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "AU-DESSUS DE LA PORTE, IL Y A UNE AFFICHE.",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« RÈGLES DU *TRAIN DE NUIT*. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "LA PREMIÈRE RÈGLE EST ÉCRITE EN ROUGE.",
+   "cam": {
+    "z": [
+     1.2,
+     1.35
+    ],
+    "y": [
+     0.45,
+     0.4
+    ]
+   },
+   "params": {
+    "seed": 2
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« DANS UN TUNNEL, NE REGARDE *JAMAIS* TON REFLET. »",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.6
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "TU SOURIS. ÇA DOIT ÊTRE UNE BLAGUE.",
+   "char": {
+    "pose": "stand",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "PUIS TU REGARDES L'HORLOGE DU WAGON.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "ELLE EST BLOQUÉE SUR *3 H 33*.",
+   "cam": {
+    "z": [
+     1.15,
+     1.3
+    ],
+    "y": [
+     0.3,
+     0.25
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "ET LE TRAIN ENTRE DANS UN *TUNNEL*.",
+   "shake": 8,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "LA LUMIÈRE BAISSE. LA VITRE DEVIENT UN MIROIR.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU TE VOIS DEDANS, ASSIS SUR TON SIÈGE.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "MAIS TON REFLET *NE BOUGE PAS* COMME TOI.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     -0.6,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "IL TOURNE LA TÊTE. IL TE FIXE.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU LE *REGARDES* ?",
+   "dur": 3.2,
+   "choice": {
+    "a": "REGARDER",
+    "b": "FERMER LES YEUX",
+    "countdown": 3
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "TU REGARDES TON REFLET.",
+   "choice": {
+    "a": "REGARDER",
+    "b": "FERMER LES YEUX",
+    "picked": "A"
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.02
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "IL SOURIT. TOI, TU NE SOURIS PAS.",
+   "record": "r1",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     -0.6,
+     0
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "IL POSE SA MAIN SUR LA VITRE. DE L'INTÉRIEUR.",
+   "record": "r1",
+   "sfx": [
+    [
+     "knock",
+     0,
+     0.6
+    ]
+   ],
+   "params": {
+    "red": true,
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ET LA VITRE COMMENCE À SE *FISSURER*.",
+   "record": "r1",
+   "shake": 10,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "ET SUR TON SIÈGE, IL N'Y A PLUS PERSONNE.",
+   "record": "r1",
+   "glitch": 0.3,
+   "params": {
+    "red": true,
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "flou",
+   "text": "TU FERMES LES YEUX. FORT.",
+   "choice": {
+    "a": "REGARDER",
+    "b": "FERMER LES YEUX",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.02
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "QUELQUE CHOSE TAPE CONTRE LA VITRE.",
+   "sfx": [
+    [
+     "knock",
+     0,
+     0.9
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "TU RESPIRES. TU N'OUVRES PAS LES YEUX.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "stand",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "PLUS AUCUN BRUIT. LE SILENCE REVIENT.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "LE TRAIN SORT DU TUNNEL. LA LUMIÈRE REVIENT.",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "TON REFLET EST NORMAL. IL BOUGE COMME TOI.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "MAIS SUR LA VITRE, IL RESTE UNE TRACE DE MAIN.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.6,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ET CE N'EST PAS *TA MAIN*.",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "ELLE EST BEAUCOUP TROP GRANDE POUR ÊTRE HUMAINE.",
+   "cam": {
+    "z": [
+     1.2,
+     1.35
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "LA PORTE DU FOND S'OUVRE TOUTE SEULE.",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "UN CONTRÔLEUR ENTRE. IL N'A *PAS DE VISAGE*.",
+   "char": {
+    "pose": "stand",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« VOTRE BILLET, S'IL VOUS PLAÎT. »",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "SA VOIX RÉSONNE DANS TOUT LE WAGON.",
+   "char": {
+    "pose": "stand",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU FOUILLES TES POCHES. TU N'AS AUCUN BILLET.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "SUR L'AFFICHE, UNE NOUVELLE LIGNE APPARAÎT.",
+   "cam": {
+    "z": [
+     1.2,
+     1.35
+    ],
+    "y": [
+     0.45,
+     0.4
+    ]
+   },
+   "params": {
+    "seed": 3
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« NE MENTEZ *JAMAIS* AU CONTRÔLEUR. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "IL TEND SA MAIN VERS TOI.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "SI TU LUI MENS, PERSONNE NE SAIT CE QU'IL TE FERA.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU MONTRES TA MAIN VIDE, OU TU TE CACHES ?",
+   "dur": 2.6,
+   "choice": {
+    "a": "MONTRER TA MAIN VIDE",
+    "b": "TE CACHER"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "choice": {
+    "a": "MONTRER TA MAIN VIDE",
+    "b": "TE CACHER"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.06
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "fenetre",
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  }
+ ]
+}

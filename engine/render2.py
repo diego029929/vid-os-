@@ -301,6 +301,97 @@ def scene_radio(p):
     return c.done()
 
 
+def scene_escalier(p):
+    """Cage d'escalier d'immeuble, marches qui montent vers une lumière en haut."""
+    c = Canvas((48, 34, 86), (14, 10, 28))
+    light = (120, 255, 130) if p.get("green") else (255, 170, 90)
+    if p.get("dark"):
+        light = (70, 50, 110)
+    c.glow(0.62, 0.12, 0.6, light, 0.45)
+    d = c.d
+    # murs
+    d.polygon([c.P(0, 0), c.P(0.28, 0.18), c.P(0.28, 0.82), c.P(0, 1)], fill=(30, 22, 52))
+    d.polygon([c.P(1, 0), c.P(0.78, 0.14), c.P(0.78, 0.86), c.P(1, 1)], fill=(36, 26, 60))
+    # marches en perspective
+    n = 14
+    for i in range(n):
+        t0, t1 = i / n, (i + 1) / n
+        v0 = 1.0 - 0.80 * t0
+        v1 = 1.0 - 0.80 * t1
+        ua0, ub0 = 0.0 + 0.28 * t0, 1.0 - 0.22 * t0
+        ua1, ub1 = 0.0 + 0.28 * t1, 1.0 - 0.22 * t1
+        col = R.mix((74, 58, 110), (40, 30, 66), t0)
+        d.polygon([c.P(ua0, v0), c.P(ub0, v0), c.P(ub1, v1 + 0.02 * (1 - t0)), c.P(ua1, v1 + 0.02 * (1 - t0))], fill=col)
+        d.line([c.P(ua0, v0), c.P(ub0, v0)], fill=(20, 14, 34), width=10)
+    # rampe
+    d.line([c.P(0.86, 0.95), c.P(0.70, 0.22)], fill=(16, 12, 26), width=26)
+    for k in range(7):
+        t = k / 7
+        u, v = 0.86 - 0.16 * t, 0.95 - 0.73 * t
+        d.line([c.P(u, v), c.P(u, v + 0.09 * (1 - t * 0.6))], fill=(16, 12, 26), width=10)
+    # palier en haut
+    d.rectangle(c.box(0.28, 0.14, 0.78, 0.20), fill=(24, 18, 40))
+    c.glow(0.53, 0.17, 0.25, light, 0.35)
+    return c.done()
+
+
+def scene_wagon(p):
+    """Intérieur d'un train de nuit vide : sièges, vitres noires, néons."""
+    c = Canvas((40, 30, 70), (16, 12, 30))
+    d = c.d
+    neon = (120, 255, 140) if p.get("green") else ((255, 70, 60) if p.get("red") else (200, 190, 255))
+    dark = p.get("dark")
+    # plafond et néons
+    d.polygon([c.P(0, 0), c.P(1, 0), c.P(0.62, 0.30), c.P(0.38, 0.30)], fill=(30, 24, 52))
+    if not dark:
+        for k in range(5):
+            t = k / 5
+            v = 0.04 + 0.24 * (1 - (1 - t) ** 1.6)
+            hw = 0.22 * (1 - t) + 0.03
+            d.rectangle(c.box(0.5 - hw * 0.35, v, 0.5 + hw * 0.35, v + 0.008 * (1 - t) + 0.003), fill=neon)
+        c.glow(0.5, 0.12, 0.6, neon, 0.18)
+    d = c.d
+    # vitres de chaque côté (nuit qui défile)
+    for side in (0, 1):
+        for k in range(4):
+            t0, t1 = k / 4, (k + 0.8) / 4
+            def ux(t):
+                return (0.38 * (1 - (1 - t) ** 1.4)) if side == 0 else (1 - 0.38 * (1 - (1 - t) ** 1.4))
+            def vt(t):
+                return 0.16 + 0.15 * (1 - (1 - t) ** 1.4)
+            def vb(t):
+                return 0.50 - 0.08 * (1 - (1 - t) ** 1.4)
+            pts = [c.P(ux(t0), vt(t0)), c.P(ux(t1), vt(t1)), c.P(ux(t1), vb(t1)), c.P(ux(t0), vb(t0))]
+            d.polygon(pts, fill=(10, 8, 20))
+            d.line(pts + [pts[0]], fill=(60, 50, 90), width=10)
+            d.line([pts[0], pts[2]], fill=(28, 24, 48), width=6)
+    # couloir central
+    d.polygon([c.P(0.40, 0.62), c.P(0.60, 0.62), c.P(0.85, 1.0), c.P(0.15, 1.0)], fill=(26, 20, 40))
+    d.polygon([c.P(0.42, 0.40), c.P(0.58, 0.40), c.P(0.60, 0.62), c.P(0.40, 0.62)], fill=(20, 16, 34))
+    # porte du fond
+    d.rectangle(c.box(0.455, 0.42, 0.545, 0.62), fill=(60, 50, 96))
+    d.rectangle(c.box(0.47, 0.44, 0.53, 0.52), fill=(12, 10, 22))
+    # sièges en perspective
+    seat = (110, 40, 60) if not dark else (50, 24, 40)
+    top = (140, 56, 76) if not dark else (60, 30, 50)
+    for side in (0, 1):
+        for k in reversed(range(5)):
+            t = k / 5
+            near = 1 - t
+            w = 0.08 + 0.20 * near
+            h = 0.10 + 0.26 * near
+            u0 = (0.40 - 0.40 * near - w * 0.2) if side == 0 else (0.60 + 0.40 * near - w * 0.8)
+            v1 = 0.62 + 0.36 * near
+            d.rounded_rectangle(c.box(u0, v1 - h, u0 + w, v1), radius=int(30 * near + 8), fill=seat)
+            d.rounded_rectangle(c.box(u0, v1 - h, u0 + w, v1 - h * 0.8), radius=int(20 * near + 6), fill=top)
+            d.rounded_rectangle(c.box(u0, v1 - h, u0 + w, v1), radius=int(30 * near + 8), outline=(40, 16, 30), width=8)
+    if dark:
+        c.glow(0.5, 0.5, 0.6, (60, 40, 120), 0.2)
+    if p.get("green") or p.get("red"):
+        c.glow(0.5, 0.55, 0.5, neon, 0.25)
+    return c.done()
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -314,7 +405,8 @@ def scene_old(name):
 
 
 SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, "flou": scene_flou,
-          "porte": scene_porte, "radio": scene_radio}
+          "porte": scene_porte, "radio": scene_radio, "escalier": scene_escalier,
+          "wagon": scene_wagon}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
@@ -327,6 +419,8 @@ def _eyes(d, cx, ey, r, expr, look=(0.0, 0.0), s=1):
     for side in (-1, 1):
         ex = cx + side * r * 1.25
         lx, ly = look[0] * r * 0.45, look[1] * r * 0.45
+        if expr == "none":
+            return  # visage vide (personnage « sans visage »)
         if expr == "closed":
             d.line([(ex - r * 0.8, ey), (ex + r * 0.8, ey)], fill=WHITE, width=int(r * 0.22))
         elif expr == "wide":
@@ -359,7 +453,7 @@ def hero(pose="stand", expr="normal", hoodie=(240, 190, 40), look=(0.0, 0.0), bl
     shade = tuple(int(c * 0.72) for c in hoodie) + (255,)
     deep = tuple(int(c * 0.5) for c in hoodie) + (255,)
     rim = RIM + (255,)
-    e = "closed" if blink else expr
+    e = "closed" if blink and expr != "none" else expr
     cx = w / 2
 
     def head(hx, hy, r, face=True):
@@ -367,7 +461,9 @@ def hero(pose="stand", expr="normal", hoodie=(240, 190, 40), look=(0.0, 0.0), bl
         d.ellipse([hx - r, hy - r, hx + r, hy + r], fill=blk)
         if face:
             _eyes(d, hx, hy - r * 0.08, r * 0.2, e, look, s)
-            if e in ("scared",):
+            if e == "none":
+                pass
+            elif e in ("scared",):
                 d.ellipse([hx - r * 0.08, hy + r * 0.38, hx + r * 0.08, hy + r * 0.56], fill=WHITE)
             else:
                 d.line([(hx - r * 0.09, hy + r * 0.42), (hx + r * 0.09, hy + r * 0.42)], fill=WHITE, width=int(r * 0.045))

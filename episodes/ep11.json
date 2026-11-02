@@ -1,0 +1,1588 @@
+{
+ "series": "LE TRAIN DE NUIT",
+ "day": 1,
+ "subtitle": "PARTIE 2",
+ "clock_start": 12780,
+ "title": "Partie 2 · Le contrôleur sans visage veut ton nom. Tu le dis ?",
+ "caption": "Partie 2 du Train de nuit. Règle : ne mens jamais au contrôleur. Autre règle : ne lui dis jamais ton vrai nom. Tu fais quoi ? A ou B 👇 #histoire #creepy #horreur #train #pourtoi",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "wagon",
+   "text": "IL EST *3 H 33*. T'ES SEUL DANS UN TRAIN DE NUIT.",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "stand",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "CE SOIR, TU VAS DEVOIR CHOISIR : DIRE *TON NOM* OU TE TAIRE.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "DEVANT TOI, UN CONTRÔLEUR *SANS VISAGE*.",
+   "char": {
+    "pose": "stand",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "T'AS PAS DE BILLET. ALORS TU MONTRES TA MAIN VIDE.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "IL NE DIT RIEN. IL FIXE TA MAIN.",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU N'AS PAS MENTI. C'ÉTAIT LA RÈGLE.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.6
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "AUTOUR DE TOI, LE WAGON EST TOUJOURS VIDE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "AU-DESSUS DE LA PORTE, L'AFFICHE DES RÈGLES DU TRAIN.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« NE MENTEZ *JAMAIS* AU CONTRÔLEUR. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "ET JUSTE EN DESSOUS, UNE LIGNE S'ÉCRIT TOUTE SEULE.",
+   "cam": {
+    "z": [
+     1.2,
+     1.35
+    ],
+    "y": [
+     0.45,
+     0.4
+    ]
+   },
+   "params": {
+    "seed": 2
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« NE LUI DIS *JAMAIS* TON VRAI NOM. »",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "LE CONTRÔLEUR SORT UN PETIT CARNET NOIR.",
+   "char": {
+    "pose": "stand",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "notebook",
+   "text": "DEDANS, DES CENTAINES DE NOMS. TOUS RAYÉS.",
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« SANS BILLET, IL ME FAUT VOTRE NOM. »",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU NE PEUX PAS MENTIR. TU NE PEUX PAS DIRE TON NOM.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.5,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "DEUX RÈGLES. ET AUCUNE SORTIE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "SI TU TE TROMPES, TU NE DESCENDS JAMAIS DE CE TRAIN.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "LES LUMIÈRES DU WAGON SE METTENT À CLIGNOTER.",
+   "glitch": 0.3,
+   "sfx": [
+    [
+     "glitch",
+     0,
+     0.5
+    ]
+   ],
+   "params": {
+    "dark": true,
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« VOTRE NOM. *MAINTENANT*. »",
+   "shake": 8,
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU DIS TON *NOM* ?",
+   "dur": 3.2,
+   "choice": {
+    "a": "DIRE TON NOM",
+    "b": "TE TAIRE",
+    "countdown": 3
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "TU DIS TON VRAI NOM.",
+   "choice": {
+    "a": "DIRE TON NOM",
+    "b": "TE TAIRE",
+    "picked": "A"
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.02
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "IL L'ÉCRIT LENTEMENT DANS SON CARNET.",
+   "record": "r1",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "ET TON NOM S'EFFACE DE TA MÉMOIRE.",
+   "record": "r1",
+   "glitch": 0.3,
+   "params": {
+    "dark": true,
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU NE SAIS PLUS *QUI TU ES*.",
+   "record": "r1",
+   "shake": 10,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "DANS LA VITRE, TON REFLET PORTE UN MANTEAU BLEU.",
+   "record": "r1",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "flou",
+   "text": "TU NE DIS RIEN. PAS UN SEUL MOT.",
+   "choice": {
+    "a": "DIRE TON NOM",
+    "b": "TE TAIRE",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.02
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "TE TAIRE, CE N'EST PAS MENTIR.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "IL SE PENCHE VERS TOI. TOUT PRÈS.",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "LE CONTRÔLEUR ATTEND. UNE SECONDE. DEUX. TROIS.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "stand",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "PUIS IL RANGE SON CARNET. « BON VOYAGE. »",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "IL REPART PAR LA PORTE DU FOND.",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU AS RÉUSSI. POUR CETTE FOIS.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "TU TE LAISSES TOMBER SUR TON SIÈGE.",
+   "char": {
+    "pose": "sit",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ET LÀ, TU SENS QUE QUELQU'UN TE REGARDE.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.6,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "EN FACE DE TOI, UNE FILLE EN SWEAT VERT.",
+   "char": {
+    "pose": "sit",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ELLE N'ÉTAIT PAS LÀ IL Y A UNE SECONDE.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "ELLE TE REGARDE ET ELLE SOURIT.",
+   "char": {
+    "pose": "sit",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« BIEN JOUÉ. MOI, J'AI DIT MON NOM. »",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« JE M'APPELLE LILA. ENFIN, JE CROIS. »",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ELLE DIT QU'ELLE EST DANS CE TRAIN DEPUIS DES ANNÉES.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     -0.5,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« ICI, L'HEURE NE CHANGE JAMAIS. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« IL EST TOUJOURS *3 H 33*. »",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "SOUDAIN, LE TRAIN RALENTIT.",
+   "shake": 4,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.4
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "DEHORS, UN QUAI. AUCUN PANNEAU. AUCUN NOM.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« NE DESCENDS *SURTOUT PAS* À CET ARRÊT. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "LES PORTES DU TRAIN S'OUVRENT.",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "params": {
+    "seed": 4
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "UN VENT GLACÉ ENTRE DANS LE WAGON.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "seed": 3
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ET SUR LE QUAI, UNE VOIX T'APPELLE.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.6,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "C'EST LA VOIX DE *TA MÈRE*.",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "« VIENS, MON CŒUR. ON RENTRE À LA MAISON. »",
+   "cam": {
+    "z": [
+     1.1,
+     1.25
+    ]
+   },
+   "params": {
+    "seed": 7
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ÇA FAIT DES ANNÉES QUE TU NE L'AS PAS VUE.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LILA TE SERRE LE BRAS. « ELLE MENT. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LES PORTES VONT SE FERMER. TU AS TROIS SECONDES.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU DESCENDS, OU TU CROIS LILA ?",
+   "dur": 2.6,
+   "choice": {
+    "a": "DESCENDRE",
+    "b": "RESTER AVEC LILA"
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "choice": {
+    "a": "DESCENDRE",
+    "b": "RESTER AVEC LILA"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.06
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "fenetre",
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  }
+ ]
+}

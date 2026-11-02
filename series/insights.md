@@ -13,13 +13,16 @@ Mis à jour par la routine quotidienne à partir des statistiques Metricool.
 
 | Ép. | Publié | Durée | Vues TikTok | Likes | Comm. | Partages | Score | Reel : vues / likes / temps moyen | Jugé ? |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 30/10 14:06 | 60 s | 139 | 7 | 0 | 0 | 139 | 98 / 4 / 8,3 s | presque 48 h (relevé 01/11 7h) |
-| 2 | 31/10 10:04 | 90 s | 820 | 35 | 1 | 0 | 825 | 131 / 1 / 14,1 s | non (< 48 h) |
-| 3 | 31/10 12:04 | 90 s | 761 | 24 | 1 | 0 | 766 | 53 / 3 / 6,3 s | non (< 48 h) |
-| 4 | 31/10 17:00 | 90 s | pas encore remonté | | | | | | non |
-| 5 | 01/11 10:00 | | | | | | | | |
-| 6 | 01/11 12:00 | | | | | | | | |
-| 7 | 01/11 17:00 | | | | | | | | |
+| 1 | 30/10 14:06 | 60 s | 184 | 8 | 0 | 0 | 184 | 116 / 4 / 8,3 s | oui |
+| 2 | 31/10 10:04 | 90 s | 866 | 35 | 1 | 0 | 871 | 158 / 1 / 13,9 s | oui |
+| 3 | 31/10 12:04 | 90 s | 798 | 26 | 1 | 0 | 803 | 113 / 3 / 6,1 s | oui |
+| 4 | 31/10 17:05 | 90 s | 820 | 18 | 1 | 0 | 825 | 106 / 0 / 4,7 s | oui (presque 48 h) |
+| 5 | 01/11 10:04 | 86 s | 824 | 28 | 1 | 0 | 829 | 122 / 1 / 7,6 s | non (< 48 h) |
+| 6 | 01/11 12:03 | 87 s | 685 | 11 | 0 | 0 | 685 | 97 / 0 / 6,3 s | non (< 48 h) |
+| 7 | 01/11 17:00 | | pas encore remonté | | | | | | non |
+| 8 | 01/11 22:21 | ~70 s | pas encore remonté (style 2) | | | | | | non |
+
+(Relevé du 02/11 5h45, 14 jours. Médiane des scores TikTok ép. 2 à 6 : 825.)
 
 Score = vues × (1 + 5 × (commentaires + partages) / vues).
 
@@ -51,6 +54,7 @@ creux à 11 h, 13 h-14 h et après 21 h).
 - Ouverture par la réponse de l'épisode précédent.
 - Jamais de fond blanc au début (retour de Fio du 31/10) : ouverture depuis le noir.
 - Titre « Partie N · ... » et « PARTIE N » à l'écran (à partir du 01/11).
+- Commentaires < 1 % : dilemme annoncé dans les 5 premières secondes ET posé à la fin (à partir du 02/11).
 
 ## Conclusions et changements appliqués
 
@@ -87,3 +91,24 @@ creux à 11 h, 13 h-14 h et après 21 h).
   flottante dans la rue, carnet ouvert.
 - À surveiller le 02/11 : score des ép. 2-4 (enfin jugeables), et
   commentaires ép. 5/7 vs ép. 6.
+
+### 02/11 (épisode 9 = fin d'« Après la fin », épisodes 10-11 = « Le Train de nuit » parties 1-2)
+
+- TikTok très stable : ép. 2 à 5 entre 798 et 866 vues (médiane du score
+  825), ép. 6 un peu en dessous (685, 83 % de la médiane, pas < 50 %).
+- **Test d'hier (dilemme annoncé dès l'ouverture)** : ép. 5 (version A)
+  829 de score et 1 commentaire, ép. 6 (version B témoin) 685 et 0
+  commentaire. Avantage à la version A (+21 %), pas encore +30 % ; ép. 7
+  pas encore remonté. Comme les commentaires restent < 1 % des vues, la
+  règle « dilemme posé au début ET à la fin » s'applique de toute façon :
+  **les 3 vidéos du jour l'annoncent dans la 2e phrase**.
+- **Instagram : temps moyen 5 à 14 s sur 90 s** (< 40 % de la durée) : la
+  règle demande de raccourcir et d'accélérer le début. Plutôt que de tout
+  raccourcir d'un coup (Fio veut ~1 min 30), **test du jour = la
+  longueur** : ép. 10 version courte (~80 s), ép. 9 et ép. 11 version
+  normale (~90 s). Comparer score TikTok et temps moyen Reel dans 48 h.
+- Nouveautés : nouvelle série « Le Train de nuit » (6 épisodes), nouveaux
+  décors `wagon` (intérieur de train) et `escalier`, personnage « sans
+  visage » (expression `none`).
+- À surveiller le 03/11 : ép. 7 et 8 (premier style 2), ép. 9-11, et
+  surtout ép. 10 (court) contre ép. 11 (normal).
