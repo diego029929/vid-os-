@@ -123,12 +123,29 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
      finissait sur une question, sa réponse se voit dans l'action du début
      (on montre ce que le héros a choisi et ce qui se passe), pas avec une
      phrase sur les commentaires ;
+   - **Accroche** (retour de Fio, 02/11) : PAS de phrase de contexte qui
+     revient au début de chaque épisode (interdit en ouverture : « IMAGINE »,
+     « IL EST X H », « LE MONDE A FINI... », « TU VAS DEVOIR CHOISIR... »).
+     Chaque épisode ouvre différemment, au cœur de l'action : une image
+     choc, une réplique de dialogue, un danger immédiat, un détail
+     inquiétant. Avant d'écrire, relire les 3 premières répliques des
+     épisodes précédents de la série et ne reprendre ni leur forme ni leurs
+     mots. Le contexte vient ensuite, glissé dans l'action ;
+   - le script **s'enchaîne** : chaque réplique découle de la précédente
+     (cause → conséquence), pas une liste de phrases posées ;
+   - **jamais « fin de la série » ni « fin de la saison »** à l'écran ou à
+     la voix (Fio : ça sert à rien). Le dernier épisode d'une série finit
+     comme les autres (dilemme A/B + « ABONNE-TOI POUR LA SUITE ») ;
+   - **mauvais choix = « TU ES MORT. »** juste avant le `rewind` (dernier
+     plan enregistré avant de rembobiner : `"text": "TU ES *MORT*."`,
+     fond rouge, bruitage `hit`). Le moteur l'ajoute tout seul s'il manque ;
    - **chaque épisode se comprend seul** (demande de Fio, 01/11) : un
      spectateur qui tombe dessus sans avoir vu les autres doit tout capter.
      MAIS **jamais de résumé** (« précédemment... », « dans l'épisode
      d'avant... » : Fio trouve ça nul). À la place, écrire mieux :
-     - la situation est posée dans l'accroche, au présent, en une phrase
-       concrète (« Imagine. Il est 6 heures. T'as plus d'abri. ») ;
+     - la situation se comprend dès les premières secondes grâce à
+       l'action elle-même (ce qu'on voit, ce qui arrive), pas grâce à une
+       phrase de contexte toute faite ;
      - chaque personnage, objet ou règle est présenté au moment où il
        apparaît, en quelques mots glissés dans l'action (« la radio de la
        Station 7, celle qui donne les règles », « ta sœur, disparue depuis

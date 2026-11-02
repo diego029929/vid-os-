@@ -919,6 +919,13 @@ def render(ep, out):
     os.environ.setdefault("VOICE_TEMPO", str(ep.get("voice_tempo", 1.3)))
     os.environ.setdefault("VOICE_FX", ep.get("voice_fx", "leger"))
     beats = ep["beats"]
+    # mauvais choix : on annonce « TU ES MORT. » avant de rembobiner (demande de Fio, 02/11)
+    for i in range(len(beats) - 1, 0, -1):
+        b = beats[i]
+        if b.get("type") == "rewind" and "MORT" not in beats[i - 1].get("text", "").upper():
+            beats.insert(i, {"scene": "flou", "params": {"light": [255, 40, 40], "colors": [[70, 10, 20], [15, 4, 8]]},
+                             "text": "TU ES *MORT*.", "record": b["of"], "shake": 8, "glitch": 0.25,
+                             "sfx": [["hit", 0, 0.9]], "cam": {"z": [1.0, 1.12]}})
     clips = prepare_voice(beats) if ep.get("voiceover", True) else {}
     for b in beats:
         b.setdefault("dur", 1.5)

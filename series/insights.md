@@ -57,7 +57,7 @@ creux à 11 h, 13 h-14 h et après 21 h).
 - Ouverture par la réponse de l'épisode précédent.
 - Jamais de fond blanc au début (retour de Fio du 31/10) : ouverture depuis le noir.
 - Titre « Partie N · ... » et « PARTIE N » à l'écran (à partir du 01/11).
-- Commentaires < 1 % : dilemme annoncé dans les 5 premières secondes ET posé à la fin (à partir du 02/11).
+- Commentaires < 1 % : le dilemme peut être évoqué tôt, mais JAMAIS avec une formule d'ouverture fixe (« tu vas devoir choisir... ») : Fio (02/11) ne veut pas d'ouverture répétée d'un épisode à l'autre. Voir ROUTINE.md, « Accroche ».
 
 ## Conclusions et changements appliqués
 
