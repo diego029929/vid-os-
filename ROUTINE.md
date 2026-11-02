@@ -1,19 +1,8 @@
-# Routine quotidienne : 5 vidéos par jour
+# Routine quotidienne : 3 vidéos par jour
 
 Ce fichier est le mode d'emploi de la routine Claude qui tourne chaque matin.
-Objectif : créer **5 vidéos courtes « SURVIS ? N°X » (30 à 40 s, chacune
-indépendante)** et les programmer dans Metricool à
-**10:00, 12:00, 15:00, 18:00 et 20:00 (Europe/Paris)** le jour même, sans
-intervention humaine.
-
-> **Stratégie depuis le 02/11** (carte blanche de Fio, but : 10 000 abonnés
-> le plus vite possible) : lire `series/survis.md` en premier. Ce format
-> remplace les longues séries : là où une règle plus bas parle de « série »,
-> d'« épisode précédent », de 85-95 s, de 45-55 plans ou de 3 vidéos, appliquer
-> plutôt `series/survis.md` (vidéos indépendantes, 30-40 s, 20-28 plans,
-> 5 par jour). Le numéro N continue d'une vidéo à l'autre
-> (`next_episode_in_series`). Cocher dans la banque d'idées chaque idée
-> utilisée et en ajouter de nouvelles.
+Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricool à
+**10:00, 12:00 et 18:00 (Europe/Paris)** le jour même, sans intervention humaine.
 
 ## Contexte fixe
 
@@ -175,9 +164,9 @@ intervention humaine.
      prochain choix de l'histoire, montré avec les cartes A/B sans
      réponse), jamais sur un choix déjà révélé dans la vidéo. Puis
      « ABONNE-TOI POUR LA SUITE » ;
-   - commencer `title` par « SURVIS ? N°X · » puis une question qui donne
-     envie de répondre (ex. « SURVIS ? N°4 · Ton reflet cligne en retard.
-     Tu fais quoi ? ») ;
+   - commencer `title` par « Partie N · » (N = numéro d'épisode dans la
+     série) et mettre « PARTIE N » dans `subtitle` : les séries numérotées
+     poussent à regarder les autres épisodes ;
    - remplir `title` (≤ 80 caractères, sert de titre TikTok) et `caption`
      (texte du post avec 4 à 6 hashtags) ;
    - garder la continuité (jour, horloge `clock_start`, personnage).
@@ -188,12 +177,12 @@ intervention humaine.
    `series/apres-la-fin.md`, **5 ou 6 épisodes**, choix de Fio le 01/11) et mettre à jour `state.json`.
    Il est permis d'ajouter des décors dans `engine/render2.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
-4. Rendre les 5 vidéos (une à la fois, ~15-20 min chacune) avec `python3 engine/render2.py episodes/epNN.json /tmp/epNN.mp4`
+4. Rendre les 3 vidéos avec `python3 engine/render2.py episodes/epNN.json /tmp/epNN.mp4`
    (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin.
    **Un seul rendu à la fois** (02/11 : deux rendus en parallèle dépassent la
    mémoire, le second est tué sans message). Commencer par l'épisode de 10 h ;
    chaque vidéo n'a besoin d'être prête qu'avant son propre horaire. Pour chacune, vérifier
-   avec ffprobe la durée (30–40 s) et faire une planche contact
+   avec ffprobe la durée (85–95 s) et faire une planche contact
    (`ffmpeg -vf "fps=1/2.5,scale=216:-1,tile=6x4"`) puis la **regarder** :
    texte lisible, rien de coupé, le texte ne cache pas le visage du personnage, pas de mot avec un astérisque visible.
    Le moteur fait déjà écouter chaque réplique par Whisper (via `transformers`,
@@ -211,13 +200,13 @@ intervention humaine.
    ```
    git fetch --depth 1 origin media && git checkout -B media FETCH_HEAD
    git rm -q --ignore-unmatch *.mp4        # supprime les vidéos déjà envoyées
-   cp /chemin/epNN.mp4 .                   # les 5 nouvelles vidéos
+   cp /chemin/epNN.mp4 .                   # les 3 nouvelles vidéos
    git add -f *.mp4 && git commit -m "Vidéos du JJ/MM"
    git push origin media
    git checkout main
    ```
 6. Programmer chaque vidéo avec `createScheduledPost` :
-   - `date` / `publicationDate` : aujourd'hui 10:00, 12:00, 15:00, 18:00, 20:00 Europe/Paris (5 par jour depuis le 03/11 ; pics d'audience Metricool à 10h, 12h et 18h)
+   - `date` / `publicationDate` : aujourd'hui 10:00, 12:00, 18:00 Europe/Paris (choisi par Fio le 01/11 : pics d'audience Metricool à 10h, 12h et 18h)
      (si un horaire est déjà passé, utiliser le prochain horaire libre et
      décaler) ;
    - `autoPublish: true`, `draft: false` ;
