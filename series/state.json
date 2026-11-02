@@ -1,9 +1,9 @@
 {
-  "current_series": "apres-la-fin",
-  "series_file": "series/apres-la-fin.md",
-  "series_episode_count": 9,
-  "next_episode_in_series": 9,
-  "next_global_episode": 9,
+  "current_series": "le-train-de-nuit",
+  "series_file": "series/le-train-de-nuit.md",
+  "series_episode_count": 6,
+  "next_episode_in_series": 3,
+  "next_global_episode": 12,
   "published": [
     {
       "global": 1,
@@ -61,6 +61,31 @@
       "file": "episodes/ep08.json",
       "slot": "2026-11-01T22:21:00 Europe/Paris",
       "note": "style 2, publié à la demande de Fio (rendu ep08s2, version avant ajout de 8 plans)"
+    },
+    {
+      "global": 9,
+      "series": "apres-la-fin",
+      "episode": 9,
+      "file": "episodes/ep09.json",
+      "slot": "2026-11-02T10:00:00 Europe/Paris",
+      "metricool_id": 413663078
+    },
+    {
+      "global": 10,
+      "series": "le-train-de-nuit",
+      "episode": 1,
+      "file": "episodes/ep10.json",
+      "slot": "2026-11-02T12:00:00 Europe/Paris",
+      "metricool_id": 413729690,
+      "note": "test longueur : version courte (74 s)"
+    },
+    {
+      "global": 11,
+      "series": "le-train-de-nuit",
+      "episode": 2,
+      "file": "episodes/ep11.json",
+      "slot": "2026-11-02T18:00:00 Europe/Paris",
+      "metricool_id": 413767918
     }
   ]
 }

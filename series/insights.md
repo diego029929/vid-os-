@@ -21,6 +21,9 @@ Mis à jour par la routine quotidienne à partir des statistiques Metricool.
 | 6 | 01/11 12:03 | 87 s | 685 | 11 | 0 | 0 | 685 | 97 / 0 / 6,3 s | non (< 48 h) |
 | 7 | 01/11 17:00 | | pas encore remonté | | | | | | non |
 | 8 | 01/11 22:21 | ~70 s | pas encore remonté (style 2) | | | | | | non |
+| 9 | 02/11 10:00 | 84 s | | | | | | | non |
+| 10 | 02/11 12:00 | 74 s (court) | | | | | | | non |
+| 11 | 02/11 18:00 | 89 s | | | | | | | non |
 
 (Relevé du 02/11 5h45, 14 jours. Médiane des scores TikTok ép. 2 à 6 : 825.)
 
@@ -105,8 +108,8 @@ creux à 11 h, 13 h-14 h et après 21 h).
 - **Instagram : temps moyen 5 à 14 s sur 90 s** (< 40 % de la durée) : la
   règle demande de raccourcir et d'accélérer le début. Plutôt que de tout
   raccourcir d'un coup (Fio veut ~1 min 30), **test du jour = la
-  longueur** : ép. 10 version courte (~80 s), ép. 9 et ép. 11 version
-  normale (~90 s). Comparer score TikTok et temps moyen Reel dans 48 h.
+  longueur** : ép. 10 version courte (74 s), ép. 9 (84 s) et ép. 11 (89 s) version
+  normale. Comparer score TikTok et temps moyen Reel dans 48 h.
 - Nouveautés : nouvelle série « Le Train de nuit » (6 épisodes), nouveaux
   décors `wagon` (intérieur de train) et `escalier`, personnage « sans
   visage » (expression `none`).

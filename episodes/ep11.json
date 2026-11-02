@@ -127,7 +127,7 @@
   },
   {
    "scene": "flou",
-   "text": "IL NE DIT RIEN. IL FIXE TA MAIN.",
+   "text": "IL RESTE MUET. IL FIXE TA MAIN.",
    "char": {
     "pose": "face",
     "expr": "none",
@@ -352,7 +352,7 @@
   },
   {
    "scene": "notebook",
-   "text": "DEDANS, DES CENTAINES DE NOMS. TOUS RAYÉS.",
+   "text": "DEDANS, DES CENTAINES DE NOMS, TOUS BARRÉS.",
    "params": {
     "red": true
    },
@@ -1234,7 +1234,7 @@
   },
   {
    "scene": "fenetre",
-   "text": "DEHORS, UN QUAI. AUCUN PANNEAU. AUCUN NOM.",
+   "text": "DEHORS, IL Y A UN QUAI. AUCUN PANNEAU. AUCUN NOM.",
    "char": {
     "pose": "back",
     "head": [

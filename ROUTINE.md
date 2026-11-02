@@ -161,7 +161,10 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    Il est permis d'ajouter des décors dans `engine/render2.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
 4. Rendre les 3 vidéos avec `python3 engine/render2.py episodes/epNN.json /tmp/epNN.mp4`
-   (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin. Pour chacune, vérifier
+   (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin.
+   **Un seul rendu à la fois** (02/11 : deux rendus en parallèle dépassent la
+   mémoire, le second est tué sans message). Commencer par l'épisode de 10 h ;
+   chaque vidéo n'a besoin d'être prête qu'avant son propre horaire. Pour chacune, vérifier
    avec ffprobe la durée (85–95 s) et faire une planche contact
    (`ffmpeg -vf "fps=1/2.5,scale=216:-1,tile=6x4"`) puis la **regarder** :
    texte lisible, rien de coupé, le texte ne cache pas le visage du personnage, pas de mot avec un astérisque visible.
