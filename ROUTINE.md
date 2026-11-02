@@ -4,6 +4,13 @@ Ce fichier est le mode d'emploi de la routine Claude qui tourne chaque matin.
 Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricool à
 **10:00, 12:00 et 18:00 (Europe/Paris)** le jour même, sans intervention humaine.
 
+> **En plus, depuis le 03/11 (test validé par Fio)** : 2 vidéos courtes
+> indépendantes « SURVIS ? N°X » de 30-40 s, programmées à **15:00 et
+> 20:30**. Tout est décrit dans `series/survis.md` (à lire). Elles passent
+> par les mêmes étapes que les épisodes (rendu, contrôle images + Whisper,
+> branche media, Metricool TikTok + Instagram), mais APRÈS les 3 épisodes.
+> Les noter dans `series/insights.md` avec la mention « courte ».
+
 ## Contexte fixe
 
 - Metricool : brand `blogId` = `7755029`, fuseau `Europe/Paris`.
