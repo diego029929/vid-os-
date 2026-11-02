@@ -250,6 +250,6 @@ S'appliquent aux épisodes ET aux courtes « SURVIS ? » :
   servir et le dire (« VOUS AVEZ CHOISI MARSEILLE »).
 - **Hashtags** : 3 à 5 ciblés, dont le nom de la ville (#fiction #survie
   #horreur #marseille…), pas de longue liste.
-- **Fiction** : écrire « FICTION » discrètement au début. Ne jamais imiter un
-  vrai journal télé, un logo de média ou une alerte officielle, et ne rien
-  faire sur une catastrophe réelle en cours.
+- **Pas de mention « FICTION »** à l'écran (choix de Fio le 02/11). Ne
+  jamais imiter un vrai journal télé, un logo de média ou une alerte
+  officielle, et ne rien faire sur une catastrophe réelle en cours.
