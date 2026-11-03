@@ -204,6 +204,9 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    convertit en lettres).
    Corriger et relancer si besoin.
 5. Publier les fichiers sur la branche `media` (sans jamais forcer le push) :
+   (03/11 : si un rendu tourne encore, NE PAS faire `git checkout media` dans le
+   dépôt — `assets/` disparaît et le rendu suivant plante. Utiliser plutôt
+   `git worktree add /tmp/media media` et y copier les vidéos une par une.)
    ```
    git fetch --depth 1 origin media && git checkout -B media FETCH_HEAD
    git rm -q --ignore-unmatch *.mp4        # supprime les vidéos déjà envoyées

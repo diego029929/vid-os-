@@ -13,19 +13,29 @@ Mis à jour par la routine quotidienne à partir des statistiques Metricool.
 
 | Ép. | Publié | Durée | Vues TikTok | Likes | Comm. | Partages | Score | Reel : vues / likes / temps moyen | Jugé ? |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 30/10 14:06 | 60 s | 184 | 8 | 0 | 0 | 184 | 116 / 4 / 8,3 s | oui |
-| 2 | 31/10 10:04 | 90 s | 866 | 35 | 1 | 0 | 871 | 158 / 1 / 13,9 s | oui |
-| 3 | 31/10 12:04 | 90 s | 798 | 26 | 1 | 0 | 803 | 113 / 3 / 6,1 s | oui |
-| 4 | 31/10 17:05 | 90 s | 820 | 18 | 1 | 0 | 825 | 106 / 0 / 4,7 s | oui (presque 48 h) |
-| 5 | 01/11 10:04 | 86 s | 824 | 28 | 1 | 0 | 829 | 122 / 1 / 7,6 s | non (< 48 h) |
-| 6 | 01/11 12:03 | 87 s | 685 | 11 | 0 | 0 | 685 | 97 / 0 / 6,3 s | non (< 48 h) |
-| 7 | 01/11 17:00 | | pas encore remonté | | | | | | non |
-| 8 | 01/11 22:21 | ~70 s | pas encore remonté (style 2) | | | | | | non |
-| 9 | 02/11 10:00 | 84 s | | | | | | | non |
-| 10 | 02/11 12:00 | 74 s (court) | | | | | | | non |
-| 11 | 02/11 18:00 | 89 s | | | | | | | non |
+| 1 | 30/10 14:06 | 60 s | 205 | 8 | 0 | 0 | 205 | 117 / 4 / 8,7 s | oui |
+| 2 | 31/10 10:04 | 90 s | 883 | 35 | 1 | 0 | 888 | 159 / 1 / 14,4 s | oui |
+| 3 | 31/10 12:04 | 90 s | 814 | 26 | 1 | 0 | 819 | 114 / 3 / 6,1 s | oui |
+| 4 | 31/10 17:05 | 90 s | 835 | 18 | 1 | 0 | 840 | 106 / 0 / 4,7 s | oui |
+| 5 | 01/11 10:04 | 86 s | 840 | 29 | 1 | 0 | 845 | 122 / 1 / 7,5 s | oui |
+| 6 | 01/11 12:03 | 87 s | 788 | 15 | 1 | 0 | 793 | 118 / 0 / 5,4 s | oui |
+| 7 | 01/11 17:05 | 88 s | 781 | 21 | 1 | 0 | 786 | 127 / 0 / 6,0 s | oui |
+| 8 | 01/11 22:22 | 67 s (1er style 2) | 807 | 23 | 0 | 1 | 812 | 142 / 4 / 12,8 s | presque (31 h) |
+| 9 | 02/11 10:05 | 83 s (style 2) | 803 | 60 | 1 | 0 | 808 | 132 / 0 / 11,4 s | non (20 h) |
+| 10 | 02/11 12:04 | 73 s (court, style 2) | 766 | **85** | 0 | 0 | 766 | pas encore remonté | non (18 h) |
+| 11 | 02/11 18:00 | 89 s (style 2) | pas encore remonté | | | | | | non |
+| 12 | 03/11 10:00 | 89 s (accroche lieu) | | | | | | | |
+| 13 | 03/11 12:00 | 86 s (accroche dialogue) | | | | | | | |
+| 14 | 03/11 18:00 | 92 s (accroche lieu) | | | | | | | |
 
-(Relevé du 02/11 5h45, 14 jours. Médiane des scores TikTok ép. 2 à 6 : 825.)
+Vidéos courtes « SURVIS ? » (test lancé le 03/11, bilan le 06/11) :
+
+| Courte | Publié | Durée | Vues TikTok | Likes | Comm. | Partages | Score | Reel : vues / likes / temps moyen | Jugé ? |
+|---|---|---|---|---|---|---|---|---|---|
+| N°1 | 03/11 15:00 | 43 s | | | | | | | |
+| N°2 | 03/11 20:30 | 38 s | | | | | | | |
+
+(Relevé du 03/11 5h50, 14 jours. Médiane des scores TikTok ép. 2 à 10 : 812.)
 
 Score = vues × (1 + 5 × (commentaires + partages) / vues).
 
@@ -115,3 +125,27 @@ creux à 11 h, 13 h-14 h et après 21 h).
   visage » (expression `none`).
 - À surveiller le 03/11 : ép. 7 et 8 (premier style 2), ép. 9-11, et
   surtout ép. 10 (court) contre ép. 11 (normal).
+
+### 03/11 (épisodes 12-14 = « Le Train de nuit » parties 3-5, + courtes SURVIS ? N°1 et N°2)
+
+- TikTok toujours plat : ép. 2 à 10 entre 766 et 888 vues (médiane du
+  score 812). Aucune vidéo < 50 % de la médiane.
+- **Le style 2 plaît** : likes ép. 9 = 60 et ép. 10 = 85 (7 à 11 % des
+  vues) contre 15 à 35 avant. Sur Instagram, temps moyen ép. 8-9 = 11-13 s
+  contre 5-7 s pour les ép. 5-7 (rétention 54-63 % contre 43 %). On garde.
+- **Test longueur (ép. 10 court 73 s vs ép. 9/11 ~85-89 s)** : 766 contre
+  808 vues TikTok, mais plus de likes sur le court. Pas de différence
+  nette (et ép. 11 pas remonté) : on reste à 85-95 s (règle de Fio).
+- **Commentaires toujours ~0** (0 à 1 pour 800 vues) : c'est le vrai point
+  faible. Réponse du jour : les 2 courtes « SURVIS ? » (une histoire
+  complète en 35 s, question finale où les deux réponses se défendent),
+  et dans les épisodes le dilemme posé dès la 3e-4e phrase, sans formule
+  fixe.
+- **Test du jour (épisodes) : l'accroche.** Ép. 12 et 14 = version
+  « lieu + urgence » (« ENTRE LYON ET MARSEILLE, LES PORTES DU TRAIN
+  S'OUVRENT », « PRÈS D'AVIGNON, À 3 H 33, UNE PORTE TREMBLE ») ; ép. 13
+  = version « réplique de dialogue » (« NE CRIE PAS. SURTOUT, NE CRIE
+  PAS. »). Le train a maintenant un trajet réel (Paris-Nice), conseil de
+  la fiche de Fio.
+- À surveiller le 04/11 : ép. 10-11 (enfin jugeables), commentaires des
+  courtes N°1-2 contre épisodes 12-14.

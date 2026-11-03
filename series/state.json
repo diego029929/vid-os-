@@ -2,8 +2,8 @@
   "current_series": "le-train-de-nuit",
   "series_file": "series/le-train-de-nuit.md",
   "series_episode_count": 6,
-  "next_episode_in_series": 3,
-  "next_global_episode": 12,
+  "next_episode_in_series": 6,
+  "next_global_episode": 15,
   "published": [
     {
       "global": 1,
@@ -86,7 +86,45 @@
       "file": "episodes/ep11.json",
       "slot": "2026-11-02T18:00:00 Europe/Paris",
       "metricool_id": 413767918
+    },
+    {
+      "global": 12,
+      "series": "le-train-de-nuit",
+      "episode": 3,
+      "file": "episodes/ep12.json",
+      "slot": "2026-11-03T10:00:00 Europe/Paris",
+      "metricool_id": 414914050
+    },
+    {
+      "global": 13,
+      "series": "le-train-de-nuit",
+      "episode": 4,
+      "file": "episodes/ep13.json",
+      "slot": "2026-11-03T12:00:00 Europe/Paris",
+      "metricool_id": 414972736
+    },
+    {
+      "global": 14,
+      "series": "le-train-de-nuit",
+      "episode": 5,
+      "file": "episodes/ep14.json",
+      "slot": "2026-11-03T18:00:00 Europe/Paris",
+      "metricool_id": 415095205
     }
   ],
-  "survis_next": 1
+  "survis_next": 3,
+  "survis_published": [
+    {
+      "n": 1,
+      "file": "episodes/survis-01.json",
+      "slot": "2026-11-03T15:00:00 Europe/Paris",
+      "metricool_id": 414990451
+    },
+    {
+      "n": 2,
+      "file": "episodes/survis-02.json",
+      "slot": "2026-11-03T20:30:00 Europe/Paris",
+      "metricool_id": 415056265
+    }
+  ]
 }

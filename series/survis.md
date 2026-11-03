@@ -40,7 +40,7 @@ dans le résumé ; c'est Fio qui décide de la suite.
 - [ ] Quelqu'un frappe à 3 h, avec la voix de ta mère, alors qu'elle dort
 - [ ] Ton reflet cligne des yeux en retard
 - [ ] Appel de ton propre numéro
-- [ ] Station-service vide la nuit, une règle sur la porte
+- [x] Station-service vide la nuit, une règle sur la porte (N°2, 03/11)
 - [ ] Hôtel : la chambre 313 n'a pas de fenêtre
 - [ ] Forêt : quelqu'un siffle ton prénom
 - [ ] Panne de courant : une bougie s'allume toute seule
@@ -58,7 +58,7 @@ dans le résumé ; c'est Fio qui décide de la suite.
 - [ ] Radio de survie : « si le ciel devient vert, n'ouvre pas »
 - [ ] Parking souterrain : ta voiture n'est plus à sa place
 - [ ] Jeu vidéo : ton personnage regarde la caméra
-- [ ] Concierge : « ne réponds jamais à l'interphone après minuit »
+- [x] Concierge : « ne réponds jamais à l'interphone après minuit » (N°1, 03/11)
 
 ## Fabrication
 
