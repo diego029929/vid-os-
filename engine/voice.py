@@ -48,6 +48,9 @@ NONE = DEEPEN + "anull"
 CINEMA = (DEEPEN + "highpass=f=60,bass=g=5:f=110,equalizer=f=3000:t=q:w=1:g=2,"
           "acompressor=threshold=-20dB:ratio=4:attack=5:release=120,"
           "aecho=0.8:0.6:60|130|240:0.22|0.14|0.08,volume=2dB")
+# même voix de film, mais sans écho (choix de Fio, 03/11)
+CINEMA_SEC = (DEEPEN + "highpass=f=60,bass=g=5:f=110,equalizer=f=3000:t=q:w=1:g=2,"
+              "acompressor=threshold=-20dB:ratio=4:attack=5:release=120,volume=2dB")
 # message radio d'un survivant : bande étroite, légère saturation, souffle
 RADIO = (DEEPEN + "highpass=f=300,lowpass=f=3400,acompressor=threshold=-22dB:ratio=6,"
          "asoftclip=type=tanh,volume=3dB")
@@ -206,7 +209,7 @@ def megaphone(track, tmpdir):
     src = os.path.join(tmpdir, "voice_raw.wav")
     dst = os.path.join(tmpdir, "voice_fx.wav")
     write_wav(src, track)
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", src, "-af", {"leger": LIGHT, "aucun": NONE, "cinema": CINEMA, "radio": RADIO, "radio_douce": RADIO_SOFT}.get(FX, MEGAPHONE), "-ar", str(SR), "-ac", "1", dst], check=True)
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", src, "-af", {"leger": LIGHT, "aucun": NONE, "cinema": CINEMA, "cinema_sec": CINEMA_SEC, "radio": RADIO, "radio_douce": RADIO_SOFT}.get(FX, MEGAPHONE), "-ar", str(SR), "-ac", "1", dst], check=True)
     with wave.open(dst) as wf:
         out = np.frombuffer(wf.readframes(wf.getnframes()), np.int16).astype(np.float32) / 32768
     res = np.zeros_like(track)
