@@ -256,3 +256,14 @@ S'appliquent aux épisodes ET aux courtes « SURVIS ? » :
 - **Pas de mention « FICTION »** à l'écran (choix de Fio le 02/11). Ne
   jamais imiter un vrai journal télé, un logo de média ou une alerte
   officielle, et ne rien faire sur une catastrophe réelle en cours.
+
+## Inspiration (demande de Fio, 03/11)
+
+S'inspirer d'histoires connues, de légendes urbaines et de films (horreur,
+survie, thriller : jeux d'enfants qui tournent mal comme « Jacques a dit »,
+appels d'un numéro inconnu, règles à suivre la nuit, maison hantée, boucle
+temporelle, invasion…) pour les ambiances, les thèmes et les ressorts. Les
+histoires restent ORIGINALES : ne jamais reprendre l'intrigue, les
+personnages, les noms ni les dialogues d'un film ou d'un créateur.
+Un spectateur doit reconnaître le genre en 1 seconde (« ah, comme dans tel
+film ») puis être surpris par la suite.
