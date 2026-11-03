@@ -1,0 +1,354 @@
+{
+ "series": "LE TRAIN DE NUIT",
+ "day": 1,
+ "subtitle": "ESSAI VOIX",
+ "clock_start": 12780,
+ "title": "Essai voix",
+ "caption": "Partie 2 du Train de nuit. Règle : ne mens jamais au contrôleur. Autre règle : ne lui dis jamais ton vrai nom. Tu fais quoi ? A ou B 👇 #histoire #creepy #horreur #train #pourtoi",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "wagon",
+   "text": "IL EST *3 H 33*. T'ES SEUL DANS UN TRAIN DE NUIT.",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "stand",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "CE SOIR, TU VAS DEVOIR CHOISIR : DIRE *TON NOM* OU TE TAIRE.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "DEVANT TOI, UN CONTRÔLEUR *SANS VISAGE*.",
+   "char": {
+    "pose": "stand",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "T'AS PAS DE BILLET. ALORS TU MONTRES TA MAIN VIDE.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "IL RESTE MUET. IL FIXE TA MAIN.",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU N'AS PAS MENTI. C'ÉTAIT LA RÈGLE.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.6
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "AUTOUR DE TOI, LE WAGON EST TOUJOURS VIDE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "AU-DESSUS DE LA PORTE, L'AFFICHE DES RÈGLES DU TRAIN.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« NE MENTEZ *JAMAIS* AU CONTRÔLEUR. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "ET JUSTE EN DESSOUS, UNE LIGNE S'ÉCRIT TOUTE SEULE.",
+   "cam": {
+    "z": [
+     1.2,
+     1.35
+    ],
+    "y": [
+     0.45,
+     0.4
+    ]
+   },
+   "params": {
+    "seed": 2
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« NE LUI DIS *JAMAIS* TON VRAI NOM. »",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "wagon",
+   "text": "LE CONTRÔLEUR SORT UN PETIT CARNET NOIR.",
+   "char": {
+    "pose": "stand",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     40,
+     50,
+     110
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  }
+ ]
+}
