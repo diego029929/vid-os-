@@ -267,3 +267,22 @@ histoires restent ORIGINALES : ne jamais reprendre l'intrigue, les
 personnages, les noms ni les dialogues d'un film ou d'un créateur.
 Un spectateur doit reconnaître le genre en 1 seconde (« ah, comme dans tel
 film ») puis être surpris par la suite.
+
+## Décors variés (demande de Fio, 04/11 : « c'est toujours les mêmes »)
+
+- Décors disponibles dans `engine/render2.py` : chambre, fenetre, rue, porte,
+  radio, escalier, wagon, couloir, **foret** (`eyes`: yeux rouges entre les
+  arbres), **parking** (`headlights`, `flicker`, `dark`), **station**
+  (station-service, `figure`: silhouette dans la boutique, `dark`),
+  **ascenseur** (`floor`: texte de l'écran d'étage, ex. "-7"), **cuisine**
+  (`fridge`: frigo ouvert), plus les anciens (bunker, city, door, dark,
+  hide, notebook). Tous acceptent `red` / `green`.
+- Les gros plans (`flou`) reprennent maintenant TOUT SEULS, en flou, le
+  dernier décor utilisé avant eux : on voit où on est. Pour forcer un autre
+  lieu : `"params": {"of": "foret"}`.
+- Règles : chaque vidéo utilise **au moins 4 décors différents** (hors
+  `flou`), et le décor principal d'une vidéo n'est jamais celui de la vidéo
+  publiée juste avant. Changer de lieu au moins tous les 6-8 plans. Si
+  l'histoire demande un lieu qui n'existe pas, en ajouter un nouveau
+  (fonction `scene_xxx` + entrée dans `SCENES`, vérifier sur la planche
+  contact) plutôt que de réutiliser un décor qui ne colle pas.

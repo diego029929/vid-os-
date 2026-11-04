@@ -245,7 +245,18 @@ def scene_rue(p):
 
 
 def scene_flou(p):
-    """Fond flou (bokeh) pour les gros plans."""
+    """Fond flou pour les gros plans. Avec "of": "<décor>", c'est ce décor-là, très flou
+    (le moteur le remplit tout seul avec le dernier décor du plan précédent) ; sinon bokeh."""
+    if p.get("of") in SCENES and p["of"] != "flou":
+        img = SCENES[p["of"]]({k: v for k, v in p.items() if k not in ("of", "colors")})
+        img = img.convert("RGB").filter(ImageFilter.GaussianBlur(26))
+        if p.get("light"):
+            c = Canvas((0, 0, 0), (0, 0, 0))
+            c.img = img.resize((c.w, c.h), Image.LANCZOS)
+            c.d = ImageDraw.Draw(c.img)
+            c.glow(0.5, 0.95, 0.8, tuple(p["light"]), 0.35)
+            return c.done()
+        return img
     a, b = p.get("colors", [(60, 40, 110), (20, 14, 40)])
     c = Canvas(tuple(a), tuple(b))
     rnd = random.Random(p.get("seed", 3))
@@ -444,6 +455,187 @@ def scene_couloir(p):
     return c.done()
 
 
+def _lightcol(p, base):
+    if p.get("red"):
+        return (255, 70, 60)
+    if p.get("green"):
+        return (120, 255, 140)
+    return tuple(p.get("light", base))
+
+
+def scene_foret(p):
+    """Forêt la nuit : troncs en rangs, brume au sol, lune entre les arbres."""
+    c = Canvas((20, 26, 52), (40, 34, 70))
+    rnd = random.Random(p.get("seed", 11))
+    c.glow(0.62, 0.22, 0.5, (200, 200, 255), 0.4)
+    d = c.d
+    r = 0.06
+    d.ellipse(c.box(0.62 - r, 0.22 - r * CW / CH, 0.62 + r, 0.22 + r * CW / CH), fill=(250, 248, 235))
+    rows = (((38, 40, 72), 14, 0.015, 0.03), ((24, 26, 50), 10, 0.03, 0.05), ((12, 12, 26), 6, 0.06, 0.10))
+    for layer, (col, n, wmin, wmax) in enumerate(rows):
+        for _ in range(n):
+            u = rnd.uniform(-0.05, 1.05)
+            w = rnd.uniform(wmin, wmax)
+            d.polygon([c.P(u - w * 0.5, -0.02), c.P(u + w * 0.5, -0.02), c.P(u + w * 0.7, 1.02), c.P(u - w * 0.7, 1.02)], fill=col)
+            for _ in range(2 + layer):
+                v = rnd.uniform(0.05, 0.6)
+                side = rnd.choice((-1, 1))
+                d.line([c.P(u, v), c.P(u + side * rnd.uniform(0.05, 0.12), v - rnd.uniform(0.03, 0.08))], fill=col, width=int(10 + 8 * layer))
+        if layer == 1:
+            c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.62, 1.1, 0.85), fill=(150, 140, 200, 80)), 0.04)
+            d = c.d
+    d.rectangle(c.box(0, 0.86, 1, 1), fill=(10, 10, 22))
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.78, 1.1, 0.95), fill=(170, 160, 220, 110)), 0.05)
+    if p.get("eyes"):
+        d = c.d
+        for u in (0.30, 0.33):
+            d.ellipse(c.box(u - 0.006, 0.58, u + 0.006, 0.58 + 0.012 * CW / CH), fill=(255, 60, 50))
+        c.glow(0.315, 0.585, 0.08, (255, 60, 50), 0.4)
+    if p.get("red") or p.get("green"):
+        c.glow(0.5, 0.6, 0.6, _lightcol(p, FIRE), 0.25)
+    return c.done()
+
+
+def scene_parking(p):
+    """Parking souterrain : piliers en béton, néons, places numérotées, voiture seule."""
+    c = Canvas((40, 40, 58), (18, 18, 30))
+    lamp = _lightcol(p, (210, 230, 255))
+    dark = p.get("dark")
+    d = c.d
+    d.polygon([c.P(0, 0), c.P(1, 0), c.P(0.62, 0.40), c.P(0.38, 0.40)], fill=(34, 34, 50))
+    d.polygon([c.P(0, 1), c.P(0.38, 0.52), c.P(0.62, 0.52), c.P(1, 1)], fill=(46, 44, 58) if not dark else (24, 24, 34))
+    d.rectangle(c.box(0.38, 0.40, 0.62, 0.52), fill=(20, 20, 32))
+    for k in range(5):
+        t = 1 - (1 - k / 5) ** 1.5
+        # néons au plafond
+        v = 0.40 * t
+        hw = 0.12 * (1 - t) + 0.02
+        if not dark and not (p.get("flicker") and k == 2):
+            d.rectangle(c.box(0.5 - hw, v + 0.02 * (1 - t), 0.5 + hw, v + 0.02 * (1 - t) + 0.008 * (1 - t) + 0.002), fill=lamp)
+        # lignes au sol
+        vg = 1 - 0.48 * t
+        for side in (-1, 1):
+            u0 = 0.5 + side * (0.5 - 0.12 * t) * 0.9
+            d.line([c.P(u0, vg), c.P(0.5 + side * 0.06 * (1 - t), vg)], fill=(200, 190, 120), width=int(4 + 8 * (1 - t)))
+        # piliers
+        for side in (-1, 1):
+            u = 0.5 + side * (0.5 - 0.38 * t) * 0.95
+            pw = 0.07 * (1 - t) + 0.012
+            d.rectangle(c.box(u - pw / 2, 0.40 * t, u + pw / 2, 1 - 0.48 * t), fill=(70, 68, 86) if not dark else (36, 36, 48))
+            d.rectangle(c.box(u - pw / 2, 0.62 + 0.0 * t, u + pw / 2, 0.68), fill=(200, 160, 60)) if k == 0 else None
+            if k < 3:
+                d.text(c.P(u - pw * 0.3, 0.30 + 0.2 * t), str(k * 2 + (1 if side < 0 else 2)), fill=(230, 230, 240),
+                       font=font(int(110 * (1 - t) + 20) * SSF))
+    if not dark:
+        c.glow(0.5, 0.1, 0.7, lamp, 0.2)
+    # voiture seule au fond
+    d = c.d
+    d.rounded_rectangle(c.box(0.42, 0.47, 0.58, 0.52), radius=16, fill=(14, 14, 22))
+    d.rounded_rectangle(c.box(0.445, 0.45, 0.555, 0.48), radius=12, fill=(14, 14, 22))
+    if p.get("headlights"):
+        for u in (0.44, 0.56):
+            c.glow(u, 0.50, 0.12, (255, 250, 220), 0.7)
+    return c.done()
+
+
+def scene_station(p):
+    """Station-service isolée la nuit : auvent lumineux, pompes, route vide."""
+    c = Canvas((14, 14, 36), (48, 30, 70))
+    sign = _lightcol(p, (255, 90, 70))
+    d = c.d
+    rnd = random.Random(p.get("seed", 4))
+    for _ in range(50):
+        x, y = rnd.uniform(0, 1), rnd.uniform(0, 0.35)
+        d.ellipse(c.box(x - 0.002, y - 0.001, x + 0.002, y + 0.001), fill=(210, 210, 255))
+    d.rectangle(c.box(0, 0.58, 1, 1), fill=(22, 20, 32))
+    d.polygon([c.P(0, 0.70), c.P(1, 0.64), c.P(1, 0.70), c.P(0, 0.78)], fill=(34, 30, 44))
+    # boutique
+    d.rectangle(c.box(0.62, 0.40, 0.98, 0.60), fill=(40, 34, 56))
+    d.rectangle(c.box(0.65, 0.45, 0.95, 0.58), fill=(255, 230, 170) if not p.get("dark") else (30, 26, 40))
+    if p.get("figure"):
+        d.ellipse(c.box(0.79, 0.47, 0.81, 0.47 + 0.02 * CW / CH), fill=(10, 8, 16))
+        d.rectangle(c.box(0.785, 0.49, 0.815, 0.58), fill=(10, 8, 16))
+    # auvent
+    d.rectangle(c.box(0.02, 0.30, 0.60, 0.36), fill=(230, 232, 240))
+    d.rectangle(c.box(0.02, 0.345, 0.60, 0.36), fill=sign)
+    for u in (0.08, 0.54):
+        d.rectangle(c.box(u, 0.36, u + 0.025, 0.62), fill=(200, 200, 210))
+    c.glow(0.31, 0.45, 0.5, (240, 240, 255), 0.35)
+    d = c.d
+    # pompes
+    for u in (0.18, 0.40):
+        d.rounded_rectangle(c.box(u, 0.47, u + 0.07, 0.61), radius=10, fill=(200, 60, 60))
+        d.rectangle(c.box(u + 0.012, 0.49, u + 0.058, 0.52), fill=(30, 30, 40))
+    # panneau
+    d.rectangle(c.box(0.88, 0.12, 0.89, 0.40), fill=(30, 28, 40))
+    d.rectangle(c.box(0.80, 0.10, 0.97, 0.20), fill=sign)
+    c.glow(0.885, 0.15, 0.2, sign, 0.4)
+    c.soft(lambda dd, cc: dd.polygon([cc.P(0.02, 0.36), cc.P(0.60, 0.36), cc.P(0.75, 0.66), cc.P(-0.1, 0.66)],
+                                     fill=(240, 240, 255, 60)), 0.03)
+    return c.done()
+
+
+def scene_ascenseur(p):
+    """Intérieur d'ascenseur : parois métal, boutons, écran d'étage, néon au plafond."""
+    c = Canvas((60, 58, 76), (24, 22, 34))
+    lamp = _lightcol(p, (230, 235, 255))
+    d = c.d
+    d.polygon([c.P(0, 0), c.P(0.22, 0.12), c.P(0.22, 0.86), c.P(0, 1)], fill=(70, 68, 84))
+    d.polygon([c.P(1, 0), c.P(0.78, 0.12), c.P(0.78, 0.86), c.P(1, 1)], fill=(78, 76, 92))
+    d.rectangle(c.box(0.22, 0.12, 0.78, 0.86), fill=(90, 88, 104))
+    d.polygon([c.P(0, 1), c.P(0.22, 0.86), c.P(0.78, 0.86), c.P(1, 1)], fill=(36, 32, 44))
+    for u in np.arange(0.26, 0.78, 0.06):
+        d.line([c.P(u, 0.13), c.P(u, 0.85)], fill=(80, 78, 94), width=6)
+    d.line([c.P(0.5, 0.12), c.P(0.5, 0.86)], fill=(40, 38, 52), width=12)   # jonction des portes
+    d.rectangle(c.box(0.30, 0.0, 0.70, 0.035), fill=lamp)
+    c.glow(0.5, 0.02, 0.6, lamp, 0.35)
+    d = c.d
+    # panneau de boutons
+    d.rounded_rectangle(c.box(0.80, 0.38, 0.90, 0.66), radius=12, fill=(50, 48, 62))
+    for k in range(6):
+        on = k == p.get("floor_btn", 3)
+        d.ellipse(c.box(0.83, 0.41 + k * 0.04, 0.87, 0.41 + k * 0.04 + 0.04 * CW / CH * 0.55),
+                  fill=(255, 190, 90) if on else (130, 128, 140))
+    # écran d'étage
+    d.rectangle(c.box(0.40, 0.04, 0.60, 0.10), fill=(12, 10, 16))
+    floor = str(p.get("floor", "-2"))
+    d.text(c.P(0.46, 0.045), floor, fill=_lightcol(p, (255, 70, 60)), font=font(110 * SSF))
+    if p.get("dark"):
+        c.glow(0.5, 0.5, 0.8, (20, 20, 40), 0.5)
+    return c.done()
+
+
+def scene_cuisine(p):
+    """Cuisine d'appartement la nuit : frigo ouvert qui éclaire, fenêtre, plan de travail."""
+    c = Canvas((44, 36, 70), (20, 16, 32))
+    d = c.d
+    night_sky(c, 0.08, 0.14, 0.40, 0.40, moon=(0.6, 0.3), seed=p.get("seed", 8))
+    d = c.d
+    d.rectangle(c.box(0.07, 0.13, 0.41, 0.41), outline=(24, 18, 40), width=24)
+    # placards hauts
+    for u in (0.46, 0.62, 0.78):
+        d.rectangle(c.box(u, 0.10, u + 0.14, 0.30), fill=(70, 56, 96), outline=(40, 30, 60), width=8)
+    # plan de travail
+    d.rectangle(c.box(0, 0.56, 0.70, 0.60), fill=(130, 110, 140))
+    d.rectangle(c.box(0, 0.60, 0.70, 0.95), fill=(60, 46, 80))
+    for u in (0.0, 0.23, 0.46):
+        d.rectangle(c.box(u + 0.01, 0.62, u + 0.22, 0.93), outline=(40, 30, 60), width=8)
+    # couteaux / bouilloire
+    d.rounded_rectangle(c.box(0.48, 0.48, 0.58, 0.56), radius=20, fill=(40, 34, 56))
+    # frigo
+    d.rectangle(c.box(0.74, 0.32, 0.98, 0.95), fill=(150, 150, 170))
+    if p.get("fridge", True):
+        d.rectangle(c.box(0.76, 0.34, 0.96, 0.93), fill=(255, 248, 220))
+        for v in (0.48, 0.62, 0.76):
+            d.line([c.P(0.76, v), c.P(0.96, v)], fill=(200, 190, 170), width=8)
+        c.glow(0.86, 0.6, 0.6, (255, 240, 200), 0.4)
+    d = c.d
+    d.rectangle(c.box(0, 0.95, 1, 1), fill=(16, 12, 26))
+    if p.get("red") or p.get("green"):
+        c.glow(0.5, 0.5, 0.6, _lightcol(p, FIRE), 0.25)
+    return c.done()
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -458,7 +650,8 @@ def scene_old(name):
 
 SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, "flou": scene_flou,
           "porte": scene_porte, "radio": scene_radio, "escalier": scene_escalier,
-          "wagon": scene_wagon, "couloir": scene_couloir}
+          "wagon": scene_wagon, "couloir": scene_couloir, "foret": scene_foret, "parking": scene_parking,
+          "station": scene_station, "ascenseur": scene_ascenseur, "cuisine": scene_cuisine}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
@@ -840,7 +1033,8 @@ def voice_track(beats, clips, total, tmp):
 
 # lumière principale de chaque décor (pour éclairer le personnage)
 LIGHT = {"chambre": (170, 160, 255), "fenetre": (180, 170, 255), "rue": (255, 150, 90), "flou": FIRE,
-         "porte": (255, 170, 90), "radio": FIRE}
+         "porte": (255, 170, 90), "radio": FIRE, "foret": (190, 190, 255), "parking": (210, 230, 255),
+         "station": (240, 240, 255), "ascenseur": (230, 235, 255), "cuisine": (255, 240, 200)}
 # poussière / braises qui flottent dans l'air
 DUST = {"rue": ((255, 150, 70), 46, -1), "chambre": ((210, 200, 255), 30, 1), "fenetre": ((210, 200, 255), 30, 1),
         "flou": ((255, 200, 140), 26, -1), "porte": ((255, 190, 120), 26, 1), "radio": ((255, 190, 120), 22, 1)}
@@ -978,6 +1172,14 @@ def render(ep, out):
             beats.insert(i, {"scene": "flou", "params": {"light": [255, 40, 40], "colors": [[70, 10, 20], [15, 4, 8]]},
                              "text": "TU ES *MORT*.", "record": b["of"], "shake": 8, "glitch": 0.25,
                              "sfx": [["hit", 0, 0.9]], "cam": {"z": [1.0, 1.12]}})
+    # gros plans : le fond flou reprend le décor du lieu où l'on est (demande de Fio, 04/11)
+    last = None
+    for b in beats:
+        sc = b.get("scene", "flou")
+        if sc != "flou":
+            last = sc
+        elif last and "of" not in b.get("params", {}) and "MORT" not in b.get("text", "").upper():
+            b["params"] = dict(b.get("params", {}), of=last)
     clips = prepare_voice(beats) if ep.get("voiceover", True) else {}
     for b in beats:
         b.setdefault("dur", 1.5)
