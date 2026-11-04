@@ -1290,7 +1290,7 @@ def render(ep, out):
                 draw_choice(fr, c["a"], c["b"], lt, c.get("picked"), cnt, enter=not same)
             if caps:
                 j = max([x for x in range(len(caps)) if starts[x] <= lt] or [0])
-                draw_caption(fr, caps[j], lt - starts[j], b.get("text_y", 0.68))
+                draw_caption(fr, caps[j], lt - starts[j], max(b.get("text_y", 0.68), 0.235) if lives is not None else b.get("text_y", 0.68))
             draw_clock(fr, clock + lt)
             if lives is not None:
                 draw_lives(fr, lives, lives_total, lt if lost else None)
