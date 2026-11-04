@@ -1,9 +1,9 @@
 {
-  "current_series": "le-train-de-nuit",
-  "series_file": "series/le-train-de-nuit.md",
+  "current_series": "l-hotel-des-neiges",
+  "series_file": "series/l-hotel-des-neiges.md",
   "series_episode_count": 6,
-  "next_episode_in_series": 6,
-  "next_global_episode": 15,
+  "next_episode_in_series": 3,
+  "next_global_episode": 18,
   "published": [
     {
       "global": 1,
@@ -110,9 +110,36 @@
       "file": "episodes/ep14.json",
       "slot": "2026-11-03T18:00:00 Europe/Paris",
       "metricool_id": 415095205
+    },
+    {
+      "global": 15,
+      "series": "le-train-de-nuit",
+      "episode": 6,
+      "file": "episodes/ep15.json",
+      "slot": "2026-11-04T10:00:00 Europe/Paris",
+      "metricool_id": 416147511,
+      "note": "accroche dialogue"
+    },
+    {
+      "global": 16,
+      "series": "l-hotel-des-neiges",
+      "episode": 1,
+      "file": "episodes/ep16.json",
+      "slot": "2026-11-04T12:00:00 Europe/Paris",
+      "metricool_id": 416224058,
+      "note": "accroche lieu"
+    },
+    {
+      "global": 17,
+      "series": "l-hotel-des-neiges",
+      "episode": 2,
+      "file": "episodes/ep17.json",
+      "slot": "2026-11-04T18:00:00 Europe/Paris",
+      "metricool_id": 416246232,
+      "note": "accroche dialogue"
     }
   ],
-  "survis_next": 3,
+  "survis_next": 5,
   "survis_published": [
     {
       "n": 1,
@@ -125,6 +152,18 @@
       "file": "episodes/survis-02.json",
       "slot": "2026-11-03T20:30:00 Europe/Paris",
       "metricool_id": 415056265
+    },
+    {
+      "n": 3,
+      "file": "episodes/survis-03.json",
+      "slot": "2026-11-04T15:00:00 Europe/Paris",
+      "metricool_id": 416179699
+    },
+    {
+      "n": 4,
+      "file": "episodes/survis-04.json",
+      "slot": "2026-11-04T20:30:00 Europe/Paris",
+      "metricool_id": 416192016
     }
   ]
 }

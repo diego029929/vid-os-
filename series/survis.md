@@ -39,11 +39,11 @@ dans le résumé ; c'est Fio qui décide de la suite.
 - [ ] Ascenseur qui s'arrête à un étage qui n'existe pas
 - [ ] Quelqu'un frappe à 3 h, avec la voix de ta mère, alors qu'elle dort
 - [ ] Ton reflet cligne des yeux en retard
-- [ ] Appel de ton propre numéro
+- [x] Appel de ton propre numéro (N°3, 04/11)
 - [x] Station-service vide la nuit, une règle sur la porte (N°2, 03/11)
 - [ ] Hôtel : la chambre 313 n'a pas de fenêtre
 - [ ] Forêt : quelqu'un siffle ton prénom
-- [ ] Panne de courant : une bougie s'allume toute seule
+- [x] Panne de courant : une bougie s'allume toute seule (N°4, 04/11)
 - [ ] Message : « ne te retourne pas, je suis derrière toi »
 - [ ] Livraison de nuit : le livreur ne bouge plus devant l'immeuble
 - [ ] Baby-sitting : l'enfant dit qu'il y a un monsieur sous le lit

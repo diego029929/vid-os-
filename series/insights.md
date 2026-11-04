@@ -13,29 +13,34 @@ Mis à jour par la routine quotidienne à partir des statistiques Metricool.
 
 | Ép. | Publié | Durée | Vues TikTok | Likes | Comm. | Partages | Score | Reel : vues / likes / temps moyen | Jugé ? |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 30/10 14:06 | 60 s | 205 | 8 | 0 | 0 | 205 | 117 / 4 / 8,7 s | oui |
-| 2 | 31/10 10:04 | 90 s | 883 | 35 | 1 | 0 | 888 | 159 / 1 / 14,4 s | oui |
-| 3 | 31/10 12:04 | 90 s | 814 | 26 | 1 | 0 | 819 | 114 / 3 / 6,1 s | oui |
-| 4 | 31/10 17:05 | 90 s | 835 | 18 | 1 | 0 | 840 | 106 / 0 / 4,7 s | oui |
-| 5 | 01/11 10:04 | 86 s | 840 | 29 | 1 | 0 | 845 | 122 / 1 / 7,5 s | oui |
-| 6 | 01/11 12:03 | 87 s | 788 | 15 | 1 | 0 | 793 | 118 / 0 / 5,4 s | oui |
-| 7 | 01/11 17:05 | 88 s | 781 | 21 | 1 | 0 | 786 | 127 / 0 / 6,0 s | oui |
-| 8 | 01/11 22:22 | 67 s (1er style 2) | 807 | 23 | 0 | 1 | 812 | 142 / 4 / 12,8 s | presque (31 h) |
-| 9 | 02/11 10:05 | 83 s (style 2) | 803 | 60 | 1 | 0 | 808 | 132 / 0 / 11,4 s | non (20 h) |
-| 10 | 02/11 12:04 | 73 s (court, style 2) | 766 | **85** | 0 | 0 | 766 | pas encore remonté | non (18 h) |
-| 11 | 02/11 18:00 | 89 s (style 2) | pas encore remonté | | | | | | non |
-| 12 | 03/11 10:00 | 89 s (accroche lieu) | | | | | | | |
-| 13 | 03/11 12:00 | 86 s (accroche dialogue) | | | | | | | |
-| 14 | 03/11 18:00 | 92 s (accroche lieu) | | | | | | | |
+| 1 | 30/10 14:06 | 60 s | 217 | 9 | 0 | 0 | 217 | 120 / 4 / 9,1 s | oui |
+| 2 | 31/10 10:04 | 90 s | 893 | 36 | 1 | 0 | 898 | 163 / 1 / 14,8 s | oui |
+| 3 | 31/10 12:04 | 90 s | 823 | 28 | 1 | 0 | 828 | 118 / 3 / 6,8 s | oui |
+| 4 | 31/10 17:05 | 90 s | 844 | 20 | 1 | 0 | 849 | 109 / 0 / 5,4 s | oui |
+| 5 | 01/11 10:04 | 86 s | 855 | 31 | 1 | 0 | 860 | 126 / 1 / 8,0 s | oui |
+| 6 | 01/11 12:03 | 87 s | 793 | 16 | 1 | 0 | 798 | 123 / 0 / 6,1 s | oui |
+| 7 | 01/11 17:05 | 88 s | 784 | 22 | 1 | 0 | 789 | 132 / 0 / 6,5 s | oui |
+| 8 | 01/11 22:22 | 67 s (1er style 2) | 858 | 24 | 0 | 1 | 863 | 157 / 4 / 13,3 s | oui |
+| 9 | 02/11 10:05 | 83 s (style 2) | 823 | 60 | 1 | 0 | 828 | 161 / 0 / 14,2 s | oui |
+| 10 | 02/11 12:04 | 73 s (court, style 2) | 854 | 89 | 0 | 0 | 854 | 263 / 6 / 14,9 s | oui |
+| 11 | 02/11 18:08 | 88 s (style 2) | 787 | 65 | 1 | 2 | 802 | **1758 / 72 / 29,1 s** | oui |
+| 12 | 03/11 10:06 | 89 s (accroche lieu) | 735 | 25 | 0 | 1 | 740 | 196 / 7 / 14,9 s | presque (44 h) |
+| 13 | 03/11 12:03 | 86 s (accroche dialogue) | 781 | 85 | 0 | 0 | 781 | pas encore remonté | non (42 h) |
+| 14 | 03/11 18:12 | 91 s (accroche lieu) | 551 | 10 | 1 | 5 | 581 | pas encore remonté | non (12 h) |
+| 15 | 04/11 10:00 | 89 s (accroche dialogue) | | | | | | | |
+| 16 | 04/11 12:00 | 90 s (accroche lieu) | | | | | | | |
+| 17 | 04/11 18:00 | 94 s (accroche dialogue) | | | | | | | |
 
 Vidéos courtes « SURVIS ? » (test lancé le 03/11, bilan le 06/11) :
 
 | Courte | Publié | Durée | Vues TikTok | Likes | Comm. | Partages | Score | Reel : vues / likes / temps moyen | Jugé ? |
 |---|---|---|---|---|---|---|---|---|---|
-| N°1 | 03/11 15:00 | 43 s | | | | | | | |
-| N°2 | 03/11 20:30 | 38 s | | | | | | | |
+| N°1 | 03/11 15:02 | 42 s | 761 | 60 | 1 | 1 | 771 | pas encore remonté | non (15 h) |
+| N°2 | 03/11 20:30 | 37 s | 311 | 13 | 0 | 0 | 311 | pas encore remonté | non (9 h) |
+| N°3 | 04/11 15:00 | 38 s (accroche dialogue) | | | | | | | |
+| N°4 | 04/11 20:30 | 42 s (accroche lieu) | | | | | | | |
 
-(Relevé du 03/11 5h50, 14 jours. Médiane des scores TikTok ép. 2 à 10 : 812.)
+(Relevé du 04/11 5h45, 14 jours. Médiane des scores TikTok ép. 2 à 13 : 828.)
 
 Score = vues × (1 + 5 × (commentaires + partages) / vues).
 
@@ -149,3 +154,32 @@ creux à 11 h, 13 h-14 h et après 21 h).
   la fiche de Fio.
 - À surveiller le 04/11 : ép. 10-11 (enfin jugeables), commentaires des
   courtes N°1-2 contre épisodes 12-14.
+
+### 04/11 (épisode 15 = fin du « Train de nuit », épisodes 16-17 = « L'Hôtel des neiges » parties 1-2, + courtes SURVIS ? N°3 et N°4)
+
+- TikTok toujours stable : ép. 2 à 13 entre 735 et 893 vues (médiane du
+  score 828). Aucune vidéo < 50 % de la médiane. Ép. 14 (12 h de recul)
+  a déjà **5 partages**, record de la série.
+- **Instagram : l'ép. 11 décolle** : 1758 vues (10 fois plus que les
+  autres), 72 likes, temps moyen 29 s (contre 6-15 s). Il ouvrait sur
+  « IL EST 3 H 33. T'ES SEUL DANS UN TRAIN DE NUIT » et annonçait le
+  dilemme dès la 2e phrase. Un seul cas : à confirmer, mais ça montre
+  qu'une vidéo de la série peut percer sur Instagram.
+- **Courtes vs épisodes (premier jour)** : SURVIS ? N°1 (15 h) = 761 vues
+  et 60 likes en 15 h, déjà au niveau d'un épisode, avec 1 commentaire
+  et 1 partage. N°2 (20 h 30) = 311 vues en 9 h, plus lent (créneau du
+  soir, creux après 21 h). Pas de conclusion avant le bilan du 06/11.
+- **Test accroche (lieu vs dialogue)** : ép. 13 (dialogue « NE CRIE
+  PAS ») = 781 vues, **85 likes** ; ép. 12 (lieu « ENTRE LYON ET
+  MARSEILLE ») = 735 vues, 25 likes. Le dialogue fait 3 fois plus de
+  likes mais le score n'a pas +30 % : **le test continue** aujourd'hui
+  pour avoir une 2e mesure : ép. 15 et 17 + N°3 = dialogue, ép. 16 + N°4
+  = lieu + urgence.
+- Commentaires toujours < 1 % : questions finales gardées très
+  clivantes (rentrer chez toi ou déchirer le billet, sortir sauver
+  Inès ou rester enfermé).
+- Nouveautés : fin du « Train de nuit » (partie 6), nouvelle série
+  « L'Hôtel des neiges » (Chamonix, 6 épisodes, `series/l-hotel-des-neiges.md`),
+  nouveau décor `couloir` (couloir d'hôtel).
+- À surveiller le 05/11 : ép. 13-14 et N°1-2 (enfin jugeables), Reels de
+  la série du Train (ép. 11 confirmé ou accident ?).

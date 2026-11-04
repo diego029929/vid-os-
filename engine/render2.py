@@ -392,6 +392,58 @@ def scene_wagon(p):
     return c.done()
 
 
+def scene_couloir(p):
+    """Couloir d'hôtel de montagne : moquette rouge, portes numérotées, appliques."""
+    c = Canvas((46, 32, 70), (16, 12, 28))
+    d = c.d
+    lamp = (255, 70, 60) if p.get("red") else ((120, 255, 140) if p.get("green") else (255, 190, 120))
+    dark = p.get("dark")
+    deep = 0.2 if p.get("long") else 0.36   # largeur du fond : plus petit = couloir plus long
+    vu0, vu1, vv0, vv1 = 0.5 - deep / 4, 0.5 + deep / 4, 0.36, 0.56
+    # plafond, murs, sol
+    d.polygon([c.P(0, 0), c.P(1, 0), c.P(vu1, vv0), c.P(vu0, vv0)], fill=(34, 26, 52))
+    d.polygon([c.P(0, 0), c.P(vu0, vv0), c.P(vu0, vv1), c.P(0, 1)], fill=(58, 40, 70))
+    d.polygon([c.P(1, 0), c.P(vu1, vv0), c.P(vu1, vv1), c.P(1, 1)], fill=(64, 44, 78))
+    d.polygon([c.P(0, 1), c.P(vu0, vv1), c.P(vu1, vv1), c.P(1, 1)], fill=(110, 30, 44) if not dark else (50, 18, 30))
+    # motif de la moquette
+    for k in range(1, 8):
+        t = 1 - (1 - k / 8) ** 1.6
+        v = 1 - (1 - vv1) * t
+        ua, ub = vu0 * t, 1 - (1 - vu1) * t
+        d.line([c.P(ua, v), c.P(ub, v)], fill=(80, 20, 34) if not dark else (36, 12, 22), width=8)
+    # portes de chaque côté
+    for side in (0, 1):
+        for k in range(4):
+            t0 = 1 - (1 - (k + 0.15) / 4.2) ** 1.5
+            t1 = 1 - (1 - (k + 0.65) / 4.2) ** 1.5
+            def U(t):
+                return vu0 * t if side == 0 else 1 - (1 - vu1) * t
+            def VT(t):
+                return 0.16 + (vv0 + 0.04 - 0.16) * t
+            def VB(t):
+                return 1.0 - (1.0 - vv1) * t - 0.02 * (1 - t)
+            pts = [c.P(U(t0), VT(t0)), c.P(U(t1), VT(t1)), c.P(U(t1), VB(t1)), c.P(U(t0), VB(t0))]
+            d.polygon(pts, fill=(36, 24, 44) if not dark else (22, 16, 30))
+            d.line(pts + [pts[0]], fill=(90, 66, 100), width=8)
+            # plaque du numéro
+            um, vm = (U(t0) + U(t1)) / 2, VT(t0) + (VB(t0) - VT(t0)) * 0.22
+            r = 0.012 * (1 - t0 * 0.7)
+            d.rectangle(c.box(um - r, vm - r * 0.6, um + r, vm + r * 0.6), fill=(210, 180, 110))
+            # applique entre les portes
+            if not dark:
+                ul = U(t1 + (t0 - t1) * -0.4)
+                vl = VT(t1) + 0.04
+                c.glow(ul, vl, 0.12 * (1 - t1 * 0.6), lamp, 0.35)
+                d = c.d
+    # porte du fond
+    d.rectangle(c.box(0.5 - deep / 10, vv0 + 0.03, 0.5 + deep / 10, vv1), fill=(60, 44, 80))
+    d.rectangle(c.box(0.5 - deep / 10, vv1 - 0.004, 0.5 + deep / 10, vv1), fill=lamp)
+    c.glow(0.5, vv1, 0.3, lamp, 0.3 if not dark else 0.15)
+    if dark:
+        c.glow(0.5, 0.5, 0.6, (60, 40, 120), 0.2)
+    return c.done()
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -406,7 +458,7 @@ def scene_old(name):
 
 SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, "flou": scene_flou,
           "porte": scene_porte, "radio": scene_radio, "escalier": scene_escalier,
-          "wagon": scene_wagon}
+          "wagon": scene_wagon, "couloir": scene_couloir}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
