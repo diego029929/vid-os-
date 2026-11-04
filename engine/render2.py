@@ -830,6 +830,26 @@ def draw_clock(frame, clock_s):
     d.text(((W - f.getlength(txt)) / 2, 160), txt, font=f, fill=WHITE, stroke_width=6, stroke_fill=(0, 0, 0))
 
 
+def heart(d, cx, cy, r, fill):
+    d.ellipse([cx - r, cy - r * 0.9, cx, cy + r * 0.1], fill=fill)
+    d.ellipse([cx, cy - r * 0.9, cx + r, cy + r * 0.1], fill=fill)
+    d.polygon([(cx - r * 0.97, cy - r * 0.25), (cx + r * 0.97, cy - r * 0.25), (cx, cy + r * 1.05)], fill=fill)
+
+
+def draw_lives(frame, lives, total, lost_t=None):
+    """Vies du héros sous l'horloge (compteur sur toute la série, idée validée pour faire follow)."""
+    d = ImageDraw.Draw(frame)
+    r, gap = 30, 84
+    x0 = W / 2 - gap * (total - 1) / 2
+    for i in range(total):
+        alive = i < lives
+        cx, cy = x0 + i * gap, 330
+        if lost_t is not None and i == lives and lost_t < 1.2 and int(lost_t * 6) % 2 == 0:
+            alive = True   # le cœur perdu clignote avant de s'éteindre
+        heart(d, cx, cy + 3, r + 6, (0, 0, 0))
+        heart(d, cx, cy, r, (235, 40, 50) if alive else (60, 50, 70))
+
+
 def draw_choice(frame, a, b, t, picked=None, count=None, enter=True):
     """Cartes A / B en grosses lettres ; elles glissent seulement à leur apparition."""
     d = ImageDraw.Draw(frame)
@@ -1193,6 +1213,8 @@ def render(ep, out):
          "-pix_fmt", "yuv420p", os.path.join(tmp, "v.mp4")], stdin=subprocess.PIPE)
     cache, recorded, rec_clock, events = {}, {}, {}, []
     clock = ep.get("clock_start", 2 * 3600 + 47 * 60 + 5)
+    lives_total = ep.get("lives_total", 3)
+    lives = ep.get("lives")          # vies au début de l'épisode (None = pas de compteur)
     n, t0 = 0, 0.0
     for bi, b in enumerate(beats):
         for s in b.get("sfx", []):
@@ -1214,6 +1236,12 @@ def render(ep, out):
             clock = rec_clock.get(b["of"], clock)
             t0 += b["dur"]
             continue
+        lost = None
+        if lives is not None and "lives" not in b and "MORT" in b.get("text", "").upper() and b.get("record"):
+            b["lives"] = max(0, lives - 1)   # chaque « TU ES MORT » coûte une vie
+        if lives is not None and "lives" in b:
+            lost = b["lives"] < lives
+            lives = b["lives"]
         imgs = compose(b, cache)
         # sous-titres calés sur la voix : chaque morceau dure au prorata de ses lettres
         caps = chunks(b["text"]) if b.get("text") else []
@@ -1264,6 +1292,8 @@ def render(ep, out):
                 j = max([x for x in range(len(caps)) if starts[x] <= lt] or [0])
                 draw_caption(fr, caps[j], lt - starts[j], b.get("text_y", 0.68))
             draw_clock(fr, clock + lt)
+            if lives is not None:
+                draw_lives(fr, lives, lives_total, lt if lost else None)
             g = b.get("glitch", 0.0)
             fl = max(0.0, 1 - lt / 0.25) if b.get("flash_in") else 0.0
             arr = R.finish(fr, n, glitch=g, flash=fl, flash_level=0 if t0 == 0 else 255)
