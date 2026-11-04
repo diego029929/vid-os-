@@ -333,23 +333,14 @@ presque nuls → chaque vidéo DOIT contenir ces leviers (concept inchangé) :
 
 ## Donner une vraie raison de s'abonner (Fio, 04/11 : « abonne-toi » ne fait pas follow)
 
-Proposé à Fio le 04/11 au soir (en attente de son choix ; appliqué en entier
-par défaut, à retirer si Fio en refuse une) :
+Choix de Fio le 04/11 : **seulement la coupure avant la réponse** (pas de
+compteur de vies, pas d'heure de rendez-vous annoncée ; ne pas mettre
+`lives` dans les JSON).
 
-1. **Couper juste avant la réponse** : la vidéo s'arrête pile sur le
-   dilemme final, cartes A/B affichées, sans révélation. Dernier plan :
-   « LA RÉPONSE DANS LA PARTIE X+1 À 18H » (l'heure réelle du prochain
-   épisode programmé). Remplace le simple « ABONNE-TOI » : on peut finir par
-   « ABONNE-TOI POUR NE PAS LA RATER » mais seulement après le rendez-vous.
-2. **Compteur de vies** : le héros a 3 vies pour toute la série, affichées
-   en cœurs sous l'horloge. Mettre `"lives": N` (vies au début de l'épisode)
-   et `"lives_total": 3` en haut du JSON ; le moteur retire tout seul une vie
-   à chaque « TU ES MORT. » (le rembobinage « coûte » une vie). Le dire une
-   fois à voix haute (« IL TE RESTE *2 VIES*. ») après la mort. Garder le
-   compte dans `series/state.json` (`lives`). À 0 vie : le dernier épisode
-   de la série se joue sans droit à l'erreur (« PLUS DE VIE. CETTE FOIS, SI
-   TU TE TROMPES, C'EST FINI. »), énorme raison de revenir. Nouvelle série
-   = 3 vies.
-3. **Rendez-vous fixe** : toujours les mêmes heures (épisodes 10h, 12h,
-   18h ; courtes 15h, 20h30) et chaque fin annonce la prochaine heure.
-   Mettre aussi l'heure dans la légende (« Partie 4 ce soir 18h »).
+- La vidéo s'arrête pile sur le dilemme final, cartes A/B affichées, sans
+  révélation. Dernier plan : « LA RÉPONSE DANS LA PARTIE X+1 ». On peut
+  finir par « ABONNE-TOI POUR NE PAS LA RATER », jamais un « abonne-toi »
+  seul.
+- La partie suivante commence par cette réponse (sans résumé de l'épisode).
+- Pour les courtes « SURVIS ? » : même principe, « LA RÉPONSE DANS LE
+  N° SUIVANT ».
