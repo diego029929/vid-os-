@@ -34,12 +34,16 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
 0. Préparer la voix off, en installant d'abord torch en version CPU (sinon
    pip télécharge la version GPU de plusieurs Go et bloque plus de 30 min) :
    `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu`
-   puis `pip install -q chatterbox-tts` (≈ 2 min au total). Voix validée par
-   Fio le 01/11 (essai « V1 ») : Chatterbox, timbre
-   `assets/ref/ref-pierre-moyen.wav`, exagération 0.6, **30 % plus rapide,
-   sans effet radio**, pauses raccourcies. Le moteur `engine/render2.py`
-   règle tout seul la vitesse (1.3) et l'effet (« leger ») : ne pas changer
-   sans Fio. Le modèle se télécharge depuis huggingface.co au premier rendu.
+   puis `pip install -q chatterbox-tts` (Whisper et le secours Chatterbox s'en
+   servent), puis `./engine/setup_parler.sh` (Parler-TTS dans /tmp/parler-venv).
+   **Voix choisie par Fio le 04/11 (« voix 2 ») : Parler-TTS** (gratuit),
+   voix décrite en texte dans `engine/voice_config.json` (« deep, raspy,
+   gravelly voice, dark and menacing tone »), même tirage (seed 1) pour
+   chaque réplique, vitesse 1.25, effet « leger », sans écho. Tout est réglé
+   dans `engine/voice_config.json` : ne pas changer sans Fio. Fio ne veut PAS
+   la voix d'un autre créateur, et rejette les voix Chatterbox / Piper.
+   Pour faire écouter des voix à Fio : extraits de 3 mots, pas de longues vidéos.
+   Les modèles se téléchargent depuis huggingface.co au premier rendu.
    Si l'installation ou le téléchargement échoue, NE PAS publier : s'arrêter
    et le signaler.
 
@@ -185,7 +189,7 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    Il est permis d'ajouter des décors dans `engine/render2.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
 4. Rendre les 3 vidéos avec `python3 engine/render2.py episodes/epNN.json /tmp/epNN.mp4`
-   (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin.
+   (le moteur doit afficher `voix off : parler`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin.
    **Un seul rendu à la fois** (02/11 : deux rendus en parallèle dépassent la
    mémoire, le second est tué sans message). Commencer par l'épisode de 10 h ;
    chaque vidéo n'a besoin d'être prête qu'avant son propre horaire. Pour chacune, vérifier

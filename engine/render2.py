@@ -975,7 +975,7 @@ def prepare_voice(beats):
     # Chatterbox bégaie parfois (répète un bout de phrase) ou baragouine : la réplique a
     # alors une durée anormale pour son nombre de lettres. On compare chaque réplique au
     # débit médian de l'épisode et on retire celles qui s'en écartent (4 essais max).
-    if voice.engine_name() == "chatterbox" and len(clips) >= 5:
+    if voice.engine_name() in ("chatterbox", "parler") and len(clips) >= 5:
         def rate(k, a):
             return len(a) / SR / max(4, len(voice.clean(beats[k].get("voice", beats[k].get("text", "")))))
         med = float(np.median([rate(k, a) for k, a in clips.items()]))
@@ -1002,7 +1002,7 @@ def prepare_voice(beats):
             beats[k]["dur"] = round(max(need, 0.6, last_sfx + 0.3), 2)
     # Contrôle à l'oreille (Whisper) : chaque réplique doit être comprise mot pour mot,
     # sans mot répété ni parasite. Sinon on la refait (6 tirages max, on garde la meilleure).
-    if voice.engine_name() == "chatterbox":
+    if voice.engine_name() in ("chatterbox", "parler"):
         bad = []
         for k, a in list(clips.items()):
             line = beats[k].get("voice", beats[k].get("text", ""))
@@ -1181,8 +1181,13 @@ def camera(b, k):
     return R.lerp(z0, z1, t), R.lerp(x0, x1, t), R.lerp(y0, y1, t)
 
 
+def voice_cfg_tempo():
+    import voice
+    return voice.CONFIG.get("tempo", 1.3)
+
+
 def render(ep, out):
-    os.environ.setdefault("VOICE_TEMPO", str(ep.get("voice_tempo", 1.3)))
+    os.environ.setdefault("VOICE_TEMPO", str(ep.get("voice_tempo", voice_cfg_tempo())))
     os.environ.setdefault("VOICE_FX", ep.get("voice_fx", "leger"))
     beats = ep["beats"]
     # mauvais choix : on annonce « TU ES MORT. » avant de rembobiner (demande de Fio, 02/11)

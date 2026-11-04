@@ -142,6 +142,33 @@ def _synth_chatterbox(text):
     return w.squeeze(0).numpy().astype(np.float32), _cb.sr
 
 
+# Parler-TTS : voix décrite en texte (voix « 2 » choisie par Fio le 04/11)
+PARLER_DESC = os.environ.get("VOICE_DESC", CONFIG.get("description", ""))
+PARLER_SEED = int(os.environ.get("VOICE_SEED", CONFIG.get("seed", 1)))
+PARLER_PY = os.environ.get("PARLER_PY", CONFIG.get("parler_python", "/tmp/parler-venv/bin/python"))
+_parler = None
+
+
+def _synth_parler(text):
+    global _parler
+    import tempfile
+    if _parler is None:
+        _parler = subprocess.Popen([PARLER_PY, os.path.join(ROOT, "engine", "parler_server.py")],
+                                   stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+        if _parler.stdout.readline().strip() != "pret":
+            raise RuntimeError("Parler-TTS n'a pas démarré (lancer engine/setup_parler.sh)")
+    with tempfile.TemporaryDirectory() as d:
+        out = os.path.join(d, "a.wav")
+        # même tirage pour chaque réplique = même voix ; RETRY change le tirage si la réplique est ratée
+        _parler.stdin.write(json.dumps({"text": text, "desc": PARLER_DESC, "seed": PARLER_SEED + 7919 * RETRY, "out": out}) + "\n")
+        _parler.stdin.flush()
+        if _parler.stdout.readline().strip() != "ok":
+            raise RuntimeError("Parler-TTS a échoué")
+        import soundfile as sf
+        audio, rate = sf.read(out, dtype="float32")
+        return audio, rate
+
+
 _espeak = None
 
 
@@ -174,14 +201,14 @@ def _synth_espeak(text):
 
 
 def engine_name():
-    if VOICE == "chatterbox":
-        return "chatterbox"
+    if VOICE in ("chatterbox", "parler"):
+        return VOICE
     return "piper" if os.path.exists(MODEL) else "espeak"
 
 
 def synth(text):
     """Renvoie l'audio (float32, 44,1 kHz) de la phrase."""
-    audio, rate = {"chatterbox": _synth_chatterbox, "piper": _synth_piper}.get(engine_name(), _synth_espeak)(clean(text))
+    audio, rate = {"chatterbox": _synth_chatterbox, "parler": _synth_parler, "piper": _synth_piper}.get(engine_name(), _synth_espeak)(clean(text))
     if rate != SR:
         x = np.linspace(0, len(audio) - 1, int(len(audio) * SR / rate))
         audio = np.interp(x, np.arange(len(audio)), audio).astype(np.float32)
