@@ -286,3 +286,17 @@ film ») puis être surpris par la suite.
   l'histoire demande un lieu qui n'existe pas, en ajouter un nouveau
   (fonction `scene_xxx` + entrée dans `SCENES`, vérifier sur la planche
   contact) plutôt que de réutiliser un décor qui ne colle pas.
+
+## Bonne réponse A ou B au hasard (demande de Fio, 04/11 : « c'est toujours B »)
+
+Jusqu'ici la mauvaise option était toujours A (jouée en premier) et la bonne
+toujours B : les spectateurs l'ont remarqué. Pour CHAQUE vidéo, tirer au sort
+AVANT d'écrire le script :
+`python3 -c "import random; print(random.choice('AB'))"`
+et noter le résultat dans `series/insights.md`. La lettre tirée est la
+**bonne** réponse : mettre l'option gagnante sur cette carte (`a` ou `b`).
+La mauvaise option est toujours jouée en premier (`record`, « TU ES MORT. »,
+`rewind`), puis la bonne : adapter les `picked` en conséquence (si la bonne
+est A : premier `picked` = "B", second = "A"). Sur 5 vidéos d'un même jour,
+au moins une bonne réponse A et au moins une B ; si le tirage donne 5 fois
+la même lettre, inverser la dernière.
