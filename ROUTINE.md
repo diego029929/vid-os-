@@ -300,3 +300,33 @@ La mauvaise option est toujours jouée en premier (`record`, « TU ES MORT. »,
 est A : premier `picked` = "B", second = "A"). Sur 5 vidéos d'un même jour,
 au moins une bonne réponse A et au moins une B ; si le tirage donne 5 fois
 la même lettre, inverser la dernière.
+
+## Faire venir abonnés et commentaires (demande de Fio, 04/11 : « fais-les venir »)
+
+Objectif : 10 000 abonnés (monétisation TikTok). Vues ~800, commentaires
+presque nuls → chaque vidéo DOIT contenir ces leviers (concept inchangé) :
+
+1. **Commenter AVANT la réponse** : pendant le compte à rebours du choix,
+   le texte dit « ÉCRIS A OU B EN COMMENTAIRE, VITE » (le spectateur
+   commente avant de voir la réponse ; c'est le commentaire le plus facile).
+2. **Teaser de rétention** juste après l'accroche (plan 2 ou 3), varié
+   chaque jour : « PRESQUE TOUT LE MONDE MEURT À CE CHOIX », « LA RÉPONSE
+   N'EST PAS CELLE QUE TU CROIS »… jamais deux fois la même phrase.
+3. **« PARTIE X »** en gros dès la première seconde (`subtitle`) et dans le
+   titre ; couverture de la vidéo = image de l'accroche avec « PARTIE X » :
+   passer `videoCoverMilliseconds` (≈ 600) dans `createScheduledPost`.
+4. **Fin = dilemme qui divise** : deux options défendables, aucune évidente,
+   puis « A OU B ? LA RÉPONSE DANS LA PARTIE X+1 » et « ABONNE-TOI POUR NE
+   PAS LA RATER ». La partie suivante commence en donnant la réponse
+   (« VOUS ÉTIEZ 60 % À DIRE A… ») sans résumé de l'épisode.
+5. **Premier commentaire** : `firstCommentText` dans `createScheduledPost`
+   = une question qui lance le débat (« Moi j'aurais choisi B. Et toi ? »,
+   « Qui aurait survécu ici ? 👇 »), différente à chaque vidéo.
+6. **Légende** : la première ligne est une question directe au spectateur
+   (« Tu décroches ou tu laisses sonner ? »), puis 3 à 5 hashtags.
+7. **Lire les commentaires** dans les stats chaque matin : si quelqu'un
+   propose une idée, une ville ou un choix, s'en servir et le dire dans la
+   vidéo (« VOUS M'AVEZ DIT : LE GRENIER »). Ça pousse les autres à
+   commenter.
+8. Dans `series/insights.md`, suivre chaque jour commentaires et abonnés
+   gagnés par vidéo, et garder les formulations qui en font le plus.
