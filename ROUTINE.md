@@ -34,14 +34,14 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
 0. Préparer la voix off, en installant d'abord torch en version CPU (sinon
    pip télécharge la version GPU de plusieurs Go et bloque plus de 30 min) :
    `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu`
-   puis `pip install -q chatterbox-tts` (Whisper et le secours Chatterbox s'en
-   servent), puis `./engine/setup_parler.sh` (Parler-TTS dans /tmp/parler-venv).
-   **Voix choisie par Fio le 04/11 (« voix 2 ») : Parler-TTS** (gratuit),
-   voix décrite en texte dans `engine/voice_config.json` (« deep, raspy,
-   gravelly voice, dark and menacing tone »), même tirage (seed 1) pour
-   chaque réplique, vitesse 1.25, effet « leger », sans écho. Tout est réglé
-   dans `engine/voice_config.json` : ne pas changer sans Fio. Fio ne veut PAS
-   la voix d'un autre créateur, et rejette les voix Chatterbox / Piper.
+   puis `pip install -q chatterbox-tts` (≈ 2 min au total).
+   **Voix choisie par Fio le 05/11 (« voix 3-A ») : Chatterbox** avec la
+   référence `assets/ref/ref-narrateur.wav` (vraie voix de narrateur, livre
+   audio LibriVox « Le Père Goriot », domaine public), exagération 0.75,
+   cfg 0.3 (moins posée), vitesse 1.2, effet « leger », sans écho. Tout est
+   dans `engine/voice_config.json` : ne pas changer sans Fio. Parler-TTS
+   (« voix 2 ») a été rejeté par Fio : `./engine/setup_parler.sh` n'est plus
+   nécessaire. Fio ne veut PAS la voix d'un autre créateur, ni de service payant.
    Pour faire écouter des voix à Fio : extraits de 3 mots, pas de longues vidéos.
    Les modèles se téléchargent depuis huggingface.co au premier rendu.
    Si l'installation ou le téléchargement échoue, NE PAS publier : s'arrêter
@@ -189,7 +189,7 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    Il est permis d'ajouter des décors dans `engine/render2.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
 4. Rendre les 3 vidéos avec `python3 engine/render2.py episodes/epNN.json /tmp/epNN.mp4`
-   (le moteur doit afficher `voix off : parler`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin.
+   (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin.
    **Un seul rendu à la fois** (02/11 : deux rendus en parallèle dépassent la
    mémoire, le second est tué sans message). Commencer par l'épisode de 10 h ;
    chaque vidéo n'a besoin d'être prête qu'avant son propre horaire. Pour chacune, vérifier

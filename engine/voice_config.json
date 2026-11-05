@@ -1,11 +1,13 @@
 {
-  "voice": "parler",
-  "reference": "ref-pierre-moyen.wav",
+  "voice": "chatterbox",
+  "reference": "ref-narrateur.wav",
   "effect": "leger",
-  "tempo": 1.25,
+  "tempo": 1.2,
   "tight": true,
   "pitch": 1.0,
   "speed": 1.0,
   "description": "A man speaks with a deep, raspy, gravelly voice in a dark and menacing tone, at a moderate pace. Very clear audio.",
-  "seed": 1
+  "seed": 1,
+  "exaggeration": 0.75,
+  "cfg": 0.3
 }
