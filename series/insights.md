@@ -183,3 +183,42 @@ creux à 11 h, 13 h-14 h et après 21 h).
   nouveau décor `couloir` (couloir d'hôtel).
 - À surveiller le 05/11 : ép. 13-14 et N°1-2 (enfin jugeables), Reels de
   la série du Train (ép. 11 confirmé ou accident ?).
+
+### 05/11 (épisodes 18-20 = « L'Hôtel des neiges » parties 3-5, + courtes SURVIS ? N°5 et N°6)
+
+- TikTok toujours stable : ép. 2 à 16 entre 739 et 895 vues (médiane du
+  score ≈ 820). Ép. 17 (12 h de recul) = 278 vues, à juger demain.
+- **Courtes vs épisodes (jugeables : N°1-2 contre ép. 12-14)** : TikTok à
+  égalité (N°1 = 798 vues, score 813 ; N°2 = 810, score 820 ; ép. 12-14 =
+  755 à 821). N°3 (15 h de recul) = 769 vues et 71 likes, déjà au niveau.
+  Instagram : N°1 = 500 vues (temps moyen 14 s sur 42 s = 33 %), N°2 = 194
+  (10 s) ; épisodes 170 à 550 (13-22 s sur 90 s = 15-25 %). Les courtes
+  font autant de vues pour 2 fois moins de durée et sont mieux regardées
+  en proportion. Commentaires : 1 par vidéo des deux côtés. Bilan final
+  demain 06/11 avec N°3-4.
+- **Test accroche (dialogue vs lieu) : fin, pas de gagnant.** 2e mesure :
+  ép. 15 (dialogue) 739 vues / 57 likes, ép. 16 (lieu) 848 / 60, N°3
+  (dialogue) 769 / 71. Le dialogue garde un peu plus de likes, mais aucun
+  score à +30 %. Les deux formes restent permises, en alternance.
+- **Premier jour des leviers « abonnés / commentaires »** (ROUTINE.md,
+  04/11 nuit) sur les 5 vidéos : « ÉCRIS A OU B EN COMMENTAIRE, VITE »
+  pendant le compte à rebours, teaser au plan 3, fin coupée sur le
+  dilemme (« LA RÉPONSE DANS LA PARTIE X+1 » / « DANS LE N° SUIVANT »),
+  premier commentaire automatique, légende qui commence par une question,
+  couverture à 0,6 s (« PARTIE X »). À mesurer : commentaires > 1 %.
+- **Test du jour = forme du teaser** (plan 3) : « défi » (ép. 18
+  « PRESQUE TOUT LE MONDE MEURT DANS CET ESCALIER », ép. 20, N°5) contre
+  « promesse » (ép. 19 « CE QUI VA SUIVRE, PERSONNE NE LE VOIT VENIR »,
+  N°6 « LE PIRE T'ATTEND EN BAS DE CHEZ TOI »).
+- Bonne réponse tirée au sort : ép. 18 = B, ép. 19 = A, ép. 20 = B,
+  N°5 = A, N°6 = B.
+- Courtes enchaînées : N°6 commence par la réponse de N°5 (on démarre la
+  voiture) puis raconte une histoire complète (parking à Strasbourg).
+- Voix Parler (1er jour) : « A OU B » est mal lu (« ça oublie », « au biais »)
+  → remplacé à la voix par « ÉCRIS TON CHOIX EN COMMENTAIRE » et « TON
+  CHOIX ? LA RÉPONSE DANS… » (les cartes A/B restent à l'écran). Mots
+  aussi mal lus : « HALL », « REZ-DE-CHAUSSÉE », « L'ESCALIER ? » en
+  ouverture, « DEUX CENT DOUZE » (lu « 812 »), « LES PHARES T'AVALENT »,
+  « SUR TA PORTE ». Parler fait aussi des répliques presque vides : le
+  serveur renvoie maintenant un silence court et le moteur refait la
+  réplique (avant : plantage du rendu). Rendu ≈ 12-20 min par vidéo.

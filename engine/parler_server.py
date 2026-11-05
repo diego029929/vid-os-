@@ -5,6 +5,7 @@ Lancé par engine/voice.py avec le Python de l'environnement Parler
 import json
 import sys
 
+import numpy as np
 import soundfile as sf
 import torch
 from parler_tts import ParlerTTSForConditionalGeneration
@@ -18,7 +19,12 @@ print("pret", flush=True)
 for raw in sys.stdin:
     req = json.loads(raw)
     torch.manual_seed(int(req.get("seed", 1)))
-    a = model.generate(input_ids=dtok(req["desc"], return_tensors="pt").input_ids,
-                       prompt_input_ids=tok(req["text"], return_tensors="pt").input_ids)
-    sf.write(req["out"], a.cpu().numpy().squeeze(), model.config.sampling_rate)
+    d = dtok(req["desc"], return_tensors="pt")
+    t = tok(req["text"], return_tensors="pt")
+    a = model.generate(input_ids=d.input_ids, attention_mask=d.attention_mask,
+                       prompt_input_ids=t.input_ids, prompt_attention_mask=t.attention_mask)
+    a = np.atleast_1d(a.cpu().numpy().squeeze()).astype(np.float32)
+    if a.size < 1000:   # tirage raté (presque vide) : on renvoie un silence court,
+        a = np.zeros(1000, np.float32)  # le contrôle de débit du moteur refait la réplique
+    sf.write(req["out"], a, model.config.sampling_rate)
     print("ok", flush=True)

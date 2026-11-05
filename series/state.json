@@ -2,8 +2,8 @@
   "current_series": "l-hotel-des-neiges",
   "series_file": "series/l-hotel-des-neiges.md",
   "series_episode_count": 6,
-  "next_episode_in_series": 3,
-  "next_global_episode": 18,
+  "next_episode_in_series": 6,
+  "next_global_episode": 21,
   "published": [
     {
       "global": 1,
@@ -137,9 +137,36 @@
       "slot": "2026-11-04T18:00:00 Europe/Paris",
       "metricool_id": 416246232,
       "note": "accroche dialogue"
+    },
+    {
+      "global": 18,
+      "series": "l-hotel-des-neiges",
+      "episode": 3,
+      "file": "episodes/ep18.json",
+      "slot": "2026-11-05T10:00:00 Europe/Paris",
+      "note": "teaser défi",
+      "metricool_id": 417384833
+    },
+    {
+      "global": 19,
+      "series": "l-hotel-des-neiges",
+      "episode": 4,
+      "file": "episodes/ep19.json",
+      "slot": "2026-11-05T12:00:00 Europe/Paris",
+      "note": "teaser promesse",
+      "metricool_id": 417446802
+    },
+    {
+      "global": 20,
+      "series": "l-hotel-des-neiges",
+      "episode": 5,
+      "file": "episodes/ep20.json",
+      "slot": "2026-11-05T18:00:00 Europe/Paris",
+      "note": "teaser défi",
+      "metricool_id": 417612707
     }
   ],
-  "survis_next": 5,
+  "survis_next": 7,
   "survis_published": [
     {
       "n": 1,
@@ -164,6 +191,18 @@
       "file": "episodes/survis-04.json",
       "slot": "2026-11-04T20:30:00 Europe/Paris",
       "metricool_id": 416192016
+    },
+    {
+      "n": 5,
+      "file": "episodes/survis-05.json",
+      "slot": "2026-11-05T15:00:00 Europe/Paris",
+      "metricool_id": 417533136
+    },
+    {
+      "n": 6,
+      "file": "episodes/survis-06.json",
+      "slot": "2026-11-05T20:30:00 Europe/Paris",
+      "metricool_id": 417588008
     }
   ]
 }

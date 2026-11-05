@@ -1,0 +1,647 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°5",
+ "clock_start": 0,
+ "title": "SURVIS ? N°5 · Quelqu'un siffle ton prénom dans la forêt. Tu réponds ?",
+ "caption": "Ton ami t'appelle dans la forêt, la nuit. Tu réponds ? 👇 SURVIS ? N°5 #survie #horreur #vosges #histoire",
+ "style": 2,
+ "beats": [
+  {
+   "text": "DANS LES VOSGES, À MINUIT, QUELQU'UN SIFFLE TON PRÉNOM.",
+   "scene": "foret",
+   "params": {
+    "eyes": false
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "PRESQUE PERSONNE NE SURVIT À CE *SIFFLEMENT*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU T'ES PERDU EN RANDONNÉE, EN PLEINE FORÊT.",
+   "scene": "foret",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "SUR UN ARBRE, UN PANNEAU :",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "« SI ON SIFFLE TON PRÉNOM, NE RÉPONDS PAS. *RECULE*. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "ENTRE LES ARBRES, DEUX YEUX ROUGES S'ALLUMENT.",
+   "scene": "foret",
+   "params": {
+    "eyes": true
+   },
+   "shake": 4,
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "« OÙ ES-TU ? RÉPONDS ! » C'EST LA VOIX DE TON MEILLEUR AMI.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     160,
+     120
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "TU MARCHES À RECULONS, OU TU *RÉPONDS* ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "MARCHER À RECULONS",
+    "b": "RÉPONDRE"
+   },
+   "dur": 2.4,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ÉCRIS TA RÉPONSE EN *COMMENTAIRE*. VITE !",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "MARCHER À RECULONS",
+    "b": "RÉPONDRE",
+    "countdown": 3
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU RÉPONDS : « JE SUIS LÀ ! »",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "MARCHER À RECULONS",
+    "b": "RÉPONDRE",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "LE SIFFLEMENT S'ARRÊTE NET.",
+   "scene": "foret",
+   "params": {
+    "eyes": true,
+    "red": true
+   },
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "QUELQUE CHOSE RESPIRE JUSTE DERRIÈRE TON OREILLE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "shake": 10,
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "TU ES *MORT*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "text": "TU NE DIS RIEN. TU MARCHES À RECULONS.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "MARCHER À RECULONS",
+    "b": "RÉPONDRE",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "LES YEUX ROUGES TE SUIVENT.",
+   "scene": "foret",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "scared",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "eyes": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "TON DOS TOUCHE TA VOITURE.",
+   "scene": "parking",
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "UN MESSAGE DE TON MEILLEUR AMI ARRIVE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "« DÉSOLÉ, JE NE SUIS PAS VENU CE SOIR. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     160,
+     120
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ALORS QUI T'APPELAIT DANS LA FORÊT ?",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "DANS TA VOITURE, LE SIÈGE ARRIÈRE VIENT DE GRINCER.",
+   "scene": "parking",
+   "params": {
+    "headlights": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "TU SORS EN COURANT, OU TU DÉMARRES À FOND ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "SORTIR",
+    "b": "DÉMARRER"
+   },
+   "dur": 2.6,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TON CHOIX ? LA RÉPONSE DANS LE *N°6*.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "SORTIR",
+    "b": "DÉMARRER"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "scene": "foret",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  }
+ ]
+}

@@ -311,7 +311,9 @@ Objectif : 10 000 abonnés (monétisation TikTok). Vues ~800, commentaires
 presque nuls → chaque vidéo DOIT contenir ces leviers (concept inchangé) :
 
 1. **Commenter AVANT la réponse** : pendant le compte à rebours du choix,
-   le texte dit « ÉCRIS A OU B EN COMMENTAIRE, VITE » (le spectateur
+   le texte dit « ÉCRIS A OU B EN COMMENTAIRE, VITE » (05/11 : la voix Parler lit
+   mal « A OU B » : écrire plutôt « ÉCRIS TON CHOIX EN COMMENTAIRE, VITE »
+   et « TON CHOIX ? LA RÉPONSE DANS LA PARTIE X+1 », les cartes A/B restent) (le spectateur
    commente avant de voir la réponse ; c'est le commentaire le plus facile).
 2. **Teaser de rétention** juste après l'accroche (plan 2 ou 3), varié
    chaque jour : « PRESQUE TOUT LE MONDE MEURT À CE CHOIX », « LA RÉPONSE
