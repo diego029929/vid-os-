@@ -1,4 +1,22 @@
-# Routine quotidienne : 3 vidéos par jour
+# Routine quotidienne
+
+> **DEPUIS LE 07/11 (choix de Fio le 06/11) : 1 SEULE VIDÉO PAR JOUR, TIKTOK
+> SEULEMENT, à 18:00 (Europe/Paris).** Le 06/11, Metricool a refusé de
+> publier (« You have reached your Metricool account limit » : limite du
+> plan gratuit atteinte, 5 vidéos x 2 réseaux par jour, c'était trop). Fio
+> veut rester gratuit et a choisi « moins de vidéos, TikTok seul ».
+> - Chaque jour : l'épisode suivant de la série en cours (85-95 s), pas de
+>   courte « SURVIS ? » (en pause, `survis_next` gardé), pas d'Instagram
+>   (pas de `instagramData`, provider `tiktok` seul).
+> - **Au début de chaque routine** : `getScheduledPosts` sur la veille ; si
+>   un post a le statut `ERROR`, le dire en premier dans le résumé à Fio
+>   (avec le message d'erreur) et copier la vidéo du jour dans
+>   `/mnt/project-files/videos/<JJ-MM>/` pour qu'il puisse la poster à la
+>   main. Si l'erreur est encore « account limit », programmer quand même
+>   (la limite peut se remettre à zéro) mais prévenir Fio.
+> - Tout ce qui suit sur « 3 épisodes », « 10h/12h », « courtes » et
+>   « Instagram » est remplacé par ces règles tant que Fio ne dit pas autre chose.
+
 
 Ce fichier est le mode d'emploi de la routine Claude qui tourne chaque matin.
 Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricool à
