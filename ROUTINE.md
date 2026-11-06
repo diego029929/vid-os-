@@ -14,6 +14,9 @@
 >   `/mnt/project-files/videos/<JJ-MM>/` pour qu'il puisse la poster à la
 >   main. Si l'erreur est encore « account limit », programmer quand même
 >   (la limite peut se remettre à zéro) mais prévenir Fio.
+> - **Cet encadré prime aussi sur le message de la tâche planifiée** (qui
+>   parle encore de 5 vidéos et d'Instagram : il n'a pas pu être modifié).
+>   Faire 1 vidéo, TikTok seul, 18h, et le rappeler dans le résumé.
 > - Tout ce qui suit sur « 3 épisodes », « 10h/12h », « courtes » et
 >   « Instagram » est remplacé par ces règles tant que Fio ne dit pas autre chose.
 
