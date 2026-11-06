@@ -166,31 +166,13 @@
       "metricool_id": 417612707
     },
     {
-      "global": 21,
-      "series": "l-hotel-des-neiges",
-      "episode": 6,
-      "file": "episodes/ep21.json",
-      "slot": "2026-11-06T10:00:00 Europe/Paris",
-      "note": "teaser défi",
-      "metricool_id": 418598858
-    },
-    {
       "global": 22,
       "series": "jacques-a-dit",
       "episode": 1,
       "file": "episodes/ep22.json",
-      "slot": "2026-11-06T12:00:00 Europe/Paris",
-      "note": "teaser promesse, accroche lieu",
-      "metricool_id": 418579959
-    },
-    {
-      "global": 23,
-      "series": "jacques-a-dit",
-      "episode": 2,
-      "file": "episodes/ep23.json",
-      "slot": "2026-11-06T18:00:00 Europe/Paris",
-      "note": "teaser défi, accroche dialogue",
-      "metricool_id": 418728259
+      "slot": "2026-11-06T18:30:00 Europe/Paris",
+      "note": "TikTok seul ; 12h refusé (limite Metricool)",
+      "metricool_id": 419166758
     }
   ],
   "survis_next": 9,
@@ -234,14 +216,26 @@
     {
       "n": 7,
       "file": "episodes/survis-07.json",
-      "slot": "2026-11-06T15:00:00 Europe/Paris",
-      "metricool_id": 418743991
+      "slot": "2026-11-06T20:00:00 Europe/Paris",
+      "metricool_id": 419166840,
+      "note": "TikTok seul ; 15h refusé (limite Metricool)"
+    }
+  ],
+  "ready_not_published": [
+    {
+      "file": "episodes/ep23.json",
+      "video": "/mnt/project-files/videos/06-11/18h-jacques-a-dit-partie2.mp4",
+      "what": "Jacques a dit partie 2"
     },
     {
-      "n": 8,
       "file": "episodes/survis-08.json",
-      "slot": "2026-11-06T20:30:00 Europe/Paris",
-      "metricool_id": 418752659
+      "video": "/mnt/project-files/videos/06-11/20h30-survis-8.mp4",
+      "what": "SURVIS ? N°8"
+    },
+    {
+      "file": "episodes/ep21.json",
+      "video": "/mnt/project-files/videos/06-11/10h-hotel-partie6.mp4",
+      "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
     }
   ]
 }
