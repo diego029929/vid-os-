@@ -1,22 +1,22 @@
 # Routine quotidienne
 
-> **DEPUIS LE 07/11 (choix de Fio le 06/11) : 1 SEULE VIDÉO PAR JOUR, TIKTOK
-> SEULEMENT, à 18:00 (Europe/Paris).** Le 06/11, Metricool a refusé de
+> **DEPUIS LE 07/11 (choix de Fio le 06/11) : 2 VIDÉOS PAR JOUR, TIKTOK
+> SEULEMENT : une courte « SURVIS ? » à 12:00 et l'épisode de la série à 18:00 (Europe/Paris).** (Fio a précisé « 2 vidéos » le 06/11.) Le 06/11, Metricool a refusé de
 > publier (« You have reached your Metricool account limit » : limite du
 > plan gratuit atteinte, 5 vidéos x 2 réseaux par jour, c'était trop). Fio
 > veut rester gratuit et a choisi « moins de vidéos, TikTok seul ».
-> - Chaque jour : l'épisode suivant de la série en cours (85-95 s), pas de
->   courte « SURVIS ? » (en pause, `survis_next` gardé), pas d'Instagram
->   (pas de `instagramData`, provider `tiktok` seul).
+> - Chaque jour : 1 courte « SURVIS ? » (30-40 s, `survis_next`) à 12:00 et
+>   l'épisode suivant de la série (85-95 s) à 18:00. Pas d'Instagram (pas de
+>   `instagramData`, provider `tiktok` seul). Rendre l'épisode d'abord.
 > - **Au début de chaque routine** : `getScheduledPosts` sur la veille ; si
 >   un post a le statut `ERROR`, le dire en premier dans le résumé à Fio
->   (avec le message d'erreur) et copier la vidéo du jour dans
+>   (avec le message d'erreur) et copier les vidéos du jour dans
 >   `/mnt/project-files/videos/<JJ-MM>/` pour qu'il puisse la poster à la
 >   main. Si l'erreur est encore « account limit », programmer quand même
 >   (la limite peut se remettre à zéro) mais prévenir Fio.
 > - **Cet encadré prime aussi sur le message de la tâche planifiée** (qui
 >   parle encore de 5 vidéos et d'Instagram : il n'a pas pu être modifié).
->   Faire 1 vidéo, TikTok seul, 18h, et le rappeler dans le résumé.
+>   Faire 2 vidéos, TikTok seul, 12h et 18h, et le rappeler dans le résumé.
 > - Tout ce qui suit sur « 3 épisodes », « 10h/12h », « courtes » et
 >   « Instagram » est remplacé par ces règles tant que Fio ne dit pas autre chose.
 
