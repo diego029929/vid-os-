@@ -24,23 +24,33 @@ Mis à jour par la routine quotidienne à partir des statistiques Metricool.
 | 9 | 02/11 10:05 | 83 s (style 2) | 823 | 60 | 1 | 0 | 828 | 161 / 0 / 14,2 s | oui |
 | 10 | 02/11 12:04 | 73 s (court, style 2) | 854 | 89 | 0 | 0 | 854 | 263 / 6 / 14,9 s | oui |
 | 11 | 02/11 18:08 | 88 s (style 2) | 787 | 65 | 1 | 2 | 802 | **1758 / 72 / 29,1 s** | oui |
-| 12 | 03/11 10:06 | 89 s (accroche lieu) | 735 | 25 | 0 | 1 | 740 | 196 / 7 / 14,9 s | presque (44 h) |
-| 13 | 03/11 12:03 | 86 s (accroche dialogue) | 781 | 85 | 0 | 0 | 781 | pas encore remonté | non (42 h) |
-| 14 | 03/11 18:12 | 91 s (accroche lieu) | 551 | 10 | 1 | 5 | 581 | pas encore remonté | non (12 h) |
-| 15 | 04/11 10:00 | 89 s (accroche dialogue) | | | | | | | |
-| 16 | 04/11 12:00 | 90 s (accroche lieu) | | | | | | | |
-| 17 | 04/11 18:00 | 94 s (accroche dialogue) | | | | | | | |
+| 12 | 03/11 10:06 | 89 s (accroche lieu) | 750 | 26 | 0 | 1 | 755 | 552 / 22 / 22,5 s | oui |
+| 13 | 03/11 12:03 | 86 s (accroche dialogue) | 808 | 88 | 0 | 0 | 808 | 215 / 3 / 14,5 s | oui |
+| 14 | 03/11 18:12 | 91 s (accroche lieu) | 792 | 10 | 1 | 5 | 822 | 173 / 5 / 13,0 s | oui |
+| 15 | 04/11 10:06 | 89 s (accroche dialogue) | 746 | 57 | 2 | 1 | 761 | 200 / 6 / 12,7 s | presque (44 h) |
+| 16 | 04/11 12:05 | 89 s (accroche lieu) | 895 | 62 | 0 | 3 | 910 | 357 / 1 / **68,3 s** | presque (43 h) |
+| 17 | 04/11 18:06 | 94 s (accroche dialogue) | 784 | 23 | 0 | 0 | 784 | 148 / 1 / 9,0 s | non (36 h) |
+| 18 | 05/11 10:05 | 93 s (teaser défi) | 771 | 47 | 0 | 0 | 771 | pas encore remonté | non (20 h) |
+| 19 | 05/11 12:04 | 93 s (teaser promesse) | 775 | 37 | 0 | 0 | 775 | pas encore remonté | non (18 h) |
+| 20 | 05/11 18:00 | (teaser défi) | pas encore remonté | | | | | | non |
+| 21 | 06/11 10:00 | Hôtel partie 6 (teaser défi, bonne réponse B) | | | | | | | |
+| 22 | 06/11 12:00 | Jacques a dit partie 1 (accroche lieu, teaser promesse, B) | | | | | | | |
+| 23 | 06/11 18:00 | Jacques a dit partie 2 (accroche dialogue, teaser défi, B) | | | | | | | |
 
 Vidéos courtes « SURVIS ? » (test lancé le 03/11, bilan le 06/11) :
 
 | Courte | Publié | Durée | Vues TikTok | Likes | Comm. | Partages | Score | Reel : vues / likes / temps moyen | Jugé ? |
 |---|---|---|---|---|---|---|---|---|---|
-| N°1 | 03/11 15:02 | 42 s | 761 | 60 | 1 | 1 | 771 | pas encore remonté | non (15 h) |
-| N°2 | 03/11 20:30 | 37 s | 311 | 13 | 0 | 0 | 311 | pas encore remonté | non (9 h) |
-| N°3 | 04/11 15:00 | 38 s (accroche dialogue) | | | | | | | |
-| N°4 | 04/11 20:30 | 42 s (accroche lieu) | | | | | | | |
+| N°1 | 03/11 15:02 | 42 s | 804 | 62 | 1 | 2 | 819 | 506 / 19 / 14,1 s | oui |
+| N°2 | 03/11 20:30 | 37 s | 817 | 40 | 1 | 1 | 827 | 197 / 5 / 10,1 s | oui |
+| N°3 | 04/11 15:04 | 37 s (accroche dialogue) | 798 | 71 | 1 | 0 | 803 | 181 / 2 / 10,6 s | presque (39 h) |
+| N°4 | 04/11 20:31 | 42 s (accroche lieu) | 859 | 46 | 2 | 4 | 889 | 156 / 1 / 8,9 s | non (33 h) |
+| N°5 | 05/11 15:05 | 43 s (teaser défi) | 754 | 18 | 0 | 0 | 754 | pas encore remonté | non (15 h) |
+| N°6 | 05/11 20:30 | (teaser promesse) | pas encore remonté | | | | | | non |
+| N°7 | 06/11 15:00 | Nantes (teaser promesse, bonne réponse A) | | | | | | | |
+| N°8 | 06/11 20:30 | Lille (teaser défi, bonne réponse A) | | | | | | | |
 
-(Relevé du 04/11 5h45, 14 jours. Médiane des scores TikTok ép. 2 à 13 : 828.)
+(Relevé du 06/11 5h50, 14 jours. Médiane des scores TikTok ép. 12 à 19 : 780 ; courtes N°1 à 4 : 823.)
 
 Score = vues × (1 + 5 × (commentaires + partages) / vues).
 
@@ -222,3 +232,36 @@ creux à 11 h, 13 h-14 h et après 21 h).
   « SUR TA PORTE ». Parler fait aussi des répliques presque vides : le
   serveur renvoie maintenant un silence court et le moteur refait la
   réplique (avant : plantage du rendu). Rendu ≈ 12-20 min par vidéo.
+
+### 06/11 (épisode 21 = fin de « L'Hôtel des neiges », épisodes 22-23 = nouvelle série « Jacques a dit » parties 1-2, + courtes SURVIS ? N°7 et N°8)
+
+- **Bilan du test courtes vs épisodes (3 jours, demandé pour aujourd'hui)** :
+  - TikTok : courtes N°1-4 = 798 à 859 vues, score médian **823** ;
+    épisodes 12-19 = 746 à 895 vues, score médian **780**. Courtes +6 % :
+    pas de gagnant net (seuil +30 % non atteint). La meilleure courte
+    (N°4, 2 commentaires, 4 partages) bat la plupart des épisodes ; le
+    meilleur épisode reste l'ép. 16 (partie 1 de l'Hôtel, 895 vues).
+  - Instagram : courtes 156 à 506 vues, temps moyen 9-14 s sur ~40 s
+    (21-34 % de la vidéo) ; épisodes 148 à 552 vues, 9-23 s sur 90 s
+    (10-25 %), sauf l'ép. 16 (68 s de temps moyen, record absolu).
+  - Commentaires : toujours ≈ 1 par vidéo des deux côtés (< 1 %).
+  - Conclusion : les courtes font autant de vues pour 2 fois moins de
+    durée et de rendu, et sont mieux regardées en proportion. Les
+    parties 1 (ép. 10, 16) font partie des meilleurs épisodes : les
+    débuts de série attirent. Proposition à Fio : garder les 2 courtes,
+    c'est Fio qui décide.
+- Leviers commentaires (1er jour le 05/11) : pas encore jugeables.
+- **Test du jour = forme du teaser (2e mesure)** : défi (ép. 21, 23, N°8)
+  contre promesse (ép. 22, N°7). Le teaser du 05/11 n'est pas encore remonté.
+- Bonne réponse tirée au sort : ép. 21 = B, ép. 22 = B, ép. 23 = B,
+  N°7 = A, N°8 = A.
+- Nouvelle série « Jacques a dit » (village près de Saint-Malo, jeu
+  d'enfants qui tourne mal, `series/jacques-a-dit.md`), 6 épisodes.
+  Décor principal différent chaque vidéo (couloir → rue/chambre → bois/station).
+- Voix « 3-A » (narrateur LibriVox) : premier jour de publication.
+- Contrôle voix (Whisper) : 4 rendus refaits pour des mots mal lus
+  (« PARTIR » dans « laissé partir personne », « VITE ! » en ouverture,
+  « TU TE TAIS. » trop court, « DEUX LONGS BRAS NOIRS SORTENT DE L'OMBRE »,
+  « GRÉSILLENT ») ; les courtes faisaient 50-53 s, raccourcies à 43 s.
+  À éviter avec la voix 3-A : répliques de 3 mots ou moins, « VITE » seul,
+  « GRÉSILLER ».

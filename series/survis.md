@@ -46,7 +46,7 @@ dans le résumé ; c'est Fio qui décide de la suite.
 - [x] Panne de courant : une bougie s'allume toute seule (N°4, 04/11)
 - [ ] Message : « ne te retourne pas, je suis derrière toi »
 - [ ] Livraison de nuit : le livreur ne bouge plus devant l'immeuble
-- [ ] Baby-sitting : l'enfant dit qu'il y a un monsieur sous le lit
+- [x] Baby-sitting : l'enfant dit qu'il y a un monsieur sous le lit (N°8, 06/11)
 - [ ] Tunnel : les phares d'en face s'éteignent
 - [ ] Piscine fermée : quelqu'un nage dans le noir
 - [ ] Camping : une tente de plus qu'hier
@@ -54,7 +54,7 @@ dans le résumé ; c'est Fio qui décide de la suite.
 - [ ] Bus de nuit : le chauffeur prend une route qui n'existe pas
 - [ ] Neige : des traces de pas qui finissent au milieu du champ
 - [ ] Hôpital : l'étage -2 n'est pas sur le plan
-- [ ] Brouillard : quelqu'un te demande l'heure trois fois
+- [x] Brouillard : quelqu'un te demande l'heure trois fois (N°7, 06/11)
 - [ ] Radio de survie : « si le ciel devient vert, n'ouvre pas »
 - [x] Parking souterrain : ta voiture n'est plus à sa place (N°6, 05/11)
 - [ ] Jeu vidéo : ton personnage regarde la caméra

@@ -1,9 +1,9 @@
 {
-  "current_series": "l-hotel-des-neiges",
-  "series_file": "series/l-hotel-des-neiges.md",
+  "current_series": "jacques-a-dit",
+  "series_file": "series/jacques-a-dit.md",
   "series_episode_count": 6,
-  "next_episode_in_series": 6,
-  "next_global_episode": 21,
+  "next_episode_in_series": 3,
+  "next_global_episode": 24,
   "published": [
     {
       "global": 1,
@@ -164,9 +164,36 @@
       "slot": "2026-11-05T18:00:00 Europe/Paris",
       "note": "teaser défi",
       "metricool_id": 417612707
+    },
+    {
+      "global": 21,
+      "series": "l-hotel-des-neiges",
+      "episode": 6,
+      "file": "episodes/ep21.json",
+      "slot": "2026-11-06T10:00:00 Europe/Paris",
+      "note": "teaser défi",
+      "metricool_id": 418598858
+    },
+    {
+      "global": 22,
+      "series": "jacques-a-dit",
+      "episode": 1,
+      "file": "episodes/ep22.json",
+      "slot": "2026-11-06T12:00:00 Europe/Paris",
+      "note": "teaser promesse, accroche lieu",
+      "metricool_id": 418579959
+    },
+    {
+      "global": 23,
+      "series": "jacques-a-dit",
+      "episode": 2,
+      "file": "episodes/ep23.json",
+      "slot": "2026-11-06T18:00:00 Europe/Paris",
+      "note": "teaser défi, accroche dialogue",
+      "metricool_id": 418728259
     }
   ],
-  "survis_next": 7,
+  "survis_next": 9,
   "survis_published": [
     {
       "n": 1,
@@ -203,6 +230,18 @@
       "file": "episodes/survis-06.json",
       "slot": "2026-11-05T20:30:00 Europe/Paris",
       "metricool_id": 417588008
+    },
+    {
+      "n": 7,
+      "file": "episodes/survis-07.json",
+      "slot": "2026-11-06T15:00:00 Europe/Paris",
+      "metricool_id": 418743991
+    },
+    {
+      "n": 8,
+      "file": "episodes/survis-08.json",
+      "slot": "2026-11-06T20:30:00 Europe/Paris",
+      "metricool_id": 418752659
     }
   ]
 }
