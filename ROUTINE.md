@@ -8,6 +8,17 @@
 > - Chaque jour : 1 courte « SURVIS ? » (30-40 s, `survis_next`) à 12:00 et
 >   l'épisode suivant de la série (85-95 s) à 18:00. Pas d'Instagram (pas de
 >   `instagramData`, provider `tiktok` seul). Rendre l'épisode d'abord.
+> - **Publication par Zernio (gratuit, 2 comptes, posts illimités ; choisi le
+>   06/11 car Metricool gratuit = 50 posts/mois, épuisé jusqu'au 01/12)** :
+>   si la variable `ZERNIO_API_KEY` existe, publier avec l'API Zernio au lieu
+>   de Metricool (`https://zernio.com/api/v1`, en-tête `Authorization: Bearer
+>   $ZERNIO_API_KEY` ; `GET /v1/accounts` pour l'id TikTok (et Instagram si
+>   relié) ; `POST /v1/posts` avec content, scheduledFor, timezone
+>   Europe/Paris, platforms [{platform, accountId}] et la vidéo par URL —
+>   lire https://docs.zernio.com/llms.txt pour le format exact ; vérifier avec
+>   `GET /v1/posts/{id}`). Avec Zernio on peut remettre Instagram. Si la clé
+>   n'existe pas : Metricool, et si refus « account limit », copier les
+>   vidéos dans `/mnt/project-files/videos/<JJ-MM>/` et prévenir Fio.
 > - **07/11 seulement** : NE RIEN ÉCRIRE NI RENDRE. Les 2 vidéos du jour sont
 >   déjà prêtes (refusées le 06/11 par la limite Metricool) : SURVIS ? N°8 à
 >   12:00 et « Jacques a dit » partie 2 à 18:00, fichiers listés dans
