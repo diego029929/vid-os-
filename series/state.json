@@ -171,8 +171,8 @@
       "episode": 1,
       "file": "episodes/ep22.json",
       "slot": "2026-11-07T18:00:00 Europe/Paris",
-      "note": "06/11 18h30 refusé (limite Metricool) ; reprogrammé 07/11 18h, TikTok seul",
-      "metricool_id": 419665000
+      "note": "TikTok + Instagram via Zernio ; refusé par Metricool le 06/11",
+      "zernio_id": "6aef1cade5d093e15a6e7bf3"
     }
   ],
   "survis_next": 9,
@@ -216,9 +216,11 @@
     {
       "n": 7,
       "file": "episodes/survis-07.json",
-      "slot": "2026-11-07T12:00:00 Europe/Paris",
-      "metricool_id": 419664969,
-      "note": "06/11 20h refusé (limite Metricool) ; reprogrammé 07/11 12h, TikTok seul"
+      "slot": "2026-11-07T13:40:00 Europe/Paris",
+      "note": "publié tout de suite via Zernio à la demande de Fio (12h Metricool refusé)",
+      "zernio_id": "6aef1c2f81374a6a33e18b7c",
+      "tiktok_url": "https://www.tiktok.com/@4_youchoose_4/video/7705408552696827169",
+      "instagram_url": "https://www.instagram.com/reel/DfcNFznE_tf/"
     }
   ],
   "ready_not_published": [

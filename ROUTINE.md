@@ -8,6 +8,21 @@
 > - Chaque jour : 1 courte « SURVIS ? » (30-40 s, `survis_next`) à 12:00 et
 >   l'épisode suivant de la série (85-95 s) à 18:00. Pas d'Instagram (pas de
 >   `instagramData`, provider `tiktok` seul). Rendre l'épisode d'abord.
+> - **DEPUIS LE 07/11 : ZERNIO EST BRANCHÉ (`ZERNIO_API_KEY` présente).** Publier
+>   par Zernio, plus par Metricool (Metricool sert seulement aux stats).
+>   TikTok accountId `6aef19cf4f6bb8199749fd84`, Instagram accountId
+>   `6aef1b2aa9325e24b65c8924` : on remet Instagram (Reel). Format testé OK
+>   le 07/11 : `POST https://zernio.com/api/v1/posts` avec `content` (légende),
+>   `mediaItems` [{type: video, url: raw branche media}], `platforms`
+>   [{platform, accountId}], `tiktokSettings` {privacy_level
+>   PUBLIC_TO_EVERYONE, allow_comment/duet/stitch true,
+>   content_preview_confirmed true, express_consent_given true,
+>   video_made_with_ai true, video_cover_timestamp_ms 600}, puis
+>   `scheduledFor` "AAAA-MM-JJTHH:MM:SS" + `timezone` "Europe/Paris" (ou
+>   `publishNow` true). Vérifier avec `GET /v1/posts/{id}` (status
+>   scheduled/published, `platformPostUrl`). Le jeton TikTok expire en 24 h
+>   (`tokenExpiresAt`) : si `needsReconnection` est vrai dans
+>   `GET /v1/accounts`, prévenir Fio qu'il doit reconnecter TikTok dans Zernio.
 > - **Publication par Zernio (gratuit, 2 comptes, posts illimités ; choisi le
 >   06/11 car Metricool gratuit = 50 posts/mois, épuisé jusqu'au 01/12)** :
 >   si la variable `ZERNIO_API_KEY` existe, publier avec l'API Zernio au lieu
