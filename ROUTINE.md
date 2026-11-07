@@ -331,6 +331,16 @@ film ») puis être surpris par la suite.
 >   champ (`scarecrow`), tunnel, cabane (`face` à la fenêtre), foraine, toit,
 >   aire. Presque tous acceptent `figure` (silhouette aux yeux rouges,
 >   `fig_at` [u, v], `fig_size`), `dark`, `red` / `green`.
+> - **CHAQUE SÉRIE S'INSPIRE D'UN FILM CONNU (Fio, rappel du 07/11 : « ça
+>   peut mieux marcher »)**. Avant une nouvelle série, choisir 1 ou 2 films
+>   d'horreur / thriller très connus (ex. Sans un bruit, Destination finale,
+>   Saw, Shining, Ça, Squid Game, Get Out, Le Village, Scream…) et noter en
+>   tête du fichier de la série : film(s) source, ce qu'on reprend (le
+>   principe, l'ambiance, le type de lieux, le type de danger) et ce qui
+>   change (lieu en France, personnages, règles). Les DÉCORS de la série
+>   reprennent l'ambiance des lieux du film (ex. Shining → hôtel isolé,
+>   long couloir à moquette, chambre 237 → chez nous un autre numéro).
+>   Histoire, noms et dialogues 100 % originaux.
 > - **CHAQUE PLAN MONTRE CE QUE DIT SA PHRASE (Fio, 07/11, vidéo de
 >   référence : « tu vois les décors suivent le script »)**. Pour chaque
 >   plan, se demander : « qu'est-ce que la phrase montre ? » et mettre CETTE

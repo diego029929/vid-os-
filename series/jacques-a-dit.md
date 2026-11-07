@@ -1,5 +1,10 @@
 # Série « JACQUES A DIT »
 
+**Films source** : Squid Game (jeu d'enfants mortel, règles simples) et
+Le Village / Sans un bruit (un village entier qui obéit à une règle la nuit).
+On garde : la règle de jeu, l'ordre qui tombe d'un haut-parleur, le village
+vide. On change : Bretagne, héros seul, « Jacques » jamais montré en entier.
+
 Univers : un village de Bretagne près de Saint-Malo. Chaque nuit à minuit,
 les haut-parleurs de l'église (et tous les téléphones du village) lancent
 une partie de « Jacques a dit ». Règle du jeu, connue de tous les enfants :
