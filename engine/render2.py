@@ -867,6 +867,74 @@ def scene_salon(p):
     return c.done()
 
 
+IA_STYLE = ("cinematic horror movie still, night, dark moody lighting, purple and orange tones, "
+            "empty, no people, no text, highly detailed, vertical")
+IA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "ia")
+
+
+def ia_image(prompt, seed=1):
+    """Décor généré par IA (Pollinations, gratuit, sans clé), mis en cache dans assets/ia/."""
+    import hashlib
+    import time
+    import urllib.parse
+    import urllib.request
+    os.makedirs(IA_DIR, exist_ok=True)
+    full = f"{prompt}, {IA_STYLE}"
+    path = os.path.join(IA_DIR, hashlib.sha1(f"{full}|{seed}".encode()).hexdigest()[:16] + ".jpg")
+    if not os.path.exists(path):
+        url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(full)
+               + f"?width=720&height=1280&nologo=true&seed={seed}")
+        last = None
+        for attempt in range(4):
+            try:
+                with urllib.request.urlopen(url, timeout=180) as r:
+                    data = r.read()
+                if len(data) < 5000:
+                    raise RuntimeError("image trop petite")
+                open(path, "wb").write(data)
+                break
+            except Exception as e:  # noqa: BLE001
+                last = e
+                time.sleep(5 * (attempt + 1))
+        else:
+            raise RuntimeError(f"décor IA impossible à générer ({prompt!r}) : {last}")
+    img = Image.open(path).convert("RGB")
+    img = img.crop((0, 0, img.width, int(img.height * 0.93)))  # retire le filigrane du bas
+    s = max(CW / img.width, CH / img.height)
+    img = img.resize((int(img.width * s) + 1, int(img.height * s) + 1), Image.LANCZOS)
+    x, y = (img.width - CW) // 2, (img.height - CH) // 2
+    return img.crop((x, y, x + CW, y + CH))
+
+
+def scene_ia(p):
+    """Décor IA : "params": {"prompt": "abandoned hospital corridor", "seed": 3}.
+    Accepte aussi "red" / "green" / "dark" (assombrit) et "figure" (silhouette aux yeux rouges)."""
+    img = ia_image(p.get("prompt", "dark empty room"), p.get("seed", 1))
+    if p.get("dark"):
+        img = Image.eval(img, lambda x: int(x * 0.55))
+    if not (p.get("red") or p.get("green") or p.get("figure")):
+        return img
+    c = Canvas((0, 0, 0), (0, 0, 0))
+    c.img = img.resize((c.w, c.h), Image.LANCZOS)
+    c.d = ImageDraw.Draw(c.img)
+    if p.get("figure"):
+        u, v = p.get("fig_at", (0.5, 0.75))
+        s = p.get("fig_size", 1.0)
+        d = c.d
+        r = 0.03 * s
+        d.ellipse(c.box(u - r, v - 0.20 * s, u + r, v - 0.20 * s + 2 * r * CW / CH), fill=(8, 6, 14))
+        d.polygon([c.P(u - 0.05 * s, v), c.P(u - 0.03 * s, v - 0.15 * s), c.P(u + 0.03 * s, v - 0.15 * s),
+                   c.P(u + 0.05 * s, v)], fill=(8, 6, 14))
+        for du in (-0.012, 0.012):
+            e = 0.005 * s
+            d.ellipse(c.box(u + du * s - e, v - 0.18 * s, u + du * s + e, v - 0.18 * s + 2 * e * CW / CH),
+                      fill=(255, 60, 50))
+        c.glow(u, v - 0.175 * s, 0.06 * s, (255, 60, 50), 0.4)
+    if p.get("red") or p.get("green"):
+        c.glow(0.5, 0.5, 0.7, _lightcol(p, FIRE), 0.3)
+    return c.done()
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -884,7 +952,8 @@ SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, 
           "wagon": scene_wagon, "couloir": scene_couloir, "foret": scene_foret, "parking": scene_parking,
           "station": scene_station, "ascenseur": scene_ascenseur, "cuisine": scene_cuisine,
           "salledebain": scene_salledebain, "grenier": scene_grenier, "cave": scene_cave,
-          "cimetiere": scene_cimetiere, "eglise": scene_eglise, "voiture": scene_voiture, "salon": scene_salon}
+          "cimetiere": scene_cimetiere, "eglise": scene_eglise, "voiture": scene_voiture, "salon": scene_salon,
+          "ia": scene_ia}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
@@ -1332,7 +1401,7 @@ def compose(b, cache):
     if key in cache:
         return cache[key]
     scene = b.get("scene", "flou")
-    bg = bloom(SCENES[scene](b.get("params", {})).convert("RGB"), 0.55 if scene in NEW_SCENES else 0.12)
+    bg = bloom(SCENES[scene](b.get("params", {})).convert("RGB"), (0.15 if scene == "ia" else 0.55) if scene in NEW_SCENES else 0.12)
     chars = [c for c in (b.get("char"), b.get("char2")) if c]
     # profondeur de champ : le décor est flou derrière un personnage en gros plan
     close = [c for c in chars if c.get("pose") in ("face", "back") or c.get("head", [0, 0, 0])[2] >= 0.2]
@@ -1431,13 +1500,14 @@ def render(ep, out):
                              "text": "TU ES *MORT*.", "record": b["of"], "shake": 8, "glitch": 0.25,
                              "sfx": [["hit", 0, 0.9]], "cam": {"z": [1.0, 1.12]}})
     # gros plans : le fond flou reprend le décor du lieu où l'on est (demande de Fio, 04/11)
-    last = None
+    last, last_p = None, {}
     for b in beats:
         sc = b.get("scene", "flou")
         if sc != "flou":
-            last = sc
+            last, last_p = sc, b.get("params", {})
         elif last and "of" not in b.get("params", {}) and "MORT" not in b.get("text", "").upper():
-            b["params"] = dict(b.get("params", {}), of=last)
+            extra = {k: last_p[k] for k in ("prompt", "seed") if k in last_p} if last == "ia" else {}
+            b["params"] = dict(b.get("params", {}), of=last, **extra)
     clips = prepare_voice(beats) if ep.get("voiceover", True) else {}
     for b in beats:
         b.setdefault("dur", 1.5)
