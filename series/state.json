@@ -170,9 +170,9 @@
       "series": "jacques-a-dit",
       "episode": 1,
       "file": "episodes/ep22.json",
-      "slot": "2026-11-06T18:30:00 Europe/Paris",
-      "note": "TikTok seul ; 12h refusé (limite Metricool)",
-      "metricool_id": 419166758
+      "slot": "2026-11-07T18:00:00 Europe/Paris",
+      "note": "06/11 18h30 refusé (limite Metricool) ; reprogrammé 07/11 18h, TikTok seul",
+      "metricool_id": 419665000
     }
   ],
   "survis_next": 9,
@@ -216,9 +216,9 @@
     {
       "n": 7,
       "file": "episodes/survis-07.json",
-      "slot": "2026-11-06T20:00:00 Europe/Paris",
-      "metricool_id": 419166840,
-      "note": "TikTok seul ; 15h refusé (limite Metricool)"
+      "slot": "2026-11-07T12:00:00 Europe/Paris",
+      "metricool_id": 419664969,
+      "note": "06/11 20h refusé (limite Metricool) ; reprogrammé 07/11 12h, TikTok seul"
     }
   ],
   "ready_not_published": [

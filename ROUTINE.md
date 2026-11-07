@@ -19,11 +19,13 @@
 >   `GET /v1/posts/{id}`). Avec Zernio on peut remettre Instagram. Si la clé
 >   n'existe pas : Metricool, et si refus « account limit », copier les
 >   vidéos dans `/mnt/project-files/videos/<JJ-MM>/` et prévenir Fio.
-> - **07/11 seulement** : NE RIEN ÉCRIRE NI RENDRE. Les 2 vidéos du jour sont
->   déjà prêtes (refusées le 06/11 par la limite Metricool) : SURVIS ? N°8 à
->   12:00 et « Jacques a dit » partie 2 à 18:00, fichiers listés dans
->   `ready_not_published` de `series/state.json` (copier sur la branche
->   `media`, programmer, puis les passer dans `published`).
+> - **08/11 seulement** : NE RIEN ÉCRIRE NI RENDRE. Le 06/11 TOUT a été
+>   refusé (même 18h30 et 20h), donc le 07/11 on a reprogrammé SURVIS ? N°7
+>   (12h) et « Jacques a dit » partie 1 (18h). Le 08/11 : vérifier que ces
+>   2 posts ne sont pas en `ERROR` ; s'ils sont publiés, programmer SURVIS ?
+>   N°8 à 12:00 et la partie 2 (`ep23.mp4`) à 18:00 (déjà sur la branche
+>   `media`, voir `ready_not_published`). S'ils sont en `ERROR`, les
+>   reprogrammer tels quels (ne jamais publier la partie 2 avant la 1).
 > - **Au début de chaque routine** : `getScheduledPosts` sur la veille ; si
 >   un post a le statut `ERROR`, le dire en premier dans le résumé à Fio
 >   (avec le message d'erreur) et copier les vidéos du jour dans
