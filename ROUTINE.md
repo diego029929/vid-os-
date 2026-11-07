@@ -317,37 +317,36 @@ film ») puis être surpris par la suite.
 
 ## Décors variés (demande de Fio, 04/11 : « c'est toujours les mêmes »)
 
-> **07/11, Fio le redit : « il faut plus de décors ».** Constat : environ 65 %
-> des plans étaient des gros plans `flou` (le même décor flouté) et une vidéo
-> ne montrait que 10 à 15 plans de vrais décors. NOUVELLES RÈGLES :
-> - **7 nouveaux décors** (07/11) : `salledebain` (`figure` : silhouette dans
->   le miroir, `dark`), `grenier` (`dark`), `cave` (`eyes`, `torch`),
->   `cimetiere` (`figure`), `eglise` (`figure`, `dark`), `voiture` (intérieur
->   la nuit, `figure` sur la route, `headlights`), `salon` (télé qui
->   grésille, `tv`, `text` sur l'écran). Tous acceptent `red` / `green`.
-> - **`flou` = au plus 1 plan sur 3** (avant : 2 sur 3). Les autres plans
->   montrent un vrai décor, net.
-> - **Épisode : au moins 7 décors différents ; courte : au moins 5.**
->   Changer de décor au moins tous les 3-4 plans (en comptant les `flou`).
-> - Utiliser au moins 2 des 7 nouveaux décors par vidéo pendant la semaine
->   du 08/11, pour que ça se voie.
-
-- Décors disponibles dans `engine/render2.py` : chambre, fenetre, rue, porte,
-  radio, escalier, wagon, couloir, **foret** (`eyes`: yeux rouges entre les
-  arbres), **parking** (`headlights`, `flicker`, `dark`), **station**
-  (station-service, `figure`: silhouette dans la boutique, `dark`),
-  **ascenseur** (`floor`: texte de l'écran d'étage, ex. "-7"), **cuisine**
-  (`fridge`: frigo ouvert), plus les anciens (bunker, city, door, dark,
-  hide, notebook). Tous acceptent `red` / `green`.
-- Les gros plans (`flou`) reprennent maintenant TOUT SEULS, en flou, le
-  dernier décor utilisé avant eux : on voit où on est. Pour forcer un autre
-  lieu : `"params": {"of": "foret"}`.
-- Règles : chaque vidéo utilise **au moins 4 décors différents** (hors
-  `flou`), et le décor principal d'une vidéo n'est jamais celui de la vidéo
-  publiée juste avant. Changer de lieu au moins tous les 6-8 plans. Si
-  l'histoire demande un lieu qui n'existe pas, en ajouter un nouveau
-  (fonction `scene_xxx` + entrée dans `SCENES`, vérifier sur la planche
-  contact) plutôt que de réutiliser un décor qui ne colle pas.
+> **07/11, Fio : « améliorer les décors », « il en faut beaucoup plus,
+> limite que tu en crées en fonction du script ». Fio garde le style DESSINÉ
+> (il a refusé les décors IA ; le décor `ia` existe dans le moteur mais ne
+> doit PAS être utilisé).** RÈGLES :
+> - Tous les décors dessinés passent maintenant par `polish()` (matière,
+>   rayons de lumière, étalonnage, vignette, grain) : rien à faire.
+> - **48 décors** existent (liste : `SCENES` dans engine/render2.py), dont
+>   27 ajoutés le 07/11 : salledebain, grenier, cave, cimetiere, eglise,
+>   voiture, salon, hopital, classe (`text` au tableau), metro (`text`,
+>   `headlights`), plage, phare, grange, tente (`shadow`), bureau, piscine
+>   (`floating`), supermarche, laverie (`spin`), bibliotheque, usine, pont,
+>   champ (`scarecrow`), tunnel, cabane (`face` à la fenêtre), foraine, toit,
+>   aire. Presque tous acceptent `figure` (silhouette aux yeux rouges,
+>   `fig_at` [u, v], `fig_size`), `dark`, `red` / `green`.
+> - **CRÉER DES DÉCORS EN FONCTION DU SCRIPT, À CHAQUE VIDÉO** : après avoir
+>   écrit le script, lister les lieux. Pour chaque lieu qui n'existe pas
+>   (ou qui ne colle pas vraiment), DESSINER un nouveau décor : fonction
+>   `scene_<lieu>(p)` dans engine/render2.py (juste avant `def scene_old`),
+>   ajoutée à `SCENES`, sur le modèle des décors existants (Canvas, `c.glow`,
+>   `c.soft`, `_moon`, `_stars`, `_fig`, `_end`). Au moins **2 nouveaux
+>   décors par vidéo**, détaillés (au moins 8 éléments : murs/sol, objets,
+>   une ou deux sources de lumière avec `c.glow`, un détail qui fait peur),
+>   couleurs de nuit violet / orange, pas de blanc pur en grande surface.
+>   Vérifier chaque nouveau décor sur une planche contact AVANT le rendu
+>   (rien de cramé, rien de vide, le lieu se reconnaît) et le corriger.
+> - **`flou` = au plus 1 plan sur 3.** **Épisode : au moins 7 décors
+>   différents ; courte : au moins 5.** Changer de décor tous les 3-4 plans.
+>   Ne pas reprendre le décor principal de la vidéo précédente.
+> - Commiter les nouveaux décors sur main avec les épisodes : la
+>   bibliothèque grandit chaque jour.
 
 ## Bonne réponse A ou B au hasard (demande de Fio, 04/11 : « c'est toujours B »)
 

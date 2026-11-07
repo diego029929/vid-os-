@@ -855,7 +855,7 @@ def scene_salon(p):
         c.glow(0.31, 0.43, 0.6, (190, 210, 255), 0.35)
         d = c.d
     if p.get("text"):
-        d.text(c.P(0.20, 0.42), str(p["text"]), fill=(255, 60, 50))
+        d.text(c.P(0.16, 0.40), str(p["text"]), fill=(255, 60, 50), font=font(int(c.w * 0.05)))
     d.rectangle(c.box(0.08, 0.56, 0.54, 0.62), fill=(50, 38, 60))
     d.rounded_rectangle(c.box(0.0, 0.70, 0.75, 0.92), radius=40, fill=(90, 50, 70))
     d.rounded_rectangle(c.box(0.0, 0.64, 0.75, 0.76), radius=40, fill=(110, 62, 84))
@@ -935,6 +935,511 @@ def scene_ia(p):
     return c.done()
 
 
+def _fig(c, u, v, s=1.0, col=(10, 8, 18), eyes=False):
+    """Silhouette debout, pieds en (u, v), hauteur ~0.2*s."""
+    d = c.d
+    r = 0.03 * s
+    d.ellipse(c.box(u - r, v - 0.20 * s, u + r, v - 0.20 * s + 2 * r * CW / CH), fill=col)
+    d.polygon([c.P(u - 0.05 * s, v), c.P(u - 0.03 * s, v - 0.15 * s), c.P(u + 0.03 * s, v - 0.15 * s), c.P(u + 0.05 * s, v)], fill=col)
+    if eyes:
+        for du in (-0.012, 0.012):
+            e = 0.005 * s
+            d.ellipse(c.box(u + du * s - e, v - 0.18 * s, u + du * s + e, v - 0.18 * s + 2 * e * CW / CH), fill=(255, 60, 50))
+        c.glow(u, v - 0.175 * s, 0.06 * s, (255, 60, 50), 0.4)
+
+
+def _end(c, p, u=0.5, v=0.5):
+    if p.get("figure"):
+        _fig(c, *p.get("fig_at", (u, v + 0.15)), s=p.get("fig_size", 1.0), eyes=True)
+    if p.get("red") or p.get("green"):
+        c.glow(0.5, 0.5, 0.6, _lightcol(p, FIRE), 0.25)
+    return c.done()
+
+
+def _moon(c, u, v, r=0.06):
+    c.glow(u, v, r * 7, (200, 200, 255), 0.35)
+    c.d.ellipse(c.box(u - r, v - r * CW / CH, u + r, v + r * CW / CH), fill=(250, 248, 235))
+
+
+def _stars(c, seed, vmax=0.4, n=50):
+    rnd = random.Random(seed)
+    for _ in range(n):
+        x, y, r = rnd.uniform(0, 1), rnd.uniform(0, vmax), rnd.uniform(0.0015, 0.0035)
+        c.d.ellipse(c.box(x - r, y - r * CW / CH, x + r, y + r * CW / CH), fill=(220, 220, 255))
+
+
+def scene_hopital(p):
+    """Couloir d'hôpital : néons, portes de chambres, brancard abandonné."""
+    c = Canvas((60, 74, 80), (28, 36, 40))
+    d = c.d
+    d.polygon([c.P(0, 0), c.P(0.4, 0.35), c.P(0.6, 0.35), c.P(1, 0)], fill=(80, 96, 100))
+    d.polygon([c.P(0, 1), c.P(0.4, 0.55), c.P(0.6, 0.55), c.P(1, 1)], fill=(70, 90, 86))
+    d.rectangle(c.box(0.4, 0.35, 0.6, 0.55), fill=(16, 22, 26))
+    for k in range(4):
+        t = k / 4
+        uL, uR = 0.4 * t, 1 - 0.4 * t
+        v0, v1 = 0.35 * t, 1 - 0.45 * t
+        d.line([c.P(uL + 0.02, v0 + 0.02), c.P(uR - 0.02, v0 + 0.02)], fill=(230, 255, 250), width=int(14 - 3 * k))
+        if k < 3:
+            dh = (v1 - v0) * 0.55
+            d.rectangle(c.box(uL + 0.01, v1 - dh, uL + 0.06 - 0.01 * k, v1 - 0.02), fill=(40, 70, 80))
+            d.rectangle(c.box(uR - 0.06 + 0.01 * k, v1 - dh, uR - 0.01, v1 - 0.02), fill=(40, 70, 80))
+    if not p.get("dark"):
+        c.glow(0.5, 0.05, 0.6, (210, 255, 245), 0.3)
+    d = c.d
+    d.rectangle(c.box(0.55, 0.72, 0.85, 0.76), fill=(200, 210, 210))
+    for u in (0.57, 0.83):
+        d.line([c.P(u, 0.76), c.P(u, 0.86)], fill=(120, 130, 130), width=8)
+    return _end(c, p, 0.5, 0.40)
+
+
+def scene_classe(p):
+    """Salle de classe vide : tableau noir avec un message, pupitres, horloge."""
+    c = Canvas((52, 44, 60), (30, 24, 34))
+    d = c.d
+    d.rectangle(c.box(0.10, 0.14, 0.90, 0.42), fill=(28, 52, 40), outline=(110, 80, 50), width=16)
+    d.text(c.P(0.16, 0.22), str(p.get("text", "NE TE RETOURNE PAS")), fill=(235, 235, 225), font=font(int(c.w * 0.055)))
+    d.ellipse(c.box(0.45, 0.04, 0.55, 0.04 + 0.10 * CW / CH), fill=(230, 225, 210), outline=(40, 30, 30), width=8)
+    d.line([c.P(0.5, 0.07), c.P(0.5, 0.045 + 0.05 * CW / CH)], fill=(20, 20, 20), width=6)
+    for row, (v, s) in enumerate(((0.60, 0.7), (0.72, 0.85), (0.88, 1.05))):
+        for u in (0.12, 0.42, 0.72):
+            uu = 0.5 + (u - 0.5) * s
+            d.rectangle(c.box(uu - 0.10 * s, v, uu + 0.10 * s, v + 0.03 * s), fill=(150, 110, 70))
+            d.line([c.P(uu - 0.08 * s, v), c.P(uu - 0.08 * s, v + 0.09 * s)], fill=(60, 60, 70), width=8)
+            d.line([c.P(uu + 0.08 * s, v), c.P(uu + 0.08 * s, v + 0.09 * s)], fill=(60, 60, 70), width=8)
+    c.glow(0.95, 0.3, 0.5, (160, 170, 255), 0.25)
+    return _end(c, p, 0.5, 0.45)
+
+
+def scene_metro(p):
+    """Quai de métro désert : carrelage blanc, panneau, rails, tunnel noir."""
+    c = Canvas((70, 70, 84), (30, 30, 40))
+    d = c.d
+    for i in range(30):
+        d.line([c.P(0, i * 0.02), c.P(1, i * 0.02)], fill=(56, 56, 70), width=4)
+    d.rectangle(c.box(0.25, 0.08, 0.75, 0.15), fill=(30, 60, 140))
+    d.text(c.P(0.30, 0.085), str(p.get("text", "STATION FANTÔME")), fill=(255, 255, 255), font=font(int(c.w * 0.05)))
+    d.ellipse(c.box(0.30, 0.22, 0.70, 0.22 + 0.40 * CW / CH), fill=(8, 8, 12))
+    d.rectangle(c.box(0, 0.62, 1, 0.70), fill=(150, 140, 120))
+    d.rectangle(c.box(0, 0.70, 1, 0.71), fill=(230, 200, 60))
+    d.rectangle(c.box(0, 0.71, 1, 1), fill=(20, 18, 24))
+    for v in (0.80, 0.92):
+        d.line([c.P(0, v), c.P(1, v)], fill=(120, 120, 130), width=10)
+    if p.get("headlights"):
+        for u in (0.44, 0.56):
+            c.glow(u, 0.45, 0.15, (255, 250, 220), 0.6)
+    return _end(c, p, 0.5, 0.47)
+
+
+def scene_plage(p):
+    """Plage la nuit (Bretagne) : mer, vagues, rochers, lune sur l'eau."""
+    c = Canvas((14, 16, 40), (60, 50, 96))
+    _stars(c, p.get("seed", 1), 0.35)
+    _moon(c, 0.7, 0.2)
+    d = c.d
+    d.rectangle(c.box(0, 0.45, 1, 0.70), fill=(20, 28, 60))
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(0.66, 0.46, 0.74, 0.70), fill=(220, 220, 255, 120)), 0.01)
+    d = c.d
+    for k in range(6):
+        v = 0.50 + k * 0.035
+        d.line([c.P(0, v), c.P(1, v + 0.005)], fill=(60, 70, 120), width=4)
+    d.polygon([c.P(0, 0.70), c.P(1, 0.66), c.P(1, 1), c.P(0, 1)], fill=(70, 60, 74))
+    d.polygon([c.P(0, 0.70), c.P(1, 0.66), c.P(1, 0.68), c.P(0, 0.73)], fill=(150, 156, 190))
+    for u, w, h in ((0.05, 0.18, 0.12), (0.80, 0.22, 0.16)):
+        d.polygon([c.P(u, 0.72), c.P(u + w * 0.3, 0.72 - h), c.P(u + w * 0.7, 0.72 - h * 0.8), c.P(u + w, 0.72)], fill=(30, 26, 40))
+    return _end(c, p, 0.45, 0.66)
+
+
+def scene_phare(p):
+    """Phare sur une falaise, faisceau dans la nuit, mer agitée."""
+    c = Canvas((16, 18, 44), (50, 44, 84))
+    _stars(c, p.get("seed", 2), 0.4)
+    d = c.d
+    c.soft(lambda dd, cc: dd.polygon([cc.P(0.62, 0.20), cc.P(-0.2, 0.05), cc.P(-0.2, 0.30)], fill=(255, 245, 200, 90)), 0.02)
+    d = c.d
+    d.polygon([c.P(0.40, 1), c.P(0.45, 0.62), c.P(0.80, 0.58), c.P(1, 0.66), c.P(1, 1)], fill=(24, 22, 34))
+    d.polygon([c.P(0.57, 0.62), c.P(0.59, 0.24), c.P(0.65, 0.24), c.P(0.67, 0.62)], fill=(220, 220, 230))
+    for v in (0.32, 0.42, 0.52):
+        d.rectangle(c.box(0.58, v, 0.66, v + 0.04), fill=(200, 50, 60))
+    d.rectangle(c.box(0.585, 0.18, 0.655, 0.24), fill=(255, 240, 180))
+    d.polygon([c.P(0.575, 0.18), c.P(0.62, 0.13), c.P(0.665, 0.18)], fill=(30, 26, 40))
+    c.glow(0.62, 0.21, 0.25, (255, 240, 180), 0.6)
+    d = c.d
+    d.polygon([c.P(0, 0.80), c.P(0.45, 0.78), c.P(0.40, 1), c.P(0, 1)], fill=(18, 26, 56))
+    for k in range(5):
+        v = 0.82 + k * 0.035
+        d.line([c.P(0, v), c.P(0.42, v - 0.01)], fill=(80, 90, 150), width=5)
+    return _end(c, p, 0.75, 0.45)
+
+
+def scene_grange(p):
+    """Grange : poutres, foin, lanterne, porte entrouverte sur la nuit."""
+    c = Canvas((44, 28, 24), (28, 18, 16))
+    d = c.d
+    for i in range(14):
+        u = i * 0.075
+        d.rectangle(c.box(u, 0, u + 0.07, 1), fill=(64 + (i % 3) * 6, 40, 30))
+    d.polygon([c.P(0.30, 0.95), c.P(0.30, 0.35), c.P(0.70, 0.35), c.P(0.70, 0.95)], fill=(18, 16, 34))
+    _moon(c, 0.58, 0.45, 0.03)
+    d = c.d
+    d.polygon([c.P(0.50, 0.95), c.P(0.50, 0.35), c.P(0.70, 0.35), c.P(0.70, 0.95)], fill=(90, 56, 40))
+    d.line([c.P(0.50, 0.35), c.P(0.70, 0.95)], fill=(60, 36, 26), width=14)
+    d.line([c.P(0, 0.18), c.P(1, 0.18)], fill=(40, 24, 18), width=40)
+    for u, w in ((0.0, 0.26), (0.74, 0.26)):
+        d.rounded_rectangle(c.box(u, 0.70, u + w, 0.95), radius=20, fill=(140, 108, 50))
+        d.rounded_rectangle(c.box(u + 0.03, 0.55, u + w - 0.03, 0.72), radius=20, fill=(150, 118, 56))
+    d.line([c.P(0.85, 0.18), c.P(0.85, 0.40)], fill=(20, 16, 14), width=4)
+    d.rectangle(c.box(0.83, 0.40, 0.87, 0.46), fill=(255, 200, 100))
+    if not p.get("dark"):
+        c.glow(0.85, 0.43, 0.4, (255, 180, 90), 0.4)
+    d = c.d
+    d.rectangle(c.box(0, 0.95, 1, 1), fill=(30, 22, 16))
+    return _end(c, p, 0.6, 0.80)
+
+
+def scene_tente(p):
+    """Camping : intérieur de tente éclairé par une lampe, ombre sur la toile."""
+    c = Canvas((120, 70, 40), (60, 34, 24))
+    d = c.d
+    d.polygon([c.P(0.5, 0.02), c.P(-0.1, 1), c.P(1.1, 1)], fill=(170, 100, 50))
+    d.polygon([c.P(0.5, 0.02), c.P(0.35, 1), c.P(0.65, 1)], fill=(150, 86, 44))
+    d.line([c.P(0.5, 0.02), c.P(0.5, 1)], fill=(110, 60, 30), width=10)
+    if p.get("shadow", True):
+        c.soft(lambda dd, cc: (dd.ellipse(cc.box(0.66, 0.30, 0.78, 0.30 + 0.12 * CW / CH), fill=(30, 14, 10, 200)),
+                               dd.polygon([cc.P(0.62, 0.75), cc.P(0.65, 0.42), cc.P(0.79, 0.42), cc.P(0.84, 0.75)], fill=(30, 14, 10, 200)),
+                               dd.line([cc.P(0.79, 0.45), cc.P(0.95, 0.30)], fill=(30, 14, 10, 200), width=30)), 0.01)
+    d = c.d
+    d.rectangle(c.box(0, 0.86, 1, 1), fill=(50, 40, 60))
+    d.rounded_rectangle(c.box(0.05, 0.84, 0.55, 0.96), radius=30, fill=(40, 70, 120))
+    d.rectangle(c.box(0.44, 0.78, 0.50, 0.86), fill=(240, 230, 200))
+    c.glow(0.47, 0.80, 0.5, (255, 220, 160), 0.45)
+    return c.done() if not (p.get("red") or p.get("green")) else _end(c, p)
+
+
+def scene_bureau(p):
+    """Open space la nuit : écrans allumés, chaises vides, baie vitrée sur la ville."""
+    c = Canvas((24, 22, 44), (14, 12, 24))
+    night_sky(c, 0.0, 0.08, 1.0, 0.45, moon=(0.8, 0.3), seed=p.get("seed", 12))
+    d = c.d
+    for u in (0.0, 0.25, 0.5, 0.75, 1.0):
+        d.line([c.P(u, 0.08), c.P(u, 0.45)], fill=(30, 30, 44), width=14)
+    d.rectangle(c.box(0, 0, 1, 0.08), fill=(34, 32, 46))
+    d.rectangle(c.box(0, 0.45, 1, 1), fill=(26, 24, 36))
+    for v, s in ((0.62, 0.7), (0.80, 1.0)):
+        d.rectangle(c.box(0.0, v, 1.0, v + 0.025 * s), fill=(90, 86, 100))
+        for u in (0.15, 0.5, 0.85):
+            d.rectangle(c.box(u - 0.07 * s, v - 0.10 * s, u + 0.07 * s, v - 0.01), fill=(10, 10, 16))
+            d.rectangle(c.box(u - 0.06 * s, v - 0.09 * s, u + 0.06 * s, v - 0.02 * s), fill=(80, 140, 255))
+            c.glow(u, v - 0.05 * s, 0.15 * s, (80, 140, 255), 0.3)
+            d = c.d
+    return _end(c, p, 0.5, 0.55)
+
+
+def scene_piscine(p):
+    """Piscine couverte la nuit : eau turquoise, carrelage, plongeoir, reflets."""
+    c = Canvas((30, 40, 60), (14, 20, 30))
+    d = c.d
+    for i in range(10):
+        d.rectangle(c.box(0.02 + i * 0.1, 0.06, 0.09 + i * 0.1, 0.30), fill=(40, 50, 90))
+    d.rectangle(c.box(0, 0.40, 1, 0.48), fill=(170, 180, 190))
+    d.polygon([c.P(0, 0.48), c.P(1, 0.48), c.P(1, 0.95), c.P(0, 0.95)], fill=(20, 150, 170))
+    rnd = random.Random(p.get("seed", 7))
+    for _ in range(40):
+        u, v = rnd.uniform(0, 1), rnd.uniform(0.5, 0.93)
+        d.line([c.P(u, v), c.P(u + rnd.uniform(0.03, 0.08), v)], fill=(120, 230, 240), width=5)
+    for k in range(1, 6):
+        d.line([c.P(k / 6, 0.48), c.P(k / 6, 0.95)], fill=(10, 100, 130), width=6)
+    c.glow(0.5, 0.75, 0.7, (40, 220, 230), 0.3)
+    d = c.d
+    d.rectangle(c.box(0.70, 0.36, 0.95, 0.39), fill=(230, 230, 240))
+    d.line([c.P(0.92, 0.39), c.P(0.92, 0.48)], fill=(180, 180, 190), width=10)
+    if p.get("floating"):
+        c.soft(lambda dd, cc: dd.ellipse(cc.box(0.38, 0.62, 0.56, 0.70), fill=(10, 30, 40, 220)), 0.008)
+        d = c.d
+    d.rectangle(c.box(0, 0.95, 1, 1), fill=(150, 160, 170))
+    return _end(c, p, 0.3, 0.30)
+
+
+def scene_supermarche(p):
+    """Rayon de supermarché la nuit : étagères, néons qui clignotent, caddie seul."""
+    c = Canvas((60, 60, 70), (30, 30, 36))
+    d = c.d
+    d.polygon([c.P(0.42, 0.40), c.P(0.58, 0.40), c.P(1, 1), c.P(0, 1)], fill=(150, 150, 150))
+    for side in (0, 1):
+        for k in range(5):
+            v = 0.15 + k * 0.12
+            if side == 0:
+                d.polygon([c.P(0, v - 0.05), c.P(0.42, 0.33 + k * 0.025), c.P(0.42, 0.355 + k * 0.025), c.P(0, v + 0.02)], fill=(110, 110, 120))
+            else:
+                d.polygon([c.P(1, v - 0.05), c.P(0.58, 0.33 + k * 0.025), c.P(0.58, 0.355 + k * 0.025), c.P(1, v + 0.02)], fill=(110, 110, 120))
+    rnd = random.Random(p.get("seed", 4))
+    cols = [(220, 60, 60), (60, 160, 220), (240, 200, 60), (80, 200, 100), (240, 240, 240)]
+    for _ in range(140):
+        side = rnd.random() < 0.5
+        k = rnd.randint(0, 4)
+        t = rnd.uniform(0.0, 0.85)
+        u = t * 0.42 if side else 1 - t * 0.42
+        v0 = 0.15 + k * 0.12 - 0.05
+        v = v0 + (0.33 + k * 0.025 - v0) * t - 0.03 * (1 - t)
+        s = 0.03 * (1 - t) + 0.006
+        d.rectangle(c.box(u - s / 2, v - s * 1.4, u + s / 2, v), fill=rnd.choice(cols))
+    d.rectangle(c.box(0.42, 0.0, 0.58, 0.40), fill=(20, 20, 26))
+    d.line([c.P(0.45, 0.04), c.P(0.55, 0.04)], fill=(240, 255, 255), width=10)
+    if not p.get("dark"):
+        c.glow(0.5, 0.04, 0.5, (220, 240, 255), 0.25)
+    d = c.d
+    d.rectangle(c.box(0.40, 0.70, 0.62, 0.82), outline=(200, 200, 210), width=8)
+    for u in (0.42, 0.60):
+        d.ellipse(c.box(u - 0.012, 0.85, u + 0.012, 0.85 + 0.024 * CW / CH), fill=(30, 30, 30))
+    return _end(c, p, 0.5, 0.42)
+
+
+def scene_laverie(p):
+    """Laverie automatique la nuit : machines à hublot, une seule tourne."""
+    c = Canvas((50, 46, 70), (24, 22, 34))
+    d = c.d
+    d.rectangle(c.box(0, 0.05, 1, 0.30), fill=(16, 16, 30))
+    d.text(c.P(0.10, 0.10), "LAVERIE 24/24", fill=(255, 90, 160), font=font(int(c.w * 0.09)))
+    c.glow(0.2, 0.13, 0.3, (255, 90, 160), 0.3)
+    d = c.d
+    for k in range(4):
+        u = 0.02 + k * 0.245
+        d.rectangle(c.box(u, 0.42, u + 0.23, 0.88), fill=(120, 118, 134), outline=(80, 78, 92), width=8)
+        d.ellipse(c.box(u + 0.03, 0.55, u + 0.20, 0.55 + 0.17 * CW / CH), fill=(40, 40, 60), outline=(150, 150, 160), width=12)
+        if k == p.get("spin", 2):
+            d.ellipse(c.box(u + 0.05, 0.57, u + 0.18, 0.57 + 0.13 * CW / CH), fill=(60, 120, 200))
+            c.glow(u + 0.115, 0.63, 0.15, (120, 180, 255), 0.35)
+            d = c.d
+        d.rectangle(c.box(u + 0.02, 0.45, u + 0.10, 0.48), fill=(30, 30, 40))
+    d.rectangle(c.box(0, 0.88, 1, 1), fill=(60, 56, 70))
+    for i in range(10):
+        d.line([c.P(i * 0.1, 0.88), c.P(i * 0.1 - 0.05, 1)], fill=(40, 36, 50), width=4)
+    return _end(c, p, 0.5, 0.40)
+
+
+def scene_bibliotheque(p):
+    """Bibliothèque ancienne : rayonnages de livres, lampe verte, échelle."""
+    c = Canvas((36, 26, 30), (20, 14, 18))
+    d = c.d
+    rnd = random.Random(p.get("seed", 3))
+    cols = [(120, 40, 40), (40, 70, 110), (60, 90, 50), (140, 110, 60), (80, 50, 90)]
+    for k in range(7):
+        v = 0.04 + k * 0.11
+        d.rectangle(c.box(0, v + 0.09, 1, v + 0.105), fill=(80, 52, 36))
+        u = 0.0
+        while u < 1:
+            w = rnd.uniform(0.015, 0.03)
+            h = rnd.uniform(0.06, 0.088)
+            if rnd.random() < 0.06:
+                u += w
+                continue
+            d.rectangle(c.box(u, v + 0.09 - h, u + w, v + 0.09), fill=rnd.choice(cols))
+            u += w + 0.002
+    d.line([c.P(0.70, 0.0), c.P(0.80, 0.92)], fill=(110, 76, 50), width=14)
+    d.line([c.P(0.80, 0.0), c.P(0.90, 0.92)], fill=(110, 76, 50), width=14)
+    for k in range(10):
+        t = k / 10
+        d.line([c.P(0.70 + 0.1 * t, 0.92 * t), c.P(0.80 + 0.1 * t, 0.92 * t)], fill=(110, 76, 50), width=10)
+    d.rectangle(c.box(0, 0.80, 0.6, 0.84), fill=(90, 60, 40))
+    d.polygon([c.P(0.22, 0.76), c.P(0.34, 0.76), c.P(0.31, 0.72), c.P(0.25, 0.72)], fill=(40, 140, 80))
+    c.glow(0.28, 0.77, 0.3, (255, 230, 150), 0.45)
+    d = c.d
+    d.rectangle(c.box(0, 0.92, 1, 1), fill=(26, 18, 20))
+    return _end(c, p, 0.5, 0.60)
+
+
+def scene_usine(p):
+    """Usine désaffectée : grandes vitres cassées, poutrelles, chaînes, flaques."""
+    c = Canvas((40, 40, 50), (22, 22, 28))
+    d = c.d
+    for k in range(4):
+        u = 0.05 + k * 0.24
+        d.rectangle(c.box(u, 0.08, u + 0.18, 0.45), fill=(60, 70, 110))
+        for i in range(1, 4):
+            d.line([c.P(u, 0.08 + i * 0.09), c.P(u + 0.18, 0.08 + i * 0.09)], fill=(20, 20, 26), width=8)
+        d.line([c.P(u + 0.09, 0.08), c.P(u + 0.09, 0.45)], fill=(20, 20, 26), width=8)
+        if k % 2:
+            d.polygon([c.P(u + 0.02, 0.10), c.P(u + 0.08, 0.14), c.P(u + 0.03, 0.20)], fill=(16, 16, 22))
+    c.glow(0.5, 0.25, 0.6, (160, 170, 255), 0.25)
+    d = c.d
+    d.line([c.P(0, 0.05), c.P(1, 0.05)], fill=(70, 50, 40), width=40)
+    for u in (0.25, 0.65):
+        d.line([c.P(u, 0.05), c.P(u, 0.55)], fill=(90, 90, 100), width=6)
+        d.rectangle(c.box(u - 0.015, 0.55, u + 0.015, 0.58), fill=(90, 90, 100))
+    d.rectangle(c.box(0, 0.62, 1, 1), fill=(36, 36, 40))
+    for u, w in ((0.1, 0.25), (0.55, 0.3)):
+        d.ellipse(c.box(u, 0.80, u + w, 0.86), fill=(70, 80, 120))
+    return _end(c, p, 0.45, 0.62)
+
+
+def scene_pont(p):
+    """Pont de pierre la nuit au-dessus d'une rivière, lampadaires, brouillard."""
+    c = Canvas((18, 20, 44), (60, 50, 90))
+    _moon(c, 0.25, 0.15, 0.05)
+    d = c.d
+    d.rectangle(c.box(0, 0.55, 1, 1), fill=(18, 22, 46))
+    d.rectangle(c.box(0, 0.40, 1, 0.47), fill=(70, 64, 80))
+    for k in range(3):
+        u = 0.0 + k * 0.36
+        d.ellipse(c.box(u + 0.04, 0.47, u + 0.32, 0.75), fill=(18, 22, 46))
+        d.rectangle(c.box(u + 0.32, 0.47, u + 0.40, 0.72), fill=(70, 64, 80))
+    for u in (0.15, 0.5, 0.85):
+        d.line([c.P(u, 0.40), c.P(u, 0.22)], fill=(20, 18, 30), width=10)
+        d.ellipse(c.box(u - 0.015, 0.20, u + 0.015, 0.23), fill=(255, 210, 130))
+        c.glow(u, 0.22, 0.15, (255, 200, 120), 0.45)
+        d = c.d
+    for k in range(6):
+        d.line([c.P(0, 0.80 + k * 0.03), c.P(1, 0.80 + k * 0.03)], fill=(50, 60, 110), width=4)
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.62, 1.1, 0.80), fill=(170, 160, 220, 110)), 0.05)
+    return _end(c, p, 0.5, 0.25)
+
+
+def scene_champ(p):
+    """Champ de maïs la nuit : tiges hautes, épouvantail, ciel orageux."""
+    c = Canvas((22, 20, 40), (70, 56, 80))
+    _moon(c, 0.8, 0.15, 0.05)
+    d = c.d
+    if p.get("scarecrow", True):
+        d.line([c.P(0.5, 0.25), c.P(0.5, 0.70)], fill=(60, 40, 30), width=14)
+        d.line([c.P(0.38, 0.33), c.P(0.62, 0.33)], fill=(60, 40, 30), width=14)
+        d.polygon([c.P(0.42, 0.33), c.P(0.58, 0.33), c.P(0.56, 0.52), c.P(0.44, 0.52)], fill=(90, 60, 50))
+        d.ellipse(c.box(0.46, 0.20, 0.54, 0.20 + 0.08 * CW / CH), fill=(200, 170, 110))
+        d.polygon([c.P(0.43, 0.22), c.P(0.57, 0.22), c.P(0.5, 0.15)], fill=(40, 30, 30))
+    rnd = random.Random(p.get("seed", 8))
+    for layer, (v0, col, n, h) in enumerate(((0.55, (60, 70, 40), 60, 0.15), (0.70, (44, 52, 30), 40, 0.25), (0.88, (26, 30, 20), 22, 0.4))):
+        for _ in range(n):
+            u = rnd.uniform(-0.05, 1.05)
+            top = v0 - h * rnd.uniform(0.7, 1.0)
+            d.line([c.P(u, 1.02), c.P(u + rnd.uniform(-0.02, 0.02), top)], fill=col, width=6 + 6 * layer)
+            for _ in range(2):
+                vv = rnd.uniform(top, v0)
+                sd = rnd.choice((-1, 1))
+                d.polygon([c.P(u, vv), c.P(u + sd * 0.06 * (1 + layer), vv + 0.04), c.P(u, vv + 0.01)], fill=col)
+    return _end(c, p, 0.3, 0.55)
+
+
+def scene_tunnel(p):
+    """Tunnel routier : lampes orange en enfilade, voie qui s'enfonce."""
+    c = Canvas((30, 24, 20), (16, 12, 10))
+    d = c.d
+    d.ellipse(c.box(-0.2, -0.05, 1.2, 0.95), fill=(50, 40, 30))
+    for k in range(7):
+        t = 1 - k / 7
+        w = 0.7 * t + 0.05
+        cy = 0.48
+        for sd in (-1, 1):
+            u = 0.5 + sd * w * 0.75
+            vv = cy - w * 0.45
+            d.rectangle(c.box(u - 0.01 * t, vv, u + 0.01 * t, vv + 0.006 * t + 0.003), fill=(255, 170, 70))
+            c.glow(u, vv, 0.06 * t + 0.01, (255, 160, 60), 0.4)
+            d = c.d
+    d.ellipse(c.box(0.47, 0.45, 0.53, 0.51), fill=(4, 4, 6))
+    d.polygon([c.P(0.48, 0.50), c.P(0.52, 0.50), c.P(0.95, 1), c.P(0.05, 1)], fill=(40, 38, 40))
+    for k in range(5):
+        v = 0.55 + k * 0.09
+        d.rectangle(c.box(0.497 - k * 0.003, v, 0.503 + k * 0.003, v + 0.02 + k * 0.01), fill=(230, 220, 180))
+    return _end(c, p, 0.5, 0.40)
+
+
+def scene_cabane(p):
+    """Cabane dans les bois : intérieur en rondins, poêle rougeoyant, fenêtre noire."""
+    c = Canvas((60, 38, 28), (32, 20, 16))
+    d = c.d
+    for k in range(18):
+        v = k * 0.055
+        d.rounded_rectangle(c.box(-0.02, v, 1.02, v + 0.05), radius=20, fill=(90 + (k % 2) * 10, 58, 38))
+    d.rectangle(c.box(0.10, 0.20, 0.40, 0.45), fill=(10, 12, 26), outline=(50, 30, 20), width=20)
+    d.line([c.P(0.25, 0.20), c.P(0.25, 0.45)], fill=(50, 30, 20), width=12)
+    d.line([c.P(0.10, 0.325), c.P(0.40, 0.325)], fill=(50, 30, 20), width=12)
+    if p.get("face"):
+        d.ellipse(c.box(0.29, 0.25, 0.37, 0.25 + 0.08 * CW / CH), fill=(200, 200, 210))
+        for u in (0.315, 0.345):
+            d.ellipse(c.box(u - 0.006, 0.28, u + 0.006, 0.29), fill=(10, 10, 10))
+    d.rectangle(c.box(0.62, 0.55, 0.86, 0.88), fill=(30, 26, 26))
+    d.rectangle(c.box(0.66, 0.65, 0.82, 0.80), fill=(255, 120, 40))
+    d.rectangle(c.box(0.72, 0.0, 0.76, 0.55), fill=(30, 26, 26))
+    c.glow(0.74, 0.72, 0.5, (255, 120, 40), 0.45)
+    d = c.d
+    d.rectangle(c.box(0, 0.88, 1, 1), fill=(50, 32, 22))
+    return _end(c, p, 0.45, 0.70)
+
+
+def scene_foraine(p):
+    """Fête foraine abandonnée : grande roue, ampoules, chapiteau rayé."""
+    c = Canvas((16, 14, 40), (70, 40, 90))
+    _stars(c, p.get("seed", 5), 0.3)
+    d = c.d
+    cx, cy, r = 0.30, 0.35, 0.25
+    for k in range(12):
+        a = k * math.pi / 6
+        d.line([c.P(cx, cy), c.P(cx + r * math.cos(a), cy + r * math.sin(a) * CW / CH)], fill=(150, 140, 170), width=6)
+        bu, bv = cx + r * math.cos(a), cy + r * math.sin(a) * CW / CH
+        d.rectangle(c.box(bu - 0.02, bv, bu + 0.02, bv + 0.03), fill=(200, 60, 70))
+    d.ellipse(c.box(cx - r, cy - r * CW / CH, cx + r, cy + r * CW / CH), outline=(180, 170, 200), width=10)
+    d.line([c.P(cx, cy), c.P(cx - 0.12, 0.85)], fill=(120, 110, 140), width=12)
+    d.line([c.P(cx, cy), c.P(cx + 0.12, 0.85)], fill=(120, 110, 140), width=12)
+    for i in range(8):
+        u0 = 0.55 + i * 0.05
+        col = (200, 40, 50) if i % 2 else (240, 230, 220)
+        d.polygon([c.P(0.75, 0.45), c.P(u0, 0.70), c.P(u0 + 0.05, 0.70)], fill=col)
+        d.rectangle(c.box(u0, 0.70, u0 + 0.05, 0.88), fill=col)
+    rnd = random.Random(3)
+    for k in range(14):
+        u = 0.02 + k * 0.07
+        on = rnd.random() < 0.6 and not p.get("dark")
+        d.ellipse(c.box(u - 0.008, 0.90, u + 0.008, 0.91), fill=(255, 220, 120) if on else (60, 50, 40))
+        if on:
+            c.glow(u, 0.905, 0.04, (255, 210, 110), 0.4)
+            d = c.d
+    d.rectangle(c.box(0, 0.92, 1, 1), fill=(20, 16, 24))
+    return _end(c, p, 0.5, 0.72)
+
+
+def scene_toit(p):
+    """Toit d'immeuble la nuit : antennes, cheminées, ville en contrebas."""
+    c = Canvas((14, 14, 38), (70, 50, 100))
+    _stars(c, p.get("seed", 6), 0.3)
+    _moon(c, 0.2, 0.18, 0.05)
+    ruined_skyline(c, 0.60, (40, 30, 66), 4, 1.3, 0.25, fire=False)
+    d = c.d
+    d.rectangle(c.box(0, 0.62, 1, 1), fill=(46, 42, 54))
+    d.rectangle(c.box(0, 0.60, 1, 0.63), fill=(80, 76, 90))
+    for u in (0.12, 0.70):
+        d.rectangle(c.box(u, 0.48, u + 0.08, 0.66), fill=(70, 50, 50))
+    d.line([c.P(0.85, 0.66), c.P(0.85, 0.30)], fill=(30, 28, 40), width=10)
+    for v in (0.34, 0.40, 0.46):
+        d.line([c.P(0.80, v), c.P(0.90, v)], fill=(30, 28, 40), width=6)
+    d.ellipse(c.box(0.845, 0.29, 0.855, 0.30), fill=(255, 60, 50))
+    c.glow(0.85, 0.295, 0.04, (255, 60, 50), 0.5)
+    d = c.d
+    d.rectangle(c.box(0.30, 0.55, 0.50, 0.66), fill=(36, 32, 44))
+    d.rectangle(c.box(0.36, 0.58, 0.44, 0.66), fill=(255, 200, 120))
+    return _end(c, p, 0.6, 0.55)
+
+
+def scene_aire(p):
+    """Aire de jeux la nuit : balançoire, toboggan, lampadaire, brouillard."""
+    c = Canvas((18, 18, 42), (60, 50, 86))
+    _moon(c, 0.75, 0.15, 0.05)
+    d = c.d
+    d.rectangle(c.box(0, 0.70, 1, 1), fill=(30, 36, 34))
+    d.line([c.P(0.10, 0.72), c.P(0.20, 0.35)], fill=(180, 60, 60), width=12)
+    d.line([c.P(0.50, 0.72), c.P(0.40, 0.35)], fill=(180, 60, 60), width=12)
+    d.line([c.P(0.18, 0.35), c.P(0.42, 0.35)], fill=(180, 60, 60), width=12)
+    for u, sway in ((0.24, 0.0), (0.36, 0.04)):
+        d.line([c.P(u, 0.35), c.P(u + sway, 0.60)], fill=(150, 150, 160), width=4)
+        d.line([c.P(u + 0.04, 0.35), c.P(u + 0.04 + sway, 0.60)], fill=(150, 150, 160), width=4)
+        d.rectangle(c.box(u - 0.005 + sway, 0.60, u + 0.045 + sway, 0.615), fill=(60, 50, 40))
+    d.polygon([c.P(0.62, 0.72), c.P(0.68, 0.45), c.P(0.72, 0.45), c.P(0.72, 0.72)], fill=(60, 110, 180))
+    d.polygon([c.P(0.72, 0.45), c.P(0.76, 0.45), c.P(0.95, 0.72), c.P(0.88, 0.72)], fill=(240, 200, 60))
+    d.line([c.P(0.06, 0.72), c.P(0.06, 0.25)], fill=(30, 30, 40), width=10)
+    d.ellipse(c.box(0.045, 0.23, 0.075, 0.26), fill=(255, 210, 130))
+    if not p.get("dark"):
+        c.glow(0.06, 0.25, 0.4, (255, 200, 120), 0.35)
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.68, 1.1, 0.85), fill=(170, 160, 220, 100)), 0.05)
+    return _end(c, p, 0.55, 0.65)
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -953,7 +1458,27 @@ SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, 
           "station": scene_station, "ascenseur": scene_ascenseur, "cuisine": scene_cuisine,
           "salledebain": scene_salledebain, "grenier": scene_grenier, "cave": scene_cave,
           "cimetiere": scene_cimetiere, "eglise": scene_eglise, "voiture": scene_voiture, "salon": scene_salon,
-          "ia": scene_ia}
+          "ia": scene_ia,
+          "hopital": scene_hopital,
+          "classe": scene_classe,
+          "metro": scene_metro,
+          "plage": scene_plage,
+          "phare": scene_phare,
+          "grange": scene_grange,
+          "tente": scene_tente,
+          "bureau": scene_bureau,
+          "piscine": scene_piscine,
+          "supermarche": scene_supermarche,
+          "laverie": scene_laverie,
+          "bibliotheque": scene_bibliotheque,
+          "usine": scene_usine,
+          "pont": scene_pont,
+          "champ": scene_champ,
+          "tunnel": scene_tunnel,
+          "cabane": scene_cabane,
+          "foraine": scene_foraine,
+          "toit": scene_toit,
+          "aire": scene_aire}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
@@ -1395,6 +1920,57 @@ def light_char(hc, color, side=-1):
     return Image.fromarray(out, "RGBA")
 
 
+def _noise(h, w, scale, seed):
+    """Bruit doux (valeurs 0..1) : grille aléatoire agrandie."""
+    rnd = np.random.default_rng(seed)
+    small = rnd.random((max(2, h // scale), max(2, w // scale))).astype(np.float32)
+    im = Image.fromarray((small * 255).astype(np.uint8)).resize((w, h), Image.BICUBIC)
+    return np.asarray(im).astype(np.float32) / 255
+
+
+def polish(img, seed=0):
+    """Embellit un décor dessiné (demande de Fio, 07/11 : « améliorer les décors ») :
+    matière peinte, rayons de lumière, ombres dans les coins, étalonnage ciné, grain."""
+    img = img.convert("RGB")
+    w, h = img.size
+    a = np.asarray(img).astype(np.float32) / 255
+    lum = a.max(axis=2)
+    # 1. matière : variations douces + fines (aspect peint, plus de surfaces plates)
+    tex = 0.75 * _noise(h, w, 160, seed) + 0.25 * _noise(h, w, 40, seed + 1)
+    a = a * (0.94 + 0.12 * tex[..., None])
+    # 2. relief : renforce le contraste local (objets plus détachés)
+    loc = np.asarray(img.filter(ImageFilter.GaussianBlur(w * 0.006))).astype(np.float32) / 255
+    a = np.clip(a + (a - loc) * 0.35, 0, 1)
+    # 3. rayons de lumière depuis les zones claires (lampes, lune, fenêtres)
+    hi = np.clip((lum - 0.72) / 0.28, 0, 1)
+    hi_img = Image.fromarray((hi * 255).astype(np.uint8))
+    rays = np.zeros((h, w), np.float32)
+    if hi.max() > 0:
+        cy, cx = np.unravel_index(np.argmax(np.asarray(hi_img.filter(ImageFilter.GaussianBlur(20)))), (h, w))
+    else:
+        cy, cx = h // 3, w // 2
+    for k, s in enumerate((1.04, 1.09, 1.16, 1.26, 1.4)):
+        z = hi_img.resize((int(w * s), int(h * s)), Image.BILINEAR)
+        x0 = int(cx * s - cx)
+        y0 = int(cy * s - cy)
+        z = z.crop((x0, y0, x0 + w, y0 + h)).filter(ImageFilter.GaussianBlur(w * 0.01 * (k + 1)))
+        rays += np.asarray(z).astype(np.float32) / 255 * (0.5 / (k + 1))
+    glowcol = np.array([1.0, 0.85, 0.7])
+    a = 1 - (1 - a) * (1 - np.clip(rays, 0, 1)[..., None] * 0.6 * glowcol)
+    # 4. étalonnage : ombres bleu-violet, hautes lumières chaudes, contraste
+    l2 = a.mean(axis=2, keepdims=True)
+    a = a + (1 - l2) * np.array([-0.02, -0.01, 0.05]) * 0.8 + l2 * np.array([0.05, 0.02, -0.03])
+    a = np.clip((a - 0.5) * 1.12 + 0.5, 0, 1)
+    # 5. vignette
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    r = np.sqrt(((xx - w / 2) / (w / 2)) ** 2 + ((yy - h / 2) / (h / 2)) ** 2)
+    a = a * (1 - np.clip(r - 0.55, 0, 1) * 0.55)[..., None]
+    # 6. grain fixe
+    g = np.random.default_rng(seed + 7).normal(0, 0.018, (h, w, 1)).astype(np.float32)
+    a = np.clip(a + g, 0, 1)
+    return Image.fromarray((a * 255).astype(np.uint8))
+
+
 def compose(b, cache):
     """Renvoie (décor, [personnages, personnages yeux fermés]) en deux calques pour la profondeur."""
     key = json.dumps([b.get("scene", "flou"), b.get("params", {}), b.get("char"), b.get("char2")], sort_keys=True)
@@ -1402,6 +1978,8 @@ def compose(b, cache):
         return cache[key]
     scene = b.get("scene", "flou")
     bg = bloom(SCENES[scene](b.get("params", {})).convert("RGB"), (0.15 if scene == "ia" else 0.55) if scene in NEW_SCENES else 0.12)
+    if scene != "ia" and not (scene == "flou" and b.get("params", {}).get("of") == "ia") and b.get("polish", True):
+        bg = polish(bg, sum(map(ord, scene)))
     chars = [c for c in (b.get("char"), b.get("char2")) if c]
     # profondeur de champ : le décor est flou derrière un personnage en gros plan
     close = [c for c in chars if c.get("pose") in ("face", "back") or c.get("head", [0, 0, 0])[2] >= 0.2]
