@@ -331,6 +331,16 @@ film ») puis être surpris par la suite.
 >   champ (`scarecrow`), tunnel, cabane (`face` à la fenêtre), foraine, toit,
 >   aire. Presque tous acceptent `figure` (silhouette aux yeux rouges,
 >   `fig_at` [u, v], `fig_size`), `dark`, `red` / `green`.
+> - **CHAQUE SÉRIE A SES PROPRES DÉCORS (Fio, 07/11 : « construire les
+>   décors en fonction de la série »)** : quand une nouvelle série commence,
+>   AVANT d'écrire l'épisode 1, dessiner 5 à 7 décors propres à son univers
+>   (lieux typiques de la ville / région, bâtiment central de l'histoire,
+>   maison du héros, le « méchant » dans son décor), nommés `<sigle>_<lieu>`
+>   (ex. `jad_place` pour « Jacques a dit »), avec une option `aube` ou
+>   équivalent pour le dernier épisode. Les lister dans le fichier de la
+>   série (section Décors) et les utiliser au moins 3 fois par épisode.
+>   Modèle : les décors `jad_*` (helpers `_granite_house`, `_horn`,
+>   `_jacques`).
 > - **CRÉER DES DÉCORS EN FONCTION DU SCRIPT, À CHAQUE VIDÉO** : après avoir
 >   écrit le script, lister les lieux. Pour chaque lieu qui n'existe pas
 >   (ou qui ne colle pas vraiment), DESSINER un nouveau décor : fonction

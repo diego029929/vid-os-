@@ -13,9 +13,19 @@ une silhouette sans visage, costume noir). But : tenir jusqu'à l'aube.
 Genre reconnaissable en 1 seconde (jeu d'enfants qui tourne mal, ordres
 au haut-parleur, village vide la nuit), histoire originale.
 
-Ton : angoissant, phrases très courtes, tutoiement, jamais gore. Décors :
-`rue`, `chambre`, `fenetre`, `porte`, `cuisine`, `escalier`, `station`,
-`foret`, `radio`, `flou`. L'horloge avance de minuit (ép. 1) à l'aube (ép. 6).
+Ton : angoissant, phrases très courtes, tutoiement, jamais gore.
+
+**Décors PROPRES À LA SÉRIE (07/11, demande de Fio) : les utiliser en
+priorité, au moins 3 par épisode** : `jad_place` (place du village, église
+aux haut-parleurs ; `jacques` true pour le montrer, `jacques_at` [u, v],
+`jacques_size`), `jad_clocher` (horloge + pavillons ; `hour` 0-6 pour
+l'heure), `jad_mamie` (salle de la grand-mère, armoire bretonne ; `ring`
+le téléphone sonne, `mamie` silhouette, `eyes`), `jad_ruelle` (ruelle de
+granit, téléphone par terre ; `jacques`), `jad_remparts` (remparts de
+Saint-Malo et la mer ; `jacques`), `jad_jacques` (Jacques sous le
+lampadaire ; `size`). Tous acceptent `aube` (ciel d'aube, épisode 6),
+`dark`, `red`, `figure`. Compléter avec les décors génériques (`chambre`,
+`porte`, `escalier`, `foret`, `station`, `eglise`, `cimetiere`, `plage`…). L'horloge avance de minuit (ép. 1) à l'aube (ép. 6).
 
 | Ép. | Ordre / règle | Situation / choix | Suspense final |
 |---|---|---|---|

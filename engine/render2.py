@@ -1440,6 +1440,241 @@ def scene_aire(p):
     return _end(c, p, 0.55, 0.65)
 
 
+# ---- Décors de la série « Jacques a dit » (village breton près de Saint-Malo) ----
+def _jad_sky(c, p, seed):
+    """Ciel de nuit, ou d'aube si "aube": true (épisode 6)."""
+    if p.get("aube"):
+        c.img = R.gradient(c.w, c.h, (60, 50, 110), (255, 150, 110))
+        c.d = ImageDraw.Draw(c.img)
+        c.glow(0.5, 0.55, 0.8, (255, 180, 120), 0.4)
+    else:
+        _stars(c, seed, 0.35)
+        _moon(c, 0.78, 0.12, 0.045)
+
+
+def _granite_house(c, u0, u1, base, top, seed, lit=0.4):
+    """Maison bretonne : granit gris, toit d'ardoise, volets bleus, cheminée."""
+    d = c.d
+    rnd = random.Random(seed)
+    d.rectangle(c.box(u0, top, u1, base), fill=(78, 76, 92))
+    for _ in range(int((u1 - u0) * 120)):
+        x, y = rnd.uniform(u0, u1), rnd.uniform(top, base)
+        w = rnd.uniform(0.012, 0.03)
+        g = rnd.randint(64, 96)
+        d.rectangle(c.box(x, y, min(u1, x + w), min(base, y + 0.008)), fill=(g, g - 2, g + 12))
+    rh = (u1 - u0) * 0.45
+    d.polygon([c.P(u0 - 0.01, top), c.P(u1 + 0.01, top), c.P(u1 - (u1 - u0) * 0.2, top - rh), c.P(u0 + (u1 - u0) * 0.2, top - rh)], fill=(34, 36, 54))
+    d.rectangle(c.box(u1 - (u1 - u0) * 0.3, top - rh - 0.04, u1 - (u1 - u0) * 0.18, top - rh * 0.5), fill=(70, 66, 80))
+    n = max(1, int((u1 - u0) / 0.12))
+    for i in range(n):
+        wu = u0 + (i + 0.5) * (u1 - u0) / n
+        wv = top + (base - top) * 0.25
+        on = rnd.random() < lit
+        d.rectangle(c.box(wu - 0.025, wv, wu + 0.025, wv + 0.05), fill=(255, 200, 120) if on else (20, 18, 34))
+        d.rectangle(c.box(wu - 0.045, wv, wu - 0.027, wv + 0.05), fill=(50, 80, 150))
+        d.rectangle(c.box(wu + 0.027, wv, wu + 0.045, wv + 0.05), fill=(50, 80, 150))
+        if on:
+            c.glow(wu, wv + 0.025, 0.06, (255, 190, 110), 0.35)
+            d = c.d
+
+
+def _horn(c, u, v, s=1.0, side=1):
+    """Haut-parleur en pavillon (celui qui crie les ordres)."""
+    d = c.d
+    d.polygon([c.P(u, v - 0.012 * s), c.P(u + side * 0.07 * s, v - 0.035 * s), c.P(u + side * 0.07 * s, v + 0.035 * s), c.P(u, v + 0.012 * s)], fill=(150, 150, 160))
+    d.ellipse(c.box(u + side * 0.07 * s - 0.008 * s, v - 0.035 * s, u + side * 0.07 * s + 0.008 * s, v + 0.035 * s), fill=(40, 40, 50))
+
+
+def _jacques(c, u, v, s=1.0):
+    """« Jacques » : silhouette sans visage, costume noir, très grande."""
+    d = c.d
+    r = 0.028 * s
+    d.ellipse(c.box(u - r, v - 0.30 * s, u + r, v - 0.30 * s + 2.4 * r * CW / CH), fill=(220, 215, 225))
+    d.polygon([c.P(u - 0.06 * s, v), c.P(u - 0.055 * s, v - 0.22 * s), c.P(u - 0.035 * s, v - 0.245 * s), c.P(u + 0.035 * s, v - 0.245 * s), c.P(u + 0.055 * s, v - 0.22 * s), c.P(u + 0.06 * s, v)], fill=(6, 6, 10))
+    d.polygon([c.P(u - 0.012 * s, v - 0.245 * s), c.P(u + 0.012 * s, v - 0.245 * s), c.P(u, v - 0.20 * s)], fill=(230, 230, 235))
+    d.line([c.P(u - 0.055 * s, v - 0.21 * s), c.P(u - 0.075 * s, v - 0.06 * s)], fill=(6, 6, 10), width=int(26 * s))
+    d.line([c.P(u + 0.055 * s, v - 0.21 * s), c.P(u + 0.075 * s, v - 0.06 * s)], fill=(6, 6, 10), width=int(26 * s))
+
+
+def scene_jad_place(p):
+    """Place du village la nuit : maisons de granit, église et haut-parleurs, lampadaire, pavés."""
+    c = Canvas((14, 14, 40), (64, 50, 96))
+    _jad_sky(c, p, 21)
+    d = c.d
+    d.rectangle(c.box(0.40, 0.10, 0.60, 0.52), fill=(60, 58, 76))
+    d.polygon([c.P(0.40, 0.10), c.P(0.50, -0.06), c.P(0.60, 0.10)], fill=(30, 32, 50))
+    d.ellipse(c.box(0.46, 0.15, 0.54, 0.15 + 0.08 * CW / CH), fill=(230, 220, 190))
+    d.line([c.P(0.50, 0.19), c.P(0.50, 0.16)], fill=(20, 20, 20), width=6)
+    d.line([c.P(0.50, 0.19), c.P(0.505, 0.162)], fill=(20, 20, 20), width=6)
+    _horn(c, 0.40, 0.30, 1.0, -1)
+    _horn(c, 0.60, 0.30, 1.0, 1)
+    d = c.d
+    d.rectangle(c.box(0.47, 0.40, 0.53, 0.52), fill=(30, 20, 20))
+    _granite_house(c, -0.02, 0.36, 0.62, 0.36, 1)
+    _granite_house(c, 0.64, 1.02, 0.62, 0.34, 2)
+    d = c.d
+    d.rectangle(c.box(0, 0.62, 1, 1), fill=(46, 44, 58))
+    rnd = random.Random(5)
+    for k in range(9):
+        v = 0.64 + k * 0.04
+        for _ in range(14 + k * 2):
+            u = rnd.uniform(0, 1)
+            w = 0.02 + k * 0.005
+            g = rnd.randint(52, 70)
+            d.rounded_rectangle(c.box(u, v, u + w, v + 0.015 + k * 0.003), radius=6, fill=(g, g, g + 12))
+    d.line([c.P(0.80, 0.90), c.P(0.80, 0.50)], fill=(20, 20, 28), width=12)
+    d.polygon([c.P(0.78, 0.50), c.P(0.82, 0.50), c.P(0.83, 0.47), c.P(0.77, 0.47)], fill=(255, 210, 130))
+    if not p.get("dark"):
+        c.glow(0.80, 0.49, 0.45, (255, 200, 120), 0.4)
+    if p.get("jacques"):
+        _jacques(c, *p.get("jacques_at", (0.30, 0.86)), s=p.get("jacques_size", 1.0))
+    return _end(c, p, 0.5, 0.72)
+
+
+def scene_jad_clocher(p):
+    """Gros plan du clocher à minuit : horloge, pavillons des haut-parleurs, fils, lune."""
+    c = Canvas((12, 12, 36), (50, 40, 84))
+    _jad_sky(c, p, 22)
+    d = c.d
+    d.rectangle(c.box(0.22, 0.20, 0.78, 1.02), fill=(64, 62, 80))
+    rnd = random.Random(9)
+    for _ in range(160):
+        x, y = rnd.uniform(0.22, 0.76), rnd.uniform(0.2, 1)
+        g = rnd.randint(54, 84)
+        d.rectangle(c.box(x, y, x + 0.04, y + 0.012), fill=(g, g - 2, g + 12))
+    d.polygon([c.P(0.18, 0.20), c.P(0.50, -0.25), c.P(0.82, 0.20)], fill=(28, 30, 48))
+    cx, cy, r = 0.50, 0.42, 0.17
+    d.ellipse(c.box(cx - r, cy - r * CW / CH, cx + r, cy + r * CW / CH), fill=(230, 222, 196), outline=(40, 34, 30), width=16)
+    for k in range(12):
+        a = k * math.pi / 6
+        d.line([c.P(cx + 0.85 * r * math.cos(a), cy + 0.85 * r * math.sin(a) * CW / CH), c.P(cx + 0.95 * r * math.cos(a), cy + 0.95 * r * math.sin(a) * CW / CH)], fill=(40, 34, 30), width=8)
+    h = p.get("hour", 0)
+    for ang, ln, wd in ((h % 12 * math.pi / 6, 0.55, 14), (0, 0.8, 9)):
+        d.line([c.P(cx, cy), c.P(cx + ln * r * math.sin(ang), cy - ln * r * math.cos(ang) * CW / CH)], fill=(20, 16, 14), width=wd)
+    if not p.get("aube"):
+        c.glow(cx, cy, 0.35, (255, 220, 160), 0.3)
+    for u, v, sd in ((0.22, 0.70, -1), (0.78, 0.70, 1), (0.22, 0.85, -1), (0.78, 0.85, 1)):
+        _horn(c, u, v, 1.8, sd)
+    d = c.d
+    d.line([c.P(0.0, 0.62), c.P(0.22, 0.70)], fill=(10, 10, 16), width=6)
+    d.line([c.P(1.0, 0.60), c.P(0.78, 0.70)], fill=(10, 10, 16), width=6)
+    if p.get("red"):
+        c.glow(0.5, 0.78, 0.5, (255, 60, 50), 0.35)
+    return c.done()
+
+
+def scene_jad_mamie(p):
+    """Salle de la grand-mère : armoire bretonne, assiettes de faïence, horloge comtoise, téléphone à fil."""
+    c = Canvas((56, 40, 44), (30, 22, 26))
+    d = c.d
+    for k in range(10):
+        d.line([c.P(0, 0.08 + k * 0.09), c.P(1, 0.08 + k * 0.09)], fill=(64, 46, 50), width=4)
+    d.rectangle(c.box(0, 0, 1, 0.05), fill=(40, 26, 22))
+    for u in (0.2, 0.5, 0.8):
+        d.rectangle(c.box(u - 0.02, 0, u + 0.02, 0.06), fill=(70, 46, 34))
+    d.rectangle(c.box(0.04, 0.22, 0.42, 0.90), fill=(110, 64, 40), outline=(60, 34, 22), width=12)
+    for u in (0.06, 0.24):
+        d.rectangle(c.box(u, 0.26, u + 0.16, 0.86), outline=(70, 40, 26), width=8)
+        d.ellipse(c.box(u + 0.03, 0.40, u + 0.13, 0.40 + 0.10 * CW / CH), outline=(150, 100, 60), width=6)
+    rnd = random.Random(3)
+    for k in range(5):
+        u = 0.50 + k * 0.09
+        d.ellipse(c.box(u, 0.22, u + 0.07, 0.22 + 0.07 * CW / CH), fill=(235, 232, 220), outline=(60, 90, 170), width=6)
+        d.ellipse(c.box(u + 0.025, 0.235, u + 0.045, 0.235 + 0.025 * CW / CH), fill=rnd.choice([(60, 90, 170), (200, 60, 50), (240, 190, 60)]))
+    d.rectangle(c.box(0.48, 0.30, 0.96, 0.31), fill=(80, 50, 34))
+    d.rectangle(c.box(0.80, 0.40, 0.92, 0.95), fill=(90, 54, 36))
+    d.ellipse(c.box(0.81, 0.43, 0.91, 0.43 + 0.10 * CW / CH), fill=(230, 220, 190))
+    d.ellipse(c.box(0.845, 0.60, 0.875, 0.60 + 0.03 * CW / CH), fill=(200, 160, 60))
+    d.line([c.P(0.86, 0.50), c.P(0.86, 0.60)], fill=(200, 160, 60), width=4)
+    d.rectangle(c.box(0.48, 0.62, 0.76, 0.66), fill=(100, 70, 50))
+    d.rectangle(c.box(0.50, 0.66, 0.52, 0.92), fill=(70, 46, 32))
+    d.rectangle(c.box(0.72, 0.66, 0.74, 0.92), fill=(70, 46, 32))
+    d.rounded_rectangle(c.box(0.56, 0.57, 0.68, 0.62), radius=10, fill=(150, 30, 30))
+    d.ellipse(c.box(0.59, 0.575, 0.65, 0.61), fill=(40, 10, 10))
+    if p.get("ring"):
+        c.glow(0.62, 0.58, 0.15, (255, 80, 60), 0.5)
+        d = c.d
+    d.polygon([c.P(0.56, 0.52), c.P(0.64, 0.52), c.P(0.62, 0.47), c.P(0.58, 0.47)], fill=(240, 210, 150))
+    if not p.get("dark"):
+        c.glow(0.60, 0.52, 0.5, (255, 190, 110), 0.4)
+    d = c.d
+    d.rectangle(c.box(0, 0.92, 1, 1), fill=(44, 30, 26))
+    if p.get("mamie"):
+        _fig(c, 0.30, 0.95, 0.9, col=(20, 14, 20), eyes=p.get("eyes", False))
+    return _end(c, p, 0.3, 0.75)
+
+
+def scene_jad_ruelle(p):
+    """Ruelle étroite en granit : toits d'ardoise, une fenêtre allumée, téléphone qui brille par terre."""
+    c = Canvas((14, 14, 40), (54, 44, 84))
+    _jad_sky(c, p, 23)
+    _granite_house(c, -0.05, 0.38, 1.05, 0.30, 7, 0.3)
+    _granite_house(c, 0.62, 1.05, 1.05, 0.26, 8, 0.3)
+    d = c.d
+    d.polygon([c.P(0.38, 1.0), c.P(0.46, 0.55), c.P(0.54, 0.55), c.P(0.62, 1.0)], fill=(50, 48, 62))
+    rnd = random.Random(4)
+    for k in range(10):
+        v = 0.58 + k * 0.045
+        for _ in range(3 + k):
+            u = rnd.uniform(0.46 - k * 0.008, 0.54 + k * 0.008)
+            d.ellipse(c.box(u, v, u + 0.01 + k * 0.003, v + 0.008 + k * 0.002), fill=(62, 60, 76))
+    d.rectangle(c.box(0.46, 0.40, 0.54, 0.55), fill=(20, 18, 32))
+    if p.get("phone", True):
+        d.rounded_rectangle(c.box(0.52, 0.86, 0.58, 0.89), radius=6, fill=(170, 220, 255))
+        c.glow(0.55, 0.875, 0.12, (150, 210, 255), 0.5)
+    if p.get("jacques"):
+        _jacques(c, 0.50, 0.58, 0.5)
+    return _end(c, p, 0.5, 0.75)
+
+
+def scene_jad_remparts(p):
+    """Remparts de Saint-Malo au-dessus de la plage : murs de granit, mer, fort au loin."""
+    c = Canvas((12, 14, 40), (60, 48, 96))
+    _jad_sky(c, p, 24)
+    d = c.d
+    d.rectangle(c.box(0, 0.42, 1, 0.62), fill=(22, 30, 64) if not p.get("aube") else (120, 100, 140))
+    for k in range(5):
+        d.line([c.P(0, 0.45 + k * 0.035), c.P(1, 0.45 + k * 0.035)], fill=(60, 70, 120), width=4)
+    d.polygon([c.P(0.68, 0.43), c.P(0.70, 0.38), c.P(0.80, 0.37), c.P(0.86, 0.43)], fill=(20, 20, 36))
+    d.rectangle(c.box(0.74, 0.33, 0.77, 0.38), fill=(20, 20, 36))
+    d.polygon([c.P(0, 0.62), c.P(1, 0.62), c.P(1, 0.70), c.P(0, 0.72)], fill=(150, 132, 120))
+    d.polygon([c.P(0, 0.72), c.P(1, 0.70), c.P(1, 1), c.P(0, 1)], fill=(70, 68, 84))
+    rnd = random.Random(11)
+    for row in range(8):
+        v = 0.74 + row * 0.035
+        u = -0.02 + (row % 2) * 0.03
+        while u < 1:
+            g = rnd.randint(60, 90)
+            d.rectangle(c.box(u, v, u + 0.06, v + 0.03), fill=(g, g - 4, g + 10))
+            u += 0.064
+    for k in range(6):
+        u = 0.02 + k * 0.17
+        d.rectangle(c.box(u, 0.68, u + 0.09, 0.74), fill=(84, 82, 98))
+    if p.get("jacques"):
+        _jacques(c, 0.25, 0.70, 0.6)
+    return _end(c, p, 0.5, 0.55)
+
+
+def scene_jad_jacques(p):
+    """« Jacques » sous un lampadaire, dans la brume : la silhouette sans visage."""
+    c = Canvas((10, 10, 26), (40, 34, 64))
+    d = c.d
+    _granite_house(c, -0.05, 0.30, 0.80, 0.30, 12, 0.2)
+    _granite_house(c, 0.70, 1.05, 0.80, 0.32, 13, 0.2)
+    d = c.d
+    d.rectangle(c.box(0, 0.80, 1, 1), fill=(30, 28, 40))
+    d.line([c.P(0.62, 0.92), c.P(0.62, 0.20)], fill=(18, 18, 26), width=14)
+    d.line([c.P(0.62, 0.20), c.P(0.52, 0.20)], fill=(18, 18, 26), width=10)
+    d.polygon([c.P(0.49, 0.20), c.P(0.55, 0.20), c.P(0.56, 0.24), c.P(0.48, 0.24)], fill=(255, 220, 150))
+    c.soft(lambda dd, cc: dd.polygon([cc.P(0.49, 0.24), cc.P(0.55, 0.24), cc.P(0.70, 0.92), cc.P(0.34, 0.92)], fill=(255, 220, 160, 70)), 0.02)
+    c.glow(0.52, 0.23, 0.2, (255, 220, 150), 0.6)
+    _jacques(c, 0.52, 0.90, p.get("size", 1.5))
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.80, 1.1, 0.98), fill=(170, 160, 210, 110)), 0.05)
+    if p.get("red"):
+        c.glow(0.5, 0.5, 0.6, (255, 60, 50), 0.25)
+    return c.done()
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -1478,7 +1713,13 @@ SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, 
           "cabane": scene_cabane,
           "foraine": scene_foraine,
           "toit": scene_toit,
-          "aire": scene_aire}
+          "aire": scene_aire,
+          "jad_place": scene_jad_place,
+          "jad_clocher": scene_jad_clocher,
+          "jad_mamie": scene_jad_mamie,
+          "jad_ruelle": scene_jad_ruelle,
+          "jad_remparts": scene_jad_remparts,
+          "jad_jacques": scene_jad_jacques}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
