@@ -1,5 +1,7 @@
 # Routine quotidienne
 
+> **07/11 : Fio a choisi TIKTOK + INSTAGRAM (via Zernio, Reel + TikTok pour
+> chaque vidéo). Le « TikTok seul » ci-dessous ne vaut plus.**
 > **DEPUIS LE 07/11 (choix de Fio le 06/11) : 2 VIDÉOS PAR JOUR, TIKTOK
 > SEULEMENT : une courte « SURVIS ? » à 12:00 et l'épisode de la série à 18:00 (Europe/Paris).** (Fio a précisé « 2 vidéos » le 06/11.) Le 06/11, Metricool a refusé de
 > publier (« You have reached your Metricool account limit » : limite du
