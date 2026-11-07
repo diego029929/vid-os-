@@ -317,6 +317,21 @@ film ») puis être surpris par la suite.
 
 ## Décors variés (demande de Fio, 04/11 : « c'est toujours les mêmes »)
 
+> **07/11, Fio le redit : « il faut plus de décors ».** Constat : environ 65 %
+> des plans étaient des gros plans `flou` (le même décor flouté) et une vidéo
+> ne montrait que 10 à 15 plans de vrais décors. NOUVELLES RÈGLES :
+> - **7 nouveaux décors** (07/11) : `salledebain` (`figure` : silhouette dans
+>   le miroir, `dark`), `grenier` (`dark`), `cave` (`eyes`, `torch`),
+>   `cimetiere` (`figure`), `eglise` (`figure`, `dark`), `voiture` (intérieur
+>   la nuit, `figure` sur la route, `headlights`), `salon` (télé qui
+>   grésille, `tv`, `text` sur l'écran). Tous acceptent `red` / `green`.
+> - **`flou` = au plus 1 plan sur 3** (avant : 2 sur 3). Les autres plans
+>   montrent un vrai décor, net.
+> - **Épisode : au moins 7 décors différents ; courte : au moins 5.**
+>   Changer de décor au moins tous les 3-4 plans (en comptant les `flou`).
+> - Utiliser au moins 2 des 7 nouveaux décors par vidéo pendant la semaine
+>   du 08/11, pour que ça se voie.
+
 - Décors disponibles dans `engine/render2.py` : chambre, fenetre, rue, porte,
   radio, escalier, wagon, couloir, **foret** (`eyes`: yeux rouges entre les
   arbres), **parking** (`headlights`, `flicker`, `dark`), **station**
