@@ -331,6 +331,25 @@ film ») puis être surpris par la suite.
 >   champ (`scarecrow`), tunnel, cabane (`face` à la fenêtre), foraine, toit,
 >   aire. Presque tous acceptent `figure` (silhouette aux yeux rouges,
 >   `fig_at` [u, v], `fig_size`), `dark`, `red` / `green`.
+> - **CHAQUE PLAN MONTRE CE QUE DIT SA PHRASE (Fio, 07/11, vidéo de
+>   référence : « tu vois les décors suivent le script »)**. Pour chaque
+>   plan, se demander : « qu'est-ce que la phrase montre ? » et mettre CETTE
+>   image. « Un message » → le téléphone avec le message à l'écran ; « la
+>   télé s'allume » → la télé ; « ta grand-mère » → sa maison ; « 3 h » →
+>   l'horloge ou l'écran verrouillé à 3:00 ; « la porte » → la porte. Le
+>   héros vu de dos devant le lieu sert de liaison entre ces plans.
+>   Plans « objet » en gros plan disponibles : `telephone` (`mode` "lock"
+>   avec `time`, `date`, `notif` [titre, texte] ; "chat" avec `contact` et
+>   `messages` [["lui"|"moi", texte], …] ; "call" avec `contact` ; `crack`
+>   écran fêlé ; `sleeve` couleur de la manche) et `tele` (`face` visage
+>   dans la neige, `text` mot rouge à l'écran, `off`). Si la phrase parle
+>   d'un objet qui n'a pas encore de plan (lettre, radio, photo, clé,
+>   miroir, poupée…), DESSINER un plan objet `scene_<objet>` sur le modèle
+>   de `scene_tele` (objet en grand au centre, pièce floue derrière avec
+>   `_room_blur`). Au moins 4 plans « objet » par épisode. On s'inspire de
+>   l'idée, on ne recopie pas le visuel d'un autre créateur.
+> - Ambiance (07/11, idem) : `polish()` rend maintenant tout plus sombre et
+>   plus doux (couleurs moins vives, hautes lumières adoucies).
 > - **CHAQUE SÉRIE A SES PROPRES DÉCORS (Fio, 07/11 : « construire les
 >   décors en fonction de la série »)** : quand une nouvelle série commence,
 >   AVANT d'écrire l'épisode 1, dessiner 5 à 7 décors propres à son univers

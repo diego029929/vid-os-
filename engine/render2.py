@@ -1675,6 +1675,148 @@ def scene_jad_jacques(p):
     return c.done()
 
 
+# ---- Plans « objet » en gros plan (07/11, idée de Fio : téléphone, télé…) ----
+def _room_blur(seed=1, col=((44, 40, 60), (22, 20, 32))):
+    """Pièce sombre très floue derrière un objet en gros plan."""
+    c = Canvas(*col)
+    d = c.d
+    d.rectangle(c.box(0.0, 0.25, 0.25, 0.55), fill=(60, 58, 80))
+    for k in range(8):
+        d.line([c.P(0.0, 0.27 + k * 0.035), c.P(0.25, 0.27 + k * 0.035)], fill=(40, 38, 56), width=8)
+    d.rectangle(c.box(0.55, 0.30, 0.95, 0.52), fill=(14, 14, 22))
+    d.rectangle(c.box(0, 0.70, 1, 1), fill=(26, 24, 36))
+    img = c.done().filter(ImageFilter.GaussianBlur(30))
+    return img
+
+
+def _hand(c, u, v, side=-1, s=1.0, col=(14, 12, 20), line=(200, 200, 215)):
+    """Main stylisée qui tient l'objet : 4 doigts arrondis sur le bord + pouce."""
+    d = c.d
+    for k in range(4):
+        vv = v + k * 0.05 * s
+        d.rounded_rectangle(c.box(u - 0.07 * s if side < 0 else u - 0.01 * s, vv, u + 0.01 * s if side < 0 else u + 0.07 * s, vv + 0.03 * s), radius=int(30 * s), fill=col, outline=line, width=5)
+
+
+def scene_telephone(p):
+    """Téléphone tenu en main, en gros plan.
+    "mode": "lock" (écran verrouillé : "time", "date", "notif" [titre, texte])
+           "chat" ("contact", "messages" : [["moi" | "lui", "texte"], ...])
+           "call" ("contact" : appel entrant).  "crack": écran fêlé."""
+    c = Canvas((0, 0, 0), (0, 0, 0))
+    c.img = _room_blur(p.get("seed", 1)).resize((c.w, c.h), Image.LANCZOS)
+    c.d = ImageDraw.Draw(c.img)
+    d = c.d
+    x0, y0, x1, y1 = 0.17, 0.14, 0.83, 0.86
+    c.glow(0.5, 0.45, 0.7, (120, 100, 220), 0.35)
+    d = c.d
+    d.rounded_rectangle(c.box(x0, y0, x1, y1), radius=int(c.w * 0.07), fill=(30, 30, 40), outline=(150, 150, 170), width=10)
+    sx0, sy0, sx1, sy1 = x0 + 0.02, y0 + 0.012, x1 - 0.02, y1 - 0.012
+    mode = p.get("mode", "lock")
+    scr = R.gradient(int((sx1 - sx0) * c.w), int((sy1 - sy0) * c.h), (70, 56, 150) if mode != "chat" else (24, 24, 32), (26, 20, 60) if mode != "chat" else (18, 18, 24))
+    mask = Image.new("L", scr.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, scr.size[0], scr.size[1]], radius=int(c.w * 0.055), fill=255)
+    c.img.paste(scr, (int(sx0 * c.w), int(sy0 * c.h)), mask)
+    d = c.d = ImageDraw.Draw(c.img)
+    d.rounded_rectangle(c.box(0.42, sy0 + 0.012, 0.58, sy0 + 0.032), radius=40, fill=(6, 6, 10))
+    W_ = c.w
+
+    def ctext(txt, v, size, col=(255, 255, 255)):
+        f = font(int(W_ * size))
+        tw = d.textlength(txt, font=f)
+        d.text(((0.5 * W_) - tw / 2, v * c.h), txt, fill=col, font=f)
+
+    if mode == "lock":
+        ctext(p.get("date", "samedi 7 novembre"), 0.20, 0.035, (230, 230, 245))
+        ctext(p.get("time", "0:00"), 0.225, 0.16)
+        if p.get("notif"):
+            t, body = p["notif"]
+            d.rounded_rectangle(c.box(0.22, 0.42, 0.78, 0.50), radius=40, fill=(120, 110, 160))
+            d.ellipse(c.box(0.24, 0.435, 0.29, 0.435 + 0.05 * CW / CH), fill=(200, 200, 215))
+            d.text(c.P(0.31, 0.432), str(t), fill=(235, 235, 245), font=font(int(W_ * 0.028)))
+            d.text(c.P(0.31, 0.457), str(body), fill=(255, 255, 255), font=font(int(W_ * 0.036)))
+    elif mode == "call":
+        ctext("appel entrant…", 0.24, 0.035, (220, 220, 235))
+        ctext(str(p.get("contact", "Inconnu")), 0.28, 0.08)
+        for u, col in ((0.32, (220, 60, 60)), (0.68, (60, 200, 100))):
+            d.ellipse(c.box(u - 0.06, 0.70, u + 0.06, 0.70 + 0.12 * CW / CH), fill=col)
+        c.glow(0.5, 0.35, 0.5, (150, 140, 255), 0.25)
+        d = c.d
+    else:
+        d.rectangle(c.box(sx0, sy0 + 0.05, sx1, sy0 + 0.10), fill=(34, 34, 44))
+        d.ellipse(c.box(0.25, sy0 + 0.058, 0.30, sy0 + 0.058 + 0.05 * CW / CH), fill=(170, 170, 190))
+        d.text(c.P(0.32, sy0 + 0.06), str(p.get("contact", "Mamie")), fill=(255, 255, 255), font=font(int(W_ * 0.04)))
+        v = sy0 + 0.13
+        for who, txt in p.get("messages", [["lui", "tu dors ?"]]):
+            f = font(int(W_ * 0.038))
+            tw = min(d.textlength(txt, font=f), W_ * 0.48)
+            mine = who == "moi"
+            ux = (sx1 - 0.03) * W_ - tw - W_ * 0.04 if mine else (sx0 + 0.03) * W_
+            d.rounded_rectangle([ux, v * c.h, ux + tw + W_ * 0.04, (v + 0.055) * c.h], radius=int(W_ * 0.03),
+                                fill=(70, 110, 230) if mine else (58, 58, 72))
+            d.text((ux + W_ * 0.02, (v + 0.01) * c.h), txt, fill=(255, 255, 255), font=f)
+            v += 0.075
+        d.rounded_rectangle(c.box(sx0 + 0.03, sy1 - 0.07, sx1 - 0.03, sy1 - 0.03), radius=40, outline=(80, 80, 96), width=5)
+    if p.get("crack"):
+        rnd = random.Random(5)
+        for _ in range(9):
+            a = rnd.uniform(0, 2 * math.pi)
+            ln = rnd.uniform(0.1, 0.35)
+            d.line([c.P(0.62, 0.62), c.P(0.62 + ln * math.cos(a), 0.62 + ln * math.sin(a) * CW / CH)], fill=(230, 230, 240), width=4)
+    d.rounded_rectangle(c.box(0.40, y1 - 0.03, 0.60, y1 - 0.024), radius=10, fill=(200, 200, 210))
+    _hand(c, x0 + 0.01, 0.58, -1)
+    d = c.d
+    d.ellipse(c.box(0.72, 0.80, 0.86, 0.80 + 0.14 * CW / CH), fill=(14, 12, 20), outline=(200, 200, 215), width=5)
+    d.polygon([c.P(0.72, 0.90), c.P(0.86, 0.90), c.P(0.95, 1.02), c.P(0.70, 1.02)], fill=tuple(p.get("sleeve", (220, 160, 40))))
+    if p.get("red") or p.get("green"):
+        c.glow(0.5, 0.5, 0.6, _lightcol(p, FIRE), 0.25)
+    return c.done()
+
+
+def scene_tele(p):
+    """Télé en gros plan : neige qui grésille ; "face": un visage qui sourit dans la neige ;
+    "text": un mot sur l'écran ; "off": écran noir avec un reflet."""
+    c = Canvas((0, 0, 0), (0, 0, 0))
+    c.img = _room_blur(p.get("seed", 2)).resize((c.w, c.h), Image.LANCZOS)
+    c.d = ImageDraw.Draw(c.img)
+    d = c.d
+    x0, y0, x1, y1 = 0.04, 0.24, 0.96, 0.66
+    d.rounded_rectangle(c.box(x0 - 0.02, y0 - 0.02, x1 + 0.02, y1 + 0.02), radius=20, fill=(12, 12, 16))
+    sw, sh = int((x1 - x0) * c.w), int((y1 - y0) * c.h)
+    if p.get("off"):
+        scr = R.gradient(sw, sh, (18, 18, 26), (8, 8, 12))
+    else:
+        rnd = np.random.default_rng(p.get("seed", 2))
+        small = rnd.integers(60, 175, (sh // 6, sw // 6), dtype=np.uint8)
+        scr = Image.fromarray(small).resize((sw, sh), Image.NEAREST).convert("RGB")
+        lines = ImageDraw.Draw(scr)
+        for y in range(0, sh, 18):
+            lines.line([(0, y), (sw, y)], fill=(90, 90, 100), width=4)
+        if p.get("face"):
+            fl = Image.new("L", (sw, sh), 0)
+            fd = ImageDraw.Draw(fl)
+            for ex in (0.38, 0.62):
+                fd.ellipse([sw * ex - sw * 0.07, sh * 0.25, sw * ex + sw * 0.07, sh * 0.25 + sw * 0.14], outline=255, width=int(sw * 0.03))
+                fd.ellipse([sw * ex - sw * 0.02, sh * 0.32, sw * ex + sw * 0.02, sh * 0.32 + sw * 0.04], fill=255)
+            fd.arc([sw * 0.28, sh * 0.30, sw * 0.72, sh * 0.85], 20, 160, fill=255, width=int(sw * 0.03))
+            fl = fl.filter(ImageFilter.GaussianBlur(sw * 0.012))
+            scr = Image.composite(Image.new("RGB", (sw, sh), (25, 25, 32)), scr, fl.point(lambda x: int(x * 0.7)))
+        scr = scr.filter(ImageFilter.GaussianBlur(1.5))
+    if p.get("text"):
+        dd = ImageDraw.Draw(scr)
+        f = font(int(sw * 0.12))
+        tw = dd.textlength(str(p["text"]), font=f)
+        dd.text(((sw - tw) / 2, sh * 0.38), str(p["text"]), fill=(255, 40, 40), font=f)
+    c.img.paste(scr, (int(x0 * c.w), int(y0 * c.h)))
+    c.d = ImageDraw.Draw(c.img)
+    if not p.get("off"):
+        c.glow(0.5, 0.45, 0.8, (200, 210, 255), 0.18)
+    d = c.d
+    d.rectangle(c.box(0.10, 0.70, 0.90, 0.78), fill=(30, 26, 36))
+    if p.get("red") or p.get("green"):
+        c.glow(0.5, 0.5, 0.6, _lightcol(p, FIRE), 0.25)
+    return c.done()
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -1719,7 +1861,8 @@ SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, 
           "jad_mamie": scene_jad_mamie,
           "jad_ruelle": scene_jad_ruelle,
           "jad_remparts": scene_jad_remparts,
-          "jad_jacques": scene_jad_jacques}
+          "jad_jacques": scene_jad_jacques,
+          "telephone": scene_telephone, "tele": scene_tele}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
@@ -2202,6 +2345,11 @@ def polish(img, seed=0):
     l2 = a.mean(axis=2, keepdims=True)
     a = a + (1 - l2) * np.array([-0.02, -0.01, 0.05]) * 0.8 + l2 * np.array([0.05, 0.02, -0.03])
     a = np.clip((a - 0.5) * 1.12 + 0.5, 0, 1)
+    # 4b. ambiance douce et sombre (inspirée de la vidéo de référence de Fio, 07/11) :
+    # couleurs moins saturées, hautes lumières adoucies, tout un peu plus sombre
+    l3 = a.mean(axis=2, keepdims=True)
+    a = l3 + (a - l3) * 0.72
+    a = np.where(a > 0.7, 0.7 + (a - 0.7) * 0.55, a) * 0.92
     # 5. vignette
     yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
     r = np.sqrt(((xx - w / 2) / (w / 2)) ** 2 + ((yy - h / 2) / (h / 2)) ** 2)
