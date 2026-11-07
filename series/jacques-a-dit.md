@@ -1,9 +1,11 @@
 # Série « JACQUES A DIT »
 
-**Films source** : Squid Game (jeu d'enfants mortel, règles simples) et
-Le Village / Sans un bruit (un village entier qui obéit à une règle la nuit).
-On garde : la règle de jeu, l'ordre qui tombe d'un haut-parleur, le village
-vide. On change : Bretagne, héros seul, « Jacques » jamais montré en entier.
+**Films source (niche, 07/11)** : Pontypool (2008 : des mots, diffusés à la
+radio, contaminent ceux qui les entendent) et Ils (2006 : maison isolée,
+assaillants qu'on ne voit presque jamais). On garde : les ordres qui
+tombent d'un haut-parleur et qu'on ne peut pas ignorer, l'ennemi presque
+invisible, la nuit à tenir. On change : Bretagne, jeu d'enfants, « Jacques »
+jamais montré en entier.
 
 Univers : un village de Bretagne près de Saint-Malo. Chaque nuit à minuit,
 les haut-parleurs de l'église (et tous les téléphones du village) lancent

@@ -333,8 +333,14 @@ film ») puis être surpris par la suite.
 >   `fig_at` [u, v], `fig_size`), `dark`, `red` / `green`.
 > - **CHAQUE SÉRIE S'INSPIRE D'UN FILM CONNU (Fio, rappel du 07/11 : « ça
 >   peut mieux marcher »)**. Avant une nouvelle série, choisir 1 ou 2 films
->   d'horreur / thriller très connus (ex. Sans un bruit, Destination finale,
->   Saw, Shining, Ça, Squid Game, Get Out, Le Village, Scream…) et noter en
+>   d'horreur / thriller PEU CONNUS, de niche (Fio, 07/11 : « Squid Game
+>   c'est pas assez niche, tout le monde connaît »). PAS de blockbusters
+>   (Squid Game, Saw, Ça, Scream, Shining, Destination finale…). Exemples :
+>   Pontypool, Coherence, Triangle, Kairo (Pulse), Noroi, Lake Mungo, The
+>   Wailing, Session 9, Absentia, The Endless, Ils (2006), Calvaire, La
+>   Nuée, Dark Water (2002), The Ritual, A Tale of Two Sisters, The Void,
+>   Resolution, Lovely Molly, The Blackcoat's Daughter (jamais de gore).
+>   Ne pas réutiliser un film déjà pris par une série précédente. Noter en
 >   tête du fichier de la série : film(s) source, ce qu'on reprend (le
 >   principe, l'ambiance, le type de lieux, le type de danger) et ce qui
 >   change (lieu en France, personnages, règles). Les DÉCORS de la série
