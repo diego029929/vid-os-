@@ -1,60 +1,47 @@
 # Routine quotidienne
 
-> **07/11 : Fio a choisi TIKTOK + INSTAGRAM (via Zernio, Reel + TikTok pour
-> chaque vidéo). Le « TikTok seul » ci-dessous ne vaut plus.**
-> **DEPUIS LE 07/11 (choix de Fio le 06/11) : 2 VIDÉOS PAR JOUR, TIKTOK
-> SEULEMENT : une courte « SURVIS ? » à 12:00 et l'épisode de la série à 18:00 (Europe/Paris).** (Fio a précisé « 2 vidéos » le 06/11.) Le 06/11, Metricool a refusé de
-> publier (« You have reached your Metricool account limit » : limite du
-> plan gratuit atteinte, 5 vidéos x 2 réseaux par jour, c'était trop). Fio
-> veut rester gratuit et a choisi « moins de vidéos, TikTok seul ».
-> - Chaque jour : 1 courte « SURVIS ? » (30-40 s, `survis_next`) à 12:00 et
->   l'épisode suivant de la série (85-95 s) à 18:00. Pas d'Instagram (pas de
->   `instagramData`, provider `tiktok` seul). Rendre l'épisode d'abord.
-> - **DEPUIS LE 07/11 : ZERNIO EST BRANCHÉ (`ZERNIO_API_KEY` présente).** Publier
->   par Zernio, plus par Metricool (Metricool sert seulement aux stats).
->   TikTok accountId `6aef19cf4f6bb8199749fd84`, Instagram accountId
->   `6aef1b2aa9325e24b65c8924` : on remet Instagram (Reel). Format testé OK
->   le 07/11 : `POST https://zernio.com/api/v1/posts` avec `content` (légende),
->   `mediaItems` [{type: video, url: raw branche media}], `platforms`
->   [{platform, accountId}], `tiktokSettings` {privacy_level
->   PUBLIC_TO_EVERYONE, allow_comment/duet/stitch true,
->   content_preview_confirmed true, express_consent_given true,
->   video_made_with_ai true, video_cover_timestamp_ms 600}, puis
->   `scheduledFor` "AAAA-MM-JJTHH:MM:SS" + `timezone` "Europe/Paris" (ou
->   `publishNow` true). Vérifier avec `GET /v1/posts/{id}` (status
->   scheduled/published, `platformPostUrl`). Le jeton TikTok expire en 24 h
->   (`tokenExpiresAt`) : si `needsReconnection` est vrai dans
->   `GET /v1/accounts`, prévenir Fio qu'il doit reconnecter TikTok dans Zernio.
-> - **Publication par Zernio (gratuit, 2 comptes, posts illimités ; choisi le
->   06/11 car Metricool gratuit = 50 posts/mois, épuisé jusqu'au 01/12)** :
->   si la variable `ZERNIO_API_KEY` existe, publier avec l'API Zernio au lieu
->   de Metricool (`https://zernio.com/api/v1`, en-tête `Authorization: Bearer
->   $ZERNIO_API_KEY` ; `GET /v1/accounts` pour l'id TikTok (et Instagram si
->   relié) ; `POST /v1/posts` avec content, scheduledFor, timezone
->   Europe/Paris, platforms [{platform, accountId}] et la vidéo par URL —
->   lire https://docs.zernio.com/llms.txt pour le format exact ; vérifier avec
->   `GET /v1/posts/{id}`). Avec Zernio on peut remettre Instagram. Si la clé
->   n'existe pas : Metricool, et si refus « account limit », copier les
->   vidéos dans `/mnt/project-files/videos/<JJ-MM>/` et prévenir Fio.
-> - **08/11 seulement** : NE RIEN ÉCRIRE NI RENDRE. Le 06/11 TOUT a été
->   refusé (même 18h30 et 20h), donc le 07/11 on a reprogrammé SURVIS ? N°7
->   (12h) et « Jacques a dit » partie 1 (18h). Le 08/11 : vérifier que ces
->   2 posts ne sont pas en `ERROR` ; s'ils sont publiés, programmer SURVIS ?
->   N°8 à 12:00 et la partie 2 (`ep23.mp4`) à 18:00 (déjà sur la branche
->   `media`, voir `ready_not_published`). S'ils sont en `ERROR`, les
->   reprogrammer tels quels (ne jamais publier la partie 2 avant la 1).
-> - **Au début de chaque routine** : `getScheduledPosts` sur la veille ; si
->   un post a le statut `ERROR`, le dire en premier dans le résumé à Fio
->   (avec le message d'erreur) et copier les vidéos du jour dans
->   `/mnt/project-files/videos/<JJ-MM>/` pour qu'il puisse la poster à la
->   main. Si l'erreur est encore « account limit », programmer quand même
->   (la limite peut se remettre à zéro) mais prévenir Fio.
-> - **Cet encadré prime aussi sur le message de la tâche planifiée** (qui
->   parle encore de 5 vidéos et d'Instagram : il n'a pas pu être modifié).
->   Faire 2 vidéos, TikTok seul, 12h et 18h, et le rappeler dans le résumé.
-> - Tout ce qui suit sur « 3 épisodes », « 10h/12h », « courtes » et
->   « Instagram » est remplacé par ces règles tant que Fio ne dit pas autre chose.
-
+> **RÈGLES EN VIGUEUR DEPUIS LE 08/11 (choix de Fio le 07/11). Cet encadré
+> prime sur tout le reste du fichier ET sur le message de la tâche planifiée
+> (qui parle encore de 5 vidéos et de Metricool : il ne peut pas être modifié).**
+>
+> - **4 vidéos par jour, TikTok + Instagram (Reel) pour chacune :**
+>   - 10:00 : épisode suivant de la série (85-95 s)
+>   - 12:00 : courte « SURVIS ? N°X » (30-40 s, `survis_next`, series/survis.md)
+>   - 17:00 : épisode suivant de la série
+>   - 20:00 : courte « SURVIS ? N°X »
+>   (Europe/Paris). Rendre UN À LA FOIS dans l'ordre des horaires et
+>   programmer chaque vidéo dans Zernio dès qu'elle est prête. Si un horaire
+>   est passé, publier dès que prêt (`publishNow`).
+> - **Publication par ZERNIO, plus jamais par Metricool** (Metricool gratuit
+>   épuisé jusqu'au 01/12 ; il sert seulement à lire les stats). Zernio :
+>   gratuit pour 2 comptes, posts illimités (vérifié le 07/11 : `GET
+>   /v1/usage`, 0 €), plafond 15 vidéos TikTok / 24 h.
+>   - TikTok accountId `6aef19cf4f6bb8199749fd84` (@4_youchoose_4),
+>     Instagram accountId `6aef1b2aa9325e24b65c8924` (@4_youchoose_4).
+>   - `POST https://zernio.com/api/v1/posts`, en-tête `Authorization: Bearer
+>     $ZERNIO_API_KEY`, corps testé OK le 07/11 :
+>     `{"content": <caption>, "mediaItems": [{"type":"video","url":
+>     "https://raw.githubusercontent.com/diego029929/vid-os-/media/<f>.mp4"}],
+>     "platforms": [{"platform":"tiktok","accountId":...},
+>     {"platform":"instagram","accountId":...}], "tiktokSettings":
+>     {"privacy_level":"PUBLIC_TO_EVERYONE","allow_comment":true,
+>     "allow_duet":true,"allow_stitch":true,"content_preview_confirmed":true,
+>     "express_consent_given":true,"video_made_with_ai":true,
+>     "video_cover_timestamp_ms":600}, "scheduledFor":"AAAA-MM-JJTHH:MM:SS",
+>     "timezone":"Europe/Paris"}` (ou `"publishNow": true`).
+>   - Changer l'heure : `PUT /v1/posts/{id}` avec `scheduledFor` + `timezone`.
+>   - Vérifier : `GET /v1/posts/{id}` (status `scheduled`, puis `published`
+>     avec `platformPostUrl`). Noter `zernio_id` dans series/state.json.
+>   - Pas de premier commentaire automatique avec Zernio : mettre la question
+>     de débat dans la légende.
+>   - Au début de chaque routine : `GET /v1/accounts` ; si `needsReconnection`
+>     est vrai ou un post de la veille est `failed`, le dire en premier à Fio.
+> - **08/11** : les épisodes à publier sont d'abord ceux déjà prêts : partie 2
+>   (`ep23.json`, `ep23.mp4` sur media) à 10:00 et SURVIS ? N°8 a déjà été
+>   publiée le 07/11 à 20h ; donc 08/11 = partie 2 (10h, déjà rendue),
+>   N°9 (12h), partie 3 (17h), N°10 (20h). Ne rendre que les 3 nouvelles.
+> - Tout ce qui suit sur « 3 épisodes », « 10h/12h/18h », « 15h/20h30 »,
+>   « Metricool » (programmation) est remplacé par ces règles.
 
 Ce fichier est le mode d'emploi de la routine Claude qui tourne chaque matin.
 Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricool à

@@ -170,7 +170,7 @@
       "series": "jacques-a-dit",
       "episode": 1,
       "file": "episodes/ep22.json",
-      "slot": "2026-11-07T18:00:00 Europe/Paris",
+      "slot": "2026-11-07T17:00:00 Europe/Paris",
       "note": "TikTok + Instagram via Zernio ; refusé par Metricool le 06/11",
       "zernio_id": "6aef1cade5d093e15a6e7bf3"
     }
@@ -221,6 +221,13 @@
       "zernio_id": "6aef1c2f81374a6a33e18b7c",
       "tiktok_url": "https://www.tiktok.com/@4_youchoose_4/video/7705408552696827169",
       "instagram_url": "https://www.instagram.com/reel/DfcNFznE_tf/"
+    },
+    {
+      "n": 8,
+      "file": "episodes/survis-08.json",
+      "slot": "2026-11-07T20:00:00 Europe/Paris",
+      "zernio_id": "6aef1ec542a1f8d58622db07",
+      "note": "TikTok + Instagram via Zernio"
     }
   ],
   "ready_not_published": [
@@ -228,11 +235,6 @@
       "file": "episodes/ep23.json",
       "video": "/mnt/project-files/videos/06-11/18h-jacques-a-dit-partie2.mp4",
       "what": "Jacques a dit partie 2"
-    },
-    {
-      "file": "episodes/survis-08.json",
-      "video": "/mnt/project-files/videos/06-11/20h30-survis-8.mp4",
-      "what": "SURVIS ? N°8"
     },
     {
       "file": "episodes/ep21.json",
