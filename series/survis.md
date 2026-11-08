@@ -36,7 +36,7 @@ dans le résumé ; c'est Fio qui décide de la suite.
 
 ## Banque d'idées (cocher quand utilisée, ne jamais refaire la même)
 
-- [ ] Ascenseur qui s'arrête à un étage qui n'existe pas
+- [x] Ascenseur qui s'arrête à un étage qui n'existe pas (N°9, 08/11, Paris)
 - [ ] Quelqu'un frappe à 3 h, avec la voix de ta mère, alors qu'elle dort
 - [ ] Ton reflet cligne des yeux en retard
 - [x] Appel de ton propre numéro (N°3, 04/11)
@@ -44,7 +44,7 @@ dans le résumé ; c'est Fio qui décide de la suite.
 - [ ] Hôtel : la chambre 313 n'a pas de fenêtre
 - [x] Forêt : quelqu'un siffle ton prénom (N°5, 05/11)
 - [x] Panne de courant : une bougie s'allume toute seule (N°4, 04/11)
-- [ ] Message : « ne te retourne pas, je suis derrière toi »
+- [x] Message : « ne te retourne pas, je suis derrière toi » (N°10, 08/11, métro de Toulouse)
 - [ ] Livraison de nuit : le livreur ne bouge plus devant l'immeuble
 - [x] Baby-sitting : l'enfant dit qu'il y a un monsieur sous le lit (N°8, 06/11)
 - [ ] Tunnel : les phares d'en face s'éteignent

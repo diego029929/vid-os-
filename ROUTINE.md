@@ -404,7 +404,13 @@ film ») puis être surpris par la suite.
 >   d'un objet qui n'a pas encore de plan (lettre, radio, photo, clé,
 >   miroir, poupée…), DESSINER un plan objet `scene_<objet>` sur le modèle
 >   de `scene_tele` (objet en grand au centre, pièce floue derrière avec
->   `_room_blur`). Au moins 4 plans « objet » par épisode. On s'inspire de
+>   `_room_blur`). Au moins 4 plans « objet » par épisode.
+>   08/11 : plan objet `papier` ajouté (affiche ou mot scotché, `title`,
+>   `lines`, `wall` metal/carrelage/bois) : idéal pour MONTRER la règle du
+>   jeu au moment où elle est dite. Astuce 08/11 : les gros plans visage
+>   peuvent se faire sur le vrai décor (il est flouté tout seul derrière un
+>   personnage `face`) au lieu de `flou` : c'est ce qui permet de rester
+>   sous 1/3 de `flou`. On s'inspire de
 >   l'idée, on ne recopie pas le visuel d'un autre créateur.
 > - Ambiance (07/11, idem) : `polish()` rend maintenant tout plus sombre et
 >   plus doux (couleurs moins vives, hautes lumières adoucies).
