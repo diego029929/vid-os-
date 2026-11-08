@@ -2393,6 +2393,64 @@ def draw_lives(frame, lives, total, lost_t=None):
         heart(d, cx, cy, r, (235, 40, 50) if alive else (60, 50, 70))
 
 
+# --- idées de l'épisode exemple « Line 9 » (choix de Fio, 08/11) -------------
+
+def draw_rule_card(frame, rule, t):
+    """Carte « RÈGLE N°X » affichée quand la règle est dite, puis quand elle est
+    mise à l'épreuve (le spectateur fait le lien tout seul)."""
+    n, txt = rule.get("n"), rule["text"]
+    k = R.ease_out(min(1, max(0, t / 0.3)))
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    fh, ft = font(50), font(72)
+    lines, cur = [], ""
+    for w in txt.split():
+        if cur and ft.getlength(cur + " " + w) > W - 380:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = (cur + " " + w).strip()
+    lines.append(cur)
+    x0, y0 = 90, 420 - (1 - k) * 60
+    h = 116 + 86 * len(lines)
+    box = [x0, y0, W - 200, y0 + h]
+    d.rounded_rectangle([box[0] + 10, box[1] + 14, box[2] + 10, box[3] + 14], radius=22, fill=(0, 0, 0, 150))
+    d.rounded_rectangle(box, radius=22, fill=(244, 236, 214, 255), outline=(40, 30, 30, 255), width=5)
+    head = f"RÈGLE N°{n}" if n else "LA RÈGLE"
+    hw = fh.getlength(head) + 40
+    d.rounded_rectangle([x0 + 34, y0 + 26, x0 + 34 + hw, y0 + 86], radius=12, fill=(200, 40, 45, 255))
+    d.text((x0 + 54, y0 + 30), head, font=fh, fill=WHITE)
+    for i, ln in enumerate(lines):
+        d.text((x0 + 40, y0 + 108 + i * 86), ln, font=ft, fill=(30, 24, 28))
+    if k < 1:
+        layer.putalpha(layer.getchannel("A").point(lambda v: int(v * k)))
+    frame.paste(layer, (0, 0), layer)
+
+
+def draw_counter(frame, label, value, bump):
+    """Compteur en haut à gauche (ex. PASSAGERS 3) : il monte avec la tension."""
+    d = ImageDraw.Draw(frame)
+    fl, fv = font(38), font(int(84 * (1 + 0.25 * max(0.0, 1 - bump / 0.4))))
+    d.text((70, 120), label, font=fl, fill=(230, 230, 235), stroke_width=4, stroke_fill=(0, 0, 0))
+    d.text((70, 168), str(value), font=fv, fill=(235, 60, 60) if bump < 1.2 else WHITE,
+           stroke_width=6, stroke_fill=(0, 0, 0))
+
+
+MOODS = {"bleu": ((70, 110, 200), 0.22, 1.0), "rouge": ((210, 40, 40), 0.30, 0.92),
+         "noir": ((20, 20, 40), 0.45, 0.72)}
+
+
+def grade_mood(fr, mood):
+    """Lumière qui suit la peur : bleu, puis rouge, puis noir."""
+    if mood not in MOODS:
+        return fr
+    col, amt, bright = MOODS[mood]
+    from PIL import ImageChops, ImageEnhance
+    tinted = ImageChops.multiply(fr, Image.new("RGB", fr.size, tuple(min(255, c + 90) for c in col)))
+    fr = Image.blend(fr, tinted, amt * 2)
+    return ImageEnhance.Brightness(fr).enhance(bright) if bright != 1.0 else fr
+
+
 def draw_choice(frame, a, b, t, picked=None, count=None, enter=True):
     """Cartes A / B en grosses lettres ; elles glissent seulement à leur apparition."""
     d = ImageDraw.Draw(frame)
@@ -2822,6 +2880,9 @@ def render(ep, out):
     clock = ep.get("clock_start", 2 * 3600 + 47 * 60 + 5)
     lives_total = ep.get("lives_total", 3)
     lives = ep.get("lives")          # vies au début de l'épisode (None = pas de compteur)
+    counter_label = ep.get("counter_label")   # ex. "PASSAGERS" (None = pas de compteur)
+    counter, counter_t = ep.get("counter_start", 1), 99.0
+    mood = ep.get("mood")            # "bleu" / "rouge" / "noir", change avec "mood" sur un plan
     n, t0 = 0, 0.0
     for bi, b in enumerate(beats):
         for s in b.get("sfx", []):
@@ -2849,6 +2910,9 @@ def render(ep, out):
         if lives is not None and "lives" in b:
             lost = b["lives"] < lives
             lives = b["lives"]
+        mood = b.get("mood", mood)
+        if "count" in b and b["count"] != counter:
+            counter, counter_t = b["count"], 0.0
         imgs = compose(b, cache)
         # sous-titres calés sur la voix : chaque morceau dure au prorata de ses lettres
         caps = chunks(b["text"]) if b.get("text") else []
@@ -2886,6 +2950,7 @@ def render(ep, out):
                 py = min(max(0, cy * CH - ph / 2 + (oy - (cy * CH - chh / 2))), CH - ph)
                 layer = fg.resize((W, H), Image.BILINEAR, box=(px, py, px + pw, py + ph))
                 fr.paste(layer, (0, 0), layer)
+            fr = grade_mood(fr, mood)
             particles(fr, b, bi, lt)
             if lt < 0.1 and bi > 0:
                 fr = fr.filter(ImageFilter.GaussianBlur(14 * (1 - lt / 0.1)))
@@ -2895,10 +2960,14 @@ def render(ep, out):
                 prev = beats[bi - 1].get("choice") if bi > 0 else None
                 same = bool(prev) and (prev["a"], prev["b"]) == (c["a"], c["b"])
                 draw_choice(fr, c["a"], c["b"], lt, c.get("picked"), cnt, enter=not same)
+            if b.get("rule"):
+                draw_rule_card(fr, b["rule"], lt)
             if caps:
                 j = max([x for x in range(len(caps)) if starts[x] <= lt] or [0])
                 draw_caption(fr, caps[j], lt - starts[j], max(b.get("text_y", 0.68), 0.235) if lives is not None else b.get("text_y", 0.68))
             draw_clock(fr, clock + lt)
+            if counter_label:
+                draw_counter(fr, counter_label, counter, counter_t + lt)
             if lives is not None:
                 draw_lives(fr, lives, lives_total, lt if lost else None)
             g = b.get("glitch", 0.0)
@@ -2909,6 +2978,7 @@ def render(ep, out):
             proc.stdin.write(arr.tobytes())
             n += 1
         clock += b["dur"]
+        counter_t += b["dur"]
         t0 += b["dur"]
     proc.stdin.close()
     proc.wait()
