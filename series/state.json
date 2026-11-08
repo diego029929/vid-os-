@@ -2,8 +2,8 @@
   "current_series": "jacques-a-dit",
   "series_file": "series/jacques-a-dit.md",
   "series_episode_count": 6,
-  "next_episode_in_series": 3,
-  "next_global_episode": 24,
+  "next_episode_in_series": 4,
+  "next_global_episode": 25,
   "published": [
     {
       "global": 1,
@@ -173,9 +173,27 @@
       "slot": "2026-11-07T17:00:00 Europe/Paris",
       "note": "TikTok + Instagram via Zernio ; refusé par Metricool le 06/11",
       "zernio_id": "6aef1cade5d093e15a6e7bf3"
+    },
+    {
+      "global": 23,
+      "series": "jacques-a-dit",
+      "episode": 2,
+      "file": "episodes/ep23.json",
+      "slot": "2026-11-08T10:00:00 Europe/Paris",
+      "zernio_id": "6aeffdbc56e86ea318b9368c",
+      "note": "rendu le 06/11 (son -19 LUFS), gardé par Fio"
+    },
+    {
+      "global": 24,
+      "series": "jacques-a-dit",
+      "episode": 3,
+      "file": "episodes/ep24.json",
+      "slot": "2026-11-08T17:00:00 Europe/Paris",
+      "zernio_id": "6af02abd737cabd3a1aa2cf7",
+      "note": "1re vidéo avec test du spectateur extérieur (clarté 8/10)"
     }
   ],
-  "survis_next": 9,
+  "survis_next": 11,
   "survis_published": [
     {
       "n": 1,
@@ -228,18 +246,26 @@
       "slot": "2026-11-07T20:00:00 Europe/Paris",
       "zernio_id": "6aef1ec542a1f8d58622db07",
       "note": "TikTok + Instagram via Zernio"
+    },
+    {
+      "n": 9,
+      "file": "episodes/survis-09.json",
+      "slot": "2026-11-08T12:00:00 Europe/Paris",
+      "zernio_id": "6af01d075358c22775720b01"
+    },
+    {
+      "n": 10,
+      "file": "episodes/survis-10.json",
+      "slot": "2026-11-08T20:00:00 Europe/Paris",
+      "zernio_id": "6af031c53833bdba31c6b6a3"
     }
   ],
   "ready_not_published": [
-    {
-      "file": "episodes/ep23.json",
-      "video": "/mnt/project-files/videos/06-11/18h-jacques-a-dit-partie2.mp4",
-      "what": "Jacques a dit partie 2"
-    },
     {
       "file": "episodes/ep21.json",
       "video": "/mnt/project-files/videos/06-11/10h-hotel-partie6.mp4",
       "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
     }
-  ]
+  ],
+  "media_note": "08/11 : branche media = ep23, ep24, survis-09, survis-10 (supprimer à la prochaine routine, après publication)"
 }

@@ -265,3 +265,28 @@ creux à 11 h, 13 h-14 h et après 21 h).
   « GRÉSILLENT ») ; les courtes faisaient 50-53 s, raccourcies à 43 s.
   À éviter avec la voix 3-A : répliques de 3 mots ou moins, « VITE » seul,
   « GRÉSILLER ».
+
+### 08/11 (partie 2 déjà rendue à 10h, N°9 à 12h, partie 3 = ép. 24 à 17h, N°10 à 20h — tout via Zernio, TikTok + Instagram)
+
+- Comptes Zernio OK (pas de reconnexion), N°8 et partie 1 du 07/11 bien publiées sur les deux réseaux.
+- Stats Metricool (TikTok) remontées depuis le 06/11 : ép. 18 = 773 vues / 47 likes, ép. 19 = 783 / 37, N°5 = 781 / 21,
+  N°7 (via Zernio, 18 h de recul) = 279 vues. Toujours ≈ 0 commentaire. Les vidéos publiées par Zernio n'apparaissent
+  pas encore dans Metricool : à vérifier demain (sinon lire les vues via Zernio).
+- Courtes vs épisodes : pas de nouvel écart (≈ 780-870 vues des deux côtés) ; on garde 2 + 2.
+- **Nouvelle méthode dès aujourd'hui (Fio, 08/11)** : test du spectateur extérieur, refait jusqu'à clarté ≥ 8.
+  - Partie 3 : 6 → 6,5 → **8** /10 (corrigé : où on est dès la 1re phrase, règle « même si c'est une voix que tu
+    connais », indice « mon chéri » avant le choix, dilemme final avec un prix des deux côtés).
+  - N°9 : 7 → 7 → **9** /10 (bouton qui marche « au dixième essai », gardien qui dit « alors qui t'appelait au 13 ? »).
+  - N°10 : 7 → 7 → **8** /10 (agent essoufflé qui explique la respiration, menace concrète pour le choix final).
+- Relecture LanguageTool : 1 faute corrigée (« descend jusqu'en bas »).
+- Bonne réponse tirée au sort : B, B, B → dernière inversée : N°9 = B, partie 3 = B, N°10 = A.
+- Décors : 7 nouveaux dessinés (papier = affiche en gros plan, hall d'immeuble, palier du 13e, jad_station intérieur,
+  jad_maison, rame de métro, métro qui arrive). Plus de 1/3 de flou : partie 3 = 5 flou sur 46 plans, courtes = 0.
+- Réponse de la courte précédente : mise dans la légende (« N°8 : il fallait partir ») pour garder l'accroche en 1re seconde.
+- Rendus : N°9 refait 3 fois (52,9 s trop long → coupé ; « PARIS. » lu « Ah » et « N° SUIVANT » lu « nain re-suivant »
+  → « À PARIS, » et voix « ABONNE-TOI POUR LA PROCHAINE VIDÉO »). Partie 3 refaite 1 fois (« SWEAT » lu « souhait » →
+  « PULL »). N°10 refait 1 fois (45,2 s → 43,0 s). Finales : N°9 42,1 s, partie 3 92,2 s, N°10 43,0 s, toutes à ≈ -15 LUFS.
+- Repère durée (voix 3-A) : ≈ 22 caractères lus par seconde + 13 s de plans fixes (choix, rembobinage).
+  Courte ≤ 650 caractères, épisode 1 600-1 800 caractères. À calculer AVANT le rendu.
+- À éviter avec la voix 3-A : « N° » à la voix (dire « numéro » ou autre chose), mot anglais « sweat », ville seule en
+  début de phrase (« PARIS. »).

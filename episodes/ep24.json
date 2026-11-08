@@ -1,0 +1,1073 @@
+{
+ "series": "JACQUES A DIT",
+ "day": 1,
+ "subtitle": "PARTIE 3",
+ "clock_start": 7200,
+ "title": "Partie 3 · Ta grand-mère t'appelle à l'aide, sans dire « Jacques a dit ». Tu y vas ?",
+ "caption": "Ta grand-mère t'appelle au secours… mais elle n'a pas dit « Jacques a dit ». Tu y vas ? 👇 Partie 3 de Jacques a dit. #horreur #histoire #saintmalo #bretagne",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "jad_station",
+   "text": "CACHÉ DANS UNE STATION-SERVICE, TU FERMES LES YEUX : JACQUES L'A *DIT*.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "shake": 2
+  },
+  {
+   "scene": "jad_station",
+   "text": "LÉA, TA VOISINE, GARDE LES SIENS OUVERTS.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LÉA CRIE. PUIS PLUS *RIEN*.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "params": {
+    "of": "jad_station",
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "shake": 4,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "DEHORS, LES HAUT-PARLEURS DE L'ÉGLISE PARLENT.",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   },
+   "params": {
+    "hour": 2
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "« JACQUES A DIT : OUVRE LES *YEUX*. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "LÉA N'EST PLUS LÀ.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "wide",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   },
+   "params": {
+    "hand": true
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "PAR TERRE, IL RESTE SON PULL *BLEU*.",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "sweat": true,
+    "dark": true
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "PRÈS DE SAINT-MALO, CES HAUT-PARLEURS DONNENT DES ORDRES TOUTE LA NUIT.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "papier",
+   "text": "LA RÈGLE : SI L'ORDRE COMMENCE PAR « JACQUES A DIT », TU *OBÉIS*.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "params": {
+    "wall": "bois",
+    "title": "LA RÈGLE",
+    "lines": [
+     "« JACQUES A DIT... »",
+     "→ TU OBÉIS.",
+     "SANS « JACQUES A DIT »",
+     "→ TU NE LE FAIS PAS."
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "SI L'ORDRE NE COMMENCE PAS PAR « JACQUES A DIT », TU NE LE FAIS PAS. MÊME SI C'EST UNE VOIX QUE TU *CONNAIS*.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "CELUI QUI SE TROMPE DISPARAÎT. COMME LÉA.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "TON PORTABLE SONNE : « *MAMIE* ».",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   },
+   "params": {
+    "mode": "call",
+    "contact": "Mamie",
+    "sleeve": [
+     235,
+     120,
+     35
+    ]
+   }
+  },
+  {
+   "scene": "jad_mamie",
+   "text": "TA GRAND-MÈRE A DISPARU CE SOIR.",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "dark": true
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "C'EST BIEN SA VOIX.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_maison",
+   "text": "ELLE PLEURE : « JE SUIS À LA MAISON. VIENS ME *CHERCHER*. »",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "params": {
+    "attic": true
+   }
+  },
+  {
+   "scene": "grenier",
+   "text": "« VITE, MON CHÉRI. QUELQU'UN EST DANS LE *GRENIER*. »",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   },
+   "params": {
+    "figure": true,
+    "fig_at": [
+     0.6,
+     0.8
+    ]
+   },
+   "shake": 3
+  },
+  {
+   "scene": "flou",
+   "text": "ELLE N'A PAS DIT « JACQUES A DIT ».",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   },
+   "params": {
+    "of": "telephone",
+    "light": [
+     150,
+     200,
+     255
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "MAIS C'EST PEUT-ÊTRE VRAIMENT *ELLE*.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_maison",
+   "text": "SI TU N'Y VAS PAS, ELLE RESTE SEULE AVEC CE QUI EST AU GRENIER.",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "attic": true,
+    "dark": true
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "TU COURS CHEZ TA GRAND-MÈRE, OU TU RESTES DANS LA *STATION* ?",
+   "choice": {
+    "a": "COURIR CHEZ ELLE",
+    "b": "RESTER ICI"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "dur": 2.8
+  },
+  {
+   "scene": "jad_station",
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "COURIR CHEZ ELLE",
+    "b": "RESTER ICI",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "TU COURS CHEZ TA GRAND-MÈRE.",
+   "choice": {
+    "a": "COURIR CHEZ ELLE",
+    "b": "RESTER ICI",
+    "picked": "A"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1"
+  },
+  {
+   "scene": "jad_maison",
+   "text": "SA PORTE EST GRANDE OUVERTE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "open": true,
+    "dark": true
+   },
+   "record": "r1"
+  },
+  {
+   "scene": "jad_mamie",
+   "text": "ELLE EST ASSISE DANS LE NOIR, DE DOS.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "params": {
+    "dark": true,
+    "mamie": true
+   },
+   "record": "r1"
+  },
+  {
+   "scene": "flou",
+   "text": "DERRIÈRE TOI, LA PORTE CLAQUE. SA VOIX CHANGE : « JACQUES N'A JAMAIS DIT DE *VENIR*. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "record": "r1"
+  },
+  {
+   "scene": "jad_mamie",
+   "text": "ELLE SE RETOURNE. ELLE N'A PLUS DE *VISAGE*.",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     25,
+     25,
+     30
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   },
+   "params": {
+    "red": true
+   },
+   "shake": 5,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1"
+  },
+  {
+   "scene": "jad_mamie",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ],
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "jad_station",
+   "text": "TU RESTES DANS LA STATION. TU RACCROCHES.",
+   "choice": {
+    "a": "COURIR CHEZ ELLE",
+    "b": "RESTER ICI",
+    "picked": "B"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "jad_station",
+   "text": "ÇA FAIT MAL. MAIS LA RÈGLE, C'EST LA RÈGLE.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "UN MESSAGE DE « MAMIE ».",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "mode": "lock",
+    "time": "2:47",
+    "date": "dimanche 8 novembre",
+    "notif": [
+     "Mamie",
+     "Pourquoi tu m'as laissée ?"
+    ],
+    "sleeve": [
+     235,
+     120,
+     35
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "« POURQUOI TU M'AS LAISSÉE SEULE, MON *CHÉRI* ? »",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "params": {
+    "mode": "chat",
+    "contact": "Mamie",
+    "messages": [
+     [
+      "lui",
+      "Pourquoi tu m'as"
+     ],
+     [
+      "lui",
+      "laissée seule,"
+     ],
+     [
+      "lui",
+      "mon chéri ?"
+     ]
+    ],
+    "sleeve": [
+     235,
+     120,
+     35
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "TA GRAND-MÈRE NE T'A JAMAIS APPELÉ « MON CHÉRI ».",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "À TROIS HEURES, LA CLOCHE DE L'ÉGLISE SONNE.",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   },
+   "params": {
+    "hour": 3
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ]
+  },
+  {
+   "scene": "jad_place",
+   "text": "LES HAUT-PARLEURS : « JACQUES A DIT : VIENS À L'*ÉGLISE*. »",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "TU TRAVERSES LE VILLAGE VIDE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "eglise",
+   "text": "SUR UN BANC DE L'ÉGLISE, QUELQU'UN *DORT*.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "eglise",
+   "text": "C'EST TA GRAND-MÈRE. ELLE MURMURE TON PRÉNOM.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     110,
+     170
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "« JACQUES A DIT : LAISSE-LA ICI ET RETOURNE À LA STATION. »",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   },
+   "params": {
+    "jacques": true
+   }
+  },
+  {
+   "scene": "eglise",
+   "text": "TA GRAND-MÈRE OUVRE LES YEUX : « NE ME LAISSE PAS AVEC *JACQUES*. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     110,
+     170
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "SI TU L'EMMÈNES, TU DÉSOBÉIS. ET TU DISPARAIS.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_jacques",
+   "text": "SI TU LA LAISSES, JACQUES LA PRENDRA AVANT L'*AUBE*.",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "eglise",
+   "text": "TU LA LAISSES, OU TU L'*EMMÈNES* ?",
+   "choice": {
+    "a": "LA LAISSER",
+    "b": "L'EMMENER"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "dur": 2.8
+  },
+  {
+   "scene": "eglise",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LA *PARTIE 4*.",
+   "choice": {
+    "a": "LA LAISSER",
+    "b": "L'EMMENER"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "dur": 3.2
+  },
+  {
+   "scene": "jad_remparts",
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  }
+ ]
+}
