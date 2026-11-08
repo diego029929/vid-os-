@@ -210,6 +210,21 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
        est en jeu, sans rien connaître d'avant ;
      - test avant rendu : relire le script comme quelqu'un qui n'a vu
        aucun épisode ; chaque phrase doit se comprendre ;
+     - **TEST DU SPECTATEUR EXTÉRIEUR, OBLIGATOIRE (Fio, 08/11 : « l'enchaînement
+       c'est incompréhensible, voir d'un point de vue extérieur si c'est simple
+       et captivant »)** : écrire les répliques lues, une par ligne, dans un
+       fichier texte, puis lancer un agent neuf (outil Agent, sans autre
+       contexte) qui joue un spectateur TikTok de 16-25 ans n'ayant rien vu
+       avant. Il lit SEULEMENT ce fichier et donne : résumé en 3 phrases,
+       lignes où il est perdu (saut logique, chose pas présentée, contradiction
+       avec la règle), si les deux choix se défendent, clarté /10, envie de la
+       suite /10. Corriger et refaire le test tant que la clarté est < 8 ou
+       qu'il reste une contradiction. Noter les notes dans series/insights.md.
+       Erreurs trouvées le 08/11 à ne plus faire : une règle qui se contredit
+       (« ne bouge pas » alors qu'il faut continuer de courir), un personnage
+       ou un fait qui arrive sans être présenté, une phrase recopiée d'une
+       autre vidéo, un choix dont la règle donne la réponse sans aucun prix à
+       payer, des phrases vides (« la fin va te glacer ») ;
    - structure : accroche, mise en place, règle, situation, **choix A/B**
      avec compte à rebours, mauvaise option jouée puis `rewind`, bonne
      option, développement (l'histoire avance, nouvelle tension), suspense ;
@@ -417,9 +432,9 @@ presque nuls → chaque vidéo DOIT contenir ces leviers (concept inchangé) :
    mal « A OU B » : écrire plutôt « ÉCRIS TON CHOIX EN COMMENTAIRE, VITE »
    et « TON CHOIX ? LA RÉPONSE DANS LA PARTIE X+1 », les cartes A/B restent) (le spectateur
    commente avant de voir la réponse ; c'est le commentaire le plus facile).
-2. **Teaser de rétention** juste après l'accroche (plan 2 ou 3), varié
-   chaque jour : « PRESQUE TOUT LE MONDE MEURT À CE CHOIX », « LA RÉPONSE
-   N'EST PAS CELLE QUE TU CROIS »… jamais deux fois la même phrase.
+2. ~~Teaser de rétention~~ SUPPRIMÉ le 08/11 : ces phrases (« presque tout
+   le monde se fait avoir », « la fin va te glacer ») ne racontent rien et
+   cassent l'enchaînement. La tension vient de l'histoire elle-même.
 3. **« PARTIE X »** en gros dès la première seconde (`subtitle`) et dans le
    titre ; couverture de la vidéo = image de l'accroche avec « PARTIE X » :
    passer `videoCoverMilliseconds` (≈ 600) dans `createScheduledPost`.
