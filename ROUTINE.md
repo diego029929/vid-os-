@@ -258,6 +258,13 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    `series/apres-la-fin.md`, **5 ou 6 épisodes**, choix de Fio le 01/11) et mettre à jour `state.json`.
    Il est permis d'ajouter des décors dans `engine/render2.py` (nouvelle
    fonction `scene_xxx` + entrée dans `SCENES`) si l'histoire l'exige.
+3b. **Relecture orthographe/grammaire (outil gratuit LanguageTool, ajouté le
+   08/11)** : `pip install -q language_tool_python` (une fois, ≈ 30 s ; le 1er
+   lancement télécharge ≈ 260 Mo), puis
+   `python3 engine/check_script.py episodes/epNN.json` pour chaque vidéo du
+   jour. Corriger toutes les lignes « FAUTE » avant le rendu (une faute à
+   l'écran fait perdre en crédibilité). Les lignes « À VOIR » sont souvent
+   des noms propres : vérifier seulement.
 4. Rendre les 3 vidéos avec `python3 engine/render2.py episodes/epNN.json /tmp/epNN.mp4`
    (le moteur doit afficher `voix off : chatterbox`) dans un dossier temporaire. Un rendu prend 20 à 35 min : le lancer en arrière-plan et attendre la fin.
    **Un seul rendu à la fois** (02/11 : deux rendus en parallèle dépassent la
@@ -277,6 +284,14 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    toutes). Écrire les nombres pour qu'ils se lisent bien (le moteur les
    convertit en lettres).
    Corriger et relancer si besoin.
+   **Contrôle automatique final (ajouté le 08/11, ffmpeg)** :
+   `python3 engine/check_video.py /tmp/epNN.mp4` (épisode) ou
+   `python3 engine/check_video.py /tmp/survis-NN.mp4 --max 45` (SURVIS ?).
+   Il vérifie format, durée, volume (le moteur règle maintenant le son à
+   -14 LUFS, le standard TikTok/Instagram : avant le 08/11 les vidéos
+   étaient à -19, trop basses), première image ni blanche ni noire, pas
+   d'écran noir ni de silence. S'il dit « À CORRIGER », ne pas publier :
+   corriger et relancer.
 5. Publier les fichiers sur la branche `media` (sans jamais forcer le push) :
    (03/11 : si un rendu tourne encore, NE PAS faire `git checkout media` dans le
    dépôt — `assets/` disparaît et le rendu suivant plante. Utiliser plutôt
