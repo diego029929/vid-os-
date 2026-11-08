@@ -2582,7 +2582,10 @@ def render(ep, out):
     proc.wait()
     R.build_audio(total, events, wav, voice_track(beats, clips, total, tmp) if clips else None)
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", os.path.join(tmp, "v.mp4"), "-i", wav,
-                    "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", out], check=True)
+                    "-c:v", "copy",
+                    # volume au standard TikTok/Instagram (-14 LUFS) : ni trop bas, ni saturé
+                    "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=44100",
+                    "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", out], check=True)
 
 
 if __name__ == "__main__":
