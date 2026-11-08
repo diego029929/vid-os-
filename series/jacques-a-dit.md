@@ -11,7 +11,8 @@ Univers : un village de Bretagne près de Saint-Malo. Chaque nuit à minuit,
 les haut-parleurs de l'église (et tous les téléphones du village) lancent
 une partie de « Jacques a dit ». Règle du jeu, connue de tous les enfants :
 - un ordre qui commence par « JACQUES A DIT » : il faut obéir ;
-- un ordre SANS « Jacques a dit » : il ne faut PAS bouger.
+- un ordre SANS « Jacques a dit » : il ne faut PAS le faire (jamais écrire
+  « ne bouge pas » : ça contredit les scènes où il faut continuer de courir).
 Celui qui se trompe disparaît avant l'aube. Héros : personnage bâton, sweat
 orange, rentré voir sa grand-mère. Personnages : Léa, la voisine (sweat
 bleu, a déjà perdu son frère au jeu), « Jacques » (on ne le voit jamais :
@@ -37,8 +38,8 @@ lampadaire ; `size`). Tous acceptent `aube` (ciel d'aube, épisode 6),
 | Ép. | Ordre / règle | Situation / choix | Suspense final |
 |---|---|---|---|
 | 1 | « Jacques a dit : éteins la lumière », puis « allume » sans Jacques | A rallumer / B ne pas bouger | « Jacques a dit : ouvre ta porte. » Quelqu'un est derrière. A ouvrir / B ne pas ouvrir |
-| 2 | On doit obéir : la porte s'ouvre sur Léa. « Jacques a dit : cours jusqu'à la station-service », puis « arrête-toi » sans Jacques | A t'arrêter / B continuer | « Jacques a dit : ferme les yeux jusqu'à l'aube. » Léa crie qu'il est derrière toi. A fermer / B garder ouverts |
-| 3 | Un ordre glissé dans la voix de ta grand-mère | à écrire | à écrire |
+| 2 | On ouvre : c'est Léa (sa mère vient de disparaître). « Jacques a dit : cours jusqu'à l'église » (la chose ne peut pas y entrer), puis « arrête-toi » sans Jacques ; Léa tombe | A t'arrêter pour relever Léa / B continuer (bonne : B, Léa rampe et arrive après toi : « tu m'as laissée ») | Mamie frappe à la porte de l'église ; haut-parleurs : « Jacques a dit : ouvre la porte » ; Léa : « n'ouvre pas, ceux qui disparaissent ne reviennent jamais ». A obéir et ouvrir / B écouter Léa |
+| 3 | Réponse : la voix de mamie est la vraie, ou un piège de Jacques (à trancher en écrivant). Un ordre glissé dans la voix de ta grand-mère | à écrire | à écrire |
 | 4 | Deux ordres en même temps (haut-parleur et téléphone) | à écrire | à écrire |
 | 5 | « Jacques » est dans le village | à écrire | à écrire |
 | 6 | L'aube : le dernier ordre | à écrire | dilemme final |
