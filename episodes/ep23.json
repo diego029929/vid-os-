@@ -3,60 +3,13 @@
  "day": 1,
  "subtitle": "PARTIE 2",
  "clock_start": 1800,
- "title": "Partie 2 · Ta grand-mère disparue frappe à la porte. Tu lui ouvres ?",
- "caption": "Jacques a dit d'ouvrir. Léa te supplie de ne pas le faire. Tu obéis ou tu écoutes Léa ? 👇 #horreur #histoire #bretagne #jacquesadit",
+ "title": "Partie 2 · La voix dit « arrête-toi », sans Jacques a dit. Tu t'arrêtes ?",
+ "caption": "Des yeux rouges te suivent dans le bois et la voix te dit de t'arrêter. Tu t'arrêtes ou tu cours ? 👇 Partie 2 de Jacques a dit. #horreur #histoire #saintmalo #bretagne",
  "style": 2,
  "beats": [
   {
-   "scene": "jad_place",
-   "text": "« JACQUES A DIT : OUVRE TA *PORTE*. »",
-   "params": {
-    "dark": true
-   },
-   "sfx": [
-    [
-     "boom",
-     0,
-     0.5
-    ]
-   ],
-   "cam": {
-    "z": [
-     1.0,
-     1.14
-    ]
-   }
-  },
-  {
-   "scene": "porte",
-   "text": "TU OUVRES. UNE FILLE SE JETTE À L'INTÉRIEUR.",
-   "char": {
-    "pose": "stand",
-    "expr": "scared",
-    "head": [
-     0.5,
-     0.42,
-     0.14
-    ],
-    "hoodie": [
-     60,
-     120,
-     230
-    ]
-   },
-   "params": {
-    "seed": 4
-   },
-   "cam": {
-    "z": [
-     1.14,
-     1.04
-    ]
-   }
-  },
-  {
    "scene": "flou",
-   "text": "« FERME ! ÇA M'A *SUIVIE* ! »",
+   "text": "« OUVRE ! FAIS-MOI ENTRER ! »",
    "char": {
     "pose": "face",
     "expr": "scared",
@@ -88,51 +41,35 @@
    }
   },
   {
-   "scene": "jad_ruelle",
-   "text": "C'EST LÉA, TA VOISINE. SA MÈRE VIENT DE DISPARAÎTRE.",
-   "params": {
-    "phone": true
-   },
-   "cam": {
-    "z": [
-     1.06,
-     1.14
-    ]
-   }
-  },
-  {
-   "scene": "jad_mamie",
-   "text": "ET TOI, TU ES SEUL CE SOIR. TA GRAND-MÈRE A DISPARU AUSSI.",
-   "params": {
-    "dark": true
-   },
-   "cam": {
-    "z": [
-     1.12,
-     1.02
-    ]
-   }
-  },
-  {
-   "scene": "jad_clocher",
-   "text": "LÉA : « CHAQUE NUIT, LA VOIX FAIT JOUER LE VILLAGE À JACQUES A DIT. »",
-   "params": {
-    "hour": 1
-   },
-   "cam": {
-    "z": [
-     1.0,
-     1.1
-    ],
-    "y": [
+   "scene": "porte",
+   "text": "TU AS OUVERT, PARCE QUE JACQUES L'AVAIT DIT. C'EST LÉA, TA VOISINE.",
+   "char": {
+    "pose": "stand",
+    "head": [
      0.5,
-     0.46
+     0.42,
+     0.14
+    ],
+    "expr": "scared",
+    "hoodie": [
+     60,
+     120,
+     230
+    ]
+   },
+   "params": {
+    "seed": 4
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
     ]
    }
   },
   {
    "scene": "flou",
-   "text": "« SI ELLE DIT JACQUES A DIT, TU LE *FAIS*. »",
+   "text": "À CETTE PARTIE, PRESQUE TOUT LE MONDE SE FAIT *AVOIR*.",
    "char": {
     "pose": "face",
     "expr": "wide",
@@ -142,9 +79,48 @@
      0.3
     ],
     "hoodie": [
-     60,
+     235,
      120,
-     230
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "PRÈS DE SAINT-MALO, CHAQUE NUIT, UNE VOIX FAIT JOUER LE VILLAGE À JACQUES A DIT.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
     ]
    },
    "params": {
@@ -156,17 +132,35 @@
    },
    "cam": {
     "z": [
-     1.04,
-     1.12
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "radio",
+   "text": "SI LA VOIX DIT « JACQUES A DIT », TU OBÉIS. SINON, TU NE BOUGES PAS.",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
     ]
    }
   },
   {
    "scene": "flou",
-   "text": "« SINON, TU NE LE FAIS PAS. SI TU TE TROMPES, TU *MEURS*. »",
+   "text": "LÉA TREMBLE. « L'AN DERNIER, IL A PRIS MON PETIT FRÈRE. »",
    "char": {
     "pose": "face",
-    "expr": "scared",
+    "expr": "closed",
     "head": [
      0.5,
      0.36,
@@ -180,35 +174,42 @@
    },
    "params": {
     "light": [
-     255,
-     70,
-     60
+     120,
+     140,
+     255
     ]
    },
    "cam": {
     "z": [
-     1.12,
-     1.04
+     1.02,
+     1.1
     ]
    }
   },
   {
-   "scene": "jad_place",
-   "text": "« JACQUES A DIT : COURS JUSQU'À L'*ÉGLISE*. »",
-   "params": {
-    "jacques": true,
-    "jacques_at": [
-     0.3,
-     0.86
+   "scene": "flou",
+   "text": "« TA GRAND-MÈRE A DISPARU ? ALORS IL VIENT POUR TOI. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
     ]
    },
-   "sfx": [
-    [
-     "boom",
-     0,
-     0.5
+   "params": {
+    "light": [
+     150,
+     200,
+     255
     ]
-   ],
+   },
    "cam": {
     "z": [
      1.0,
@@ -217,51 +218,8 @@
    }
   },
   {
-   "scene": "eglise",
-   "text": "LÉA : « LÀ-BAS, LA CHOSE NE PEUT PAS ENTRER. »",
-   "cam": {
-    "z": [
-     1.1,
-     1.02
-    ]
-   }
-  },
-  {
-   "scene": "rue",
-   "text": "VOUS COUREZ DANS LA RUE. TOUTES LES MAISONS SONT NOIRES.",
-   "char": {
-    "pose": "back",
-    "hoodie": [
-     235,
-     120,
-     35
-    ]
-   },
-   "cam": {
-    "z": [
-     1.0,
-     1.1
-    ],
-    "x": [
-     0.47,
-     0.53
-    ]
-   }
-  },
-  {
-   "scene": "jad_ruelle",
-   "text": "DERRIÈRE VOUS, DES PAS. LA CHOSE QUI A SUIVI LÉA.",
-   "params": {
-    "phone": false,
-    "jacques": true
-   },
-   "sfx": [
-    [
-     "heart",
-     0,
-     0.6
-    ]
-   ],
+   "scene": "radio",
+   "text": "LES HAUT-PARLEURS DE L'ÉGLISE SE RALLUMENT.",
    "cam": {
     "z": [
      1.14,
@@ -270,24 +228,85 @@
    }
   },
   {
-   "scene": "jad_clocher",
-   "text": "LES HAUT-PARLEURS, TOUT DOUCEMENT : « ARRÊTE-*TOI*. »",
+   "scene": "flou",
+   "text": "« JACQUES A DIT : COURS JUSQU'À LA *STATION-SERVICE*. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
    "params": {
-    "hour": 1,
-    "red": true
+    "light": [
+     120,
+     255,
+     140
+    ]
    },
    "cam": {
     "z": [
-     1.0,
+     1.04,
      1.12
+    ],
+    "x": [
+     0.47,
+     0.53
     ]
    }
   },
   {
    "scene": "rue",
-   "text": "PAS DE JACQUES A DIT. ALORS VOUS *CONTINUEZ*.",
+   "text": "VOUS COUREZ DANS LA RUE PRINCIPALE. TOUTES LES MAISONS SONT NOIRES.",
    "char": {
     "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "seed": 6
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "foret",
+   "text": "LA ROUTE DE LA STATION TRAVERSE LE BOIS.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "scared",
     "hoodie": [
      235,
      120,
@@ -296,35 +315,130 @@
    },
    "cam": {
     "z": [
-     1.04,
-     1.1
-    ]
-   }
-  },
-  {
-   "scene": "rue",
-   "text": "LÉA TRÉBUCHE. ELLE RAMPE POUR NE PAS S'ARRÊTER.",
-   "char": {
-    "pose": "stand",
-    "expr": "scared",
-    "hoodie": [
-     60,
-     120,
-     230
+     1.18,
+     1.08
     ],
-    "y": 1.05
-   },
-   "shake": 3,
-   "cam": {
-    "z": [
-     1.1,
-     1.02
+    "x": [
+     0.53,
+     0.48
     ]
    }
   },
   {
    "scene": "flou",
-   "text": "« AIDE-*MOI* ! »",
+   "text": "LÉA EST DERRIÈRE TOI. TU ENTENDS SON SOUFFLE.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "of": "foret",
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "foret",
+   "text": "ENTRE LES ARBRES, DEUX YEUX ROUGES TE SUIVENT.",
+   "params": {
+    "eyes": true
+   },
+   "shake": 3,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LA VOIX DES HAUT-PARLEURS, TOUTE DOUCE : « ARRÊTE-TOI. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TES JAMBES BRÛLENT. LA STATION EST ENCORE LOIN.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ET LÉA TE SUPPLIE : « ARRÊTE-TOI, JE N'EN PEUX PLUS ! »",
    "char": {
     "pose": "face",
     "expr": "scared",
@@ -339,46 +453,29 @@
      230
     ]
    },
-   "shake": 4,
    "params": {
     "light": [
      255,
-     70,
-     60
+     120,
+     200
     ]
    },
    "cam": {
     "z": [
-     1.0,
-     1.14
-    ]
-   }
-  },
-  {
-   "scene": "jad_jacques",
-   "text": "LES PAS SONT TOUT *PRÈS*.",
-   "params": {
-    "size": 1.4
-   },
-   "sfx": [
-    [
-     "heart",
-     0,
-     0.8
-    ]
-   ],
-   "cam": {
-    "z": [
-     1.0,
-     1.1
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
     ]
    }
   },
   {
    "scene": "flou",
-   "text": "TU T'ARRÊTES POUR LÉA, OU TU CONTINUES DE *COURIR* ?",
+   "text": "TU T'ARRÊTES, OU TU CONTINUES DE *COURIR* ?",
    "choice": {
-    "a": "T'ARRÊTER POUR LÉA",
+    "a": "T'ARRÊTER",
     "b": "CONTINUER DE COURIR"
    },
    "dur": 2.8,
@@ -394,7 +491,7 @@
    "scene": "flou",
    "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
    "choice": {
-    "a": "T'ARRÊTER POUR LÉA",
+    "a": "T'ARRÊTER",
     "b": "CONTINUER DE COURIR",
     "countdown": 3
    },
@@ -416,9 +513,9 @@
   },
   {
    "scene": "flou",
-   "text": "TU T'ARRÊTES POUR RELEVER LÉA.",
+   "text": "TU T'ARRÊTES AU MILIEU DE LA ROUTE.",
    "choice": {
-    "a": "T'ARRÊTER POUR LÉA",
+    "a": "T'ARRÊTER",
     "b": "CONTINUER DE COURIR",
     "picked": "A"
    },
@@ -439,11 +536,10 @@
    }
   },
   {
-   "scene": "jad_ruelle",
-   "text": "LES PAS S'ARRÊTENT, JUSTE DERRIÈRE TOI.",
+   "scene": "foret",
+   "text": "LES YEUX ROUGES SORTENT DU BOIS.",
    "params": {
-    "phone": false,
-    "jacques": true,
+    "eyes": true,
     "red": true
    },
    "record": "r1",
@@ -452,21 +548,85 @@
     "z": [
      1.18,
      1.08
+    ],
+    "x": [
+     0.53,
+     0.48
     ]
    }
   },
   {
-   "scene": "jad_clocher",
-   "text": "LES HAUT-PARLEURS RIGOLENT : « JACQUES N'A PAS DIT DE T'ARRÊTER. »",
-   "params": {
-    "hour": 1,
-    "red": true
+   "scene": "flou",
+   "text": "LA VOIX RIGOLE : « JACQUES N'A JAMAIS DIT DE T'ARRÊTER. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
    },
    "record": "r1",
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
    "cam": {
     "z": [
      1.02,
      1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "QUELQU'UN SANS VISAGE SE PENCHE VERS TOI.",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     25,
+     25,
+     30
+    ]
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
     ]
    }
   },
@@ -523,9 +683,9 @@
   },
   {
    "scene": "flou",
-   "text": "TU NE T'ARRÊTES PAS. TU COURS JUSQU'À L'ÉGLISE.",
+   "text": "TU NE T'ARRÊTES PAS. TU TIRES LÉA PAR LA MAIN.",
    "choice": {
-    "a": "T'ARRÊTER POUR LÉA",
+    "a": "T'ARRÊTER",
     "b": "CONTINUER DE COURIR",
     "picked": "B"
    },
@@ -545,15 +705,129 @@
    }
   },
   {
-   "scene": "rue",
-   "text": "LÉA RAMPE TOUJOURS. ELLE ARRIVE JUSTE APRÈS TOI.",
+   "scene": "flou",
+   "text": "« ELLE N'A PAS DIT JACQUES A DIT ! CONTINUE ! »",
    "char": {
-    "pose": "stand",
-    "expr": "scared",
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "shake": 3,
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "station",
+   "text": "AU BOUT DE LA ROUTE, LA STATION-SERVICE EST ALLUMÉE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "VOUS ENTREZ. LÉA FERME LA PORTE À CLÉ.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
     "hoodie": [
      60,
      120,
      230
+    ]
+   },
+   "params": {
+    "light": [
+     150,
+     200,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "VOUS AVEZ TENU. POUR L'INSTANT.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
     ]
    },
    "cam": {
@@ -564,132 +838,211 @@
    }
   },
   {
-   "scene": "eglise",
-   "text": "TU FERMES LA PORTE. ELLE PLEURE : « TU M'AS LAISSÉE. »",
-   "char": {
-    "pose": "stand",
-    "expr": "scared",
-    "head": [
-     0.5,
-     0.42,
-     0.14
-    ],
-    "hoodie": [
-     60,
-     120,
-     230
-    ]
-   },
-   "cam": {
-    "z": [
-     1.1,
-     1.02
-    ]
-   }
-  },
-  {
-   "scene": "porte",
-   "text": "ON FRAPPE.",
-   "voice": "On frappe.",
-   "params": {
-    "seed": 7
-   },
-   "sfx": [
-    [
-     "knock",
-     0,
-     0.9
-    ]
-   ],
-   "shake": 3,
-   "cam": {
-    "z": [
-     1.0,
-     1.12
-    ]
-   }
-  },
-  {
-   "scene": "jad_mamie",
-   "text": "« MON CŒUR, C'EST MAMIE. OUVRE-MOI, LA CHOSE *ARRIVE* ! »",
-   "params": {
-    "mamie": true,
-    "dark": true
-   },
-   "cam": {
-    "z": [
-     1.04,
-     1.14
-    ]
-   }
-  },
-  {
-   "scene": "porte",
-   "text": "C'EST SA VOIX. TA GRAND-MÈRE, CELLE QUI A *DISPARU*.",
-   "params": {
-    "seed": 7
-   },
-   "cam": {
-    "z": [
-     1.1,
-     1.02
-    ]
-   }
-  },
-  {
-   "scene": "jad_place",
-   "text": "LES HAUT-PARLEURS : « JACQUES A DIT : OUVRE LA *PORTE*. »",
-   "params": {
-    "jacques": true,
-    "red": true
-   },
-   "sfx": [
-    [
-     "boom",
-     0,
-     0.5
-    ]
-   ],
-   "cam": {
-    "z": [
-     1.0,
-     1.12
-    ]
-   }
-  },
-  {
-   "scene": "eglise",
-   "text": "LÉA : « N'OUVRE PAS. CEUX QUI DISPARAISSENT NE REVIENNENT JAMAIS. »",
-   "char": {
-    "pose": "stand",
-    "expr": "scared",
-    "head": [
-     0.5,
-     0.42,
-     0.14
-    ],
-    "hoodie": [
-     60,
-     120,
-     230
-    ]
-   },
+   "scene": "station",
+   "text": "DERRIÈRE LE COMPTOIR, IL N'Y A PERSONNE.",
    "params": {
     "dark": true
    },
    "cam": {
     "z": [
-     1.12,
-     1.04
+     1.0,
+     1.12
     ]
    }
   },
   {
    "scene": "flou",
-   "text": "TU OBÉIS À JACQUES ET TU OUVRES, OU TU ÉCOUTES *LÉA* ?",
+   "text": "MAIS SUR LA VITRE, UNE GRANDE MAIN NOIRE S'EST POSÉE.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "shake": 3,
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "radio",
+   "text": "DANS LA STATION, LA RADIO S'ALLUME TOUTE SEULE.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« JACQUES A DIT : FERME LES YEUX JUSQU'À L'*AUBE*. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LÉA HURLE : « NE LES FERME PAS ! IL EST DERRIÈRE TOI ! »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ]
+   },
+   "shake": 4,
+   "params": {
+    "light": [
+     255,
+     120,
+     200
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "SI TU DÉSOBÉIS À JACQUES, TU DISPARAIS.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "SI TU FERMES LES YEUX, TU NE VERRAS PAS CE QUI APPROCHE.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU FERMES LES YEUX, OU TU LES GARDES *OUVERTS* ?",
    "choice": {
-    "a": "OUVRIR À MAMIE",
-    "b": "ÉCOUTER LÉA"
+    "a": "FERMER LES YEUX",
+    "b": "LES GARDER OUVERTS"
    },
    "dur": 2.8,
    "text_y": 0.2,
@@ -704,8 +1057,8 @@
    "scene": "flou",
    "text": "TON CHOIX ? LA RÉPONSE DANS LA *PARTIE 3*.",
    "choice": {
-    "a": "OUVRIR À MAMIE",
-    "b": "ÉCOUTER LÉA"
+    "a": "FERMER LES YEUX",
+    "b": "LES GARDER OUVERTS"
    },
    "dur": 3.2,
    "text_y": 0.2,
@@ -717,15 +1070,18 @@
    }
   },
   {
-   "scene": "jad_remparts",
+   "scene": "fenetre",
    "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
    "params": {
-    "dark": true
+    "moon": [
+     0.6,
+     0.3
+    ]
    },
    "cam": {
     "z": [
-     1.0,
-     1.08
+     1.14,
+     1.04
     ]
    }
   }

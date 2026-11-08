@@ -38,8 +38,8 @@ lampadaire ; `size`). Tous acceptent `aube` (ciel d'aube, épisode 6),
 | Ép. | Ordre / règle | Situation / choix | Suspense final |
 |---|---|---|---|
 | 1 | « Jacques a dit : éteins la lumière », puis « allume » sans Jacques | A rallumer / B ne pas bouger | « Jacques a dit : ouvre ta porte. » Quelqu'un est derrière. A ouvrir / B ne pas ouvrir |
-| 2 | On ouvre : c'est Léa (sa mère vient de disparaître). « Jacques a dit : cours jusqu'à l'église » (la chose ne peut pas y entrer), puis « arrête-toi » sans Jacques ; Léa tombe | A t'arrêter pour relever Léa / B continuer (bonne : B, Léa rampe et arrive après toi : « tu m'as laissée ») | Mamie frappe à la porte de l'église ; haut-parleurs : « Jacques a dit : ouvre la porte » ; Léa : « n'ouvre pas, ceux qui disparaissent ne reviennent jamais ». A obéir et ouvrir / B écouter Léa |
-| 3 | Réponse : la voix de mamie est la vraie, ou un piège de Jacques (à trancher en écrivant). Un ordre glissé dans la voix de ta grand-mère | à écrire | à écrire |
+| 2 | On doit obéir : la porte s'ouvre sur Léa. « Jacques a dit : cours jusqu'à la station-service », puis « arrête-toi » sans Jacques | A t'arrêter / B continuer | « Jacques a dit : ferme les yeux jusqu'à l'aube. » Léa crie qu'il est derrière toi. A fermer / B garder ouverts |
+| 3 | Commence par la réponse à « fermer les yeux / les garder ouverts » (fin de la partie 2 publiée le 08/11). Passer le test du spectateur extérieur (ROUTINE.md). Un ordre glissé dans la voix de ta grand-mère | à écrire | à écrire |
 | 4 | Deux ordres en même temps (haut-parleur et téléphone) | à écrire | à écrire |
 | 5 | « Jacques » est dans le village | à écrire | à écrire |
 | 6 | L'aube : le dernier ordre | à écrire | dilemme final |
