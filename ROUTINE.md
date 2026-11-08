@@ -225,6 +225,18 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
        ou un fait qui arrive sans être présenté, une phrase recopiée d'une
        autre vidéo, un choix dont la règle donne la réponse sans aucun prix à
        payer, des phrases vides (« la fin va te glacer ») ;
+     - **ÊTRE LE PLUS PRÉCIS POSSIBLE (Fio, 08/11 : « faut être un max précis
+       pour que ce soit vraiment simple à comprendre, rapidement »)** :
+       chaque réplique se comprend en 2 secondes, à la première écoute.
+       Une seule idée par réplique. Toujours dire QUI parle (« Léa : », « les
+       haut-parleurs : ») et QUI agit, jamais un « il », « elle », « ça »,
+       « ils » ou « la chose » dont on ne sait pas ce que c'est. Des mots
+       concrets (« la porte de l'église », pas « là-bas »). Dire POURQUOI le
+       héros fait chaque action, et pourquoi le mauvais choix tue. La règle
+       du jeu est dite en entier, avec les mêmes mots, dans chaque vidéo.
+       Pas de métaphore ni de phrase floue. Le spectateur extérieur doit
+       pouvoir répondre sans hésiter : où on est, qui est qui, quelle est la
+       règle, ce qui est en jeu au choix ;
    - structure : accroche, mise en place, règle, situation, **choix A/B**
      avec compte à rebours, mauvaise option jouée puis `rewind`, bonne
      option, développement (l'histoire avance, nouvelle tension), suspense ;
