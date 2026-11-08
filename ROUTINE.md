@@ -43,6 +43,51 @@
 > - Tout ce qui suit sur « 3 épisodes », « 10h/12h/18h », « 15h/20h30 »,
 >   « Metricool » (programmation) est remplacé par ces règles.
 
+> **NOUVELLE FORME DES ÉPISODES (choix de Fio le 08/11, d'après son exemple
+> « Line 9 », voir /mnt/project-files/exemples/). Prime sur les règles plus bas
+> qui parlent de choix A/B au milieu, de « TU ES MORT » et de « ON REMBOBINE ».
+> S'applique aux épisodes de série (10h et 17h). Les courtes « SURVIS ? »
+> gardent leur forme.**
+>
+> 1. **Histoire en ligne droite** : PLUS de choix A/B au milieu, plus de
+>    `record` / `rewind` / « TU ES MORT ». Une seule situation simple
+>    (1 lieu principal, 1-2 personnages, 2-3 règles), qui avance sans retour
+>    en arrière. Phrases au présent, avec « tu », 1 idée par phrase.
+> 2. **Chaque règle est mise à l'épreuve** : une règle annoncée doit être
+>    testée plus tard dans le même épisode (ex. « ne réponds pas si on te
+>    demande ton nom » → plus tard une voix demande ton nom). Pas de règle
+>    inutile. Le test spectateur extérieur vérifie ce point.
+> 3. **Carte de règle à l'écran** : sur le plan où la règle est dite ET sur
+>    le plan où elle est testée, mettre `"rule": {"n": 1, "text": "NE
+>    RÉPONDS PAS."}` (carte papier « RÈGLE N°1 » en haut). Sur un plan avec
+>    personnage ou objet, pas sur `papier`.
+> 4. **Compteur de tension** : dans l'épisode, `"counter_label"` (ex.
+>    `"PASSAGERS"`, `"APPELS MANQUÉS"`, `"PORTES OUVERTES"`, adapté à
+>    l'histoire) et `"counter_start"`, puis `"count": N` sur le plan où il
+>    monte (il clignote en rouge). Il doit monter 2-3 fois. L'horloge
+>    (`clock_start`) avance déjà toute seule.
+> 5. **Lumière qui suit la peur** : `"mood": "bleu"` dans l'épisode au
+>    départ, puis `"mood": "rouge"` sur le plan où le danger apparaît, puis
+>    `"mood": "noir"` pour la fin (la valeur reste jusqu'au changement).
+> 6. **Gros plans** : au moins 8 gros plans de visages qui réagissent
+>    (peur, yeux grands ouverts) + les plans objet qui montrent exactement la
+>    phrase (déjà en règle).
+> 7. **Ouverture** : 1re phrase = la situation en moins de 8 mots (« Tu
+>    t'endors dans le dernier métro. »), titre de série + partie au début.
+> 8. **Fin = vote** : un seul choix A/B, à la toute fin, avec les cartes,
+>    texte « A OU B ? LE PLUS DE VOTES DÉCIDE LA *PARTIE X+1* » puis
+>    « ÉCRIS A OU B EN COMMENTAIRE ». Légende : « Le choix avec le plus de
+>    votes décide la partie X+1 👇 ».
+> 9. **Le vote décide vraiment** : avant d'écrire la partie suivante, lire
+>    les commentaires de la partie précédente (TikTok + Instagram, via les
+>    stats disponibles) et compter A / B. Le plus de votes gagne ; si moins
+>    de 3 votes, choisir au hasard. La partie suivante commence par ce choix
+>    (« Vous avez choisi de descendre. ») et ses conséquences, puis une
+>    nouvelle situation et un nouveau vote. Noter le résultat dans
+>    `series/state.json`.
+> 10. **S'inspirer, ne pas recopier** l'exemple (histoire, phrases, dessins
+>    et voix restent les nôtres).
+
 Ce fichier est le mode d'emploi de la routine Claude qui tourne chaque matin.
 Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricool à
 **10:00, 12:00 et 18:00 (Europe/Paris)** le jour même, sans intervention humaine.
