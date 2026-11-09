@@ -309,3 +309,9 @@ creux à 11 h, 13 h-14 h et après 21 h).
 - Voix : « TU FIXES LE REFLET » lu « tu chiques ce reflet » → « TU REGARDES TON REFLET ».
 - Bonne réponse tirée au sort : N°11 = A, N°12 = A (N°10 : « rentrer à pied », N°11 : « courir », tirés au sort).
 - Décors : 6 nouveaux (jad_port, jad_cabine, miroir, couloir_appart, interphone, facade).
+- **Partie 5 (ép. 26, 17h)** : vote de la partie 4 = 1 A (« À ») / 1 B (« Bbbbbbn ») → tirage = « moi ». Écrite à 14h
+  après lecture des commentaires. Spectateur extérieur : 6 → 6 → 7 → 7 → **7/10** (pas de contradiction restante, juste
+  des questions de suspense ; publiée quand même pour tenir 17h — à faire mieux : écrire plus tôt). « VILLAGE » mal
+  prononcé (« gilange ») → « PLACE DE L'ÉGLISE ». Durée 97,8 s.
+- Décors : +2 (jad_ombres, jad_porte) → 8 nouveaux aujourd'hui.
+- Partie 4 après 4 h : TikTok 329 vues / 13 likes / 2 commentaires (2 votes), Instagram temps moyen 13 s (meilleur que la veille).

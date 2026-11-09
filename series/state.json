@@ -2,8 +2,8 @@
   "current_series": "jacques-a-dit",
   "series_file": "series/jacques-a-dit.md",
   "series_episode_count": 6,
-  "next_episode_in_series": 5,
-  "next_global_episode": 26,
+  "next_episode_in_series": 6,
+  "next_global_episode": 27,
   "published": [
     {
       "global": 1,
@@ -202,6 +202,15 @@
       "note": "1re partie au format « Line 9 », nouvelle voix grave ; vote partie 3 = la laisser (1 voix + tirage)",
       "tiktok_url": "https://www.tiktok.com/@4_youchoose_4/video/7706094284008738080",
       "instagram_url": "https://www.instagram.com/reel/Dfg9jfUgmNu/"
+    },
+    {
+      "global": 26,
+      "series": "jacques-a-dit",
+      "episode": 5,
+      "file": "episodes/ep26.json",
+      "slot": "2026-11-09T17:00:00 Europe/Paris",
+      "zernio_id": "6af1d3aaa1f01d103df87a1e",
+      "note": "vote partie 4 : 1 A / 1 B → tirage = « moi » ; spectateur extérieur 7/10"
     }
   ],
   "survis_next": 13,
@@ -290,12 +299,17 @@
       "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
     }
   ],
-  "media_note": "09/11 : branche media = ep25, survis-11, survis-12 (+ ep26 à venir) ; supprimer à la prochaine routine, après publication",
+  "media_note": "09/11 : branche media = ep25, ep26, survis-11, survis-12 ; supprimer à la prochaine routine, après publication",
   "votes": {
     "partie3": {
       "A_laisser": 1,
       "B_emmener": 0,
       "result": "la laisser (moins de 3 votes : tirage au sort, même résultat)"
+    },
+    "partie4": {
+      "A_ma_grand_mere": 1,
+      "B_moi": 1,
+      "result": "moi (moins de 3 votes : tirage au sort)"
     }
   }
 }

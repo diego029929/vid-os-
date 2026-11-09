@@ -2485,6 +2485,82 @@ def scene_facade(p):
     return _end(c, p, 0.5, 0.6)
 
 
+def scene_jad_ombres(p):
+    """Le village des disparus : la place sous un ciel rouge, des ombres noires immobiles (les disparus).
+    "n": nombre d'ombres, "jacques": Jacques au fond, "porte": la porte de l'église brille."""
+    c = Canvas((70, 10, 20), (150, 50, 50))
+    d = c.d
+    rnd = random.Random(91)
+    for _ in range(40):
+        x, y = rnd.uniform(0, 1), rnd.uniform(0, 0.4)
+        d.ellipse(c.box(x - 0.002, y - 0.002, x + 0.002, y + 0.002), fill=(255, 190, 170))
+    c.glow(0.78, 0.12, 0.25, (255, 90, 70), 0.5)
+    d = c.d
+    d.ellipse(c.box(0.74, 0.12 - 0.04 * CW / CH, 0.82, 0.12 + 0.04 * CW / CH), fill=(40, 6, 10))
+    d.rectangle(c.box(0.40, 0.10, 0.60, 0.52), fill=(50, 26, 36))
+    d.polygon([c.P(0.40, 0.10), c.P(0.50, -0.06), c.P(0.60, 0.10)], fill=(30, 12, 22))
+    _horn(c, 0.40, 0.30, 1.0, -1)
+    _horn(c, 0.60, 0.30, 1.0, 1)
+    d = c.d
+    door = (255, 220, 170) if p.get("porte") else (20, 8, 12)
+    d.rectangle(c.box(0.47, 0.40, 0.53, 0.52), fill=door)
+    if p.get("porte"):
+        c.glow(0.5, 0.46, 0.3, (255, 210, 150), 0.6)
+        d = c.d
+    _granite_house(c, -0.02, 0.36, 0.62, 0.36, 92, 0.0)
+    _granite_house(c, 0.64, 1.02, 0.62, 0.34, 93, 0.0)
+    d = c.d
+    d.rectangle(c.box(0, 0.62, 1, 1), fill=(60, 30, 36))
+    for k in range(8):
+        v = 0.64 + k * 0.045
+        for _ in range(12 + k * 2):
+            u = rnd.uniform(0, 1)
+            g = rnd.randint(50, 72)
+            d.rounded_rectangle(c.box(u, v, u + 0.02 + k * 0.005, v + 0.015 + k * 0.003), radius=6, fill=(g + 20, g - 10, g - 4))
+    spots = [(0.18, 0.80, 0.9), (0.80, 0.82, 1.0), (0.33, 0.72, 0.6), (0.68, 0.71, 0.6), (0.10, 0.70, 0.55), (0.90, 0.72, 0.55), (0.25, 0.92, 1.3)]
+    for u, v, s in spots[:p.get("n", 5)]:
+        _fig(c, u, v, s, col=(8, 4, 8))
+    if p.get("jacques"):
+        _jacques(c, 0.5, 0.70, 0.7)
+    # brume rouge au sol
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.78, 1.1, 1.0), fill=(200, 80, 80, 70)), 0.05)
+    return _end(c, p, 0.5, 0.72)
+
+
+def scene_jad_porte(p):
+    """Intérieur de l'église des disparus : bancs, vitraux éteints, au fond une porte qui brille
+    (le passage vers le vrai village, l'aube). "shadow": une petite ombre (Théo) près de la porte."""
+    c = Canvas((30, 14, 26), (14, 8, 14))
+    d = c.d
+    # voûte et colonnes
+    d.polygon([c.P(0, 0), c.P(0.5, -0.1), c.P(1, 0), c.P(1, 0.2), c.P(0.5, 0.05), c.P(0, 0.2)], fill=(20, 10, 18))
+    for u in (0.08, 0.26, 0.74, 0.92):
+        d.rectangle(c.box(u - 0.03, 0.10, u + 0.03, 0.80), fill=(56, 40, 50))
+        d.rectangle(c.box(u - 0.04, 0.78, u + 0.04, 0.82), fill=(70, 50, 62))
+    # vitraux éteints
+    for u in (0.17, 0.83):
+        d.rounded_rectangle(c.box(u - 0.04, 0.18, u + 0.04, 0.40), radius=40, fill=(60, 20, 40))
+        d.line([c.P(u, 0.18), c.P(u, 0.40)], fill=(20, 10, 16), width=6)
+        d.line([c.P(u - 0.04, 0.29), c.P(u + 0.04, 0.29)], fill=(20, 10, 16), width=6)
+    # porte lumineuse
+    d.rounded_rectangle(c.box(0.40, 0.30, 0.60, 0.70), radius=60, fill=(255, 226, 180))
+    c.glow(0.5, 0.50, 0.55, (255, 200, 140), 0.7)
+    c.soft(lambda dd, cc: dd.polygon([cc.P(0.40, 0.70), cc.P(0.60, 0.70), cc.P(0.85, 1.0), cc.P(0.15, 1.0)], fill=(255, 210, 160, 80)), 0.03)
+    d = c.d
+    # bancs
+    for k in range(4):
+        v = 0.74 + k * 0.06
+        w = 0.16 + k * 0.03
+        for side in (-1, 1):
+            u0 = 0.5 + side * 0.08
+            u1 = 0.5 + side * (0.08 + w)
+            d.rectangle(c.box(min(u0, u1), v, max(u0, u1), v + 0.025), fill=(70, 40, 34))
+            d.rectangle(c.box(min(u0, u1), v - 0.04, max(u0, u1), v - 0.03), fill=(60, 34, 30))
+    if p.get("shadow"):
+        _fig(c, 0.56, 0.70, 0.55, col=(6, 2, 6))
+    return _end(c, p, 0.5, 0.65)
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -2536,7 +2612,8 @@ SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, 
           "rame": scene_rame, "metro_arrive": scene_metro_arrive,
           "jad_port": scene_jad_port, "jad_cabine": scene_jad_cabine,
           "miroir": scene_miroir, "couloir_appart": scene_couloir_appart,
-          "interphone": scene_interphone, "facade": scene_facade}
+          "interphone": scene_interphone, "facade": scene_facade,
+          "jad_ombres": scene_jad_ombres, "jad_porte": scene_jad_porte}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
