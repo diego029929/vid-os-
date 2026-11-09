@@ -2146,6 +2146,421 @@ def scene_metro_arrive(p):
     return _end(c, p, 0.4, 0.6)
 
 
+def scene_jad_port(p):
+    """Port de pêche près de Saint-Malo la nuit : quai de granit, bateaux, phare au loin.
+    "leaving": un bateau part sans lumière, "phare": le phare tourne (rayon), "jacques" possible sur le quai."""
+    c = Canvas((10, 12, 36), (52, 44, 90))
+    _jad_sky(c, p, 61)
+    d = c.d
+    # mer
+    d.rectangle(c.box(0, 0.46, 1, 0.74), fill=(18, 24, 56) if not p.get("aube") else (110, 90, 130))
+    rnd = random.Random(62)
+    for _ in range(60):
+        u, v = rnd.uniform(0, 1), rnd.uniform(0.47, 0.73)
+        d.line([c.P(u, v), c.P(u + rnd.uniform(0.02, 0.07), v)], fill=(60, 70, 130), width=4)
+    # côte et phare au loin
+    d.polygon([c.P(0.62, 0.47), c.P(0.70, 0.43), c.P(0.92, 0.42), c.P(1.0, 0.47)], fill=(16, 16, 30))
+    d.rectangle(c.box(0.83, 0.30, 0.86, 0.43), fill=(200, 196, 210))
+    for k in range(3):
+        d.rectangle(c.box(0.83, 0.33 + k * 0.03, 0.86, 0.345 + k * 0.03), fill=(170, 40, 50))
+    d.rectangle(c.box(0.825, 0.28, 0.865, 0.30), fill=(255, 230, 160))
+    c.glow(0.845, 0.29, 0.10, (255, 230, 160), 0.6)
+    if p.get("phare", True):
+        c.soft(lambda dd, cc: dd.polygon([cc.P(0.845, 0.29), cc.P(0.30, 0.20), cc.P(0.30, 0.30)], fill=(255, 240, 190, 60)), 0.02)
+    d = c.d
+    # bateaux amarrés (coques, mâts, cordes)
+    for k, (u, s, col) in enumerate(((0.12, 1.0, (150, 50, 50)), (0.36, 0.8, (50, 90, 150)), (0.62, 0.7, (60, 120, 90)))):
+        v = 0.70 - k * 0.02
+        d.polygon([c.P(u - 0.12 * s, v - 0.05 * s), c.P(u + 0.12 * s, v - 0.05 * s), c.P(u + 0.09 * s, v), c.P(u - 0.09 * s, v)], fill=col)
+        d.rectangle(c.box(u - 0.04 * s, v - 0.10 * s, u + 0.03 * s, v - 0.05 * s), fill=(210, 205, 215))
+        d.rectangle(c.box(u - 0.025 * s, v - 0.09 * s, u + 0.01 * s, v - 0.07 * s), fill=(20, 20, 34))
+        d.line([c.P(u + 0.05 * s, v - 0.05 * s), c.P(u + 0.05 * s, v - 0.30 * s)], fill=(40, 40, 56), width=8)
+        d.line([c.P(u + 0.05 * s, v - 0.30 * s), c.P(u - 0.10 * s, v - 0.05 * s)], fill=(60, 60, 80), width=3)
+        d.line([c.P(u - 0.10 * s, v - 0.03 * s), c.P(u - 0.16 * s, 0.78)], fill=(120, 110, 90), width=4)
+    if p.get("leaving"):
+        # bateau qui part, tout noir, vers le large
+        u, v, s = 0.50, 0.53, 0.45
+        d.polygon([c.P(u - 0.12 * s, v - 0.05 * s), c.P(u + 0.12 * s, v - 0.05 * s), c.P(u + 0.09 * s, v), c.P(u - 0.09 * s, v)], fill=(6, 6, 12))
+        d.rectangle(c.box(u - 0.04 * s, v - 0.10 * s, u + 0.03 * s, v - 0.05 * s), fill=(6, 6, 12))
+        d.line([c.P(u + 0.05 * s, v - 0.05 * s), c.P(u + 0.05 * s, v - 0.30 * s)], fill=(6, 6, 12), width=6)
+        for k in range(4):
+            d.line([c.P(u - 0.15 - k * 0.06, v + 0.005 + k * 0.01), c.P(u - 0.06 - k * 0.06, v + 0.005 + k * 0.01)], fill=(90, 100, 170), width=4)
+    # quai de granit, bittes d'amarrage, casiers
+    d.rectangle(c.box(0, 0.76, 1, 1), fill=(58, 56, 70))
+    d.rectangle(c.box(0, 0.74, 1, 0.77), fill=(96, 92, 108))
+    for row in range(6):
+        v = 0.78 + row * 0.037
+        u = -0.03 + (row % 2) * 0.04
+        while u < 1:
+            g = rnd.randint(52, 78)
+            d.rectangle(c.box(u, v, u + 0.075, v + 0.032), fill=(g, g - 2, g + 12))
+            u += 0.08
+    for u in (0.22, 0.78):
+        d.rounded_rectangle(c.box(u - 0.025, 0.72, u + 0.025, 0.78), radius=12, fill=(30, 30, 40))
+    for k in range(3):
+        u = 0.86 + k * 0.035
+        d.rectangle(c.box(u, 0.69 - k * 0.0, u + 0.03, 0.75), outline=(140, 120, 80), width=4)
+    # lampadaire du quai
+    d.rectangle(c.box(0.05, 0.40, 0.06, 0.78), fill=(24, 24, 34))
+    d.polygon([c.P(0.035, 0.40), c.P(0.075, 0.40), c.P(0.08, 0.37), c.P(0.03, 0.37)], fill=(255, 210, 130))
+    if not p.get("dark"):
+        c.glow(0.055, 0.40, 0.35, (255, 200, 120), 0.4)
+    if p.get("jacques"):
+        _jacques(c, *p.get("jacques_at", (0.70, 0.86)), s=p.get("jacques_size", 0.9))
+    return _end(c, p, 0.5, 0.72)
+
+
+def scene_jad_cabine(p):
+    """Vieille cabine téléphonique sur le port, la nuit. "ring": elle sonne (lueur, ondes),
+    "hanging": le combiné pend au bout du fil, "person": silhouette du pêcheur dedans (couleur)."""
+    c = Canvas((12, 12, 34), (50, 42, 84))
+    _jad_sky(c, p, 71)
+    d = c.d
+    _granite_house(c, -0.05, 0.28, 0.80, 0.36, 72, 0.15)
+    _granite_house(c, 0.74, 1.05, 0.80, 0.34, 73, 0.15)
+    d = c.d
+    d.rectangle(c.box(0, 0.80, 1, 1), fill=(44, 42, 56))
+    rnd = random.Random(74)
+    for k in range(6):
+        v = 0.81 + k * 0.032
+        for _ in range(12 + k * 2):
+            u = rnd.uniform(0, 1)
+            g = rnd.randint(50, 68)
+            d.rounded_rectangle(c.box(u, v, u + 0.03 + k * 0.004, v + 0.018), radius=6, fill=(g, g, g + 12))
+    x0, x1, y0, y1 = 0.33, 0.67, 0.22, 0.86
+    lit = (120, 220, 170) if not p.get("dark") else (60, 90, 80)
+    # cadre de la cabine
+    d.rectangle(c.box(x0, y0, x1, y1), fill=(30, 60, 70))
+    d.rectangle(c.box(x0 + 0.02, y0 + 0.06, x1 - 0.02, y1 - 0.02), fill=(26, 40, 46))
+    d.rectangle(c.box(x0, y0, x1, y0 + 0.05), fill=(230, 230, 236))
+    f = font(int(c.w * 0.04))
+    tw = d.textlength("TÉLÉPHONE", font=f)
+    d.text((0.5 * c.w - tw / 2, (y0 + 0.006) * c.h), "TÉLÉPHONE", fill=(30, 60, 70), font=f)
+    # vitres (petits carreaux)
+    for i in range(3):
+        for j in range(5):
+            u = x0 + 0.03 + i * 0.097
+            v = y0 + 0.07 + j * 0.112
+            d.rectangle(c.box(u, v, u + 0.085, v + 0.10), fill=(56, 90, 96))
+    c.glow(0.5, 0.36, 0.22, lit, 0.45 if not p.get("dark") else 0.2)
+    d = c.d
+    # appareil + combiné
+    d.rounded_rectangle(c.box(0.45, 0.38, 0.55, 0.52), radius=14, fill=(24, 24, 30))
+    for i in range(3):
+        for j in range(4):
+            d.rectangle(c.box(0.465 + i * 0.025, 0.42 + j * 0.022, 0.48 + i * 0.025, 0.435 + j * 0.022), fill=(180, 180, 190))
+    if p.get("hanging"):
+        d.line([c.P(0.46, 0.45), c.P(0.44, 0.62), c.P(0.47, 0.70)], fill=(10, 10, 14), width=6)
+        d.rounded_rectangle(c.box(0.44, 0.70, 0.50, 0.75), radius=14, fill=(14, 14, 20))
+    else:
+        d.rounded_rectangle(c.box(0.43, 0.36, 0.46, 0.50), radius=12, fill=(14, 14, 20))
+    if p.get("person"):
+        _fig(c, 0.58, 0.84, 1.6, col=tuple(p["person"]))
+    if p.get("ring"):
+        for k in range(3):
+            r = 0.06 + k * 0.05
+            d.arc(c.box(0.5 - r, 0.44 - r * 0.6, 0.5 + r, 0.44 + r * 0.6), 200, 340, fill=(255, 230, 150), width=8)
+    return _end(c, p, 0.5, 0.72)
+
+
+def _mirror_face(c, u, v, s, eyes="open", smile=False, col=(235, 120, 35)):
+    """Visage bâton (reflet) : tête claire, yeux, bouche, épaules du sweat."""
+    d = c.d
+    d.polygon([c.P(u - 0.30 * s, v + 0.42 * s), c.P(u - 0.20 * s, v + 0.20 * s), c.P(u + 0.20 * s, v + 0.20 * s), c.P(u + 0.30 * s, v + 0.42 * s)], fill=col)
+    r = 0.17 * s
+    d.ellipse(c.box(u - r, v - r * CW / CH, u + r, v + r * CW / CH), fill=(232, 228, 238))
+    for du in (-0.06, 0.06):
+        ex, ey = u + du * s, v - 0.02 * s
+        if eyes == "closed":
+            d.arc(c.box(ex - 0.03 * s, ey - 0.02 * s, ex + 0.03 * s, ey + 0.02 * s), 0, 180, fill=(20, 18, 26), width=8)
+        else:
+            d.ellipse(c.box(ex - 0.022 * s, ey - 0.03 * s, ex + 0.022 * s, ey + 0.03 * s), fill=(20, 18, 26))
+            d.ellipse(c.box(ex - 0.006 * s, ey - 0.018 * s, ex + 0.004 * s, ey - 0.006 * s), fill=(240, 240, 250))
+    if smile:
+        d.arc(c.box(u - 0.09 * s, v + 0.02 * s, u + 0.09 * s, v + 0.10 * s), 10, 170, fill=(20, 18, 26), width=10)
+    else:
+        d.line([c.P(u - 0.035 * s, v + 0.075 * s), c.P(u + 0.035 * s, v + 0.075 * s)], fill=(20, 18, 26), width=7)
+
+
+def scene_miroir(p):
+    """Gros plan objet : miroir de salle de bain, avec ton reflet. "eyes": "open" | "closed",
+    "smile": le reflet sourit, "hand": main du reflet posée contre la vitre, "crack": miroir fêlé,
+    "text": mot écrit dans la buée, "empty": plus de reflet, "dark"."""
+    c = Canvas((0, 0, 0), (0, 0, 0))
+    c.img = _room_blur(p.get("seed", 5), ((60, 66, 92), (24, 26, 40))).resize((c.w, c.h), Image.LANCZOS)
+    c.d = d = ImageDraw.Draw(c.img)
+    for i in range(26):
+        d.line([c.P(0, i * 0.04), c.P(1, i * 0.04)], fill=(46, 50, 70), width=5)
+    x0, y0, x1, y1 = 0.10, 0.12, 0.90, 0.70
+    d.rounded_rectangle(c.box(x0 - 0.02, y0 - 0.015, x1 + 0.02, y1 + 0.015), radius=30, fill=(170, 170, 186))
+    mir = R.gradient(int((x1 - x0) * c.w), int((y1 - y0) * c.h), (52, 58, 86), (22, 24, 40))
+    c.img.paste(mir, (int(x0 * c.w), int(y0 * c.h)))
+    c.d = d = ImageDraw.Draw(c.img)
+    # dans le reflet : porte ouverte du couloir derrière toi
+    d.rectangle(c.box(0.66, 0.20, 0.84, 0.62), fill=(10, 10, 18))
+    if p.get("figure"):
+        _fig(c, 0.75, 0.62, 1.4, eyes=True)
+        d = c.d
+    if not p.get("empty"):
+        _mirror_face(c, 0.46, 0.40, 1.0, p.get("eyes", "open"), p.get("smile"))
+        d = c.d
+    if p.get("hand"):
+        hu, hv = 0.30, 0.50
+        d.ellipse(c.box(hu - 0.06, hv - 0.03, hu + 0.06, hv + 0.07), fill=(232, 228, 238))
+        for a in (-0.045, -0.015, 0.015, 0.045):
+            d.line([c.P(hu + a, hv), c.P(hu + a * 1.3, hv - 0.09)], fill=(232, 228, 238), width=22)
+    if p.get("text"):
+        f = font(int(c.w * 0.09))
+        tw = d.textlength(str(p["text"]), font=f)
+        c.soft(lambda dd, cc: dd.text((0.5 * cc.w - tw / 2, 0.14 * cc.h), str(p["text"]), font=f, fill=(220, 225, 240, 200)), 0.003)
+        d = c.d
+    if p.get("crack"):
+        rnd = random.Random(9)
+        for _ in range(11):
+            a = rnd.uniform(0, 2 * math.pi)
+            ln = rnd.uniform(0.12, 0.35)
+            d.line([c.P(0.58, 0.30), c.P(0.58 + ln * math.cos(a), 0.30 + ln * math.sin(a) * CW / CH)], fill=(225, 230, 245), width=5)
+    # reflet vitre en diagonale
+    c.soft(lambda dd, cc: dd.polygon([cc.P(0.12, 0.14), cc.P(0.30, 0.14), cc.P(0.12, 0.40)], fill=(255, 255, 255, 40)), 0.01)
+    d = c.d
+    # lavabo, brosse à dents, néon
+    d.rounded_rectangle(c.box(0.14, 0.74, 0.86, 0.84), radius=40, fill=(205, 205, 220))
+    d.rectangle(c.box(0.47, 0.70, 0.53, 0.75), fill=(160, 160, 176))
+    d.rounded_rectangle(c.box(0.74, 0.62, 0.80, 0.74), radius=10, fill=(90, 150, 200))
+    d.line([c.P(0.76, 0.62), c.P(0.765, 0.54)], fill=(240, 240, 245), width=8)
+    d.rectangle(c.box(0.12, 0.07, 0.88, 0.09), fill=(230, 240, 255) if not p.get("dark") else (80, 84, 100))
+    if not p.get("dark"):
+        c.glow(0.5, 0.08, 0.5, (200, 220, 255), 0.3)
+    return _end(c, p, 0.5, 0.6)
+
+
+def scene_couloir_appart(p):
+    """Couloir d'appartement la nuit : parquet, cadres photo, porte de la salle de bain entrouverte
+    (lumière), interrupteur. "dark": lumière éteinte, "figure": silhouette au bout."""
+    c = Canvas((44, 36, 58), (22, 18, 30))
+    d = c.d
+    vx0, vx1, vy0, vy1 = 0.42, 0.58, 0.36, 0.62
+    d.polygon([c.P(0, 0), c.P(vx0, vy0), c.P(vx0, vy1), c.P(0, 1)], fill=(70, 52, 70))
+    d.polygon([c.P(1, 0), c.P(vx1, vy0), c.P(vx1, vy1), c.P(1, 1)], fill=(62, 46, 64))
+    d.polygon([c.P(0, 0), c.P(1, 0), c.P(vx1, vy0), c.P(vx0, vy0)], fill=(52, 42, 60))
+    d.polygon([c.P(0, 1), c.P(1, 1), c.P(vx1, vy1), c.P(vx0, vy1)], fill=(84, 56, 44))
+    for k in range(1, 12):
+        t = k / 12
+        d.line([c.P(vx0 + (0.5 - vx0) * 0 - t * vx0, vy1 + t * (1 - vy1)), c.P(vx0, vy1)], fill=(64, 42, 34), width=4)
+        d.line([c.P(vx1 + t * (1 - vx1), vy1 + t * (1 - vy1)), c.P(vx1, vy1)], fill=(64, 42, 34), width=4)
+    # fond : mur avec fenêtre sombre
+    d.rectangle(c.box(vx0, vy0, vx1, vy1), fill=(36, 30, 48))
+    d.rectangle(c.box(0.465, 0.40, 0.535, 0.50), fill=(20, 24, 50))
+    # cadres photo (mur gauche)
+    for k, (u, v) in enumerate(((0.10, 0.30), (0.24, 0.36), (0.12, 0.50))):
+        d.rectangle(c.box(u, v, u + 0.09, v + 0.08), fill=(30, 24, 30), outline=(170, 140, 90), width=6)
+        d.ellipse(c.box(u + 0.03, v + 0.015, u + 0.06, v + 0.045), fill=(150, 140, 150))
+    # porte de la salle de bain entrouverte (mur droit), lumière qui sort
+    lit = not p.get("dark")
+    d.polygon([c.P(0.70, 0.22), c.P(0.86, 0.12), c.P(0.86, 0.86), c.P(0.70, 0.74)], fill=(30, 24, 36))
+    d.polygon([c.P(0.70, 0.22), c.P(0.74, 0.20), c.P(0.74, 0.76), c.P(0.70, 0.74)], fill=(220, 230, 255) if lit else (40, 40, 56))
+    if lit:
+        c.soft(lambda dd, cc: dd.polygon([cc.P(0.70, 0.74), cc.P(0.74, 0.76), cc.P(0.62, 1.0), cc.P(0.48, 1.0)], fill=(210, 225, 255, 90)), 0.02)
+        c.glow(0.72, 0.48, 0.3, (200, 220, 255), 0.35)
+    d = c.d
+    d.rectangle(c.box(0.65, 0.46, 0.67, 0.50), fill=(210, 205, 200))
+    if p.get("figure"):
+        _fig(c, 0.5, 0.62, p.get("fig_size", 0.9), eyes=True)
+    if p.get("red") or p.get("green"):
+        c.glow(0.5, 0.5, 0.6, _lightcol(p, FIRE), 0.25)
+    return c.done()
+
+
+def scene_interphone(p):
+    """Gros plan objet : écran d'interphone vidéo (image en noir et blanc de l'entrée de l'immeuble).
+    "who": "livreur" (casque, sac cube) | "none", "close": le visage colle la caméra,
+    "look": le livreur regarde la caméra, "text": texte en bas de l'écran, "red"."""
+    c = Canvas((0, 0, 0), (0, 0, 0))
+    c.img = _room_blur(p.get("seed", 6), ((58, 50, 66), (26, 22, 32))).resize((c.w, c.h), Image.LANCZOS)
+    c.d = d = ImageDraw.Draw(c.img)
+    d.rounded_rectangle(c.box(0.14, 0.16, 0.86, 0.80), radius=40, fill=(48, 46, 54), outline=(90, 88, 96), width=8)
+    sx0, sy0, sx1, sy1 = 0.20, 0.22, 0.80, 0.56
+    sw, sh = int((sx1 - sx0) * c.w), int((sy1 - sy0) * c.h)
+    scr = R.gradient(sw, sh, (120, 128, 132), (40, 44, 48))
+    sd = ImageDraw.Draw(scr)
+    # hall vu par la caméra (grand angle) : porte vitrée, boîtes aux lettres
+    sd.rectangle([sw * 0.05, sh * 0.15, sw * 0.30, sh * 0.95], outline=(170, 175, 178), width=6)
+    for i in range(3):
+        for j in range(4):
+            sd.rectangle([sw * (0.72 + i * 0.08), sh * (0.25 + j * 0.1), sw * (0.78 + i * 0.08), sh * (0.32 + j * 0.1)], outline=(150, 155, 160), width=3)
+    who = p.get("who", "livreur")
+    if who == "livreur":
+        if p.get("close"):
+            sd.ellipse([sw * 0.20, sh * 0.05, sw * 0.80, sh * 1.25], fill=(200, 200, 205))
+            sd.chord([sw * 0.16, -sh * 0.15, sw * 0.84, sh * 0.55], 180, 360, fill=(30, 32, 36))
+            for ex in (0.38, 0.62):
+                sd.ellipse([sw * (ex - 0.06), sh * 0.42, sw * (ex + 0.06), sh * 0.62], fill=(10, 10, 12))
+            sd.arc([sw * 0.30, sh * 0.55, sw * 0.70, sh * 1.0], 20, 160, fill=(10, 10, 12), width=10)
+        else:
+            u, v = 0.5, 0.95
+            sd.rectangle([sw * (u + 0.07), sh * 0.38, sw * (u + 0.26), sh * 0.72], fill=(60, 62, 66))
+            sd.polygon([(sw * (u - 0.12), sh * v), (sw * (u - 0.08), sh * 0.45), (sw * (u + 0.08), sh * 0.45), (sw * (u + 0.12), sh * v)], fill=(70, 72, 76))
+            sd.ellipse([sw * (u - 0.08), sh * 0.18, sw * (u + 0.08), sh * 0.46], fill=(190, 190, 195))
+            sd.chord([sw * (u - 0.09), sh * 0.14, sw * (u + 0.09), sh * 0.38], 180, 360, fill=(30, 32, 36))
+            if p.get("look"):
+                for ex in (-0.03, 0.03):
+                    sd.ellipse([sw * (u + ex - 0.012), sh * 0.30, sw * (u + ex + 0.012), sh * 0.34], fill=(10, 10, 12))
+    rnd = np.random.default_rng(3)
+    noise = Image.fromarray(rnd.integers(0, 40, (sh // 4, sw // 4), dtype=np.uint8)).resize((sw, sh)).convert("RGB")
+    scr = Image.blend(scr, noise, 0.15).convert("L").convert("RGB")
+    sd = ImageDraw.Draw(scr)
+    for y in range(0, sh, 10):
+        sd.line([(0, y), (sw, y)], fill=(30, 30, 30), width=2)
+    sd.text((sw * 0.04, sh * 0.03), "ENTRÉE  03:12", fill=(230, 230, 230), font=font(int(sw * 0.05)))
+    if p.get("text"):
+        sd.text((sw * 0.04, sh * 0.85), str(p["text"]), fill=(255, 80, 80), font=font(int(sw * 0.06)))
+    c.img.paste(scr, (int(sx0 * c.w), int(sy0 * c.h)))
+    c.d = d = ImageDraw.Draw(c.img)
+    c.glow(0.5, 0.39, 0.5, (190, 200, 210), 0.2)
+    d = c.d
+    # boutons : décrocher, ouvrir la porte (clé)
+    for u, col in ((0.34, (60, 170, 90)), (0.50, (200, 200, 205)), (0.66, (210, 70, 60))):
+        d.ellipse(c.box(u - 0.05, 0.62, u + 0.05, 0.62 + 0.1 * CW / CH), fill=col, outline=(120, 116, 110), width=6)
+    d.text(c.P(0.475, 0.645), "⚿" if False else "", fill=(40, 40, 40))
+    d.rectangle(c.box(0.44, 0.74, 0.56, 0.75), fill=(90, 88, 96))
+    if p.get("red") or p.get("green"):
+        c.glow(0.5, 0.5, 0.6, _lightcol(p, FIRE), 0.25)
+    return c.done()
+
+
+def scene_facade(p):
+    """Rue de Lyon vue du 4e étage, la nuit : immeuble d'en face (fenêtres, balcons), lampadaire,
+    trottoir avec un livreur à vélo immobile. "look_up": il lève la tête vers toi, "gone": la rue est vide,
+    "many": plusieurs livreurs immobiles, "dark"."""
+    c = Canvas((16, 14, 36), (60, 44, 70))
+    d = c.d
+    # immeuble d'en face (pierre claire lyonnaise, volets)
+    d.rectangle(c.box(-0.02, 0.0, 1.02, 0.62), fill=(92, 80, 94))
+    rnd = random.Random(81)
+    for r in range(4):
+        for k in range(5):
+            u, v = 0.04 + k * 0.20, 0.04 + r * 0.15
+            on = rnd.random() < (0.15 if p.get("dark") else 0.3)
+            d.rectangle(c.box(u, v, u + 0.10, v + 0.10), fill=(255, 196, 120) if on else (22, 20, 34))
+            d.rectangle(c.box(u - 0.03, v, u - 0.005, v + 0.10), fill=(140, 110, 80))
+            d.rectangle(c.box(u + 0.105, v, u + 0.13, v + 0.10), fill=(140, 110, 80))
+            d.line([c.P(u - 0.01, v + 0.10), c.P(u + 0.11, v + 0.10)], fill=(40, 36, 46), width=8)
+            if on:
+                c.glow(u + 0.05, v + 0.05, 0.08, (255, 190, 110), 0.3)
+                d = c.d
+    # rue, trottoirs, passage piéton
+    d.rectangle(c.box(0, 0.62, 1, 0.70), fill=(70, 66, 76))
+    d.rectangle(c.box(0, 0.70, 1, 1), fill=(34, 32, 44))
+    for k in range(6):
+        d.rectangle(c.box(0.10 + k * 0.08, 0.80, 0.15 + k * 0.08, 0.95), fill=(150, 150, 160))
+    # lampadaire
+    d.rectangle(c.box(0.86, 0.36, 0.875, 0.70), fill=(20, 20, 28))
+    d.polygon([c.P(0.84, 0.36), c.P(0.895, 0.36), c.P(0.90, 0.33), c.P(0.835, 0.33)], fill=(255, 210, 130))
+    c.glow(0.867, 0.37, 0.3, (255, 200, 120), 0.45 if not p.get("dark") else 0.15)
+    d = c.d
+    # garde-corps de ta fenêtre au premier plan
+    d.rectangle(c.box(0, 0.96, 1, 1), fill=(14, 12, 18))
+    for k in range(21):
+        d.rectangle(c.box(k * 0.05, 0.86, k * 0.05 + 0.008, 0.98), fill=(14, 12, 18))
+    d.rectangle(c.box(0, 0.85, 1, 0.87), fill=(14, 12, 18))
+
+    def rider(u, v, s, up):
+        d = c.d
+        d.ellipse(c.box(u - 0.05 * s, v - 0.04 * s, u + 0.01 * s, v + 0.02 * s), outline=(20, 20, 26), width=8)
+        d.ellipse(c.box(u + 0.04 * s, v - 0.04 * s, u + 0.10 * s, v + 0.02 * s), outline=(20, 20, 26), width=8)
+        d.line([c.P(u - 0.02 * s, v - 0.01 * s), c.P(u + 0.07 * s, v - 0.01 * s)], fill=(20, 20, 26), width=8)
+        d.polygon([c.P(u - 0.01 * s, v - 0.02 * s), c.P(u, v - 0.12 * s), c.P(u + 0.04 * s, v - 0.12 * s), c.P(u + 0.05 * s, v - 0.02 * s)], fill=(30, 30, 38))
+        d.rectangle(c.box(u - 0.05 * s, v - 0.17 * s, u + 0.0 * s, v - 0.10 * s), fill=(60, 170, 150))
+        d.ellipse(c.box(u - 0.005 * s, v - 0.17 * s, u + 0.045 * s, v - 0.12 * s), fill=(36, 36, 44))
+        if up:
+            for ex in (0.01, 0.03):
+                d.ellipse(c.box(u + ex * s - 0.004, v - 0.155 * s, u + ex * s + 0.004, v - 0.145 * s), fill=(255, 60, 50))
+            c.glow(u + 0.02 * s, v - 0.15 * s, 0.04, (255, 60, 50), 0.4)
+
+    if not p.get("gone"):
+        rider(0.50, 0.70, 1.2, p.get("look_up"))
+        if p.get("many"):
+            rider(0.22, 0.69, 1.0, True)
+            rider(0.74, 0.69, 1.0, True)
+    return _end(c, p, 0.5, 0.6)
+
+
+def scene_jad_ombres(p):
+    """Le village des disparus : la place sous un ciel rouge, des ombres noires immobiles (les disparus).
+    "n": nombre d'ombres, "jacques": Jacques au fond, "porte": la porte de l'église brille."""
+    c = Canvas((70, 10, 20), (150, 50, 50))
+    d = c.d
+    rnd = random.Random(91)
+    for _ in range(40):
+        x, y = rnd.uniform(0, 1), rnd.uniform(0, 0.4)
+        d.ellipse(c.box(x - 0.002, y - 0.002, x + 0.002, y + 0.002), fill=(255, 190, 170))
+    c.glow(0.78, 0.12, 0.25, (255, 90, 70), 0.5)
+    d = c.d
+    d.ellipse(c.box(0.74, 0.12 - 0.04 * CW / CH, 0.82, 0.12 + 0.04 * CW / CH), fill=(40, 6, 10))
+    d.rectangle(c.box(0.40, 0.10, 0.60, 0.52), fill=(50, 26, 36))
+    d.polygon([c.P(0.40, 0.10), c.P(0.50, -0.06), c.P(0.60, 0.10)], fill=(30, 12, 22))
+    _horn(c, 0.40, 0.30, 1.0, -1)
+    _horn(c, 0.60, 0.30, 1.0, 1)
+    d = c.d
+    door = (255, 220, 170) if p.get("porte") else (20, 8, 12)
+    d.rectangle(c.box(0.47, 0.40, 0.53, 0.52), fill=door)
+    if p.get("porte"):
+        c.glow(0.5, 0.46, 0.3, (255, 210, 150), 0.6)
+        d = c.d
+    _granite_house(c, -0.02, 0.36, 0.62, 0.36, 92, 0.0)
+    _granite_house(c, 0.64, 1.02, 0.62, 0.34, 93, 0.0)
+    d = c.d
+    d.rectangle(c.box(0, 0.62, 1, 1), fill=(60, 30, 36))
+    for k in range(8):
+        v = 0.64 + k * 0.045
+        for _ in range(12 + k * 2):
+            u = rnd.uniform(0, 1)
+            g = rnd.randint(50, 72)
+            d.rounded_rectangle(c.box(u, v, u + 0.02 + k * 0.005, v + 0.015 + k * 0.003), radius=6, fill=(g + 20, g - 10, g - 4))
+    spots = [(0.18, 0.80, 0.9), (0.80, 0.82, 1.0), (0.33, 0.72, 0.6), (0.68, 0.71, 0.6), (0.10, 0.70, 0.55), (0.90, 0.72, 0.55), (0.25, 0.92, 1.3)]
+    for u, v, s in spots[:p.get("n", 5)]:
+        _fig(c, u, v, s, col=(8, 4, 8))
+    if p.get("jacques"):
+        _jacques(c, 0.5, 0.70, 0.7)
+    # brume rouge au sol
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.78, 1.1, 1.0), fill=(200, 80, 80, 70)), 0.05)
+    return _end(c, p, 0.5, 0.72)
+
+
+def scene_jad_porte(p):
+    """Intérieur de l'église des disparus : bancs, vitraux éteints, au fond une porte qui brille
+    (le passage vers le vrai village, l'aube). "shadow": une petite ombre (Théo) près de la porte."""
+    c = Canvas((30, 14, 26), (14, 8, 14))
+    d = c.d
+    # voûte et colonnes
+    d.polygon([c.P(0, 0), c.P(0.5, -0.1), c.P(1, 0), c.P(1, 0.2), c.P(0.5, 0.05), c.P(0, 0.2)], fill=(20, 10, 18))
+    for u in (0.08, 0.26, 0.74, 0.92):
+        d.rectangle(c.box(u - 0.03, 0.10, u + 0.03, 0.80), fill=(56, 40, 50))
+        d.rectangle(c.box(u - 0.04, 0.78, u + 0.04, 0.82), fill=(70, 50, 62))
+    # vitraux éteints
+    for u in (0.17, 0.83):
+        d.rounded_rectangle(c.box(u - 0.04, 0.18, u + 0.04, 0.40), radius=40, fill=(60, 20, 40))
+        d.line([c.P(u, 0.18), c.P(u, 0.40)], fill=(20, 10, 16), width=6)
+        d.line([c.P(u - 0.04, 0.29), c.P(u + 0.04, 0.29)], fill=(20, 10, 16), width=6)
+    # porte lumineuse
+    d.rounded_rectangle(c.box(0.40, 0.30, 0.60, 0.70), radius=60, fill=(255, 226, 180))
+    c.glow(0.5, 0.50, 0.55, (255, 200, 140), 0.7)
+    c.soft(lambda dd, cc: dd.polygon([cc.P(0.40, 0.70), cc.P(0.60, 0.70), cc.P(0.85, 1.0), cc.P(0.15, 1.0)], fill=(255, 210, 160, 80)), 0.03)
+    d = c.d
+    # bancs
+    for k in range(4):
+        v = 0.74 + k * 0.06
+        w = 0.16 + k * 0.03
+        for side in (-1, 1):
+            u0 = 0.5 + side * 0.08
+            u1 = 0.5 + side * (0.08 + w)
+            d.rectangle(c.box(min(u0, u1), v, max(u0, u1), v + 0.025), fill=(70, 40, 34))
+            d.rectangle(c.box(min(u0, u1), v - 0.04, max(u0, u1), v - 0.03), fill=(60, 34, 30))
+    if p.get("shadow"):
+        _fig(c, 0.56, 0.70, 0.55, col=(6, 2, 6))
+    return _end(c, p, 0.5, 0.65)
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -2194,7 +2609,11 @@ SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, 
           "telephone": scene_telephone, "tele": scene_tele,
           "papier": scene_papier, "hall": scene_hall, "palier": scene_palier,
           "jad_station": scene_jad_station, "jad_maison": scene_jad_maison,
-          "rame": scene_rame, "metro_arrive": scene_metro_arrive}
+          "rame": scene_rame, "metro_arrive": scene_metro_arrive,
+          "jad_port": scene_jad_port, "jad_cabine": scene_jad_cabine,
+          "miroir": scene_miroir, "couloir_appart": scene_couloir_appart,
+          "interphone": scene_interphone, "facade": scene_facade,
+          "jad_ombres": scene_jad_ombres, "jad_porte": scene_jad_porte}
 NEW_SCENES = set(SCENES)
 for _n in R.SCENES:
     SCENES.setdefault(_n, scene_old(_n))
@@ -2430,9 +2849,9 @@ def draw_rule_card(frame, rule, t):
 def draw_counter(frame, label, value, bump):
     """Compteur en haut à gauche (ex. PASSAGERS 3) : il monte avec la tension."""
     d = ImageDraw.Draw(frame)
-    fl, fv = font(38), font(int(84 * (1 + 0.25 * max(0.0, 1 - bump / 0.4))))
+    fl, fv = font(50), font(int(90 * (1 + 0.25 * max(0.0, 1 - bump / 0.4))))
     d.text((70, 120), label, font=fl, fill=(230, 230, 235), stroke_width=4, stroke_fill=(0, 0, 0))
-    d.text((70, 168), str(value), font=fv, fill=(235, 60, 60) if bump < 1.2 else WHITE,
+    d.text((70, 185), str(value), font=fv, fill=(235, 60, 60) if bump < 1.2 else WHITE,
            stroke_width=6, stroke_fill=(0, 0, 0))
 
 
