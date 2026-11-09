@@ -123,9 +123,11 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
    pip télécharge la version GPU de plusieurs Go et bloque plus de 30 min) :
    `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu`
    puis `pip install -q chatterbox-tts` (≈ 2 min au total).
-   **Voix choisie par Fio le 05/11 (« voix 3-A ») : Chatterbox** avec la
-   référence `assets/ref/ref-narrateur.wav` (vraie voix de narrateur, livre
-   audio LibriVox « Le Père Goriot », domaine public), exagération 0.75,
+   **Voix choisie par Fio le 09/11 (« voix 1 », homme grave naturel) :
+   Chatterbox** avec la référence `assets/ref/ref-narrateur-grave.wav` (vrai
+   narrateur LibriVox « L'ascension du mont Ventoux », domaine public ; avant :
+   `ref-narrateur.wav`, « voix 3-A »). Ne JAMAIS baisser la hauteur de la voix
+   artificiellement (Fio : « pas naturel »). Exagération 0.75,
    cfg 0.3 (moins posée), vitesse 1.2, effet « leger », sans écho. Tout est
    dans `engine/voice_config.json` : ne pas changer sans Fio. Parler-TTS
    (« voix 2 ») a été rejeté par Fio : `./engine/setup_parler.sh` n'est plus

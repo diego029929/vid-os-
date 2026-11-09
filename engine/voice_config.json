@@ -1,6 +1,6 @@
 {
   "voice": "chatterbox",
-  "reference": "ref-narrateur.wav",
+  "reference": "ref-narrateur-grave.wav",
   "effect": "leger",
   "tempo": 1.2,
   "tight": true,

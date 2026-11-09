@@ -1,2 +1,7 @@
 ref-narrateur.wav : extrait de 12 s du chapitre 2 de « Le Père Goriot » (Balzac),
 livre audio LibriVox le_pere_goriot_bnd_0808_librivox (archive.org), domaine public.
+
+ref-narrateur-grave.wav (voix choisie par Fio le 09/11, « voix 1 ») : extrait de 12 s
+(60-72 s du 2e fichier) du livre audio LibriVox lascensiondumontventoux_a_librivox
+(« L'ascension du mont Ventoux », archive.org), domaine public. Voix d'homme
+naturellement grave (~100 Hz), sans changement de hauteur.
