@@ -38,14 +38,14 @@ dans le résumé ; c'est Fio qui décide de la suite.
 
 - [x] Ascenseur qui s'arrête à un étage qui n'existe pas (N°9, 08/11, Paris)
 - [ ] Quelqu'un frappe à 3 h, avec la voix de ta mère, alors qu'elle dort
-- [ ] Ton reflet cligne des yeux en retard
+- [x] Ton reflet cligne des yeux en retard (N°11, 09/11, Bordeaux : le reflet sourit)
 - [x] Appel de ton propre numéro (N°3, 04/11)
 - [x] Station-service vide la nuit, une règle sur la porte (N°2, 03/11)
 - [ ] Hôtel : la chambre 313 n'a pas de fenêtre
 - [x] Forêt : quelqu'un siffle ton prénom (N°5, 05/11)
 - [x] Panne de courant : une bougie s'allume toute seule (N°4, 04/11)
 - [x] Message : « ne te retourne pas, je suis derrière toi » (N°10, 08/11, métro de Toulouse)
-- [ ] Livraison de nuit : le livreur ne bouge plus devant l'immeuble
+- [x] Livraison de nuit : le livreur ne bouge plus devant l'immeuble (N°12, 09/11, Lyon)
 - [x] Baby-sitting : l'enfant dit qu'il y a un monsieur sous le lit (N°8, 06/11)
 - [ ] Tunnel : les phares d'en face s'éteignent
 - [ ] Piscine fermée : quelqu'un nage dans le noir

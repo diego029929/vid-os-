@@ -1,0 +1,408 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°11",
+ "clock_start": 10800,
+ "style": 2,
+ "title": "SURVIS ? N°11 · Ton reflet sourit, pas toi. Tu te retournes ?",
+ "caption": "Ton reflet sourit… mais pas toi. Tu te retournes ? 👇 (N°10 : il fallait rentrer à pied.) SURVIS ? N°11 #survie #horreur #bordeaux #histoire",
+ "beats": [
+  {
+   "scene": "miroir",
+   "text": "TON REFLET SOURIT. TOI, *NON*.",
+   "params": {
+    "smile": true
+   },
+   "shake": 2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "couloir_appart",
+   "text": "À BORDEAUX, TROIS HEURES DU MATIN, DANS TA SALLE DE BAIN.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "papier",
+   "text": "UN MOT DE TA COLOC : « SI TON REFLET BOUGE TOUT SEUL, NE LE QUITTE PAS DES *YEUX*. »",
+   "params": {
+    "wall": "carrelage",
+    "title": "ATTENTION",
+    "lines": [
+     "SI TON REFLET BOUGE,",
+     "NE LE QUITTE",
+     "PAS DES YEUX."
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "miroir",
+   "text": "DANS LA BUÉE, UN MOT : « TOURNE-TOI. »",
+   "params": {
+    "text": "TOURNE-TOI",
+    "eyes": "open"
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "miroir",
+   "text": "DANS LE REFLET, QUELQU'UN ATTEND DERRIÈRE *TOI*.",
+   "params": {
+    "figure": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "salledebain",
+   "text": "TU REGARDES TON REFLET, OU TU TE *RETOURNES* ?",
+   "choice": {
+    "a": "FIXER LE REFLET",
+    "b": "TE RETOURNER"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "salledebain",
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "FIXER LE REFLET",
+    "b": "TE RETOURNER",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "couloir_appart",
+   "text": "TU TE RETOURNES. DERRIÈRE TOI, *PERSONNE*.",
+   "choice": {
+    "a": "FIXER LE REFLET",
+    "b": "TE RETOURNER",
+    "picked": "B"
+   },
+   "text_y": 0.2,
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "miroir",
+   "text": "UNE MAIN TE TIRE DANS LA *GLACE*.",
+   "params": {
+    "empty": true,
+    "hand": true,
+    "crack": true,
+    "red": true
+   },
+   "shake": 5,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "salledebain",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ],
+    "dark": true
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "miroir",
+   "text": "TU FIXES TON REFLET SANS CLIGNER.",
+   "choice": {
+    "a": "FIXER LE REFLET",
+    "b": "TE RETOURNER",
+    "picked": "A"
+   },
+   "text_y": 0.2,
+   "params": {
+    "eyes": "open"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "miroir",
+   "text": "TON REFLET ARRÊTE DE *SOURIRE*.",
+   "params": {
+    "eyes": "open"
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "TA COLOC : « DANS LE NOIR, IL NE PEUT PLUS TE *VOIR*. »",
+   "params": {
+    "mode": "chat",
+    "contact": "Coloc",
+    "sleeve": [
+     235,
+     120,
+     35
+    ],
+    "messages": [
+     [
+      "lui",
+      "Dans le noir,"
+     ],
+     [
+      "lui",
+      "il ne peut plus te voir."
+     ]
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "salledebain",
+   "text": "LE NÉON CLIGNOTE. IL VA S'*ÉTEINDRE*.",
+   "params": {
+    "dark": true
+   },
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "couloir_appart",
+   "text": "DANS LE NOIR, TU RESTES FACE AU MIROIR, OU TU *COURS* ?",
+   "choice": {
+    "a": "RESTER",
+    "b": "COURIR"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "couloir_appart",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LE NUMÉRO *DOUZE*.",
+   "choice": {
+    "a": "RESTER",
+    "b": "COURIR"
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "facade",
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "params": {
+    "gone": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  }
+ ]
+}

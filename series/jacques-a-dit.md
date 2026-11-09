@@ -31,7 +31,7 @@ l'heure), `jad_mamie` (salle de la grand-mère, armoire bretonne ; `ring`
 le téléphone sonne, `mamie` silhouette, `eyes`), `jad_ruelle` (ruelle de
 granit, téléphone par terre ; `jacques`), `jad_remparts` (remparts de
 Saint-Malo et la mer ; `jacques`), `jad_jacques` (Jacques sous le
-lampadaire ; `size`), `jad_station` (intérieur de la station-service ; `hand` main sur la vitre, `sweat` sweat bleu de Léa par terre), `jad_maison` (maison de la grand-mère vue de la ruelle ; `open`, `attic` lueur au grenier). Tous acceptent `aube` (ciel d'aube, épisode 6),
+lampadaire ; `size`), `jad_station` (intérieur de la station-service ; `hand` main sur la vitre, `sweat` sweat bleu de Léa par terre), `jad_maison` (maison de la grand-mère vue de la ruelle ; `open`, `attic` lueur au grenier), `jad_port` (port de pêche, phare ; `leaving` bateau qui part sans lumière, `phare`, `jacques`), `jad_cabine` (cabine téléphonique du port ; `ring`, `hanging` combiné qui pend, `person` couleur). Tous acceptent `aube` (ciel d'aube, épisode 6),
 `dark`, `red`, `figure`. Compléter avec les décors génériques (`chambre`,
 `porte`, `escalier`, `foret`, `station`, `eglise`, `cimetiere`, `plage`…). L'horloge avance de minuit (ép. 1) à l'aube (ép. 6).
 
@@ -40,7 +40,7 @@ lampadaire ; `size`), `jad_station` (intérieur de la station-service ; `hand` m
 | 1 | « Jacques a dit : éteins la lumière », puis « allume » sans Jacques | A rallumer / B ne pas bouger | « Jacques a dit : ouvre ta porte. » Quelqu'un est derrière. A ouvrir / B ne pas ouvrir |
 | 2 | On doit obéir : la porte s'ouvre sur Léa. « Jacques a dit : cours jusqu'à la station-service », puis « arrête-toi » sans Jacques | A t'arrêter / B continuer | « Jacques a dit : ferme les yeux jusqu'à l'aube. » Léa crie qu'il est derrière toi. A fermer / B garder ouverts |
 | 3 | Écrit le 08/11 (ep24). Réponse : fermer les yeux (Léa les garde ouverts et disparaît). La « grand-mère » appelle sans « Jacques a dit » | A courir chez elle / B rester dans la station (bonne : B ; c'était un faux, « mon chéri ») | À l'église, la vraie grand-mère. « Jacques a dit : laisse-la ici et retourne à la station. » A la laisser / B l'emmener |
-| 4 | Deux ordres en même temps (haut-parleur et téléphone) | à écrire | à écrire |
+| 4 | Écrit le 09/11 (ep25, forme « Line 9 »). Vote partie 3 : la laisser (1 voix + tirage). Règle 3 découverte : les téléphones imitent Jacques, seuls les haut-parleurs de l'église disent vrai (pêcheur et voisin disparaissent ; compteur DISPARUS 1→3) | ligne droite, pas de choix au milieu | « Jacques a dit : choisis qui je prends avant l'aube. » A ma grand-mère (tu vis) / B moi (tu rejoins les disparus, là où est Léa) : le vote décide la partie 5 |
 | 5 | « Jacques » est dans le village | à écrire | à écrire |
 | 6 | L'aube : le dernier ordre | à écrire | dilemme final |
 

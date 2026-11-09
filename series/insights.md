@@ -290,3 +290,22 @@ creux à 11 h, 13 h-14 h et après 21 h).
   Courte ≤ 650 caractères, épisode 1 600-1 800 caractères. À calculer AVANT le rendu.
 - À éviter avec la voix 3-A : « N° » à la voix (dire « numéro » ou autre chose), mot anglais « sweat », ville seule en
   début de phrase (« PARIS. »).
+
+### 09/11 (partie 4 = ép. 25 à 10h, N°11 à 12h, partie 5 = ép. 26 à 17h, N°12 à 20h — Zernio, TikTok + Instagram)
+
+- Comptes Zernio OK, les 4 vidéos du 08/11 publiées sur les deux réseaux.
+- **Stats lues directement dans Zernio** (`GET /v1/analytics`, plus besoin de Metricool) et commentaires via
+  `GET /v1/inbox/comments/{platformPostId}?accountId=…`. TikTok (≈ 12-18 h de recul) : partie 2 = 779 vues / 28 likes /
+  5 abonnés, N°9 = 750 / 32, partie 3 = 756 / 38 / 2 commentaires, N°10 = 539 / 9. Partie 1 (07/11) = 919 vues, 5 partages.
+  Instagram : 140-200 vues, temps moyen 6-12 s. Courtes vs épisodes : toujours ≈ égal (≈ 750-830 vues).
+- **Vote de la partie 3** : 1 seule voix (« je la laisse ») → moins de 3 votes, tirage au sort = « la laisser » aussi.
+- **Partie 4 = 1re vidéo au format « Line 9 »** (ligne droite, 3 cartes de règles, compteur DISPARUS 1→3, lumière
+  bleu→rouge→noir, vote final). Spectateur extérieur : 6 → 7 → **8/10** (corrigé : Jacques et l'église présentés dès le
+  début, la fausse grand-mère expliquée, l'option « moi » rendue désirable : « là où est Léa »).
+- **Nouvelle voix grave (choix de Fio ce matin)** : tout a été refait avec. Elle est ≈ 12 % plus lente que la voix 3-A :
+  partie 4 = 99,7 s (88,8 s avant) avec 1 990 caractères. Nouveau repère : ≈ 20 caractères lus/s ; épisode « Line 9 »
+  ≤ 1 750 caractères, courte ≤ 690 caractères.
+- Cartes de règles : ne pas les mettre sur un gros plan visage (elles cachent les yeux) → plan de dos ou en pied.
+- Voix : « TU FIXES LE REFLET » lu « tu chiques ce reflet » → « TU REGARDES TON REFLET ».
+- Bonne réponse tirée au sort : N°11 = A, N°12 = A (N°10 : « rentrer à pied », N°11 : « courir », tirés au sort).
+- Décors : 6 nouveaux (jad_port, jad_cabine, miroir, couloir_appart, interphone, facade).

@@ -1,0 +1,381 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°12",
+ "clock_start": 10800,
+ "style": 2,
+ "title": "SURVIS ? N°12 · Un livreur sonne à 3 h. Tu n'as rien commandé.",
+ "caption": "Un livreur sonne à 3 h et ne bouge plus. Tu n'as rien commandé. Tu fais quoi ? 👇 (N°11 : il fallait courir dans ta chambre.) SURVIS ? N°12 #survie #horreur #lyon #histoire",
+ "beats": [
+  {
+   "scene": "interphone",
+   "text": "UN LIVREUR SONNE. TU N'AS RIEN *COMMANDÉ*.",
+   "params": {
+    "look": true
+   },
+   "shake": 2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "facade",
+   "text": "À LYON, TROIS HEURES DU MATIN. IL ATTEND EN BAS, SANS *BOUGER*.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "LE GROUPE DES VOISINS : « S'IL REGARDE TA FENÊTRE, FERME LES *VOLETS*. »",
+   "params": {
+    "mode": "chat",
+    "contact": "Immeuble",
+    "sleeve": [
+     235,
+     120,
+     35
+    ],
+    "messages": [
+     [
+      "lui",
+      "S'il regarde ta fenêtre,"
+     ],
+     [
+      "lui",
+      "ferme les volets."
+     ]
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "facade",
+   "text": "LE LIVREUR LÈVE LA TÊTE. VERS TA *FENÊTRE*.",
+   "params": {
+    "look_up": true
+   },
+   "shake": 3,
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "POUR FERMER LES VOLETS, TU DOIS TE PENCHER DEHORS.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "TU FERMES LES VOLETS, OU TU TE *CACHES* ?",
+   "choice": {
+    "a": "FERMER LES VOLETS",
+    "b": "TE CACHER"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "FERMER LES VOLETS",
+    "b": "TE CACHER",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "chambre",
+   "text": "TU TE CACHES DERRIÈRE LE RIDEAU.",
+   "choice": {
+    "a": "FERMER LES VOLETS",
+    "b": "TE CACHER",
+    "picked": "B"
+   },
+   "text_y": 0.2,
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "interphone",
+   "text": "L'INTERPHONE S'ALLUME : LE LIVREUR EST DEVANT TA *PORTE*.",
+   "params": {
+    "close": true,
+    "text": "JE TE VOIS"
+   },
+   "shake": 5,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "chambre",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ],
+    "dark": true
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "fenetre",
+   "text": "TU TE PENCHES ET TU FERMES LES VOLETS.",
+   "choice": {
+    "a": "FERMER LES VOLETS",
+    "b": "TE CACHER",
+    "picked": "A"
+   },
+   "text_y": 0.2,
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "LE LIVREUR N'EST PLUS EN BAS. ON FRAPPE À TA PORTE : « VOTRE *COMMANDE*. »",
+   "params": {
+    "dark": true
+   },
+   "shake": 3,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "couloir_appart",
+   "text": "TU REGARDES PAR LE JUDAS, OU TU FAIS LE *MORT* ?",
+   "choice": {
+    "a": "REGARDER",
+    "b": "FAIRE LE MORT"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "couloir_appart",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LE NUMÉRO *TREIZE*.",
+   "choice": {
+    "a": "REGARDER",
+    "b": "FAIRE LE MORT"
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "interphone",
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "params": {
+    "text": "PORTE OUVERTE",
+    "who": "none"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  }
+ ]
+}
