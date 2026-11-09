@@ -127,6 +127,18 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
   `"cam3d": {"x": 70, "y": 0, "z": 0.1}` (mouvement 3D), `"relief": false`
   (plan plat). `RELIEF=0` désactive tout. Le rendu est ≈ 20 % plus long.
   Aperçu : /mnt/project-files/apercus-3d/.
+- **Vraie vidéo, pas des images fixes (demande de Fio, 09/11 au soir : « il n'y
+  a presque pas d'animation »)** : automatique dans `render2.py` via
+  `engine/anim.py` : caméra à l'épaule (tremblement doux continu), avance/recul
+  3D plus ample, personnage qui respire, se balance, cligne et jette des coups
+  d'œil (tremble quand il a peur : `expr` scared/wide), lumières qui vacillent
+  (plus nerveuses en ambiance rouge/noir ou avec `"flicker": true`), brume qui
+  avance (`"brume": 0.16` par défaut, sur l'épisode ou un plan, 0 = aucune).
+  **Météo à mettre dans le JSON quand ça colle à l'histoire** : `"meteo":
+  "pluie"` / `"neige"` / `"cendres"` (sur l'épisode ou sur les plans en
+  extérieur) : mettre de la pluie ou de la neige sur la plupart des plans
+  dehors, ça rend tout plus vivant. Réglages : `"handheld": 7` (force de la
+  caméra à l'épaule), `"anim": false` (plan fixe), `ANIM=0` coupe tout.
 - Épisodes = fichiers JSON dans `episodes/`. Lire `episodes/essai-style2.json`
   comme exemple complet du format style 2 (décors, cadrages, caméra, texte,
   `*mots rouges*`, choix A/B, `record` + `rewind`, bruitages).

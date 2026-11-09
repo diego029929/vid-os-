@@ -33,6 +33,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import render as R  # noqa: E402
 import relief  # noqa: E402
+import anim  # noqa: E402
 
 W, H, FPS, SR = R.W, R.H, R.FPS, R.SR
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -3175,6 +3176,7 @@ def polish(img, seed=0):
 
 
 RELIEF = os.environ.get("RELIEF", "1") != "0"
+ANIM = os.environ.get("ANIM", "1") != "0"     # animation « vraie vidéo » (09/11)
 _depth_cache = {}
 
 
@@ -3184,7 +3186,9 @@ def move3d(bi, b):
     if "cam3d" in b:
         c = b["cam3d"]
         return c.get("x", 0), c.get("y", 0), c.get("z", 0)
-    return [(70, 0, 0.10), (-70, 0, 0.10), (0, 0, 0.22), (45, -35, 0.08), (-45, -35, 0.08), (0, 40, 0.16)][bi % 6]
+    m = [(70, 0, 0.10), (-70, 0, 0.10), (0, 0, 0.22), (45, -35, 0.08), (-45, -35, 0.08), (0, 40, 0.16)][bi % 6]
+    f = 1.4 if ANIM else 1.0         # avance/recul plus ample : ça bouge comme une vraie caméra
+    return m[0], m[1], m[2] * f
 
 
 def compose(b, cache):
@@ -3213,11 +3217,17 @@ def compose(b, cache):
         bg = bg.filter(ImageFilter.GaussianBlur(blur))
     light = tuple(b.get("params", {}).get("light", LIGHT.get(scene, FIRE)))
     layers = []
-    for blink in (False, True):
+    # variantes : 0 normal, 1 yeux fermés, 2 regard à gauche, 3 regard à droite (animation, 09/11)
+    eyes = any(c.get("pose", "stand") != "back" and c.get("expr", "normal") not in ("closed", "none") for c in chars)
+    variants = [(0, False), (0, True)] + ([(-1, False), (1, False)] if eyes and ANIM else [])
+    for side, blink in variants:
         fg = Image.new("RGBA", (CW, CH), (0, 0, 0, 0))
         for ch in chars:
+            lk = tuple(ch.get("look", (0, 0)))
+            if side:
+                lk = (max(-1.0, min(1.0, lk[0] + 0.55 * side)), lk[1])
             hc = hero(ch.get("pose", "stand"), ch.get("expr", "normal"), tuple(ch.get("hoodie", (240, 190, 40))),
-                      tuple(ch.get("look", (0, 0))), blink=blink and ch.get("expr", "normal") in ("normal", "side"))
+                      lk, blink=blink and ch.get("expr", "normal") in ("normal", "side"))
             if "head" in ch:
                 # placement par la tête : [u, v, r] en fractions de l'ÉCRAN (caméra au centre, zoom 1.1),
                 # r = rayon de la tête en fraction de la largeur de l'écran
@@ -3382,6 +3392,11 @@ def render(ep, out):
             cw, chh = CW / (K * z), CH / (K * z)
             ox = min(max(0, cx * CW - cw / 2), CW - cw)
             oy = min(max(0, cy * CH - chh / 2), CH - chh)
+            if ANIM and b.get("anim", True):
+                # caméra à l'épaule : jamais d'image figée
+                hx, hy = anim.handheld(t0 + lt, bi * 1.37, b.get("handheld", 7.0))
+                ox = min(max(0, ox + hx), CW - cw)
+                oy = min(max(0, oy + hy), CH - chh)
             if b.get("shake"):
                 ox += random.uniform(-1, 1) * b["shake"]
                 oy += random.uniform(-1, 1) * b["shake"]
@@ -3395,17 +3410,31 @@ def render(ep, out):
                 fr = relief.warp(bg, dmap, (ox, oy, ox + cw, oy + chh), (W, H), (mx * kk * 2, my * kk * 2), mz * (kk + 0.5))
             else:
                 fr = bg.resize((W, H), Image.BILINEAR, box=(ox, oy, ox + cw, oy + chh))
-            fg = fgs[1 if blink else 0]
+            vi = 1 if blink else (anim.look_index(lt, bi) if ANIM and len(fgs) > 2 else 0)
+            fg = fgs[vi]
             if fg is not None:
                 # parallaxe : le personnage (premier plan) bouge un peu plus que le décor
                 pz = 1 + (z - 1) * 1.35
                 pw, ph = CW / (K * pz), CH / (K * pz)
                 px = min(max(0, cx * CW - pw / 2 + (ox - (cx * CW - cw / 2))), CW - pw)
                 py = min(max(0, cy * CH - ph / 2 + (oy - (cy * CH - chh / 2))), CH - ph)
+                if ANIM and b.get("anim", True):
+                    # personnage vivant : respiration (étire depuis le bas) + balancement
+                    scared = any(c.get("expr") in ("scared", "wide") for c in (b.get("char"), b.get("char2")) if c)
+                    st, sx = anim.breath(t0 + lt, bi * 0.7, scared)
+                    py += ph * (1 - 1 / st)
+                    ph /= st
+                    px += sx
                 layer = fg.resize((W, H), Image.BILINEAR, box=(px, py, px + pw, py + ph))
                 fr.paste(layer, (0, 0), layer)
+            if ANIM and b.get("anim", True):
+                # lumières qui vacillent, brume qui avance, météo
+                fr = anim.lights(fr, t0 + lt, bi, nervous=mood in ("rouge", "noir") or bool(b.get("flicker")))
+                fr = anim.fog(fr, t0 + lt, 11, b.get("brume", ep.get("brume", 0.16)))
             fr = grade_mood(fr, mood)
             particles(fr, b, bi, lt)
+            if ANIM and b.get("meteo", ep.get("meteo")):
+                anim.weather(fr, b.get("meteo", ep.get("meteo")), t0 + lt, bi)
             if lt < 0.1 and bi > 0:
                 fr = fr.filter(ImageFilter.GaussianBlur(14 * (1 - lt / 0.1)))
             if b.get("choice"):
