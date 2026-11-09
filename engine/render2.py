@@ -32,6 +32,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import render as R  # noqa: E402
+import relief  # noqa: E402
 
 W, H, FPS, SR = R.W, R.H, R.FPS, R.SR
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -2754,22 +2755,26 @@ def chunks(text):
 _cap_cache = {}
 
 
-def caption_img(items, size=150):
+CAPTION_SIZE = 104   # sous-titres plus petits (demande de Fio, 09/11 ; avant : 150)
+
+
+def caption_img(items, size=CAPTION_SIZE):
     key = (tuple(items), size)
     if key in _cap_cache:
         return _cap_cache[key]
     f = font(size)
     txt = " ".join(w for w, _ in items)
-    while f.getlength(txt) > W - 300 and size > 70:  # zone sûre TikTok (boutons à droite)
-        size -= 8
+    while f.getlength(txt) > W - 300 and size > 60:  # zone sûre TikTok (boutons à droite)
+        size -= 6
         f = font(size)
+    sw = max(5, round(size * 0.06))
     tw = int(f.getlength(txt)) + 60
     img = Image.new("RGBA", (tw, int(size * 1.5)), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     x = 30
     for wd, red in items:
-        d.text((x + 5, 12), wd, font=f, fill=(0, 0, 0, 150))
-        d.text((x, 6), wd, font=f, fill=RED if red else WHITE, stroke_width=9, stroke_fill=(0, 0, 0))
+        d.text((x + 4, 10), wd, font=f, fill=(0, 0, 0, 150))
+        d.text((x, 6), wd, font=f, fill=RED if red else WHITE, stroke_width=sw, stroke_fill=(0, 0, 0))
         x += f.getlength(wd + " ")
     _cap_cache[key] = img
     return img
@@ -2777,7 +2782,7 @@ def caption_img(items, size=150):
 
 def draw_caption(frame, items, lt, y):
     img = caption_img(items)
-    pop = 1.18 - 0.18 * smooth(lt / 0.09)
+    pop = 1.12 - 0.12 * smooth(lt / 0.09)
     if pop != 1:
         img = img.resize((int(img.width * pop), int(img.height * pop)), Image.BILINEAR)
     frame.paste(img, (int((W - img.width) / 2), int(H * y - img.height / 2)), img)
@@ -3169,6 +3174,19 @@ def polish(img, seed=0):
     return Image.fromarray((a * 255).astype(np.uint8))
 
 
+RELIEF = os.environ.get("RELIEF", "1") != "0"
+_depth_cache = {}
+
+
+def move3d(bi, b):
+    """Mouvement de caméra 3D du plan : (décalage x, décalage y, dolly) au bout du plan.
+    Change à chaque plan (gauche, droite, avance, monte...) ; réglable avec "cam3d" sur un plan."""
+    if "cam3d" in b:
+        c = b["cam3d"]
+        return c.get("x", 0), c.get("y", 0), c.get("z", 0)
+    return [(70, 0, 0.10), (-70, 0, 0.10), (0, 0, 0.22), (45, -35, 0.08), (-45, -35, 0.08), (0, 40, 0.16)][bi % 6]
+
+
 def compose(b, cache):
     """Renvoie (décor, [personnages, personnages yeux fermés]) en deux calques pour la profondeur."""
     key = json.dumps([b.get("scene", "flou"), b.get("params", {}), b.get("char"), b.get("char2")], sort_keys=True)
@@ -3178,6 +3196,15 @@ def compose(b, cache):
     bg = bloom(SCENES[scene](b.get("params", {})).convert("RGB"), (0.15 if scene == "ia" else 0.55) if scene in NEW_SCENES else 0.12)
     if scene != "ia" and not (scene == "flou" and b.get("params", {}).get("of") == "ia") and b.get("polish", True):
         bg = polish(bg, sum(map(ord, scene)))
+    # relief 3D (demande de Fio, 09/11) : profondeur estimée, volume (ombres, arêtes, brume)
+    dmap = None
+    if RELIEF and b.get("relief", True):
+        dkey = json.dumps([scene, b.get("params", {})], sort_keys=True)
+        if dkey not in _depth_cache:
+            dm = relief.depth(bg)
+            sc_bg = bg if scene == "flou" else relief.sculpt(bg, dm, LIGHT.get(scene, FIRE))
+            _depth_cache[dkey] = (sc_bg, dm)
+        bg, dmap = _depth_cache[dkey]
     chars = [c for c in (b.get("char"), b.get("char2")) if c]
     # profondeur de champ : le décor est flou derrière un personnage en gros plan
     close = [c for c in chars if c.get("pose") in ("face", "back") or c.get("head", [0, 0, 0])[2] >= 0.2]
@@ -3212,6 +3239,8 @@ def compose(b, cache):
                 x = int(CW * ch.get("x", 0.5) - hc.width / 2)
                 y = int(CH * ch.get("y", 1.0) - hc.height)
             hc = light_char(hc, light, ch.get("light_side", -1))
+            if RELIEF and b.get("relief", True):
+                hc = relief.volume(hc, ch.get("light_side", -1), light)   # personnage en volume (09/11)
             if ch.get("pose", "stand") in ("stand", "sit"):
                 # ombre de contact au sol
                 sh = Image.new("RGBA", (CW, CH), (0, 0, 0, 0))
@@ -3225,7 +3254,7 @@ def compose(b, cache):
             fg.alpha_composite(shadow, (max(0, x + hc.width // 50), max(0, y + hc.width // 60)))
             fg.alpha_composite(hc, (x, y)) if x >= 0 and y >= 0 else fg.paste(hc, (x, y), hc)
         layers.append(fg if chars else None)
-    cache[key] = (bg, layers)
+    cache[key] = (bg, layers, dmap)
     return cache[key]
 
 
@@ -3358,8 +3387,14 @@ def render(ep, out):
                 oy += random.uniform(-1, 1) * b["shake"]
                 ox, oy = min(max(0, ox), CW - cw), min(max(0, oy), CH - chh)
             blink = (n % 84) in (0, 1, 2, 3)
-            bg, fgs = imgs
-            fr = bg.resize((W, H), Image.BILINEAR, box=(ox, oy, ox + cw, oy + chh))
+            bg, fgs, dmap = imgs
+            if dmap is not None:
+                # parallaxe 3D : le proche bouge plus que le loin, le décor prend du relief
+                mx, my, mz = move3d(bi, b)
+                kk = smooth(k) * 0.7 + k * 0.3 - 0.5
+                fr = relief.warp(bg, dmap, (ox, oy, ox + cw, oy + chh), (W, H), (mx * kk * 2, my * kk * 2), mz * (kk + 0.5))
+            else:
+                fr = bg.resize((W, H), Image.BILINEAR, box=(ox, oy, ox + cw, oy + chh))
             fg = fgs[1 if blink else 0]
             if fg is not None:
                 # parallaxe : le personnage (premier plan) bouge un peu plus que le décor

@@ -111,6 +111,22 @@ Objectif : créer 3 épisodes d'environ 1 min 30 et les programmer dans Metricoo
 - Moteur : `python3 engine/render2.py episodes/epNN.json /chemin/sortie.mp4`
   (style 2, depuis le 02/11 ; l'ancien `engine/render.py` ne sert plus que
   pour les anciens épisodes).
+- **Images en 3D + sous-titres plus petits (demande de Fio, 09/11 : « fais les
+  images en 3D, il n'y a aucun relief », « sous-titres plus petits »)** :
+  c'est automatique dans `render2.py`, via `engine/relief.py` (gratuit, CPU) :
+  carte de profondeur de chaque décor par le modèle libre Depth Anything V2
+  Small (Hugging Face, téléchargé tout seul la 1re fois, ≈ 100 Mo), ombres de
+  contact et portées, arêtes éclairées, brume au loin, **parallaxe 3D** (le
+  proche bouge plus que le fond, mouvement différent à chaque plan), et
+  personnage en volume (tête = boule avec reflet, sweat ombré). Le style
+  dessiné est gardé. Sous-titres : taille 104 au lieu de 150
+  (`CAPTION_SIZE`). Il faut `transformers` (installé avec chatterbox-tts ;
+  sinon `pip install -q transformers`). Si le rendu affiche « relief : modèle
+  de profondeur indisponible », le relief tombe sur une profondeur simple :
+  installer `transformers` puis relancer. Réglages possibles sur un plan :
+  `"cam3d": {"x": 70, "y": 0, "z": 0.1}` (mouvement 3D), `"relief": false`
+  (plan plat). `RELIEF=0` désactive tout. Le rendu est ≈ 20 % plus long.
+  Aperçu : /mnt/project-files/apercus-3d/.
 - Épisodes = fichiers JSON dans `episodes/`. Lire `episodes/essai-style2.json`
   comme exemple complet du format style 2 (décors, cadrages, caméra, texte,
   `*mots rouges*`, choix A/B, `record` + `rewind`, bruitages).
