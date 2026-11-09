@@ -47,7 +47,7 @@ def depth(img):
     else:
         d = np.repeat(np.linspace(0, 1, h, dtype=np.float32)[:, None] ** 1.6, w, axis=1)
     # adoucit les marches entre deux plats (sinon la parallaxe « déchire » les bords)
-    return _blur(d, max(2, w // 300))
+    return _blur(d, max(2, w // 150))
 
 
 def _box(a, r, axis):
