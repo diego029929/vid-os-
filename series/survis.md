@@ -1,3 +1,5 @@
+> **ARRÊTÉ LE 10/11 (choix de Fio)** : plus de vidéos « SURVIS ? ». Les 4 vidéos du jour sont des épisodes de 4 séries en parallèle (encadré en tête de ROUTINE.md). Fichier gardé pour l'historique.
+
 # Format court « SURVIS ? » (test à partir du 03/11)
 
 TEST validé par Fio le 02/11 au soir : on GARDE la série du jour (3 épisodes

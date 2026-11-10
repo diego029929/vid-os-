@@ -1,7 +1,7 @@
 {
   "current_series": "le-refuge",
   "series_file": "series/le-refuge.md",
-  "series_episode_count": 6,
+  "series_episode_count": 5,
   "next_episode_in_series": 2,
   "next_global_episode": 29,
   "published": [
@@ -354,5 +354,40 @@
       "result": "à lire (série finie : servira si on fait une suite)"
     }
   },
-  "previous_series": "jacques-a-dit"
+  "previous_series": "jacques-a-dit",
+  "parallel_series": [
+    {
+      "slot": "10:00",
+      "series": "le-refuge",
+      "series_file": "series/le-refuge.md",
+      "episode_count": 5,
+      "next_episode": 2,
+      "note": "commencée le 10/11, 5 épisodes pour finir le 14/11 avec les autres"
+    },
+    {
+      "slot": "12:00",
+      "series": null,
+      "series_file": null,
+      "episode_count": 4,
+      "next_episode": 1,
+      "note": "nouvelle série à créer le 11/11"
+    },
+    {
+      "slot": "17:00",
+      "series": null,
+      "series_file": null,
+      "episode_count": 4,
+      "next_episode": 1,
+      "note": "nouvelle série à créer le 11/11"
+    },
+    {
+      "slot": "20:00",
+      "series": null,
+      "series_file": null,
+      "episode_count": 4,
+      "next_episode": 1,
+      "note": "nouvelle série à créer le 11/11"
+    }
+  ],
+  "parallel_note": "Depuis le 11/11 : voir l'encadré en tête de ROUTINE.md. current_series / next_episode_in_series ne servent plus ; survis_next n'est plus utilisé."
 }
