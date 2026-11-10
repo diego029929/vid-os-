@@ -43,7 +43,6 @@ dehors.
 | 2 | à écrire (commence par le vote de la partie 1) | |
 | 3 | à écrire | |
 | 4 | à écrire | |
-| 5 | à écrire | |
-| 6 | l'aube (décors `aube`) | |
+| 5 | à écrire : dernier épisode, l'aube (décors `aube`), le 14/11 | |
 
 Les épisodes publiés sont listés dans `series/state.json`.
