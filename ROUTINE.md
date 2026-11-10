@@ -21,6 +21,11 @@ compte les revisionnages), et commente son score (« 4/5 », « trouvé en 2 s �
 C'est un format qui marche en France sur les comptes sans visage, il se
 fabrique en entier ici, gratuitement, et le rendu prend 1-3 min (au lieu de 35).
 
+**Permission de Fio (10/11 soir)** : Claude peut changer de concept ou de
+format SANS demander à Fio, quand les stats le justifient (après 48 h de
+recul et au moins 3 jours de test). Faire le changement ici (ROUTINE.md +
+moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
+
 ## 1. Le format
 
 - **4 vidéos par jour**, TikTok + Instagram (Reel) :
