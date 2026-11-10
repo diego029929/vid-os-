@@ -327,9 +327,20 @@ def end_card(spec, bg):
 def say(text):
     if os.environ.get("QUIZ_VOICE", "1") == "0" or not text:
         return np.zeros(0, np.float32)
+    global _VOICE_OK
+    if not _VOICE_OK:
+        return np.zeros(0, np.float32)
     sys.path.insert(0, os.path.join(ROOT, "engine"))
-    import voice
-    return voice.synth(text)
+    try:
+        import voice
+        return voice.synth(text)
+    except ImportError as e:  # Chatterbox pas installé : vidéo sans voix plutôt que rien
+        print(f"ATTENTION : voix indisponible ({e}), vidéo SANS voix", file=sys.stderr)
+        _VOICE_OK = False
+        return np.zeros(0, np.float32)
+
+
+_VOICE_OK = True
 
 
 def ding():
@@ -417,7 +428,7 @@ def render(spec_path, out):
         cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
                "-r", str(FPS), "-i", "-", "-i", wav, "-c:v", "libx264", "-preset", "medium", "-crf", "20",
                "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k",
-               "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=44100", "-shortest", "-movflags", "+faststart", out]
+               "-af", "acompressor=threshold=-20dB:ratio=4:attack=2:release=100,alimiter=limit=0.5:level=disabled,loudnorm=I=-14:TP=-2:LRA=7,alimiter=limit=0.8:level=disabled,aresample=44100", "-shortest", "-movflags", "+faststart", out]
         p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
         for dur, fn, _, _ in timeline:
             nf = int(round(dur * FPS))
