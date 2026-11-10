@@ -2563,6 +2563,479 @@ def scene_jad_porte(p):
     return _end(c, p, 0.5, 0.65)
 
 
+def scene_jad_passage(p):
+    """Le passage entre les deux villages : un long couloir de pierre qui monte vers une lumière d'aube,
+    des ombres collées aux murs qui tendent les bras. "n" nombre d'ombres, "voix": bouches qui chuchotent."""
+    c = Canvas((24, 10, 22), (60, 24, 40))
+    d = c.d
+    # murs en perspective (granit)
+    d.polygon([c.P(0, 0), c.P(0.40, 0.30), c.P(0.40, 0.66), c.P(0, 1)], fill=(54, 40, 52))
+    d.polygon([c.P(1, 0), c.P(0.60, 0.30), c.P(0.60, 0.66), c.P(1, 1)], fill=(46, 34, 46))
+    rnd = random.Random(141)
+    for _ in range(140):
+        side = rnd.choice((-1, 1))
+        t = rnd.uniform(0.0, 0.95)
+        u = 0.5 + side * (0.5 - 0.10 * t / 0.95 * 1.0) * (1 - t * 0.8)
+        v = rnd.uniform(0.30 * t + 0.0 * (1 - t), 1 - 0.34 * t)
+        w = 0.03 * (1 - t * 0.8)
+        g = rnd.randint(40, 70)
+        d.rectangle(c.box(u - w, v, u + w * 0.6, v + 0.012 * (1 - t * 0.7)), fill=(g + 6, g - 6, g + 4))
+    # sol et marches
+    d.polygon([c.P(0, 1), c.P(0.40, 0.66), c.P(0.60, 0.66), c.P(1, 1)], fill=(40, 28, 36))
+    for k in range(9):
+        t = k / 9
+        v = 1 - 0.34 * (t ** 0.8)
+        hw = 0.5 - 0.40 * (t ** 0.8)
+        d.line([c.P(0.5 - hw, v), c.P(0.5 + hw, v)], fill=(70, 50, 58), width=max(2, int(10 * (1 - t))))
+    # lumière d'aube au bout
+    d.rounded_rectangle(c.box(0.43, 0.36, 0.57, 0.66), radius=50, fill=(255, 214, 170))
+    c.glow(0.5, 0.52, 0.6, (255, 190, 130), 0.75)
+    c.soft(lambda dd, cc: dd.polygon([cc.P(0.43, 0.66), cc.P(0.57, 0.66), cc.P(0.80, 1.0), cc.P(0.20, 1.0)], fill=(255, 200, 150, 70)), 0.03)
+    d = c.d
+    # ombres collées aux murs, bras tendus vers le chemin
+    spots = [(0.12, 0.92, 1.1, 1), (0.88, 0.94, 1.15, -1), (0.27, 0.78, 0.7, 1), (0.73, 0.79, 0.7, -1), (0.35, 0.71, 0.45, 1), (0.65, 0.71, 0.45, -1)]
+    for u, v, s, side in spots[:p.get("n", 4)]:
+        _fig(c, u, v, s, col=(6, 2, 6))
+        d = c.d
+        d.line([c.P(u + side * 0.02 * s, v - 0.14 * s), c.P(u + side * 0.11 * s, v - 0.12 * s)], fill=(6, 2, 6), width=int(16 * s))
+        if p.get("voix"):
+            d.ellipse(c.box(u - 0.008 * s, v - 0.165 * s, u + 0.008 * s, v - 0.155 * s), fill=(200, 60, 60))
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.84, 1.1, 1.0), fill=(200, 120, 120, 60)), 0.05)
+    return _end(c, p, 0.5, 0.7)
+
+
+def scene_jad_mains(p):
+    """Gros plan : deux mains serrées l'une dans l'autre (manche orange du héros, manche bleue de Léa).
+    "light": "aube" (fond doré) sinon fond rouge sombre ; "shadow": une main d'ombre qui approche."""
+    aube = p.get("aube")
+    c = Canvas((90, 60, 90) if aube else (60, 12, 22), (255, 170, 120) if aube else (24, 6, 12))
+    c.glow(0.5, 0.45, 0.8, (255, 200, 150) if aube else (255, 70, 60), 0.35)
+    d = c.d
+    # manches
+    d.polygon([c.P(-0.1, 0.62), c.P(0.30, 0.46), c.P(0.36, 0.60), c.P(-0.1, 0.82)], fill=(170, 80, 22))
+    d.polygon([c.P(1.1, 0.44), c.P(0.70, 0.46), c.P(0.64, 0.60), c.P(1.1, 0.66)], fill=(40, 80, 160))
+    for k in range(5):
+        d.line([c.P(0.02 + k * 0.06, 0.66 - k * 0.04), c.P(0.06 + k * 0.06, 0.78 - k * 0.04)], fill=(130, 60, 16), width=5)
+        d.line([c.P(0.98 - k * 0.06, 0.47), c.P(0.96 - k * 0.06, 0.62)], fill=(30, 60, 130), width=5)
+    # poignets et mains (bâton : formes rondes noires bordées de lumière)
+    skin = (14, 12, 20)
+    rim = (255, 220, 190) if aube else (255, 140, 120)
+    d.ellipse(c.box(0.30, 0.44, 0.56, 0.44 + 0.22 * CW / CH), fill=skin, outline=rim, width=8)
+    d.ellipse(c.box(0.44, 0.45, 0.70, 0.45 + 0.21 * CW / CH), fill=skin, outline=rim, width=8)
+    for k in range(4):
+        u = 0.44 + k * 0.035
+        d.rounded_rectangle(c.box(u, 0.47, u + 0.03, 0.60), radius=20, fill=skin, outline=rim, width=5)
+    d.rounded_rectangle(c.box(0.36, 0.43, 0.48, 0.47), radius=20, fill=skin, outline=rim, width=5)
+    if p.get("shadow"):
+        d.polygon([c.P(0.44, 1.05), c.P(0.46, 0.86), c.P(0.56, 0.86), c.P(0.58, 1.05)], fill=(4, 2, 4))
+        d.ellipse(c.box(0.43, 0.78, 0.59, 0.78 + 0.16 * CW / CH), fill=(4, 2, 4))
+        for k, (du, ln) in enumerate(((-0.06, 0.06), (-0.025, 0.09), (0.01, 0.10), (0.045, 0.085))):
+            d.line([c.P(0.51 + du, 0.80), c.P(0.51 + du * 1.3, 0.80 - ln)], fill=(4, 2, 4), width=60)
+        d.line([c.P(0.44, 0.84), c.P(0.38, 0.79)], fill=(4, 2, 4), width=60)
+    c.soft(lambda dd, cc: dd.ellipse(cc.box(0.1, 0.85, 0.9, 1.2), fill=(0, 0, 0, 120)), 0.05)
+    return c.done()
+
+
+def scene_habitacle(p):
+    """Vue du conducteur dans un tunnel : volant, tableau de bord, pare-brise, lampes orange en enfilade.
+    "lights": phares allumés (route éclairée), "full": pleins phares, "crowd": silhouettes pâles sur la route,
+    "oncoming": phares d'en face, "mirror_face": visage dans le rétroviseur, "dark": tunnel éteint."""
+    c = Canvas((26, 20, 18), (10, 8, 8))
+    d = c.d
+    # tunnel vu à travers le pare-brise
+    d.ellipse(c.box(-0.3, -0.10, 1.3, 0.95), fill=(44, 36, 30))
+    if not p.get("dark"):
+        for k in range(7):
+            t = 1 - k / 7
+            w = 0.65 * t + 0.05
+            for sd in (-1, 1):
+                u = 0.5 + sd * w * 0.75
+                vv = 0.42 - w * 0.42
+                d.rectangle(c.box(u - 0.012 * t, vv, u + 0.012 * t, vv + 0.006 * t + 0.003), fill=(255, 170, 70))
+                c.glow(u, vv, 0.05 * t + 0.01, (255, 160, 60), 0.35)
+                d = c.d
+    d.polygon([c.P(0.47, 0.44), c.P(0.53, 0.44), c.P(1.0, 0.70), c.P(0.0, 0.70)], fill=(36, 34, 36))
+    for k in range(4):
+        v = 0.47 + k * 0.06
+        d.rectangle(c.box(0.497 - k * 0.003, v, 0.503 + k * 0.003, v + 0.015 + k * 0.006), fill=(200, 190, 160))
+    if p.get("lights") or p.get("full"):
+        c.soft(lambda dd, cc: dd.polygon([cc.P(0.2, 0.70), cc.P(0.8, 0.70), cc.P(0.56, 0.44), cc.P(0.44, 0.44)], fill=(255, 240, 200, 150 if p.get("full") else 80)), 0.02)
+        d = c.d
+    if p.get("oncoming"):
+        for u in (0.475, 0.525):
+            c.glow(u, 0.45, 0.10, (255, 250, 230), 0.8)
+        d = c.d
+    if p.get("crowd"):
+        rnd = random.Random(7)
+        for k in range(9):
+            u = rnd.uniform(0.32, 0.68)
+            v = rnd.uniform(0.50, 0.66)
+            s = 0.25 + (v - 0.5) * 2.2
+            _fig(c, u, v, s, col=(200, 196, 190) if p.get("full") else (40, 36, 40), eyes=not p.get("full"))
+        d = c.d
+    # montants et tableau de bord
+    d.polygon([c.P(0, 0), c.P(0.10, 0), c.P(0.0, 0.70)], fill=(14, 12, 16))
+    d.polygon([c.P(1, 0), c.P(0.90, 0), c.P(1.0, 0.70)], fill=(14, 12, 16))
+    d.rectangle(c.box(0, 0, 1, 0.05), fill=(18, 16, 20))
+    d.polygon([c.P(0, 0.70), c.P(1, 0.70), c.P(1, 1), c.P(0, 1)], fill=(22, 20, 26))
+    d.line([c.P(0, 0.70), c.P(1, 0.70)], fill=(60, 56, 70), width=8)
+    # compteurs
+    for u in (0.26, 0.40):
+        d.ellipse(c.box(u - 0.06, 0.74, u + 0.06, 0.74 + 0.12 * CW / CH), fill=(10, 10, 14), outline=(255, 140, 60), width=6)
+        d.line([c.P(u, 0.74 + 0.06 * CW / CH), c.P(u + 0.035, 0.76)], fill=(255, 90, 60), width=6)
+    c.glow(0.33, 0.78, 0.18, (255, 140, 60), 0.25)
+    d = c.d
+    # volant
+    d.ellipse(c.box(0.12, 0.78, 0.54, 0.78 + 0.42 * CW / CH), outline=(8, 8, 10), width=46)
+    d.rectangle(c.box(0.30, 0.90, 0.36, 1.05), fill=(8, 8, 10))
+    # rétroviseur
+    d.line([c.P(0.5, 0.0), c.P(0.5, 0.27)], fill=(10, 10, 12), width=14)
+    d.rounded_rectangle(c.box(0.28, 0.27, 0.72, 0.40), radius=30, fill=(30, 28, 36), outline=(10, 10, 12), width=12)
+    if p.get("mirror_face"):
+        d.ellipse(c.box(0.45, 0.285, 0.55, 0.285 + 0.10 * CW / CH), fill=(210, 206, 200))
+        for du in (-0.018, 0.018):
+            d.ellipse(c.box(0.5 + du - 0.008, 0.32, 0.5 + du + 0.008, 0.32 + 0.014 * CW / CH), fill=(10, 0, 0))
+        c.glow(0.5, 0.33, 0.12, (200, 200, 220), 0.25)
+        d = c.d
+    return _end(c, p, 0.5, 0.5)
+
+
+def scene_autoradio(p):
+    """Gros plan sur l'autoradio d'une voiture : écran orange avec du texte qui défile ("text"),
+    boutons, grille d'aération. "red": l'écran devient rouge."""
+    c = Canvas((20, 18, 24), (8, 8, 10))
+    d = c.d
+    d.rounded_rectangle(c.box(0.04, 0.30, 0.96, 0.66), radius=40, fill=(30, 28, 34), outline=(60, 58, 70), width=10)
+    scr = (255, 70, 60) if p.get("red") else (255, 150, 60)
+    d.rounded_rectangle(c.box(0.12, 0.36, 0.88, 0.50), radius=16, fill=(30, 12, 6))
+    txt = p.get("text", "FM 101.2")
+    f = ImageFont.truetype(FONT, int(0.06 * c.w))
+    while d.textlength(txt, font=f) > 0.72 * c.w and f.size > 20:
+        f = ImageFont.truetype(FONT, f.size - 6)
+    tw = d.textlength(txt, font=f)
+    d.text((0.5 * c.w - tw / 2, 0.385 * c.h), txt, font=f, fill=scr)
+    c.glow(0.5, 0.43, 0.35, scr, 0.35)
+    d = c.d
+    for k in range(6):
+        u = 0.16 + k * 0.12
+        d.rounded_rectangle(c.box(u, 0.54, u + 0.08, 0.60), radius=12, fill=(48, 46, 56))
+        d.text((u * c.w + 0.025 * c.w, 0.545 * c.h), str(k + 1), font=ImageFont.truetype(FONT, int(0.03 * c.w)), fill=(180, 170, 190))
+    for sd in (0.08, 0.92):
+        d.ellipse(c.box(sd - 0.05, 0.40, sd + 0.05, 0.40 + 0.10 * CW / CH), fill=(16, 16, 20), outline=(70, 66, 80), width=6)
+    for k in range(8):
+        d.line([c.P(0.1, 0.72 + k * 0.025), c.P(0.9, 0.72 + k * 0.025)], fill=(14, 14, 18), width=10)
+    d.rectangle(c.box(0, 0.0, 1, 0.22), fill=(14, 12, 18))
+    return c.done()
+
+
+# ---- Décors de la série « Le Refuge » (Vosges, forêt de sapins, refuge de montagne) ----
+def _ref_sky(c, p, seed):
+    if p.get("aube"):
+        c.img = R.gradient(c.w, c.h, (60, 60, 110), (250, 160, 120))
+        c.d = ImageDraw.Draw(c.img)
+    else:
+        _stars(c, seed, 0.3, 30)
+        _moon(c, 0.22, 0.10, 0.035)
+
+
+def _sapin(c, u, base, h, col=(16, 30, 30), snow=False):
+    d = c.d
+    w = h * 0.32
+    for k in range(4):
+        t = k / 4
+        v0 = base - h * (0.25 + 0.75 * t)
+        ww = w * (1 - t * 0.7)
+        d.polygon([c.P(u - ww, base - h * 0.2 * (1 - t) - h * 0.75 * t + h * 0.05), c.P(u, v0 - h * 0.15), c.P(u + ww, base - h * 0.2 * (1 - t) - h * 0.75 * t + h * 0.05)], fill=col)
+        if snow:
+            d.line([c.P(u - ww * 0.8, base - h * 0.2 * (1 - t) - h * 0.75 * t + h * 0.04), c.P(u, v0)], fill=(150, 150, 170), width=4)
+    d.rectangle(c.box(u - h * 0.02, base - h * 0.06, u + h * 0.02, base), fill=(30, 20, 16))
+
+
+def _veilleur(c, u, v, s=1.0, eyes=True):
+    """« Le Veilleur » : silhouette très haute et maigre, bras trop longs, bois de cerf sur la tête."""
+    d = c.d
+    col = (6, 6, 8)
+    d.polygon([c.P(u - 0.025 * s, v), c.P(u - 0.018 * s, v - 0.36 * s), c.P(u + 0.018 * s, v - 0.36 * s), c.P(u + 0.025 * s, v)], fill=col)
+    d.ellipse(c.box(u - 0.022 * s, v - 0.42 * s, u + 0.022 * s, v - 0.42 * s + 0.05 * s * CW / CH), fill=col)
+    for sd in (-1, 1):
+        d.line([c.P(u + sd * 0.018 * s, v - 0.34 * s), c.P(u + sd * 0.05 * s, v - 0.10 * s), c.P(u + sd * 0.045 * s, v + 0.02 * s)], fill=col, width=max(4, int(14 * s)))
+        x0, y0 = u + sd * 0.01 * s, v - 0.415 * s
+        x1, y1 = u + sd * 0.07 * s, v - 0.52 * s
+        d.line([c.P(x0, y0), c.P(x1, y1)], fill=col, width=max(3, int(10 * s)))
+        d.line([c.P((x0 + x1) / 2, (y0 + y1) / 2), c.P((x0 + x1) / 2 + sd * 0.035 * s, (y0 + y1) / 2 - 0.02 * s)], fill=col, width=max(3, int(8 * s)))
+        d.line([c.P(x1, y1), c.P(x1 + sd * 0.02 * s, y1 - 0.04 * s)], fill=col, width=max(3, int(8 * s)))
+    if eyes:
+        for du in (-0.008, 0.008):
+            e = 0.0035 * s
+            d.ellipse(c.box(u + du * s - e, v - 0.40 * s, u + du * s + e, v - 0.40 * s + 2 * e * CW / CH), fill=(255, 230, 200))
+        c.glow(u, v - 0.40 * s, 0.04 * s, (255, 230, 200), 0.3)
+
+
+def scene_ref_sentier(p):
+    """Sentier de forêt des Vosges dans le brouillard : sapins, balise rouge et blanche sur un tronc.
+    "veilleur": la silhouette au fond ; "marque": une entaille en forme de bois de cerf sur le tronc."""
+    c = Canvas((16, 20, 34), (60, 66, 84))
+    _ref_sky(c, p, 31)
+    rnd = random.Random(32)
+    for k in range(14):
+        _sapin(c, rnd.uniform(-0.05, 1.05), 0.56, rnd.uniform(0.25, 0.4), col=(30, 40, 50))
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.38, 1.1, 0.62), fill=(150, 156, 176, 60)), 0.04)
+    d = c.d
+    d.rectangle(c.box(0, 0.56, 1, 1), fill=(34, 32, 30))
+    d.polygon([c.P(0.46, 0.56), c.P(0.54, 0.56), c.P(0.80, 1.0), c.P(0.20, 1.0)], fill=(70, 60, 50))
+    for k in range(30):
+        u, v = rnd.uniform(0.25, 0.75), rnd.uniform(0.6, 1)
+        d.ellipse(c.box(u, v, u + 0.01, v + 0.006), fill=(90, 80, 70))
+    if p.get("veilleur"):
+        _veilleur(c, 0.5, 0.58, 0.55)
+    # grands troncs au premier plan
+    for u, w in ((0.06, 0.09), (0.86, 0.11)):
+        d.rectangle(c.box(u - w / 2, -0.1, u + w / 2, 1.02), fill=(26, 20, 22))
+        for k in range(10):
+            d.line([c.P(u - w / 2 + 0.01, 0.1 * k), c.P(u - w / 2 + 0.01, 0.1 * k + 0.05)], fill=(40, 32, 34), width=6)
+    d.rectangle(c.box(0.83, 0.42, 0.89, 0.44), fill=(220, 40, 40))
+    d.rectangle(c.box(0.83, 0.44, 0.89, 0.46), fill=(230, 230, 230))
+    if p.get("marque"):
+        d.line([c.P(0.06, 0.55), c.P(0.06, 0.45)], fill=(200, 170, 140), width=10)
+        for sd in (-1, 1):
+            d.line([c.P(0.06, 0.47), c.P(0.06 + sd * 0.03, 0.40)], fill=(200, 170, 140), width=8)
+    if p.get("lamp"):
+        c.glow(0.5, 0.80, 0.25, (255, 230, 170), 0.4)
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.80, 1.1, 1.0), fill=(170, 170, 190, 70)), 0.05)
+    return _end(c, p, 0.5, 0.62)
+
+
+def scene_ref_refuge(p):
+    """Le refuge du Grand Sapin : chalet en bois dans une clairière, cheminée qui fume, fenêtre allumée,
+    panneau « REFUGE 1 140 m ». "dark": fenêtre éteinte ; "veilleur": la silhouette à l'orée ; "neige"."""
+    c = Canvas((14, 16, 34), (54, 56, 84))
+    _ref_sky(c, p, 33)
+    rnd = random.Random(34)
+    for k in range(18):
+        _sapin(c, rnd.uniform(-0.05, 1.05), 0.60, rnd.uniform(0.2, 0.42), col=(18, 26, 32), snow=p.get("neige", False))
+    d = c.d
+    d.rectangle(c.box(0, 0.60, 1, 1), fill=(46, 48, 58) if not p.get("neige") else (120, 122, 140))
+    # chalet
+    d.rectangle(c.box(0.24, 0.50, 0.76, 0.80), fill=(84, 56, 40))
+    for k in range(8):
+        d.line([c.P(0.24, 0.52 + k * 0.036), c.P(0.76, 0.52 + k * 0.036)], fill=(60, 40, 28), width=6)
+    d.polygon([c.P(0.18, 0.52), c.P(0.50, 0.32), c.P(0.82, 0.52)], fill=(40, 34, 40))
+    d.rectangle(c.box(0.62, 0.32, 0.67, 0.44), fill=(60, 52, 56))
+    c.soft(lambda dd, cc: dd.ellipse(cc.box(0.60, 0.16, 0.74, 0.32), fill=(150, 150, 170, 90)), 0.03)
+    d = c.d
+    d.rectangle(c.box(0.44, 0.62, 0.56, 0.80), fill=(40, 26, 20))
+    d.ellipse(c.box(0.535, 0.71, 0.545, 0.715), fill=(200, 170, 90))
+    lit = not p.get("dark")
+    d.rectangle(c.box(0.30, 0.58, 0.40, 0.67), fill=(255, 196, 110) if lit else (16, 14, 22))
+    d.line([c.P(0.35, 0.58), c.P(0.35, 0.67)], fill=(60, 40, 28), width=6)
+    if lit:
+        c.glow(0.35, 0.62, 0.15, (255, 190, 100), 0.45)
+    d = c.d
+    d.line([c.P(0.86, 0.86), c.P(0.86, 0.70)], fill=(60, 44, 30), width=10)
+    d.rectangle(c.box(0.80, 0.68, 0.96, 0.73), fill=(120, 90, 60))
+    d.text((0.815 * c.w, 0.685 * c.h), "REFUGE", font=ImageFont.truetype(FONT, int(0.022 * c.w)), fill=(240, 230, 200))
+    if p.get("veilleur"):
+        _veilleur(c, 0.12, 0.66, 0.6)
+    if p.get("traces"):
+        for k in range(8):
+            u = 0.5 + (k % 2) * 0.03 - 0.015
+            v = 0.98 - k * 0.022
+            d.ellipse(c.box(u - 0.01, v, u + 0.01, v + 0.008), fill=(20, 18, 26))
+    return _end(c, p, 0.5, 0.7)
+
+
+def scene_ref_dortoir(p):
+    """Intérieur du refuge : lits superposés en bois, poêle qui rougeoie, table avec le livre d'or et une bougie,
+    petite fenêtre noire. "visage": un visage pâle à la fenêtre ; "sac": un sac à dos rouge abandonné."""
+    c = Canvas((54, 36, 30), (26, 18, 16))
+    d = c.d
+    for k in range(12):
+        d.line([c.P(0, 0.06 + k * 0.08), c.P(1, 0.06 + k * 0.08)], fill=(70, 48, 36), width=8)
+    # lits superposés
+    for u0 in (0.02, ):
+        d.rectangle(c.box(u0, 0.30, u0 + 0.30, 0.34), fill=(100, 70, 46))
+        d.rectangle(c.box(u0, 0.60, u0 + 0.30, 0.64), fill=(100, 70, 46))
+        d.rectangle(c.box(u0, 0.26, u0 + 0.30, 0.30), fill=(60, 80, 110))
+        d.rectangle(c.box(u0, 0.56, u0 + 0.30, 0.60), fill=(110, 60, 60))
+        d.rectangle(c.box(u0 + 0.28, 0.20, u0 + 0.31, 0.90), fill=(80, 54, 36))
+    # fenêtre
+    d.rectangle(c.box(0.42, 0.18, 0.62, 0.36), fill=(10, 12, 22), outline=(90, 62, 42), width=12)
+    d.line([c.P(0.52, 0.18), c.P(0.52, 0.36)], fill=(90, 62, 42), width=8)
+    if p.get("visage"):
+        d.ellipse(c.box(0.455, 0.22, 0.505, 0.22 + 0.05 * CW / CH), fill=(200, 196, 190))
+        for du in (-0.01, 0.01):
+            d.ellipse(c.box(0.48 + du - 0.004, 0.235, 0.48 + du + 0.004, 0.243), fill=(10, 0, 0))
+    # poêle
+    d.rectangle(c.box(0.74, 0.50, 0.92, 0.80), fill=(30, 28, 30))
+    d.rectangle(c.box(0.80, 0.08, 0.84, 0.50), fill=(36, 34, 36))
+    d.rectangle(c.box(0.77, 0.60, 0.89, 0.72), fill=(255, 110, 40))
+    c.glow(0.83, 0.66, 0.3, (255, 120, 50), 0.45)
+    d = c.d
+    # table, livre, bougie
+    d.rectangle(c.box(0.34, 0.66, 0.70, 0.70), fill=(110, 76, 50))
+    d.rectangle(c.box(0.37, 0.70, 0.39, 0.92), fill=(80, 54, 36))
+    d.rectangle(c.box(0.65, 0.70, 0.67, 0.92), fill=(80, 54, 36))
+    d.polygon([c.P(0.42, 0.66), c.P(0.52, 0.65), c.P(0.62, 0.66), c.P(0.60, 0.64), c.P(0.52, 0.63), c.P(0.44, 0.64)], fill=(220, 200, 160))
+    d.rectangle(c.box(0.63, 0.61, 0.645, 0.66), fill=(230, 220, 190))
+    c.glow(0.637, 0.60, 0.18, (255, 200, 120), 0.5)
+    d = c.d
+    if p.get("sac"):
+        d.rounded_rectangle(c.box(0.12, 0.76, 0.24, 0.92), radius=20, fill=(170, 40, 36))
+    d.rectangle(c.box(0, 0.92, 1, 1), fill=(40, 28, 22))
+    return _end(c, p, 0.5, 0.75)
+
+
+def scene_ref_livre(p):
+    """Gros plan sur le livre d'or du refuge, ouvert à la lueur de la bougie : une seule page bien cadrée.
+    "lines": lignes manuscrites, "date": en haut de la page ; "new": la dernière ligne est fraîche (encre rouge)."""
+    c = Canvas((0, 0, 0), (0, 0, 0))
+    c.img = _room_blur(4, ((60, 40, 30), (24, 16, 12))).resize((c.w, c.h), Image.LANCZOS)
+    c.d = ImageDraw.Draw(c.img)
+    c.glow(0.80, 0.16, 0.3, (255, 190, 110), 0.3)
+    d = c.d
+    d.polygon([c.P(0.20, 0.24), c.P(0.80, 0.22), c.P(0.82, 0.78), c.P(0.18, 0.80)], fill=(128, 112, 88))
+    d.polygon([c.P(0.12, 0.26), c.P(0.20, 0.24), c.P(0.18, 0.80), c.P(0.10, 0.80)], fill=(96, 84, 66))
+    for k in range(15):
+        v = 0.30 + k * 0.032
+        d.line([c.P(0.23, v), c.P(0.78, v)], fill=(110, 96, 76), width=3)
+    lines = p.get("lines", [])
+    size = int(0.05 * c.w)
+    f = ImageFont.truetype(FONT, size)
+    while f.size > 20 and max([d.textlength(t, font=f) for t in lines + [p.get("date", "")]] or [0]) > 0.52 * c.w:
+        f = ImageFont.truetype(FONT, f.size - 4)
+    if p.get("date"):
+        d.text((0.24 * c.w, 0.255 * c.h), p["date"], font=f, fill=(90, 60, 50))
+    for i, ln in enumerate(lines):
+        last = p.get("new") and i == len(lines) - 1
+        d.text((0.24 * c.w, (0.33 + i * 0.075) * c.h), ln, font=f, fill=(200, 20, 20) if last else (20, 16, 30))
+    if p.get("new") and lines:
+        c.glow(0.5, 0.33 + (len(lines) - 1) * 0.075 + 0.02, 0.15, (255, 60, 50), 0.25)
+    return c.done()
+
+
+def scene_ref_lac(p):
+    """Lac de montagne la nuit (Gérardmer) : eau noire, reflet de lune, ponton, sapins sur l'autre rive.
+    "barque": barque vide qui dérive ; "veilleur": la silhouette debout sur l'eau."""
+    c = Canvas((12, 16, 36), (50, 56, 90))
+    _ref_sky(c, p, 35)
+    rnd = random.Random(36)
+    for k in range(26):
+        _sapin(c, rnd.uniform(-0.05, 1.05), 0.46, rnd.uniform(0.10, 0.2), col=(14, 20, 28))
+    d = c.d
+    d.rectangle(c.box(0, 0.46, 1, 1), fill=(10, 14, 30))
+    for k in range(14):
+        v = 0.48 + k * 0.035
+        d.line([c.P(0.18 - k * 0.003, v), c.P(0.26 + k * 0.003, v)], fill=(170, 170, 200), width=3)
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.40, 1.1, 0.52), fill=(140, 146, 176, 100)), 0.03)
+    d = c.d
+    d.polygon([c.P(0.55, 1.0), c.P(0.62, 0.70), c.P(0.70, 0.70), c.P(0.85, 1.0)], fill=(70, 52, 40))
+    for k in range(8):
+        v = 0.72 + k * 0.035
+        d.line([c.P(0.62 - k * 0.009, v), c.P(0.70 + k * 0.019, v)], fill=(48, 36, 28), width=6)
+    if p.get("barque"):
+        d.polygon([c.P(0.28, 0.62), c.P(0.44, 0.62), c.P(0.41, 0.66), c.P(0.31, 0.66)], fill=(60, 40, 30))
+    if p.get("veilleur"):
+        c.glow(0.40, 0.45, 0.25, (200, 210, 255), 0.45)
+        _veilleur(c, 0.40, 0.60, 0.65)
+    if p.get("lamp"):
+        c.glow(0.66, 0.70, 0.12, (255, 220, 150), 0.6)
+    return _end(c, p, 0.5, 0.6)
+
+
+def scene_ref_veilleur(p):
+    """« Le Veilleur » entre les sapins, en contre-plongée, brume au sol, lampe frontale qui l'éclaire à peine.
+    "size": taille ; "close": plus près."""
+    c = Canvas((8, 10, 20), (36, 40, 60))
+    rnd = random.Random(37)
+    for k in range(12):
+        _sapin(c, rnd.uniform(-0.05, 1.05), 0.88, rnd.uniform(0.5, 0.8), col=(14, 18, 24))
+    d = c.d
+    d.rectangle(c.box(0, 0.88, 1, 1), fill=(20, 20, 26))
+    s = p.get("size", 1.6 if p.get("close") else 1.2)
+    c.glow(0.5, 0.45, 0.45, (200, 215, 255), 0.55)
+    c.soft(lambda dd, cc: dd.ellipse(cc.box(0.25, 0.25, 0.75, 0.95), fill=(220, 230, 255, 90)), 0.05)
+    _veilleur(c, 0.5, 0.92, s)
+    c.soft(lambda dd, cc: dd.rectangle(cc.box(-0.1, 0.80, 1.1, 1.0), fill=(170, 176, 200, 110)), 0.05)
+    if p.get("red"):
+        c.glow(0.5, 0.5, 0.6, (255, 60, 50), 0.25)
+    return c.done()
+
+
+def scene_vestiaire(p):
+    """Vestiaire de piscine la nuit : casiers métalliques, banc, carrelage, néon qui grésille,
+    flaque d'eau. "open": un casier ouvert ; "traces": traces de pieds mouillés vers le bassin."""
+    c = Canvas((30, 50, 60), (14, 22, 28))
+    d = c.d
+    for k in range(12):
+        for j in range(14):
+            d.rectangle(c.box(j * 0.075, 0.62 + k * 0.035, j * 0.075 + 0.072, 0.62 + k * 0.035 + 0.032), fill=(44, 66, 72) if (j + k) % 2 else (38, 58, 64))
+    for k in range(7):
+        u = 0.02 + k * 0.14
+        d.rectangle(c.box(u, 0.14, u + 0.13, 0.62), fill=(60, 84, 100), outline=(30, 44, 54), width=8)
+        for v in (0.18, 0.40):
+            d.line([c.P(u + 0.03, v), c.P(u + 0.10, v)], fill=(30, 44, 54), width=4)
+            d.line([c.P(u + 0.03, v + 0.012), c.P(u + 0.10, v + 0.012)], fill=(30, 44, 54), width=4)
+        d.rectangle(c.box(u + 0.105, 0.36, u + 0.115, 0.40), fill=(170, 180, 190))
+    if p.get("open", True):
+        d.rectangle(c.box(0.44, 0.14, 0.57, 0.62), fill=(10, 14, 18))
+        d.polygon([c.P(0.57, 0.14), c.P(0.66, 0.10), c.P(0.66, 0.66), c.P(0.57, 0.62)], fill=(70, 96, 112))
+        d.rounded_rectangle(c.box(0.47, 0.42, 0.54, 0.60), radius=14, fill=(150, 40, 40))
+    d.rectangle(c.box(0.10, 0.70, 0.90, 0.73), fill=(120, 86, 56))
+    d.rectangle(c.box(0.14, 0.73, 0.16, 0.82), fill=(80, 60, 40))
+    d.rectangle(c.box(0.84, 0.73, 0.86, 0.82), fill=(80, 60, 40))
+    d.rectangle(c.box(0.30, 0.03, 0.70, 0.05), fill=(220, 240, 245))
+    if not p.get("dark"):
+        c.glow(0.5, 0.04, 0.5, (170, 230, 240), 0.4)
+    d = c.d
+    c.soft(lambda dd, cc: dd.ellipse(cc.box(0.30, 0.86, 0.70, 0.96), fill=(120, 170, 190, 120)), 0.01)
+    d = c.d
+    if p.get("traces"):
+        for k in range(7):
+            u = 0.5 + (k % 2) * 0.05 - 0.025
+            v = 0.98 - k * 0.04
+            d.ellipse(c.box(u - 0.015, v, u + 0.015, v + 0.02), fill=(70, 110, 120))
+    return _end(c, p, 0.5, 0.75)
+
+
+def scene_bassin_nuit(p):
+    """Grand bassin de piscine, la nuit, lumières éteintes : eau noire, lignes de nage, plongeoir,
+    grandes baies vitrées avec la lune. "nageur": une forme qui nage sous l'eau ; "tete": une tête
+    qui sort de l'eau et regarde ; "lumiere": projecteurs du bassin allumés (eau bleue)."""
+    lum = p.get("lumiere")
+    c = Canvas((14, 18, 34), (8, 10, 18))
+    d = c.d
+    for k in range(6):
+        u = k * 0.18
+        d.rectangle(c.box(u, 0.05, u + 0.16, 0.40), fill=(30, 40, 70), outline=(16, 18, 28), width=10)
+    _moon(c, 0.78, 0.15, 0.03)
+    d = c.d
+    d.rectangle(c.box(0, 0.40, 1, 0.48), fill=(60, 70, 80))
+    d.polygon([c.P(-0.1, 1.0), c.P(0.08, 0.48), c.P(0.92, 0.48), c.P(1.1, 1.0)], fill=(20, 80, 120) if lum else (6, 14, 26))
+    for k in range(5):
+        u0 = 0.08 + k * 0.21
+        d.line([c.P(u0, 0.48), c.P(-0.1 + k * 0.30, 1.0)], fill=(200, 60, 60) if k % 2 else (220, 220, 230), width=5)
+    if lum:
+        for u in (0.25, 0.5, 0.75):
+            c.glow(u, 0.8, 0.2, (80, 200, 255), 0.4)
+        d = c.d
+    else:
+        for k in range(12):
+            v = 0.52 + k * 0.04
+            d.line([c.P(0.62, v), c.P(0.72, v)], fill=(120, 130, 170), width=2)
+    if p.get("nageur"):
+        c.soft(lambda dd, cc: dd.ellipse(cc.box(0.36, 0.66, 0.62, 0.74), fill=(0, 0, 0, 200)), 0.008)
+        d = c.d
+    if p.get("tete"):
+        d.ellipse(c.box(0.47, 0.60, 0.53, 0.60 + 0.06 * CW / CH), fill=(200, 196, 190))
+        for du in (-0.012, 0.012):
+            d.ellipse(c.box(0.5 + du - 0.005, 0.625, 0.5 + du + 0.005, 0.635), fill=(10, 0, 0))
+        d.line([c.P(0.44, 0.67), c.P(0.56, 0.67)], fill=(120, 130, 170), width=4)
+    # plongeoir
+    d.rectangle(c.box(0.80, 0.30, 0.82, 0.48), fill=(140, 140, 150))
+    d.rectangle(c.box(0.70, 0.29, 0.86, 0.31), fill=(180, 180, 190))
+    return _end(c, p, 0.5, 0.6)
+
+
 def scene_old(name):
     """Anciens décors, recolorés dans la palette violet / orange."""
     def f(p):
@@ -2575,7 +3048,12 @@ def scene_old(name):
     return f
 
 
-SCENES = {"chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, "flou": scene_flou,
+SCENES = {"vestiaire": scene_vestiaire, "bassin_nuit": scene_bassin_nuit,
+          "ref_sentier": scene_ref_sentier, "ref_refuge": scene_ref_refuge, "ref_dortoir": scene_ref_dortoir,
+          "ref_livre": scene_ref_livre, "ref_lac": scene_ref_lac, "ref_veilleur": scene_ref_veilleur,
+          "habitacle": scene_habitacle, "autoradio": scene_autoradio,
+          "jad_passage": scene_jad_passage, "jad_mains": scene_jad_mains,
+          "chambre": scene_chambre, "fenetre": scene_fenetre, "rue": scene_rue, "flou": scene_flou,
           "porte": scene_porte, "radio": scene_radio, "escalier": scene_escalier,
           "wagon": scene_wagon, "couloir": scene_couloir, "foret": scene_foret, "parking": scene_parking,
           "station": scene_station, "ascenseur": scene_ascenseur, "cuisine": scene_cuisine,
