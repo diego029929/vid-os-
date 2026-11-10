@@ -315,3 +315,31 @@ creux à 11 h, 13 h-14 h et après 21 h).
   prononcé (« gilange ») → « PLACE DE L'ÉGLISE ». Durée 97,8 s.
 - Décors : +2 (jad_ombres, jad_porte) → 8 nouveaux aujourd'hui.
 - Partie 4 après 4 h : TikTok 329 vues / 13 likes / 2 commentaires (2 votes), Instagram temps moyen 13 s (meilleur que la veille).
+
+### 10/11 (partie 6 = ép. 27 à 10h, N°13 à 12h, nouvelle série « Le Refuge » partie 1 = ép. 28 à 17h, N°14 à 20h — Zernio, TikTok + Instagram)
+
+- Comptes Zernio OK (pas de reconnexion), les 4 vidéos du 09/11 publiées sur les deux réseaux.
+- **Stats Zernio (≈ 9-15 h de recul)** : TikTok partie 4 = 247 vues / 19 likes / 2 commentaires, N°11 = 258 / 9,
+  partie 5 = 236 / 14, N°12 = 276 / 10. Instagram 134-171 vues, temps moyen 7-17 s (N°11 : 17,5 s, record des courtes).
+  **Alerte : les vidéos du 09/11 sont à ≈ 250 vues TikTok contre ≈ 760 pour celles du 08/11 au même âge** (1er jour de
+  la nouvelle voix grave). À revérifier demain avec 48 h de recul avant de conclure (voix ? heure ? algorithme ?).
+  Courtes vs épisodes : toujours à égalité (≈ 250 des deux côtés).
+- **Vote de la partie 5** : 0 commentaire (TikTok et Instagram) → tirage au sort = **Léa**.
+- Fin de « Jacques a dit » (partie 6) : vote final A jouer avec Léa / B rester avec ta grand-mère, « LE PLUS DE VOTES
+  DÉCIDE LA SUITE » (pas de « fin de série »).
+- **Nouvelle série « Le Refuge »** (Vosges, refuge + livre d'or qui écrit la suite), films source : The Ritual (2017)
+  et Resolution (2012). 6 décors propres (`ref_*`) dessinés avant l'épisode 1.
+- Spectateur extérieur : partie 6 = 4 → 6 → 6 → 6,5 (dernières corrections non retestées pour tenir 10h ; la reprise de contexte d'une
+  fin de série est difficile ; leçon : présenter la situation et les personnages dans les 3 premières lignes) ;
+  Refuge p1 = 6 → **7/10** (+ corrections : le livre prédit AVANT que ça arrive, Nora revient sans bois) ;
+  N°13 = **7/10** (radio présentée, portière qui claque) ; N°14 = **7/10** (choix « lui répondre » au lieu de
+  « tendre la perche »). « NUMÉRO QUINZE » pas compris par un nouveau spectateur → « LA RÉPONSE DANS LA PROCHAINE VIDÉO ».
+- Bonne réponse tirée au sort : N°13 = B (tout éteindre), N°14 = A (allumer). Réponses des questions finales tirées au
+  sort (0 commentaire) : N°12 = regarder par le judas, N°13 = rouler jusqu'à chez toi.
+- Décors : 12 nouveaux (jad_passage, jad_mains, habitacle, autoradio, vestiaire, bassin_nuit + 6 `ref_*`).
+- Rendus : partie 6 = 89,4 s (1 rendu) ; N°13 = 43,0 s (refaite 2 fois : le visage du rétroviseur était caché par l'horloge →
+  rétroviseur descendu dans le décor) ; Refuge p1 = 94,5 s (refaite 3 fois : texte du livre coupé par le cadrage → une seule
+  page centrée ; lac trop sombre en ambiance rouge → plan `ref_veilleur` ; « PERSONNE NE FRAPPE PLUS » et « LE FEU MEURT »
+  mal prononcés → « LES COUPS ONT CESSÉ », « LE FEU S'ÉTEINT ») ; N°14 = 44,3 s. Toutes à ≈ -15,5 LUFS, contrôle OK.
+- Leçon décors : l'horloge et le compteur couvrent les ≈ 15 % du haut de l'image : ne rien mettre d'important au-dessus de
+  v ≈ 0.25 dans un décor ; l'ambiance « rouge » assombrit beaucoup les décors de nuit (lac) : préférer un décor éclairé.

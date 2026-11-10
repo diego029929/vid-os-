@@ -1,0 +1,468 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°14",
+ "clock_start": 0,
+ "style": 2,
+ "title": "SURVIS ? N°14 · La piscine est fermée. Quelqu'un nage dans le noir.",
+ "caption": "Piscine fermée, minuit : une voix crie « au secours » dans le bassin. Tu allumes ou tu lui réponds ? 👇 (N°13 : il fallait rouler jusqu'à chez toi.) SURVIS ? N°14 #survie #horreur #lille #histoire",
+ "beats": [
+  {
+   "scene": "bassin_nuit",
+   "text": "PISCINE FERMÉE, MINUIT. QUELQU'UN NAGE DANS LE *NOIR*.",
+   "params": {
+    "nageur": true
+   },
+   "shake": 2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "vestiaire",
+   "text": "À LILLE, TU ES LE GARDIEN DE NUIT.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "open": false
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "papier",
+   "text": "LA CONSIGNE : « LA NUIT, NE PARLE JAMAIS À UN NAGEUR. »",
+   "params": {
+    "title": "CONSIGNE",
+    "lines": [
+     "LA NUIT,",
+     "NE PARLE JAMAIS",
+     "À UN NAGEUR."
+    ],
+    "wall": "carrelage"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "bassin_nuit",
+   "text": "UNE TÊTE SORT DE L'EAU : « AU SECOURS, JE ME *NOIE* ! »",
+   "params": {
+    "tete": true
+   },
+   "shake": 3,
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "piscine",
+   "text": "C'EST UNE VOIX DE PETITE FILLE.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "bassin_nuit",
+   "text": "TU ALLUMES, OU TU LUI *RÉPONDS* ?",
+   "choice": {
+    "a": "ALLUMER",
+    "b": "LUI RÉPONDRE"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "params": {
+    "tete": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "bassin_nuit",
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "ALLUMER",
+    "b": "LUI RÉPONDRE",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "params": {
+    "tete": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "bassin_nuit",
+   "text": "TU LUI CRIES : « J'ARRIVE ! » ET TU TENDS LA PERCHE.",
+   "choice": {
+    "a": "ALLUMER",
+    "b": "LUI RÉPONDRE",
+    "picked": "B"
+   },
+   "text_y": 0.2,
+   "params": {
+    "tete": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "bassin_nuit",
+   "text": "UNE MAIN GLACÉE TE TIRE DANS L'EAU.",
+   "params": {
+    "nageur": true
+   },
+   "shake": 5,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "piscine",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide"
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ],
+    "dark": true
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "bassin_nuit",
+   "text": "TU NE DIS RIEN. TU ALLUMES.",
+   "choice": {
+    "a": "ALLUMER",
+    "b": "LUI RÉPONDRE",
+    "picked": "A"
+   },
+   "text_y": 0.2,
+   "params": {
+    "lumiere": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "bassin_nuit",
+   "text": "L'EAU DEVIENT BLEUE. LE BASSIN EST *VIDE*.",
+   "params": {
+    "lumiere": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "piscine",
+   "text": "LA VOIX VOULAIT JUSTE QUE TU PARLES.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide",
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "vestiaire",
+   "text": "MAIS DES TRACES DE PIEDS MOUILLÉS MÈNENT AU *VESTIAIRE*.",
+   "params": {
+    "traces": true
+   },
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "vestiaire",
+   "text": "LES TRACES S'ARRÊTENT DEVANT UN CASIER.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "params": {
+    "traces": true,
+    "dark": true
+   },
+   "shake": 3,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "vestiaire",
+   "text": "TU FERMES LE VESTIAIRE À CLÉ, OU TU VAS *VOIR* ?",
+   "choice": {
+    "a": "FERMER À CLÉ",
+    "b": "ALLER VOIR"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "params": {
+    "traces": true,
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "vestiaire",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LA PROCHAINE *VIDÉO*.",
+   "choice": {
+    "a": "FERMER À CLÉ",
+    "b": "ALLER VOIR"
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "params": {
+    "traces": true,
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "bassin_nuit",
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "params": {
+    "tete": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  }
+ ]
+}

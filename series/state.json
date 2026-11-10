@@ -1,9 +1,9 @@
 {
-  "current_series": "jacques-a-dit",
-  "series_file": "series/jacques-a-dit.md",
+  "current_series": "le-refuge",
+  "series_file": "series/le-refuge.md",
   "series_episode_count": 6,
-  "next_episode_in_series": 6,
-  "next_global_episode": 27,
+  "next_episode_in_series": 2,
+  "next_global_episode": 29,
   "published": [
     {
       "global": 1,
@@ -211,9 +211,29 @@
       "slot": "2026-11-09T17:00:00 Europe/Paris",
       "zernio_id": "6af1d3aaa1f01d103df87a1e",
       "note": "vote partie 4 : 1 A / 1 B → tirage = « moi » ; spectateur extérieur 7/10"
+    },
+    {
+      "global": 27,
+      "series": "jacques-a-dit",
+      "episode": 6,
+      "file": "episodes/ep27.json",
+      "slot": "2026-11-10T10:00:00 Europe/Paris",
+      "zernio_id": "6af2b099cbd677ee039575f6",
+      "note": "vote partie 5 : 0 vote → tirage = Léa ; dernier épisode, vote « jouer avec Léa / rester » décide la suite",
+      "tiktok_url": "https://www.tiktok.com/@4_youchoose_4/video/7706465599924227360",
+      "instagram_url": "https://www.instagram.com/reel/Dfjicjikqij/"
+    },
+    {
+      "global": 28,
+      "series": "le-refuge",
+      "episode": 1,
+      "file": "episodes/ep28.json",
+      "slot": "2026-11-10T17:00:00 Europe/Paris",
+      "zernio_id": "6af2eb14d48b0f93a64327de",
+      "note": "1re partie de « Le Refuge » ; vote A sortir / B brûler le livre"
     }
   ],
-  "survis_next": 13,
+  "survis_next": 15,
   "survis_published": [
     {
       "n": 1,
@@ -290,6 +310,18 @@
       "file": "episodes/survis-12.json",
       "slot": "2026-11-09T20:00:00 Europe/Paris",
       "zernio_id": "6af191c806e9af8093a09f1e"
+    },
+    {
+      "n": 13,
+      "file": "episodes/survis-13.json",
+      "slot": "2026-11-10T12:00:00 Europe/Paris",
+      "zernio_id": "6af2d7e599c2b56dc869dbc0"
+    },
+    {
+      "n": 14,
+      "file": "episodes/survis-14.json",
+      "slot": "2026-11-10T20:00:00 Europe/Paris",
+      "zernio_id": "6af2c9f89eeff8021ea24174"
     }
   ],
   "ready_not_published": [
@@ -299,7 +331,7 @@
       "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
     }
   ],
-  "media_note": "09/11 : branche media = ep25, ep26, survis-11, survis-12 ; supprimer à la prochaine routine, après publication",
+  "media_note": "10/11 : branche media = ep27, survis-13, survis-14, ep28 ; supprimer à la prochaine routine, après publication",
   "votes": {
     "partie3": {
       "A_laisser": 1,
@@ -310,6 +342,17 @@
       "A_ma_grand_mere": 1,
       "B_moi": 1,
       "result": "moi (moins de 3 votes : tirage au sort)"
+    },
+    "partie5": {
+      "A_lea": 0,
+      "B_theo": 0,
+      "result": "Léa (0 vote : tirage au sort)"
+    },
+    "jacques_partie6": {
+      "A": "jouer avec Léa",
+      "B": "rester avec ta grand-mère",
+      "result": "à lire (série finie : servira si on fait une suite)"
     }
-  }
+  },
+  "previous_series": "jacques-a-dit"
 }
