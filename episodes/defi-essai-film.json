@@ -1,0 +1,86 @@
+{
+  "type": "quiz",
+  "title": "Devine le film en emojis · 5 films",
+  "caption": "Devine le film avec seulement des emojis 🎬 T'en as trouvé combien sur 5 ? 👇 #devinelefilm #emoji #quiz #film #defi",
+  "hook": "DEVINE LE FILM",
+  "voice_hook": "Devine le film avec seulement des emojis.",
+  "questions": [
+    {
+      "q": "Film n°1 :",
+      "big": [
+        "🦁",
+        "👑",
+        "🐗"
+      ],
+      "choices": [
+        "Le Roi lion",
+        "Madagascar",
+        "Zootopie"
+      ],
+      "answer": 0,
+      "voice": "Premier film, trouve-le vite."
+    },
+    {
+      "q": "Film n°2 :",
+      "big": [
+        "🚢",
+        "🧊",
+        "💔"
+      ],
+      "choices": [
+        "Avatar",
+        "Titanic",
+        "La Reine des neiges"
+      ],
+      "answer": 1,
+      "voice": "Deuxième film, celui-là est connu."
+    },
+    {
+      "q": "Film n°3 :",
+      "big": [
+        "🐀",
+        "👨‍🍳",
+        "🇫🇷"
+      ],
+      "choices": [
+        "Ratatouille",
+        "Stuart Little",
+        "Le Chef"
+      ],
+      "answer": 0,
+      "voice": "Troisième film, un dessin animé."
+    },
+    {
+      "q": "Film n°4 :",
+      "big": [
+        "👻",
+        "🏠",
+        "🧒",
+        "👀"
+      ],
+      "choices": [
+        "Coco",
+        "Casper",
+        "Maman, j'ai raté l'avion"
+      ],
+      "answer": 1,
+      "voice": "Quatrième film, regarde bien."
+    },
+    {
+      "q": "Film n°5 :",
+      "big": [
+        "🦖",
+        "🏝️",
+        "🧬"
+      ],
+      "choices": [
+        "Jurassic Park",
+        "King Kong",
+        "Godzilla"
+      ],
+      "answer": 0,
+      "voice": "Dernier film, le plus difficile."
+    }
+  ],
+  "end": "T'EN AS TROUVÉ COMBIEN ?"
+}

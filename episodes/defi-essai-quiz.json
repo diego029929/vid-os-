@@ -1,0 +1,15 @@
+{
+  "type": "quiz",
+  "title": "Quiz culture G · 5 questions, t'as combien ?",
+  "caption": "5 questions de culture générale, de la plus facile à la plus dure 🧠 T'as eu combien sur 5 ? 👇 #quiz #culturegenerale #quizz #defi #apprendre",
+  "hook": "QUIZ CULTURE G",
+  "voice_hook": "Cinq questions. Si tu as cinq sur cinq, t'es très fort.",
+  "questions": [
+    {"q": "Combien de pattes a une araignée ?", "choices": ["6", "8", "10"], "answer": 1, "emoji": "🕷️", "voice": "Combien de pattes a une araignée ?"},
+    {"q": "Quelle est la capitale de l'Australie ?", "choices": ["Sydney", "Canberra", "Melbourne"], "answer": 1, "emoji": "🦘"},
+    {"q": "Quelle planète est la plus proche du Soleil ?", "choices": ["Vénus", "Mars", "Mercure"], "answer": 2, "emoji": "☀️"},
+    {"q": "Quel animal dort debout ?", "choices": ["Le cheval", "Le chat", "Le lapin"], "answer": 0, "emoji": "🐴"},
+    {"q": "Combien d'os a un adulte ?", "choices": ["106", "206", "306"], "answer": 1, "emoji": "🦴", "voice": "Combien d'os a un humain adulte ?"}
+  ],
+  "end": "T'AS EU COMBIEN SUR 5 ?"
+}
