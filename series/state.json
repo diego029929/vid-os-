@@ -394,6 +394,17 @@
       "heure": "20:00",
       "zernio_id": "6af3f9e110e580b26dc93ad9",
       "fichier": "episodes/defi-004.json"
+    },
+    {
+      "numero": 1,
+      "format": "fruits",
+      "theme": "Pomme, Banane, Fraise : tromperie + couteau",
+      "date": "2026-11-11",
+      "heure": "18:00",
+      "zernio_id": "6af4503581ff350489383494",
+      "fichier": "episodes/fruits-001.json",
+      "remplace": "defi-003 (intrus visages)"
     }
-  ]
+  ],
+  "fruits_next": 2
 }

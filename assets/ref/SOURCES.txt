@@ -5,3 +5,9 @@ ref-narrateur-grave.wav (voix choisie par Fio le 09/11, « voix 1 ») : extrait 
 (60-72 s du 2e fichier) du livre audio LibriVox lascensiondumontventoux_a_librivox
 (« L'ascension du mont Ventoux », archive.org), domaine public. Voix d'homme
 naturellement grave (~100 Hz), sans changement de hauteur.
+
+Voix des personnages « Les Fruits » (11/11), extraits de 12 s de livres audio
+LibriVox (archive.org, domaine public), voix de femmes (~215-225 Hz), hauteur naturelle :
+ref-femme-1.wav : trois_mousquetaires_0810_librivox
+ref-femme-2.wav : notredameparis_1312_librivox
+ref-femme-3.wav : comte_monte_cristo_jg_librivox
