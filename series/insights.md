@@ -343,3 +343,19 @@ creux à 11 h, 13 h-14 h et après 21 h).
   mal prononcés → « LES COUPS ONT CESSÉ », « LE FEU S'ÉTEINT ») ; N°14 = 44,3 s. Toutes à ≈ -15,5 LUFS, contrôle OK.
 - Leçon décors : l'horloge et le compteur couvrent les ≈ 15 % du haut de l'image : ne rien mettre d'important au-dessus de
   v ≈ 0.25 dans un décor ; l'ambiance « rouge » assombrit beaucoup les décors de nuit (lac) : préférer un décor éclairé.
+
+### 11/11 (1er jour des « défis » : intrus 10h, quiz film 12h, intrus 18h, quiz culture G 20h — Zernio, TikTok + Instagram)
+
+- Comptes Zernio OK (pas de reconnexion), les 4 vidéos du 10/11 publiées sur les deux réseaux.
+- **Stats Zernio (≈ 10-20 h de recul, dernières vidéos « séries »)** : TikTok 10/11 = 275 (partie 6), 314 (N°13),
+  247 (Refuge p1), 50 (N°14, 10 h de recul) ; Instagram 138-149, temps moyen Insta 5,9-11,8 s, complétion TikTok 0,7-2 %.
+  09/11 à 48 h : TikTok 247-293, toujours ≈ 250 (le plateau à 250 se confirme, plus bas que les ≈ 760 du 08/11).
+  Courtes vs épisodes : égalité. Ces chiffres servent de point de départ pour juger les défis (bilan le 14/11).
+- Défis du jour : intrus fruits (🍌/🍎, 🍊/🍑, 🍎/🍅), devine le film (Reine des neiges, Nemo, Toy Story, Harry Potter,
+  Là-haut), intrus visages (😀/😡, 😄/😆, 😀/😃), culture G (bissextile, Pacifique, Joconde, Au, pieuvre = 3 cœurs).
+- Rendus : les quiz font 50 s avec la voix (et pas 38 s : la voix lit chaque question avant le minuteur). Le moteur sort
+  ≈ -17 LUFS → normalisé à -14 avec ffmpeg loudnorm (check_video demandait -14). Chatterbox a ajouté du charabia après
+  « Quel est le plus grand océan du monde ? » et répété « la Joconde » en fin de phrase (2 rendus) → phrases réécrites
+  (« Quel océan est le plus grand de la planète ? », « La Joconde, quel peintre l'a faite ? »). « Défi de demain » était
+  lu « déchi » → `voice_end` = « … abonne-toi pour jouer demain. » « Fruit » mal lu → hook « l'intrus caché au milieu des bananes ».
+- Zernio : `scheduledFor` avec `timezone` refusé (« Invalid date ») → envoyer l'heure UTC « AAAA-MM-JJTHH:MM:00.000Z » (Paris − 1 h en hiver).

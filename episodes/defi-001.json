@@ -1,0 +1,32 @@
+{
+ "type": "intrus",
+ "title": "Défi · Trouve le fruit intrus (3 niveaux)",
+ "caption": "Trouve le fruit intrus en 5 secondes 🍎 Le niveau 3 est vraiment dur…\nÉcris ton score 👇\n#trouvelintrus #defi #jeu #casse-tete #quiz",
+ "hook": "TROUVE L'INTRUS",
+ "voice_hook": "Trouve l'intrus caché au milieu des bananes. Trois niveaux. Le dernier est vraiment dur.",
+ "levels": [
+  {
+   "crowd": "🍌",
+   "target": "🍎",
+   "cols": 6,
+   "rows": 7,
+   "seconds": 5
+  },
+  {
+   "crowd": "🍊",
+   "target": "🍑",
+   "cols": 8,
+   "rows": 10,
+   "seconds": 5
+  },
+  {
+   "crowd": "🍎",
+   "target": "🍅",
+   "cols": 10,
+   "rows": 12,
+   "seconds": 6
+  }
+ ],
+ "end": "T'AS TROUVÉ LES 3 ?",
+ "voice_end": "Écris ton score en commentaire, et abonne-toi pour jouer demain."
+}
