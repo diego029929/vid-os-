@@ -1,0 +1,65 @@
+{
+ "type": "quiz",
+ "title": "Quiz culture G · 5 questions, t'as combien ?",
+ "caption": "5 questions de culture générale, de la plus facile à la plus dure 🧠\nÉcris ton score 👇\n#quiz #culturegenerale #quizz #defi #apprendre",
+ "hook": "QUIZ CULTURE G",
+ "voice_hook": "Cinq questions de culture générale. Si tu as cinq sur cinq, t'es très fort.",
+ "questions": [
+  {
+   "q": "Combien de jours dans une année bissextile ?",
+   "choices": [
+    "365",
+    "364",
+    "366"
+   ],
+   "answer": 2,
+   "emoji": "📅",
+   "voice": "Combien de jours dans une année bissextile ?"
+  },
+  {
+   "q": "Quel est le plus grand océan du monde ?",
+   "choices": [
+    "Atlantique",
+    "Pacifique",
+    "Indien"
+   ],
+   "answer": 1,
+   "emoji": "🌊",
+   "voice": "Quel océan est le plus grand de la planète ?"
+  },
+  {
+   "q": "Qui a peint la Joconde ?",
+   "choices": [
+    "Léonard de Vinci",
+    "Picasso",
+    "Van Gogh"
+   ],
+   "answer": 0,
+   "emoji": "🖼️",
+   "voice": "La Joconde, quel peintre l'a faite ?"
+  },
+  {
+   "q": "Quel est le symbole chimique de l'or ?",
+   "choices": [
+    "Ag",
+    "Au",
+    "Fe"
+   ],
+   "answer": 1,
+   "emoji": "🥇"
+  },
+  {
+   "q": "Combien de cœurs a une pieuvre ?",
+   "choices": [
+    "Un",
+    "Deux",
+    "Trois"
+   ],
+   "answer": 2,
+   "emoji": "🐙",
+   "voice": "Combien de cœurs a une pieuvre ?"
+  }
+ ],
+ "end": "T'AS EU COMBIEN SUR 5 ?",
+ "voice_end": "Écris ton score en commentaire, et abonne-toi pour jouer demain."
+}

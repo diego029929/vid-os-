@@ -357,6 +357,43 @@
   "previous_series": "jacques-a-dit",
   "parallel_note": "ARRÊTÉ le 10/11 : nouveau concept « défis » (voir ROUTINE.md). Séries, votes et SURVIS ne sont plus utilisés ; « Le Refuge » s'arrête à la partie 1.",
   "concept": "defis (depuis le 11/11)",
-  "defi_next": 1,
-  "defis": []
+  "defi_next": 5,
+  "defis": [
+    {
+      "numero": 1,
+      "format": "intrus",
+      "theme": "fruits",
+      "date": "2026-11-11",
+      "heure": "10:00",
+      "zernio_id": "6af3f875d4278104918612e9",
+      "fichier": "episodes/defi-001.json"
+    },
+    {
+      "numero": 2,
+      "format": "quiz",
+      "theme": "devine le film",
+      "date": "2026-11-11",
+      "heure": "12:00",
+      "zernio_id": "6af3f87d2a2ca7957def65f8",
+      "fichier": "episodes/defi-002.json"
+    },
+    {
+      "numero": 3,
+      "format": "intrus",
+      "theme": "visages",
+      "date": "2026-11-11",
+      "heure": "18:00",
+      "zernio_id": "6af3f87e48c87e886027f3ea",
+      "fichier": "episodes/defi-003.json"
+    },
+    {
+      "numero": 4,
+      "format": "quiz",
+      "theme": "culture G",
+      "date": "2026-11-11",
+      "heure": "20:00",
+      "zernio_id": "6af3f9e110e580b26dc93ad9",
+      "fichier": "episodes/defi-004.json"
+    }
+  ]
 }

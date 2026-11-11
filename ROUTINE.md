@@ -125,7 +125,10 @@ moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
    - voix : écouter / transcrire (Whisper small, fr) ; mot raté = changer la
      phrase et relancer ;
    - `python3 engine/check_video.py /tmp/defi-NNN.mp4 --min 15 --max 60`
-     doit dire OK.
+     doit dire OK. Le moteur sort ≈ -17 LUFS : normaliser avant (`ffmpeg -i in.mp4
+     -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 192k out.mp4`).
+   - Phrases que la voix rate : « défi » (lu « déchi »), « fruit », une
+     question qui finit par « la Joconde » / « du monde » (bruit après).
    Ne jamais publier une vidéo défectueuse.
 7. **Branche `media`** (jamais de push forcé, jamais de MP4 sur main) :
    `git worktree add /tmp/media media`, supprimer les vidéos déjà publiées,
@@ -141,8 +144,9 @@ moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
    "PUBLIC_TO_EVERYONE", "allow_comment": true, "allow_duet": true,
    "allow_stitch": true, "content_preview_confirmed": true,
    "express_consent_given": true, "video_made_with_ai": true,
-   "video_cover_timestamp_ms": 600}, "scheduledFor": "AAAA-MM-JJTHH:MM:SS",
-   "timezone": "Europe/Paris"}` (ou `"publishNow": true` si l'heure est
+   "video_cover_timestamp_ms": 600}, "scheduledFor": "AAAA-MM-JJTHH:MM:00.000Z"}`
+   (heure UTC = Paris − 1 h en hiver ; avec un champ `timezone`, Zernio
+   répond « Invalid date ») (ou `"publishNow": true` si l'heure est
    passée). Vérifier avec `GET /v1/posts/{id}`. Noter `zernio_id` dans
    `series/state.json` → `defis`. Zernio est gratuit (2 comptes, 15 vidéos TikTok /
    24 h). Metricool ne sert plus à publier.
