@@ -28,70 +28,63 @@ moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
 
 ## 1. Le format
 
-**11/11 : « Trouve l'intrus » est ARRÊTÉ** (Fio : « c'est vraiment nul » ; la
-grille n'occupait que la moitié de l'écran et rien ne se passait). Fio a
-demandé à la place **les vidéos de fruits** : petits drames entre fruits qui
-parlent (format viral). Ils prennent les créneaux de l'intrus.
+**11/11 soir : FILMS DE FRUITS (modèle envoyé par Fio).** Fio : « t'as pas
+compris sur les vidéos de fruit », avec une vidéo exemple (Dropbox, « Vidéo
+11-11-2026 19 05 32.mp4 », compte @fruits_enrouelibre). Le format, ce sont
+des **petits films** : humains réalistes (corps, vêtements) avec une **tête
+de fruit**, dans de **vrais décors** (rue de Paris, banque, bureau, villa),
+une **histoire à idée forte** (exemple : « dans un monde où personne ne sait
+mentir, Dylan découvre qu'il peut mentir » → argent, voiture, PDG, villa →
+« flash spécial : quelqu'un ment » → la police frappe → « À SUIVRE… »),
+**un plan par réplique** (≈ 2-3 s), sous-titres 1-3 mots, ≈ 60-100 s.
+Les fruits dessinés en cuisine (`engine/fruits.py` seul, `fruits-001`) et
+« La Villa des Fruits » sont ABANDONNÉS (pas le format voulu). « Trouve
+l'intrus » est arrêté aussi.
 
 - **4 vidéos par jour**, TikTok + Instagram (Reel) :
   | Heure (Paris) | 10:00 | 12:00 | 18:00 | 20:00 |
   |---|---|---|---|---|
-  | Format | Les Fruits | Devine en 4 indices | Les Fruits | Quiz |
-- Fruits : `episodes/fruits-NNN.json` (suivant dans `series/state.json` →
-  `fruits_next`), rendu `python3 engine/fruits.py episodes/fruits-NNN.json
-  /tmp/fruits-NNN.mp4` (≈ 10-15 min : voix ≈ 17 s par réplique + images).
-  Format JSON expliqué en tête de `engine/fruits.py` ; exemple
-  `episodes/fruits-001.json`. Planche des persos : `python3 engine/fruits.py
-  --casting /tmp/c.png`.
+  | Format | Film de fruits | Devine en 4 indices | Film de fruits | Quiz |
+- Films : `episodes/film-NNN.json` (suivant → `series/state.json` →
+  `film_next`), format JSON en tête de `engine/film.py`, exemple
+  `episodes/film-001.json`. Deux étapes :
+  1. images : `/tmp/sdenv/bin/python engine/film_images.py
+     episodes/film-NNN.json /tmp/film-NNN-img` (SDXL-Turbo, gratuit, sur CPU,
+     ≈ 50 s par plan, ≈ 15-20 min pour 15 plans) ;
+  2. vidéo : `python3 engine/film.py episodes/film-NNN.json /tmp/film-NNN-img
+     /tmp/film-NNN.mp4` (voix + têtes de fruit + montage, ≈ 10 min).
+  Le venv : `python3 -m venv /tmp/sdenv && /tmp/sdenv/bin/pip install -q
+  torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu &&
+  /tmp/sdenv/bin/pip install -q diffusers transformers accelerate
+  "opencv-python-headless<5"` (séparé, car diffusers casse le transformers
+  de Chatterbox). 1er lancement : téléchargement du modèle (≈ 7 Go, 1 min).
 - Quiz : `episodes/defi-NNN.json` (suivant → `defi_next`), rendu avec
   `python3 engine/quiz.py episodes/defi-NNN.json /tmp/defi-NNN.mp4`.
 
-### « Les Fruits » (≈ 40-55 s), petit drame entre fruits
-- 2 ou 3 fruits (14 dispo : pomme, banane, fraise, orange, citron, poire,
-  raisin, ananas, pasteque, kiwi, cerise, peche, avocat, tomate), dessinés en
-  relief par le moteur, bouche qui bouge avec la voix, gros plan sur celui
-  qui parle. Lieux : cuisine, frigo, plage, marche, table.
-- Histoire de « télénovela » drôle : tromperie, jalousie, secret, trahison,
-  rivalité, mariage, héritage… racontée avec des jeux de mots de fruits
-  (« trop acide », « tu me presses », « on n'est pas des pruneaux »).
-  Chaque vidéo se comprend seule.
-- 11-14 répliques courtes (≤ 12 mots chacune, ≈ 650 caractères en tout).
-  **1re réplique = l'accroche** : une accusation ou une révélation choc
-  (« Banane ! Pourquoi tu sens la fraise ? »). `hook` en haut (≤ 22 car.).
-- Une montée : accusation → mensonge → 3e fruit qui débarque (`"sfx": "dun"`,
-  `"shot": "duo"`) → dispute → **chute drôle à la fin** (le couteau
-  `"twist": "couteau"`, le mixeur, quelqu'un qui croque, la date de
-  péremption…). Varier la chute : pas le couteau 2 jours de suite.
-- Fin (`end`) : une question qui fait choisir un camp (« TEAM POMME OU TEAM
-  FRAISE ? ») → commentaires.
-- **Dès le 12/11 : une série quotidienne, « La Villa des Fruits »** (parodie
-  de téléréalité à la française type « La Villa des Cœurs Brisés » /
-  « L'Île de la Tentation » ; recherche : series/recherche-11-11.md, les
-  succès du genre ont tous un casting fixe et des épisodes numérotés
-  presque chaque jour). Ne pas copier le nom d'une émission ou d'une série
-  de fruits existante.
-  - **Casting FIXE** (toujours mêmes fruits, mêmes voix, mêmes `couleur`) :
-    Pommita (pomme, femme1), Banano (banane, homme1), Fraisita (fraise,
-    femme2), Kiwito (kiwi, homme2), Citronella (citron, femme3), Ananasso
-    (ananas, homme3). Ajouter au plus un nouveau fruit par semaine, avec
-    un nom en -ita / -ito / -ella / -o.
-  - 2-3 persos par épisode, lieux qui tournent : plage (la villa), cuisine,
-    frigo, marche, table.
-  - `hook` = « ÉPISODE N » + le choc en ≤ 22 car. (ex. « ÉP. 3 : IL A
-    MENTI »). Numéro suivant dans `series/state.json` → `villa_episode`.
-  - Fil rouge d'un épisode à l'autre (couples, trahisons, éliminations),
-    mais chaque épisode se comprend seul, sans résumé.
-  - Fin : **cliffhanger + vote** : `end` = « QUI PART : BANANO OU KIWITO ? ».
-    L'épisode suivant suit le vote des commentaires (si moins de 3 votes :
-    au hasard).
-  - Pas de sexisme, pas de violence réaliste (le couteau de cuisine en gag
-    reste rare). Ton qui bascule vite : trahison → gag → larmes.
-- Voix : `femme1`, `femme2`, `femme3`, `homme1`, `homme2`, `homme3`, `grave`
-  (refs LibriVox dans `assets/ref/`). Deux persos qui se parlent n'ont jamais
-  la même voix. Pas de mot seul de 1-2 syllabes en début de réplique
-  (« Quoi ? » est sauté par la voix) ; « mon chou » passe.
-- Légende : 1re ligne = le drame en une phrase avec emojis fruits, puis
-  « Team X ou Team Y ? 👇 », puis `#fruits #drame #humour #histoire #pourtoi`.
+### « Film de fruits » (10h + 18h, ≈ 45-90 s)
+- **Idée forte en une phrase**, inspirée d'un film à concept (« et si… ») :
+  quelqu'un qui ne peut pas mentir / qui peut mentir, qui reçoit des SMS de
+  demain, qui revit la même journée, qui entend les pensées, qui gagne tout
+  ce qu'il touche, un monde où l'argent n'existe pas… Histoire ORIGINALE,
+  jamais la copie du film ni de la vidéo de @fruits_enrouelibre.
+- Structure : accroche choc au 1er plan (`hook` en haut, ≤ 26 car.) → le
+  héros découvre son pouvoir → escalade rapide et drôle (argent, voiture,
+  promotion, villa…) → retournement (flash spécial, police, message
+  inquiétant) → cliffhanger + `end` « À SUIVRE… » (+ `end_sub` question pour
+  les commentaires). Les épisodes suivants reprennent le même héros (série).
+- 12-20 plans, **une réplique courte par plan** (≤ 12 mots), un lieu
+  différent tous les 2-3 plans. Plan sans perso : `"off": true` (voix hors
+  champ, ex. derrière une porte). `banner` pour un bandeau (« FLASH SPÉCIAL »).
+- Casting : le héros + 2-4 persos, chacun un fruit (`fruit` = un des 14 de
+  `engine/fruits.py`), une voix (`femme1-3`, `homme1-3`, `grave`) et un
+  `look` en anglais TOUJOURS identique (âge, cheveux, vêtements) pour qu'on
+  le reconnaisse d'un plan à l'autre. `lieu` et `action` en anglais.
+- Contrôle des images (planche des `shot-XX.png`) : UN seul perso par image,
+  tête de fruit bien posée (ni cheveux ni 2e tête visibles). Sinon : retirer
+  le plan de `faces.json`, changer son `seed` dans le JSON, relancer l'étape 1
+  (elle ne refait que les plans manquants).
+- Légende : la prémisse en une phrase + emojis, la question, puis
+  `#fruits #histoire #film #suspense #pourtoi`.
 
 ### 11/11 : « Devine le film en emojis » ARRÊTÉ (Fio : « nul »)
 86 vues, 6 s regardées sur 50 s. Les recherches (voir
@@ -177,16 +170,16 @@ temps, c'est court, et chacun commente un chiffre.
 2. **Stats** (`GET /v1/analytics`) : pour chaque vidéo, vues, likes,
    commentaires, partages, temps moyen (`igReelsAvgWatchTime`, en ms) et
    `completionRate`. Noter dans `series/insights.md` (une section par jour).
-   Ne juger qu'après 48 h. **Bilan le 14/11** : comparer fruits / quiz (et les
+   Ne juger qu'après 48 h. **Bilan le 14/11** : comparer films de fruits / quiz (et les
    thèmes de quiz) ; le format qui fait le plus de vues ET de commentaires
    prend plus de créneaux. Si un défi dépasse 2 000 vues, refaire le même
    thème le lendemain (version 2).
-3. **Écrire les 2 épisodes Fruits** (`episodes/fruits-NNN.json`) et les 2
+3. **Écrire les 2 films de fruits** (`episodes/film-NNN.json`) et les 2
    quiz (`episodes/defi-NNN.json`). Quiz : vérifier chaque réponse.
 4. Relecture : `python3 engine/check_script.py` ne lit que les épisodes :
    relire soi-même l'orthographe des questions et des choix.
-5. **Rendu, UN SEUL À LA FOIS** : `python3 engine/fruits.py
-   episodes/fruits-NNN.json /tmp/fruits-NNN.mp4` (≈ 10-15 min) et
+5. **Rendu, UN SEUL À LA FOIS** : films (images puis vidéo, voir § 1,
+   ≈ 30 min chacun ; commencer par eux) et
    `python3 engine/quiz.py episodes/defi-NNN.json /tmp/defi-NNN.mp4`.
 6. **Contrôles avant publication** :
    - planche contact (`ffmpeg -i v.mp4 -vf "fps=1/1.5,scale=216:-1,tile=6x4"
@@ -220,8 +213,8 @@ temps, c'est court, et chacun commente un chiffre.
    passée). Vérifier avec `GET /v1/posts/{id}`. Noter `zernio_id` dans
    `series/state.json` → `defis`. Zernio est gratuit (2 comptes, 15 vidéos TikTok /
    24 h). Metricool ne sert plus à publier.
-9. **Enregistrer sur main** : les JSON `defi-NNN` / `fruits-NNN`,
-   `series/state.json` (`defi_next` +2, `fruits_next` +2, ajouter les vidéos à `defis` : numéro, format, thème,
+9. **Enregistrer sur main** : les JSON `defi-NNN` / `film-NNN`,
+   `series/state.json` (`defi_next` +2, `film_next` +2, ajouter les vidéos à `defis` : numéro, format, thème,
    heure, zernio_id), `series/insights.md`.
 10. **Résumé court en français pour Fio** : les 4 défis, les horaires, ce
     que les stats disent (vues, temps moyen, commentaires) et ce qui change.
