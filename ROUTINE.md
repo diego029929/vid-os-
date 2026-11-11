@@ -64,8 +64,28 @@ parlent (format viral). Ils prennent les créneaux de l'intrus.
   péremption…). Varier la chute : pas le couteau 2 jours de suite.
 - Fin (`end`) : une question qui fait choisir un camp (« TEAM POMME OU TEAM
   FRAISE ? ») → commentaires.
-- Personnages récurrents bienvenus (Pomme, Banane, Fraise…) : la suite d'un
-  épisode peut reprendre un fil, mais sans résumé.
+- **Dès le 12/11 : une série quotidienne, « La Villa des Fruits »** (parodie
+  de téléréalité à la française type « La Villa des Cœurs Brisés » /
+  « L'Île de la Tentation » ; recherche : series/recherche-11-11.md, les
+  succès du genre ont tous un casting fixe et des épisodes numérotés
+  presque chaque jour). Ne pas copier le nom d'une émission ou d'une série
+  de fruits existante.
+  - **Casting FIXE** (toujours mêmes fruits, mêmes voix, mêmes `couleur`) :
+    Pommita (pomme, femme1), Banano (banane, homme1), Fraisita (fraise,
+    femme2), Kiwito (kiwi, homme2), Citronella (citron, femme3), Ananasso
+    (ananas, homme3). Ajouter au plus un nouveau fruit par semaine, avec
+    un nom en -ita / -ito / -ella / -o.
+  - 2-3 persos par épisode, lieux qui tournent : plage (la villa), cuisine,
+    frigo, marche, table.
+  - `hook` = « ÉPISODE N » + le choc en ≤ 22 car. (ex. « ÉP. 3 : IL A
+    MENTI »). Numéro suivant dans `series/state.json` → `villa_episode`.
+  - Fil rouge d'un épisode à l'autre (couples, trahisons, éliminations),
+    mais chaque épisode se comprend seul, sans résumé.
+  - Fin : **cliffhanger + vote** : `end` = « QUI PART : BANANO OU KIWITO ? ».
+    L'épisode suivant suit le vote des commentaires (si moins de 3 votes :
+    au hasard).
+  - Pas de sexisme, pas de violence réaliste (le couteau de cuisine en gag
+    reste rare). Ton qui bascule vite : trahison → gag → larmes.
 - Voix : `femme1`, `femme2`, `femme3`, `homme1`, `homme2`, `homme3`, `grave`
   (refs LibriVox dans `assets/ref/`). Deux persos qui se parlent n'ont jamais
   la même voix. Pas de mot seul de 1-2 syllabes en début de réplique
