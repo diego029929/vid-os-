@@ -8,25 +8,25 @@
    "fruit": "poire",
    "nom": "Nico",
    "voix": "homme1",
-   "look": "a young man with short brown hair wearing a black sweater and jeans"
+   "look": "A young man whose head is entirely replaced by a giant glossy green pear with big expressive cartoon eyes, eyebrows and a mouth on the fruit, no human head, no hair, wearing a black sweater and jeans."
   },
   "samia": {
    "fruit": "fraise",
    "nom": "Samia",
    "voix": "femme1",
-   "look": "a young woman with long dark hair wearing a white blouse"
+   "look": "A young woman whose head is entirely replaced by a giant glossy red strawberry with green leaves on top with big expressive cartoon eyes, eyebrows and a mouth on the fruit, no human head, no hair, wearing a white blouse."
   },
   "buraliste": {
    "fruit": "orange",
    "nom": "Buraliste",
    "voix": "homme2",
-   "look": "a chubby middle-aged man with a grey cardigan"
+   "look": "A chubby middle-aged shopkeeper whose head is entirely replaced by a giant glossy orange with big expressive cartoon eyes, eyebrows and a mouth on the fruit, no human head, no hair, wearing a grey cardigan."
   },
   "patron": {
    "fruit": "pomme",
    "nom": "Patron",
    "voix": "grave",
-   "look": "a single older businessman with grey hair wearing a dark navy suit and red tie, seen from a distance"
+   "look": "An older businessman whose head is entirely replaced by a giant glossy shiny red apple with big expressive cartoon eyes, eyebrows and a mouth on the fruit, no human head, no hair, wearing a dark navy suit and red tie."
   }
  },
  "shots": [
@@ -34,107 +34,99 @@
    "who": "nico",
    "text": "Attends. Ce message vient de moi. Et il est daté de demain.",
    "emo": "surpris",
-   "lieu": "in a small Paris bedroom in the morning, unmade bed",
-   "action": "holding a smartphone",
    "sfx": "dun",
-   "seed": 1
+   "seed": 1,
+   "scene": "He sits on an unmade bed in a small Paris bedroom in the morning, staring in shock at a glowing smartphone in his hand."
   },
   {
    "who": "nico",
    "text": "Il dit : ne prends surtout pas le bus de huit heures.",
    "emo": "peur",
-   "lieu": "in a small Paris bedroom in the morning",
-   "action": "looking at a smartphone"
+   "scene": "Close-up, he holds the smartphone near his face in a small Paris bedroom, worried, morning light from the window."
   },
   {
    "who": "samia",
    "text": "Nico, t'as vu ? Le bus de huit heures a pris feu sur l'autoroute !",
    "emo": "surpris",
-   "lieu": "in a bright open space office with computers"
+   "scene": "She stands in a bright open space office with computers, holding a phone, shocked, mouth open."
   },
   {
    "who": "nico",
    "text": "Ouais. Je sais.",
    "voice": "Ouais, ouais. Je sais.",
    "emo": "malin",
-   "lieu": "in a bright open space office with computers"
+   "scene": "He sits at his desk in a bright open space office, smiling slyly, arms crossed."
   },
   {
    "who": "nico",
    "text": "Nouveau message : joue le sept, le quatorze et le trente-deux.",
    "emo": "surpris",
-   "lieu": "on a Paris street with cafes",
-   "action": "holding a smartphone"
+   "scene": "He walks on a Paris street with cafes, looking at his smartphone, surprised."
   },
   {
    "who": "buraliste",
    "text": "Monsieur, vous avez les trois bons numéros. C'est le gros lot !",
    "emo": "surpris",
-   "lieu": "inside a small French tobacco shop behind the counter, lottery tickets"
+   "scene": "He stands behind the counter of a small French tobacco shop full of lottery tickets, amazed, holding a ticket."
   },
   {
    "who": "nico",
    "text": "Je le savais depuis hier.",
    "emo": "content",
-   "lieu": "inside a small French tobacco shop",
-   "action": "holding a lottery ticket"
+   "scene": "He stands in a small French tobacco shop, grinning and holding a lottery ticket."
   },
   {
    "who": "patron",
    "text": "Nico, comment tu fais pour avoir toujours raison ?",
    "emo": "surpris",
-   "lieu": "standing in a luxury office with big windows over Paris",
-   "seed": 3
+   "seed": 3,
+   "scene": "He stands in a luxury office with big windows over Paris, puzzled, hands open."
   },
   {
    "who": "nico",
    "text": "Disons que je vois un peu l'avenir.",
    "emo": "malin",
-   "lieu": "in a luxury office with big windows over Paris",
-   "action": "wearing a new suit"
+   "scene": "He wears a new elegant suit in a luxury office with big windows over Paris, confident smile."
   },
   {
    "who": "patron",
    "text": "Alors à partir de demain, c'est toi le directeur.",
    "emo": "content",
-   "lieu": "standing in a luxury office with big windows over Paris",
-   "seed": 3
+   "seed": 3,
+   "scene": "He shakes hands proudly in a luxury office with big windows over Paris, Eiffel Tower in the distance."
   },
   {
    "who": "nico",
    "text": "Une semaine. Il m'a fallu une seule semaine pour tout avoir.",
    "emo": "content",
-   "lieu": "in a huge luxury apartment living room at night, leather sofa, chandelier",
-   "action": "sitting on a sofa"
+   "scene": "He relaxes on a leather sofa in a huge luxury apartment living room at night with a chandelier, happy."
   },
   {
    "who": "nico",
    "text": "Encore un message. Mais celui-là est bizarre.",
    "emo": "peur",
-   "lieu": "in a huge luxury apartment at night, dim light",
-   "action": "looking at a smartphone"
+   "scene": "He sits on a leather sofa in a dark luxury apartment at night, frowning at his glowing smartphone."
   },
   {
    "who": "nico",
    "text": "Il dit : surtout, n'ouvre pas la porte.",
    "emo": "peur",
-   "lieu": "in a huge luxury apartment at night, dim light",
-   "action": "looking at a smartphone",
-   "sfx": "dun"
+   "sfx": "dun",
+   "scene": "Close-up, his face lit only by a smartphone screen in a dark apartment at night, terrified."
   },
   {
    "who": "nico",
    "text": "Qui est là, à cette heure-ci ?",
    "emo": "peur",
-   "lieu": "in a dark apartment hallway at night facing the front door",
-   "sfx": "knock"
+   "sfx": "knock",
+   "scene": "He stands in a dark apartment hallway at night facing the front door, scared, leaning back."
   },
   {
    "who": "nico",
    "off": true,
    "text": "C'est moi, Nico. Ouvre. Il faut que je te parle de demain.",
-   "lieu": "a closed wooden apartment front door at night, light under the door, dark and mysterious",
-   "sfx": "dun"
+   "sfx": "dun",
+   "scene": "A closed wooden apartment front door at night, a thin line of light under the door, dark and mysterious"
   }
  ],
  "end": "À SUIVRE…",
