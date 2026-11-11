@@ -1,4 +1,4 @@
-# Routine quotidienne (NOUVEAU CONCEPT du 10/11 : « défis »)
+# Routine quotidienne (depuis le 11/11 : « Les Fruits » 10h + 18h, Quiz 12h + 20h)
 
 Ce fichier contient SEULEMENT les règles en vigueur. Il prime sur le message
 de la tâche planifiée (qui parle encore de 5 vidéos, de séries et de
@@ -28,31 +28,50 @@ moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
 
 ## 1. Le format
 
+**11/11 : « Trouve l'intrus » est ARRÊTÉ** (Fio : « c'est vraiment nul » ; la
+grille n'occupait que la moitié de l'écran et rien ne se passait). Fio a
+demandé à la place **les vidéos de fruits** : petits drames entre fruits qui
+parlent (format viral). Ils prennent les créneaux de l'intrus.
+
 - **4 vidéos par jour**, TikTok + Instagram (Reel) :
   | Heure (Paris) | 10:00 | 12:00 | 18:00 | 20:00 |
   |---|---|---|---|---|
-  | Format | Trouve l'intrus | Quiz | Trouve l'intrus | Quiz |
-  (18 h remplace 17 h : meilleur pic d'audience mesuré.)
-- Fichiers : `episodes/defi-NNN.json` (numéro global, suivant dans
-  `series/state.json` → `defi_next`), rendus avec
+  | Format | Les Fruits | Quiz | Les Fruits | Quiz |
+- Fruits : `episodes/fruits-NNN.json` (suivant dans `series/state.json` →
+  `fruits_next`), rendu `python3 engine/fruits.py episodes/fruits-NNN.json
+  /tmp/fruits-NNN.mp4` (≈ 10-15 min : voix ≈ 17 s par réplique + images).
+  Format JSON expliqué en tête de `engine/fruits.py` ; exemple
+  `episodes/fruits-001.json`. Planche des persos : `python3 engine/fruits.py
+  --casting /tmp/c.png`.
+- Quiz : `episodes/defi-NNN.json` (suivant → `defi_next`), rendu avec
   `python3 engine/quiz.py episodes/defi-NNN.json /tmp/defi-NNN.mp4`.
-  Le format JSON est expliqué en tête de `engine/quiz.py` ; exemples :
-  `episodes/defi-essai-intrus.json`, `defi-essai-quiz.json`,
-  `defi-essai-film.json`.
 
-### « Trouve l'intrus » (≈ 22-25 s)
-- Une grille d'emojis identiques avec UN emoji différent caché. 3 niveaux, du
-  facile au très dur : niveau 1 ≈ 6×7 avec deux emojis bien différents (le
-  spectateur gagne → il reste), niveau 2 ≈ 8×10 plus proches, niveau 3 ≈ 9×11
-  à 10×13 presque pareils (ex. 😺/🐱, 😀/😃, 🙂/🙃, 🕐/🕑, 🌑/🌚, 💙/💜, 🇫🇷/🇳🇱).
-  5 s par niveau (6 s au dernier), puis le cercle rouge « ICI ! ».
-- Accroche (`hook`, en haut) : ce qu'il faut trouver, en ≤ 24 caractères.
-  `voice_hook` : « Trouve le ... caché. Trois niveaux. Le dernier est vraiment
-  dur. » (varier la formule). Ne JAMAIS inventer de faux chiffres (« 99 % des
-  gens échouent »).
-- Changer de thème chaque jour (animaux, fruits, visages, sport, météo,
-  drapeaux, objets…). Vérifier sur la planche que l'intrus du niveau 3 se
-  voit quand même en regardant bien.
+### « Les Fruits » (≈ 40-55 s), petit drame entre fruits
+- 2 ou 3 fruits (14 dispo : pomme, banane, fraise, orange, citron, poire,
+  raisin, ananas, pasteque, kiwi, cerise, peche, avocat, tomate), dessinés en
+  relief par le moteur, bouche qui bouge avec la voix, gros plan sur celui
+  qui parle. Lieux : cuisine, frigo, plage, marche, table.
+- Histoire de « télénovela » drôle : tromperie, jalousie, secret, trahison,
+  rivalité, mariage, héritage… racontée avec des jeux de mots de fruits
+  (« trop acide », « tu me presses », « on n'est pas des pruneaux »).
+  Chaque vidéo se comprend seule.
+- 11-14 répliques courtes (≤ 12 mots chacune, ≈ 650 caractères en tout).
+  **1re réplique = l'accroche** : une accusation ou une révélation choc
+  (« Banane ! Pourquoi tu sens la fraise ? »). `hook` en haut (≤ 22 car.).
+- Une montée : accusation → mensonge → 3e fruit qui débarque (`"sfx": "dun"`,
+  `"shot": "duo"`) → dispute → **chute drôle à la fin** (le couteau
+  `"twist": "couteau"`, le mixeur, quelqu'un qui croque, la date de
+  péremption…). Varier la chute : pas le couteau 2 jours de suite.
+- Fin (`end`) : une question qui fait choisir un camp (« TEAM POMME OU TEAM
+  FRAISE ? ») → commentaires.
+- Personnages récurrents bienvenus (Pomme, Banane, Fraise…) : la suite d'un
+  épisode peut reprendre un fil, mais sans résumé.
+- Voix : `femme1`, `femme2`, `femme3`, `homme1`, `homme2`, `homme3`, `grave`
+  (refs LibriVox dans `assets/ref/`). Deux persos qui se parlent n'ont jamais
+  la même voix. Pas de mot seul de 1-2 syllabes en début de réplique
+  (« Quoi ? » est sauté par la voix) ; « mon chou » passe.
+- Légende : 1re ligne = le drame en une phrase avec emojis fruits, puis
+  « Team X ou Team Y ? 👇 », puis `#fruits #drame #humour #histoire #pourtoi`.
 
 ### « Quiz » (≈ 35-40 s), 5 questions, de la plus facile à la plus dure
 - Thèmes qui tournent (un par jour, jamais deux fois de suite) :
@@ -68,13 +87,13 @@ moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
 - `voice` : phrase lue (courte, ≤ 12 mots). Pour `big`, lire « Premier
   film, trouve-le vite. » (jamais 3 mots ou moins : la voix les rate). Les choix ne sont pas lus.
 
-### Commun aux deux
-- Rien de vide au début : la grille / la question est à l'écran dès la 1re
+### Commun aux quiz
+- Rien de vide au début : la question est à l'écran dès la 1re
   image. Fond coloré vif (pas d'horreur, pas de fond blanc).
 - Fin (automatique) : « ÉCRIS TON SCORE EN COMMENTAIRE 👇 » + « ABONNE-TOI ».
-- Légende (`caption`) : 1re ligne = le défi (« Trouve le chat caché en 5 s
-  🐱 »), puis « Écris ton score 👇 », puis 4-5 hashtags qui se cherchent
-  (#quiz #trouvelintrus #culturegenerale #devinelefilm #defi #jeu).
+- Légende (`caption`) : 1re ligne = le défi (« 5 questions de culture G 🧠 »),
+  puis « Écris ton score 👇 », puis 4-5 hashtags qui se cherchent
+  (#quiz #culturegenerale #devinelefilm #defi #jeu).
   `title` ≤ 80 caractères.
 - **Répondre aux commentaires** (Zernio inbox) n'est pas automatisé : ne pas
   le faire.
@@ -108,20 +127,21 @@ moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
 2. **Stats** (`GET /v1/analytics`) : pour chaque vidéo, vues, likes,
    commentaires, partages, temps moyen (`igReelsAvgWatchTime`, en ms) et
    `completionRate`. Noter dans `series/insights.md` (une section par jour).
-   Ne juger qu'après 48 h. **Bilan le 14/11** : comparer intrus / quiz (et les
+   Ne juger qu'après 48 h. **Bilan le 14/11** : comparer fruits / quiz (et les
    thèmes de quiz) ; le format qui fait le plus de vues ET de commentaires
    prend plus de créneaux. Si un défi dépasse 2 000 vues, refaire le même
    thème le lendemain (version 2).
-3. **Écrire les 4 défis** (`episodes/defi-NNN.json`). Quiz : vérifier chaque
-   réponse.
+3. **Écrire les 2 épisodes Fruits** (`episodes/fruits-NNN.json`) et les 2
+   quiz (`episodes/defi-NNN.json`). Quiz : vérifier chaque réponse.
 4. Relecture : `python3 engine/check_script.py` ne lit que les épisodes :
    relire soi-même l'orthographe des questions et des choix.
-5. **Rendu, UN SEUL À LA FOIS** : `python3 engine/quiz.py
-   episodes/defi-NNN.json /tmp/defi-NNN.mp4`.
+5. **Rendu, UN SEUL À LA FOIS** : `python3 engine/fruits.py
+   episodes/fruits-NNN.json /tmp/fruits-NNN.mp4` (≈ 10-15 min) et
+   `python3 engine/quiz.py episodes/defi-NNN.json /tmp/defi-NNN.mp4`.
 6. **Contrôles avant publication** :
    - planche contact (`ffmpeg -i v.mp4 -vf "fps=1/1.5,scale=216:-1,tile=6x4"
-     -frames:v 1 p.png`) à REGARDER : texte lisible, rien de coupé, cercle
-     sur le bon emoji, bonne réponse en vert ;
+     -frames:v 1 p.png`) à REGARDER : texte lisible, rien de coupé, bonne
+     réponse en vert (quiz), visages et gros plans corrects (fruits) ;
    - voix : écouter / transcrire (Whisper small, fr) ; mot raté = changer la
      phrase et relancer ;
    - `python3 engine/check_video.py /tmp/defi-NNN.mp4 --min 15 --max 60`
@@ -150,8 +170,8 @@ moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
    passée). Vérifier avec `GET /v1/posts/{id}`. Noter `zernio_id` dans
    `series/state.json` → `defis`. Zernio est gratuit (2 comptes, 15 vidéos TikTok /
    24 h). Metricool ne sert plus à publier.
-9. **Enregistrer sur main** : les JSON `defi-NNN`, `series/state.json`
-   (`defi_next` +4, ajouter les vidéos à `defis` : numéro, format, thème,
+9. **Enregistrer sur main** : les JSON `defi-NNN` / `fruits-NNN`,
+   `series/state.json` (`defi_next` +2, `fruits_next` +2, ajouter les vidéos à `defis` : numéro, format, thème,
    heure, zernio_id), `series/insights.md`.
 10. **Résumé court en français pour Fio** : les 4 défis, les horaires, ce
     que les stats disent (vues, temps moyen, commentaires) et ce qui change.
