@@ -35,6 +35,21 @@ Format JSON — « quiz » (≈ 35 s) :
   ],
   "end": "T'AS EU COMBIEN SUR 5 ?"
 }
+
+Format JSON — « indices » (≈ 16 s par manche, 1 manche conseillée) : DEVINE EN 4 INDICES.
+Une grosse image (emoji) très pixelisée devient nette indice après indice ;
+pas de voix (tic-tac + ding), tout se joue à l'écran.
+{
+  "type": "indices",
+  "title": "...", "caption": "...",
+  "hook": "DEVINE L'ANIMAL",                       (en haut, ≤ 20 caractères)
+  "rounds": [
+    {"emoji": "🦒", "answer": "LA GIRAFE",
+     "clues": ["Je vis en Afrique", "Je dors debout", "Mon cœur pèse 11 kg", "J'ai le plus long cou"],
+     "seconds": 3.4}
+  ],
+  "end": "TROUVÉ À QUEL INDICE ?"
+}
 """
 import json
 import math
@@ -322,6 +337,94 @@ def end_card(spec, bg):
     return (2.4, lambda t: im, voice, None)
 
 
+# --------------------------------------------------------------------------- DEVINE EN 4 INDICES
+
+PIX = [4, 6, 10, 18]  # nombre de « gros pixels » sur la largeur, indice après indice
+
+
+def pixelate(img, n):
+    small = img.resize((n, max(1, round(n * img.height / img.width))), Image.BILINEAR)
+    return small.resize(img.size, Image.NEAREST)
+
+
+def build_indices(spec, seed):
+    bg = background(seed)
+    segs = []
+    rounds = spec["rounds"]
+    for ri, rd in enumerate(rounds):
+        big = emoji(rd["emoji"], 640)
+        sq = Image.new("RGBA", (700, 700), (255, 255, 255, 0))
+        sq.paste(big, ((700 - big.width) // 2, (700 - big.height) // 2), big)
+        clues = rd["clues"]
+        n = len(clues)
+        secs = float(rd.get("seconds", 3.4))
+        sub = "" if len(rounds) == 1 else f"MANCHE {ri + 1}/{len(rounds)}"
+
+        def frame(im, img, scale, shown, active, glow=0.0):
+            d = ImageDraw.Draw(im)
+            # carte blanche + image au centre (léger zoom continu = ça bouge)
+            cy = 770
+            rounded(d, (CX - 385, cy - 385, CX + 385, cy + 385), 55, (255, 255, 255, 240))
+            s = int(700 * scale)
+            im2 = img.resize((s, s), Image.NEAREST)
+            box = (CX - 350, cy - 350, CX + 350, cy + 350)
+            off = (s - 700) // 2
+            crop = im2.crop((off, off, off + 700, off + 700))
+            im.paste(crop, box[:2], crop)
+            # indices déjà donnés
+            y = 1265
+            for k in range(shown):
+                last = k == active
+                col = YELLOW if last else WHITE
+                size = 70 if last else 56
+                text_c(d, (CX, y), f"{k + 1}. {clues[k]}", size, col, 7)
+                y += 88
+            return im
+
+        def play(t, k=None, img=None):
+            im = bg.copy()
+            header(im, spec.get("hook", "DEVINE"), f"INDICE {k + 1}/{n}" + (" · " + sub if sub else ""))
+            g = (k * secs + t) / (n * secs)  # avance globale de la manche
+            frame(im, img, 1.0 + 0.10 * (1 - g) + 0.03 * math.sin(t * 2.2), k + 1, k)
+            # barre de temps de l'indice
+            d = ImageDraw.Draw(im)
+            frac = 1 - t / secs
+            rounded(d, (SAFE_L + 40, 1180, SAFE_R - 40, 1202), 10, (0, 0, 0, 110))
+            w = int((SAFE_R - SAFE_L - 80) * max(0, frac))
+            if w > 20:
+                rounded(d, (SAFE_L + 40, 1180, SAFE_L + 40 + w, 1202), 10,
+                        GREEN if frac > 0.5 else (YELLOW if frac > 0.25 else RED))
+            return im
+
+        for k in range(n):
+            img = pixelate(sq, PIX[round(k * (len(PIX) - 1) / max(1, n - 1))])
+            segs.append((secs, (lambda t, k=k, img=img: play(t, k, img)), None, "tick" if k else "whoosh"))
+
+        def reveal(t, sq=sq, rd=rd):
+            im = bg.copy()
+            header(im, spec.get("hook", "DEVINE"), "RÉPONSE")
+            pop = 1.0 + 0.12 * math.sin(min(t, 0.35) / 0.35 * math.pi)
+            frame(im, sq, pop, 0, -1)
+            d = ImageDraw.Draw(im)
+            rounded(d, (SAFE_L, 1200, SAFE_R, 1370), 45, GREEN, WHITE, 6)
+            text_c(d, (CX, 1285), rd["answer"], 104, WHITE, 8, SAFE_R - SAFE_L - 60)
+            return im
+        segs.append((2.2, reveal, None, "ding"))
+    # fin : question à commenter, puis on reboucle visuellement sur le début (même fond)
+    im = bg.copy()
+    d = ImageDraw.Draw(im)
+    text_c(d, (CX, 650), spec.get("end", "TROUVÉ À QUEL INDICE ?"), 104, YELLOW, 10)
+    for k, lab in enumerate(["1", "2", "3", "4"]):
+        x = CX - 330 + k * 220
+        rounded(d, (x - 85, 800, x + 85, 970), 35, (255, 255, 255, 235))
+        d.text((x, 885), lab, font=font(110), fill=DARK, anchor="mm")
+    text_c(d, (CX, 1070), "RÉPONDS EN COMMENTAIRE", 76, WHITE, 8)
+    e = emoji("👇", 150)
+    im.paste(e, (CX - e.width // 2, 1140), e)
+    segs.append((1.8, lambda t: im, None, None))
+    return segs
+
+
 # --------------------------------------------------------------------------- SON
 
 def say(text):
@@ -347,6 +450,18 @@ def ding():
     t = np.arange(int(0.6 * SR)) / SR
     s = sum(np.sin(2 * np.pi * f * t) * a for f, a in ((1318.5, 0.5), (1975.5, 0.3), (2637, 0.15)))
     return (s * np.exp(-t * 7) * 0.35).astype(np.float32)
+
+
+def tick():
+    t = np.arange(int(0.05 * SR)) / SR
+    return (np.sin(2 * np.pi * 2200 * t) * np.exp(-t * 120) * 0.25).astype(np.float32)
+
+
+def whoosh():
+    n = int(0.45 * SR)
+    t = np.arange(n) / SR
+    x = np.random.default_rng(1).standard_normal(n) * np.sin(np.pi * t / t[-1]) ** 2
+    return (np.convolve(x, np.ones(30) / 30, "same") * 0.35).astype(np.float32)
 
 
 def music(dur, seed):
@@ -394,7 +509,7 @@ def write_wav(path, x):
 def render(spec_path, out):
     spec = json.load(open(spec_path))
     seed = sum(map(ord, os.path.basename(spec_path)))
-    segs = (build_intrus if spec["type"] == "intrus" else build_quiz)(spec, seed)
+    segs = {"intrus": build_intrus, "indices": build_indices}.get(spec["type"], build_quiz)(spec, seed)
     # 1) voix et durées
     timeline = []  # (durée, f(t), décalage_voix, audio_voix, son)
     for s in segs:
@@ -419,6 +534,14 @@ def render(spec_path, out):
         if snd == "ding":
             dg = ding()
             fx_tr[a:a + len(dg)] += dg
+        if snd in ("tick", "whoosh"):
+            w = whoosh() if snd == "whoosh" else tick() * 2.2
+            fx_tr[a:a + len(w)] += w[: len(fx_tr) - a]
+        if snd in ("tick", "whoosh"):  # tic-tac pendant tout l'indice
+            for j in range(1, int(dur / 0.5)):
+                b = a + int(j * 0.5 * SR)
+                tk = tick() * (1.0 if j % 2 else 0.6)
+                fx_tr[b:b + len(tk)] += tk[: max(0, len(fx_tr) - b)]
         pos += dur
     mix = voice_tr * 1.0 + fx_tr + music(len(voice_tr) / SR, seed) * (0.55 if voice_tr.any() else 1.0)
     with tempfile.TemporaryDirectory() as tmp:

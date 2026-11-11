@@ -1,4 +1,4 @@
-# Routine quotidienne (depuis le 11/11 : « Les Fruits » 10h + 18h, Quiz 12h + 20h)
+# Routine quotidienne (depuis le 12/11 : « Les Fruits » 10h + 18h, « Devine en 4 indices » 12h, Quiz 20h)
 
 Ce fichier contient SEULEMENT les règles en vigueur. Il prime sur le message
 de la tâche planifiée (qui parle encore de 5 vidéos, de séries et de
@@ -36,7 +36,7 @@ parlent (format viral). Ils prennent les créneaux de l'intrus.
 - **4 vidéos par jour**, TikTok + Instagram (Reel) :
   | Heure (Paris) | 10:00 | 12:00 | 18:00 | 20:00 |
   |---|---|---|---|---|
-  | Format | Les Fruits | Quiz | Les Fruits | Quiz |
+  | Format | Les Fruits | Devine en 4 indices | Les Fruits | Quiz |
 - Fruits : `episodes/fruits-NNN.json` (suivant dans `series/state.json` →
   `fruits_next`), rendu `python3 engine/fruits.py episodes/fruits-NNN.json
   /tmp/fruits-NNN.mp4` (≈ 10-15 min : voix ≈ 17 s par réplique + images).
@@ -73,19 +73,49 @@ parlent (format viral). Ils prennent les créneaux de l'intrus.
 - Légende : 1re ligne = le drame en une phrase avec emojis fruits, puis
   « Team X ou Team Y ? 👇 », puis `#fruits #drame #humour #histoire #pourtoi`.
 
-### « Quiz » (≈ 35-40 s), 5 questions, de la plus facile à la plus dure
+### 11/11 : « Devine le film en emojis » ARRÊTÉ (Fio : « nul »)
+86 vues, 6 s regardées sur 50 s. Les recherches (voir
+`series/recherche-11-11.md`) expliquent pourquoi : image figée pendant le
+compte à rebours, rébus soit évident soit impossible, voix qui lit la
+consigne, vidéo trop longue, format usé. Ne plus faire de rébus d'emojis
+(film, chanson, dessin animé).
+
+### « Devine en 4 indices » (12h, ≈ 18 s), UN seul objet à deviner
+Ce qui marche chez les comptes de devinettes qui percent (« tu l'as trouvé à
+quel indice ? ») : une image qui se révèle petit à petit, ça bouge tout le
+temps, c'est court, et chacun commente un chiffre.
+- `"type": "indices"` dans `episodes/defi-NNN.json` (format en tête de
+  `engine/quiz.py`). Une manche (`rounds` = 1 élément) : 1 emoji (animal,
+  pays/drapeau, objet, aliment, monument), sa réponse (`answer`, ≤ 16 car.,
+  ex. « LA GIRAFE »), 4 indices du plus vague au plus évident (≤ 28 car.
+  chacun). Le moteur pixelise l'image (très flou → net), tic-tac, ding.
+- **Pas de voix** (les comptes qui percent n'en ont pas, et ça raccourcit).
+- L'indice 1 doit être vrai mais vague (« Je vis en Afrique »), l'indice 4
+  donne presque la réponse. Faits vérifiables uniquement (WebSearch au
+  moindre doute). L'emoji doit être reconnaissable une fois net.
+- Thèmes qui tournent : animal, pays (drapeau 🇯🇵 etc.), métier/objet,
+  aliment/plat, personnage historique via un objet (👑 + indices).
+- `hook` : « DEVINE L'ANIMAL », « DEVINE LE PAYS »… `end` : « TROUVÉ À QUEL
+  INDICE ? ». Légende : « 90 % ne trouvent pas avant l'indice 3 🤔 », puis
+  « Écris ton indice 👇 », puis `#devinette #quiz #defi #animaux #pourtoi`.
+- Titre fixe numéroté pour créer un rendez-vous : « Devine en 4 indices #N ».
+
+### « Quiz » (20h, ≈ 25-30 s), 5 questions, de la plus facile à la plus dure
+- **Plus court qu'avant** (les quiz qui percent font 3-5 s par question) :
+  pas de `voice_hook` (la 1re question arrive à 0 s), `voice` ≤ 8 mots,
+  `"seconds": 3`.
 - Thèmes qui tournent (un par jour, jamais deux fois de suite) :
   1. Culture G (« si tu as 5/5, t'es très fort ») ;
-  2. **Devine le film / dessin animé / chanson en emojis** (`big`) ;
-  3. Géographie (capitales, drapeaux en `big`, pays en forme d'emoji) ;
-  4. « Vrai ou faux » (2 choix) sur des faits étonnants ;
-  5. Nostalgie / années 2000-2010 (dessins animés, jeux, séries connues en France).
+  2. Géographie (capitales, drapeaux en `big`) ;
+  3. « Vrai ou faux » (2 choix) sur des faits étonnants ;
+  4. Nostalgie / années 2000-2010 (dessins animés, jeux, séries connues en France).
+  (Plus de « devine le film en emojis ».)
 - 3 choix par question (2 pour vrai/faux). La bonne réponse change de place.
 - **Chaque réponse doit être VRAIE et sans débat** : faits très connus et
   vérifiables. Au moindre doute, vérifier avec WebSearch ou changer de
   question. Une erreur = la vidéo est jetée.
-- `voice` : phrase lue (courte, ≤ 12 mots). Pour `big`, lire « Premier
-  film, trouve-le vite. » (jamais 3 mots ou moins : la voix les rate). Les choix ne sont pas lus.
+- `voice` : phrase lue (courte, ≤ 8 mots ; jamais 3 mots ou moins : la voix
+  les rate). Les choix ne sont pas lus.
 
 ### Commun aux quiz
 - Rien de vide au début : la question est à l'écran dès la 1re
