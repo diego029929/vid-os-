@@ -41,10 +41,18 @@ Les fruits dessinés en cuisine (`engine/fruits.py` seul, `fruits-001`) et
 « La Villa des Fruits » sont ABANDONNÉS (pas le format voulu). « Trouve
 l'intrus » est arrêté aussi.
 
+**11/11 22h : Fio trouve les films de fruits « horribles, pas comme la
+vidéo ».** Ils sont SUSPENDUS : ne pas en faire, ne pas en publier, tant que
+Fio n'a pas validé une nouvelle version. (Raison : l'exemple est une vraie
+vidéo IA, avec mouvement et têtes en verre ; ici on n'a que des images fixes
+gratuites + une tête dessinée collée dessus.) Les 2 créneaux passent aux
+quiz en attendant.
+
 - **4 vidéos par jour**, TikTok + Instagram (Reel) :
   | Heure (Paris) | 10:00 | 12:00 | 18:00 | 20:00 |
   |---|---|---|---|---|
-  | Format | Film de fruits | Devine en 4 indices | Film de fruits | Quiz |
+  | Format | Quiz | Devine en 4 indices | Devine en 4 indices | Quiz |
+  (films de fruits suspendus : voir l'encadré ci-dessus)
 - Films : `episodes/film-NNN.json` (suivant → `series/state.json` →
   `film_next`), format JSON en tête de `engine/film.py`, exemple
   `episodes/film-001.json`. Deux étapes :
@@ -174,8 +182,8 @@ temps, c'est court, et chacun commente un chiffre.
    thèmes de quiz) ; le format qui fait le plus de vues ET de commentaires
    prend plus de créneaux. Si un défi dépasse 2 000 vues, refaire le même
    thème le lendemain (version 2).
-3. **Écrire les 2 films de fruits** (`episodes/film-NNN.json`) et les 2
-   quiz (`episodes/defi-NNN.json`). Quiz : vérifier chaque réponse.
+3. **Écrire les 4 défis** (2 « Devine en 4 indices » + 2 quiz, thèmes
+   différents ; films de fruits suspendus), `episodes/defi-NNN.json`. Vérifier chaque réponse.
 4. Relecture : `python3 engine/check_script.py` ne lit que les épisodes :
    relire soi-même l'orthographe des questions et des choix.
 5. **Rendu, UN SEUL À LA FOIS** : films (images puis vidéo, voir § 1,
