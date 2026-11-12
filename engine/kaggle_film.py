@@ -18,9 +18,13 @@ import sys
 import time
 
 USER = os.environ.get("KAGGLE_USERNAME", "diediefer")
-STYLE = ("cinematic 3D animated movie still, Pixar quality, vertical 9:16, medium shot. ")
-MOTION = (" The character talks expressively, natural subtle head and hand movements, the camera slowly"
-          " pushes in. Smooth, stable, high quality animation.")
+# Style de l'exemple de Fio (12/11) : vraie photo (décor, corps, vêtements) + tête = vase en verre
+# en forme de fruit avec, dedans, un visage de dessin animé 3D de la couleur du fruit.
+STYLE = ("Photorealistic cinematic photograph, shot on 35mm, natural soft light, real location, sharp details,"
+         " vertical 9:16. ")
+# Fio (12/11) : « fais pas trop bouger les personnages, ça les fait bugger » → presque immobile.
+MOTION = (" Static camera, locked-off shot. The character stays almost still and only talks: small mouth"
+          " movements, blinking eyes, a very slight head tilt. No walking, no hand gestures, no camera movement.")
 
 KERNEL = r'''
 import subprocess, sys, json, time, os
@@ -53,8 +57,8 @@ for i, s in enumerate(SHOTS):
     time.sleep(2)
     t = time.time()
     fr = v(image=Image.open(p).convert("RGB").resize((480, 864)), prompt=s["vid"],
-           negative_prompt="worst quality, inconsistent motion, blurry, jittery, distorted, morphing, extra limbs",
-           width=480, height=864, num_frames=97, num_inference_steps=40,
+           negative_prompt="worst quality, fast motion, large movement, camera shake, inconsistent motion, blurry, jittery, distorted, morphing, deformed face, extra limbs",
+           width=480, height=864, num_frames=97, num_inference_steps=40, decode_timestep=0.05, decode_noise_scale=0.025,
            generator=torch.Generator("cuda:1").manual_seed(s["seed"])).frames[0]
     export_to_video(fr, f"/kaggle/working/shot-{i:02d}.mp4", fps=24)
     print("vid", i, round(time.time() - t), flush=True)
@@ -77,7 +81,7 @@ def build_shots(spec):
         c = spec["cast"].get(sh.get("who"), {})
         if sh.get("off") or not c:
             img = STYLE + sh["scene"] + ". No people."
-            vid = img + " Slow, subtle camera movement, dramatic lighting."
+            vid = img + " Static camera, almost no movement, only light flickers softly."
         else:
             img = STYLE + c["look"] + " " + sh["scene"]
             vid = img + " " + sh.get("motion", MOTION)

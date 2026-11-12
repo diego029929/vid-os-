@@ -8,25 +8,25 @@
    "fruit": "poire",
    "nom": "Nico",
    "voix": "homme1",
-   "look": "A young man whose head is entirely replaced by a giant glossy green pear with big expressive cartoon eyes, eyebrows and a mouth on the fruit, no human head, no hair, wearing a black sweater and jeans."
+   "look": "A young man whose head is a large transparent glass vase shaped exactly like a pear, with a brown stem on top. Inside the glass, filling its lower half, is a smooth bald cartoon head in 3D animation style (like a Pixar character, big expressive eyes, thick eyebrows, exaggerated features), its skin entirely bright yellow-green, no hair, the back of the head covered with dark bumpy avocado skin. His neck and hands are also bright yellow-green, smooth cartoon skin. He wears a black sweater and jeans."
   },
   "samia": {
    "fruit": "fraise",
    "nom": "Samia",
    "voix": "femme1",
-   "look": "A young woman whose head is entirely replaced by a giant glossy red strawberry with green leaves on top with big expressive cartoon eyes, eyebrows and a mouth on the fruit, no human head, no hair, wearing a white blouse."
+   "look": "A young woman whose head is a large transparent glass vase shaped exactly like a strawberry, with a green leaves on top. Inside the glass, filling its lower half, is a smooth bald cartoon head in 3D animation style (like a Pixar character, big expressive eyes, thick eyebrows, exaggerated features), its skin entirely bright red, no hair, tiny yellow strawberry seeds on the skin. Her neck and hands are also bright red, smooth cartoon skin. She wears a white blouse."
   },
   "buraliste": {
    "fruit": "orange",
    "nom": "Buraliste",
    "voix": "homme2",
-   "look": "A chubby middle-aged shopkeeper whose head is entirely replaced by a giant glossy orange with big expressive cartoon eyes, eyebrows and a mouth on the fruit, no human head, no hair, wearing a grey cardigan."
+   "look": "A chubby middle-aged shopkeeper whose head is a large transparent glass vase shaped exactly like a round orange, with a green leaf on top. Inside the glass, filling its lower half, is a smooth bald cartoon head in 3D animation style (like a Pixar character, big expressive eyes, thick eyebrows, exaggerated features), its skin entirely bright orange, no hair, dimpled orange peel texture, a big grey cartoon mustache. His neck and hands are also bright orange, smooth cartoon skin. He wears a grey cardigan."
   },
   "patron": {
    "fruit": "pomme",
    "nom": "Patron",
    "voix": "grave",
-   "look": "An older businessman whose head is entirely replaced by a giant glossy shiny red apple with big expressive cartoon eyes, eyebrows and a mouth on the fruit, no human head, no hair, wearing a dark navy suit and red tie."
+   "look": "An older businessman whose head is a large transparent glass vase shaped exactly like a red apple, with a brown stem and a leaf on top. Inside the glass, filling its lower half, is a smooth bald cartoon head in 3D animation style (like a Pixar character, big expressive eyes, thick eyebrows, exaggerated features), its skin entirely yellow, no hair, the glass is half filled with red juice. His neck and hands are also yellow, smooth cartoon skin. He wears a dark navy suit and red tie."
   }
  },
  "shots": [
@@ -42,7 +42,7 @@
    "who": "nico",
    "text": "Il dit : ne prends surtout pas le bus de huit heures.",
    "emo": "peur",
-   "scene": "Close-up, he holds the smartphone near his face in a small Paris bedroom, worried, morning light from the window."
+   "scene": "Medium close-up, he holds the smartphone near his face in a small Paris bedroom, worried, morning light from the window."
   },
   {
    "who": "samia",
@@ -112,7 +112,7 @@
    "text": "Il dit : surtout, n'ouvre pas la porte.",
    "emo": "peur",
    "sfx": "dun",
-   "scene": "Close-up, his face lit only by a smartphone screen in a dark apartment at night, terrified."
+   "scene": "Medium close-up, his face lit only by a smartphone screen in a dark apartment at night, terrified."
   },
   {
    "who": "nico",

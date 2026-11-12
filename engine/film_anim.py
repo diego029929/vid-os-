@@ -24,6 +24,7 @@ from film import knock, suspense  # noqa: E402
 
 W, H, FPS, SR = 1080, 1920, 30, 44100
 CLIP_FPS, DROP = 24, 10
+SPEED = 0.8  # clips lus un peu au ralenti : mouvements plus calmes (demande de Fio)
 CX = 540
 YELLOW, WHITE = (255, 214, 10), (255, 255, 255)
 
@@ -39,10 +40,29 @@ def load_clip(path):
 
 def pick(n, lt):
     """Index d'image du clip au temps lt : lecture normale puis va-et-vient (jamais de saut)."""
-    k = int(lt * CLIP_FPS)
+    k = int(lt * CLIP_FPS * SPEED)
     period = 2 * (n - 1)
     k %= period
     return k if k < n else period - k
+
+
+def subtitle(d, y, txt, size=72):
+    """Sous-titre façon exemple : mots blancs, le mot le plus long en jaune, contour noir."""
+    words = txt.upper().split()
+    key = max(range(len(words)), key=lambda k: len(words[k].strip(".,!?…:;")))
+    f = fruits.font(size)
+    sp = d.textlength(" ", font=f)
+    tot = sum(d.textlength(w, font=f) for w in words) + sp * (len(words) - 1)
+    while tot > 940 and size > 40:
+        size -= 4
+        f = fruits.font(size)
+        sp = d.textlength(" ", font=f)
+        tot = sum(d.textlength(w, font=f) for w in words) + sp * (len(words) - 1)
+    x = CX - tot / 2
+    for k, w in enumerate(words):
+        d.text((x, y), w, font=f, fill=YELLOW if k == key and len(words) > 1 else WHITE, anchor="lm",
+               stroke_width=7, stroke_fill=(0, 0, 0))
+        x += d.textlength(w, font=f) + sp
 
 
 def render(spec_path, clip_dir, out):
@@ -113,7 +133,7 @@ def render(spec_path, clip_dir, out):
         speak = sh["dur"] - 0.18
         lens = np.cumsum([len(c) + 2 for c in sh["chunks"]])
         kk = int(np.searchsorted(lens / lens[-1], min(0.999, lt / max(0.1, speak)), side="right"))
-        fruits.text_c(d, (CX, 1220), sh["chunks"][min(kk, len(sh["chunks"]) - 1)].upper(), 76, WHITE, 8)
+        subtitle(d, 1240, sh["chunks"][min(kk, len(sh["chunks"]) - 1)])
         return bg
 
     if os.environ.get("FILM_STILL"):
