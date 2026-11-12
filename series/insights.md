@@ -359,3 +359,24 @@ creux à 11 h, 13 h-14 h et après 21 h).
   (« Quel océan est le plus grand de la planète ? », « La Joconde, quel peintre l'a faite ? »). « Défi de demain » était
   lu « déchi » → `voice_end` = « … abonne-toi pour jouer demain. » « Fruit » mal lu → hook « l'intrus caché au milieu des bananes ».
 - Zernio : `scheduledFor` avec `timezone` refusé (« Invalid date ») → envoyer l'heure UTC « AAAA-MM-JJTHH:MM:00.000Z » (Paris − 1 h en hiver).
+
+### 12/11 (quiz géo 10h, devine en 4 indices #1 12h, devine en 4 indices #2 18h, vrai ou faux 20h)
+
+- Comptes Zernio OK, les 5 posts du 11/11 publiés sur les deux réseaux.
+- **Stats 11/11 (≈ 12-24 h de recul)** — TikTok vues / temps moyen / complétion, Instagram vues / temps moyen :
+  - intrus fruits 10h : 253 / 6,4 s / 2,3 % — Insta 435 / 8,7 s (1 commentaire de chaque côté) ;
+  - devine le film 12h : 262 / 7,2 s / 1,9 % — Insta 207 / 9,0 s (1 commentaire TikTok) ;
+  - intrus visages 18h : 260 / 4,5 s / 0,4 % — Insta 174 / 6,7 s (le pire temps moyen) ;
+  - Fruits n°1 18h : 248 / **14,6 s / 8,6 %** — Insta 192 / 12,0 s, **6 partages** (le meilleur temps et le seul partagé) ;
+  - quiz culture G 20h : 258 / 6,9 s — Insta 305 / 10,8 s, 8 likes TikTok.
+- Lecture : toujours le plateau de ≈ 250 vues TikTok, aucun défi n'en sort encore. Le format fruits garde le mieux
+  (2× le temps moyen des défis) mais Fio l'a jugé « horrible » → reste suspendu (à reparler au bilan du 14/11).
+- Défis du jour : quiz géo (Madrid, drapeau 🇯🇵, Loire, Ottawa, Canberra), indices animal (🐘 éléphant), indices pays
+  (🇧🇷 Brésil), vrai/faux (soleil = étoile V, chauves-souris aveugles F, poisson rouge 3 s F, tour Eiffel grandit V, banane = baie V).
+  Quiz raccourcis : plus de `voice_hook`, 3 s par question, `voice_end` sans « défi ».
+- Son : loudnorm seul donnait une crête à -0,3 dB (« saturé ») → chaîne utilisée :
+  `loudnorm=I=-14:TP=-2:LRA=11,aresample=44100,alimiter=limit=0.7:level=false` (≈ -15,5 LUFS, crête -1,4 dB, contrôle OK).
+- Voix des quiz : sans `voice_hook`, Chatterbox répète la fin des questions courtes en « … de l'Espagne ? » / « … de
+  l'Australie ? » (« de l'Espagne ? De l'Espagne ? », vu 3 fois) et a mal lu « c'est laquelle ? » → tournure
+  « Quelle ville est la capitale espagnole / australienne ? » (propre). Éviter les questions qui finissent par « de + pays ».
+  Quiz = ≈ 41 s (la voix lit chaque question avant les 3 s du minuteur).

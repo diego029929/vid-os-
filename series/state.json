@@ -331,7 +331,7 @@
       "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
     }
   ],
-  "media_note": "10/11 : branche media = ep27, survis-13, survis-14, ep28 ; supprimer à la prochaine routine, après publication",
+  "media_note": "12/11 : branche media = defi-005 à defi-008 ; supprimer à la prochaine routine, après publication",
   "votes": {
     "partie3": {
       "A_laisser": 1,
@@ -357,7 +357,7 @@
   "previous_series": "jacques-a-dit",
   "parallel_note": "ARRÊTÉ le 10/11 : nouveau concept « défis » (voir ROUTINE.md). Séries, votes et SURVIS ne sont plus utilisés ; « Le Refuge » s'arrête à la partie 1.",
   "concept": "defis (depuis le 11/11)",
-  "defi_next": 5,
+  "defi_next": 9,
   "defis": [
     {
       "numero": 1,
@@ -404,6 +404,42 @@
       "zernio_id": "6af4503581ff350489383494",
       "fichier": "episodes/fruits-001.json",
       "remplace": "defi-003 (intrus visages)"
+    },
+    {
+      "numero": 5,
+      "format": "quiz",
+      "theme": "géographie",
+      "date": "2026-11-12",
+      "heure": "10:00",
+      "zernio_id": "6af5496e620d757196432eb6",
+      "fichier": "episodes/defi-005.json"
+    },
+    {
+      "numero": 6,
+      "format": "indices",
+      "theme": "animal (éléphant)",
+      "date": "2026-11-12",
+      "heure": "12:00",
+      "zernio_id": "6af5446a9986967fd7c8a420",
+      "fichier": "episodes/defi-006.json"
+    },
+    {
+      "numero": 7,
+      "format": "indices",
+      "theme": "pays (Brésil)",
+      "date": "2026-11-12",
+      "heure": "18:00",
+      "zernio_id": "6af5446a0d22a17f804266fa",
+      "fichier": "episodes/defi-007.json"
+    },
+    {
+      "numero": 8,
+      "format": "quiz",
+      "theme": "vrai ou faux",
+      "date": "2026-11-12",
+      "heure": "20:00",
+      "zernio_id": "6af5496f0841d8cf51d70b07",
+      "fichier": "episodes/defi-008.json"
     }
   ],
   "fruits_next": 2,
