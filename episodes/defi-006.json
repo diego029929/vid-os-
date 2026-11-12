@@ -1,0 +1,20 @@
+{
+ "type": "indices",
+ "title": "Devine en 4 indices #1",
+ "caption": "90 % ne trouvent pas avant l'indice 3 🤔\nÉcris ton indice 👇\n#devinette #quiz #animaux #jeu #pourtoi",
+ "hook": "DEVINE L'ANIMAL",
+ "rounds": [
+  {
+   "emoji": "🐘",
+   "answer": "L'ÉLÉPHANT",
+   "clues": [
+    "Je vis en Afrique et en Asie",
+    "Je ne peux pas sauter",
+    "Mes défenses sont en ivoire",
+    "J'ai une trompe"
+   ],
+   "seconds": 3.4
+  }
+ ],
+ "end": "TROUVÉ À QUEL INDICE ?"
+}

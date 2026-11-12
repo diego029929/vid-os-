@@ -1,0 +1,70 @@
+{
+ "type": "quiz",
+ "title": "Quiz géographie · 5 questions, t'as combien ?",
+ "caption": "5 questions de géographie, de la plus facile à la plus dure 🌍\nÉcris ton score 👇\n#quiz #geographie #culturegenerale #quizz #pourtoi",
+ "hook": "QUIZ GÉOGRAPHIE",
+ "questions": [
+  {
+   "q": "Quelle est la capitale de l'Espagne ?",
+   "choices": [
+    "Barcelone",
+    "Madrid",
+    "Séville"
+   ],
+   "answer": 1,
+   "emoji": "🇪🇸",
+   "seconds": 3,
+   "voice": "Quelle ville est la capitale espagnole ?"
+  },
+  {
+   "q": "À quel pays est ce drapeau ?",
+   "big": [
+    "🇯🇵"
+   ],
+   "choices": [
+    "Chine",
+    "Corée du Sud",
+    "Japon"
+   ],
+   "answer": 2,
+   "seconds": 3
+  },
+  {
+   "q": "Quel est le plus long fleuve de France ?",
+   "choices": [
+    "La Loire",
+    "La Seine",
+    "Le Rhône"
+   ],
+   "answer": 0,
+   "emoji": "🏞️",
+   "voice": "Quel fleuve français est le plus long ?",
+   "seconds": 3
+  },
+  {
+   "q": "Quelle est la capitale du Canada ?",
+   "choices": [
+    "Toronto",
+    "Ottawa",
+    "Montréal"
+   ],
+   "answer": 1,
+   "emoji": "🍁",
+   "seconds": 3
+  },
+  {
+   "q": "Quelle est la capitale de l'Australie ?",
+   "choices": [
+    "Sydney",
+    "Melbourne",
+    "Canberra"
+   ],
+   "answer": 2,
+   "emoji": "🦘",
+   "voice": "Quelle ville est la capitale australienne ?",
+   "seconds": 3
+  }
+ ],
+ "end": "T'AS EU COMBIEN SUR 5 ?",
+ "voice_end": "Écris ton score en commentaire, et abonne-toi."
+}
