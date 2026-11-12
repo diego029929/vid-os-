@@ -88,6 +88,8 @@ def render(spec_path, clip_dir, out):
     def frame(t):
         if t >= t_end:
             fade = min(1, (t - t_end) / 0.4)
+            if np.asarray(last_img[0]).mean() < 70:  # dernier plan trop sombre → on reprend le 1er plan
+                last_img[0] = Image.fromarray(load_clip(shots[0]["clip"])[0]).resize((W, H), Image.LANCZOS)
             im = Image.blend(last_img[0].filter(ImageFilter.GaussianBlur(14)), Image.new("RGB", (W, H)), 0.55 + 0.15 * fade).convert("RGBA")
             d = ImageDraw.Draw(im)
             fruits.text_c(d, (CX, 900), spec.get("end", "À SUIVRE…"), 110, tuple(int(c * fade) for c in YELLOW), 0)
