@@ -1,0 +1,20 @@
+{
+ "type": "indices",
+ "title": "Devine en 4 indices #3",
+ "caption": "90 % ne trouvent pas avant l'indice 3 🤔\nÉcris ton indice 👇\n#devinette #quiz #nourriture #jeu #pourtoi",
+ "hook": "DEVINE LE PLAT",
+ "rounds": [
+  {
+   "emoji": "🍕",
+   "answer": "LA PIZZA",
+   "clues": [
+    "Je viens d'Italie",
+    "On me cuit au four",
+    "On me coupe en triangles",
+    "Tomate, mozzarella, basilic"
+   ],
+   "seconds": 3.4
+  }
+ ],
+ "end": "TROUVÉ À QUEL INDICE ?"
+}

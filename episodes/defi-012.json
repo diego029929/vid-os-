@@ -1,0 +1,70 @@
+{
+ "type": "quiz",
+ "title": "Quiz culture G · 5 questions, t'as combien ?",
+ "caption": "5 questions de culture G, de la plus facile à la plus dure 🧠\nÉcris ton score 👇\n#quiz #culturegenerale #quizz #jeu #pourtoi",
+ "hook": "QUIZ CULTURE G",
+ "questions": [
+  {
+   "q": "Combien de pattes a une araignée ?",
+   "choices": [
+    "Six",
+    "Huit",
+    "Dix"
+   ],
+   "answer": 1,
+   "emoji": "🕷️",
+   "voice": "Combien de pattes a une araignée ?",
+   "seconds": 3
+  },
+  {
+   "q": "Quelle planète est la plus proche du Soleil ?",
+   "choices": [
+    "Mercure",
+    "Vénus",
+    "Mars"
+   ],
+   "answer": 0,
+   "emoji": "🪐",
+   "voice": "Quelle planète est la plus proche du Soleil ?",
+   "seconds": 3
+  },
+  {
+   "q": "Premier pas sur la Lune : en quelle année ?",
+   "choices": [
+    "1959",
+    "1972",
+    "1969"
+   ],
+   "answer": 2,
+   "emoji": "🌕",
+   "voice": "Le premier pas sur la Lune, c'était quand ?",
+   "seconds": 3
+  },
+  {
+   "q": "Combien d'os a un adulte ?",
+   "choices": [
+    "206",
+    "306",
+    "186"
+   ],
+   "answer": 0,
+   "emoji": "🦴",
+   "voice": "Combien d'os a le corps d'un adulte ?",
+   "seconds": 3
+  },
+  {
+   "q": "Quel est le plus petit pays de la planète ?",
+   "choices": [
+    "Monaco",
+    "Le Vatican",
+    "Malte"
+   ],
+   "answer": 1,
+   "emoji": "⛪",
+   "voice": "Quel est le plus petit pays de la planète ?",
+   "seconds": 3
+  }
+ ],
+ "end": "T'AS EU COMBIEN SUR 5 ?",
+ "voice_end": "Écris ton score en commentaire, et abonne-toi."
+}

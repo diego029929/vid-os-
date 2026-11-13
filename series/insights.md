@@ -380,3 +380,23 @@ creux à 11 h, 13 h-14 h et après 21 h).
   l'Australie ? » (« de l'Espagne ? De l'Espagne ? », vu 3 fois) et a mal lu « c'est laquelle ? » → tournure
   « Quelle ville est la capitale espagnole / australienne ? » (propre). Éviter les questions qui finissent par « de + pays ».
   Quiz = ≈ 41 s (la voix lit chaque question avant les 3 s du minuteur).
+
+### 13/11 (quiz nostalgie 10h, devine en 4 indices #3 pizza 12h, #4 Canada 18h, quiz culture G 20h)
+
+- Comptes Zernio OK, les 4 posts du 12/11 publiés sur les deux réseaux.
+- **Stats 12/11 (≈ 8-20 h de recul)** — TikTok vues / likes / commentaires / temps moyen / complétion, puis Instagram :
+  - quiz géo 10h (42 s) : 313 / 10 / 1 / 9,4 s / 3,9 % — Insta 147 / 5,7 s ;
+  - indices #1 éléphant 12h (18 s) : 277 / 5 / **3** / 5,8 s / 6,3 % — Insta 166 / 8,1 s ;
+  - indices #2 Brésil 18h (18 s) : 280 / **11** / 1 / 8,5 s / **17,0 %** — Insta 158 / 7,6 s ;
+  - vrai ou faux 20h (42 s) : 260 / 4 / 0 / 11,5 s / 4,9 % — Insta 150 / 8,2 s.
+  11/11 à ≈ 36 h : quiz culture G Insta 441 (le meilleur Insta), Fruits n°1 Insta 250 / 6 partages.
+- Lecture : toujours le plateau ≈ 260-310 vues TikTok. Les « 4 indices » (18 s) ont la meilleure complétion (17 %
+  pour le Brésil) et 4 commentaires sur 5 de la journée : format à garder. Rien ne change aujourd'hui (pas assez de
+  recul, bilan le 14/11).
+- Défis du jour : nostalgie (Bob l'éponge = ananas, Pikachu, DS = 2 écrans, Totally Spies = 3, Tamagotchi = Japon),
+  indices 🍕 pizza, indices 🇨🇦 Canada, culture G (araignée 8 pattes, Mercure, 1969, 206 os, Vatican).
+- Voix : la 1re question courte d'un quiz est encore répétée (« … dans quelle maison ? Dans quelle maison ? », vu 2 fois,
+  confirmé en synthèse seule) → « Dans quoi vit Bob l'éponge, au fond de la mer ? » propre. « Quel est le Pokémon préféré
+  de Sacha ? » suivi de charabia → « Sacha a quel Pokémon sur son épaule ? ». « Nintendo DS » lu « Nintendo D » →
+  écrire « Nintendo dé esse » dans `voice`. Astuce : tester une phrase douteuse seule (voice.synth + Whisper, ≈ 30 s)
+  avant de relancer le rendu complet.
