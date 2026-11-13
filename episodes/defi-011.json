@@ -1,0 +1,20 @@
+{
+ "type": "indices",
+ "title": "Devine en 4 indices #4",
+ "caption": "90 % ne trouvent pas avant l'indice 3 🤔\nÉcris ton indice 👇\n#devinette #quiz #pays #geographie #pourtoi",
+ "hook": "DEVINE LE PAYS",
+ "rounds": [
+  {
+   "emoji": "🇨🇦",
+   "answer": "LE CANADA",
+   "clues": [
+    "Je suis immense et froid",
+    "J'ai 2 langues officielles",
+    "Feuille d'érable au drapeau",
+    "Ma capitale est Ottawa"
+   ],
+   "seconds": 3.4
+  }
+ ],
+ "end": "TROUVÉ À QUEL INDICE ?"
+}
