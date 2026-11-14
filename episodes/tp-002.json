@@ -42,17 +42,18 @@
   {
    "a": "Plus jamais de pâtes",
    "a_emoji": "🍝",
-   "b": "Plus jamais de pain",
+   "b": "Plus jamais de baguette",
    "b_emoji": "🥖",
-   "pa": 52
+   "pa": 52,
+   "voice": "Tu préfères plus jamais de pâtes, ou plus jamais de baguette ?"
   },
   {
    "a": "Envoyer cette vidéo au pote le plus gourmand",
    "a_emoji": "📲",
-   "b": "Manger un insecte grillé",
+   "b": "Manger un insecte vivant",
    "b_emoji": "🐛",
    "pa": 84,
-   "voice": "Tu préfères envoyer cette vidéo à ton pote le plus gourmand, ou manger un insecte grillé ?"
+   "voice": "Tu préfères envoyer cette vidéo à ton pote le plus gourmand, ou manger un insecte vivant ?"
   }
  ],
  "end": "T'as eu combien de 🔴 ?",

@@ -331,7 +331,7 @@
       "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
     }
   ],
-  "media_note": "13/11 : branche media = defi-009 à defi-012 ; supprimer à la prochaine routine, après publication",
+  "media_note": "14/11 : branche media = bataille-001, bataille-002, tp-001, tp-002 ; supprimer à la prochaine routine, après publication",
   "votes": {
     "partie3": {
       "A_laisser": 1,
@@ -476,11 +476,50 @@
       "heure": "20:00",
       "zernio_id": "6af69b26835da144f43db6fa",
       "fichier": "episodes/defi-012.json"
+    },
+    {
+      "numero": 1,
+      "format": "bataille",
+      "theme": "16 PAYS, 1 SEUL SURVIVANT (monde)",
+      "gagnant": "Espagne",
+      "graine": 58,
+      "date": "2026-11-14",
+      "heure": "10:00",
+      "zernio_id": "6af7e7ba5a9b95079ae64cfa",
+      "fichier": "episodes/bataille-001.json"
+    },
+    {
+      "numero": 1,
+      "format": "tupreferes",
+      "theme": "ta vie",
+      "date": "2026-11-14",
+      "heure": "12:00",
+      "zernio_id": "6af7f0aa44735e3eac4de87d",
+      "fichier": "episodes/tp-001.json"
+    },
+    {
+      "numero": 2,
+      "format": "bataille",
+      "theme": "QUEL PAYS D'AFRIQUE GAGNE ?",
+      "gagnant": "Maroc",
+      "graine": 22,
+      "date": "2026-11-14",
+      "heure": "18:00",
+      "zernio_id": "6af7e7bb6e11e24530f17f98",
+      "fichier": "episodes/bataille-002.json"
+    },
+    {
+      "numero": 2,
+      "format": "tupreferes",
+      "theme": "bouffe",
+      "date": "2026-11-14",
+      "heure": "20:00",
+      "zernio_id": "6af7f354c9a10a0d59dfde44",
+      "fichier": "episodes/tp-002.json"
     }
   ],
   "fruits_next": 2,
   "film_next": 2,
-  "tp_next": 1,
-  "bataille_next": 1,
-  "prepared_14_11": "tp-001 (12h) et tp-002 (20h), bataille-001 (10h) et bataille-002 (18h) écrits d'avance pour la routine du 14/11 : les rendre et publier tels quels, puis tp_next = bataille_next = 3"
+  "tp_next": 3,
+  "bataille_next": 3
 }
