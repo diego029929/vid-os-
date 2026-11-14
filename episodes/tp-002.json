@@ -1,0 +1,60 @@
+{
+ "theme": "bouffe",
+ "hook": "Attention, ces choix sont impossibles.",
+ "hook_text": "Choix impossible",
+ "items": [
+  {
+   "a": "Que de la pizza pendant un mois",
+   "a_emoji": "🍕",
+   "b": "Que des burgers pendant un mois",
+   "b_emoji": "🍔",
+   "pa": 55
+  },
+  {
+   "a": "Tout manger super épicé",
+   "a_emoji": "🌶️",
+   "b": "Tout manger sans sel",
+   "b_emoji": "🧂",
+   "pa": 38
+  },
+  {
+   "a": "Plus jamais de chocolat",
+   "a_emoji": "🍫",
+   "b": "Plus jamais de fromage",
+   "b_emoji": "🧀",
+   "pa": 47
+  },
+  {
+   "a": "Commenter ton fast-food préféré",
+   "a_emoji": "💬",
+   "b": "Que des brocolis pendant une semaine",
+   "b_emoji": "🥦",
+   "pa": 76,
+   "voice": "Tu préfères commenter ton fast-food préféré, ou manger que des brocolis pendant une semaine ?"
+  },
+  {
+   "a": "Frites à volonté toute ta vie",
+   "a_emoji": "🍟",
+   "b": "Glaces à volonté toute ta vie",
+   "b_emoji": "🍦",
+   "pa": 61
+  },
+  {
+   "a": "Plus jamais de pâtes",
+   "a_emoji": "🍝",
+   "b": "Plus jamais de pain",
+   "b_emoji": "🥖",
+   "pa": 52
+  },
+  {
+   "a": "Envoyer cette vidéo au pote le plus gourmand",
+   "a_emoji": "📲",
+   "b": "Manger un insecte grillé",
+   "b_emoji": "🐛",
+   "pa": 84,
+   "voice": "Tu préfères envoyer cette vidéo à ton pote le plus gourmand, ou manger un insecte grillé ?"
+  }
+ ],
+ "end": "T'as eu combien de 🔴 ?",
+ "end_voice": "Alors, t'as eu combien de rouges ? Dis-le en commentaire."
+}

@@ -356,7 +356,7 @@
   },
   "previous_series": "jacques-a-dit",
   "parallel_note": "ARRÊTÉ le 10/11 : nouveau concept « défis » (voir ROUTINE.md). Séries, votes et SURVIS ne sont plus utilisés ; « Le Refuge » s'arrête à la partie 1.",
-  "concept": "defis (depuis le 11/11)",
+  "concept": "« Bataille de pays » 10h+18h + « Tu préfères » 12h+20h (depuis le 14/11, à garder jusqu'au 28/11)",
   "defi_next": 13,
   "defis": [
     {
@@ -479,5 +479,8 @@
     }
   ],
   "fruits_next": 2,
-  "film_next": 2
+  "film_next": 2,
+  "tp_next": 1,
+  "bataille_next": 1,
+  "prepared_14_11": "tp-001 (12h) et tp-002 (20h), bataille-001 (10h) et bataille-002 (18h) écrits d'avance pour la routine du 14/11 : les rendre et publier tels quels, puis tp_next = bataille_next = 3"
 }

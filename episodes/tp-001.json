@@ -1,0 +1,62 @@
+{
+ "theme": "ta vie",
+ "hook": "On va voir si t'as bon goût.",
+ "hook_text": "T'as bon goût ?",
+ "items": [
+  {
+   "a": "Pouvoir voler",
+   "a_emoji": "🦅",
+   "b": "Être invisible",
+   "b_emoji": "👻",
+   "pa": 58
+  },
+  {
+   "a": "Plus de téléphone pendant 1 an",
+   "a_emoji": "📵",
+   "b": "Plus jamais de pizza",
+   "b_emoji": "🍕",
+   "pa": 31,
+   "voice": "Tu préfères plus de téléphone pendant un an, ou plus jamais de pizza ?"
+  },
+  {
+   "a": "1 million tout de suite",
+   "a_emoji": "💰",
+   "b": "1 000 € par jour pendant 3 ans",
+   "b_emoji": "💸",
+   "pa": 44,
+   "voice": "Tu préfères un million d'euros tout de suite, ou mille euros par jour pendant trois ans ?"
+  },
+  {
+   "a": "Commenter ton plat préféré",
+   "a_emoji": "💬",
+   "b": "Ne plus jamais manger ce plat",
+   "b_emoji": "🙊",
+   "pa": 72
+  },
+  {
+   "a": "Revenir 10 ans en arrière",
+   "a_emoji": "⏪",
+   "b": "Voir ta vie dans 10 ans",
+   "b_emoji": "🔮",
+   "pa": 47,
+   "voice": "Tu préfères revenir dix ans en arrière, ou voir ta vie dans dix ans ?"
+  },
+  {
+   "a": "Parler aux animaux",
+   "a_emoji": "🐶",
+   "b": "Parler toutes les langues",
+   "b_emoji": "🌍",
+   "pa": 39
+  },
+  {
+   "a": "Envoyer cette vidéo à ton meilleur pote",
+   "a_emoji": "📲",
+   "b": "Chaussettes mouillées toute la journée",
+   "b_emoji": "🧦",
+   "pa": 81,
+   "voice": "Tu préfères envoyer cette vidéo à ton meilleur pote, ou porter des chaussettes mouillées toute la journée ?"
+  }
+ ],
+ "end": "T'as eu combien de 🔴 ?",
+ "end_voice": "Alors, t'as eu combien de rouges ? Dis-le en commentaire."
+}

@@ -1,0 +1,99 @@
+{
+ "title": "16 PAYS, 1 SEUL SURVIVANT",
+ "subtitle": "CHOISIS TON PAYS AVANT QUE ÇA COMMENCE",
+ "melody": "ode",
+ "teams": [
+  {
+   "flag": "🇫🇷",
+   "name": "France",
+   "f": true
+  },
+  {
+   "flag": "🇲🇦",
+   "name": "Maroc"
+  },
+  {
+   "flag": "🇩🇿",
+   "name": "Algérie",
+   "f": true
+  },
+  {
+   "flag": "🇧🇪",
+   "name": "Belgique",
+   "f": true
+  },
+  {
+   "flag": "🇸🇳",
+   "name": "Sénégal"
+  },
+  {
+   "flag": "🇨🇦",
+   "name": "Canada"
+  },
+  {
+   "flag": "🇧🇷",
+   "name": "Brésil"
+  },
+  {
+   "flag": "🇪🇸",
+   "name": "Espagne",
+   "f": true
+  },
+  {
+   "flag": "🇮🇹",
+   "name": "Italie",
+   "f": true
+  },
+  {
+   "flag": "🇵🇹",
+   "name": "Portugal"
+  },
+  {
+   "flag": "🇹🇳",
+   "name": "Tunisie",
+   "f": true
+  },
+  {
+   "flag": "🇨🇮",
+   "name": "Côte d'Ivoire",
+   "f": true,
+   "short": "CÔTE D'IV."
+  },
+  {
+   "flag": "🇩🇪",
+   "name": "Allemagne",
+   "f": true
+  },
+  {
+   "flag": "🇦🇷",
+   "name": "Argentine",
+   "f": true
+  },
+  {
+   "flag": "🇯🇵",
+   "name": "Japon"
+  },
+  {
+   "flag": "🇺🇸",
+   "name": "États-Unis",
+   "short": "USA"
+  }
+ ],
+ "colors": [
+  [
+   20,
+   16,
+   60
+  ],
+  [
+   90,
+   20,
+   110
+  ]
+ ],
+ "ring": [
+  255,
+  214,
+  64
+ ]
+}
