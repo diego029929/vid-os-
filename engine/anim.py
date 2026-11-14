@@ -134,3 +134,69 @@ def weather(fr, kind, t, seed):
             d.ellipse([x - r[i], y - r[i], x + r[i], y + r[i]], fill=col + (170,))
         layer = layer.filter(ImageFilter.GaussianBlur(1.2))
     fr.paste(layer, (0, 0), layer)
+
+
+# ---- 14/11 : animation plus vivante (Fio : « refais les séries avec de meilleures animations ») ----
+
+def whip(fr, amount):
+    """Transition « whip pan » : l'image arrive en glissant avec un flou de mouvement.
+    amount = fraction de la largeur (signe = sens)."""
+    if abs(amount) < 0.004:
+        return fr
+    w, h = fr.size
+    a = np.asarray(fr, np.float32)
+    shift = int(amount * w)
+    acc = np.zeros_like(a)
+    k = 7
+    for j in range(k):
+        acc += np.roll(a, int(shift * (0.4 + 0.6 * j / (k - 1))), axis=1)
+    return Image.fromarray(np.clip(acc / k, 0, 255).astype(np.uint8))
+
+
+def passant(fr, lt, dur, opt, seed):
+    """Une silhouette sombre aux yeux rouges traverse le fond du plan.
+    opt = true ou {"y": pied en fraction de hauteur, "h": taille, "sens": 1/-1, "yeux": true}."""
+    o = opt if isinstance(opt, dict) else {}
+    w, h = fr.size
+    sens = o.get("sens", 1 if seed % 2 == 0 else -1)
+    k = min(1.0, lt / max(0.5, dur * 1.1))
+    x = (-0.15 + 1.3 * k) if sens > 0 else (1.15 - 1.3 * k)
+    x *= w
+    hh = o.get("h", 0.30) * h
+    foot = o.get("y", 0.80) * h
+    bob = abs(math.sin(lt * 5.5)) * hh * 0.025
+    lay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    r = hh * 0.11
+    top = foot - hh - bob
+    col = (6, 5, 10, 235)
+    d.ellipse([x - r, top, x + r, top + 2 * r], fill=col)
+    sw = math.sin(lt * 5.5) * hh * 0.06
+    d.polygon([(x - hh * 0.17, foot - hh * 0.45 - bob), (x - hh * 0.11, top + 1.8 * r), (x + hh * 0.11, top + 1.8 * r),
+               (x + hh * 0.17, foot - hh * 0.45 - bob)], fill=col)
+    for dx in (-1, 1):   # jambes qui marchent
+        d.polygon([(x + dx * hh * 0.03, foot - hh * 0.46 - bob), (x + dx * hh * 0.12, foot - hh * 0.46 - bob),
+                   (x + dx * sw + hh * 0.05, foot), (x + dx * sw - hh * 0.05, foot)], fill=col)
+    lay = lay.filter(ImageFilter.GaussianBlur(max(1, hh * 0.008)))
+    if o.get("yeux", True):
+        d2 = ImageDraw.Draw(lay)
+        e = r * 0.16
+        for dx in (-0.35, 0.35):
+            cx, cy = x + dx * r, top + r * 0.95
+            d2.ellipse([cx - e, cy - e * 0.7, cx + e, cy + e * 0.7], fill=(255, 50, 40, 255))
+    out = fr.convert("RGBA")
+    out.alpha_composite(lay)
+    return fr.paste(out.convert("RGB"))
+
+
+def lightning(fr, lt, seed):
+    """Éclair : deux flashs blancs bleutés rapides au début du plan, puis l'image retombe."""
+    v = 0.0
+    for t0, p in ((0.05, 0.85), (0.22, 0.55)):
+        if t0 <= lt < t0 + 0.09:
+            v = max(v, p * (1 - (lt - t0) / 0.09))
+    if v <= 0:
+        return fr
+    a = np.asarray(fr, np.float32)
+    a = a + (np.array([210, 225, 255], np.float32) - a) * v
+    return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))

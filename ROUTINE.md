@@ -1,185 +1,169 @@
-# Routine quotidienne (depuis le 14/11 : « Bataille de pays » 10h + 18h, « Tu préfères » 12h + 20h)
+# Routine quotidienne (depuis le 15/11 : séries d'horreur COURTES, mieux animées)
 
 Ce fichier contient SEULEMENT les règles en vigueur. Il prime sur le message
-de la tâche planifiée (qui parle encore de 5 vidéos, de séries et de
-Metricool : il ne peut pas être modifié). L'historique est dans
-`series/insights.md`.
+de la tâche planifiée (qui parle encore de 5 vidéos et de Metricool : il ne
+peut pas être modifié). L'historique est dans `series/insights.md`.
 
-## 0. Pourquoi on a changé (10/11, carte blanche de Fio)
+## 0. Pourquoi ce format (demande de Fio, 14/11 soir)
 
-Fio : « ça perce pas, fais ce que tu veux, juste des choses qui marchent ».
-Les stats Zernio de 82 posts disent : TOUTES les vidéos TikTok plafonnent à
-≈ 750-900 vues (le premier lot que TikTok donne à chaque vidéo), puis ≈ 250
-depuis le 09/11. Aucune n'a été poussée plus loin, car les gens partent vite :
-temps moyen 6-14 s sur des vidéos de 90 s (1 à 8 % vont au bout), et presque
-aucun commentaire. Les séries d'horreur, les votes A/B et les courtes
-« SURVIS ? » sont donc ARRÊTÉS (« Le Refuge » s'arrête à la partie 1).
+Fio a trouvé « nul » le concept du 14/11 (Bataille de pays + Tu préfères :
+ARRÊTÉ, ne plus en faire) et a demandé : « refais les vidéos qu'on faisait
+avant avec de meilleures animations », puis « juste fais des séries plus
+courtes ». On revient donc aux séries d'horreur dessinées (style 2), mais :
+- **épisodes de 35 à 45 s** (au lieu de 90 s) : c'était le défaut des
+  anciennes séries (les gens partaient au bout de 6-14 s) ;
+- **séries de 3 épisodes** (au lieu de 4-6) ;
+- **animation 2** (engine/anim.py + render2.py, 14/11) : bouche qui bouge
+  quand un personnage parle, personnages qui entrent dans le cadre,
+  transitions glissées, coup de zoom sur le mot en rouge, caméra plus ample,
+  silhouette qui traverse le fond (`passant`), éclairs (`eclair`).
+Formats ARRÊTÉS : défis, quiz, 4 indices, intrus, fruits, bataille de pays,
+tu préfères, SURVIS. Permission de Fio (10/11) : Claude peut changer de
+format sans demander quand les stats le justifient, mais Fio vient de
+choisir celui-ci : le garder tant que Fio ne dit pas le contraire.
 
-Nouveau concept : **des défis courts (20-40 s) où on joue en regardant**. Le
-spectateur reste jusqu'à la réponse, revoit la vidéo s'il a raté (TikTok
-compte les revisionnages), et commente son score (« 4/5 », « trouvé en 2 s »).
-C'est un format qui marche en France sur les comptes sans visage, il se
-fabrique en entier ici, gratuitement, et le rendu prend 1-3 min (au lieu de 35).
+## 1. Le format
 
-**Permission de Fio (10/11 soir)** : Claude peut changer de concept ou de
-format SANS demander à Fio, quand les stats le justifient (après 48 h de
-recul et au moins 3 jours de test). Faire le changement ici (ROUTINE.md +
-moteur), puis l'expliquer à Fio en quelques lignes dans le résumé.
-
-## 1. Le format (depuis le 14/11 : « Tu préfères » + « Bataille de pays »)
-
-**14/11 nuit : grande recherche** (4 recherches web en parallèle + 3 essais
-vidéo ; synthèse dans `series/recherche-14-11.md`). Pourquoi on bloque à
-≈ 250-300 vues : rétention trop faible et rien qui donne envie de commenter
-ou d'envoyer à un ami ; et on a changé de concept tous les 2 jours, donc
-aucun format n'a eu le temps d'être jugé. Ce n'est pas l'API ni le compte.
-Deux formats qui ont des preuves en France et se font à 100 % ici :
-
-- **4 vidéos par jour**, TikTok + Instagram (Reel) :
+- **4 séries en parallèle, 1 épisode de chacune par jour**, TikTok +
+  Instagram (Reel) :
   | Heure (Paris) | 10:00 | 12:00 | 18:00 | 20:00 |
   |---|---|---|---|---|
-  | Format | Bataille de pays | Tu préfères | Bataille de pays | Tu préfères |
-- **On garde ces 2 formats au moins jusqu'au 28/11** (2 semaines, ≈ 28
-  vidéos) avant de juger. Ne PAS changer de concept avant, sauf demande de
-  Fio. Au bout de 7 jours, le format qui a le plus de vues + commentaires +
-  partages peut prendre 3 créneaux sur 4.
-- Suivants : `series/state.json` → `tp_next` (fichiers
-  `episodes/tp-NNN.json`) et `bataille_next` (`episodes/bataille-NNN.json`).
+  | Vidéo | série n°1 | série n°2 | série n°3 | série n°4 |
+- **Séries de 3 épisodes.** Les 4 séries commencent le même jour et finissent
+  ensemble 3 jours plus tard ; le lendemain, 4 NOUVELLES séries. 1er cycle :
+  15/11, 16/11, 17/11. Séries en cours : `series/state.json` →
+  `parallel_series` (pour chaque horaire : `slot`, `series`, `series_file`,
+  `episode_count` = 3, `next_episode`, `prefix`).
+- **Le 15/11 à 10:00 : « La Station », partie 1 est DÉJÀ PRÊTE**
+  (`episodes/station-01.json`, essai montré à Fio le 14/11, série
+  `series/la-station.md`) : la rendre telle quelle (sauf si Fio a demandé un
+  changement) ; écrire seulement les 3 autres séries.
+- **Épisode de 35 à 45 s, ≤ 800 caractères lus, 10 à 13 plans.** Forme :
+  1. Accroche = 1re phrase, la situation en moins de 10 mots, au cœur de
+     l'action (un message, un bruit, une règle). Jamais de titre lu.
+  2. Histoire en ligne droite : 1 lieu principal, 1-2 personnages, 1-2
+     règles (carte `"rule"` sur le plan où elle est dite OU testée, jamais
+     sur un gros plan visage ni sur un plan où l'image montre déjà le
+     texte de la règle).
+  3. Lumière : `"mood": "bleu"` au départ, `"rouge"` quand le danger
+     apparaît, `"noir"` pour la fin.
+  4. Fin : vote A/B (2 plans : « A : … B : … » puis « LE PLUS DE VOTES
+     DÉCIDE LA PARTIE X+1. ÉCRIS TON CHOIX EN COMMENTAIRE. », avec
+     `"no_whip": true`). Pas de « abonne-toi » (trop long). Les deux choix
+     se défendent et ont un prix. A/B UNIQUEMENT à la fin, jamais au milieu.
+  5. Le vote décide vraiment : la partie suivante commence par le choix qui
+     a gagné. Moins de 3 votes = tirage au sort. Noter dans
+     `series/state.json` → `votes`.
+  6. Partie 3 (dernière) : jamais « fin de la série » ; elle finit aussi
+     sur un vote (« la suite si vous êtes nombreux à voter »).
+- **Animation à utiliser** (tous les épisodes) :
+  - au moins 1 plan `"passant"` par épisode (silhouette qui traverse le
+    fond : `true` ou `{"y": pied 0-1, "h": taille, "sens": 1/-1}`), sur un
+    plan SANS personnage en gros plan, quand le texte parle de quelqu'un ;
+  - `"eclair": true` sur 1 plan dehors avec `"meteo": "pluie"` ;
+  - dialogues : quand un personnage parle (« LÉA : … »), mettre
+    `"parle": true` dans son `char` (sa bouche bouge avec la voix) ;
+  - mot fort en rouge avec `*mot*` (1 par plan au plus) : la caméra fait un
+    coup de zoom dessus ;
+  - varier `cam` (zoom avant/arrière, panoramique) d'un plan à l'autre.
 
-### « Tu préfères 🔴 ou 🔵 ? » (12h + 20h, ≈ 60 s)
-Modèle : @tu.prefere.quoii6 (281 k abonnés, médiane ≈ 680 000 vues en
-2026). Écran coupé rouge/bleu, la voix lit « Tu préfères A, ou B ? », 3-2-1,
-pourcentages qui se remplissent, dilemme suivant. Personne ne se sent bête
-(pas de bonne réponse), on se compare aux %, on commente son score.
-- Rendu : `python3 engine/tupreferes.py episodes/tp-NNN.json /tmp/tp-NNN.mp4`
-  (≈ 4-6 min). Format JSON en tête du moteur, exemple `episodes/tp-001.json`.
-- **7 dilemmes**, un **thème par vidéo** (`theme` ≤ 12 car. : « bouffe »,
-  « pouvoirs », « argent », « école », « vacances », « jeux vidéo », « amour »,
-  « animaux », « films », « métiers », « Noël »…), jamais le même deux fois
-  de suite. Dilemmes vraiment durs à choisir (deux options tentantes OU deux
-  galères), concrets, compris en 1 s, pour ados/jeunes adultes français.
-- Chaque option : texte ≤ 34 car. + UN emoji qui la montre exactement. Les
-  deux emojis doivent être différents et lisibles (tester qu'ils
-  s'affichent : le moteur s'arrête sinon).
-- **2 options-pièges** par vidéo (c'est ce qui fait commenter/partager) :
-  au 4e dilemme une option « commenter … » (ex. « Commenter ton plat
-  préféré » vs une galère), au 7e « Envoyer cette vidéo à ton meilleur
-  pote » vs une galère drôle.
-- `pa` = % estimé pour l'option rouge (écrit petit « estimation » à
-  l'écran) : être réaliste, éviter 50, varier (de 9 à 91).
-- Voix : `voice` facultatif (phrase complète lue), sinon « Tu préfères a, ou
-  b ? ». Nombres en lettres dans `voice`. `hook` (lu à 0 s, ≤ 8 mots) et
-  `hook_text` (≤ 18 car.) changent à chaque vidéo (« T'as bon goût ? », « Les
-  pires choix », « Choix impossible »…). `end_voice` / `end` : « T'as eu
-  combien de rouges ? ».
-- Légende : « Tu préfères… ? (thème) 🔴🔵 », puis « T'as eu combien de 🔴 ?
-  Dis-le en commentaire 👇 », puis `#tupreferes #choix #jeu #wouldyourather
-  #pourtoi`. Titre : « Tu préfères… #N (thème) ».
+## 2. Règles d'écriture (Fio)
 
-### « Bataille de pays » (10h + 18h, ≈ 30-45 s, sans voix)
-Simulation physique : des billes-drapeaux rebondissent dans un anneau qui
-tourne ; une bille qui sort par l'ouverture est éliminée (bandeau
-« MAROC ÉLIMINÉ (13e) »), la dernière gagne. Chaque rebond joue la note
-suivante d'une mélodie du domaine public (`ode`, `elise`, `jacques`,
-`clair`). Modèles : @elitemarbleclash (404 k vues avec 7,9 k abonnés),
-simulations de balles musicales (2 à 37 M de vues) ; en français la place
-est presque libre. Les gens soutiennent leur pays dans les commentaires.
-- Rendu : `python3 engine/bataille.py episodes/bataille-NNN.json
-  /tmp/bataille-NNN.mp4` (≈ 1 min, cherche tout seul une graine qui donne
-  ≈ 28-45 s avec une finale serrée). Exemple `episodes/bataille-001.json`.
-- **Varier chaque vidéo** (TikTok/Instagram pénalisent le contenu
-  répétitif) : la liste de pays (12-16), le `title` (« 16 PAYS, 1 SEUL
-  SURVIVANT », « QUEL PAYS D'AFRIQUE GAGNE ? », « EUROPE : QUI SURVIT ? »,
-  « LA FRANCOPHONIE SE BAT »…), la mélodie, `colors` (2 couleurs du fond),
-  `ring` (couleur de l'anneau). Toujours plusieurs pays très présents chez
-  les Français (France, Maroc, Algérie, Tunisie, Sénégal, Côte d'Ivoire,
-  Belgique, Suisse, Canada, Portugal, Espagne, Italie, Cameroun, RD Congo,
-  Haïti…). `"f": true` pour un nom féminin (« ÉLIMINÉE »).
-- Le gagnant est le hasard de la physique : ne jamais truquer.
-- `subtitle` change aussi (« CHOISIS TON PAYS AVANT QUE ÇA COMMENCE »,
-  « COMMENTE TON PAYS », « TON PAYS VA-T-IL SURVIVRE ? »).
-- Légende : « Quel pays va survivre ? 🌍 », puis « Commente ton pays 👇 »,
-  puis `#pays #drapeaux #simulation #satisfying #pourtoi`.
-- Éviter toute politique ou insulte dans les textes ; c'est un jeu.
+- **Clair et précis** : chaque réplique se comprend en 2 secondes. Une idée
+  par réplique. Dire qui parle et qui agit, jamais un « il », « ça » ou « la
+  chose » flou. Dire pourquoi le héros agit.
+- Script fluide : chaque phrase découle de la précédente. Jamais de phrase
+  coupée sur deux plans. Pas de phrase vide.
+- **Chaque épisode se comprend seul**, sans résumé. Personnages, règle et
+  lieu présentés dans les 3 premières lignes.
+- Ancrer en France. Tutoiement, présent, jamais gore.
+- **S'inspirer de films de NICHE, jamais les recopier** (pas de
+  blockbuster). Exemples : Coherence, Triangle, Kairo, Noroi, Lake Mungo, The
+  Wailing, Session 9, Absentia, The Endless, Calvaire, La Nuée, Dark Water
+  (2002), A Tale of Two Sisters, The Void, Lovely Molly, Vacancy. Déjà
+  pris : Pontypool + Ils (Jacques a dit), The Ritual + Resolution (Le
+  Refuge), Vacancy + Kairo (La Station). Noter le film en tête du fichier
+  de la série. Les 4 séries d'un cycle ont 4 lieux et 4 ambiances
+  différents.
+- Légende (`caption`) : 1re ligne = la question du vote + « Le plus de votes
+  décide la partie X+1 👇 », puis 3 à 5 hashtags. `title` ≤ 80 caractères,
+  commence par « Partie N · ».
 
-### Formats ARRÊTÉS (ne plus faire)
-Séries d'horreur + votes A/B + SURVIS (10/11), « Trouve l'intrus » (11/11,
-Fio : « vraiment nul »), « Devine le film en emojis » (11/11, Fio : « nul »),
-films de fruits (11/11, Fio : « horribles », suspendus), quiz 5 questions et
-« Devine en 4 indices » (14/11 : plafond 260-310 vues malgré 4 jours ; les
-moteurs `engine/quiz.py`, `engine/film.py` restent dans le dépôt).
-« Histoire vraie en 45 s » (`engine/histoire.py`) a été essayé le 14/11 mais
-pas retenu : les images Wikimedia sont souvent bloquées (erreur 429) et
-chaque fait doit être vérifié.
+## 3. Les décors (dessinés, adaptés au script)
 
-### Commun aux 2 formats
-- Rien de vide au début : le 1er dilemme / l'anneau qui tourne est à
-  l'écran dès la 1re image (pas d'intro, pas de fond blanc).
-- `title` ≤ 80 caractères. **Répondre aux commentaires** (Zernio inbox)
-  n'est pas automatisé : ne pas le faire.
+- Style DESSINÉ uniquement (le décor `ia` est interdit). 60+ décors dans
+  `SCENES` (`engine/render2.py`) : les réutiliser.
+- **Chaque nouvelle série : au moins 2 décors propres** `<sigle>_<lieu>`
+  dessinés dans `engine/render2.py` (fonction `scene_<lieu>(p)`, ajoutée à
+  `SCENES`) avant l'épisode 1, listés dans le fichier de la série.
+- **Chaque plan montre ce que dit sa phrase** (« un message » → le
+  téléphone, « la porte » → la porte). Au moins 5 décors différents par
+  épisode, `flou` sur 1 plan sur 4 au plus.
+- Vérifier chaque nouveau décor sur une planche AVANT le rendu : l'horloge
+  cache les 15 % du haut (rien d'important au-dessus de v ≈ 0.25), garder
+  le texte entre u = 0.2 et 0.8, l'ambiance « rouge » assombrit beaucoup.
+- `"meteo": "pluie" | "neige" | "cendres"` sur les plans dehors.
 
-## 2. La voix (choix de Fio, ne pas changer sans Fio)
+## 4. La voix (choix de Fio, ne pas changer sans Fio)
 
-- Chatterbox + `assets/ref/ref-narrateur-grave.wav` (« voix 1 », homme grave
-  naturel, choisie le 09/11). Réglages dans `engine/voice_config.json`.
-  Jamais baisser la hauteur artificiellement, jamais de service payant,
-  jamais la voix d'un autre créateur.
-- Repère : ≈ 20 caractères lus par seconde → un épisode fait ≤ 1 750
-  caractères lus.
+- Chatterbox + `assets/ref/ref-narrateur-grave.wav` (« voix 1 », choisie le
+  09/11). Réglages dans `engine/voice_config.json`. Jamais baisser la
+  hauteur artificiellement, jamais de service payant, jamais la voix d'un
+  autre créateur.
+- ≈ 20 caractères lus par seconde → ≤ 800 caractères lus par épisode.
 - Mots mal lus à éviter : « N° » (dire « numéro »), « sweat » (« pull »),
   ville seule en début de phrase, « village », « grésiller », répliques de 3
-  mots ou moins, « personne ne frappe plus », « le feu meurt ». Écrire les
-  nombres en lettres en cas de doute, ou mettre la phrase lue dans
-  `"voice"`.
-- « Tu préfères » utilise la même voix 1 (défaut de `voice_config.json`).
-  Une voix plus vive (`"ref": "ref-pierre-moyen.wav"` dans le JSON) a été
-  essayée le 14/11 : ne l'utiliser que si Fio la choisit.
-- « Bataille de pays » n'a pas de voix. Si Chatterbox ne s'installe pas,
-  publier quand même les 2 batailles.
+  mots ou moins, « défi », « fruit », mots d'une syllabe ou en « -illé » en
+  fin de phrase (« pain », « grillé »), « revenir », « ne réponds pas » (lu
+  « n'en réponds pas » → « ne réponds jamais »). Nombres en lettres ; phrase
+  lue différente de l'affichage dans `"voice"`.
+- La synthèse est la même d'un essai à l'autre (même phrase = même son) :
+  pour corriger, CHANGER la phrase. Tester une tournure douteuse seule
+  (`voice.synth` + Whisper medium) avant de relancer un rendu.
 
-## 3. Les étapes de chaque matin
+## 5. Les étapes de chaque matin
 
 0. Installer : `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url
    https://download.pytorch.org/whl/cpu`, puis `pip install -q
-   chatterbox-tts openai-whisper` (≈ 3 min). Police emoji : si
-   `/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf` manque,
-   `apt-get install -y fonts-noto-color-emoji`. Et `pip install -q pymunk`
-   (physique de « Bataille de pays »).
+   chatterbox-tts language_tool_python openai-whisper` (≈ 3 min). Si
+   l'installation échoue : ne rien publier, le dire.
 1. **Zernio** : `GET /v1/accounts`. Si un compte a `needsReconnection` ou si
    un post de la veille est `failed`, le dire à Fio en premier.
-2. **Stats** (`GET /v1/analytics`) : pour chaque vidéo, vues, likes,
-   commentaires, partages, temps moyen (`igReelsAvgWatchTime`, en ms) et
-   `completionRate`. Noter dans `series/insights.md` (une section par jour).
-   Ne juger qu'après 48 h. Comparer « Tu préfères » et « Bataille de
-   pays » (vues, temps moyen, complétion, commentaires, partages). Pas de
-   changement de concept avant le 28/11 (voir § 1). Si une vidéo dépasse
-   2 000 vues, refaire le même thème / la même liste de pays le lendemain.
-   Lire aussi les commentaires des batailles : les pays demandés entrent
-   dans la bataille suivante (« vous l'avez demandé »).
-3. **Écrire les 4 vidéos** : 2 batailles (`episodes/bataille-NNN.json`,
-   listes de pays différentes) + 2 « Tu préfères » (`episodes/tp-NNN.json`,
-   thèmes différents). Si les fichiers du jour existent déjà (préparés
-   d'avance), les utiliser tels quels.
-4. Relecture : relire soi-même l'orthographe des dilemmes et des noms de pays.
-5. **Rendu, UN SEUL À LA FOIS** : `python3 engine/bataille.py
-   episodes/bataille-NNN.json /tmp/bataille-NNN.mp4` (≈ 1 min) et
-   `python3 engine/tupreferes.py episodes/tp-NNN.json /tmp/tp-NNN.mp4`
-   (≈ 4-6 min). Les deux moteurs normalisent déjà le son (-14 LUFS).
-6. **Contrôles avant publication** :
-   - planche contact (`ffmpeg -i v.mp4 -vf "fps=1/1.5,scale=216:-1,tile=6x4"
-     -frames:v 1 p.png`) à REGARDER : texte lisible, rien de coupé, emojis
-     et drapeaux affichés, pourcentages lisibles ;
-   - voix : écouter / transcrire (Whisper small, fr) ; mot raté = changer la
-     phrase et relancer ;
-   - `python3 engine/check_video.py /tmp/xxx.mp4 --min 20 --max 75`
-     doit dire OK.
-   - Phrases que la voix rate : « défi » (lu « déchi »), « fruit », une
-     question qui finit par « la Joconde » / « du monde » (bruit après).
+2. **Stats et votes** (`GET /v1/analytics` ; commentaires : `GET
+   /v1/inbox/comments/{platformPostId}?accountId=…`) : vues, likes,
+   commentaires, partages, temps moyen (`igReelsAvgWatchTime`, ms),
+   `completionRate`. Compter les votes A/B de la veille. Tout noter dans
+   `series/insights.md` (une section par jour).
+3. **Écrire les 4 épisodes** (`episodes/<prefix>-NN.json`, `"style": 2`),
+   en commençant par celui de 10:00. Nouvelle série : écrire d'abord
+   `series/<slug>.md` (film source, univers, règle, personnages, décors,
+   tableau des 3 épisodes) et dessiner ses décors.
+4. **Test du spectateur extérieur, obligatoire** : écrire les répliques lues
+   (une par ligne) dans un fichier, puis lancer un agent neuf (outil Agent,
+   sans autre contexte) qui joue un spectateur TikTok de 16-25 ans n'ayant
+   rien vu : résumé en 2 phrases, lignes où il est perdu, si les deux choix
+   se défendent, clarté /10, envie de la suite /10. Corriger tant que la
+   clarté est < 8.
+5. Relecture : `python3 engine/check_script.py episodes/<f>.json`.
+6. **Rendu, UN SEUL À LA FOIS**, dans l'ordre des horaires : `python3
+   engine/render2.py episodes/<f>.json /tmp/<f>.mp4` (≈ 15 min pour 40 s).
+   Vérifier avec `pgrep` qu'aucun autre rendu ne tourne. Ne pas lancer
+   Whisper pendant un rendu (4× plus lent).
+7. **Contrôles avant publication** :
+   - planche contact (`ffmpeg -i v.mp4 -vf "fps=1/1.6,scale=216:-1,tile=6x4"
+     -frames:v 1 p.png`) à REGARDER : texte lisible, rien de coupé, chaque
+     plan montre sa phrase, la carte de règle ne cache rien d'important ;
+   - voix : transcription Whisper (medium, fr) comparée au texte. Mot
+     répété, bégayé ou mal dit = changer la phrase et relancer. En cas de
+     doute, découper 8-10 s avec ffmpeg et retranscrire ;
+   - `python3 engine/check_video.py /tmp/<f>.mp4 --min 30 --max 50` doit
+     dire OK.
    Ne jamais publier une vidéo défectueuse.
-7. **Branche `media`** (jamais de push forcé, jamais de MP4 sur main) :
-   `git worktree add /tmp/media media`, supprimer les vidéos déjà publiées,
-   copier les nouvelles, commit, `git push origin media`.
-8. **Programmer dans Zernio** dès que la vidéo est prête :
+8. **Branche `media`** (jamais de push forcé, jamais de MP4 sur main) :
+   `git worktree add /tmp/media media` (ne PAS faire `git checkout media`),
+   supprimer les vidéos déjà publiées, copier les nouvelles, commit, `git
+   push origin media`.
+9. **Programmer dans Zernio** dès que la vidéo est prête :
    `POST https://zernio.com/api/v1/posts`, `Authorization: Bearer
    $ZERNIO_API_KEY`, corps :
    `{"content": <caption>, "mediaItems": [{"type": "video", "url":
@@ -194,11 +178,12 @@ chaque fait doit être vérifié.
    (heure UTC = Paris − 1 h en hiver ; avec un champ `timezone`, Zernio
    répond « Invalid date ») (ou `"publishNow": true` si l'heure est
    passée). Vérifier avec `GET /v1/posts/{id}`. Noter `zernio_id` dans
-   `series/state.json` → `defis`. Zernio est gratuit (2 comptes, 15 vidéos TikTok /
+   `series/state.json` → `published`. Zernio est gratuit (2 comptes, 15 vidéos TikTok /
    24 h). Metricool ne sert plus à publier.
-9. **Enregistrer sur main** : les JSON `bataille-NNN` / `tp-NNN`,
-   `series/state.json` (`bataille_next` +2, `tp_next` +2, ajouter les vidéos
-   à `defis` : numéro, format, thème/pays, heure, zernio_id, et pour les
-   batailles le gagnant + la graine), `series/insights.md`.
-10. **Résumé court en français pour Fio** : les 4 vidéos, les horaires, ce
-    que les stats disent (vues, temps moyen, commentaires) et ce qui change.
+10. **Enregistrer sur main** : JSON d'épisodes, fichiers de série,
+    `series/state.json` (`parallel_series` : avancer `next_episode` ;
+    ajouter les vidéos à `published` avec `zernio_id`), `series/insights.md`
+    et les nouveaux décors de `engine/render2.py`.
+11. **Résumé court en français pour Fio** : les 4 titres, les horaires, les
+    réseaux, les votes de la veille, ce que les stats disent (vues, temps
+    moyen, complétion) et ce qui change.

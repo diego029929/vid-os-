@@ -3129,7 +3129,7 @@ def _eyes(d, cx, ey, r, expr, look=(0.0, 0.0), s=1):
             d.ellipse([ex - r * 0.45 + lx, ey - r * 0.45 + ly, ex + r * 0.45 + lx, ey + r * 0.45 + ly], fill=blk)
 
 
-def hero(pose="stand", expr="normal", hoodie=(240, 190, 40), look=(0.0, 0.0), blink=False):
+def hero(pose="stand", expr="normal", hoodie=(240, 190, 40), look=(0.0, 0.0), blink=False, talk=False):
     """Personnage bâton style 2 : grosse tête noire avec liseré lumineux, sweat coloré."""
     s = 2
     w, h = 1000 * s, 1400 * s
@@ -3150,6 +3150,10 @@ def hero(pose="stand", expr="normal", hoodie=(240, 190, 40), look=(0.0, 0.0), bl
             _eyes(d, hx, hy - r * 0.08, r * 0.2, e, look, s)
             if e == "none":
                 pass
+            elif talk:
+                # bouche ouverte (il parle, 14/11)
+                d.ellipse([hx - r * 0.1, hy + r * 0.34, hx + r * 0.1, hy + r * 0.54], fill=WHITE)
+                d.ellipse([hx - r * 0.065, hy + r * 0.38, hx + r * 0.065, hy + r * 0.50], fill=(60, 10, 20, 255))
             elif e in ("scared",):
                 d.ellipse([hx - r * 0.08, hy + r * 0.38, hx + r * 0.08, hy + r * 0.56], fill=WHITE)
             else:
@@ -3655,6 +3659,7 @@ def polish(img, seed=0):
 
 RELIEF = os.environ.get("RELIEF", "1") != "0"
 ANIM = os.environ.get("ANIM", "1") != "0"     # animation « vraie vidéo » (09/11)
+ANIM2 = ANIM and os.environ.get("ANIM2", "1") != "0"   # animation plus vivante (14/11)
 _depth_cache = {}
 
 
@@ -3665,7 +3670,7 @@ def move3d(bi, b):
         c = b["cam3d"]
         return c.get("x", 0), c.get("y", 0), c.get("z", 0)
     m = [(70, 0, 0.10), (-70, 0, 0.10), (0, 0, 0.22), (45, -35, 0.08), (-45, -35, 0.08), (0, 40, 0.16)][bi % 6]
-    f = 1.4 if ANIM else 1.0         # avance/recul plus ample : ça bouge comme une vraie caméra
+    f = 1.8 if ANIM else 1.0         # avance/recul plus ample : ça bouge comme une vraie caméra
     return m[0], m[1], m[2] * f
 
 
@@ -3698,6 +3703,11 @@ def compose(b, cache):
     # variantes : 0 normal, 1 yeux fermés, 2 regard à gauche, 3 regard à droite (animation, 09/11)
     eyes = any(c.get("pose", "stand") != "back" and c.get("expr", "normal") not in ("closed", "none") for c in chars)
     variants = [(0, False), (0, True)] + ([(-1, False), (1, False)] if eyes and ANIM else [])
+    talks = ANIM2 and any(c.get("parle") for c in chars)
+    if talks:
+        while len(variants) < 4:
+            variants.append((0, False))
+        variants.append((0, "talk"))     # 4 : bouche ouverte
     for side, blink in variants:
         fg = Image.new("RGBA", (CW, CH), (0, 0, 0, 0))
         for ch in chars:
@@ -3705,7 +3715,8 @@ def compose(b, cache):
             if side:
                 lk = (max(-1.0, min(1.0, lk[0] + 0.55 * side)), lk[1])
             hc = hero(ch.get("pose", "stand"), ch.get("expr", "normal"), tuple(ch.get("hoodie", (240, 190, 40))),
-                      lk, blink=blink and ch.get("expr", "normal") in ("normal", "side"))
+                      lk, blink=blink is True and ch.get("expr", "normal") in ("normal", "side"),
+                      talk=blink == "talk" and bool(ch.get("parle")))
             if "head" in ch:
                 # placement par la tête : [u, v, r] en fractions de l'ÉCRAN (caméra au centre, zoom 1.1),
                 # r = rayon de la tête en fraction de la largeur de l'écran
@@ -3769,7 +3780,7 @@ def particles(fr, b, bi, lt):
 
 def camera(b, k):
     cam = b.get("cam", {})
-    z0, z1 = cam.get("z", [1.04, 1.12])
+    z0, z1 = cam.get("z", [1.04, 1.18])
     x0, x1 = cam.get("x", [0.5, 0.5])
     y0, y1 = cam.get("y", [0.5, 0.5])
     t = smooth(k) * 0.6 + k * 0.4
@@ -3858,6 +3869,17 @@ def render(ep, out):
         for wgt in weights:
             starts.append(acc)
             acc += speak * wgt / max(1, sum(weights))
+        # animation 14/11 (Fio : « de meilleures animations ») : enveloppe de la voix du plan
+        env = None
+        if ANIM2 and bi in clips and len(clips[bi]):
+            a = np.abs(np.asarray(clips[bi], np.float32))
+            hop = SR // FPS
+            m = len(a) // hop
+            if m:
+                env = a[:m * hop].reshape(m, hop).mean(1)
+                env = np.convolve(env, np.ones(3) / 3, "same")
+                env = env / (env.max() + 1e-6)
+        whip = (-1 if bi % 2 else 1) * (0.28 if bi % 3 else 0.18)
         rec = recorded.setdefault(b["record"], []) if b.get("record") else None
         if b.get("record"):
             rec_clock.setdefault(b["record"], clock)
@@ -3867,12 +3889,18 @@ def render(ep, out):
             z, cx, cy = camera(b, k)
             # petit « coup de zoom » à chaque coupe, pour que ça s'enchaîne
             z *= 1 + 0.035 * (1 - smooth(lt / 0.22))
+            if ANIM2 and caps:
+                # coup de zoom quand le mot en rouge apparaît (comme un monteur)
+                jj = max([x for x in range(len(caps)) if starts[x] <= lt] or [0])
+                if any(h for _, h in caps[jj]) and lt - starts[jj] < 0.45:
+                    z *= 1 + 0.08 * (1 - smooth((lt - starts[jj]) / 0.45))
+            ev = float(env[min(i, len(env) - 1)]) if env is not None and i < len(env) + 3 else 0.0
             cw, chh = CW / (K * z), CH / (K * z)
             ox = min(max(0, cx * CW - cw / 2), CW - cw)
             oy = min(max(0, cy * CH - chh / 2), CH - chh)
             if ANIM and b.get("anim", True):
                 # caméra à l'épaule : jamais d'image figée
-                hx, hy = anim.handheld(t0 + lt, bi * 1.37, b.get("handheld", 7.0))
+                hx, hy = anim.handheld(t0 + lt, bi * 1.37, b.get("handheld", 9.0))
                 ox = min(max(0, ox + hx), CW - cw)
                 oy = min(max(0, oy + hy), CH - chh)
             if b.get("shake"):
@@ -3888,7 +3916,11 @@ def render(ep, out):
                 fr = relief.warp(bg, dmap, (ox, oy, ox + cw, oy + chh), (W, H), (mx * kk * 2, my * kk * 2), mz * (kk + 0.5))
             else:
                 fr = bg.resize((W, H), Image.BILINEAR, box=(ox, oy, ox + cw, oy + chh))
+            if ANIM2 and b.get("passant"):
+                anim.passant(fr, lt, b["dur"], b["passant"], bi)
             vi = 1 if blink else (anim.look_index(lt, bi) if ANIM and len(fgs) > 2 else 0)
+            if len(fgs) > 4 and not blink and ev > 0.3 and (i // 2) % 2 == 0:
+                vi = 4                       # bouche ouverte quand la voix est forte
             fg = fgs[vi]
             if fg is not None:
                 # parallaxe : le personnage (premier plan) bouge un peu plus que le décor
@@ -3903,6 +3935,13 @@ def render(ep, out):
                     py += ph * (1 - 1 / st)
                     ph /= st
                     px += sx
+                if ANIM2 and b.get("anim", True):
+                    # entrée : le personnage monte dans le cadre au début du plan
+                    if lt < 0.35 and not b.get("no_enter"):
+                        py -= ph * 0.10 * (1 - smooth(lt / 0.35))
+                    # il parle : petit hochement de tête calé sur la voix
+                    py -= ph * 0.012 * ev
+                    ph /= 1 + 0.02 * ev
                 layer = fg.resize((W, H), Image.BILINEAR, box=(px, py, px + pw, py + ph))
                 fr.paste(layer, (0, 0), layer)
             if ANIM and b.get("anim", True):
@@ -3913,8 +3952,12 @@ def render(ep, out):
             particles(fr, b, bi, lt)
             if ANIM and b.get("meteo", ep.get("meteo")):
                 anim.weather(fr, b.get("meteo", ep.get("meteo")), t0 + lt, bi)
-            if lt < 0.1 and bi > 0:
+            if ANIM2 and lt < 0.16 and bi > 0 and not b.get("no_whip"):
+                fr = anim.whip(fr, (1 - smooth(lt / 0.16)) * whip)
+            elif lt < 0.1 and bi > 0:
                 fr = fr.filter(ImageFilter.GaussianBlur(14 * (1 - lt / 0.1)))
+            if ANIM2 and b.get("eclair"):
+                fr = anim.lightning(fr, lt, bi)
             if b.get("choice"):
                 c = b["choice"]
                 cnt = str(max(1, c["countdown"] - int(lt))) if c.get("countdown") else None
