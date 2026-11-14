@@ -1,0 +1,88 @@
+{
+ "title": "QUEL PAYS D'AFRIQUE GAGNE ?",
+ "subtitle": "COMMENTE TON PAYS",
+ "melody": "elise",
+ "colors": [
+  [
+   8,
+   40,
+   30
+  ],
+  [
+   20,
+   90,
+   60
+  ]
+ ],
+ "ring": [
+  255,
+  140,
+  40
+ ],
+ "end": "TON PAYS A FINI À QUELLE PLACE ?",
+ "teams": [
+  {
+   "flag": "🇲🇦",
+   "name": "Maroc"
+  },
+  {
+   "flag": "🇩🇿",
+   "name": "Algérie",
+   "f": true
+  },
+  {
+   "flag": "🇹🇳",
+   "name": "Tunisie",
+   "f": true
+  },
+  {
+   "flag": "🇸🇳",
+   "name": "Sénégal"
+  },
+  {
+   "flag": "🇨🇮",
+   "name": "Côte d'Ivoire",
+   "f": true,
+   "short": "CÔTE D'IV."
+  },
+  {
+   "flag": "🇨🇲",
+   "name": "Cameroun"
+  },
+  {
+   "flag": "🇨🇩",
+   "name": "RD Congo"
+  },
+  {
+   "flag": "🇲🇱",
+   "name": "Mali"
+  },
+  {
+   "flag": "🇬🇳",
+   "name": "Guinée",
+   "f": true
+  },
+  {
+   "flag": "🇪🇬",
+   "name": "Égypte",
+   "f": true
+  },
+  {
+   "flag": "🇳🇬",
+   "name": "Nigeria"
+  },
+  {
+   "flag": "🇬🇭",
+   "name": "Ghana"
+  },
+  {
+   "flag": "🇧🇯",
+   "name": "Bénin"
+  },
+  {
+   "flag": "🇲🇬",
+   "name": "Madagascar",
+   "short": "MADA"
+  }
+ ]
+}
