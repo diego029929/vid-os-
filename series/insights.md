@@ -423,3 +423,4 @@ creux à 11 h, 13 h-14 h et après 21 h).
   changée en « plus jamais de baguette » ; « manger un insecte grillé » lu « crié » → « un insecte vivant ».
   Éviter les mots d'une syllabe ou en « -illé » en fin de question. La synthèse est la même d'un essai à l'autre
   (même phrase = même son) : tester une nouvelle tournure seule (voice.synth + Whisper medium) avant le rendu.
+- 14/11 13h : Fio a écrit « C'est nul » (sans dire lequel). Premiers chiffres : bataille #1 229 vues TikTok en 3 h, Tu préfères #1 85 vues en 1 h. Sans réponse à 17h, le Tu préfères #2 de 20h a été annulé et remplacé par bataille-003 « EUROPE : QUI SURVIT ? » (Grèce gagne). tp-002 reste dans le dépôt (non publié). Demander à Fio ce qui est nul avant la routine suivante.

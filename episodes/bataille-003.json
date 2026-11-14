@@ -1,0 +1,98 @@
+{
+ "title": "EUROPE : QUI SURVIT ?",
+ "subtitle": "TON PAYS VA-T-IL SURVIVRE ?",
+ "melody": "jacques",
+ "colors": [
+  [
+   10,
+   30,
+   70
+  ],
+  [
+   30,
+   70,
+   140
+  ]
+ ],
+ "ring": [
+  120,
+  230,
+  255
+ ],
+ "end": "TON PAYS A FINI À QUELLE PLACE ?",
+ "teams": [
+  {
+   "flag": "🇫🇷",
+   "name": "France",
+   "f": true
+  },
+  {
+   "flag": "🇵🇹",
+   "name": "Portugal"
+  },
+  {
+   "flag": "🇪🇸",
+   "name": "Espagne",
+   "f": true
+  },
+  {
+   "flag": "🇮🇹",
+   "name": "Italie",
+   "f": true
+  },
+  {
+   "flag": "🇧🇪",
+   "name": "Belgique",
+   "f": true
+  },
+  {
+   "flag": "🇨🇭",
+   "name": "Suisse",
+   "f": true
+  },
+  {
+   "flag": "🇩🇪",
+   "name": "Allemagne",
+   "f": true
+  },
+  {
+   "flag": "🇬🇧",
+   "name": "Angleterre",
+   "f": true
+  },
+  {
+   "flag": "🇳🇱",
+   "name": "Pays-Bas"
+  },
+  {
+   "flag": "🇵🇱",
+   "name": "Pologne",
+   "f": true
+  },
+  {
+   "flag": "🇬🇷",
+   "name": "Grèce",
+   "f": true
+  },
+  {
+   "flag": "🇹🇷",
+   "name": "Turquie",
+   "f": true
+  },
+  {
+   "flag": "🇸🇪",
+   "name": "Suède",
+   "f": true
+  },
+  {
+   "flag": "🇭🇷",
+   "name": "Croatie",
+   "f": true
+  },
+  {
+   "flag": "🇺🇦",
+   "name": "Ukraine",
+   "f": true
+  }
+ ]
+}

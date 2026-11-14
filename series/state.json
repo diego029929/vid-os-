@@ -331,7 +331,7 @@
       "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
     }
   ],
-  "media_note": "14/11 : branche media = bataille-001, bataille-002, tp-001, tp-002 ; supprimer à la prochaine routine, après publication",
+  "media_note": "14/11 : branche media = bataille-001 à 003, tp-001, tp-002 ; supprimer à la prochaine routine, après publication",
   "votes": {
     "partie3": {
       "A_laisser": 1,
@@ -515,11 +515,23 @@
       "date": "2026-11-14",
       "heure": "20:00",
       "zernio_id": "6af7f354c9a10a0d59dfde44",
-      "fichier": "episodes/tp-002.json"
+      "fichier": "episodes/tp-002.json",
+      "annule": "14/11 17h : Fio a écrit « C'est nul » à 13h sans préciser ; remplacé par bataille-003 (Tu préfères #1 = 85 vues TikTok en 1 h, bataille #1 = 229 en 3 h)"
+    },
+    {
+      "numero": 3,
+      "format": "bataille",
+      "theme": "EUROPE : QUI SURVIT ?",
+      "gagnant": "Grèce",
+      "graine": 46,
+      "date": "2026-11-14",
+      "heure": "20:00",
+      "zernio_id": "6af885d5474f3c769be325a9",
+      "fichier": "episodes/bataille-003.json"
     }
   ],
   "fruits_next": 2,
   "film_next": 2,
   "tp_next": 3,
-  "bataille_next": 3
+  "bataille_next": 4
 }
