@@ -400,3 +400,26 @@ creux à 11 h, 13 h-14 h et après 21 h).
   de Sacha ? » suivi de charabia → « Sacha a quel Pokémon sur son épaule ? ». « Nintendo DS » lu « Nintendo D » →
   écrire « Nintendo dé esse » dans `voice`. Astuce : tester une phrase douteuse seule (voice.synth + Whisper, ≈ 30 s)
   avant de relancer le rendu complet.
+
+### 14/11 (nouveau concept : Bataille de pays 10h + 18h, Tu préfères 12h + 20h)
+
+- Comptes Zernio OK, les 4 posts du 13/11 publiés sur les deux réseaux.
+- **Stats 13/11 (≈ 8-20 h de recul)** — TikTok vues / likes / commentaires / temps moyen / complétion, puis Instagram :
+  - quiz nostalgie 10h : 256 / 6 / 0 / 4,3 s / 0 % — Insta 126 / 4,9 s (le pire de la journée) ;
+  - indices #3 pizza 12h : **353** / 5 / 2 / 7,5 s / 9,9 % — Insta 167 / 8,5 s ;
+  - indices #4 Canada 18h : 262 / 7 / 1 / 6,6 s / 11,3 % — Insta 149 / 6,7 s ;
+  - quiz culture G 20h : 247 / 8 / 1 / 7,0 s / 2,0 % — Insta 159 / 7,6 s.
+  12/11 à ≈ 36 h : rien n'a bougé (quiz géo 329, Brésil 285 / 16,7 %).
+- Lecture : 4e jour de suite au plateau ≈ 250-350 vues : confirme la décision de la nuit (nouveau concept, à garder
+  jusqu'au 28/11). Les « 4 indices » restent les meilleurs en complétion, mais sans sortir du plateau.
+- Vidéos du jour (préparées d'avance) : bataille-001 « 16 PAYS, 1 SEUL SURVIVANT » (ode, gagnant Espagne, graine 58,
+  35 s), bataille-002 « QUEL PAYS D'AFRIQUE GAGNE ? » (elise, gagnant Maroc, graine 22, 37 s), tp-001 « ta vie »,
+  tp-002 « bouffe ».
+- Contrôle : check_video signale un « silence > 1,5 s » à la fin des batailles = la carte du gagnant après l'accord
+  final (pas de voix dans ce format) → normal, publié. Rendu bataille ≈ 1 min ; Tu préfères ≈ 6 min (+ 1 min la
+  1re fois pour télécharger le modèle). Ne pas lancer Whisper pendant un rendu Chatterbox (rendu 4× plus lent).
+- Voix Tu préfères : « revenir dix ans en arrière » mal articulé (« rejunir ») → « retourner dix ans dans le passé » ;
+  « plus jamais de pâtes ou plus jamais de pain » : « pain » final lu « teint » / remplacé par « pâtes » → option
+  changée en « plus jamais de baguette » ; « manger un insecte grillé » lu « crié » → « un insecte vivant ».
+  Éviter les mots d'une syllabe ou en « -illé » en fin de question. La synthèse est la même d'un essai à l'autre
+  (même phrase = même son) : tester une nouvelle tournure seule (voice.synth + Whisper medium) avant le rendu.
