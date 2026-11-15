@@ -13,6 +13,8 @@ import tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONT_DIR = os.path.join(ROOT, "assets", "fonts")
+# couleur des mots clés (ASS, BGR) : rouge par défaut, SUB_KEY=&H00D7FF& pour le jaune des vidéos fruits
+KEY = os.environ.get("SUB_KEY", "&H2A2AE6&")
 
 
 def dur(p):
@@ -54,7 +56,7 @@ def ass(words, red, path):
         out = []
         for w in txt.split():
             key = w.strip(".,!?:").lower()
-            out.append("{\\c&H2A2AE6&}" + w + "{\\c&HFFFFFF&}" if key in red else w)
+            out.append("{\\c" + KEY + "}" + w + "{\\c&HFFFFFF&}" if key in red else w)
         pop = "{\\fscx80\\fscy80\\t(0,90,\\fscx100\\fscy100)}"
         lines.append(f"Dialogue: 0,{ts(a)},{ts(b)},S,,0,0,0,,{pop}{' '.join(out)}")
     open(path, "w").write(head + "\n".join(lines) + "\n")

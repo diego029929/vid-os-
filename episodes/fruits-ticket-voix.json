@@ -1,0 +1,8 @@
+[
+ {"ref": "ref-tom.wav", "text": "Le monsieur en costume a oublié son ticket de loto à ma caisse."},
+ {"ref": "ref-tom.wav", "text": "Je regarde les numéros. Ils sont tous bons."},
+ {"ref": "ref-tom.wav", "text": "Quarante millions d'euros !", "exag": 0.8, "retry": 1},
+ {"ref": "ref-narrateur-grave.wav", "text": "Excusez-moi, j'ai oublié mon ticket ici."},
+ {"ref": "ref-tom.wav", "text": "Ah non monsieur, j'ai rien vu du tout."},
+ {"ref": "ref-narrateur-grave.wav", "text": "Dommage. Parce que la caméra, elle, a tout vu."}
+]
