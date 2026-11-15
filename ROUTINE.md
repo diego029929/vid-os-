@@ -1,4 +1,9 @@
-# Routine quotidienne (depuis le 15/11 : séries d'horreur COURTES, mieux animées)
+# Routine quotidienne (depuis le 15/11 : séries d'horreur COURTES ; dès le 16/11 : style « Nuit & téléphone »)
+
+> **NOUVEAU 15/11 au soir (choix de Fio) : toutes les vidéos se font dans le
+> style « Nuit & téléphone »** avec `engine/nuit.py` (voir § 1 bis), y compris
+> les parties 2 et 3 des 4 séries en cours (mêmes histoires, nouveau dessin).
+> `engine/render2.py` (style 2) n'est plus utilisé pour publier.
 
 Ce fichier contient SEULEMENT les règles en vigueur. Il prime sur le message
 de la tâche planifiée (qui parle encore de 5 vidéos et de Metricool : il ne
@@ -38,34 +43,91 @@ choisir celui-ci : le garder tant que Fio ne dit pas le contraire.
   (`episodes/station-01.json`, essai montré à Fio le 14/11, série
   `series/la-station.md`) : la rendre telle quelle (sauf si Fio a demandé un
   changement) ; écrire seulement les 3 autres séries.
-- **Épisode de 35 à 45 s, ≤ 800 caractères lus, 10 à 13 plans.** Forme :
+- **Épisode de 35 à 45 s, ≤ 800 caractères lus, 9 à 12 plans** (format
+  du JSON : § 1 bis). Forme :
   1. Accroche = 1re phrase, la situation en moins de 10 mots, au cœur de
      l'action (un message, un bruit, une règle). Jamais de titre lu.
+     Idéal : le 1er plan est un écran de téléphone (notif, appel, SMS).
   2. Histoire en ligne droite : 1 lieu principal, 1-2 personnages, 1-2
-     règles (carte `"rule"` sur le plan où elle est dite OU testée, jamais
-     sur un gros plan visage ni sur un plan où l'image montre déjà le
-     texte de la règle).
-  3. Lumière : `"mood": "bleu"` au départ, `"rouge"` quand le danger
-     apparaît, `"noir"` pour la fin.
-  4. Fin : vote A/B (2 plans : « A : … B : … » puis « LE PLUS DE VOTES
-     DÉCIDE LA PARTIE X+1. ÉCRIS TON CHOIX EN COMMENTAIRE. », avec
-     `"no_whip": true`). Pas de « abonne-toi » (trop long). Les deux choix
-     se défendent et ont un prix. A/B UNIQUEMENT à la fin, jamais au milieu.
+     règles (plan `"regle"` juste après le moment où la règle compte).
+  3. Montrer ce que dit la phrase : un message → plan `tel` ; on toque →
+     `objet` porte ; quelqu'un derrière → `ombre` ; peur → `"hero":
+     "peur"`, `"cadre": "gros"`.
+  4. Fin : plan `"choix"` (1 · … OU 2 · …), voix « … ? Écris #un# ou
+     #deux#. ». Pas de « abonne-toi ». Les deux choix se défendent et ont
+     un prix. Choix UNIQUEMENT à la fin, jamais au milieu.
   5. Le vote décide vraiment : la partie suivante commence par le choix qui
      a gagné. Moins de 3 votes = tirage au sort. Noter dans
      `series/state.json` → `votes`.
   6. Partie 3 (dernière) : jamais « fin de la série » ; elle finit aussi
      sur un vote (« la suite si vous êtes nombreux à voter »).
-- **Animation à utiliser** (tous les épisodes) :
-  - au moins 1 plan `"passant"` par épisode (silhouette qui traverse le
-    fond : `true` ou `{"y": pied 0-1, "h": taille, "sens": 1/-1}`), sur un
-    plan SANS personnage en gros plan, quand le texte parle de quelqu'un ;
-  - `"eclair": true` sur 1 plan dehors avec `"meteo": "pluie"` ;
-  - dialogues : quand un personnage parle (« LÉA : … »), mettre
-    `"parle": true` dans son `char` (sa bouche bouge avec la voix) ;
-  - mot fort en rouge avec `*mot*` (1 par plan au plus) : la caméra fait un
-    coup de zoom dessus ;
-  - varier `cam` (zoom avant/arrière, panoramique) d'un plan à l'autre.
+
+## 1 bis. Style « Nuit & téléphone » (engine/nuit.py, choisi par Fio le 15/11)
+
+Fio a vu les exemples publics de Scénar.app (pack de prompts payant, NON
+acheté) et veut ce rendu. On le refait nous-mêmes, gratuit : dessin plat 2D
+de nuit, perso à capuche turquoise aux yeux mi-clos, écrans de téléphone
+redessinés (appel, SMS, notification, localiser, photo), horloge qui tourne
+en haut (« ● PARTIE 2 · COULOIR / 03:00:12 »), carte rouge « RÈGLE N°1 »,
+sous-titres Anton 1-2 mots (mots clés rouges ou jaunes), choix final
+orange/bleu « 1 · … OU 2 · … ». Exemple complet : `episodes/exemple-nuit.json`
+(rendu : /mnt/project-files/essais-scenar/exemple-episode-complet.mp4).
+
+**Une commande fait tout** (voix Chatterbox de la routine, calage des
+sous-titres par Whisper small, bruitages, dessin filmé par Playwright) :
+`python3 engine/nuit.py episodes/<f>.json /tmp/<f>.mp4` (≈ 6 min pour 40 s,
+surtout la voix). D'abord un brouillon sans voix pour vérifier le dessin :
+`python3 engine/nuit.py episodes/<f>.json /tmp/b.mp4 --brouillon` (≈ 1 min)
+puis planche contact.
+
+**Format du JSON** (`"style": "nuit"`) :
+- en tête : `series`, `etiquette` (« PARTIE 2 »), `heure` de départ de
+  l'horloge (« 02:59:48 »), `title`, `caption`, `vote` (petite ligne sous le
+  choix : « Le plus de votes décide la partie 3 »), `hero` (`couleur`, `voix`
+  si le héros parle), `persos` : `{"LÉA": {"couleur": "#e0607e",
+  "cheveux": true, "voix": "ref-femme-1.wav"}}` (voix dans `assets/ref/`).
+- `beats` = 9 à 12 plans, **un plan par phrase lue** (`voice`). Mots en
+  couleur dans `voice` : `*mot*` rouge (danger, 1 par plan au plus),
+  `#mot#` jaune (heure, chiffre, « un » / « deux » du vote). Chaque plan est
+  UN de ces types :
+  - **décor** : `"vue"` = `rue` (le décor défile si le héros marche),
+    `chambre`, `couloir`, `salon`, `cuisine`, `escalier`, `foret`,
+    `station`, `mer`, `hopital`, `cave`, `voiture`, `sdb` ; `"hero"` =
+    `marche` / `debout` / `sonne` (téléphone qui vibre, zoom) / `peur`
+    (grands yeux, tremble) / `dos` / `absent` ; `"hx"` position 0-1 ;
+    `"cadre"` = `large` / `gros` (gros plan visage) / `pousse` ;
+    `"persos": [{"nom": "LÉA", "x": 0.3, "etat": "peur"}]` ;
+    `"qui": "LÉA"` = c'est elle qui parle (sa voix, sa bouche bouge ;
+    `"MOI"` pour le héros) ; `"ombre": true` ou `{"x": 0.25}` = silhouette
+    noire aux yeux blancs qui apparaît ; `"flicker": true` = lumière qui
+    clignote ; `"pluie"` / `"neige"` / `"eclair"` / `"rouge_lum"` : true ;
+    `"reflet": true` (miroir de `sdb`) ; `"lieu"` = texte de l'horloge si
+    besoin (sinon le nom du décor).
+  - **téléphone** : `"tel": {"type": "appel", "nom": "Moi", "num": "…"}`,
+    `{"type": "sms", "de": "Inconnu", "inconnu": true, "lignes": ["…", "…"],
+    "moi": [1]}` (indices des bulles envoyées par le héros), `{"type":
+    "notif", "app": "LOCALISER", "titre": "…", "texte": "…", "heure":
+    "3:04"}`, `{"type": "localiser", "titre": "AirTag inconnu"}`,
+    `{"type": "photo", "vue": "chambre", "ombre": true}`. Le décor du plan
+    d'avant reste derrière, assombri.
+  - **objet plein écran** : `"objet": {"type": "porte", "toc": true}` (ou
+    `"ouverte": true`), `lettre` (`texte`), `cassette` (`texte`), `horloge`
+    (`heure`), `photo` (`vue`, `ombre`, `texte`).
+  - **règle** : `"regle": {"n": 1, "txt": "Après minuit,\nn'ouvre à
+    personne"}` (bruit sourd automatique). La voix lit la règle.
+  - **choix** (DERNIER plan, obligatoire) : `"choix": {"a": "Ouvrir la
+    porte", "b": "Appeler la police"}`, voix : « Tu ouvres, ou tu appelles
+    la police ? Écris #un# ou #deux#. » Les votes se comptent en « 1 » / « 2 »
+    (« A » / « B » aussi acceptés).
+  - bruitages automatiques : SMS = « ding », appel = sonnerie, `sonne` =
+    vibreur, règle = boum ; sinon `"sfx": "toc" | "souffle" | "boom" |
+    "vibre" | "sonnerie" | "message"` (ou `["toc", 0.4]` = décalé de 0,4 s).
+- Rythme du style : au moins 3 plans téléphone/objet par épisode (c'est ce
+  qui fait le style), le reste en décors ; jamais 2 plans de suite
+  identiques ; `ombre` ou `flicker` dès que le danger arrive.
+- Décor qui manque pour une série : l'ajouter dans `DECORS` de
+  `engine/nuit.js` (même style : aplats violets, fenêtres jaunes, `lamp()`,
+  `win()`, `door()`, `floor()`), puis brouillon + planche avant le rendu.
 
 ## 2. Règles d'écriture (Fio)
 
@@ -90,6 +152,11 @@ choisir celui-ci : le garder tant que Fio ne dit pas le contraire.
   commence par « Partie N · ».
 
 ## 3. Les décors (dessinés, adaptés au script)
+
+> Depuis le style « Nuit & téléphone » : les décors sont ceux de
+> `engine/nuit.js` (§ 1 bis). Les règles ci-dessous sur `render2.py` ne
+> servent plus ; garder seulement « chaque plan montre ce que dit sa
+> phrase » et « au moins 5 vues différentes par épisode ».
 
 - Style DESSINÉ uniquement (le décor `ia` est interdit). 60+ décors dans
   `SCENES` (`engine/render2.py`) : les réutiliser.
@@ -125,7 +192,9 @@ choisir celui-ci : le garder tant que Fio ne dit pas le contraire.
 
 0. Installer : `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url
    https://download.pytorch.org/whl/cpu`, puis `pip install -q
-   chatterbox-tts language_tool_python openai-whisper` (≈ 3 min). Si
+   chatterbox-tts language_tool_python openai-whisper playwright` (≈ 3 min ;
+   Playwright utilise le Chromium déjà installé `/opt/pw-browsers/chromium`,
+   ne PAS lancer `playwright install`). Si
    l'installation échoue : ne rien publier, le dire.
 1. **Zernio** : `GET /v1/accounts`. Si un compte a `needsReconnection` ou si
    un post de la veille est `failed`, le dire à Fio en premier.
@@ -134,7 +203,7 @@ choisir celui-ci : le garder tant que Fio ne dit pas le contraire.
    commentaires, partages, temps moyen (`igReelsAvgWatchTime`, ms),
    `completionRate`. Compter les votes A/B de la veille. Tout noter dans
    `series/insights.md` (une section par jour).
-3. **Écrire les 4 épisodes** (`episodes/<prefix>-NN.json`, `"style": 2`),
+3. **Écrire les 4 épisodes** (`episodes/<prefix>-NN.json`, `"style": "nuit"`, § 1 bis),
    en commençant par celui de 10:00. Nouvelle série : écrire d'abord
    `series/<slug>.md` (film source, univers, règle, personnages, décors,
    tableau des 3 épisodes) et dessiner ses décors.
@@ -145,8 +214,10 @@ choisir celui-ci : le garder tant que Fio ne dit pas le contraire.
    se défendent, clarté /10, envie de la suite /10. Corriger tant que la
    clarté est < 8.
 5. Relecture : `python3 engine/check_script.py episodes/<f>.json`.
-6. **Rendu, UN SEUL À LA FOIS**, dans l'ordre des horaires : `python3
-   engine/render2.py episodes/<f>.json /tmp/<f>.mp4` (≈ 15 min pour 40 s).
+6. **Rendu, UN SEUL À LA FOIS**, dans l'ordre des horaires : brouillon
+   `python3 engine/nuit.py episodes/<f>.json /tmp/b.mp4 --brouillon` +
+   planche, puis `python3 engine/nuit.py episodes/<f>.json /tmp/<f>.mp4`
+   (≈ 6 min pour 40 s).
    Vérifier avec `pgrep` qu'aucun autre rendu ne tourne. Ne pas lancer
    Whisper pendant un rendu (4× plus lent).
 7. **Contrôles avant publication** :
@@ -183,7 +254,7 @@ choisir celui-ci : le garder tant que Fio ne dit pas le contraire.
 10. **Enregistrer sur main** : JSON d'épisodes, fichiers de série,
     `series/state.json` (`parallel_series` : avancer `next_episode` ;
     ajouter les vidéos à `published` avec `zernio_id`), `series/insights.md`
-    et les nouveaux décors de `engine/render2.py`.
+    et les nouveaux décors de `engine/nuit.js`.
 11. **Résumé court en français pour Fio** : les 4 titres, les horaires, les
     réseaux, les votes de la veille, ce que les stats disent (vues, temps
     moyen, complétion) et ce qui change.
