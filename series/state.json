@@ -231,6 +231,34 @@
       "slot": "2026-11-10T17:00:00 Europe/Paris",
       "zernio_id": "6af2eb14d48b0f93a64327de",
       "note": "1re partie de « Le Refuge » ; vote A sortir / B brûler le livre"
+    },
+    {
+      "series": "la-station",
+      "episode": 1,
+      "file": "episodes/station-01.json",
+      "slot": "2026-11-15T10:00:00 Europe/Paris",
+      "zernio_id": "6af9475186c6bcf08ac77f93"
+    },
+    {
+      "series": "l-eau-du-septieme",
+      "episode": 1,
+      "file": "episodes/eau-01.json",
+      "slot": "2026-11-15T12:00:00 Europe/Paris",
+      "zernio_id": "6af9475286c6bcf08ac77fa9"
+    },
+    {
+      "series": "la-bande",
+      "episode": 1,
+      "file": "episodes/bande-01.json",
+      "slot": "2026-11-15T18:00:00 Europe/Paris",
+      "zernio_id": "6af94d58ef1ad71733777df3"
+    },
+    {
+      "series": "la-photo",
+      "episode": 1,
+      "file": "episodes/photo-01.json",
+      "slot": "2026-11-15T20:00:00 Europe/Paris",
+      "zernio_id": "6af94d59ef1ad71733777df9"
     }
   ],
   "survis_next": 15,
@@ -352,6 +380,13 @@
       "A": "jouer avec Léa",
       "B": "rester avec ta grand-mère",
       "result": "à lire (série finie : servira si on fait une suite)"
+    },
+    "cycle1_partie1": {
+      "station": "A te retourner / B courir",
+      "eau": "A monter la rejoindre / B quitter l'immeuble",
+      "bande": "A arrêter la cassette / B courir chercher Inès",
+      "photo": "A effacer la photo / B demander à Mamie qui elle est",
+      "result": "à compter le 16/11"
     }
   },
   "previous_series": "jacques-a-dit",
@@ -541,32 +576,31 @@
       "series_file": "series/la-station.md",
       "prefix": "station",
       "episode_count": 3,
-      "next_episode": 1,
-      "note": "partie 1 déjà écrite et rendue en essai le 14/11"
+      "next_episode": 2
     },
     {
       "slot": "12:00",
-      "series": null,
-      "series_file": null,
-      "prefix": null,
+      "series": "l-eau-du-septieme",
+      "series_file": "series/l-eau-du-septieme.md",
+      "prefix": "eau",
       "episode_count": 3,
-      "next_episode": 1
+      "next_episode": 2
     },
     {
       "slot": "18:00",
-      "series": null,
-      "series_file": null,
-      "prefix": null,
+      "series": "la-bande",
+      "series_file": "series/la-bande.md",
+      "prefix": "bande",
       "episode_count": 3,
-      "next_episode": 1
+      "next_episode": 2
     },
     {
       "slot": "20:00",
-      "series": null,
-      "series_file": null,
-      "prefix": null,
+      "series": "la-photo",
+      "series_file": "series/la-photo.md",
+      "prefix": "photo",
       "episode_count": 3,
-      "next_episode": 1
+      "next_episode": 2
     }
   ]
 }

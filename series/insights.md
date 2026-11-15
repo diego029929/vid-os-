@@ -424,3 +424,23 @@ creux à 11 h, 13 h-14 h et après 21 h).
   Éviter les mots d'une syllabe ou en « -illé » en fin de question. La synthèse est la même d'un essai à l'autre
   (même phrase = même son) : tester une nouvelle tournure seule (voice.synth + Whisper medium) avant le rendu.
 - 14/11 13h : Fio a écrit « C'est nul » (sans dire lequel). Premiers chiffres : bataille #1 229 vues TikTok en 3 h, Tu préfères #1 85 vues en 1 h. Sans réponse à 17h, le Tu préfères #2 de 20h a été annulé et remplacé par bataille-003 « EUROPE : QUI SURVIT ? » (Grèce gagne). tp-002 reste dans le dépôt (non publié). Demander à Fio ce qui est nul avant la routine suivante.
+
+### 15/11 (retour aux séries d'horreur COURTES : 4 séries de 3 épisodes de ≈ 40 s, 10h/12h/18h/20h)
+
+- Comptes Zernio OK, les 4 posts du 14/11 publiés sur les deux réseaux.
+- **Stats 14/11 (≈ 8-20 h de recul)** — TikTok vues / likes / commentaires / partages / temps moyen / complétion, puis Instagram :
+  - bataille-001 10h (35 s) : 314 / 6 / 0 / 0 / 8,4 s / 2,8 % — Insta 141 / 14,1 s ;
+  - tp-001 « ta vie » 12h (60 s) : 249 / **10** / 1 / 0 / 9,1 s / 0,8 % — Insta 134 / **15,3 s** ;
+  - bataille-002 18h (37 s) : **336** / 4 / 0 / 1 / 7,6 s / 2,6 % — Insta 119 / 10,8 s ;
+  - bataille-003 20h (33 s) : 276 / 6 / 0 / 0 / 6,4 s / 2,2 % — Insta 116 / 7,3 s.
+- Lecture : toujours le plateau 250-340 vues TikTok ; le nouveau concept n'a rien débloqué en un jour, et Fio l'a
+  trouvé « nul » → arrêté (décision de Fio du 14/11 au soir). Retour aux séries, mais en 40 s (les anciens épisodes
+  de 90 s perdaient les gens à 6-14 s) avec l'animation 2. À juger sur le cycle entier (15-17/11).
+- Cycle 1 : « La Station » (10h, Vacancy + Kairo), « L'eau du septième » (12h, Dark Water), « La Bande » (18h,
+  Session 9), « La Photo » (20h, Lake Mungo). 6 décors neufs : eau_plafond, eau_septieme, bnd_facade, bnd_magneto,
+  pho_maison, pho_photo.
+- Test du spectateur extérieur : 1er jet 6-7/10 (fille « déjà montée » alors que le choix A dit « monter » ;
+  « bande » flou → « cassette » ; mot de Mamie alors que B = « la montrer à Mamie »). Après correction : 8 / 8 / 8.
+- Voix (Whisper medium) : « ce qu'Inès va faire » lu « ce qu'il n'est à faire » → « raconte la nuit d'Inès » ;
+  « une fille que personne… » lu « une chie » → « une inconnue que personne… » ; « et crie : » lu « écrites » →
+  « Elle a peur : ». Rendu ≈ 6 min par épisode de 40 s (bien plus rapide que prévu). Programmé : 10h, 12h, 18h, 20h.
