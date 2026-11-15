@@ -1,0 +1,281 @@
+{
+ "series": "L'EAU DU SEPTIÈME",
+ "day": 1,
+ "subtitle": "PARTIE 1",
+ "style": 2,
+ "clock_start": 0,
+ "mood": "bleu",
+ "counter_label": null,
+ "title": "Partie 1 · Une petite fille pleure dans ton plafond",
+ "caption": "Une petite fille t'appelle à travers le plafond… Tu montes au septième (A) ou tu quittes l'immeuble (B) ? Le plus de votes décide la partie 2 👇 #horreur #histoire #creepy #pourtoi",
+ "beats": [
+  {
+   "scene": "telephone",
+   "text": "MINUIT. LE GARDIEN T'ÉCRIT : « NE MONTE JAMAIS AU *SEPTIÈME*. »",
+   "voice": "Minuit. Le gardien de l'immeuble t'écrit : ne monte jamais au septième.",
+   "params": {
+    "mode": "chat",
+    "contact": "LE GARDIEN",
+    "messages": [
+     [
+      "lui",
+      "Ne montez jamais au 7e étage."
+     ]
+    ]
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.16
+    ]
+   }
+  },
+  {
+   "scene": "facade",
+   "text": "TU VIENS D'EMMÉNAGER AU SIXIÈME, DANS UN VIEIL IMMEUBLE DE LYON.",
+   "voice": "Tu viens d'emménager au sixième d'un vieil immeuble de Lyon.",
+   "params": {
+    "gone": true
+   },
+   "meteo": "pluie",
+   "eclair": true,
+   "cam": {
+    "z": [
+     1.18,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "ascenseur",
+   "text": "DANS L'ASCENSEUR, LE BOUTON 7 EST CACHÉ PAR DU *SCOTCH*.",
+   "voice": "Dans l'ascenseur, le bouton sept est caché par du scotch noir.",
+   "cam": {
+    "z": [
+     1.04,
+     1.18
+    ],
+    "x": [
+     0.46,
+     0.54
+    ]
+   }
+  },
+  {
+   "scene": "eau_plafond",
+   "text": "AU PLAFOND DE TON STUDIO, UNE TACHE D'EAU GRANDIT CHAQUE *NUIT*.",
+   "cam": {
+    "z": [
+     1.02,
+     1.2
+    ]
+   }
+  },
+  {
+   "scene": "eau_plafond",
+   "text": "CE SOIR, L'EAU COULE DANS TON STUDIO. ELLE VIENT DU *SEPTIÈME*.",
+   "voice": "Ce soir, l'eau se met à couler dans ton studio. Elle vient du septième.",
+   "params": {
+    "fuite": true
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.06,
+     1.16
+    ],
+    "y": [
+     0.46,
+     0.54
+    ]
+   }
+  },
+  {
+   "scene": "eau_plafond",
+   "text": "DANS LA TACHE, TU VOIS DES TRACES DE PETITES *MAINS*.",
+   "voice": "Dans la tache, tu vois des traces de petites mains d'enfant.",
+   "params": {
+    "mains": true,
+    "grande": true
+   },
+   "mood": "rouge",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.2,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "eau_plafond",
+   "text": "À TRAVERS LE PLAFOND, UNE PETITE FILLE CRIE : « AIDE-MOI, L'EAU *MONTE* ! »",
+   "voice": "À travers le plafond, une petite fille crie : aide-moi, l'eau monte !",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.66,
+     0.24
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "params": {
+    "fuite": true
+   },
+   "shake": 3,
+   "cam": {
+    "z": [
+     1.04,
+     1.18
+    ]
+   }
+  },
+  {
+   "scene": "palier",
+   "text": "SUR LE PALIER, DES PETITS PAS MOUILLÉS MONTENT VERS LE *SEPTIÈME*.",
+   "voice": "Tu sors. Sur le palier, des petits pas mouillés montent vers le septième.",
+   "params": {
+    "etage": "6"
+   },
+   "passant": {
+    "y": 0.72,
+    "h": 0.2,
+    "sens": 1
+   },
+   "cam": {
+    "z": [
+     1.06,
+     1.2
+    ]
+   }
+  },
+  {
+   "scene": "eau_septieme",
+   "text": "EN HAUT DES MARCHES, LA PETITE FILLE EN CIRÉ JAUNE T'*ATTEND*.",
+   "voice": "En haut des marches, dans l'eau, la petite fille en ciré jaune t'attend.",
+   "params": {
+    "fille": true
+   },
+   "rule": {
+    "n": 1,
+    "text": "NE MONTE JAMAIS AU SEPTIÈME ÉTAGE."
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.22
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "LE GARDIEN T'ÉCRIT : « ELLE S'EST NOYÉE IL Y A VINGT *ANS*. »",
+   "voice": "Le gardien t'écrit : cette petite fille est morte noyée il y a vingt ans.",
+   "params": {
+    "mode": "chat",
+    "contact": "LE GARDIEN",
+    "messages": [
+     [
+      "lui",
+      "Ne montez jamais au 7e étage."
+     ],
+     [
+      "lui",
+      "Cette petite fille s'est noyée il y a 20 ans."
+     ]
+    ]
+   },
+   "sfx": [
+    [
+     "glitch",
+     0,
+     0.5
+    ]
+   ],
+   "glitch": 0.12,
+   "mood": "noir",
+   "cam": {
+    "z": [
+     1.02,
+     1.16
+    ]
+   }
+  },
+  {
+   "scene": "eau_septieme",
+   "text": "A : TU MONTES LA REJOINDRE. B : TU QUITTES L'IMMEUBLE.",
+   "choice": {
+    "a": "MONTER",
+    "b": "PARTIR"
+   },
+   "text_y": 0.2,
+   "dur": 4.6,
+   "mood": "rouge",
+   "no_whip": true,
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ]
+   },
+   "params": {
+    "fille": true
+   }
+  },
+  {
+   "scene": "eau_septieme",
+   "text": "LE PLUS DE VOTES DÉCIDE LA PARTIE DEUX. ÉCRIS TON CHOIX EN *COMMENTAIRE*.",
+   "voice": "Le plus de votes décide la partie deux. Écris ton choix en commentaire.",
+   "choice": {
+    "a": "MONTER",
+    "b": "PARTIR",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.6,
+   "mood": "rouge",
+   "no_whip": true,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ]
+   },
+   "params": {
+    "fille": true
+   }
+  }
+ ]
+}
