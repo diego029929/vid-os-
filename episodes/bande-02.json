@@ -1,0 +1,111 @@
+{
+ "style": "nuit",
+ "series": "LA BANDE",
+ "etiquette": "PARTIE 2",
+ "heure": "02:10:20",
+ "title": "Partie 2 · La cassette est arrivée au bout et ton amie t'appelle",
+ "caption": "Tu avances vers la voix (1) ou tu remontes rejoindre Inès dehors (2) ? Le plus de votes décide la partie 3 👇 #horreur #urbex #creepy #pourtoi",
+ "vote": "Le plus de votes décide la partie 3",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "INÈS": {
+   "couleur": "#5fb85a",
+   "cheveux": true,
+   "voix": "ref-femme-2.wav"
+  }
+ },
+ "beats": [
+  {
+   "voice": "Dans un sanatorium abandonné, la cassette au prénom d'Inès tourne encore.",
+   "objet": {
+    "type": "cassette",
+    "texte": "INÈS 15/11"
+   }
+  },
+  {
+   "voice": "Ton amie Inès vient de disparaître. Un cri monte de la *cave*, alors tu cours en bas.",
+   "vue": "hopital",
+   "hero": "marche"
+  },
+  {
+   "voice": "Règle écrite sur le mur : ne laisse jamais la cassette arriver au bout.",
+   "regle": {
+    "n": 1,
+    "txt": "Ne laisse jamais\nla cassette\narriver au bout"
+   }
+  },
+  {
+   "voice": "Dans l'escalier, clac : la cassette est arrivée au bout. Plus aucun bruit.",
+   "vue": "escalier",
+   "hero": "peur",
+   "hx": 0.5,
+   "sfx": "boom"
+  },
+  {
+   "voice": "Toutes les lampes s'éteignent d'un coup.",
+   "vue": "couloir",
+   "hero": "absent",
+   "flicker": true,
+   "rouge_lum": true
+  },
+  {
+   "voice": "Dans la cave, la caméra d'Inès est posée par terre. Elle filme encore.",
+   "vue": "cave",
+   "hero": "debout",
+   "hx": 0.6
+  },
+  {
+   "voice": "Sur l'écran, en direct, Inès parle avec un homme en blouse *blanche*.",
+   "tel": {
+    "type": "photo",
+    "vue": "hopital",
+    "ombre": true
+   }
+  },
+  {
+   "voice": "Je suis là, dans le noir. Viens me chercher, s'il te plaît.",
+   "qui": "INÈS",
+   "vue": "cave",
+   "hero": "absent",
+   "persos": [
+    {
+     "nom": "INÈS",
+     "x": 0.5,
+     "etat": "peur"
+    }
+   ],
+   "flicker": true
+  },
+  {
+   "voice": "Ton téléphone vibre. Inès t'écrit : je suis dehors, à la voiture. Tu es où ?",
+   "tel": {
+    "type": "sms",
+    "de": "Inès",
+    "lignes": [
+     "Je suis dehors, à la voiture.",
+     "Tu es où ???"
+    ]
+   }
+  },
+  {
+   "voice": "Alors, qui t'appelle au fond de la *cave* ?",
+   "vue": "cave",
+   "hero": "peur",
+   "hx": 0.68,
+   "ombre": {
+    "x": 0.25
+   },
+   "flicker": true,
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Tu avances vers la voix, ou tu remontes rejoindre Inès dehors ? Écris #un# ou #deux#.",
+   "choix": {
+    "a": "Avancer vers la voix",
+    "b": "Remonter dehors"
+   }
+  }
+ ]
+}

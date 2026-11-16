@@ -259,6 +259,34 @@
       "file": "episodes/photo-01.json",
       "slot": "2026-11-15T20:00:00 Europe/Paris",
       "zernio_id": "6af94d59ef1ad71733777df9"
+    },
+    {
+      "series": "la-station",
+      "episode": 2,
+      "file": "episodes/station-02.json",
+      "slot": "2026-11-16T10:00:00 Europe/Paris",
+      "zernio_id": "6afa94161857f9d34e4f8641"
+    },
+    {
+      "series": "l-eau-du-septieme",
+      "episode": 2,
+      "file": "episodes/eau-02.json",
+      "slot": "2026-11-16T12:00:00 Europe/Paris",
+      "zernio_id": "6afa94171857f9d34e4f864b"
+    },
+    {
+      "series": "la-bande",
+      "episode": 2,
+      "file": "episodes/bande-02.json",
+      "slot": "2026-11-16T18:00:00 Europe/Paris",
+      "zernio_id": "6afa9747966f71e3e8024c71"
+    },
+    {
+      "series": "la-photo",
+      "episode": 2,
+      "file": "episodes/photo-02.json",
+      "slot": "2026-11-16T20:00:00 Europe/Paris",
+      "zernio_id": "6afa974809acce61cfdd6c60"
     }
   ],
   "survis_next": 15,
@@ -386,7 +414,14 @@
       "eau": "A monter la rejoindre / B quitter l'immeuble",
       "bande": "A arrêter la cassette / B courir chercher Inès",
       "photo": "A effacer la photo / B demander à Mamie qui elle est",
-      "result": "à compter le 16/11"
+      "result": "16/11 : <3 votes partout → tirage au sort : station B courir (1 com. B), eau B quitter (2 com. B), bande B courir chercher Inès (0), photo B demander à Mamie (0)"
+    },
+    "cycle1_partie2": {
+      "station": "1 monter dans la voiture / 2 rester dans la boutique",
+      "eau": "1 descendre à la cave / 2 casser la vitre",
+      "bande": "1 avancer vers la voix / 2 remonter dehors",
+      "photo": "1 sauver Jade / 2 rester avec Mamie",
+      "result": "à compter le 17/11"
     }
   },
   "previous_series": "jacques-a-dit",
@@ -576,7 +611,7 @@
       "series_file": "series/la-station.md",
       "prefix": "station",
       "episode_count": 3,
-      "next_episode": 2
+      "next_episode": 3
     },
     {
       "slot": "12:00",
@@ -584,7 +619,7 @@
       "series_file": "series/l-eau-du-septieme.md",
       "prefix": "eau",
       "episode_count": 3,
-      "next_episode": 2
+      "next_episode": 3
     },
     {
       "slot": "18:00",
@@ -592,7 +627,7 @@
       "series_file": "series/la-bande.md",
       "prefix": "bande",
       "episode_count": 3,
-      "next_episode": 2
+      "next_episode": 3
     },
     {
       "slot": "20:00",
@@ -600,7 +635,7 @@
       "series_file": "series/la-photo.md",
       "prefix": "photo",
       "episode_count": 3,
-      "next_episode": 2
+      "next_episode": 3
     }
   ]
 }

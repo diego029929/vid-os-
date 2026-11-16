@@ -444,3 +444,28 @@ creux à 11 h, 13 h-14 h et après 21 h).
 - Voix (Whisper medium) : « ce qu'Inès va faire » lu « ce qu'il n'est à faire » → « raconte la nuit d'Inès » ;
   « une fille que personne… » lu « une chie » → « une inconnue que personne… » ; « et crie : » lu « écrites » →
   « Elle a peur : ». Rendu ≈ 6 min par épisode de 40 s (bien plus rapide que prévu). Programmé : 10h, 12h, 18h, 20h.
+
+### 16/11 (cycle 1, parties 2 ; 1er jour du style « Nuit & téléphone », engine/nuit.py)
+
+- Comptes Zernio OK, les 4 posts du 15/11 publiés sur TikTok et Instagram.
+- **Stats 15/11 (≈ 10-20 h de recul)** — TikTok vues / likes / commentaires / enregistrements / temps moyen / complétion, puis Instagram vues / temps moyen / skip :
+  - La Station p1 10h : 256 / **27** / 1 / 2 / **8,6 s** / **7,5 %** — Insta 135 / 6,1 s / 60 % ;
+  - L'eau du septième p1 12h : 256 / 10 / 0 / 2 / 7,3 s / 3,8 % — Insta 117 / 7,6 s / 52 % (2 commentaires) ;
+  - La Bande p1 18h : 231 / 6 / 0 / 2 / 5,8 s / 1,3 % — Insta 125 / 4,5 s / **74 %** (le pire) ;
+  - La Photo p1 20h : 247 / 13 / 0 / 1 / 6,4 s / 2,4 % — Insta 126 / 7,0 s / 43 %.
+- Lecture : toujours le plateau ≈ 250 vues, mais La Station = record de likes depuis longtemps (27) et meilleure
+  complétion (7,5 %). La Bande (accroche « une vieille cassette porte le prénom… », sans téléphone) perd le plus
+  vite → aujourd'hui chaque épisode ouvre sur un écran de téléphone ou un objet + une question.
+- Votes partie 1 : Station 1 commentaire « je tape un sprint » (= B courir) ; Eau 2 × « partir » sur Insta (= B
+  quitter) ; Bande 0 ; Photo 0. Moins de 3 votes partout → tirage au sort : B, B, B, B (identique aux votes reçus).
+- Test du spectateur : 1er jet clarté 6 / 5 / 7 / 7 (règles non reliées à l'action, « lampe qui filme », hall
+  inondé alors que la règle interdit l'eau, « 18 ans » pas dit) ; 2e jet 7 / 7 / 6 / 8,5, corrections du 2e avis
+  appliquées (source de chaque règle dite, « pare-brise », siège vide avant le choix, « clac : la cassette est
+  arrivée au bout », « en direct »).
+- Voix (Whisper medium) : « Tu montes voir Jade » lu « On te voit Jade » → « Dans la chambre de Jade… » ; « Rose veut
+  te voir » lu « ne te voit pas » → « Rose veut te parler ». Fin « Écris un ou deux » parfois entendue « et crie » par
+  Whisper (déjà le cas avant, compréhensible à l'oreille).
+- Style nuit : rendu ≈ 6-7 min par épisode ; 770 caractères lus ≈ 50 s (plus lent que prévu : ≈ 15,5 car./s avec les
+  bruitages et pauses) → viser ≤ 730 caractères. Bande et Photo étaient à 50,5 s : fin coupée à 49,8 s + loudnorm
+  (I=-13, TP=-3, alimiter 0.65 level=false) car check_video signalait -17,1 LUFS.
+- Programmé (Zernio, TikTok + Instagram) : Station p2 10h, Eau p2 12h, Bande p2 18h, Photo p2 20h.
