@@ -21,5 +21,5 @@ parties 2-3 : au moins 2 décors propres `sta_*` (ex. `sta_caisse` comptoir +
 | Partie | Situation | Vote final |
 |---|---|---|
 | 1 (prête, `episodes/station-01.json`) | 3 h : message « ne t'arrête pas à la station », panne d'essence, affiche « ne réponds jamais », un double passe au bout du rayon, la voix de ta mère t'appelle alors qu'elle t'écrit qu'elle dort | A : te retourner / B : courir à la voiture |
-| 2 | Conséquence du vote ; les écrans de surveillance montrent quelqu'un assis dans ta voiture | à écrire |
+| 2 (16/11, `station-02.json`, style nuit) | Vote B (courir) : sous la pluie, ton double est au volant de ta voiture ; appel de ton propre numéro, ta voix dit ton prénom puis « ce soir, c'est moi qui rentre chez ta mère » ; le siège devient vide | 1 : monter dans la voiture / 2 : rester dans la boutique |
 | 3 | Dernière partie, l'aube approche ; vote final « la suite si vous êtes nombreux » | à écrire |
