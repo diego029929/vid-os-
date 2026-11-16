@@ -134,20 +134,27 @@ def build(ep_path, out, draft=False):
     else:
         import voice
         default_ref = voice.CB_REF
+        narrateur = voice.engine_name()
+        if voice.VOICE not in ("chatterbox", "parler") and not os.path.exists(voice.MODEL):
+            # voix Piper du narrateur (voice_config.json) : téléchargée au premier rendu (gratuit, huggingface.co)
+            subprocess.run(["sh", os.path.join(HERE, "get_voice.sh")], check=True)
+            narrateur = voice.engine_name()
         parts, durs = [], []
         for b in beats:
             who = b.get("qui")
             info = ep.get("hero", {}) if who == "MOI" else ep.get("persos", {}).get(who, {}) if who else {}
             voice.CB_REF = os.path.join(ROOT, "assets", "ref", info["voix"]) if info.get("voix") else default_ref
+            voice.VOICE = "chatterbox" if info.get("voix") else narrateur  # personnages : Chatterbox ; narrateur : voix de la config
             voice.RETRY = b.get("retry", 0)
             a = voice.synth(strip_marks(b["voice"]))
+            if not info.get("voix"):
+                a = voice.megaphone(a, tmp)  # effet du narrateur (voice_config.json : « megaphone » = voix des premières vidéos)
             parts += [a, np.zeros(int(GAP * voice.SR), np.float32)]
             durs.append(len(a) / voice.SR + GAP)
             print(f"voix {len(durs)}/{len(beats)} : {strip_marks(b['voice'])}", flush=True)
         voice.CB_REF = default_ref
         sr = voice.SR
         voice_track = np.concatenate(parts + [np.zeros(int(END_HOLD * sr), np.float32)])
-        voice_track = voice.megaphone(voice_track, tmp)  # effet de voice_config.json (« leger » = voix du tout début)
     durs[-1] += END_HOLD
     starts = np.concatenate([[0], np.cumsum(durs)])
     total = float(starts[-1])

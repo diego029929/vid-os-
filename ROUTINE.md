@@ -173,14 +173,16 @@ puis planche contact.
 
 ## 4. La voix (choix de Fio, ne pas changer sans Fio)
 
-- **Depuis le 17/11 : la voix du tout début** (Fio, 16/11 : « remets la voix
-  du tout début, elle faisait beaucoup plus peur ») = Chatterbox +
-  `assets/ref/ref-pierre-moyen.wav`, exagération 0.6, cfg 0.4, 30 % plus
-  rapide (tempo 1.3), effet « leger » (voix validée par Fio le 01/11, essai
-  V1). Tout est dans `engine/voice_config.json` ; `engine/nuit.py` applique
-  l'effet. L'ancienne « voix 1 » (`ref-narrateur-grave.wav`, 09/11-16/11)
-  n'est plus utilisée. Jamais baisser la hauteur artificiellement, jamais
-  de service payant, jamais la voix d'un autre créateur.
+- **Depuis le 17/11 : la voix de femme des premières vidéos** (Fio, 16/11
+  soir : « la voix de femme initiale des premières vidéos », celle de
+  « L'ascenseur » fin octobre) = voix Piper gratuite `fr_FR-upmc-medium`,
+  locutrice 0, effet « megaphone », tempo 1.1 (`engine/voice_config.json`).
+  C'est la voix du NARRATEUR ; les personnages qui ont `"voix"` gardent leur
+  voix Chatterbox. `engine/nuit.py` télécharge le modèle Piper tout seul au
+  premier rendu (`engine/get_voice.sh`, huggingface.co). Plus de voix
+  d'homme (ref-pierre-moyen, ref-narrateur-grave) pour le narrateur. Jamais
+  baisser la hauteur artificiellement, jamais de service payant, jamais la
+  voix d'un autre créateur.
 - ≈ 20 caractères lus par seconde (pauses comprises) → ≤ 800 caractères lus
   par épisode ; si l'épisode fait < 35 s, ajouter une phrase.
 - Mots mal lus à éviter : « N° » (dire « numéro »), « sweat » (« pull »),
@@ -197,7 +199,7 @@ puis planche contact.
 
 0. Installer : `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url
    https://download.pytorch.org/whl/cpu`, puis `pip install -q
-   chatterbox-tts language_tool_python openai-whisper playwright` (≈ 3 min ;
+   chatterbox-tts piper-tts language_tool_python openai-whisper playwright` (≈ 3 min ;
    Playwright utilise le Chromium déjà installé `/opt/pw-browsers/chromium`,
    ne PAS lancer `playwright install`). Si
    l'installation échoue : ne rien publier, le dire.
