@@ -1,13 +1,14 @@
 {
   "voice": "chatterbox",
-  "reference": "ref-narrateur-grave.wav",
+  "reference": "ref-pierre-moyen.wav",
   "effect": "leger",
-  "tempo": 1.2,
+  "tempo": 1.3,
   "tight": true,
   "pitch": 1.0,
   "speed": 1.0,
   "description": "A man speaks with a deep, raspy, gravelly voice in a dark and menacing tone, at a moderate pace. Very clear audio.",
   "seed": 1,
-  "exaggeration": 0.75,
-  "cfg": 0.3
+  "exaggeration": 0.6,
+  "cfg": 0.4,
+  "note": "Voix du tout début (validée par Fio le 01/11, essai V1 ; remise le 16/11 à sa demande : « elle faisait beaucoup plus peur »). Ancienne voix 09/11-16/11 : ref-narrateur-grave.wav, exagération 0.75, cfg 0.3, tempo 1.2."
 }

@@ -147,6 +147,7 @@ def build(ep_path, out, draft=False):
         voice.CB_REF = default_ref
         sr = voice.SR
         voice_track = np.concatenate(parts + [np.zeros(int(END_HOLD * sr), np.float32)])
+        voice_track = voice.megaphone(voice_track, tmp)  # effet de voice_config.json (« leger » = voix du tout début)
     durs[-1] += END_HOLD
     starts = np.concatenate([[0], np.cumsum(durs)])
     total = float(starts[-1])
