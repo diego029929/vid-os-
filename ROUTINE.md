@@ -173,11 +173,16 @@ puis planche contact.
 
 ## 4. La voix (choix de Fio, ne pas changer sans Fio)
 
-- Chatterbox + `assets/ref/ref-narrateur-grave.wav` (« voix 1 », choisie le
-  09/11). Réglages dans `engine/voice_config.json`. Jamais baisser la
-  hauteur artificiellement, jamais de service payant, jamais la voix d'un
-  autre créateur.
-- ≈ 20 caractères lus par seconde → ≤ 800 caractères lus par épisode.
+- **Depuis le 17/11 : la voix du tout début** (Fio, 16/11 : « remets la voix
+  du tout début, elle faisait beaucoup plus peur ») = Chatterbox +
+  `assets/ref/ref-pierre-moyen.wav`, exagération 0.6, cfg 0.4, 30 % plus
+  rapide (tempo 1.3), effet « leger » (voix validée par Fio le 01/11, essai
+  V1). Tout est dans `engine/voice_config.json` ; `engine/nuit.py` applique
+  l'effet. L'ancienne « voix 1 » (`ref-narrateur-grave.wav`, 09/11-16/11)
+  n'est plus utilisée. Jamais baisser la hauteur artificiellement, jamais
+  de service payant, jamais la voix d'un autre créateur.
+- ≈ 20 caractères lus par seconde (pauses comprises) → ≤ 800 caractères lus
+  par épisode ; si l'épisode fait < 35 s, ajouter une phrase.
 - Mots mal lus à éviter : « N° » (dire « numéro »), « sweat » (« pull »),
   ville seule en début de phrase, « village », « grésiller », répliques de 3
   mots ou moins, « défi », « fruit », mots d'une syllabe ou en « -illé » en
