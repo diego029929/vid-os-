@@ -20,4 +20,4 @@ Décors : `telephone`, `facade` (pluie, éclair), `ascenseur`, `palier`,
 |---|---|---|
 | 1 (15/11) | Minuit, message du gardien ; tache au plafond, l'eau coule, traces de mains, la fille crie « aide-moi » ; tu montes, elle t'attend dans le couloir inondé ; le gardien : elle s'est noyée il y a vingt ans | A : monter l'aider / B : quitter l'immeuble |
 | 2 (16/11, `eau-02.json`, style nuit) | Vote B (quitter) : le hall est inondé par l'eau du septième, porte fermée de dehors, on frappe ; la fille en ciré jaune derrière toi (« tu m'avais promis ») ; le gardien dit de passer par la cave, sous l'eau | 1 : descendre à la cave / 2 : casser la vitre |
-| 3 (17/11) | Dernière partie ; vote « la suite si vous êtes nombreux » | à écrire |
+| 3 (17/11, `eau-03.json`) | Vote 2 (casser la vitre) : ta main a touché l'eau du septième, la fillette peut te suivre partout ; ciré jaune dans les flaques, alerte Localiser à la gare, elle dans le miroir : « rapporte ma poupée » | 1 : chercher sa poupée / 2 : prendre le train |

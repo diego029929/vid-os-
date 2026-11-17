@@ -1,0 +1,123 @@
+{
+ "style": "nuit",
+ "series": "LA STATION",
+ "etiquette": "PARTIE 3",
+ "heure": "03:19:40",
+ "title": "Partie 3 · Ton double est arrivé chez ta mère avant toi",
+ "caption": "Tu réponds à ta mère malgré la règle (1) ou tu te tais (2) ? Le plus de votes décide la suite 👇 #horreur #histoire #creepy #pourtoi",
+ "vote": "La suite si vous êtes nombreux à voter",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "MAMAN": {
+   "couleur": "#c98a5a",
+   "cheveux": true,
+   "voix": "ref-femme-3.wav"
+  }
+ },
+ "beats": [
+  {
+   "voice": "Trois heures vingt. Ta mère t'écrit : quelqu'un avec ton visage sonne à ma *porte*.",
+   "tel": {
+    "type": "sms",
+    "de": "Maman",
+    "lignes": [
+     "Quelqu'un avec ton visage",
+     "sonne à ma porte ?!"
+    ]
+   }
+  },
+  {
+   "voice": "Alors, tu roules vers chez elle. Cette nuit, à une station-service, une chose a pris ton visage et ta voix.",
+   "vue": "rue",
+   "hero": "marche",
+   "pluie": true
+  },
+  {
+   "voice": "La règle de la station : si on t'appelle par ton prénom, ne réponds jamais. Sinon, la chose te remplace.",
+   "regle": {
+    "n": 1,
+    "txt": "Si on t'appelle\npar ton prénom,\nne réponds jamais"
+   }
+  },
+  {
+   "voice": "Vite, tu écris à ta mère : n'ouvre surtout pas, ce n'est pas moi.",
+   "tel": {
+    "type": "sms",
+    "de": "Maman",
+    "lignes": [
+     "Quelqu'un avec ton visage sonne à ma porte ?!",
+     "N'ouvre surtout pas. Ce n'est pas moi.",
+     "Trop tard, il est déjà dans le salon."
+    ],
+    "moi": [
+     1
+    ]
+   }
+  },
+  {
+   "voice": "Elle répond : trop tard, il est déjà dans le *salon*.",
+   "vue": "salon",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.6
+   },
+   "flicker": true
+  },
+  {
+   "voice": "Devant sa maison, la porte d'entrée est grande ouverte.",
+   "objet": {
+    "type": "porte",
+    "ouverte": true
+   }
+  },
+  {
+   "voice": "Dans le salon, ta mère est assise à côté de ton double.",
+   "vue": "salon",
+   "hero": "peur",
+   "hx": 0.75,
+   "persos": [
+    {
+     "nom": "MAMAN",
+     "x": 0.3,
+     "etat": "peur"
+    }
+   ],
+   "ombre": {
+    "x": 0.48
+   },
+   "rouge_lum": true
+  },
+  {
+   "voice": "Si tu es mon vrai enfant, réponds-moi quand je dis ton prénom.",
+   "qui": "MAMAN",
+   "vue": "salon",
+   "hero": "absent",
+   "persos": [
+    {
+     "nom": "MAMAN",
+     "x": 0.5,
+     "etat": "peur"
+    }
+   ],
+   "cadre": "pousse",
+   "flicker": true
+  },
+  {
+   "voice": "Elle dit ton prénom. Mais c'est ton double qui lui répond, avec ta propre *voix*.",
+   "vue": "salon",
+   "hero": "peur",
+   "cadre": "gros",
+   "flicker": true,
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Tu réponds à ta mère malgré la règle, ou tu te tais et tu laisses parler ton double ? Écris #un# ou #deux#. La suite si vous êtes nombreux à voter.",
+   "choix": {
+    "a": "Répondre malgré la règle",
+    "b": "Te taire"
+   }
+  }
+ ]
+}

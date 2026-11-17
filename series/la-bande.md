@@ -21,4 +21,4 @@ Décors : `hopital`, `cave`, `papier` (mur carrelage), `telephone`, `escalier`,
 |---|---|---|
 | 1 (15/11) | La bande « INÈS 15/11 » ; l'homme décrit la nuit d'Inès ; « à 2 h 10, Inès descend seule à la cave » ; règle sur le mur ; 2 h 10 : Inès a disparu, sa lampe clignote dans la cave ; il reste 10 s de bande | A : arrêter la bande / B : courir chercher Inès |
 | 2 (16/11, `bande-02.json`, style nuit) | Vote B (courir chercher Inès) : un cri dans la cave, la cassette arrive au bout, tout s'éteint ; la caméra d'Inès montre en direct Inès avec l'homme en blouse ; une voix d'Inès appelle dans le noir, mais Inès écrit qu'elle est dehors | 1 : avancer vers la voix / 2 : remonter dehors |
-| 3 (17/11) | Dernière partie ; vote « la suite si vous êtes nombreux » | à écrire |
+| 3 (17/11, `bande-03.json`) | Vote 2 (remonter dehors) : Inès t'attend à la voiture, une cassette à ton nom se lance (« ce n'est pas ton amie qui conduit »), la vraie Inès appelle depuis la cave | 1 : sauter de la voiture / 2 : faire semblant de rien |

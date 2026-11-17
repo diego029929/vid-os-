@@ -1,0 +1,128 @@
+{
+ "style": "nuit",
+ "series": "L'EAU DU SEPTIÈME",
+ "etiquette": "PARTIE 3",
+ "heure": "00:19:50",
+ "title": "Partie 3 · L'eau du septième t'a touché, elle te suit partout",
+ "caption": "Tu remontes au septième chercher sa poupée (1) ou tu prends le premier train (2) ? Le plus de votes décide la suite 👇 #horreur #histoire #creepy #pourtoi",
+ "vote": "La suite si vous êtes nombreux à voter",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "LA FILLE": {
+   "couleur": "#f2c230",
+   "cheveux": true,
+   "voix": "ref-femme-1.wav"
+  }
+ },
+ "beats": [
+  {
+   "voice": "Minuit vingt. Le gardien de ton immeuble t'écrit : surtout, ne touche pas l'*eau*.",
+   "tel": {
+    "type": "sms",
+    "de": "Le gardien",
+    "lignes": [
+     "Surtout, ne touche pas l'eau."
+    ]
+   }
+  },
+  {
+   "voice": "Au septième étage de ton immeuble, une fillette noyée en ciré jaune t'appelait à l'aide. Tu as fui.",
+   "vue": "rue",
+   "hero": "marche",
+   "pluie": true
+  },
+  {
+   "voice": "La règle du gardien : ne touche jamais l'eau qui coule du septième.",
+   "regle": {
+    "n": 2,
+    "txt": "Ne touche jamais\nl'eau qui coule\ndu septième"
+   }
+  },
+  {
+   "voice": "En fuyant, ta main a touché l'eau du septième, au pied de l'escalier.",
+   "vue": "rue",
+   "hero": "peur",
+   "cadre": "gros",
+   "pluie": true,
+   "flicker": true
+  },
+  {
+   "voice": "Le gardien écrit : si tu l'as touchée, la fillette peut te suivre *partout*.",
+   "tel": {
+    "type": "sms",
+    "de": "Le gardien",
+    "lignes": [
+     "Surtout, ne touche pas l'eau.",
+     "Si tu l'as touchée, la fillette",
+     "peut te suivre partout."
+    ]
+   }
+  },
+  {
+   "voice": "Dans chaque flaque de la rue, tu vois son ciré jaune.",
+   "vue": "rue",
+   "hero": "debout",
+   "hx": 0.7,
+   "pluie": true,
+   "persos": [
+    {
+     "nom": "LA FILLE",
+     "x": 0.28,
+     "etat": "debout",
+     "taille": 0.8
+    }
+   ]
+  },
+  {
+   "voice": "À la gare, une alerte : un objet inconnu te suit depuis chez toi.",
+   "tel": {
+    "type": "notif",
+    "app": "LOCALISER",
+    "titre": "Objet inconnu détecté",
+    "texte": "Il te suit depuis chez toi",
+    "heure": "0:31"
+   }
+  },
+  {
+   "voice": "Dans le miroir des toilettes de la gare, la fillette est derrière toi.",
+   "vue": "sdb",
+   "reflet": true,
+   "hero": "peur",
+   "hx": 0.65,
+   "persos": [
+    {
+     "nom": "LA FILLE",
+     "x": 0.3,
+     "etat": "debout"
+    }
+   ],
+   "flicker": true,
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Ma poupée est restée au septième, dans l'eau. Rapporte-la, et je te laisse partir.",
+   "qui": "LA FILLE",
+   "vue": "sdb",
+   "hero": "absent",
+   "persos": [
+    {
+     "nom": "LA FILLE",
+     "x": 0.5,
+     "etat": "debout",
+     "taille": 1.4
+    }
+   ],
+   "cadre": "pousse",
+   "rouge_lum": true
+  },
+  {
+   "voice": "Tu remontes chercher sa poupée, ou tu prends le premier train loin de Lyon ? Écris #un# ou #deux#. La suite si vous êtes nombreux à voter.",
+   "choix": {
+    "a": "Chercher sa poupée",
+    "b": "Prendre le train"
+   }
+  }
+ ]
+}
