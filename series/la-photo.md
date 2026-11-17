@@ -21,4 +21,4 @@ Décors : `cuisine`, `papier` (mur bois), `plage`, `salon`, `chambre`,
 |---|---|---|
 | 1 (15/11) | Fille inconnue sur toutes les photos ; 3 photos, elle se rapproche jusqu'à l'épaule de Jade ; mot de Mamie ; Jade fait un selfie : la fille est entre vous deux et sourit | A : effacer la photo / B : la montrer à Mamie |
 | 2 (16/11, `photo-02.json`, style nuit) | Vote B (demander à Mamie) : la fille est Rose, petite sœur de Mamie, noyée le lendemain de ses 18 ans ; règle 2 : le lendemain de tes 18 ans, jamais la plage (c'est aujourd'hui) ; Jade a disparu, SMS « Rose veut te voir », Jade marche vers la mer avec Rose | 1 : sauver Jade / 2 : rester avec Mamie |
-| 3 (17/11) | Dernière partie ; vote « la suite si vous êtes nombreux » | à écrire |
+| 3 (17/11, `photo-03.json`) | Vote 2 (rester avec Mamie) : Rose a pris la place de Mamie en 1962 ; Jade revient trempée, frappe et sourit sans cligner ; sur la photo elle porte la robe de Rose | 1 : ouvrir à Jade / 2 : la laisser dehors |

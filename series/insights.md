@@ -469,3 +469,31 @@ creux à 11 h, 13 h-14 h et après 21 h).
   bruitages et pauses) → viser ≤ 730 caractères. Bande et Photo étaient à 50,5 s : fin coupée à 49,8 s + loudnorm
   (I=-13, TP=-3, alimiter 0.65 level=false) car check_video signalait -17,1 LUFS.
 - Programmé (Zernio, TikTok + Instagram) : Station p2 10h, Eau p2 12h, Bande p2 18h, Photo p2 20h.
+
+### 17/11 (cycle 1, parties 3 = dernières ; 1er jour de la voix de femme Piper upmc + mégaphone)
+
+- Comptes Zernio OK, les 4 posts du 16/11 publiés sur TikTok et Instagram.
+- **Stats 16/11 (≈ 8-20 h de recul)** — TikTok vues / likes / commentaires / partages / temps moyen / complétion, puis Instagram vues / temps moyen :
+  - La Station p2 10h : **265** / **16** / 1 / 0 / **8,6 s** / 3,6 % — Insta 131 / **9,5 s** ;
+  - L'eau du septième p2 12h : 231 / 9 / 1 / 0 / 8,4 s / **4,9 %** — Insta 118 / 8,9 s ;
+  - La Bande p2 18h : 240 / 5 / 0 / 0 / 4,1 s / 2,0 % — Insta 107 / 3,5 s (encore la pire) ;
+  - La Photo p2 20h : 244 / 8 / 0 / 0 / 6,0 s / 2,8 % — Insta 127 / 7,9 s.
+- Lecture : plateau ≈ 230-265 vues. Le style nuit garde le temps moyen (8-9 s pour Station et Eau, mieux sur
+  Insta qu'en p1), mais La Bande décroche dès les premières secondes (accroche « cassette » = objet, pas de question).
+  Toujours presque aucun commentaire (2 en tout) → le vote seul ne suffit pas à faire commenter.
+- Votes partie 2 : Station 1 commentaire « 1 » (= monter dans la voiture) ; Eau 1 commentaire « 2 » (= casser la
+  vitre) ; Bande 0 ; Photo 0. Moins de 3 votes → tirage au sort, en suivant le vote reçu quand il y en a un :
+  Station 1, Eau 2, Bande 2 (remonter dehors), Photo 2 (rester avec Mamie).
+- Test du spectateur : 1er jet clarté 6 / 5 / 6 / 5 (« la chose » floue, règle posée en même temps que son échec,
+  « règle numéro deux » sans règle 1, Rose jamais présentée) ; 2e jet 7 / 6 / 6 / 7 ; 3e jet 8 / 7 / 7 / 8, puis
+  corrections ciblées (Eau : comment la main a touché l'eau ; Bande : Inès était avec toi, la règle dit pourquoi).
+- Voix Piper (1er jour) : une phrase qui COMMENCE par « Tu … » est mal entendue (« Suroule », « Sui écrit », « Sur
+  l'arrivée ») → commencer par un autre mot (« Alors, tu… », « Vite, tu… ») ; les questions finales en « Tu … ou … ? »
+  passent. Piper ≈ 18,5 car./s (800 car. = 43,6 s).
+- Autres pièges Piper vus aujourd'hui (corrigés en changeant la phrase, testée seule avec voice.synth + Whisper) :
+  « tu as glissé dans le hall » (illisible), « Minuit quarante » en tout début (« Mimikaran »), « la cave » + « Elle
+  est arrivée au bout » dans une phrase longue, « Inès t'écrit » (« Nest écrit » → « Ton amie Inès t'écrit »),
+  « n'ouvre pas » (« m'ouvre pas » → « ne lui ouvre surtout pas »), mot d'une syllabe en fin (« vite »).
+  Durées : 45,0 / 43,4 / 49,1 / 49,8 s (≈ 800-840 car. avec les répliques Chatterbox) → viser ≤ 780 caractères.
+- Programmé (Zernio, TikTok + Instagram) : Station p3 10h, Eau p3 12h, Bande p3 18h, Photo p3 20h. Cycle 1 FINI :
+  le 18/11, 4 nouvelles séries.
