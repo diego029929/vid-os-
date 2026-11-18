@@ -315,6 +315,34 @@
    "file": "episodes/photo-03.json",
    "slot": "2026-11-17T20:00:00 Europe/Paris",
    "zernio_id": "6afbe873ff763f317e7d70ce"
+  },
+  {
+   "series": "la-coupure",
+   "episode": 1,
+   "file": "episodes/coupure-01.json",
+   "slot": "2026-11-18T10:00:00 Europe/Paris",
+   "zernio_id": "6afd3abd89b0bbe4316e8808"
+  },
+  {
+   "series": "le-tunnel",
+   "episode": 1,
+   "file": "episodes/tunnel-01.json",
+   "slot": "2026-11-18T12:00:00 Europe/Paris",
+   "zernio_id": "6afd3faccb1c9a0cc2345cf9"
+  },
+  {
+   "series": "chambre-neuf",
+   "episode": 1,
+   "file": "episodes/chambre9-01.json",
+   "slot": "2026-11-18T18:00:00 Europe/Paris",
+   "zernio_id": "6afd3c57a44e92206e46bbb3"
+  },
+  {
+   "series": "le-ferry",
+   "episode": 1,
+   "file": "episodes/ferry-01.json",
+   "slot": "2026-11-18T20:00:00 Europe/Paris",
+   "zernio_id": "6afd3c57a44e92206e46bbbb"
   }
  ],
  "survis_next": 15,
@@ -415,7 +443,7 @@
    "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
   }
  ],
- "media_note": "14/11 : branche media = bataille-001 à 003, tp-001, tp-002 ; supprimer à la prochaine routine, après publication",
+ "media_note": "18/11 : branche media = coupure-01, tunnel-01-v2, chambre9-01, ferry-01 ; à supprimer à la prochaine routine, après publication",
  "votes": {
   "partie3": {
    "A_laisser": 1,
@@ -456,7 +484,14 @@
    "eau": "1 chercher sa poupée / 2 prendre le train",
    "bande": "1 sauter de la voiture / 2 faire semblant de rien",
    "photo": "1 ouvrir à Jade / 2 la laisser dehors",
-   "result": "dernières parties : à lire le 18/11 (sert si une suite est faite)"
+   "result": "dernières parties : à lire le 18/11 (sert si une suite est faite) | 18/11 : Eau 1 com. « 1 », autres 0 ; cycle 1 fini, pas de suite."
+  },
+  "cycle2_partie1": {
+   "coupure": "1 ouvrir à Clara / 2 laisser fermé",
+   "tunnel": "1 entrer dans le tunnel / 2 appeler ta mère d'abord",
+   "chambre9": "1 aller voir seul / 2 monter réveiller Nadia",
+   "ferry": "1 monter sur le pont / 2 t'enfermer dans ta cabine",
+   "result": "à compter le 19/11"
   }
  },
  "previous_series": "jacques-a-dit",
@@ -642,36 +677,36 @@
  "parallel_series": [
   {
    "slot": "10:00",
-   "series": "la-station",
-   "series_file": "series/la-station.md",
-   "prefix": "station",
+   "series": "la-coupure",
+   "series_file": "series/la-coupure.md",
+   "prefix": "coupure",
    "episode_count": 3,
-   "next_episode": 4
+   "next_episode": 2
   },
   {
    "slot": "12:00",
-   "series": "l-eau-du-septieme",
-   "series_file": "series/l-eau-du-septieme.md",
-   "prefix": "eau",
+   "series": "le-tunnel",
+   "series_file": "series/le-tunnel.md",
+   "prefix": "tunnel",
    "episode_count": 3,
-   "next_episode": 4
+   "next_episode": 2
   },
   {
    "slot": "18:00",
-   "series": "la-bande",
-   "series_file": "series/la-bande.md",
-   "prefix": "bande",
+   "series": "chambre-neuf",
+   "series_file": "series/chambre-neuf.md",
+   "prefix": "chambre9",
    "episode_count": 3,
-   "next_episode": 4
+   "next_episode": 2
   },
   {
    "slot": "20:00",
-   "series": "la-photo",
-   "series_file": "series/la-photo.md",
-   "prefix": "photo",
+   "series": "le-ferry",
+   "series_file": "series/le-ferry.md",
+   "prefix": "ferry",
    "episode_count": 3,
-   "next_episode": 4
+   "next_episode": 2
   }
  ],
- "cycle1_fini": "17/11 : les 4 séries du cycle 1 sont finies (3 parties chacune). Le 18/11 : 4 NOUVELLES séries (ROUTINE.md § 1)."
+ "cycle2": "18/11 au 20/11 : La Coupure 10h, Le Tunnel 12h, Chambre neuf 18h, Le Ferry 20h. Le 21/11 : 4 nouvelles séries."
 }

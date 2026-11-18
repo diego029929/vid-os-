@@ -497,3 +497,30 @@ creux à 11 h, 13 h-14 h et après 21 h).
   Durées : 45,0 / 43,4 / 49,1 / 49,8 s (≈ 800-840 car. avec les répliques Chatterbox) → viser ≤ 780 caractères.
 - Programmé (Zernio, TikTok + Instagram) : Station p3 10h, Eau p3 12h, Bande p3 18h, Photo p3 20h. Cycle 1 FINI :
   le 18/11, 4 nouvelles séries.
+
+### 18/11 (cycle 2, parties 1 : La Coupure, Le Tunnel, Chambre neuf, Le Ferry)
+
+- Comptes Zernio OK, les 4 posts du 17/11 publiés sur TikTok et Instagram.
+- **Stats 17/11 (≈ 8-19 h de recul)** — TikTok vues / likes / commentaires / enregistrements / temps moyen / complétion, puis Instagram vues / temps moyen / skip :
+  - La Station p3 10h : **270** / **17** / 0 / 2 / **8,5 s** / **5,3 %** — Insta **189** / 9,0 s / 53 % ;
+  - L'eau du septième p3 12h : 260 / 6 / 1 / 1 / 8,0 s / 4,0 % — Insta 145 / 5,4 s / 63 % ;
+  - La Bande p3 18h : 241 / 6 / 0 / **4** / 4,8 s / 0,8 % — Insta 152 / 6,1 s / 53 % ;
+  - La Photo p3 20h : 247 / 8 / 0 / 1 / 8,2 s / 2,0 % — Insta 160 / **10,6 s** / 54 %.
+- Lecture : 1er jour de la voix de femme Piper : vues stables (≈ 240-270 TikTok) et Instagram en hausse
+  (145-189 contre 107-131 la veille). La Station reste la meilleure sur les 3 parties (double qui imite, accroche
+  SMS + règle claire). La Bande reste la pire (4,8 s). Les vidéos de 49 s (Bande, Photo) ont la complétion la plus
+  basse → cycle 2 visé à 700-780 caractères (≈ 40-45 s).
+- Ce qui change pour le cycle 2 : 4 séries qui reprennent la recette de La Station (1er plan = SMS/notif + question,
+  règle claire dite par quelqu'un, menace qui imite un proche ou un lieu), 4 lieux différents (maison en Ardèche,
+  tunnel à Toulouse, hôpital en Normandie, ferry vers la Corse).
+- Votes partie 3 : Eau 1 commentaire « 1 » ; les autres 0. Cycle 1 fini (pas de suite prévue).
+- Test du spectateur : 1er jet clarté 6 / 8 / 7 / 7 (Coupure : règle « ne sors pas » alors que le choix est d'ouvrir
+  → règle « n'ouvre jamais la porte » ; Chambre 9 : aller voir seul n'avait aucune raison → moniteur qui bipe +
+  Nadia qui ne répond pas) ; 2e jet 6 / 8 / 7 avec corrections appliquées (photo « quelqu'un est assis à ta
+  place… il te ressemble », Clara paniquée, pull laissé sur la couchette, pas mouillés dans l'escalier).
+- Voix Piper : NON identique d'un rendu à l'autre (Le Tunnel rendu 4 fois). Mal lus : « pendant une coupure »
+  (« quand on coupe l'heure »), « de dos. Pourtant » , « maison louée » (« mouée »), « Toulouse » en fin de
+  phrase (« Touss »), « par ton surnom d'enfant », « une voix t'appelle », « sur ton biper », « vieille dame »
+  (« vieille Anne »), « ferry de nuit » (« nuire »), « pull » (« poule ») → « gilet », « sweat » (« souhait »).
+- Programmé (Zernio, TikTok + Instagram) : Coupure p1 10h, Tunnel p1 12h, Chambre neuf p1 18h, Ferry p1 20h.
+  Durées 46,3 / 43,1 / 42,3 / 40,4 s.
