@@ -144,7 +144,9 @@ puis planche contact.
   Wailing, Session 9, Absentia, The Endless, Calvaire, La Nuée, Dark Water
   (2002), A Tale of Two Sisters, The Void, Lovely Molly, Vacancy. Déjà
   pris : Pontypool + Ils (Jacques a dit), The Ritual + Resolution (Le
-  Refuge), Vacancy + Kairo (La Station). Noter le film en tête du fichier
+  Refuge), Vacancy + Kairo (La Station), Dark Water (L'eau du septième), Session 9
+  (La Bande), Lake Mungo (La Photo), Coherence (La Coupure), Absentia (Le
+  Tunnel), The Void (Chambre neuf), Triangle (Le Ferry). Noter le film en tête du fichier
   de la série. Les 4 séries d'un cycle ont 4 lieux et 4 ambiances
   différents.
 - Légende (`caption`) : 1re ligne = la question du vote + « Le plus de votes
@@ -191,8 +193,11 @@ puis planche contact.
   fin de phrase (« pain », « grillé »), « revenir », « ne réponds pas » (lu
   « n'en réponds pas » → « ne réponds jamais »). Nombres en lettres ; phrase
   lue différente de l'affichage dans `"voice"`.
-- La synthèse est la même d'un essai à l'autre (même phrase = même son) :
-  pour corriger, CHANGER la phrase. Tester une tournure douteuse seule
+- Piper (narrateur depuis le 17/11) n'est PAS identique d'un rendu à l'autre
+  (vu le 18/11 : une phrase juste au 1er rendu devient floue au suivant).
+  Après chaque rendu, retranscrire toute la vidéo ; si une phrase douteuse,
+  la découper (ffmpeg 3-5 s) et la retranscrire seule avant de conclure.
+  Une tournure qui échoue 2 fois : la CHANGER. Tester une tournure douteuse seule
   (`voice.synth` + Whisper medium) avant de relancer un rendu.
 
 ## 5. Les étapes de chaque matin
