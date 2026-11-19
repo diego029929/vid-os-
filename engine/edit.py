@@ -4,7 +4,9 @@ Usage : python3 engine/edit.py episodes/<f>.json OUT.mp4
 JSON :
   "source": "chemin/vers/video.mp4" (vidéo officielle téléchargée, voir ROUTINE.md § 1 ter)
   "bandes": 0.0556                 → coupe les bandes noires (ici 120 px en haut et en bas d'une source 2160p)
-  "bpm": 130, "graine": 1          → son d'edit fait maison (engine/beat.py), longueur = durée des plans
+  "musique": {"fichier": "/tmp/gta6/son.mp3", "credit": "…"}  → VRAI morceau Creative Commons (CC BY / BY-SA) :
+     tempo + drop détectés (librosa) ; option "chercher": [a, b] (s) pour viser un drop ; "bpm"/"drop" pour forcer
+  sinon "bpm": 130, "graine": 1          → son d'edit fait maison (engine/beat.py), longueur = durée des plans
   "plans": [{"t": 12.3, "temps": 2, "x": 0.5, "flash": true, "lent": false}, ...]
      t = début dans la source (s), temps = durée en temps du beat (1 = une noire), x = cadrage 9:16 (0 gauche → 1 droite),
      flash = éclair blanc à la coupe, entier = image entière sur fond flou (logo), lent = ralenti ×0.5 (prend 2× moins de source)
@@ -62,6 +64,21 @@ def plan(p, beat, out, base_dir):
          "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", out])
 
 
+def analyse(path, chercher):
+    """Tempo (BPM) et instant du « drop » (plus forte montée d'énergie d'un temps à l'autre) entre chercher[0] et chercher[1] s."""
+    import librosa
+    import numpy as np
+    y, sr = librosa.load(path, sr=22050, mono=True)
+    _, beats = librosa.beat.beat_track(y=y, sr=sr, units="time")
+    period = float(np.median(np.diff(beats)))
+    rms = librosa.feature.rms(y=y, hop_length=512)[0]
+    t = librosa.frames_to_time(np.arange(len(rms)), sr=sr)
+    bb = [x for x in beats if chercher[0] + 8 * period <= x <= chercher[1]]
+    e = np.array([float(np.mean(rms[(t >= bb[i]) & (t < bb[i + 1])])) + 1e-6 for i in range(len(bb) - 1)])
+    k = int(np.argmax(e[1:] / e[:-1])) + 1
+    return {"bpm": 60 / period, "drop": float(bb[k])}
+
+
 def esc(s):
     return s.replace("\\", "\\\\").replace(":", "\\:").replace("'", "’").replace("%", "\\%")
 
@@ -71,7 +88,15 @@ def build(ep_path, out):
     import beat as beatmod
     ep = json.load(open(ep_path))
     base_dir = os.path.dirname(os.path.abspath(ep_path))
-    bpm = ep.get("bpm", 130)
+    mus = ep.get("musique")
+    if mus:  # vrai morceau libre de droits (Creative Commons) : tempo et « drop » détectés si absents
+        mus = dict(mus)
+        if not os.path.isabs(mus["fichier"]):
+            mus["fichier"] = os.path.join(base_dir, mus["fichier"])
+        if "bpm" not in mus or "drop" not in mus:
+            mus.update(analyse(mus["fichier"], mus.get("chercher", [0, 90])))
+            print(f"musique : {mus['bpm']:.2f} BPM, drop à {mus['drop']:.2f} s", flush=True)
+    bpm = mus["bpm"] if mus else ep.get("bpm", 130)
     b = 60 / bpm
     tmp = tempfile.mkdtemp()
     parts = []
@@ -89,8 +114,12 @@ def build(ep_path, out):
     total_beats = sum(p["temps"] for p in ep["plans"])
     total = total_beats * b
     mesures = int(-(-total_beats // 4))
-    music = os.path.join(tmp, "beat.wav")
-    beatmod.write(music, beatmod.make(bpm, mesures, ep.get("graine", 1)))
+    if mus:  # le drop tombe au temps 8 (fin de l'intro)
+        music_in = ["-ss", f"{max(0.0, mus['drop'] - 8 * b):.3f}", "-i", mus["fichier"]]
+    else:
+        music = os.path.join(tmp, "beat.wav")
+        beatmod.write(music, beatmod.make(bpm, mesures, ep.get("graine", 1)))
+        music_in = ["-i", music]
     draw = []
     for t in ep.get("textes", []):
         a, z = t["de"] * b, t["a"] * b
@@ -99,7 +128,7 @@ def build(ep_path, out):
         draw.append(f"drawtext=fontfile={FONT}:text='{esc(t['txt'])}':fontsize={size}:fontcolor={t.get('couleur', 'white')}"
                     f":borderw=8:bordercolor=black:x=(w-tw)/2:y=h*{y}:enable='between(t,{a:.3f},{z:.3f})'")
     vf = ",".join(draw) if draw else "null"
-    run(["ffmpeg", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-i", music,
+    run(["ffmpeg", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, *music_in,
          "-vf", vf, "-af", f"afade=t=out:st={total - 0.6:.3f}:d=0.6,loudnorm=I=-14:TP=-1.5,aresample=44100,alimiter=limit=0.7:level=false",
          "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out])
