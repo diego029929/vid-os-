@@ -1,0 +1,136 @@
+{
+ "style": "edit",
+ "source": "/tmp/gta6/launch.mp4",
+ "bandes": 0.0556,
+ "bpm": 130,
+ "graine": 2,
+ "title": "Lucia edit 🔥 GTA 6",
+ "caption": "Lucia > tout le monde ? 🔥 1 = oui, 2 = Team Jason 👇 #gta6 #gtavi #lucia #edit #gta",
+ "plans": [
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_13.jpg",
+   "temps": 4,
+   "x": 0.1
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_11.jpg",
+   "temps": 4,
+   "x": 0.86
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_07.jpg",
+   "temps": 2,
+   "x": 0.67,
+   "flash": true
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_08.jpg",
+   "temps": 1,
+   "x": 0.57
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_02.jpg",
+   "temps": 1,
+   "x": 0.46
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_06.jpg",
+   "temps": 2,
+   "x": 0.46
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_05.jpg",
+   "temps": 1,
+   "x": 0.47
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_01.jpg",
+   "temps": 1,
+   "x": 0.93
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_09.jpg",
+   "temps": 2,
+   "x": 0.47
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_10.jpg",
+   "temps": 1,
+   "x": 0.53
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Jason and Lucia/Jason_and_Lucia_01.jpg",
+   "temps": 1,
+   "x": 0.21
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
+   "temps": 2,
+   "x": 0.14
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Jason and Lucia/Jason_and_Lucia_03.jpg",
+   "temps": 1,
+   "x": 0.21
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Jason and Lucia/Jason_and_Lucia_04.jpg",
+   "temps": 1,
+   "x": 0.86
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_12.jpg",
+   "temps": 2,
+   "x": 0.24
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_14.jpg",
+   "temps": 2,
+   "x": 0.24
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Jason and Lucia/Jason_and_Lucia_07.jpg",
+   "temps": 1,
+   "x": 0.36
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
+   "temps": 2,
+   "x": 0.24
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
+   "temps": 2,
+   "x": 0.57
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_04.jpg",
+   "temps": 2,
+   "x": 0.14
+  },
+  {
+   "t": 77.3,
+   "temps": 5,
+   "x": 0.5,
+   "entier": true,
+   "punch": 0.04,
+   "flash": true
+  }
+ ],
+ "textes": [
+  {
+   "de": 0,
+   "a": 8,
+   "txt": "LUCIA",
+   "y": 0.16,
+   "taille": 160
+  },
+  {
+   "de": 35,
+   "a": 40,
+   "txt": "TEAM LUCIA (1) OU JASON (2) ?",
+   "y": 0.68,
+   "taille": 72
+  }
+ ]
+}
