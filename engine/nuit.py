@@ -4,7 +4,8 @@
 Une seule commande fait tout : voix (Chatterbox, voix de la routine), calage des sous-titres (Whisper
 small), bruitages, dessin (engine/nuit.js filmé par Playwright) et MP4 final.
 
-Usage : python3 engine/nuit.py episodes/<f>.json OUT.mp4 [--brouillon]
+Usage : python3 engine/nuit.py episodes/<f>.json OUT.mp4 [--brouillon] [--verif]
+  --verif : 3 essais Piper par phrase du narrateur, Whisper medium garde le meilleur (plus lent, plus sûr).
   --brouillon : pas de voix (durée estimée), 10 images/s → planche rapide pour vérifier le dessin.
 Format du JSON : voir ROUTINE.md § « Style Nuit & téléphone ».
 """
@@ -122,7 +123,32 @@ def sfx_wav(name, path):
                     "-af", "lowpass=f=2500" if name == "souffle" else "anull", path], check=True)
 
 
-def build(ep_path, out, draft=False):
+_VERIF = {}
+
+
+def _num_words(txt):
+    """Chiffres → mots (Whisper écrit « 13 », le sous-titre « treize »)."""
+    try:
+        from num2words import num2words
+        return re.sub(r"\d+", lambda m: num2words(int(m.group()), lang="fr"), txt)
+    except Exception:
+        return txt
+
+
+def verif_score(audio, expected, tmp):
+    import difflib
+    import voice
+    import whisper
+    if "m" not in _VERIF:
+        _VERIF["m"] = whisper.load_model("medium")
+    p = os.path.join(tmp, "verif.wav")
+    voice.write_wav(p, audio)
+    heard = _VERIF["m"].transcribe(p, language="fr")["text"]
+    n = lambda t: " ".join(norm(w) for w in _num_words(strip_marks(t)).replace("-", " ").split())
+    return difflib.SequenceMatcher(None, n(heard), n(expected)).ratio()
+
+
+def build(ep_path, out, draft=False, verif=False):
     ep = json.load(open(ep_path))
     beats = ep["beats"]
     tmp = tempfile.mkdtemp()
@@ -146,13 +172,30 @@ def build(ep_path, out, draft=False):
             voice.CB_REF = os.path.join(ROOT, "assets", "ref", info["voix"]) if info.get("voix") else default_ref
             voice.VOICE = "chatterbox" if info.get("voix") else narrateur  # personnages : Chatterbox ; narrateur : voix de la config
             voice.RETRY = b.get("retry", 0)
-            a = voice.synth(strip_marks(b["voice"]))
-            if not info.get("voix"):
-                a = voice.megaphone(a, tmp)  # effet du narrateur (voice_config.json : « megaphone » = voix des premières vidéos)
+            # "lu" = texte prononcé si différent du sous-titre (ex. « Gé Té A » pour GTA)
+            # --verif : Piper n'est pas identique d'un essai à l'autre → 3 essais par phrase du narrateur,
+            # Whisper medium garde celui qui ressemble le plus au sous-titre
+            tries = 3 if (verif and not info.get("voix")) else 1
+            best = None
+            for _ in range(tries):
+                a = voice.synth(strip_marks(b.get("lu", b["voice"])))
+                if not info.get("voix"):
+                    a = voice.megaphone(a, tmp)  # effet du narrateur (voice_config.json : « megaphone » = voix des premières vidéos)
+                if tries == 1:
+                    break
+                score = verif_score(a, b["voice"], tmp)
+                if best is None or score > best[0]:
+                    best = (score, a)
+                if score >= 0.97:
+                    break
+            if best is not None:
+                a = best[1]
+                print(f"  vérif voix : {best[0]:.2f}", flush=True)
             parts += [a, np.zeros(int(GAP * voice.SR), np.float32)]
             durs.append(len(a) / voice.SR + GAP)
             print(f"voix {len(durs)}/{len(beats)} : {strip_marks(b['voice'])}", flush=True)
         voice.CB_REF = default_ref
+        _VERIF.clear()
         sr = voice.SR
         voice_track = np.concatenate(parts + [np.zeros(int(END_HOLD * sr), np.float32)])
     durs[-1] += END_HOLD
@@ -258,4 +301,4 @@ def build(ep_path, out, draft=False):
 
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    build(args[0], args[1], draft="--brouillon" in sys.argv)
+    build(args[0], args[1], draft="--brouillon" in sys.argv, verif="--verif" in sys.argv)

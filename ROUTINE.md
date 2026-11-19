@@ -129,6 +129,44 @@ puis planche contact.
   `engine/nuit.js` (même style : aplats violets, fenêtres jaunes, `lamp()`,
   `win()`, `door()`, `floor()`), puis brouillon + planche avant le rendu.
 
+## 1 ter. Clips GTA 6 (EN PLUS des 4 séries, demande de Fio le 19/11)
+
+- **19/11 : les 2 clips (gta6-01 à 8h, gta6-02 à 9h) sont DÉJÀ programmés
+  dans Zernio → ne pas en refaire ce jour-là ; commencer le 20/11 avec gta6-03.**
+- **2 clips par jour, 08:00 et 09:00 (Paris)**, TikTok + Instagram, en plus
+  des 4 épisodes (6 vidéos/jour, limite Zernio 15). Ne pas toucher aux
+  créneaux 10h/12h/18h/20h. GTA 6 est sorti le 19/11/2026 (PS5 + Xbox
+  Series, pas de PC annoncé).
+- **Sujet du jour = une info VRAIE et récente** : faire une recherche web
+  chaque matin (actu, mise à jour, record de ventes, version PC, astuces,
+  secrets de la carte, notes de la presse…). Chaque fait doit venir de 2
+  sources sérieuses ; jamais de rumeur présentée comme sûre (dire « selon
+  … » ou ne pas en parler). Sujets déjà traités : `series/state.json` →
+  `gta6.deja_traite` (ne pas refaire le même).
+- **Droits d'auteur** : AUCUNE image, vidéo, musique ou logo de Rockstar.
+  Tout est dessiné par `engine/nuit.js` (décors `vice` = plage Vice City au
+  coucher de soleil, `gamer` = chambre de joueur avec la télé, option
+  `"chargement": 0-1` = barre de chargement) + perso capuche, téléphones,
+  cartes d'info (`"regle": {"label": "LE PRIX", "txt": "…"}` remplace « RÈGLE
+  N°n »). Modèles : `episodes/gta6-01.json`, `episodes/gta6-02.json`.
+- Format : 30 à 40 s, ≤ 650 caractères lus, 8 à 10 plans, `"etiquette":
+  "GTA 6 · INFO"`. 1re phrase = l'info choc. Fin = plan `choix` (avis du
+  joueur : « 1 · … OU 2 · … », `"vote": "Réponds en commentaire 👇"`).
+  Légende : la question + « 👇 » + `#gta6 #gtavi #gta #jeuxvideo` + 1 tag.
+  `title` sans « Partie N ».
+- **Prononciation (voix Piper)** : écrire le sous-titre dans `"voice"` et
+  le texte prononcé dans `"lu"` : « GTA » → « Gé Té A » (jamais en tout
+  début de phrase : « Ça y est, le jeu Gé Té A six… »), « Vice City » →
+  « Vaïce Citi », « Jason » → « Djéïsone » (dire « Jason et Lucia », pas
+  « Lucia et Jason » : lu « Lucien »), « Vintage » → « Vintédje »,
+  « Ultimate » → « ultime ». Éviter « à minuit, » seul (lu « mi-mille »).
+- Rendu : `python3 engine/nuit.py episodes/gta6-NN.json /tmp/gta6-NN.mp4
+  --verif` (3 essais Piper par phrase, Whisper garde le meilleur ;
+  ≈ 5 min), puis les mêmes contrôles qu'au § 5 (planche, Whisper, check_video
+  `--min 28 --max 45`). Faire les clips GTA APRÈS les 4 épisodes.
+- Si les stats GTA sont meilleures que les séries pendant 7 jours, on peut
+  passer à 3 clips/jour (Fio a autorisé les changements de concept).
+
 ## 2. Règles d'écriture (Fio)
 
 - **Clair et précis** : chaque réplique se comprend en 2 secondes. Une idée
@@ -204,7 +242,8 @@ puis planche contact.
 
 0. Installer : `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url
    https://download.pytorch.org/whl/cpu`, puis `pip install -q
-   chatterbox-tts piper-tts language_tool_python openai-whisper playwright` (≈ 3 min ;
+   chatterbox-tts piper-tts language_tool_python openai-whisper playwright` puis
+   `pip install -q --no-deps num2words` (pour `--verif`) (≈ 3 min ;
    Playwright utilise le Chromium déjà installé `/opt/pw-browsers/chromium`,
    ne PAS lancer `playwright install`). Si
    l'installation échoue : ne rien publier, le dire.

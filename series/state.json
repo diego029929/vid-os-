@@ -343,6 +343,20 @@
    "file": "episodes/ferry-01.json",
    "slot": "2026-11-18T20:00:00 Europe/Paris",
    "zernio_id": "6afd3c57a44e92206e46bbbb"
+  },
+  {
+   "series": "gta6",
+   "episode": 1,
+   "file": "episodes/gta6-01.json",
+   "slot": "2026-11-19T08:00:00 Europe/Paris",
+   "zernio_id": "6afe3cf916f3e1768f629ebf"
+  },
+  {
+   "series": "gta6",
+   "episode": 2,
+   "file": "episodes/gta6-02.json",
+   "slot": "2026-11-19T09:00:00 Europe/Paris",
+   "zernio_id": "6afe3cfa74baae2e2777d565"
   }
  ],
  "survis_next": 15,
@@ -708,5 +722,17 @@
    "next_episode": 2
   }
  ],
- "cycle2": "18/11 au 20/11 : La Coupure 10h, Le Tunnel 12h, Chambre neuf 18h, Le Ferry 20h. Le 21/11 : 4 nouvelles séries."
+ "cycle2": "18/11 au 20/11 : La Coupure 10h, Le Tunnel 12h, Chambre neuf 18h, Le Ferry 20h. Le 21/11 : 4 nouvelles séries.",
+ "gta6": {
+  "slots": [
+   "08:00",
+   "09:00"
+  ],
+  "next": 3,
+  "note": "Clips GTA 6 en plus des 4 séries (demande de Fio, 19/11). Voir ROUTINE.md § 1 ter.",
+  "deja_traite": [
+   "sortie 19/11, prix, taille, plateformes, PC, pack Vintage Vice City (gta6-01)",
+   "13 ans d'attente, reports (gta6-02)"
+  ]
+ }
 }
