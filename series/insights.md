@@ -524,3 +524,27 @@ creux à 11 h, 13 h-14 h et après 21 h).
   (« vieille Anne »), « ferry de nuit » (« nuire »), « pull » (« poule ») → « gilet », « sweat » (« souhait »).
 - Programmé (Zernio, TikTok + Instagram) : Coupure p1 10h, Tunnel p1 12h, Chambre neuf p1 18h, Ferry p1 20h.
   Durées 46,3 / 43,1 / 42,3 / 40,4 s.
+
+### 19/11 (cycle 2, parties 2 + 1ers clips GTA 6 à 8h/9h)
+
+- Comptes Zernio OK, les 4 posts du 18/11 publiés sur TikTok et Instagram ; gta6-01/02 programmés (8h, 9h).
+- **Stats 18/11 (≈ 10-20 h de recul)** — TikTok vues / likes / commentaires / partages / temps moyen / complétion, puis Instagram vues / temps moyen :
+  - La Coupure p1 10h : 218 / 8 / **3** / 0 / 9,0 s / 6,6 % — Insta **187** / 9,1 s ;
+  - Le Tunnel p1 12h : 220 / **18** / 1 / **2** / **9,8 s** / **7,4 %** — Insta 153 / 7,6 s ;
+  - Chambre neuf p1 18h : 255 / 5 / 0 / 0 / 4,4 s / 2,3 % — Insta 136 / 4,9 s ;
+  - Le Ferry p1 20h : 233 / 12 / 0 / 1 / 6,4 s / 1,6 % — Insta 145 / 7,2 s.
+- Lecture : vues toujours au plateau (≈ 220-255 TikTok), mais Le Tunnel et La Coupure ont les meilleurs temps
+  moyens depuis le style nuit (9-10 s) et La Coupure a eu 3 vrais votes (1er vote ≥ 3 depuis longtemps). Les deux
+  commencent par un SMS d'un proche qui ne devrait pas pouvoir écrire. Chambre neuf (1er plan = alerte de biper,
+  pas un proche) décroche dès 4 s → pour les parties 3 et le cycle 3 : 1er plan = message d'un PROCHE nommé.
+- Votes partie 1 : Coupure **3 × « 2 »** (laisser fermé, vrai vote) ; Tunnel 1 × « 1 » (< 3 → on suit le vote reçu :
+  entrer) ; Chambre neuf 0 → tirage 2 (réveiller Nadia) ; Ferry 0 → tirage 1 (monter sur le pont).
+- Test du spectateur : Tunnel 8/10 et Chambre neuf 8/10 au 2e jet ; Coupure et Ferry réécrits 3 fois (accroche
+  qui renvoyait à la partie 1, règle qui ne servait à rien, choix « piège »).
+- Voix Piper : tous les rendus en `--verif` (3 essais par phrase). Mal lus aujourd'hui (changés) : « la lampe de ton
+  téléphone » (« langue »), « supplie » (« suit »), « Clara et toi louez » (« Clara, toi loué »), « dit ton prénom »,
+  « j'en reviens. Il n'y a personne » (« je reviens digni »), « la chambre neuf est vide » (« neuf févide »),
+  « sauve-toi » (« sauf toi »), « te tourne le dos. C'est ta veste » (« le dos de ta veste »), « c'est moi qui serai
+  toi ». Whisper écrit « ami » pour « amie », « fosse » pour « fausse » (son correct en écoute découpée).
+- Programmé (Zernio, TikTok + Instagram) : Coupure p2 10h, Tunnel p2 12h, Chambre neuf p2 18h, Ferry p2 20h
+  (+ gta6-01 8h, gta6-02 9h déjà programmés). Durées 45,8 / 46,0 / 45,9 / 43,3 s.

@@ -12,5 +12,5 @@ Style « Nuit & téléphone » (`engine/nuit.py`). Décors utilisés : `chambre`
 | Partie | Situation | Vote final |
 |---|---|---|
 | 1 (18/11, `episodes/ferry-01.json`) | 2 h 47 : Hugo « pourquoi tu cries toute seule sur le pont ? » ; règle de l'équipage ; couloir vide, portes ouvertes ; photo d'une fille avec ton pull au bord du pont ; « elle a ton visage » ; Hugo ne répond plus ; pas mouillés au-dessus de ta cabine | 1 : monter sur le pont / 2 : t'enfermer dans ta cabine |
-| 2 (19/11) | selon le vote | |
+| 2 (19/11, `episodes/ferry-02.json`) | tirage « monter sur le pont » : Hugo « viens vite » ; téléphone d'Hugo par terre ; ta double en veste orange : « Hugo est tombé à la mer, je prends ta place » ; porte de ta cabine claque ; voix d'Hugo dans la mer | 1 : lancer la bouée / 2 : poursuivre ta double |
 | 3 (20/11, dernière) | selon le vote | |

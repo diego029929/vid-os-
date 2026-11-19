@@ -357,6 +357,34 @@
    "file": "episodes/gta6-02.json",
    "slot": "2026-11-19T09:00:00 Europe/Paris",
    "zernio_id": "6afe3cfa74baae2e2777d565"
+  },
+  {
+   "series": "la-coupure",
+   "episode": 2,
+   "file": "episodes/coupure-02.json",
+   "slot": "2026-11-19T10:00:00 Europe/Paris",
+   "zernio_id": "6afe84a14892cd39aac3feb7"
+  },
+  {
+   "series": "le-tunnel",
+   "episode": 2,
+   "file": "episodes/tunnel-02.json",
+   "slot": "2026-11-19T12:00:00 Europe/Paris",
+   "zernio_id": "6afe8227791dfc4cd3544eeb"
+  },
+  {
+   "series": "chambre-neuf",
+   "episode": 2,
+   "file": "episodes/chambre9-02.json",
+   "slot": "2026-11-19T18:00:00 Europe/Paris",
+   "zernio_id": "6afe8c5fa9ab6ec13bd2288c"
+  },
+  {
+   "series": "le-ferry",
+   "episode": 2,
+   "file": "episodes/ferry-02.json",
+   "slot": "2026-11-19T20:00:00 Europe/Paris",
+   "zernio_id": "6afe8a9de169c9010f3ce453"
   }
  ],
  "survis_next": 15,
@@ -505,7 +533,14 @@
    "tunnel": "1 entrer dans le tunnel / 2 appeler ta mère d'abord",
    "chambre9": "1 aller voir seul / 2 monter réveiller Nadia",
    "ferry": "1 monter sur le pont / 2 t'enfermer dans ta cabine",
-   "result": "à compter le 19/11"
+   "result": "19/11 : Coupure 3 × « 2 » (vrai vote → laisser fermé) ; Tunnel 1 × « 1 » (< 3, on suit le vote reçu → entrer) ; Chambre neuf 0 → tirage 2 (réveiller Nadia) ; Ferry 0 → tirage 1 (monter sur le pont)"
+  },
+  "cycle2_partie2": {
+   "coupure": "1 répondre à Clara / 2 fuir par le jardin sans un mot",
+   "tunnel": "1 creuser le mur / 2 rentrer à la maison",
+   "chambre9": "1 descendre à la chambre 9 / 2 rester avec cette Nadia",
+   "ferry": "1 lancer la bouée à Hugo / 2 poursuivre ta double",
+   "result": "à compter le 20/11"
   }
  },
  "previous_series": "jacques-a-dit",
@@ -695,7 +730,7 @@
    "series_file": "series/la-coupure.md",
    "prefix": "coupure",
    "episode_count": 3,
-   "next_episode": 2
+   "next_episode": 3
   },
   {
    "slot": "12:00",
@@ -703,7 +738,7 @@
    "series_file": "series/le-tunnel.md",
    "prefix": "tunnel",
    "episode_count": 3,
-   "next_episode": 2
+   "next_episode": 3
   },
   {
    "slot": "18:00",
@@ -711,7 +746,7 @@
    "series_file": "series/chambre-neuf.md",
    "prefix": "chambre9",
    "episode_count": 3,
-   "next_episode": 2
+   "next_episode": 3
   },
   {
    "slot": "20:00",
@@ -719,7 +754,7 @@
    "series_file": "series/le-ferry.md",
    "prefix": "ferry",
    "episode_count": 3,
-   "next_episode": 2
+   "next_episode": 3
   }
  ],
  "cycle2": "18/11 au 20/11 : La Coupure 10h, Le Tunnel 12h, Chambre neuf 18h, Le Ferry 20h. Le 21/11 : 4 nouvelles séries.",
