@@ -127,6 +127,33 @@ const DECORS = {
     s += `<rect x="290" y="420" width="500" height="560" rx="20" fill="#9fb2d9" stroke="#cfd3e8" stroke-width="14"/><rect x="310" y="440" width="460" height="520" rx="12" fill="#3a4a7a"/>
       ${P.reflet ? `<g opacity=".9"><circle cx="540" cy="700" r="110" fill="#05040c"/><circle cx="505" cy="705" r="11" fill="#fff"/><circle cx="575" cy="705" r="11" fill="#fff"/></g>` : ''}
       <rect x="320" y="1060" width="440" height="80" rx="20" fill="#e8ecf5"/><rect x="500" y="1140" width="80" height="400" fill="#cfd3e8"/>${lamp(540, 200, P.flicker ? FL : 1)}${floor(1560, '#2c3766', '#141a33')}`; return s; },
+  // --- décors « Vice » (clips GTA 6, 19/11) : plage au coucher de soleil, chambre de joueur
+  vice: (P, t, off) => { let s = `<defs><linearGradient id="vsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a0f4f"/><stop offset=".45" stop-color="#c2307a"/><stop offset=".75" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ffc86b"/></linearGradient>
+    <linearGradient id="vsun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe36b"/><stop offset="1" stop-color="#ff4f7b"/></linearGradient></defs>
+    <rect width="${VW}" height="${VH}" fill="url(#vsky)"/><circle cx="540" cy="900" r="300" fill="url(#vsun)"/>`;
+    for (let i = 0; i < 6; i++) s += `<rect x="200" y="${930 + i * 38}" width="680" height="${6 + i * 4}" fill="#c2307a"/>`;
+    for (let i = 0; i < 18; i++) { const w = 70 + rnd(i) * 90, h = 120 + rnd(i * 3) * 330, x = ((i * 70 - off * 0.3) % 1300 + 1300) % 1300 - 110;
+      s += `<rect x="${x}" y="${1180 - h}" width="${w}" height="${h}" fill="#3a1450" opacity=".85"/>`;
+      for (let r = 0; r < h / 60 - 1; r++) if (rnd(i * 31 + r) > 0.5) s += `<rect x="${x + 14}" y="${1180 - h + 24 + r * 58}" width="${w - 28}" height="10" fill="#ff7ad9" opacity=".7"/>`; }
+    s += `<rect y="1180" width="${VW}" height="260" fill="#3b1d6e"/>`;
+    for (let i = 0; i < 10; i++) s += `<rect x="${(i * 137 + Math.sin(t * 1.5 + i) * 40 + 1080) % 1080}" y="${1200 + i * 22}" width="${160 - i * 8}" height="6" fill="#ffb36b" opacity="${0.6 - i * 0.04}"/>`;
+    s += `<path d="M0 1440 Q540 1400 1080 1440 V1920 H0z" fill="#f2c27b"/><rect y="1600" width="${VW}" height="320" fill="#e0a862"/>`;
+    const palm = (x, y, sc, sw) => { let q = `<path d="M${x} ${y} Q${x + 30 * sc} ${y - 300 * sc} ${x + 10 * sc} ${y - 620 * sc}" stroke="#1a0b2e" stroke-width="${26 * sc}" fill="none"/>`;
+      const tx = x + 10 * sc, ty = y - 620 * sc;
+      for (let k = 0; k < 7; k++) { const a = -Math.PI * (0.05 + k * 0.15) + sw; q += `<path d="M${tx} ${ty} Q${tx + Math.cos(a) * 180 * sc} ${ty + Math.sin(a) * 180 * sc - 60 * sc} ${tx + Math.cos(a) * 330 * sc} ${ty + Math.sin(a) * 200 * sc + 90 * sc}" stroke="#1a0b2e" stroke-width="${30 * sc}" fill="none" stroke-linecap="round"/>`; }
+      return q; };
+    s += palm(110, 1700, 1.25, Math.sin(t * 1.3) * 0.05) + palm(980, 1640, 1.0, Math.sin(t * 1.1 + 1) * 0.05);
+    return s; },
+  gamer: (P, t) => { const tv = 0.85 + 0.15 * Math.sin(t * 3);
+    let s = `<rect width="${VW}" height="${VH}" fill="#140c2e"/><rect x="0" y="0" width="${VW}" height="60" fill="#ff3fa4" opacity=".55"/>
+    <rect x="110" y="430" width="860" height="520" rx="18" fill="#05040c" stroke="#2c2660" stroke-width="16"/>
+    <svg x="126" y="446" width="828" height="488" viewBox="0 400 1080 1200" preserveAspectRatio="xMidYMid slice"><g opacity="${tv}">${DECORS.vice(P, t, t * 40)}</g></svg>
+    ${P.chargement !== undefined ? `<rect x="250" y="880" width="580" height="22" rx="11" fill="#05040c" opacity=".7"/><rect x="250" y="880" width="${580 * Math.min(1, P.chargement + t * 0.04)}" height="22" rx="11" fill="#fff"/>` : ''}
+    <ellipse cx="540" cy="700" rx="700" ry="520" fill="#ff5fa8" opacity="${0.1 * tv}"/>
+    <rect x="200" y="950" width="680" height="40" fill="#24184d"/><rect x="450" y="990" width="180" height="40" fill="#1a1238"/>
+    ${floor(1540, '#2a1b55', '#120a26')}<rect x="560" y="1050" width="420" height="40" rx="8" fill="#3b2a78"/><rect x="600" y="1090" width="20" height="450" fill="#24184d"/><rect x="920" y="1090" width="20" height="450" fill="#24184d"/>
+    <rect x="860" y="900" width="70" height="150" rx="16" fill="#e8ecf5"/><rect x="845" y="1035" width="100" height="15" rx="6" fill="#cfd3e8"/><rect x="890" y="920" width="10" height="110" rx="5" fill="#2f7bff" opacity="${0.6 + 0.4 * Math.sin(t * 4)}"/>`;
+    return s; },
   noir: () => `<rect width="${VW}" height="${VH}" fill="#05040c"/>`,
 };
 
@@ -231,9 +258,9 @@ const OBJ = {
 };
 
 // ------------------------------------------------------------------ cartes
-function regle(t, n, txt) { const a = ease(t / 0.25);
+function regle(t, n, txt, label) { const a = ease(t / 0.25);
   return `<div class="card"></div><div style="position:absolute;top:700px;left:60px;right:60px;text-align:center;transform:scale(${0.85 + 0.15 * a});opacity:${a}">
-    <span style="display:inline-block;background:#e0202a;color:#fff;font-family:Anton;font-size:84px;padding:6px 40px;border-radius:14px;border:4px solid #ff8a8f">RÈGLE N°${n}</span>
+    <span style="display:inline-block;background:#e0202a;color:#fff;font-family:Anton;font-size:84px;padding:6px 40px;border-radius:14px;border:4px solid #ff8a8f">${label ? esc(label) : 'RÈGLE N°' + n}</span>
     <div style="font-family:Anton;color:#fff;font-size:112px;margin-top:40px;line-height:1.05;text-transform:uppercase">${esc(txt).replace(/\n/g, '<br>')}</div></div>`; }
 function choix(t, a1, a2) { const p = k => ease((t - 0.15 * k) / 0.3);
   return `<div class="card" style="background:radial-gradient(circle at 50% 45%,#1a1747,#07061a)"></div>
@@ -258,7 +285,7 @@ function hms(base, t) { const [h, m, s] = base.split(':').map(Number); const x =
   return [Math.floor(x / 3600) % 24, Math.floor(x / 60) % 60, x % 60].map(v => String(v).padStart(2, '0')).join(':'); }
 
 // ------------------------------------------------------------------ une image
-const LIEUX = { rue: 'RUE', chambre: 'CHAMBRE', couloir: 'COULOIR', salon: 'SALON', cuisine: 'CUISINE', escalier: 'ESCALIER', foret: 'FORÊT', station: 'STATION', mer: 'PLAGE', hopital: 'HÔPITAL', cave: 'CAVE', voiture: 'VOITURE', sdb: 'SALLE DE BAIN' };
+const LIEUX = { rue: 'RUE', chambre: 'CHAMBRE', couloir: 'COULOIR', salon: 'SALON', cuisine: 'CUISINE', escalier: 'ESCALIER', foret: 'FORÊT', station: 'STATION', mer: 'PLAGE', hopital: 'HÔPITAL', cave: 'CAVE', voiture: 'VOITURE', sdb: 'SALLE DE BAIN', vice: 'VICE CITY', gamer: 'CHEZ TOI' };
 let LIEU = (EP.beats0 || '');
 for (const b of BEATS) if (b.lieu || b.vue) { LIEU = b.lieu || (EP.lieux || {})[b.vue] || LIEUX[b.vue] || ''; break; }
 let LASTVUE = (BEATS.find(b => b.vue && !b.tel) || {}).vue || 'rue';
@@ -271,7 +298,7 @@ window.seek = function (t) {
   if ((P.hero || 'debout') == 'marche') OFF += (t - lastT) * 90; lastT = t;
   let html = '', zoom = 1, ox = 540, oy = 1000;
   const intro = ease(lt / 0.22);
-  if (P.regle) html = regle(lt, P.regle.n, P.regle.txt);
+  if (P.regle) html = regle(lt, P.regle.n, P.regle.txt, P.regle.label);
   else if (P.choix) html = choix(lt, P.choix.a, P.choix.b);
   else if (P.objet) { html = (OBJ[P.objet.type] || OBJ.porte)(P.objet, lt); zoom = 1.06 - 0.06 * intro + 0.012 * lt; }
   else {
