@@ -137,20 +137,35 @@ puis planche contact.
 
 - **2 edits par jour, 08:00 et 09:00 (Paris)**, TikTok + Instagram, en plus
   des 4 épisodes (6 vidéos/jour). Ne pas toucher aux créneaux 10h/12h/18h/20h.
-- **20/11 : DÉJÀ programmés** (gta6-edit-01 bande-annonce 8h, gta6-edit-02
-  « Lucia edit » 9h) → ne rien refaire ce jour-là ; commencer le 21/11 avec
-  gta6-edit-03.
-- **Edit = ≈ 18 s, AUCUNE voix**, vraies images officielles coupées sur le
+- **20/11 : DÉJÀ programmé** : seulement 9h (gta6-edit-02, « Lucia edit »).
+  L'edit de 8h (bande-annonce) a été ANNULÉ par Fio (« juste le son est
+  nul… garde celle de 9h, pas celle de 8h »). Ne rien refaire le 20/11 ;
+  commencer le 21/11 avec gta6-edit-03 (8h) et 04 (9h).
+- **Edit = ≈ 17 s, AUCUNE voix**, vraies images officielles coupées sur le
   beat, zooms, flashs, 1-2 textes courts (Anton), fin sur le logo + une
   question à commenter (« 1 ou 2 »). Commande :
   `python3 engine/edit.py episodes/gta6-edit-NN.json /tmp/gta6-edit-NN.mp4`
-  (≈ 1 min 30). Modèles : `episodes/gta6-edit-01.json` (extraits de la
-  bande-annonce : `"t"` = seconde de la source) et `gta6-edit-02.json`
-  (captures : `"image"`). Format du JSON en tête de `engine/edit.py`.
-- **Son** : `engine/beat.py` (beat phonk fait maison, gratuit, sans droits),
-  130 BPM, 40 temps = 10 mesures ; intro 8 temps, le « drop » au temps 8
-  (y mettre `"flash": true`). Changer `"graine"` et/ou `"bpm"` (120-140)
-  d'un jour à l'autre. Jamais de musique connue (droits).
+  (≈ 2 min). Modèles : `episodes/gta6-edit-02.json` (captures `"image"`,
+  le modèle que Fio a GARDÉ) et `gta6-edit-01.json` (extraits de la
+  bande-annonce, `"t"` = seconde de la source). Format du JSON en tête de
+  `engine/edit.py`. Privilégier les edits par personnage / lieu à partir
+  des captures.
+- **Son = un VRAI morceau, jamais le beat maison** (`engine/beat.py`, jugé
+  nul par Fio le 19/11). Seulement des morceaux Creative Commons **CC BY ou
+  CC BY-SA** (PAS « NC », PAS « ND », jamais de musique connue). Les
+  trouver avec l'API Openverse (gratuite, sans clé) :
+  `curl -s -G https://api.openverse.org/v1/audio/ --data-urlencode q=trap
+  --data-urlencode license=by,by-sa --data-urlencode source=jamendo`,
+  puis télécharger l'URL `prod-1.storage.jamendo.com/?trackid=…&format=mp32`
+  dans `/tmp/gta6/son.mp3` (Wikimedia, Freesound et ccMixter refusent le
+  conteneur : ne pas insister). Dans le JSON : `"musique": {"fichier":
+  "/tmp/gta6/son.mp3", "chercher": [a, b], "credit": "…"}` : `edit.py`
+  trouve le tempo et le « drop » (librosa) et le place au temps 8 (y
+  mettre `"flash": true`). Morceaux validés : « Miami Trap (Club Mix) » de
+  Hasenchat (trackid 1301348, `"chercher": [30, 50]`) et « 09 Trap Bells
+  (Instrumental Mix) » de Hasenchat (trackid 1253537, `"chercher": [18,
+  40]`), CC BY-SA 3.0. Éviter > 150 BPM (vidéo < 15 s). **Toujours
+  créditer** en fin de légende : « 🎵 Titre – Artiste (CC BY-SA 3.0) ».
 - **Images : seulement les fichiers OFFICIELS que Rockstar met en
   téléchargement** sur rockstargames.com/VI/downloads (pas YouTube) :
   ```
@@ -259,7 +274,7 @@ puis planche contact.
 0. Installer : `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url
    https://download.pytorch.org/whl/cpu`, puis `pip install -q
    chatterbox-tts piper-tts language_tool_python openai-whisper playwright` puis
-   `pip install -q --no-deps num2words` (pour `--verif`) (≈ 3 min ;
+   `pip install -q --no-deps num2words` (pour `--verif`) et `pip install -q librosa` (edits GTA) et `pip install -q librosa` (edits GTA) (≈ 3 min ;
    Playwright utilise le Chromium déjà installé `/opt/pw-browsers/chromium`,
    ne PAS lancer `playwright install`). Si
    l'installation échoue : ne rien publier, le dire.

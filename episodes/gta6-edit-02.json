@@ -2,10 +2,8 @@
  "style": "edit",
  "source": "/tmp/gta6/launch.mp4",
  "bandes": 0.0556,
- "bpm": 130,
- "graine": 2,
  "title": "Lucia edit 🔥 GTA 6",
- "caption": "Lucia > tout le monde ? 🔥 1 = oui, 2 = Team Jason 👇 #gta6 #gtavi #lucia #edit #gta",
+ "caption": "Team Lucia (1) ou Team Jason (2) ? 🔥👇 #gta6 #gtavi #lucia #edit #gta\n🎵 Miami Trap (Club Mix) – Hasenchat (CC BY-SA 3.0)",
  "plans": [
   {
    "image": "/tmp/gta6/shots/People/Lucia Caminos/Lucia_Caminos_13.jpg",
@@ -132,5 +130,14 @@
    "y": 0.68,
    "taille": 72
   }
- ]
+ ],
+ "musique": {
+  "fichier": "/tmp/gta6/son.mp3",
+  "source": "https://prod-1.storage.jamendo.com/?trackid=1301348&format=mp32",
+  "chercher": [
+   30,
+   50
+  ],
+  "credit": "Miami Trap (Club Mix) – Hasenchat (CC BY-SA 3.0)"
+ }
 }

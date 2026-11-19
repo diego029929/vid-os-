@@ -388,17 +388,11 @@
   },
   {
    "series": "gta6-edit",
-   "episode": 1,
-   "file": "episodes/gta6-edit-01.json",
-   "slot": "2026-11-20T08:00:00 Europe/Paris",
-   "zernio_id": "6afef373c4d68b9c48e8c994"
-  },
-  {
-   "series": "gta6-edit",
    "episode": 2,
    "file": "episodes/gta6-edit-02.json",
    "slot": "2026-11-20T09:00:00 Europe/Paris",
-   "zernio_id": "6afef436823a05ee2525f656"
+   "zernio_id": "6aff21508480905cd1cb810b",
+   "note": "musique Miami Trap (Hasenchat, CC BY-SA 3.0)"
   }
  ],
  "survis_next": 15,
@@ -781,10 +775,10 @@
   "deja_traite": [
    "sortie 19/11, prix, taille, plateformes, PC, pack Vintage Vice City (gta6-01)",
    "13 ans d'attente, reports (gta6-02)",
-   "edit bande-annonce de lancement, mélange (gta6-edit-01)",
    "Lucia edit, captures (gta6-edit-02)"
   ],
   "format": "edit (vraies images officielles, sans voix, beat maison) depuis le 20/11",
-  "next_edit": 3
+  "next_edit": 3,
+  "note_19_11": "Fio 19/11 : beat maison NUL, edit bande-annonce de 8h annulé, garder Lucia edit. Musique = vrais morceaux Creative Commons."
  }
 }
