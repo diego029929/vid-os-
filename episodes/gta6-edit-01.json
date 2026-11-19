@@ -1,0 +1,143 @@
+{
+ "style": "edit",
+ "source": "/tmp/gta6/launch.mp4",
+ "source_url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+ "bpm": 130,
+ "graine": 1,
+ "title": "GTA 6 est sorti 🔥",
+ "caption": "GTA 6 est enfin là 🌴🔥 Tu y joues déjà ? 👇 #gta6 #gtavi #gta #edit #ps5",
+ "plans": [
+  {
+   "t": 3.2,
+   "temps": 4,
+   "x": 0.5
+  },
+  {
+   "t": 5.3,
+   "temps": 4,
+   "x": 0.5,
+   "lent": true
+  },
+  {
+   "t": 25.8,
+   "temps": 2,
+   "x": 0.5,
+   "flash": true
+  },
+  {
+   "t": 19.3,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 22.0,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 49.5,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 53.0,
+   "temps": 1,
+   "x": 0.5,
+   "flash": true
+  },
+  {
+   "t": 45.2,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 37.5,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 55.2,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 63.3,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 72.2,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 73.0,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 60.0,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 70.0,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 14.3,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 40.0,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 47.2,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 21.0,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 12.3,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 67.2,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 77.3,
+   "temps": 5,
+   "x": 0.5,
+   "flash": true,
+   "punch": 0.04,
+   "entier": true
+  }
+ ],
+ "textes": [
+  {
+   "de": 0,
+   "a": 8,
+   "txt": "GTA 6 EST SORTI",
+   "y": 0.18
+  },
+  {
+   "de": 35,
+   "a": 40,
+   "txt": "DISPO SUR PS5 & XBOX",
+   "y": 0.68,
+   "taille": 90
+  }
+ ],
+ "bandes": 0.0556
+}

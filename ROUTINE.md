@@ -129,43 +129,59 @@ puis planche contact.
   `engine/nuit.js` (même style : aplats violets, fenêtres jaunes, `lamp()`,
   `win()`, `door()`, `floor()`), puis brouillon + planche avant le rendu.
 
-## 1 ter. Clips GTA 6 (EN PLUS des 4 séries, demande de Fio le 19/11)
+## 1 ter. Edits GTA 6 (EN PLUS des 4 séries ; format changé par Fio le 19/11)
 
-- **19/11 : les 2 clips (gta6-01 à 8h, gta6-02 à 9h) sont DÉJÀ programmés
-  dans Zernio → ne pas en refaire ce jour-là ; commencer le 20/11 avec gta6-03.**
-- **2 clips par jour, 08:00 et 09:00 (Paris)**, TikTok + Instagram, en plus
-  des 4 épisodes (6 vidéos/jour, limite Zernio 15). Ne pas toucher aux
-  créneaux 10h/12h/18h/20h. GTA 6 est sorti le 19/11/2026 (PS5 + Xbox
-  Series, pas de PC annoncé).
-- **Sujet du jour = une info VRAIE et récente** : faire une recherche web
-  chaque matin (actu, mise à jour, record de ventes, version PC, astuces,
-  secrets de la carte, notes de la presse…). Chaque fait doit venir de 2
-  sources sérieuses ; jamais de rumeur présentée comme sûre (dire « selon
-  … » ou ne pas en parler). Sujets déjà traités : `series/state.json` →
-  `gta6.deja_traite` (ne pas refaire le même).
-- **Droits d'auteur** : AUCUNE image, vidéo, musique ou logo de Rockstar.
-  Tout est dessiné par `engine/nuit.js` (décors `vice` = plage Vice City au
-  coucher de soleil, `gamer` = chambre de joueur avec la télé, option
-  `"chargement": 0-1` = barre de chargement) + perso capuche, téléphones,
-  cartes d'info (`"regle": {"label": "LE PRIX", "txt": "…"}` remplace « RÈGLE
-  N°n »). Modèles : `episodes/gta6-01.json`, `episodes/gta6-02.json`.
-- Format : 30 à 40 s, ≤ 650 caractères lus, 8 à 10 plans, `"etiquette":
-  "GTA 6 · INFO"`. 1re phrase = l'info choc. Fin = plan `choix` (avis du
-  joueur : « 1 · … OU 2 · … », `"vote": "Réponds en commentaire 👇"`).
-  Légende : la question + « 👇 » + `#gta6 #gtavi #gta #jeuxvideo` + 1 tag.
-  `title` sans « Partie N ».
-- **Prononciation (voix Piper)** : écrire le sous-titre dans `"voice"` et
-  le texte prononcé dans `"lu"` : « GTA » → « Gé Té A » (jamais en tout
-  début de phrase : « Ça y est, le jeu Gé Té A six… »), « Vice City » →
-  « Vaïce Citi », « Jason » → « Djéïsone » (dire « Jason et Lucia », pas
-  « Lucia et Jason » : lu « Lucien »), « Vintage » → « Vintédje »,
-  « Ultimate » → « ultime ». Éviter « à minuit, » seul (lu « mi-mille »).
-- Rendu : `python3 engine/nuit.py episodes/gta6-NN.json /tmp/gta6-NN.mp4
-  --verif` (3 essais Piper par phrase, Whisper garde le meilleur ;
-  ≈ 5 min), puis les mêmes contrôles qu'au § 5 (planche, Whisper, check_video
-  `--min 28 --max 45`). Faire les clips GTA APRÈS les 4 épisodes.
-- Si les stats GTA sont meilleures que les séries pendant 7 jours, on peut
-  passer à 3 clips/jour (Fio a autorisé les changements de concept).
+> Fio, 19/11 : « J'voulais une édit avec de vraies images GTA, pas ça » et
+> « pas obligé de mettre de voix, juste un son d'edit ». Le format dessiné
+> + voix (gta6-01/02, publiés le 19/11) est ARRÊTÉ.
+
+- **2 edits par jour, 08:00 et 09:00 (Paris)**, TikTok + Instagram, en plus
+  des 4 épisodes (6 vidéos/jour). Ne pas toucher aux créneaux 10h/12h/18h/20h.
+- **20/11 : DÉJÀ programmés** (gta6-edit-01 bande-annonce 8h, gta6-edit-02
+  « Lucia edit » 9h) → ne rien refaire ce jour-là ; commencer le 21/11 avec
+  gta6-edit-03.
+- **Edit = ≈ 18 s, AUCUNE voix**, vraies images officielles coupées sur le
+  beat, zooms, flashs, 1-2 textes courts (Anton), fin sur le logo + une
+  question à commenter (« 1 ou 2 »). Commande :
+  `python3 engine/edit.py episodes/gta6-edit-NN.json /tmp/gta6-edit-NN.mp4`
+  (≈ 1 min 30). Modèles : `episodes/gta6-edit-01.json` (extraits de la
+  bande-annonce : `"t"` = seconde de la source) et `gta6-edit-02.json`
+  (captures : `"image"`). Format du JSON en tête de `engine/edit.py`.
+- **Son** : `engine/beat.py` (beat phonk fait maison, gratuit, sans droits),
+  130 BPM, 40 temps = 10 mesures ; intro 8 temps, le « drop » au temps 8
+  (y mettre `"flash": true`). Changer `"graine"` et/ou `"bpm"` (120-140)
+  d'un jour à l'autre. Jamais de musique connue (droits).
+- **Images : seulement les fichiers OFFICIELS que Rockstar met en
+  téléchargement** sur rockstargames.com/VI/downloads (pas YouTube) :
+  ```
+  mkdir -p /tmp/gta6 && cd /tmp/gta6
+  B=https://media-rockstargames-com.akamaized.net/VI/downloads
+  curl -sL -o launch.mp4 $B/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4   # 780 Mo, 4K, 89 s
+  curl -sL -o shots.zip $B/screenshots/GTAVI_Screenshots.zip && unzip -q shots.zip -d shots   # 138 captures 4K
+  ```
+  (aussi : `GTAVI_Vintage_Vice_City_Pack.zip`, `GTAVI_Ultimate_Edition_Benefits.zip`,
+  `artwork_wallpapers/GTAVI_Artwork_Wallpapers.zip` ; relire la page
+  `rockstargames.com/VI/downloads` : de nouvelles vidéos peuvent arriver).
+  Ne pas télécharger `GTAVI_An_Extended_Look.mp4` (14 Go). La bande-annonce
+  a des bandes noires : garder `"bandes": 0.0556`.
+- **Un thème par edit, jamais 2 fois le même** (noter dans
+  `series/state.json` → `gta6.deja_traite`) : Lucia, Jason, Vice City de
+  nuit, les voitures, la plage, les Keys, les braquages, les persos
+  secondaires (dossiers `shots/People/*`), Leonida (`shots/Places/*`),
+  « avant / après » GTA 5… Alterner : 8h = extraits de la bande-annonce,
+  9h = captures.
+- **Cadrage 9:16** : faire une planche des images en 16:9 avec une grille,
+  et régler `"x"` pour que le visage/sujet soit dans l'image :
+  `x = (centre du sujet − 0,15) / 0,70` (0 = gauche, 1 = droite). Vérifier
+  la planche de l'edit (`fps=2,tile=10x4`) : aucun visage coupé, pas de
+  bande noire, pas de plan tout blanc.
+- Contrôle : `python3 engine/check_video.py /tmp/gta6-edit-NN.mp4 --min 15
+  --max 30` (le « silence » n'existe pas ici). Zernio : comme § 5 mais
+  `"video_made_with_ai": false`. Légende : une question + « 👇 » +
+  `#gta6 #gtavi #gta #edit` + 1 tag.
+- Risque connu : ce sont des images de Rockstar (mises en téléchargement
+  par Rockstar pour les fans et la presse). Si TikTok/Instagram retire une
+  vidéo ou met un avertissement, ARRÊTER les edits et le dire à Fio.
 
 ## 2. Règles d'écriture (Fio)
 
