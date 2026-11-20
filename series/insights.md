@@ -548,3 +548,26 @@ creux à 11 h, 13 h-14 h et après 21 h).
   toi ». Whisper écrit « ami » pour « amie », « fosse » pour « fausse » (son correct en écoute découpée).
 - Programmé (Zernio, TikTok + Instagram) : Coupure p2 10h, Tunnel p2 12h, Chambre neuf p2 18h, Ferry p2 20h
   (+ gta6-01 8h, gta6-02 9h déjà programmés). Durées 45,8 / 46,0 / 45,9 / 43,3 s.
+
+### 20/11 (cycle 2, parties 3 = dernières)
+
+- Comptes Zernio OK ; les 6 posts du 19/11 (2 clips GTA + 4 parties 2) publiés sur TikTok et Instagram ; edit GTA Lucia 9h déjà programmé.
+- **Stats 19/11 (≈ 10-20 h de recul)** — TikTok vues / likes / com. / partages / temps moyen / complétion, puis Insta vues / temps moyen :
+  - gta6-01 8h : 236 / 3 / 0 / 0 / 4,2 s / 1,2 % — Insta 152 / 3,8 s ;
+  - gta6-02 9h : 236 / 4 / 0 / 0 / 5,0 s / 1,5 % — Insta 168 / 6,0 s ;
+  - La Coupure p2 10h : **4** / 1 / 0 / 0 / 3,8 s — Insta 162 / 7,4 s ;
+  - Le Tunnel p2 12h : 230 / 4 / 0 / 0 / 4,4 s — Insta 137 / 4,8 s ;
+  - Chambre neuf p2 18h : 217 / 4 / 0 / 1 / 4,5 s / 2,4 % — Insta 147 / **8,8 s** ;
+  - Le Ferry p2 20h : **3** / 0 / 0 / 0 / 2,9 s — Insta 131 / 7,4 s.
+- Lecture : 2 vidéos TikTok sur 6 bloquées à 3-4 vues (Coupure p2, Ferry p2) alors qu'Instagram les montre normalement → TikTok
+  les a sans doute retenues (contrôle ou faible diffusion) ; à revérifier le 21/11. Les parties 2 retiennent moins que les
+  parties 1 sur TikTok (4,4 s contre 9-10 s) : un épisode qui commence par la suite d'une autre vidéo décroche plus vite.
+  Les clips GTA (format dessiné, arrêté) n'ont pas fait mieux que les séries.
+- Votes partie 2 : 0 partout → tirages : Coupure 1, Tunnel 2, Chambre neuf 1, Ferry 2.
+- Test du spectateur : 5 passages (clarté finale ≈ 7-8/10 ; le Ferry, avec 3 filles au même visage, reste le plus dur à
+  suivre). Corrigé : « règle numéro deux » sans règle 1 (→ « la règle de X »), choix sans prix, renvois aux parties d'avant.
+- Durée : Piper ≈ 17,5 car./s en `--verif` → 880 car. = 50,5 s (refusé par check_video). Viser **≤ 830 car.**
+- Voix Piper, mal lus aujourd'hui (changés) : « Ta mère t'écrit : rentre » (« t'écriste »), « la peur te fait chuchoter »
+  (« la porte »), « Elle s'enfuit » (le « Elle » disparaît), « Tu hésites » en début de phrase (« puis hésite »),
+  « n'est pas moi. Viens seul » (« moins bien seule »), « tire-la dehors » (« si elle adore »), « c'est toi qui es de
+  trop » (« qui l'aide trop »). Whisper écrit « ami » pour « amie », « fosse » pour « fausse » (son correct).

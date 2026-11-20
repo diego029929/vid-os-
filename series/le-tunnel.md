@@ -13,4 +13,4 @@ Style « Nuit & téléphone » (`engine/nuit.py`). Décors utilisés : `rue` (pl
 |---|---|---|
 | 1 (18/11, `episodes/tunnel-01.json`) | 2 h : SMS de Malik disparu depuis 7 ans « viens me chercher, je suis dans le tunnel » ; « il y a quelqu'un dans le mur » ; voix qui t'appelle par ton surnom d'enfant ; Localiser : Malik à 10 m ; traces de mains qui sortent de la pierre | 1 : entrer dans le tunnel / 2 : appeler ta mère |
 | 2 (19/11, `episodes/tunnel-02.json`) | vote « entrer » : seul dans le tunnel, Localiser « Malik à 2 m », voix dans la pierre, main sous la pierre ; ta mère : « Malik vient de rentrer à la maison » ; la voix : « c'est moi le vrai » | 1 : creuser le mur / 2 : rentrer à la maison |
-| 3 (20/11, dernière) | selon le vote | |
+| 3 (20/11, `episodes/tunnel-03.json`, dernière) | tirage « rentrer à la maison » (0 vote) : Malik dans la cuisine, pas vieilli d'un jour, mains grises de pierre ; SMS du vieux numéro : « je suis encore dans le mur, s'il te touche tu prends ma place » ; ta mère : « le tunnel imite les voix » | 1 : serrer Malik / 2 : retourner au tunnel |

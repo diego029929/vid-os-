@@ -13,4 +13,4 @@ Style « Nuit & téléphone » (`engine/nuit.py`). Décors utilisés : `salon`, 
 |---|---|---|
 | 1 (18/11, `episodes/coupure-01.json`) | 22 h 14 : SMS de ton propre numéro « ne sors pas » ; coupure ; Clara va voir la maison d'en face ; sa photo montre ton salon avec toi dedans ; on frappe avec la voix de Clara, mais Clara écrit qu'elle est encore en face | 1 : ouvrir à Clara / 2 : laisser fermé |
 | 2 (19/11, `episodes/coupure-02.json`) | vote « laisser fermé » (3 votes) : Clara (en face) prévient qu'une fille à son visage va entrer ; elle a laissé la porte du jardin ouverte ; la fausse Clara entre, vole les voix ; la vraie appelle, elle sait comment la chasser | 1 : répondre à Clara / 2 : fuir par le jardin sans un mot |
-| 3 (20/11, dernière) | selon le vote | |
+| 3 (20/11, `episodes/coupure-03.json`, dernière) | tirage « répondre à Clara » (0 vote) : tu décroches et chuchotes malgré la règle ; Clara : elle a peur de la lumière ; la fausse copie ta voix et appelle ta mère ; tu la chasses avec l'écran, elle entre chez Clara (en face, dans le noir) | 1 : sauver Clara dans le noir / 2 : rester à l'abri |

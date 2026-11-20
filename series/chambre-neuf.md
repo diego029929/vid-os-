@@ -13,4 +13,4 @@ Style « Nuit & téléphone » (`engine/nuit.py`). Décors utilisés : `hopital`
 |---|---|---|
 | 1 (18/11, `episodes/chambre9-01.json`) | 3 h : biper « chambre 9 appelle » ; la patiente est morte hier ; règle de Nadia ; appel du poste de la chambre 9, petite voix « j'ai froid, viens me couvrir » ; la porte s'ouvre seule | 1 : aller voir seul / 2 : réveiller Nadia |
 | 2 (19/11, `episodes/chambre9-02.json`) | tirage « réveiller Nadia » : Nadia assise dans le noir, dos tourné, « j'y suis déjà allée » ; Nadia t'appelle depuis la chambre 9 : « la femme à côté de toi n'est pas moi » | 1 : descendre à la chambre 9 / 2 : rester avec cette Nadia |
-| 3 (20/11, dernière) | selon le vote | |
+| 3 (20/11, `episodes/chambre9-03.json`, dernière) | tirage « descendre à la chambre 9 » (0 vote) : tu descends seul malgré la règle, l'autre Nadia te suit ; une Nadia pâle dans le lit de la morte : « si elle entre, je meurs » ; celle du couloir : « celle du lit est fausse » | 1 : croire celle du lit (fermer à clé) / 2 : ouvrir au couloir |
