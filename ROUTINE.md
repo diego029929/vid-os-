@@ -254,13 +254,18 @@ puis planche contact.
   d'homme (ref-pierre-moyen, ref-narrateur-grave) pour le narrateur. Jamais
   baisser la hauteur artificiellement, jamais de service payant, jamais la
   voix d'un autre créateur.
-- ≈ 20 caractères lus par seconde (pauses comprises) → ≤ 800 caractères lus
-  par épisode ; si l'épisode fait < 35 s, ajouter une phrase.
+- ≈ 17,5 caractères lus par seconde avec `--verif` (pauses comprises) → ≤ 830
+  caractères lus par épisode (880 car. = 50,5 s, refusé) ; si l'épisode fait
+  < 35 s, ajouter une phrase.
 - Mots mal lus à éviter : « N° » (dire « numéro »), « sweat » (« pull »),
   ville seule en début de phrase, « village », « grésiller », répliques de 3
   mots ou moins, « défi », « fruit », mots d'une syllabe ou en « -illé » en
   fin de phrase (« pain », « grillé »), « revenir », « ne réponds pas » (lu
-  « n'en réponds pas » → « ne réponds jamais »). Nombres en lettres ; phrase
+  « n'en réponds pas » → « ne réponds jamais »), « Ta mère t'écrit : » (lu
+  « t'écriste » → « Message de ta mère : »), « Tu hésites » en tout début
+  (→ « Alors, tu hésites »), « moi. Viens seul » (phrases collées), « tire-la »,
+  un prénom (« Hugo ») au milieu de la question finale, un « ou » après une
+  virgule dans la question finale (→ « ou alors, »). Nombres en lettres ; phrase
   lue différente de l'affichage dans `"voice"`.
 - Piper (narrateur depuis le 17/11) n'est PAS identique d'un rendu à l'autre
   (vu le 18/11 : une phrase juste au 1er rendu devient floue au suivant).
