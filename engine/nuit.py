@@ -35,6 +35,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#0b0a22;font-fam
 #clock .lieu{font-size:26px;letter-spacing:4px;font-weight:700;opacity:.85}
 #clock .lieu b{color:#ff3b3b;font-size:30px}
 #clock .t{text-shadow:0 0 18px #000,0 0 6px #000;font-size:76px;font-weight:800;letter-spacing:2px;font-variant-numeric:tabular-nums;margin-top:6px}
+#hook{position:absolute;left:70px;right:70px;top:250px;z-index:40;text-align:center}
+#hook span{display:inline;background:#fff;color:#000;font-weight:800;font-size:58px;line-height:1.5;padding:6px 18px;border-radius:14px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 #sub{position:absolute;left:40px;right:40px;top:1590px;text-align:center;font-family:Anton;font-size:124px;color:#fff;
   -webkit-text-stroke:8px #000;paint-order:stroke fill;text-shadow:0 8px 0 rgba(0,0,0,.6);z-index:30;line-height:1.05;text-transform:uppercase}
 #sub .r{color:#ff3b3b}#sub .y{color:#ffd23b}
@@ -253,7 +255,7 @@ def build(ep_path, out, draft=False, verif=False):
     with open(page, "w") as f:
         f.write(f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS.replace('FONTPATH', FONT)}</style></head><body>"
                 "<div id='cam'></div><div id='clock'><div class='lieu'><b>●</b> <span id='etiq'></span> · <span id='lieu'></span></div>"
-                "<div class='t' id='tm'></div></div><div id='sub'></div><script>"
+                "<div class='t' id='tm'></div></div><div id='sub'></div><div id='hook'></div><script>"
                 + "".join(f"const {k} = {json.dumps(v, ensure_ascii=False)};\n" for k, v in data.items())
                 + js + "</script></body></html>")
 
