@@ -3,10 +3,10 @@
   "formats": {
     "serie": {
       "statut": "actif", "moteur": "nuit", "duree": [30, 40],
-      "desc": "Série d'horreur en 3 parties (ROUTINE.md § 1), vote 1/2 à la fin. 2 séries en même temps AU MAXIMUM."
+      "desc": "Série d'horreur en 3 parties (ROUTINE.md § 1), vote 1/2 à la fin. 1 SEULE série à la fois (22/11, recherche sur les vidéos virales)."
     },
     "histoire": {
-      "statut": "actif", "moteur": "nuit", "duree": [25, 35],
+      "statut": "actif", "moteur": "nuit", "duree": [25, 32],
       "desc": "Histoire COMPLÈTE en une vidéo, chute finale (twist) au dernier plan, pas de vote ni de partie 2. Fin = question « T'aurais fait quoi ? »."
     },
     "sms": {

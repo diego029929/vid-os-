@@ -20,7 +20,7 @@ FORMATS = os.path.join(ROOT, "series", "formats.json")
 PLANS = os.path.join(ROOT, "series", "plans")
 
 SLOTS_NUIT = ["10:00", "12:00", "18:00", "20:00"]
-MAX_SERIES = 2          # jamais plus de 2 séries en même temps (sinon 4 vidéos identiques par jour)
+MAX_SERIES = 1          # 22/11 : les vidéos virales sont des histoires COMPLÈTES de ~30 s ; 1 série au plus
 MAX_TESTS = 2           # nouveautés par jour
 MIN_AGE_H = 20          # stats trop jeunes avant ça
 MIN_VUES = 30           # en dessous : vidéo non diffusée par TikTok (bloquée), pas notée
@@ -272,7 +272,7 @@ def main():
         "jour": str(jour),
         "creneaux": creneaux,
         "series_arretees": [{"series": s["series"], "slot": s["slot"],
-                             "raison": "moins bonne que les 2 gardées (max 2 séries en même temps)"} for s in arretees],
+                             "raison": f"moins bonne que la ou les {MAX_SERIES} gardée(s) (max {MAX_SERIES} série à la fois)"} for s in arretees],
         "coupes": coupes,
         "scores_formats": {k: {"score": round(m, 3), "videos": n} for k, (m, n) in s_fmt.items()},
         "scores_ambiances": {k: {"score": round(m, 3), "videos": n} for k, (m, n) in s_amb.items()},
