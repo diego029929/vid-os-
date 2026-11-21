@@ -592,3 +592,12 @@ creux à 11 h, 13 h-14 h et après 21 h).
 - Test du spectateur : 3 passages. Voisin (5/10 → 7/10) : trop de rebondissements à la fin → vocal de Yanis retiré, voix dans
   le mur qui demande ton prénom (lien avec la règle). Babyphone (6 → 7) : règle changée en « ne le débranche jamais » pour
   donner un prix au choix 2. Camping 7-8, Auberge 8.
+- Voix Piper, mal lus aujourd'hui (changés) : « camping » (« cap-win », « capini » → « camp du lac »), « guirlande » (2 fois
+  « dialande » → « lampe »), « cache-toi dans ta tente » (« cache pas ton attente »), « tentes. Ceux qui » (« temple »),
+  « repasse à vingt-deux heures » (« opasse avant »), « imitait maman » (« mit ta maman »), « branché à la cave » (« et la
+  cave »), « Yanis » (« Yanny » → Karim), « glissé une lettre » (« bissé »), « Dans le hall » (« dans le LOL »),
+  « vibre : ta voiture » (« vibre en ta »), « tombe en panne » (« tombant panne »), « partie il y a vingt ans » (« lily à »).
+  « chuchoter / chuchote » parfois « chuter / chute » (→ « murmurer »). Tester chaque phrase seule AVANT le rendu (script
+  rapide : voice.synth + megaphone + Whisper medium, ≈ 3 min pour 33 phrases) a évité 2 rendus de plus.
+- Programmé (Zernio, TikTok + Instagram) : edit Jason 8h, edit Vice City 9h, Babyphone p1 10h, Voisin p1 12h, Camping p1 18h,
+  Auberge p1 20h. Durées 17,6 / 16,7 / 44,5 / 44,4 / 46,1 / 44,2 s. Camping rendu 4 fois (phrases mal lues), Babyphone 3 fois.

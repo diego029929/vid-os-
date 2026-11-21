@@ -435,6 +435,34 @@
    "file": "episodes/gta6-edit-04.json",
    "slot": "2026-11-21T09:00:00 Europe/Paris",
    "zernio_id": "6b0122a736ccbb117a7433bb"
+  },
+  {
+   "series": "le-babyphone",
+   "episode": 1,
+   "file": "episodes/baby-01.json",
+   "slot": "2026-11-21T10:00:00 Europe/Paris",
+   "zernio_id": "6b01287aa4540f260221a0fa"
+  },
+  {
+   "series": "le-voisin",
+   "episode": 1,
+   "file": "episodes/voisin-01.json",
+   "slot": "2026-11-21T12:00:00 Europe/Paris",
+   "zernio_id": "6b0129868d2cfa5c5f792b4f"
+  },
+  {
+   "series": "le-camping",
+   "episode": 1,
+   "file": "episodes/camping-01.json",
+   "slot": "2026-11-21T18:00:00 Europe/Paris",
+   "zernio_id": "6b013838d7a48871e2f4c4cc"
+  },
+  {
+   "series": "l-auberge",
+   "episode": 1,
+   "file": "episodes/auberge-01.json",
+   "slot": "2026-11-21T20:00:00 Europe/Paris",
+   "zernio_id": "6b0136d35d27c99096858092"
   }
  ],
  "survis_next": 15,

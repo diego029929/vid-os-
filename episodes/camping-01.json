@@ -95,7 +95,7 @@
    "flicker": true
   },
   {
-   "voice": "Ton téléphone repasse à vingt-deux heures. Dans deux heures, la sirène revient.",
+   "voice": "Sur ton téléphone, il est de nouveau vingt-deux heures. La sirène reviendra à minuit.",
    "tel": {
     "type": "notif",
     "app": "HORLOGE",
