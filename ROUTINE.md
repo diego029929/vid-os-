@@ -1,9 +1,63 @@
-# Routine quotidienne (depuis le 15/11 : séries d'horreur COURTES ; dès le 16/11 : style « Nuit & téléphone »)
+# Routine quotidienne (depuis le 22/11 : ROTATION pilotée par les stats, `engine/plan.py`, style « Nuit & téléphone »)
 
 > **NOUVEAU 15/11 au soir (choix de Fio) : toutes les vidéos se font dans le
 > style « Nuit & téléphone »** avec `engine/nuit.py` (voir § 1 bis), y compris
 > les parties 2 et 3 des 4 séries en cours (mêmes histoires, nouveau dessin).
 > `engine/render2.py` (style 2) n'est plus utilisé pour publier.
+
+> **NOUVEAU 21/11 (Fio : « tu publies tout le temps la même chose, c'est chiant, fais évoluer
+> les vidéos comme tu le calcules pour les follows ») : § 0 bis passe AVANT tout le reste.**
+> Fini les 4 séries identiques par jour : chaque matin `engine/plan.py` décide, à partir des stats,
+> le format, l'ambiance et l'accroche de CHAQUE créneau. La routine suit ce plan.
+
+## 0 bis. Rotation pilotée par les stats (OBLIGATOIRE, dès le 22/11)
+
+1. Après les stats (§ 5, étape 2), lancer **`python3 engine/plan.py AAAA-MM-JJ`** (date du jour).
+   Il lit Zernio, note chaque vidéo (abonnés gagnés pour 1 000 vues 35 %, rétention = temps moyen /
+   durée 25 %, likes 20 %, commentaires + partages + enregistrements 10 %, vues 10 %), puis écrit
+   `series/plans/AAAA-MM-JJ.json` (et l'affiche). **Suivre ce plan créneau par créneau** : `format`,
+   `ambiance`, `accroche`, `duree`. Ne pas le « corriger » à la main, sauf demande de Fio ou format
+   impossible (le dire dans le résumé).
+2. Les règles que le plan applique (ne pas les contourner) :
+   - **jamais plus de 2 séries en même temps** ; les autres séries s'arrêtent (`series_arretees`) :
+     les retirer de `parallel_series` (les garder dans `previous_parallel_series` avec
+     `"arretee": "AAAA-MM-JJ"`). Si quelqu'un réclame la suite en commentaire, sa fin pourra revenir
+     plus tard en format `histoire` ;
+   - **1 à 2 nouveautés par jour** (format, ambiance ou accroche pas encore notés) ;
+   - **coupe** 7 jours ce qui est dans le tiers du bas après ≥ 4 vidéos (format) ou ≥ 3 (ambiance,
+     accroche) → `state.json` → `variation.coupes` ; ensuite c'est re-testé ;
+   - **jamais 2 créneaux du même format le même jour** (sauf 2 séries), jamais la même ambiance ni la
+     même accroche deux fois le même jour, et on évite celles de la veille ;
+   - les formats `interdit` de `series/formats.json` (jugés nuls par Fio) ne reviennent JAMAIS.
+3. **Les formats** (`series/formats.json`, modèles testés dans `episodes/modeles/`, à copier) — tous
+   avec `engine/nuit.py` sauf `edit` :
+   | format | durée | forme | modèle |
+   |---|---|---|---|
+   | `serie` | 38-48 s | 3 parties, vote 1/2 (§ 1) | `episodes/exemple-nuit.json` |
+   | `histoire` | 25-35 s | histoire COMPLÈTE, chute au dernier plan, pas de vote. Légende : « T'aurais fait quoi ? 👇 » | `modeles/histoire.json` |
+   | `sms` | 25-40 s | ≥ 70 % de plans `tel` (sms, appel, notif, photo, localiser) : on lit la conversation | `modeles/sms.json` |
+   | `regles` | 30-42 s | « Les 4-5 règles de… », carte `regle` puis 1 plan qui la montre ; fin « Laquelle tu briserais en premier ? Écris le numéro. » | `modeles/regles.json` |
+   | `pov` | 12-20 s | 5-7 plans, une seule peur, le dernier plan = le premier (la vidéo boucle) | `modeles/pov.json` |
+   | `edit` | 15-20 s | edit GTA 6, 8h et 9h (§ 1 ter) | `gta6-edit-02.json` |
+   Un épisode d'un nouveau format = même qualité que les séries : § 2 (clarté), test du spectateur
+   (§ 5 étape 4), vérification de la voix, planche. Le titre ne commence par « Partie N · » QUE pour
+   `serie`. Le `etiquette` de l'horloge = le format (« HISTOIRE », « MESSAGES », « RÈGLES », « POV »).
+4. **Ambiance** = champ `"ambiance"` en tête du JSON (`nuit`, `rouge`, `vert`, `bleu`, `sepia`, `nb`,
+   `vhs` ; aperçu : `/mnt/project-files/rotation/ambiances.png`). Elle teinte les décors et objets ;
+   téléphone, règle et choix restent nets. Une série garde la même ambiance dans toutes ses parties.
+   Choisir des décors qui vont avec (`vert` → hôpital/forêt, `bleu` → mer/neige, `sepia` → maison
+   ancienne/cassette…).
+5. **Accroche** = champ `"accroche"` = type du 1er plan + 1re phrase (liste dans
+   `series/formats.json` → `accroches`). Le 1er plan DOIT correspondre au type choisi.
+6. **Toujours écrire les 3 champs** `"format"`, `"ambiance"`, `"accroche"` dans le JSON de l'épisode
+   ET dans l'entrée `published` de `series/state.json` : sans eux, `plan.py` ne peut pas apprendre.
+7. **Légendes variées** : pas deux fois la même formule le même jour (question du vote pour `serie`,
+   « T'aurais fait quoi ? » / « Tu l'as vu ? » / « Laquelle tu briserais ? » pour les autres), et
+   hashtags tournants (`#horreur` + 2-3 parmi `#histoire #creepy #pov #sms #frissons #peur
+   #histoiredhorreur #nuit #pourtoi #fyp`). Les vidéos trop semblables se font bloquer par TikTok
+   (Coupure p2, Ferry p2, Voisin p1 : 5-12 vues).
+8. Dans le résumé à Fio (§ 5 étape 11) : une ligne « ce qui change aujourd'hui » (les nouveautés
+   testées, ce qui est gardé, ce qui est coupé, avec le chiffre qui le justifie).
 
 Ce fichier contient SEULEMENT les règles en vigueur. Il prime sur le message
 de la tâche planifiée (qui parle encore de 5 vidéos et de Metricool : il ne
@@ -29,7 +83,9 @@ choisir celui-ci : le garder tant que Fio ne dit pas le contraire.
 
 ## 1. Le format
 
-- **4 séries en parallèle, 1 épisode de chacune par jour**, TikTok +
+- **Depuis le 22/11 : les créneaux sont remplis selon `series/plans/<jour>.json` (§ 0 bis).**
+  Ce qui suit vaut pour le format `serie` (2 séries au plus en même temps).
+- *(Ancien : 4 séries en parallèle, 1 épisode de chacune par jour)*, TikTok +
   Instagram (Reel) :
   | Heure (Paris) | 10:00 | 12:00 | 18:00 | 20:00 |
   |---|---|---|---|---|
@@ -290,8 +346,11 @@ puis planche contact.
    commentaires, partages, temps moyen (`igReelsAvgWatchTime`, ms),
    `completionRate`. Compter les votes A/B de la veille. Tout noter dans
    `series/insights.md` (une section par jour).
-3. **Écrire les 4 épisodes** (`episodes/<prefix>-NN.json`, `"style": "nuit"`, § 1 bis),
-   en commençant par celui de 10:00. Nouvelle série : écrire d'abord
+2 bis. **Plan du jour** : `python3 engine/plan.py AAAA-MM-JJ` (§ 0 bis), puis l'appliquer
+   (séries arrêtées retirées de `parallel_series`, nouvelles séries ajoutées).
+3. **Écrire les vidéos du plan** (`episodes/<prefix>-NN.json`, `"style": "nuit"`, § 1 bis ;
+   autres formats : `episodes/<format>-NNN.json` à partir de `episodes/modeles/`), avec
+   `format`/`ambiance`/`accroche`, en commençant par celle de 10:00. Nouvelle série : écrire d'abord
    `series/<slug>.md` (film source, univers, règle, personnages, décors,
    tableau des 3 épisodes) et dessiner ses décors.
 4. **Test du spectateur extérieur, obligatoire** : écrire les répliques lues
@@ -314,8 +373,8 @@ puis planche contact.
    - voix : transcription Whisper (medium, fr) comparée au texte. Mot
      répété, bégayé ou mal dit = changer la phrase et relancer. En cas de
      doute, découper 8-10 s avec ffmpeg et retranscrire ;
-   - `python3 engine/check_video.py /tmp/<f>.mp4 --min 30 --max 50` doit
-     dire OK.
+   - `python3 engine/check_video.py /tmp/<f>.mp4 --min A --max B` doit
+     dire OK (A/B = `duree` du créneau dans le plan, ± 3 s ; série : 30 / 50).
    Ne jamais publier une vidéo défectueuse.
 8. **Branche `media`** (jamais de push forcé, jamais de MP4 sur main) :
    `git worktree add /tmp/media media` (ne PAS faire `git checkout media`),
@@ -340,7 +399,8 @@ puis planche contact.
    24 h). Metricool ne sert plus à publier.
 10. **Enregistrer sur main** : JSON d'épisodes, fichiers de série,
     `series/state.json` (`parallel_series` : avancer `next_episode` ;
-    ajouter les vidéos à `published` avec `zernio_id`), `series/insights.md`
+    ajouter les vidéos à `published` avec `zernio_id`, `format`, `ambiance`, `accroche`),
+    `series/plans/<jour>.json`, `series/insights.md`
     et les nouveaux décors de `engine/nuit.js`.
 11. **Résumé court en français pour Fio** : les 4 titres, les horaires, les
     réseaux, les votes de la veille, ce que les stats disent (vues, temps

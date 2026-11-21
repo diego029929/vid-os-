@@ -285,6 +285,9 @@ function hms(base, t) { const [h, m, s] = base.split(':').map(Number); const x =
   return [Math.floor(x / 3600) % 24, Math.floor(x / 60) % 60, x % 60].map(v => String(v).padStart(2, '0')).join(':'); }
 
 // ------------------------------------------------------------------ une image
+const AMB = { nuit: '', rouge: 'hue-rotate(115deg) saturate(1.5) brightness(.95)', vert: 'hue-rotate(-140deg) saturate(.9) brightness(.92)',
+  bleu: 'hue-rotate(-40deg) saturate(1.25)', sepia: 'sepia(.9) saturate(1.2) contrast(1.1) brightness(.92)',
+  nb: 'grayscale(1) contrast(1.35) brightness(.95)', vhs: 'sepia(.35) saturate(1.6) contrast(1.2) hue-rotate(-20deg) blur(.7px)' };
 const LIEUX = { rue: 'RUE', chambre: 'CHAMBRE', couloir: 'COULOIR', salon: 'SALON', cuisine: 'CUISINE', escalier: 'ESCALIER', foret: 'FORÊT', station: 'STATION', mer: 'PLAGE', hopital: 'HÔPITAL', cave: 'CAVE', voiture: 'VOITURE', sdb: 'SALLE DE BAIN', vice: 'VICE CITY', gamer: 'CHEZ TOI' };
 let LIEU = (EP.beats0 || '');
 for (const b of BEATS) if (b.lieu || b.vue) { LIEU = b.lieu || (EP.lieux || {})[b.vue] || LIEUX[b.vue] || ''; break; }
@@ -323,6 +326,13 @@ window.seek = function (t) {
     if (P.hero == 'sonne' && c != 'gros') zoom = 1 + 0.25 * ease(lt / 1.5), ox = VW * (P.hx ?? 0.5), oy = 1250;
   }
   const pop = (P.regle || P.choix) ? 1 : 1.05 - 0.05 * intro;
+  // ambiance (rotation du 21/11, engine/plan.py) : teinte des plans décor/objet ; téléphone, règle et choix restent nets
+  const amb = P.ambiance || EP.ambiance || 'nuit';
+  if (amb == 'vhs' && !P.tel && !P.regle && !P.choix) {
+    let g = ''; for (let i = 0; i < 40; i++) g += `<rect x="0" y="${(rnd(i + Math.floor(t * 12)) * VH) | 0}" width="${VW}" height="${2 + rnd(i * 3) * 5}" fill="#fff" opacity="${0.04 + rnd(i * 7 + t) * 0.06}"/>`;
+    html += `<svg width="${VW}" height="${VH}" style="position:absolute;inset:0;mix-blend-mode:screen">${g}<rect y="${(t * 260) % VH}" width="${VW}" height="70" fill="#fff" opacity=".06"/></svg>`;
+  }
+  cam.style.filter = (P.tel || P.regle || P.choix) ? '' : (AMB[amb] || '');
   cam.innerHTML = html;
   cam.style.transformOrigin = `${ox}px ${oy}px`;
   cam.style.transform = `scale(${zoom * pop})`;
