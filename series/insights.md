@@ -571,3 +571,33 @@ creux à 11 h, 13 h-14 h et après 21 h).
   (« la porte »), « Elle s'enfuit » (le « Elle » disparaît), « Tu hésites » en début de phrase (« puis hésite »),
   « n'est pas moi. Viens seul » (« moins bien seule »), « tire-la dehors » (« si elle adore »), « c'est toi qui es de
   trop » (« qui l'aide trop »). Whisper écrit « ami » pour « amie », « fosse » pour « fausse » (son correct).
+
+### 21/11 (cycle 3, parties 1 : Le Babyphone, Le Voisin, Le Camping, L'Auberge + edits GTA 03/04)
+
+- Comptes Zernio OK ; les 5 posts du 20/11 (edit Lucia 9h + 4 parties 3) publiés sur TikTok et Instagram.
+- **Stats 20/11 (≈ 10-20 h de recul)** — TikTok vues / likes / com. / partages / temps moyen / complétion, puis Insta vues / temps moyen :
+  - edit GTA Lucia 9h : 216 / 8 / 0 / 0 / 5,3 s / 3,0 % (vidéo de 17 s) — Insta 170 / 6,1 s ;
+  - La Coupure p3 10h : 228 / 8 / 0 / 0 / 9,1 s / 2,4 % — Insta 155 / 9,3 s ;
+  - Le Tunnel p3 12h : 230 / **11** / 1 / 0 / 8,5 s / **5,5 %** — Insta 154 / 8,3 s / 2 partages ;
+  - Chambre neuf p3 18h : 233 / 4 / 0 / 0 / 4,6 s — Insta 133 / 5,9 s ;
+  - Le Ferry p3 20h : 228 / 3 / 1 / 0 / 4,2 s — Insta 149 / 4,8 s.
+- Coupure p2 et Ferry p2 (19/11) toujours à 5 vues TikTok : TikTok ne les a jamais diffusées (Insta normal). Les parties 3 sont
+  revenues à ≈ 230 → ce n'était pas le compte, seulement ces 2 vidéos.
+- Commentaires : Tunnel p3 « 2 jamais je le touche » ; Ferry p3 « Ecoute hugo et suite stp » (1re demande de suite écrite).
+- Lecture : plateau ≈ 230 vues TikTok. Le Tunnel et La Coupure (1er plan = message d'un proche) restent les meilleurs temps
+  (8,5-9 s). Gardé pour le cycle 3 : 1er plan = SMS d'un PROCHE nommé, et une règle qui s'oppose à l'avertissement du proche
+  dans le vote (le spectateur extérieur trouve ces votes les plus clairs).
+- Edits GTA : Lucia (captures + vrai morceau) = 8 likes, 3 % de complétion, mieux que les clips dessinés (4 likes). 21/11 :
+  Jason (8h, Trap Bells) et Vice City (9h, Miami Trap), captures officielles toutes les deux.
+- Test du spectateur : 3 passages. Voisin (5/10 → 7/10) : trop de rebondissements à la fin → vocal de Yanis retiré, voix dans
+  le mur qui demande ton prénom (lien avec la règle). Babyphone (6 → 7) : règle changée en « ne le débranche jamais » pour
+  donner un prix au choix 2. Camping 7-8, Auberge 8.
+- Voix Piper, mal lus aujourd'hui (changés) : « camping » (« cap-win », « capini » → « camp du lac »), « guirlande » (2 fois
+  « dialande » → « lampe »), « cache-toi dans ta tente » (« cache pas ton attente »), « tentes. Ceux qui » (« temple »),
+  « repasse à vingt-deux heures » (« opasse avant »), « imitait maman » (« mit ta maman »), « branché à la cave » (« et la
+  cave »), « Yanis » (« Yanny » → Karim), « glissé une lettre » (« bissé »), « Dans le hall » (« dans le LOL »),
+  « vibre : ta voiture » (« vibre en ta »), « tombe en panne » (« tombant panne »), « partie il y a vingt ans » (« lily à »).
+  « chuchoter / chuchote » parfois « chuter / chute » (→ « murmurer »). Tester chaque phrase seule AVANT le rendu (script
+  rapide : voice.synth + megaphone + Whisper medium, ≈ 3 min pour 33 phrases) a évité 2 rendus de plus.
+- Programmé (Zernio, TikTok + Instagram) : edit Jason 8h, edit Vice City 9h, Babyphone p1 10h, Voisin p1 12h, Camping p1 18h,
+  Auberge p1 20h. Durées 17,6 / 16,7 / 44,5 / 44,4 / 46,1 / 44,2 s. Camping rendu 4 fois (phrases mal lues), Babyphone 3 fois.

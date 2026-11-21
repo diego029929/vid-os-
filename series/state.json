@@ -421,6 +421,48 @@
    "file": "episodes/ferry-03.json",
    "slot": "2026-11-20T20:00:00 Europe/Paris",
    "zernio_id": "6affed6bc6270ed89224f7c1"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-03",
+   "file": "episodes/gta6-edit-03.json",
+   "slot": "2026-11-21T08:00:00 Europe/Paris",
+   "zernio_id": "6b0122a636ccbb117a7433b4"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-04",
+   "file": "episodes/gta6-edit-04.json",
+   "slot": "2026-11-21T09:00:00 Europe/Paris",
+   "zernio_id": "6b0122a736ccbb117a7433bb"
+  },
+  {
+   "series": "le-babyphone",
+   "episode": 1,
+   "file": "episodes/baby-01.json",
+   "slot": "2026-11-21T10:00:00 Europe/Paris",
+   "zernio_id": "6b01287aa4540f260221a0fa"
+  },
+  {
+   "series": "le-voisin",
+   "episode": 1,
+   "file": "episodes/voisin-01.json",
+   "slot": "2026-11-21T12:00:00 Europe/Paris",
+   "zernio_id": "6b0129868d2cfa5c5f792b4f"
+  },
+  {
+   "series": "le-camping",
+   "episode": 1,
+   "file": "episodes/camping-01.json",
+   "slot": "2026-11-21T18:00:00 Europe/Paris",
+   "zernio_id": "6b013838d7a48871e2f4c4cc"
+  },
+  {
+   "series": "l-auberge",
+   "episode": 1,
+   "file": "episodes/auberge-01.json",
+   "slot": "2026-11-21T20:00:00 Europe/Paris",
+   "zernio_id": "6b0136d35d27c99096858092"
   }
  ],
  "survis_next": 15,
@@ -583,7 +625,14 @@
    "tunnel": "1 serrer Malik / 2 retourner au tunnel",
    "chambre9": "1 croire celle du lit (fermer à clé) / 2 ouvrir au couloir",
    "ferry": "1 obéir à Hugo / 2 suivre la fille trempée",
-   "result": "dernières parties : à lire le 21/11 (sert si une suite est faite)"
+   "result": "21/11 : Tunnel 1 × « 2 » (laisser ta mère / retourner au tunnel) ; Ferry 1 com. « écoute Hugo et suite stp » (1) ; autres 0. Cycle 2 fini."
+  },
+  "cycle3_partie1": {
+   "baby": "1 descendre à la cave / 2 débrancher malgré la règle",
+   "voisin": "1 ouvrir le placard / 2 sonner chez le voisin",
+   "camping": "1 entrer dans la tente de Tom / 2 courir à la voiture",
+   "auberge": "1 finir l'assiette / 2 se lever de table",
+   "result": "à compter le 22/11"
   }
  },
  "previous_series": "jacques-a-dit",
@@ -769,35 +818,35 @@
  "parallel_series": [
   {
    "slot": "10:00",
-   "series": "la-coupure",
-   "series_file": "series/la-coupure.md",
-   "prefix": "coupure",
+   "series": "le-babyphone",
+   "series_file": "series/le-babyphone.md",
+   "prefix": "baby",
    "episode_count": 3,
-   "next_episode": 4
+   "next_episode": 2
   },
   {
    "slot": "12:00",
-   "series": "le-tunnel",
-   "series_file": "series/le-tunnel.md",
-   "prefix": "tunnel",
+   "series": "le-voisin",
+   "series_file": "series/le-voisin.md",
+   "prefix": "voisin",
    "episode_count": 3,
-   "next_episode": 4
+   "next_episode": 2
   },
   {
    "slot": "18:00",
-   "series": "chambre-neuf",
-   "series_file": "series/chambre-neuf.md",
-   "prefix": "chambre9",
+   "series": "le-camping",
+   "series_file": "series/le-camping.md",
+   "prefix": "camping",
    "episode_count": 3,
-   "next_episode": 4
+   "next_episode": 2
   },
   {
    "slot": "20:00",
-   "series": "le-ferry",
-   "series_file": "series/le-ferry.md",
-   "prefix": "ferry",
+   "series": "l-auberge",
+   "series_file": "series/l-auberge.md",
+   "prefix": "auberge",
    "episode_count": 3,
-   "next_episode": 4
+   "next_episode": 2
   }
  ],
  "cycle2": "18/11 au 20/11 : La Coupure 10h, Le Tunnel 12h, Chambre neuf 18h, Le Ferry 20h. Le 21/11 : 4 nouvelles séries.",
@@ -810,10 +859,22 @@
   "deja_traite": [
    "sortie 19/11, prix, taille, plateformes, PC, pack Vintage Vice City (gta6-01)",
    "13 ans d'attente, reports (gta6-02)",
-   "Lucia edit, captures (gta6-edit-02)"
+   "Lucia edit, captures (gta6-edit-02)",
+   "Jason edit, captures (gta6-edit-03, 21/11 8h, Trap Bells)",
+   "Vice City edit, captures (gta6-edit-04, 21/11 9h, Miami Trap)"
   ],
-  "format": "edit (vraies images officielles, sans voix, beat maison) depuis le 20/11",
-  "next_edit": 3,
+  "format": "edit (vraies images officielles, sans voix, vrai morceau CC BY-SA) depuis le 20/11",
+  "next_edit": 5,
   "note_19_11": "Fio 19/11 : beat maison NUL, edit bande-annonce de 8h annulé, garder Lucia edit. Musique = vrais morceaux Creative Commons."
+ },
+ "previous_parallel_series": [
+  "la-coupure",
+  "le-tunnel",
+  "chambre-neuf",
+  "le-ferry"
+ ],
+ "cycle3": {
+  "dates": "21/11 → 23/11",
+  "nouvelles_series": "24/11"
  }
 }
