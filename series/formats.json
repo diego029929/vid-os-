@@ -2,7 +2,7 @@
   "_note": "Catalogue des formats pour la rotation (engine/plan.py). statut : actif | interdit. Les formats 'interdit' ont été jugés nuls par Fio : ne JAMAIS les remettre. Un format peut être ajouté ici (statut actif) : plan.py le teste tout seul.",
   "formats": {
     "serie": {
-      "statut": "actif", "moteur": "nuit", "duree": [38, 48],
+      "statut": "actif", "moteur": "nuit", "duree": [30, 40],
       "desc": "Série d'horreur en 3 parties (ROUTINE.md § 1), vote 1/2 à la fin. 2 séries en même temps AU MAXIMUM."
     },
     "histoire": {

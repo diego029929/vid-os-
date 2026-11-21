@@ -33,7 +33,7 @@
    avec `engine/nuit.py` sauf `edit` :
    | format | durée | forme | modèle |
    |---|---|---|---|
-   | `serie` | 38-48 s | 3 parties, vote 1/2 (§ 1) | `episodes/exemple-nuit.json` |
+   | `serie` | 30-40 s | 3 parties, vote 1/2 (§ 1) | `episodes/exemple-nuit.json` |
    | `histoire` | 25-35 s | histoire COMPLÈTE, chute au dernier plan, pas de vote. Légende : « T'aurais fait quoi ? 👇 » | `modeles/histoire.json` |
    | `sms` | 25-40 s | ≥ 70 % de plans `tel` (sms, appel, notif, photo, localiser) : on lit la conversation | `modeles/sms.json` |
    | `regles` | 30-42 s | « Les 4-5 règles de… », carte `regle` puis 1 plan qui la montre ; fin « Laquelle tu briserais en premier ? Écris le numéro. » | `modeles/regles.json` |
@@ -58,6 +58,37 @@
    (Coupure p2, Ferry p2, Voisin p1 : 5-12 vues).
 8. Dans le résumé à Fio (§ 5 étape 11) : une ligne « ce qui change aujourd'hui » (les nouveautés
    testées, ce qui est gardé, ce qui est coupé, avec le chiffre qui le justifie).
+
+## 0 ter. Objectif de Fio : PLUS DE 1 000 VUES par vidéo (21/11)
+
+> Fio, 21/11 : « Je veux que ça fasse obligatoirement plus de 1k de vues. » Rien ne peut le garantir
+> (pas de faux vues, rien de payant), mais c'est LA priorité de tout le reste.
+
+Ce que disent les chiffres : du 29/10 au 08/11 TOUTES les vidéos faisaient 750-930 vues (quel que soit
+le format), depuis le 09/11 toutes font ≈ 230-330. TikTok montre chaque vidéo à un premier lot de
+gens ; il ne pousse plus loin QUE si ce lot regarde longtemps, revoit, partage. Les 2 seules vidéos
+au-dessus de 1 000 (29/10 : 2 156 et 1 049 vues) avaient 20-23 s de temps moyen et 11-20 %
+de vidéos vues jusqu'au bout. Aujourd'hui : 4-9 s et 1-7 %. **Le levier = la rétention.**
+
+Règles obligatoires pour CHAQUE vidéo `nuit` :
+1. **`"texte_accroche"`** en tête du JSON (≤ 60 caractères, 1 emoji au plus) : écrit en blanc en haut
+   de l'écran les 3 premières secondes (`engine/nuit.js`). Une promesse ou un mystère qu'on ne
+   comprend qu'à la fin (« Ma mère est au travail… alors qui toque ? 😨 »). Jamais le titre de la
+   série, jamais « Partie 2 ». Différent de la 1re phrase lue.
+2. **La 1re phrase lue commence à 0 s** et pose le problème en ≤ 10 mots. Le 1er plan est le plus fort
+   de la vidéo (téléphone, ombre, porte qui toque), jamais un décor vide.
+3. **Plus court** : `serie` 30-40 s (≤ 680 caractères lus), `histoire` ≤ 32 s, `pov` ≤ 18 s.
+   Une vidéo courte vue en entier pousse plus qu'une longue quittée au milieu.
+4. **Boucle** : la dernière image ou la dernière phrase renvoie à la première (on revoit la vidéo
+   sans s'en rendre compte → « revues » comptées par TikTok). Obligatoire pour `pov` et `histoire`.
+5. **Chute promise, chute tenue** : ce que promet le `texte_accroche` arrive au dernier plan, pas avant.
+6. **Commentaire facile** : la fin demande une réponse d'1 mot ou d'1 chiffre.
+7. **Ne pas se faire bloquer** (3 vidéos à 5-12 vues) : le même jour, jamais 2 vidéos avec le même
+   1er plan (même type d'écran ou même décor), la même légende ou les mêmes hashtags ; légende = une
+   phrase NEUVE, jamais un modèle rempli.
+8. Le plan du jour (`engine/plan.py`) note maintenant d'abord les vues (30 %) et la rétention (30 %),
+   et affiche combien de vidéos ont passé 1 000 vues sur 7 jours : le dire à Fio chaque matin,
+   honnêtement, même si c'est 0.
 
 Ce fichier contient SEULEMENT les règles en vigueur. Il prime sur le message
 de la tâche planifiée (qui parle encore de 5 vidéos et de Metricool : il ne

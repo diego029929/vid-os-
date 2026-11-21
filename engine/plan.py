@@ -25,7 +25,7 @@ MAX_TESTS = 2           # nouveautés par jour
 MIN_AGE_H = 20          # stats trop jeunes avant ça
 MIN_VUES = 30           # en dessous : vidéo non diffusée par TikTok (bloquée), pas notée
 COUPE_JOURS = 7
-POIDS = {"abonnes": 0.35, "retention": 0.25, "likes": 0.20, "interaction": 0.10, "portee": 0.10}
+POIDS = {"portee": 0.30, "retention": 0.30, "abonnes": 0.20, "likes": 0.10, "interaction": 0.10}  # 21/11 : objectif de Fio = 1 000 vues par vidéo
 
 
 def zernio_posts():
@@ -280,6 +280,7 @@ def main():
         "meilleures_7j": [{"fichier": v["pub"].get("file"), "score": v["score"], "follows": v["m"]["follows"],
                            "vues": v["m"]["vues_tk"] + v["m"]["vues_ig"], "retention": round(v["m"]["retention"], 3)}
                           for v in top[:5]],
+        "objectif_1000_vues_7j": f"{sum(1 for v in videos if v['m']['vues_tk'] >= 1000 and v['date'] >= jour - dt.timedelta(days=7))} vidéo(s) sur {sum(1 for v in videos if v['date'] >= jour - dt.timedelta(days=7))} ont passé 1 000 vues TikTok",
         "bloquees_7j": [v["pub"].get("file") for v in videos if v["m"]["bloquee"] and v["date"] >= jour - dt.timedelta(days=7)
                         and v["age_h"] >= 6],
     }
@@ -296,6 +297,7 @@ def main():
         print(f"  ARRÊTÉE : {s['series']} ({s['raison']})")
     if coupes:
         print("  En pause 7 jours :", ", ".join(f"{k} (jusqu'au {v['jusqu_au']})" for k, v in coupes.items()))
+    print("  Objectif Fio :", plan["objectif_1000_vues_7j"])
     print("  Scores formats :", plan["scores_formats"])
     if plan["bloquees_7j"]:
         print("  Bloquées par TikTok (< 30 vues) :", plan["bloquees_7j"])

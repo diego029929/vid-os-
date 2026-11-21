@@ -342,6 +342,10 @@ window.seek = function (t) {
   document.getElementById('lieu').textContent = LIEU || EP.lieu || '';
   document.getElementById('etiq').textContent = EP.etiquette || 'NUIT 1';
   document.getElementById('tm').textContent = hms(EP.heure || '03:00:00', t);
+  // texte d'accroche écrit en haut de l'écran pendant les 3 premières secondes (21/11 : objectif 1 000 vues, retenir dès 0 s)
+  const hk = document.getElementById('hook');
+  if (hk) { const d = EP.texte_accroche_duree || 3.2, o = EP.texte_accroche && t < d + 0.3 ? Math.min(1, (d + 0.3 - t) / 0.3) : 0;
+    hk.innerHTML = o ? `<span>${esc(EP.texte_accroche)}</span>` : ''; hk.style.opacity = o; }
   sub.innerHTML = subs(t);
   sub.style.top = P.choix ? '1290px' : P.regle ? '1300px' : '1590px';
 };
