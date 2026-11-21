@@ -59,6 +59,32 @@
 8. Dans le résumé à Fio (§ 5 étape 11) : une ligne « ce qui change aujourd'hui » (les nouveautés
    testées, ce qui est gardé, ce qui est coupé, avec le chiffre qui le justifie).
 
+## 0 quater. Ce que font les vidéos à millions de vues (recherche du 22/11, `series/recherche-22-11.md`)
+
+> Fio, 22/11 : « ça pue… base-toi sur de vrais exemples de vidéos qui ont fait des millions de vues ».
+> Ces règles passent AVANT § 0 bis et § 0 ter quand elles se contredisent.
+
+1. **Une vidéo = une histoire COMPLÈTE de 25 à 32 s** (Zack D. Films 253 M de vues en 31 s ;
+   Jake Fellman 88 M, vidéos de 30 s vues à 85 % ; Broken Finger Paradise 30 s). La question est posée à
+   la 1re seconde et la réponse arrive à la dernière, puis la vidéo boucle. **1 seule série à la fois**
+   (plan.py : `MAX_SERIES = 1`) ; nos parties 2 et 3 décrochent (on n'a pas vu la partie 1).
+2. **Accroche = situation normale + UN détail impossible, en une phrase** (« Mon copain dort sur mes
+   genoux… alors qui m'envoie des messages ? », histoire SMS virale). Le `texte_accroche` ET la 1re
+   image montrent ce détail. Jamais une phrase de mise en place (« Tu emménages à Lille… ») : chez
+   OpusClip (34 635 vidéos), les débuts « mise en place d'histoire » sont les moins vus.
+3. **La 1re image est la plus étrange de la vidéo** (« une 1re image assez intrigante pour aspirer les
+   gens », Broken Finger Paradise). Jamais un décor vide, jamais l'horloge seule.
+4. **L'image raconte, pas seulement la voix** : à chaque plan il se passe quelque chose de visible
+   (une ombre apparaît, une porte s'ouvre, un message arrive, le perso a peur). Un plan = 2 à 3 s max.
+5. **Garder le même format, le même perso et le même habillage longtemps** : Fellman a refait 50 vidéos
+   du format qui a marché, Zack D. Films publie ≈ 33 vidéos/semaine du même format. On ne change plus de
+   concept : seulement les variantes de § 0 bis (format court, ambiance, accroche).
+6. **Hashtags : 8 à 10**, mélange niche + général (OpusClip : 10,4 hashtags dans les vidéos virales
+   contre 4,8 dans les moins vues ; niche + général = 527 k vues médianes contre 210 k pour niche seul).
+   Toujours `#fyp #pourtoi #foryou` + 2-3 généraux (`#horreur #peur #histoire`) + 3-4 précis au sujet
+   (`#sms #babysitting #hopital`…). Varier les précis d'une vidéo à l'autre.
+7. **Légende courte** : quelques mots + 1 emoji, puis les hashtags (Zack D. Films).
+
 ## 0 ter. Objectif de Fio : PLUS DE 1 000 VUES par vidéo (21/11)
 
 > Fio, 21/11 : « Je veux que ça fasse obligatoirement plus de 1k de vues. » Rien ne peut le garantir
