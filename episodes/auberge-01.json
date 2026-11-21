@@ -1,0 +1,129 @@
+{
+ "style": "nuit",
+ "series": "L'AUBERGE",
+ "etiquette": "PARTIE 1",
+ "heure": "19:12:05",
+ "title": "Partie 1 · L'aubergiste t'appelle par le prénom de sa femme disparue",
+ "caption": "Tu finis ton assiette sans rien dire (1) ou tu quittes la table malgré la règle (2) ? Le plus de votes décide la partie 2 👇 #horreur #histoire #creepy #pourtoi",
+ "vote": "Le plus de votes décide la partie 2",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "MARCEL": {
+   "couleur": "#c08a5a"
+  }
+ },
+ "lieux": {
+  "voiture": "MORVAN",
+  "rue": "ROUTE ENNEIGÉE",
+  "cuisine": "L'AUBERGE",
+  "foret": "FORÊT DU MORVAN"
+ },
+ "beats": [
+  {
+   "voice": "Message de ton frère Adam : si tu t'arrêtes à l'auberge du Morvan, ne mange *rien*.",
+   "tel": {
+    "type": "sms",
+    "de": "Adam",
+    "lignes": [
+     "Si tu t'arrêtes à l'auberge du Morvan,",
+     "ne mange rien."
+    ]
+   }
+  },
+  {
+   "voice": "Ta voiture s'arrête en pleine forêt du Morvan, sous la neige.",
+   "vue": "voiture",
+   "hero": "peur",
+   "neige": true
+  },
+  {
+   "voice": "La seule lumière à des kilomètres, c'est une vieille auberge.",
+   "vue": "foret",
+   "hero": "marche",
+   "neige": true
+  },
+  {
+   "voice": "L'aubergiste, Monsieur Marcel, t'a déjà préparé une assiette. Et une chambre.",
+   "vue": "cuisine",
+   "hero": "debout",
+   "hx": 0.7,
+   "persos": [
+    {
+     "nom": "MARCEL",
+     "x": 0.3,
+     "etat": "debout"
+    }
+   ]
+  },
+  {
+   "voice": "Sur la porte, une règle : on ne quitte pas la table avant la fin du repas.",
+   "regle": {
+    "n": 1,
+    "txt": "On ne quitte pas\nla table avant\nla fin du repas"
+   }
+  },
+  {
+   "voice": "Monsieur Marcel t'appelle Gloria. C'est le prénom de sa femme, disparue depuis vingt ans.",
+   "vue": "cuisine",
+   "hero": "peur",
+   "cadre": "gros",
+   "persos": [
+    {
+     "nom": "MARCEL",
+     "x": 0.3,
+     "etat": "debout"
+    }
+   ]
+  },
+  {
+   "voice": "Au mur, une photo de Gloria. Elle porte exactement ton *manteau*.",
+   "objet": {
+    "type": "photo",
+    "vue": "cuisine",
+    "texte": "Gloria, 2006"
+   }
+  },
+  {
+   "voice": "Une alerte apparaît : ta voiture vient de démarrer, sans toi.",
+   "tel": {
+    "type": "notif",
+    "app": "LOCALISER",
+    "titre": "Ta voiture",
+    "texte": "En mouvement",
+    "heure": "19:40"
+   }
+  },
+  {
+   "voice": "Par la fenêtre, tu vois ses phares partir dans la neige.",
+   "vue": "foret",
+   "hero": "absent",
+   "neige": true,
+   "ombre": {
+    "x": 0.7
+   }
+  },
+  {
+   "voice": "Monsieur Marcel ferme la porte à clé : maintenant, tu restes avec moi.",
+   "vue": "cuisine",
+   "hero": "peur",
+   "hx": 0.7,
+   "persos": [
+    {
+     "nom": "MARCEL",
+     "x": 0.3,
+     "etat": "debout"
+    }
+   ],
+   "flicker": true
+  },
+  {
+   "voice": "Tu finis ton assiette sans rien dire, ou alors, tu quittes la table malgré la règle ? Écris #un# ou #deux#.",
+   "choix": {
+    "a": "Finir l'assiette",
+    "b": "Quitter la table"
+   }
+  }
+ ]
+}

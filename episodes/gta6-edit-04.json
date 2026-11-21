@@ -1,0 +1,148 @@
+{
+ "style": "edit",
+ "source": "/tmp/gta6/launch.mp4",
+ "bandes": 0.0556,
+ "title": "Vice City edit 🌴 GTA 6",
+ "caption": "Vice City de jour (1) ou de nuit (2) ? 🌴🌃👇 #gta6 #gtavi #vicecity #edit #gta\n🎵 Miami Trap (Club Mix) – Hasenchat (CC BY-SA 3.0)",
+ "plans": [
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_01.jpg",
+   "temps": 4,
+   "x": 0.29
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_27.jpg",
+   "temps": 4,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_13.jpg",
+   "temps": 2,
+   "x": 0.5,
+   "flash": true
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_10.jpg",
+   "temps": 1,
+   "x": 0.29
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_22.jpg",
+   "temps": 1,
+   "x": 0.9
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_08.jpg",
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_15.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_06.jpg",
+   "temps": 1,
+   "x": 0.36
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_17.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_03.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_24.jpg",
+   "temps": 2,
+   "x": 0.36
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_09.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_11.jpg",
+   "temps": 1,
+   "x": 0.71
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_26.jpg",
+   "temps": 2,
+   "x": 0.43
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_16.jpg",
+   "temps": 1,
+   "x": 0.86
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_14.jpg",
+   "temps": 1,
+   "x": 0.21
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_19.jpg",
+   "temps": 2,
+   "x": 0.07
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_04.jpg",
+   "temps": 1,
+   "x": 0.21
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_20.jpg",
+   "temps": 2,
+   "x": 0.86
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_25.jpg",
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Vice City/Vice_City_12.jpg",
+   "temps": 2,
+   "x": 0.79
+  },
+  {
+   "t": 77.3,
+   "temps": 5,
+   "x": 0.5,
+   "entier": true,
+   "punch": 0.04,
+   "flash": true
+  }
+ ],
+ "textes": [
+  {
+   "de": 0,
+   "a": 8,
+   "txt": "VICE CITY",
+   "y": 0.16,
+   "taille": 150
+  },
+  {
+   "de": 35,
+   "a": 40,
+   "txt": "DE JOUR (1) OU DE NUIT (2) ?",
+   "y": 0.68,
+   "taille": 72
+  }
+ ],
+ "musique": {
+  "fichier": "/tmp/gta6/m/miami.mp3",
+  "source": "https://prod-1.storage.jamendo.com/?trackid=1301348&format=mp32",
+  "chercher": [
+   30,
+   50
+  ],
+  "credit": "Miami Trap (Club Mix) – Hasenchat (CC BY-SA 3.0)"
+ }
+}

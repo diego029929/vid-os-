@@ -1,0 +1,129 @@
+{
+ "style": "nuit",
+ "series": "LE CAMPING",
+ "etiquette": "PARTIE 1",
+ "heure": "23:58:30",
+ "title": "Partie 1 · Ton cousin disparu t'attend au camping, il a toujours 16 ans",
+ "caption": "Tu entres dans la tente de Tom (1) ou tu cours vers ta voiture (2) ? Le plus de votes décide la partie 2 👇 #horreur #histoire #creepy #pourtoi",
+ "vote": "Le plus de votes décide la partie 2",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "TOM": {
+   "couleur": "#5aa0ff"
+  }
+ },
+ "lieux": {
+  "voiture": "ROUTE DES LANDES",
+  "foret": "CAMPING DU LAC",
+  "mer": "LE LAC"
+ },
+ "beats": [
+  {
+   "voice": "Message de ton cousin Tom, disparu depuis sept ans : reviens au camp du lac, on t'attend.",
+   "tel": {
+    "type": "sms",
+    "de": "Tom",
+    "lignes": [
+     "Reviens au camp du lac.",
+     "On t'attend."
+    ]
+   }
+  },
+  {
+   "voice": "Alors, tu roules toute la nuit jusqu'au vieux camp de vacances du lac, dans les Landes.",
+   "vue": "voiture",
+   "hero": "debout"
+  },
+  {
+   "voice": "Le camp est fermé depuis l'été où Tom a disparu. Pourtant, une lampe est *allumée*.",
+   "vue": "foret",
+   "hero": "marche",
+   "hx": 0.5
+  },
+  {
+   "voice": "Au bord du lac, Tom t'attend. Il a toujours seize ans.",
+   "vue": "mer",
+   "hero": "debout",
+   "hx": 0.7,
+   "persos": [
+    {
+     "nom": "TOM",
+     "x": 0.3,
+     "etat": "debout"
+    }
+   ]
+  },
+  {
+   "voice": "Tom t'explique : ici, la même nuit recommence, encore et encore.",
+   "vue": "mer",
+   "hero": "peur",
+   "hx": 0.7,
+   "cadre": "gros",
+   "persos": [
+    {
+     "nom": "TOM",
+     "x": 0.3,
+     "etat": "debout"
+    }
+   ]
+  },
+  {
+   "voice": "Il montre le panneau : quand la sirène sonne, tout le monde doit être à l'abri.",
+   "regle": {
+    "n": 1,
+    "txt": "Sirène ?\nMets-toi\nà l'abri"
+   }
+  },
+  {
+   "voice": "Puis, à minuit, une *sirène* hurle au-dessus du lac.",
+   "objet": {
+    "type": "horloge",
+    "heure": "12:00"
+   },
+   "sfx": "boom"
+  },
+  {
+   "voice": "Les campeurs courent tous se cacher. Ceux qui restent dehors, on ne les revoit *jamais*.",
+   "vue": "foret",
+   "hero": "peur",
+   "hx": 0.5,
+   "ombre": {
+    "x": 0.25
+   },
+   "flicker": true
+  },
+  {
+   "voice": "Ton téléphone repasse à vingt-deux heures. Dans deux heures, la sirène revient.",
+   "tel": {
+    "type": "notif",
+    "app": "HORLOGE",
+    "titre": "22:00",
+    "texte": "La sirène revient à minuit.",
+    "heure": "22:00"
+   }
+  },
+  {
+   "voice": "Tom ouvre sa tente pour toi. Mais si tu entres, tu ne repartiras plus jamais.",
+   "vue": "foret",
+   "hero": "debout",
+   "hx": 0.7,
+   "persos": [
+    {
+     "nom": "TOM",
+     "x": 0.3,
+     "etat": "debout"
+    }
+   ],
+   "rouge_lum": true
+  },
+  {
+   "voice": "Tu entres dans la tente de Tom, ou alors, tu cours vers ta voiture ? Écris #un# ou #deux#.",
+   "choix": {
+    "a": "Entrer dans la tente",
+    "b": "Courir à la voiture"
+   }
+  }
+ ]
+}
