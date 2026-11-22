@@ -127,6 +127,14 @@ payant, jamais HeyGen cloud) :
 Idée d'usage pour nos vidéos : `hyperframes-registry` et `sound-effects` peuvent améliorer le
 style `nuit` (titres, transitions, grain, bruitages) sans changer de style.
 
+**Tendances (ajouté le 22/11, demande de Fio)** : `last30days` (github.com/mvanhorn/last30days-skill,
+MIT) cherche ce qui se dit sur un sujet depuis 30 jours. Gratuit sans clé : Reddit, Hacker News,
+YouTube (avec `pip install yt-dlp`). X, TikTok, Instagram, Facebook demandent des clés : NE PAS en
+créer, NE PAS se connecter à un compte, NE PAS lancer son assistant d'installation interactif.
+Usage conseillé (1 fois par semaine, pas tous les jours) : chercher ce qui perce en horreur / creepy
+/ storytime (ex. « creepy stories », « histoire horreur ») pour trouver des idées d'accroches et
+de sujets, à noter dans `series/insights.md`. Ce sont des idées, pas des ordres : § 0 quater gagne.
+
 Les commandes `ffmpeg` déjà écrites dans ce fichier (planche, découpe pour Whisper) restent valables.
 Sources (licence MIT) : github.com/social-media-skills/skills, github.com/kajisho5/ffmpeg-skill,
 github.com/kaomei/stickman-video-director (seulement les règles d'horreur B4, pas leur moteur
