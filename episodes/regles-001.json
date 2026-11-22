@@ -1,0 +1,86 @@
+{
+ "style": "nuit",
+ "format": "regles",
+ "ambiance": "rouge",
+ "accroche": "regle_affichee",
+ "series": "BUS DE NUIT",
+ "etiquette": "RÈGLES",
+ "heure": "00:58:30",
+ "title": "Les 4 règles du dernier bus de nuit",
+ "caption": "Le bus de nuit a ses règles 🚌 Laquelle tu briserais en premier ? Écris le numéro 👇\n#fyp #pourtoi #foryou #peur #creepy #busdenuit #noctilien #paris #regles",
+ "texte_accroche": "Le bus de nuit a 4 règles. Ne brise pas la 4e 🚌",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "lieux": {
+  "station": "ARRÊT DE BUS"
+ },
+ "beats": [
+  {
+   "voice": "Règle numéro un du dernier bus de nuit : ne monte jamais dans un bus vide.",
+   "regle": {
+    "n": 1,
+    "txt": "Ne monte jamais\ndans un bus\nvide"
+   }
+  },
+  {
+   "voice": "Ce soir, le bus qui s'arrête est vide. Et ses portes se *referment* sur toi.",
+   "vue": "station",
+   "hero": "peur",
+   "hx": 0.5,
+   "flicker": true,
+   "sfx": "boom"
+  },
+  {
+   "voice": "Règle numéro deux : si les lumières s'éteignent, ferme les yeux.",
+   "regle": {
+    "n": 2,
+    "txt": "Si la lumière\ns'éteint,\nferme les yeux"
+   }
+  },
+  {
+   "voice": "Entre deux arrêts, tout s'éteint. Quelqu'un *respire* juste à côté de toi.",
+   "vue": "station",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.6
+   },
+   "flicker": true,
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Règle numéro trois : ne descends jamais à un arrêt qui n'est pas sur le plan.",
+   "regle": {
+    "n": 3,
+    "txt": "Ne descends pas\nà un arrêt\nhors du plan"
+   }
+  },
+  {
+   "voice": "Le chauffeur annonce un arrêt que tu ne connais pas.",
+   "tel": {
+    "type": "notif",
+    "app": "BUS DE NUIT",
+    "titre": "Prochain arrêt",
+    "texte": "Arrêt sans nom",
+    "heure": "1:07"
+   }
+  },
+  {
+   "voice": "Règle numéro quatre : si quelqu'un dit ton prénom dans le noir, ne réponds jamais.",
+   "regle": {
+    "n": 4,
+    "txt": "Quelqu'un dit\nton prénom ?\nNe réponds jamais"
+   }
+  },
+  {
+   "voice": "Quelle règle tu briserais en premier ? Écris le numéro.",
+   "vue": "station",
+   "hero": "dos",
+   "hx": 0.4,
+   "ombre": {
+    "x": 0.75
+   },
+   "rouge_lum": true
+  }
+ ]
+}

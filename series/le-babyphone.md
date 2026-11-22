@@ -11,3 +11,4 @@ Décors : `salon`, `chambre`, `escalier`, `cave` (+ horloge, téléphone).
 | Partie | Situation | Vote final |
 |---|---|---|
 | 1 (21/11, `episodes/baby-01.json`) | Sarah : « ne rebranche pas le babyphone » ; quelqu'un l'a rebranché ; 3 h : une voix d'enfant chuchote ton prénom ; le micro est à la cave ; Sarah : petites, on croyait entendre maman, ce n'était pas elle ; « viens jouer en bas, comme avant » | 1 : descendre à la cave / 2 : débrancher malgré la règle |
+| 2 (22/11, `episodes/baby-02.json`) | 0 vote → tirage au sort : 2 (débrancher). Sarah : mamie dit que tu l'as laissé sortir ; 3 h 10 : petits pas dans l'escalier de la cave ; la voix est derrière ta porte : « je peux venir jouer en haut » ; Sarah : cache-toi sous le lit | 1 : se cacher sous le lit / 2 : rebrancher le babyphone pour l'enfermer |

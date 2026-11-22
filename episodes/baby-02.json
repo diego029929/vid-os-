@@ -1,0 +1,28 @@
+{
+ "style": "nuit",
+ "format": "serie",
+ "ambiance": "nuit",
+ "accroche": "question_directe",
+ "series": "LE BABYPHONE",
+ "etiquette": "PARTIE 2",
+ "heure": "03:09:40",
+ "title": "Partie 2 · Tu as débranché le babyphone… mais la voix est derrière ta porte",
+ "caption": "Sous le lit (1) ou tu le rebranches (2) ? Le plus de votes décide la partie 3 👇\n#fyp #pourtoi #foryou #horreur #histoire #babyphone #grandmere #alsace #creepy",
+ "vote": "Le plus de votes décide la partie 3",
+ "texte_accroche": "Je l'ai débranché… et il parle encore 😨",
+ "hero": {"couleur": "#22b3a0"},
+ "persos": {"SARAH": {"couleur": "#e0607e", "cheveux": true}},
+ "lieux": {"chambre": "TA CHAMBRE D'ENFANT", "escalier": "ESCALIER DE LA CAVE", "couloir": "COULOIR"},
+ "beats": [
+  {"voice": "Tu débrancherais un babyphone qui chuchote ton prénom ?", "vue": "chambre", "hero": "peur", "cadre": "gros", "flicker": true, "ombre": {"x": 0.25}},
+  {"voice": "Toi, tu l'as fait. Tu as arraché la prise, malgré la règle de mamie.", "regle": {"n": 1, "txt": "S'il parle la nuit,\nne le débranche\njamais"}},
+  {"voice": "La lumière *verte* s'éteint. Le silence revient dans la chambre.", "vue": "chambre", "hero": "debout", "hx": 0.6, "cadre": "pousse"},
+  {"voice": "Dix secondes plus tard, Sarah t'écrit depuis Strasbourg.", "tel": {"type": "sms", "de": "Sarah", "lignes": ["Pourquoi tu l'as débranché ?", "Mamie m'appelle en pleurs."]}},
+  {"voice": "Mamie dit que tu viens de le laisser *sortir* de la cave.", "tel": {"type": "sms", "de": "Sarah", "lignes": ["Elle dit que tu l'as laissé sortir de la cave."]}},
+  {"voice": "À #trois# heures dix, des petits pas montent l'escalier de la cave.", "vue": "escalier", "hero": "absent", "ombre": {"x": 0.35}, "sfx": "toc"},
+  {"voice": "La voix ne sort plus du babyphone. Elle est derrière ta porte.", "objet": {"type": "porte", "toc": true}, "sfx": "toc"},
+  {"voice": "Elle chuchote : maintenant, je peux venir jouer en haut.", "vue": "couloir", "hero": "absent", "ombre": {"x": 0.5}, "rouge_lum": true, "sfx": "souffle"},
+  {"voice": "Nouveau message de Sarah : cache-toi sous le lit, et ne réponds jamais.", "tel": {"type": "sms", "de": "Sarah", "lignes": ["Cache-toi sous le lit.", "Et ne réponds jamais."]}},
+  {"voice": "Tu te caches sous le lit, ou alors, tu rebranches le babyphone pour l'enfermer ? Écris #un# ou #deux#.", "choix": {"a": "Se cacher sous le lit", "b": "Rebrancher le babyphone"}}
+ ]
+}

@@ -601,3 +601,27 @@ creux à 11 h, 13 h-14 h et après 21 h).
   rapide : voice.synth + megaphone + Whisper medium, ≈ 3 min pour 33 phrases) a évité 2 rendus de plus.
 - Programmé (Zernio, TikTok + Instagram) : edit Jason 8h, edit Vice City 9h, Babyphone p1 10h, Voisin p1 12h, Camping p1 18h,
   Auberge p1 20h. Durées 17,6 / 16,7 / 44,5 / 44,4 / 46,1 / 44,2 s. Camping rendu 4 fois (phrases mal lues), Babyphone 3 fois.
+
+### 22/11 (rotation pilotée par plan.py, 1re journée ; voix Pocket TTS « estelle » ; edits GTA 05/06)
+
+- Comptes Zernio OK, les 6 posts du 21/11 publiés.
+- **Stats 21/11 (≈ 10-20 h de recul)** — TikTok vues / likes / temps moyen / complétion, puis Insta vues / temps moyen :
+  - edit Jason 8h : 226 / 25 / 2,6 s / 0,8 % — Insta 135 / 3,0 s ;
+  - edit Vice City 9h : 233 / 19 / 3,0 s / 1,6 % — Insta 100 / 3,3 s ;
+  - Babyphone p1 10h : 224 / 3 / 6,4 s / 2,4 % — Insta 157 / 9,7 s ;
+  - Voisin p1 12h : **13** / 1 / 9,0 s — Insta 165 / 9,4 s (bloquée par TikTok) ;
+  - Camping p1 18h : **2** / 0 — Insta 152 / 8,9 s (bloquée par TikTok) ;
+  - Auberge p1 20h : 207 / 3 / 6,7 s / 2,2 % — Insta 140 / 7,7 s.
+- 0 commentaire, 0 partage sur les 6. 0 vidéo sur 33 au-dessus de 1 000 vues TikTok (7 jours).
+- Lecture : 2 parties 1 sur 4 bloquées le même jour (trop semblables entre elles : même format, même légende type
+  « Tu … (1) ou … (2) ? »). Les edits GTA gardent le meilleur taux de likes (≈ 10 %) mais 3 s de temps moyen.
+- **Plan du jour** (series/plans/2026-11-22.json) : 1 seule série gardée (Babyphone, score 0,50) ; Voisin, Camping, Auberge
+  arrêtées. Nouveautés : `regles` (12h, ambiance rouge), `histoire` (18h, sepia), `pov` (20h, bleu). Chaque vidéo a une
+  1re image, une légende et des hashtags différents (8-9 hashtags, § 0 quater).
+- Corrections au rendu : « station » = abri de bus dans nuit.js → la vidéo règles devient « bus de nuit » (pas métro) ;
+  décor `mer` = phare → POV au « port gelé ».
+- Voix Pocket « estelle » (1er jour) : mal lus et changés : « si une voix t'appelle » (« boîte à pêle »), « Laquelle tu
+  briserais » (« la quête » → « Quelle règle tu briserais »), « ta voix chuchote » en début (« ta boîte »), « magnétophone »
+  (« manettophone » → « vieux micro »), « mille neuf cent quatre-vingt-quatorze » (→ « a trente ans »). Whisper sur la vidéo
+  entière se trompe parfois sur « une voix dit » : découpée seule, la phrase est juste.
+- Rendus : babyphone 8 min 40 (1er téléchargement des modèles), les autres ≈ 5 min.

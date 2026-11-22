@@ -1,0 +1,148 @@
+{
+ "style": "edit",
+ "source": "/tmp/gta6/launch.mp4",
+ "bandes": 0.0556,
+ "title": "Leonida edit 🐊 GTA 6",
+ "caption": "Les Keys (1) ou les marais (2) : tu pars où en premier ? 🐊🌴👇 #gta6 #gtavi #gta #edit #leonida\n🎵 Miami Trap (Club Mix) – Hasenchat (CC BY-SA 3.0)",
+ "plans": [
+  {
+   "image": "/tmp/gta6/shots/Places/Leonida Keys/Leonida_Keys_01.jpg",
+   "temps": 4,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Grassrivers/Grassrivers_06.jpg",
+   "temps": 4,
+   "x": 0.86
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Leonida Keys/Leonida_Keys_06.jpg",
+   "temps": 2,
+   "x": 0.43,
+   "flash": true
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Grassrivers/Grassrivers_04.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Leonida Keys/Leonida_Keys_07.jpg",
+   "temps": 1,
+   "x": 0.43
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Ambrosia/Ambrosia_01.jpg",
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Grassrivers/Grassrivers_03.jpg",
+   "temps": 1,
+   "x": 0.43
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Leonida Keys/Leonida_Keys_04.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Port Gellhorn/Port_Gellhorn_01.jpg",
+   "temps": 1,
+   "x": 0.0
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Grassrivers/Grassrivers_07.jpg",
+   "temps": 1,
+   "x": 0.07
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_02.jpg",
+   "temps": 2,
+   "x": 0.74
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Leonida Keys/Leonida_Keys_02.jpg",
+   "temps": 1,
+   "x": 0.43
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Ambrosia/Ambrosia_03.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Grassrivers/Grassrivers_01.jpg",
+   "temps": 2,
+   "x": 0.64
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_06.jpg",
+   "temps": 1,
+   "x": 0.86
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Port Gellhorn/Port_Gellhorn_02.jpg",
+   "temps": 1,
+   "x": 0.29
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Ambrosia/Ambrosia_06.jpg",
+   "temps": 2,
+   "x": 0.64
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Grassrivers/Grassrivers_08.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_01.jpg",
+   "temps": 2,
+   "x": 0.43
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Leonida Keys/Leonida_Keys_03.jpg",
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/Places/Ambrosia/Ambrosia_04.jpg",
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 77.3,
+   "temps": 5,
+   "x": 0.5,
+   "entier": true,
+   "punch": 0.04,
+   "flash": true
+  }
+ ],
+ "textes": [
+  {
+   "de": 0,
+   "a": 8,
+   "txt": "LEONIDA",
+   "y": 0.16,
+   "taille": 150
+  },
+  {
+   "de": 35,
+   "a": 40,
+   "txt": "LES KEYS (1) OU LES MARAIS (2) ?",
+   "y": 0.68,
+   "taille": 72
+  }
+ ],
+ "musique": {
+  "fichier": "/tmp/gta6/son1.mp3",
+  "source": "https://prod-1.storage.jamendo.com/?trackid=1301348&format=mp32",
+  "chercher": [
+   30,
+   50
+  ],
+  "credit": "Miami Trap (Club Mix) – Hasenchat (CC BY-SA 3.0)"
+ }
+}
