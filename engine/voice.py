@@ -121,6 +121,22 @@ def _synth_piper(text):
     return audio, _piper.config.sample_rate
 
 
+_pocket = None
+POCKET_VOICE = os.environ.get("POCKET_VOICE", CONFIG.get("pocket_voice", "estelle"))
+
+
+def _synth_pocket(text):
+    """Kyutai Pocket TTS (gratuit, local, CPU, voix française native « estelle »). Choix du 22/11."""
+    global _pocket
+    from pocket_tts import TTSModel
+    if _pocket is None:
+        model = TTSModel.load_model(language="french")
+        _pocket = (model, model.get_state_for_audio_prompt(POCKET_VOICE))
+    model, state = _pocket
+    audio = model.generate_audio(state, text).float().numpy().reshape(-1)
+    return audio.astype(np.float32), model.sample_rate
+
+
 _cb = None
 RETRY = 0  # change le tirage aléatoire quand une réplique sort bégayée
 # Chatterbox : voix neuronale récente, bien plus naturelle (≈ 8x plus lent que le temps réel sur CPU).
@@ -201,14 +217,14 @@ def _synth_espeak(text):
 
 
 def engine_name():
-    if VOICE in ("chatterbox", "parler"):
+    if VOICE in ("chatterbox", "parler", "pocket"):
         return VOICE
     return "piper" if os.path.exists(MODEL) else "espeak"
 
 
 def synth(text):
     """Renvoie l'audio (float32, 44,1 kHz) de la phrase."""
-    audio, rate = {"chatterbox": _synth_chatterbox, "parler": _synth_parler, "piper": _synth_piper}.get(engine_name(), _synth_espeak)(clean(text))
+    audio, rate = {"chatterbox": _synth_chatterbox, "parler": _synth_parler, "piper": _synth_piper, "pocket": _synth_pocket}.get(engine_name(), _synth_espeak)(clean(text))
     if rate != SR:
         x = np.linspace(0, len(audio) - 1, int(len(audio) * SR / rate))
         audio = np.interp(x, np.arange(len(audio)), audio).astype(np.float32)

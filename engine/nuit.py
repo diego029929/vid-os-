@@ -163,7 +163,7 @@ def build(ep_path, out, draft=False, verif=False):
         import voice
         default_ref = voice.CB_REF
         narrateur = voice.engine_name()
-        if voice.VOICE not in ("chatterbox", "parler") and not os.path.exists(voice.MODEL):
+        if voice.VOICE not in ("chatterbox", "parler", "pocket") and not os.path.exists(voice.MODEL):
             # voix Piper du narrateur (voice_config.json) : téléchargée au premier rendu (gratuit, huggingface.co)
             subprocess.run(["sh", os.path.join(HERE, "get_voice.sh")], check=True)
             narrateur = voice.engine_name()

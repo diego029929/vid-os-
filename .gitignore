@@ -2,3 +2,10 @@
 assets/voices/
 __pycache__/
 assets/ia/
+
+# vidéos 3D (episodes/3d) : fichiers de travail
+episodes/3d/*/audio/
+episodes/3d/*/stills/
+episodes/3d/*/node_modules
+episodes/3d/*/*.mp4
+episodes/3d/*/l.txt

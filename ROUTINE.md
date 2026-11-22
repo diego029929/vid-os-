@@ -10,6 +10,41 @@
 > Fini les 4 séries identiques par jour : chaque matin `engine/plan.py` décide, à partir des stats,
 > le format, l'ambiance et l'accroche de CHAQUE créneau. La routine suit ce plan.
 
+## 00. 22/11 nuit : nouvelle voix + TOUS les skills à chaque étape (à lire en premier)
+
+> Fio, 22/11 1h45 : « utilise bien tous les skills pour les vidéos de demain, utilise les agents que
+> tu souhaites ». Il trouvait que le 1er essai « n'utilisait presque pas les skills » et que la voix
+> Piper « est nulle » (« à toi de choisir »).
+
+1. **Nouvelle voix du narrateur** : skill `voix-pocket-tts` (Kyutai Pocket TTS, voix française
+   `estelle`, gratuit, local, MIT / CC-BY 4.0). Déjà branchée : `engine/voice_config.json` →
+   `"voice": "pocket"` ; `engine/nuit.py` et `engine/voice.py` l'utilisent tout seuls. Installer
+   `pip install -q pocket-tts` (§ 5 étape 0). Plus de Piper ni d'effet mégaphone pour le narrateur.
+   Les règles de § 4 (Whisper phrase par phrase, mots mal lus) restent valables.
+2. **Chaque étape passe par son skill** (le lire vraiment, pas juste le citer). Les étapes
+   indépendantes (écriture des scripts, test du spectateur, tendances) peuvent se faire avec des agents
+   (outil Agent) en parallèle ; les rendus restent UN À LA FOIS.
+   | Étape | Skills à suivre |
+   |---|---|
+   | Idées / sujets (lundi, ou si le plan manque d'idées) | `last30days` (Reddit/YouTube gratuits), `viral-reverse-engineering` |
+   | Accroche + `texte_accroche` | `hook-writer` (3 variantes, garder la meilleure) |
+   | Script | `tiktok-script` + `short-form-video-script` + `storytelling-and-narrative` ; horreur : `horreur-baton` |
+   | Voix | `voix-pocket-tts` |
+   | Bruitages | `sound-effects` (bibliothèque CC0 `.claude/skills/sound-effects/sfx/`) |
+   | Titres, transitions, grain | `hyperframes-registry` |
+   | Contrôle technique | `ffmpeg-skill` (`check.py --platform tiktok`, 0 failed) |
+   | Légende + 8-10 hashtags | `caption-writer` + `hashtag-strategy` |
+   | Stats du matin | `analytics-and-reporting` + `tiktok-growth` |
+3. **Essai 3D quotidien (format `3d`, statut `essai` dans `series/formats.json`)** : après les vidéos
+   publiées, faire 1 vidéo 3D façon Zack D. Films (skill `zach-d-films`) de 25-32 s et la déposer dans
+   `/mnt/project-files/essais-3d/AAAA-MM-JJ-<sujet>.mp4` pour Fio. **Ne PAS la publier** tant que Fio
+   n'a pas dit oui (alors passer `3d` en `actif`). Histoire complète : question « Est-ce que X peut… ? /
+   Et si… ? », idée reçue, « Mais » (dip au noir), 2-3 exemples qui montent, chute qui répond. Sujets :
+   faits étonnants vérifiables. Exemple complet : `episodes/3d/balle-vs-armure/` (lire `LISEZMOI.md`).
+   Nouvelle histoire = NOUVEAUX plans dans `src/shots.js` ; regarder les stills avant le rendu complet.
+   Si le rendu 3D échoue 2 fois, laisser tomber pour le jour et le dire.
+4. Résumé à Fio : une ligne sur les skills qui ont servi.
+
 ## 0 bis. Rotation pilotée par les stats (OBLIGATOIRE, dès le 22/11)
 
 1. Après les stats (§ 5, étape 2), lancer **`python3 engine/plan.py AAAA-MM-JJ`** (date du jour).
@@ -110,7 +145,7 @@ le style de Zack D. Films de § 0 quater), `low-poly` (3D façon PS1), `minecraf
 installe three.js + Playwright + GSAP ; ne pas utiliser `--voice`). Règles :
 - **Ne JAMAIS publier une vidéo faite avec ces styles tant que Fio n'a pas validé un essai** de ce
   style. Le style publié reste `nuit` (§ 1 bis).
-- Voix : NOTRE narratrice Piper (§ 4) passée comme enregistrement (`audio/vo.wav`), jamais Kokoro
+- Voix : NOTRE narratrice Pocket TTS (§ 00, skill `voix-pocket-tts`) passée comme enregistrement (`audio/vo.wav`), jamais Kokoro
   (anglais) ni ElevenLabs (payant). Le minutage des mots (leur outil Parakeet est anglais) se refait
   avec Whisper.
 
@@ -412,6 +447,9 @@ puis planche contact.
 
 ## 4. La voix (choix de Fio, ne pas changer sans Fio)
 
+> **Depuis le 22/11 : Kyutai Pocket TTS, voix `estelle` (§ 00, skill `voix-pocket-tts`).** Ce qui
+> suit sur Piper est l'historique ; les règles de vérification restent valables.
+
 - **Depuis le 17/11 : la voix de femme des premières vidéos** (Fio, 16/11
   soir : « la voix de femme initiale des premières vidéos », celle de
   « L'ascenseur » fin octobre) = voix Piper gratuite `fr_FR-upmc-medium`,
@@ -446,7 +484,7 @@ puis planche contact.
 
 0. Installer : `pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url
    https://download.pytorch.org/whl/cpu`, puis `pip install -q
-   chatterbox-tts piper-tts language_tool_python openai-whisper playwright` puis
+   chatterbox-tts piper-tts pocket-tts language_tool_python openai-whisper playwright` puis
    `pip install -q --no-deps num2words` (pour `--verif`) et `pip install -q librosa` (edits GTA) et `pip install -q librosa` (edits GTA) (≈ 3 min ;
    Playwright utilise le Chromium déjà installé `/opt/pw-browsers/chromium`,
    ne PAS lancer `playwright install`). Si

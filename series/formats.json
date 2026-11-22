@@ -25,6 +25,10 @@
       "statut": "actif", "moteur": "edit", "duree": [15, 20], "creneaux_fixes": ["08:00", "09:00"],
       "desc": "Edit GTA 6 (ROUTINE.md § 1 ter) : vraies images officielles, vrai morceau CC BY / BY-SA, sans voix. Un thème différent à chaque fois."
     },
+    "3d": {
+      "statut": "essai", "moteur": "zach3d", "duree": [25, 32],
+      "desc": "Cartoon 3D façon Zack D. Films (skill zach-d-films, ROUTINE.md § 00). EN ESSAI : 1 vidéo par jour livrée à Fio dans /mnt/project-files/essais-3d/, PAS publiée tant que Fio n'a pas dit oui (alors passer statut à actif)."
+    },
     "intrus": {"statut": "interdit", "desc": "Trouve l'intrus (Fio 11/11 : « vraiment nul »)"},
     "devine-film": {"statut": "interdit", "desc": "Devine le film en emojis (Fio 11/11 : nul)"},
     "fruits": {"statut": "interdit", "desc": "Fruits dessinés / films de fruits (Fio : « horribles »)"},
