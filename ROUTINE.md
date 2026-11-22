@@ -114,6 +114,19 @@ installe three.js + Playwright + GSAP ; ne pas utiliser `--voice`). Règles :
   (anglais) ni ElevenLabs (payant). Le minutage des mots (leur outil Parakeet est anglais) se refait
   avec Whisper.
 
+**Motion design (ajoutés le 22/11, demande de Fio, PAS ENCORE pour publier)** : même règle que
+ci-dessus (essai validé par Fio avant toute publication, voix Piper, jamais ElevenLabs ni service
+payant, jamais HeyGen cloud) :
+- product launch motion : `product-launch-motion` (AbubakrChan, MIT) ;
+- motion : `motionmaxxing` (Apache 2.0) et `motion-design` (howseen-ai, MIT) ;
+- HyperFrames (HTML → vidéo, gratuit, `npx hyperframes`) : `hyperframes`, `hyperframes-cli`,
+  `hyperframes-registry` (≈ 450 blocs : titres, glitch, grain, sous-titres…), `style-sampling`
+  (dont « 3D True Crime »), `reverse-any-video` (Apache 2.0, heygen-com/hyperframes) ;
+- motion graphics : `explainer-high-energy`, `explainer-engaging`, `explainer-default`,
+  `motion-broll`, `sound-effects` (bruitages CC0 + mixage, Barty-Bart, MIT).
+Idée d'usage pour nos vidéos : `hyperframes-registry` et `sound-effects` peuvent améliorer le
+style `nuit` (titres, transitions, grain, bruitages) sans changer de style.
+
 Les commandes `ffmpeg` déjà écrites dans ce fichier (planche, découpe pour Whisper) restent valables.
 Sources (licence MIT) : github.com/social-media-skills/skills, github.com/kajisho5/ffmpeg-skill,
 github.com/kaomei/stickman-video-director (seulement les règles d'horreur B4, pas leur moteur
