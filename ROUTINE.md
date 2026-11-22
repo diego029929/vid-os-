@@ -85,6 +85,27 @@
    (`#sms #babysitting #hopital`…). Varier les précis d'une vidéo à l'autre.
 7. **Légende courte** : quelques mots + 1 emoji, puis les hashtags (Zack D. Films).
 
+## 0 quinquies. Skills installés dans `.claude/skills/` (choix de Fio, 22/11)
+
+Fio a demandé d'ajouter des skills pour les vidéos. Ils sont dans le dépôt pour que la routine
+les ait. **Ils aident, ils ne remplacent rien** : ROUTINE.md gagne toujours en cas de conflit
+(formats, durées, voix, style `nuit`, Zernio). `brand-profile.md` (racine) sert de profil ET de
+voix pour tous ces skills : ne pas lancer d'interview `brand-profile` / `voice-builder`.
+
+| Quand | Skill à lire |
+|---|---|
+| Écrire le `texte_accroche` et la 1re phrase (§ 5 étape 3) | `hook-writer` |
+| Écrire le script d'une vidéo | `tiktok-script`, `short-form-video-script`, `storytelling-and-narrative`, `story-writer` |
+| Mise en scène horreur (3 premières s, plans ≤ 3 s, menace visible, son) | `horreur-baton` |
+| Légende + hashtags (§ 0 quater 6-7) | `caption-writer`, `hashtag-strategy` |
+| Lire les stats et comprendre pourquoi une vidéo marche ou pas (§ 5 étape 2) | `analytics-and-reporting`, `viral-reverse-engineering`, `experimentation-and-ab-testing`, `tiktok-growth` |
+| Contrôle technique avant publication (§ 5 étape 7, EN PLUS de `check_video.py`) | `ffmpeg-skill` : `python3 .claude/skills/ffmpeg-skill/scripts/check.py /tmp/<f>.mp4 --platform tiktok` (0 failed attendu ; les WARN couleur/sous-titres sont normaux) ; specs : `platform-specs-and-validation` |
+
+Les commandes `ffmpeg` déjà écrites dans ce fichier (planche, découpe pour Whisper) restent valables.
+Sources (licence MIT) : github.com/social-media-skills/skills, github.com/kajisho5/ffmpeg-skill,
+github.com/kaomei/stickman-video-director (seulement les règles d'horreur B4, pas leur moteur
+qui demande des services payants).
+
 ## 0 ter. Objectif de Fio : PLUS DE 1 000 VUES par vidéo (21/11)
 
 > Fio, 21/11 : « Je veux que ça fasse obligatoirement plus de 1k de vues. » Rien ne peut le garantir
