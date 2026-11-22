@@ -463,6 +463,62 @@
    "file": "episodes/auberge-01.json",
    "slot": "2026-11-21T20:00:00 Europe/Paris",
    "zernio_id": "6b0136d35d27c99096858092"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-05",
+   "file": "episodes/gta6-edit-05.json",
+   "slot": "2026-11-22T08:00:00 Europe/Paris",
+   "zernio_id": "6b02754aa479bd0cb8850109",
+   "format": "edit"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-06",
+   "file": "episodes/gta6-edit-06.json",
+   "slot": "2026-11-22T09:00:00 Europe/Paris",
+   "zernio_id": "6b02754a9c2e86c539657f1f",
+   "format": "edit"
+  },
+  {
+   "series": "le-babyphone",
+   "episode": 2,
+   "file": "episodes/baby-02.json",
+   "slot": "2026-11-22T10:00:00 Europe/Paris",
+   "zernio_id": "6b027794a479bd0cb8850705",
+   "format": "serie",
+   "ambiance": "nuit",
+   "accroche": "question_directe"
+  },
+  {
+   "series": "regles-bus-de-nuit",
+   "episode": 1,
+   "file": "episodes/regles-001.json",
+   "slot": "2026-11-22T12:00:00 Europe/Paris",
+   "zernio_id": "6b027cfc5d47d99aee8163f0",
+   "format": "regles",
+   "ambiance": "rouge",
+   "accroche": "regle_affichee"
+  },
+  {
+   "series": "la-cassette",
+   "episode": 1,
+   "file": "episodes/histoire-001.json",
+   "slot": "2026-11-22T18:00:00 Europe/Paris",
+   "zernio_id": "6b028131464fce2554d6fcaa",
+   "format": "histoire",
+   "ambiance": "sepia",
+   "accroche": "chiffre_heure"
+  },
+  {
+   "series": "pov-port-gele",
+   "episode": 1,
+   "file": "episodes/pov-001.json",
+   "slot": "2026-11-22T20:00:00 Europe/Paris",
+   "zernio_id": "6b028267362b63fd5eddc271",
+   "format": "pov",
+   "ambiance": "bleu",
+   "accroche": "sms_proche"
   }
  ],
  "survis_next": 15,
@@ -632,7 +688,7 @@
    "voisin": "1 ouvrir le placard / 2 sonner chez le voisin",
    "camping": "1 entrer dans la tente de Tom / 2 courir à la voiture",
    "auberge": "1 finir l'assiette / 2 se lever de table",
-   "result": "à compter le 22/11"
+   "result": "22/11 : 0 commentaire sur les 4 parties 1 → tirage au sort. Babyphone : 2 (débrancher). Voisin, Camping, Auberge arrêtées par le plan (1 série max)."
   }
  },
  "previous_series": "jacques-a-dit",
@@ -822,31 +878,7 @@
    "series_file": "series/le-babyphone.md",
    "prefix": "baby",
    "episode_count": 3,
-   "next_episode": 2
-  },
-  {
-   "slot": "12:00",
-   "series": "le-voisin",
-   "series_file": "series/le-voisin.md",
-   "prefix": "voisin",
-   "episode_count": 3,
-   "next_episode": 2
-  },
-  {
-   "slot": "18:00",
-   "series": "le-camping",
-   "series_file": "series/le-camping.md",
-   "prefix": "camping",
-   "episode_count": 3,
-   "next_episode": 2
-  },
-  {
-   "slot": "20:00",
-   "series": "l-auberge",
-   "series_file": "series/l-auberge.md",
-   "prefix": "auberge",
-   "episode_count": 3,
-   "next_episode": 2
+   "next_episode": 3
   }
  ],
  "cycle2": "18/11 au 20/11 : La Coupure 10h, Le Tunnel 12h, Chambre neuf 18h, Le Ferry 20h. Le 21/11 : 4 nouvelles séries.",
@@ -861,20 +893,53 @@
    "13 ans d'attente, reports (gta6-02)",
    "Lucia edit, captures (gta6-edit-02)",
    "Jason edit, captures (gta6-edit-03, 21/11 8h, Trap Bells)",
-   "Vice City edit, captures (gta6-edit-04, 21/11 9h, Miami Trap)"
+   "Vice City edit, captures (gta6-edit-04, 21/11 9h, Miami Trap)",
+   "Leonida (Keys, marais, Ambrosia, Port Gellhorn, Kalaga), captures (gta6-edit-05, 22/11 8h, Miami Trap)",
+   "Persos secondaires (Boobie, Brian, Real Dimez, Raul, DreQuan, Cal), captures (gta6-edit-06, 22/11 9h, Trap Bells)"
   ],
   "format": "edit (vraies images officielles, sans voix, vrai morceau CC BY-SA) depuis le 20/11",
-  "next_edit": 5,
+  "next_edit": 7,
   "note_19_11": "Fio 19/11 : beat maison NUL, edit bande-annonce de 8h annulé, garder Lucia edit. Musique = vrais morceaux Creative Commons."
  },
  "previous_parallel_series": [
   "la-coupure",
   "le-tunnel",
   "chambre-neuf",
-  "le-ferry"
+  "le-ferry",
+  {
+   "slot": "12:00",
+   "series": "le-voisin",
+   "series_file": "series/le-voisin.md",
+   "prefix": "voisin",
+   "episode_count": 3,
+   "next_episode": 2,
+   "arretee": "2026-11-22"
+  },
+  {
+   "slot": "18:00",
+   "series": "le-camping",
+   "series_file": "series/le-camping.md",
+   "prefix": "camping",
+   "episode_count": 3,
+   "next_episode": 2,
+   "arretee": "2026-11-22"
+  },
+  {
+   "slot": "20:00",
+   "series": "l-auberge",
+   "series_file": "series/l-auberge.md",
+   "prefix": "auberge",
+   "episode_count": 3,
+   "next_episode": 2,
+   "arretee": "2026-11-22"
+  }
  ],
  "cycle3": {
   "dates": "21/11 → 23/11",
   "nouvelles_series": "24/11"
+ },
+ "variation": {
+  "coupes": {},
+  "dernier_plan": "2026-11-22"
  }
 }

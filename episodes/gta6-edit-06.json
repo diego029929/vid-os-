@@ -1,0 +1,148 @@
+{
+ "style": "edit",
+ "source": "/tmp/gta6/launch.mp4",
+ "bandes": 0.0556,
+ "title": "Les persos de GTA 6 🔥 edit",
+ "caption": "Boobie Ike (1) ou Brian Heder (2) : ton perso préféré ? 😎👇 #gta6 #gtavi #gta #edit #boobieike\n🎵 09 Trap Bells (Instrumental Mix) – Hasenchat (CC BY-SA 3.0)",
+ "plans": [
+  {
+   "image": "/tmp/gta6/shots/People/Boobie Ike/Boobie_Ike_03.jpg",
+   "temps": 4,
+   "x": 0.29
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Brian Heder/Brian_Heder_03.jpg",
+   "temps": 4,
+   "x": 0.61
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Real Dimez/Real_Dimez_04.jpg",
+   "temps": 2,
+   "x": 0.29,
+   "flash": true
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Raul Bautista/Raul_Bautista_01.jpg",
+   "temps": 1,
+   "x": 0.57
+  },
+  {
+   "image": "/tmp/gta6/shots/People/DreQuan Priest/DreQuan_Priest_03.jpg",
+   "temps": 1,
+   "x": 0.39
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Cal Hampton/Cal_Hampton_03.jpg",
+   "temps": 2,
+   "x": 0.43
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Boobie Ike/Boobie_Ike_02.jpg",
+   "temps": 1,
+   "x": 0.07
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Brian Heder/Brian_Heder_01.jpg",
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Raul Bautista/Raul_Bautista_02.jpg",
+   "temps": 1,
+   "x": 0.47
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Real Dimez/Real_Dimez_01.jpg",
+   "temps": 1,
+   "x": 0.64
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Cal Hampton/Cal_Hampton_01.jpg",
+   "temps": 2,
+   "x": 1.0
+  },
+  {
+   "image": "/tmp/gta6/shots/People/DreQuan Priest/DreQuan_Priest_02.jpg",
+   "temps": 1,
+   "x": 0.93
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Brian Heder/Brian_Heder_02.jpg",
+   "temps": 1,
+   "x": 0.67
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Raul Bautista/Raul_Bautista_03.jpg",
+   "temps": 2,
+   "x": 0.8
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Boobie Ike/Boobie_Ike_01.jpg",
+   "temps": 1,
+   "x": 0.43
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Real Dimez/Real_Dimez_03.jpg",
+   "temps": 1,
+   "x": 0.67
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Cal Hampton/Cal_Hampton_04.jpg",
+   "temps": 2,
+   "x": 0.36
+  },
+  {
+   "image": "/tmp/gta6/shots/People/DreQuan Priest/DreQuan_Priest_04.jpg",
+   "temps": 1,
+   "x": 0.21
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Raul Bautista/Raul_Bautista_04.jpg",
+   "temps": 2,
+   "x": 0.43
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Brian Heder/Brian_Heder_04.jpg",
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "image": "/tmp/gta6/shots/People/Real Dimez/Real_Dimez_02.jpg",
+   "temps": 2,
+   "x": 0.64
+  },
+  {
+   "t": 77.3,
+   "temps": 5,
+   "x": 0.5,
+   "entier": true,
+   "punch": 0.04,
+   "flash": true
+  }
+ ],
+ "textes": [
+  {
+   "de": 0,
+   "a": 8,
+   "txt": "LES PERSOS",
+   "y": 0.16,
+   "taille": 150
+  },
+  {
+   "de": 35,
+   "a": 40,
+   "txt": "BOOBIE (1) OU BRIAN (2) ?",
+   "y": 0.68,
+   "taille": 72
+  }
+ ],
+ "musique": {
+  "fichier": "/tmp/gta6/son2.mp3",
+  "source": "https://prod-1.storage.jamendo.com/?trackid=1253537&format=mp32",
+  "chercher": [
+   18,
+   40
+  ],
+  "credit": "09 Trap Bells (Instrumental Mix) – Hasenchat (CC BY-SA 3.0)"
+ }
+}
