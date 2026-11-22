@@ -8,6 +8,8 @@ mkdir -p assets/voices
 voices="$*"
 [ -n "$voices" ] || voices=$(python3 -c "import json; print(json.load(open('engine/voice_config.json'))['voice'])")
 for v in $voices; do
+  # Pocket TTS (narrateur depuis le 22/11) : un paquet pip, le modèle se télécharge tout seul
+  if [ "$v" = "pocket" ]; then python3 -c "import pocket_tts" 2>/dev/null || pip install -q pocket-tts; continue; fi
   # fr_FR-tom-medium -> fr/fr_FR/tom/medium
   speaker=$(echo "$v" | cut -d- -f2)
   quality=$(echo "$v" | cut -d- -f3)

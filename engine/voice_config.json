@@ -1,8 +1,8 @@
 {
-  "voice": "fr_FR-upmc-medium",
+  "voice": "pocket",
   "reference": "ref-pierre-moyen.wav",
-  "effect": "megaphone",
-  "tempo": 1.1,
+  "effect": "leger",
+  "tempo": 0.92,
   "tight": true,
   "pitch": 1.0,
   "speed": 1.0,
@@ -10,6 +10,7 @@
   "seed": 1,
   "exaggeration": 0.6,
   "cfg": 0.4,
-  "note": "16/11 soir, Fio : « la voix de femme initiale des premières vidéos » (L'ascenseur, fin octobre) = voix Piper fr_FR-upmc-medium, locutrice 0 (Jessica), effet mégaphone, comme l'ancien moteur. Narrateur seulement : les personnages avec \"voix\" (refs Chatterbox ci-dessous) restent en Chatterbox. Avant (01/11) : Chatterbox ref-pierre-moyen 0.6/0.4 tempo 1.3 leger.",
-  "speaker": 0
+  "note": "22/11 nuit, Fio : « celle-là est nulle, installe un skill pour les voix, à toi de choisir » → Kyutai Pocket TTS (pip install pocket-tts, gratuit, local), modèle french, voix native « estelle », effet leger, tempo 0.92 (Pocket parle vite). Skill : .claude/skills/voix-pocket-tts. Avant : Piper fr_FR-upmc-medium loc. 0 + megaphone tempo 1.1 (remettre voice=fr_FR-upmc-medium, effect=megaphone, tempo=1.1 pour revenir).",
+  "speaker": 0,
+  "pocket_voice": "estelle"
 }
