@@ -101,6 +101,19 @@ voix pour tous ces skills : ne pas lancer d'interview `brand-profile` / `voice-b
 | Lire les stats et comprendre pourquoi une vidéo marche ou pas (§ 5 étape 2) | `analytics-and-reporting`, `viral-reverse-engineering`, `experimentation-and-ab-testing`, `tiktok-growth` |
 | Contrôle technique avant publication (§ 5 étape 7, EN PLUS de `check_video.py`) | `ffmpeg-skill` : `python3 .claude/skills/ffmpeg-skill/scripts/check.py /tmp/<f>.mp4 --platform tiktok` (0 failed attendu ; les WARN couleur/sous-titres sont normaux) ; specs : `platform-specs-and-validation` |
 
+**Styles d'animation (ajoutés le 22/11, PAS ENCORE pour publier)** : 11 skills de
+github.com/artemnovitckii/claude-animation-skills, tout en code, gratuits : `stick-figure`
+(bâtons dans un monde cartoon coloré), `zach-d-films` / `zach-3d-films` (cartoon 3D « et si… »,
+le style de Zack D. Films de § 0 quater), `low-poly` (3D façon PS1), `minecraft` (cubes),
+`kurzgesagt` (vectoriel spatial), `dan-koe` et `minimalistic-graphics` (trait blanc sur noir),
+`map-route`, `breakdown`, `graph`. Outils communs dans `.claude/kit/` (`bash .claude/kit/setup.sh`
+installe three.js + Playwright + GSAP ; ne pas utiliser `--voice`). Règles :
+- **Ne JAMAIS publier une vidéo faite avec ces styles tant que Fio n'a pas validé un essai** de ce
+  style. Le style publié reste `nuit` (§ 1 bis).
+- Voix : NOTRE narratrice Piper (§ 4) passée comme enregistrement (`audio/vo.wav`), jamais Kokoro
+  (anglais) ni ElevenLabs (payant). Le minutage des mots (leur outil Parakeet est anglais) se refait
+  avec Whisper.
+
 Les commandes `ffmpeg` déjà écrites dans ce fichier (planche, découpe pour Whisper) restent valables.
 Sources (licence MIT) : github.com/social-media-skills/skills, github.com/kajisho5/ffmpeg-skill,
 github.com/kaomei/stickman-video-director (seulement les règles d'horreur B4, pas leur moteur
