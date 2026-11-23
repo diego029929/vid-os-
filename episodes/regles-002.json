@@ -1,0 +1,94 @@
+{
+ "style": "nuit",
+ "format": "regles",
+ "ambiance": "vert",
+ "accroche": "regle_affichee",
+ "series": "HÔPITAL DE NUIT",
+ "etiquette": "RÈGLES",
+ "heure": "00:01:30",
+ "title": "Les 4 règles de l'hôpital, la nuit",
+ "caption": "Une nuit à l'hôpital 🏥 Sous le lit (1) ou tu ouvres (2) ? 👇\n#fyp #pourtoi #foryou #peur #creepy #hopital #regles #nuitblanche #urgences",
+ "texte_accroche": "Règle n°1 : ne prends pas l'ascenseur après minuit 🏥",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "lieux": {
+  "hopital": "HÔPITAL · 3E ÉTAGE"
+ },
+ "beats": [
+  {
+   "voice": "Règle numéro un de l'hôpital, la nuit : ne prends jamais l'ascenseur après minuit.",
+   "regle": {
+    "n": 1,
+    "txt": "Après minuit,\nne prends jamais\nl'ascenseur"
+   }
+  },
+  {
+   "voice": "Cette nuit, tu dors à l'hôpital. L'ascenseur s'ouvre devant ta chambre, et quelqu'un attend *dedans*.",
+   "vue": "hopital",
+   "hero": "peur",
+   "hx": 0.3,
+   "ombre": {
+    "x": 0.7
+   },
+   "flicker": true,
+   "sfx": "boom"
+  },
+  {
+   "voice": "Règle numéro deux : si l'interphone t'appelle, ne réponds jamais.",
+   "regle": {
+    "n": 2,
+    "txt": "Si l'interphone\nt'appelle,\nne réponds jamais"
+   }
+  },
+  {
+   "voice": "À trois heures, l'interphone de ta chambre sonne. C'est la chambre *zéro*.",
+   "tel": {
+    "type": "appel",
+    "nom": "Interphone",
+    "num": "Chambre 0"
+   }
+  },
+  {
+   "voice": "Règle numéro trois : l'infirmière de nuit frappe toujours deux fois.",
+   "regle": {
+    "n": 3,
+    "txt": "L'infirmière\nfrappe toujours\ndeux fois"
+   }
+  },
+  {
+   "voice": "Quelqu'un frappe à ta porte. Une fois, puis plus rien.",
+   "objet": {
+    "type": "porte",
+    "toc": true
+   },
+   "sfx": "toc"
+  },
+  {
+   "voice": "Règle numéro quatre : si la lumière devient verte, cache-toi sous le lit.",
+   "regle": {
+    "n": 4,
+    "txt": "Lumière verte ?\nCache-toi\nsous le lit"
+   }
+  },
+  {
+   "voice": "Sous ta porte, la lumière devient *verte*.",
+   "vue": "hopital",
+   "hero": "peur",
+   "cadre": "gros",
+   "flicker": true,
+   "ombre": {
+    "x": 0.7
+   },
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Tu te caches sous le lit, ou alors, tu ouvres la porte ? Écris #un# ou #deux#.",
+   "choix": {
+    "a": "Sous le lit",
+    "b": "Ouvrir la porte"
+   }
+  }
+ ],
+ "vote": "Écris 1 ou 2 en commentaire"
+}

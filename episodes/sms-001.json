@@ -1,0 +1,116 @@
+{
+ "style": "nuit",
+ "format": "sms",
+ "ambiance": "nb",
+ "accroche": "bruit",
+ "series": "LES CLÉS",
+ "etiquette": "MESSAGES",
+ "heure": "02:00:10",
+ "heure_tel": "2:01",
+ "title": "Ta mère toque à ta porte… ton père dit qu'elle dort à Lyon",
+ "caption": "Tu crois qui : maman ou papa ? 🚪👇\n#fyp #pourtoi #foryou #horreur #histoire #sms #parents #porte #creepy",
+ "texte_accroche": "Ma mère toque… mon père dit qu'elle dort à Lyon 🚪",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Trois coups à ta porte. Il est deux heures du matin.",
+   "objet": {
+    "type": "porte",
+    "toc": true
+   },
+   "sfx": "toc"
+  },
+  {
+   "voice": "Message de ta mère : ouvre, c'est moi, j'ai oublié mes clés.",
+   "tel": {
+    "type": "sms",
+    "de": "Maman",
+    "lignes": [
+     "Ouvre, c'est moi.",
+     "J'ai oublié mes clés."
+    ]
+   }
+  },
+  {
+   "voice": "Tu réponds : tu n'étais pas à Lyon avec papa ce week-end ?",
+   "tel": {
+    "type": "sms",
+    "de": "Maman",
+    "lignes": [
+     "Ouvre, c'est moi.",
+     "J'ai oublié mes clés.",
+     "T'étais pas à Lyon avec papa ?"
+    ],
+    "moi": [
+     2
+    ]
+   }
+  },
+  {
+   "voice": "Elle répond : on est rentrés plus tôt. Ouvre vite, il fait froid.",
+   "tel": {
+    "type": "sms",
+    "de": "Maman",
+    "lignes": [
+     "T'étais pas à Lyon avec papa ?",
+     "On est rentrés plus tôt.",
+     "Ouvre vite, il fait froid."
+    ],
+    "moi": [
+     0
+    ]
+   }
+  },
+  {
+   "voice": "Au même moment, ton père t'écrit : on est encore à Lyon. Maman *dort*.",
+   "tel": {
+    "type": "notif",
+    "app": "MESSAGES",
+    "titre": "Papa",
+    "texte": "On est encore à Lyon. Maman dort.",
+    "heure": "2:02"
+   }
+  },
+  {
+   "voice": "Il t'envoie une photo : ta mère, endormie, dans la chambre d'hôtel.",
+   "tel": {
+    "type": "photo",
+    "vue": "chambre"
+   }
+  },
+  {
+   "voice": "Nouveau message de ta mère : je vois ton *ombre* sous la porte.",
+   "tel": {
+    "type": "sms",
+    "de": "Maman",
+    "lignes": [
+     "Je vois ton ombre",
+     "sous la porte."
+    ]
+   },
+   "sfx": "message"
+  },
+  {
+   "voice": "Puis elle écrit : ne crois pas ton père. Lui, il n'est jamais parti à Lyon.",
+   "tel": {
+    "type": "sms",
+    "de": "Maman",
+    "lignes": [
+     "Ne crois pas ton père.",
+     "Lui, il n'est jamais",
+     "parti à Lyon."
+    ]
+   }
+  },
+  {
+   "voice": "Et quelqu'un toque encore. Tu crois qui ? Écris maman ou papa.",
+   "objet": {
+    "type": "porte",
+    "toc": true
+   },
+   "sfx": "toc"
+  }
+ ]
+}

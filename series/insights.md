@@ -625,3 +625,31 @@ creux à 11 h, 13 h-14 h et après 21 h).
   (« manettophone » → « vieux micro »), « mille neuf cent quatre-vingt-quatorze » (→ « a trente ans »). Whisper sur la vidéo
   entière se trompe parfois sur « une voix dit » : découpée seule, la phrase est juste.
 - Rendus : babyphone 8 min 40 (1er téléchargement des modèles), les autres ≈ 5 min.
+
+### 23/11 (plan.py jour 2 ; edits GTA 07/08 ; Babyphone p3, sms, règles hôpital, histoire miroir)
+
+- Comptes Zernio OK, les 6 posts du 22/11 publiés (TikTok + Instagram).
+- **Stats 22/11 (≈ 10-20 h de recul)** — TikTok vues / likes / temps moyen / complétion, puis Insta vues / temps moyen :
+  - edit Leonida 8h : 228 / 5 / 3,8 s / 2,4 % — Insta 142 / 4,4 s ;
+  - edit persos 9h : **2** / 0 — Insta 131 / 4,3 s (bloquée TikTok) ;
+  - Babyphone p2 10h : **3** / 0 — Insta 157 / 6,8 s (bloquée TikTok) ;
+  - règles bus de nuit 12h : **5** / 1 / 13,9 s — Insta 128 / 4,5 s (bloquée TikTok) ;
+  - histoire La Cassette 18h : 208 / 6 / 3,4 s / 3,7 % — Insta 132 / 4,0 s ;
+  - POV port gelé 20h : **6** / 0 / 5,1 s — Insta 137 / 5,3 s (bloquée TikTok).
+- 0 commentaire, 0 partage. 0 vidéo sur 35 au-dessus de 1 000 vues TikTok (7 jours). Vote Babyphone p2 : 0 vote → tirage : 2.
+- **Alerte** : 4 vidéos sur 6 jamais diffusées par TikTok le 22/11 (2-6 vues), contre 2 sur 6 le 21/11. Instagram reste stable
+  (≈ 130-160). Le blocage TikTok touche maintenant tous les formats (edit, série, règles, pov) : ce n'est plus « des vidéos qui
+  se ressemblent ». Hypothèse principale : trop de publications par jour (6) pour un petit compte, toutes par API et marquées IA.
+  Signalé à Fio (proposition : passer à 3 vidéos/jour). Pas changé sans son accord.
+- Plan du jour (series/plans/2026-11-23.json) suivi tel quel : Babyphone p3 (accroche appel_inconnu), sms (nb, bruit),
+  règles (vert, règle affichée), histoire (vhs, image impossible). Edits : bande-annonce « action » 8h, captures « Jason & Lucia » 9h.
+- Test du spectateur : sms 8/10, histoire miroir 8/10, Babyphone 5/10 → corrigé (pas de la cave rappelés, « ta sœur Sarah »,
+  haut-parleur sous l'oreiller), règles hôpital 6/10 → corrigé (interphone qui sonne, lumière verte qui arrive, choix 1/2 à la fin).
+- Voix Pocket, mal lus et changés : « une petite voix rit » (« voirie » → « éclate de rire »), « table de nuit » (« table Nénie »).
+- Voix, 2e vérification (Whisper sur des morceaux de 4-5 s) : « la petite voix ne vient plus » (« la poule boite »),
+  « La lumière clignote. Ton reflet lève la main » (« la lumière finit »), « Elle ajoute » (« à la joute »), « Et il sourit » en fin
+  de phrase (« il s'ouvre ») → changés. Le Miroir rendu 4 fois, Babyphone 2 fois. La vidéo entière transcrite d'un bloc cache ces
+  erreurs : toujours retranscrire par morceaux de 5 s.
+- Programmé (Zernio, TikTok + Instagram) : edit action 8h, edit Jason & Lucia 9h, Babyphone p3 10h, sms « Les clés » 12h,
+  règles hôpital 18h, histoire « Le miroir » 20h. Durées 15,9 / 16,7 / 32,4 / 28,6 / 34,3 / 25,0 s.
+- Essai 3D non refait (toujours en attente de l'avis de Fio sur celui du 22/11).

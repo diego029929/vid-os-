@@ -1,0 +1,134 @@
+{
+ "style": "edit",
+ "source": "/tmp/gta6/launch.mp4",
+ "bandes": 0.0556,
+ "title": "GTA 6 : l'action de la bande-annonce 💥 edit",
+ "caption": "Course-poursuite (1) ou braquage (2) : ta mission préférée ? 💥👇 #gta6 #gtavi #gta #edit #action\n🎵 09 Trap Bells (Instrumental Mix) – Hasenchat (CC BY-SA 3.0)",
+ "plans": [
+  {
+   "t": 19.2,
+   "temps": 4,
+   "x": 0.29
+  },
+  {
+   "t": 39.2,
+   "temps": 4,
+   "x": 0.64
+  },
+  {
+   "t": 53.0,
+   "temps": 2,
+   "x": 0.79,
+   "flash": true
+  },
+  {
+   "t": 50.0,
+   "temps": 1,
+   "x": 0.29
+  },
+  {
+   "t": 22.0,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 61.0,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 64.0,
+   "temps": 1,
+   "x": 0.43
+  },
+  {
+   "t": 65.3,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 70.0,
+   "temps": 1,
+   "x": 0.36
+  },
+  {
+   "t": 72.0,
+   "temps": 1,
+   "x": 0.64
+  },
+  {
+   "t": 73.0,
+   "temps": 2,
+   "x": 0.43,
+   "flash": true
+  },
+  {
+   "t": 55.0,
+   "temps": 2,
+   "x": 0.21
+  },
+  {
+   "t": 33.0,
+   "temps": 1,
+   "x": 0.36
+  },
+  {
+   "t": 29.0,
+   "temps": 1,
+   "x": 0.5
+  },
+  {
+   "t": 57.0,
+   "temps": 1,
+   "x": 0.64
+  },
+  {
+   "t": 26.0,
+   "temps": 2,
+   "x": 0.36
+  },
+  {
+   "t": 40.2,
+   "temps": 2,
+   "x": 0.43
+  },
+  {
+   "t": 67.2,
+   "temps": 2,
+   "x": 0.5
+  },
+  {
+   "t": 77.3,
+   "temps": 5,
+   "x": 0.5,
+   "entier": true,
+   "punch": 0.04,
+   "flash": true
+  }
+ ],
+ "textes": [
+  {
+   "de": 0,
+   "a": 8,
+   "txt": "ÇA VA EXPLOSER",
+   "y": 0.16,
+   "taille": 120
+  },
+  {
+   "de": 31,
+   "a": 36,
+   "txt": "POURSUITE (1) OU BRAQUAGE (2) ?",
+   "y": 0.68,
+   "taille": 64
+  }
+ ],
+ "musique": {
+  "fichier": "/tmp/gta6/son2.mp3",
+  "source": "https://prod-1.storage.jamendo.com/?trackid=1253537&format=mp32",
+  "chercher": [
+   18,
+   40
+  ],
+  "credit": "09 Trap Bells (Instrumental Mix) – Hasenchat (CC BY-SA 3.0)"
+ }
+}

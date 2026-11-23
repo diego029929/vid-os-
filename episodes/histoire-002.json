@@ -1,0 +1,87 @@
+{
+ "style": "nuit",
+ "format": "histoire",
+ "ambiance": "vhs",
+ "accroche": "image_impossible",
+ "series": "LE MIROIR",
+ "etiquette": "HISTOIRE",
+ "heure": "01:00:20",
+ "title": "Ton reflet sourit… toi, tu ne souris pas",
+ "caption": "T'aurais remis le drap sur le miroir ? 🪞👇\n#fyp #pourtoi #foryou #horreur #frissons #miroir #reflet #salledebain #histoiredhorreur",
+ "texte_accroche": "Mon reflet m'a souri… moi, je ne souriais pas 🪞",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "lieux": {
+  "sdb": "SALLE DE BAIN DE TATA",
+  "couloir": "COULOIR"
+ },
+ "beats": [
+  {
+   "voice": "Dans le miroir, ton reflet *sourit*. Toi, tu ne souris pas.",
+   "vue": "sdb",
+   "hero": "peur",
+   "cadre": "gros",
+   "reflet": true,
+   "flicker": true
+  },
+  {
+   "voice": "Il est une heure. Tu dors chez ta tante pour le week-end.",
+   "vue": "sdb",
+   "hero": "debout",
+   "hx": 0.45,
+   "reflet": true
+  },
+  {
+   "voice": "Soudain, ton reflet lève la *main*. Toi, tu ne bouges pas.",
+   "vue": "sdb",
+   "hero": "peur",
+   "hx": 0.5,
+   "reflet": true,
+   "flicker": true
+  },
+  {
+   "voice": "Message de ta tante : tu as enlevé le drap du miroir ?",
+   "tel": {
+    "type": "sms",
+    "de": "Tata",
+    "lignes": [
+     "Tu as enlevé le drap",
+     "du miroir ?"
+    ]
+   }
+  },
+  {
+   "voice": "Puis elle écrit : je le couvre exprès. Ne le regarde jamais la nuit.",
+   "tel": {
+    "type": "sms",
+    "de": "Tata",
+    "lignes": [
+     "Je le couvre exprès.",
+     "Ne le regarde jamais",
+     "la nuit."
+    ]
+   }
+  },
+  {
+   "voice": "Tu relèves les yeux. Dans le miroir, ton reflet n'est plus *là*.",
+   "vue": "sdb",
+   "hero": "peur",
+   "cadre": "gros",
+   "ombre": {
+    "x": 0.7
+   }
+  },
+  {
+   "voice": "Il est dans le couloir, juste derrière toi, avec un grand *sourire*. Tu te retournes ? Écris oui ou non.",
+   "vue": "couloir",
+   "hero": "dos",
+   "hx": 0.4,
+   "ombre": {
+    "x": 0.7
+   },
+   "rouge_lum": true,
+   "sfx": "souffle"
+  }
+ ]
+}
