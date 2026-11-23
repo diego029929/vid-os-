@@ -19,7 +19,7 @@ STATE = os.path.join(ROOT, "series", "state.json")
 FORMATS = os.path.join(ROOT, "series", "formats.json")
 PLANS = os.path.join(ROOT, "series", "plans")
 
-SLOTS_NUIT = ["10:00", "12:00", "18:00", "20:00"]
+SLOTS_NUIT = ["12:00", "17:00", "20:00"]  # 23/11 (Fio) : 3 vidéos/jour, espacées (TikTok bloquait 4 vidéos sur 6)
 MAX_SERIES = 1          # 22/11 : les vidéos virales sont des histoires COMPLÈTES de ~30 s ; 1 série au plus
 MAX_TESTS = 2           # nouveautés par jour
 MIN_AGE_H = 20          # stats trop jeunes avant ça
