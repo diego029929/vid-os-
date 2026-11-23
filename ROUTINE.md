@@ -10,6 +10,13 @@
 > Fini les 4 séries identiques par jour : chaque matin `engine/plan.py` décide, à partir des stats,
 > le format, l'ambiance et l'accroche de CHAQUE créneau. La routine suit ce plan.
 
+> **NOUVEAU 23/11 au soir (choix de Fio) : 3 VIDÉOS PAR JOUR SEULEMENT, à 12:00, 17:00 et 20:00 (Paris).**
+> Le 22/11, TikTok n'a diffusé que 2 vidéos sur 6 (2-6 vues pour les autres) : trop de publications.
+> Fio : « On réduit à 3 ». **Edits GTA 6 ARRÊTÉS** (Fio : « les édits GTA sont vrm mal faites ») : plus de
+> créneaux 8h/9h, format `edit` en `pause` dans `series/formats.json`. Ne les reprendre qu'après un essai
+> refait proprement (modèle : vrais edits viraux) et validé par Fio. `engine/plan.py` ne prévoit plus que
+> ces 3 créneaux. Tout ce qui parle plus bas de 4 ou 6 vidéos, ou de 8h/9h, est remplacé par ceci.
+
 ## 00. 22/11 nuit : nouvelle voix + TOUS les skills à chaque étape (à lire en premier)
 
 > Fio, 22/11 1h45 : « utilise bien tous les skills pour les vidéos de demain, utilise les agents que
