@@ -575,6 +575,36 @@
    "format": "histoire",
    "ambiance": "vhs",
    "accroche": "image_impossible"
+  },
+  {
+   "series": "pov-voiture",
+   "episode": 1,
+   "file": "episodes/pov-002.json",
+   "slot": "2026-11-24T12:00:00 Europe/Paris",
+   "zernio_id": "6b051b586e923bb02b554aa0",
+   "format": "pov",
+   "ambiance": "rouge",
+   "accroche": "chiffre_heure"
+  },
+  {
+   "series": "histoire-la-lettre",
+   "episode": 1,
+   "file": "episodes/histoire-003.json",
+   "slot": "2026-11-24T17:00:00 Europe/Paris",
+   "zernio_id": "6b051c5044b6137654e2b03b",
+   "format": "histoire",
+   "ambiance": "sepia",
+   "accroche": "question_directe"
+  },
+  {
+   "series": "le-phare",
+   "episode": 1,
+   "file": "episodes/phare-01.json",
+   "slot": "2026-11-24T20:00:00 Europe/Paris",
+   "zernio_id": "6b051f9de6812173aaa945b4",
+   "format": "serie",
+   "ambiance": "bleu",
+   "accroche": "sms_proche"
   }
  ],
  "survis_next": 15,
@@ -935,13 +965,13 @@
  "bataille_next": 4,
  "parallel_series": [
   {
-   "slot": "10:00",
-   "series": "le-babyphone",
-   "series_file": "series/le-babyphone.md",
-   "prefix": "baby",
+   "slot": "20:00",
+   "series": "le-phare",
+   "series_file": "series/le-phare.md",
+   "prefix": "phare",
    "episode_count": 3,
-   "next_episode": 4,
-   "terminee": "2026-11-23"
+   "next_episode": 2,
+   "ambiance": "bleu"
   }
  ],
  "cycle2": "18/11 au 20/11 : La Coupure 10h, Le Tunnel 12h, Chambre neuf 18h, Le Ferry 20h. Le 21/11 : 4 nouvelles séries.",
@@ -997,6 +1027,15 @@
    "episode_count": 3,
    "next_episode": 2,
    "arretee": "2026-11-22"
+  },
+  {
+   "slot": "10:00",
+   "series": "le-babyphone",
+   "series_file": "series/le-babyphone.md",
+   "prefix": "baby",
+   "episode_count": 3,
+   "next_episode": 4,
+   "terminee": "2026-11-23"
   }
  ],
  "cycle3": {
@@ -1005,6 +1044,6 @@
  },
  "variation": {
   "coupes": {},
-  "dernier_plan": "2026-11-23"
+  "dernier_plan": "2026-11-24"
  }
 }
