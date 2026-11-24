@@ -653,3 +653,26 @@ creux à 11 h, 13 h-14 h et après 21 h).
 - Programmé (Zernio, TikTok + Instagram) : edit action 8h, edit Jason & Lucia 9h, Babyphone p3 10h, sms « Les clés » 12h,
   règles hôpital 18h, histoire « Le miroir » 20h. Durées 15,9 / 16,7 / 32,4 / 28,6 / 34,3 / 25,0 s.
 - Essai 3D non refait (toujours en attente de l'avis de Fio sur celui du 22/11).
+
+### 24/11 (1er jour à 3 vidéos : 12h POV, 17h histoire, 20h série Le Phare p1)
+
+- Comptes Zernio OK, les 6 posts du 23/11 publiés (TikTok + Instagram).
+- **Stats 23/11 (≈ 10-22 h de recul)** — TikTok vues / likes / temps moyen / complétion, puis Insta vues / temps moyen :
+  - edit action 8h : **9** / 0 / 2,6 s (bloquée TikTok) — Insta 186 / 3,9 s ;
+  - edit Jason & Lucia 9h : 216 / 18 / 3,4 s / 1,2 % — Insta 169 / 4,9 s ;
+  - Babyphone p3 10h : 223 / 5 / 3,6 s / 0,8 % — Insta 153 / 6,7 s ;
+  - **sms « Les clés » 12h : 227 / 6 / 1 commentaire / 10,3 s / 10,4 %** — Insta 169 / 10,0 s (meilleure rétention depuis des jours, 36 % de la vidéo) ;
+  - règles hôpital 18h : 231 / 4 / 3,9 s / 1,5 % — Insta 128 / 4,4 s ;
+  - histoire « Le miroir » 20h : 210 / 6 / 3,5 s / 1,2 % — Insta 139 / 3,8 s.
+- Seulement 1 vidéo sur 6 bloquée (contre 4 sur 6 le 22/11). 0 vidéo > 1 000 vues TikTok sur 7 jours (0/37).
+- Lecture : le format `sms` (conversation lue à l'écran) tient 3 fois plus longtemps que tout le reste (10 s contre 3-4 s),
+  sur TikTok comme sur Instagram. À refaire dès que le plan le permet (plan.py ne l'a pas encore noté : 1 seule vidéo).
+- Plan du jour (series/plans/2026-11-24.json) suivi : POV voiture (rouge, chiffre_heure), histoire « La lettre » (sepia,
+  question_directe), nouvelle série « Le Phare » p1 (bleu, sms_proche, The Endless). Babyphone terminé le 23/11.
+- Test du spectateur : POV 8/10, histoire 6/10 → corrigé (« te prévient », sms de la sœur simplifié, chute « la porte, c'était
+  pour t'occuper », question finale liée à la peur), Phare 8/10 → photo « du même numéro », silhouette qui crie ton surnom.
+- Voix Pocket, mal lus et changés : « Quatre heures dix » (lu « quatre à dix », 2 rendus) → « Quatre heures du matin ».
+- Voix Pocket, aussi : « Au bout du fil » (lu « au bout du film / du coup ») → « Tu décroches : juste le bruit des vagues ».
+  Rendus : POV 3 fois, histoire 1 fois, Phare 2 fois (≈ 5 min chacun).
+- Programmé (Zernio, TikTok + Instagram) : POV voiture 12h (18,7 s), histoire « La lettre » 17h (29,3 s), Le Phare p1 20h (33,3 s).
+- Essai 3D non refait (toujours en attente de l'avis de Fio).
