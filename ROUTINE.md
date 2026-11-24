@@ -17,6 +17,13 @@
 > refait proprement (modèle : vrais edits viraux) et validé par Fio. `engine/plan.py` ne prévoit plus que
 > ces 3 créneaux. Tout ce qui parle plus bas de 4 ou 6 vidéos, ou de 8h/9h, est remplacé par ceci.
 
+> **NOUVEAU 24/11 au soir (Fio : « enlève les titres en haut des vidéos ») : plus RIEN en haut de l'écran.**
+> `engine/nuit.js` cache l'horloge, l'étiquette (« PARTIE 1 · … ») et le `texte_accroche` par défaut. Continuer
+> d'écrire `texte_accroche` dans le JSON (sert de légende/idée), mais ne pas réactiver `"horloge": true` ni
+> `"accroche_haut": true` sans accord de Fio. Fio trouve aussi la voix `estelle` « nulle » : 5 voix Pocket proposées
+> (1 fantine, 2 anna, 3 cosette, 4 jean, 5 javert) ; prendre celle que Fio a choisie (`pocket_voice` dans
+> `engine/voice_config.json`), sinon garder estelle en attendant.
+
 ## 00. 22/11 nuit : nouvelle voix + TOUS les skills à chaque étape (à lire en premier)
 
 > Fio, 22/11 1h45 : « utilise bien tous les skills pour les vidéos de demain, utilise les agents que
