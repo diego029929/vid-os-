@@ -336,7 +336,8 @@ window.seek = function (t) {
   cam.innerHTML = html;
   cam.style.transformOrigin = `${ox}px ${oy}px`;
   cam.style.transform = `scale(${zoom * pop})`;
-  const showClock = !(P.regle || P.choix) && EP.horloge !== false;
+  // 24/11, Fio : « enlève les titres en haut des vidéos » → horloge + étiquette cachées par défaut ("horloge": true pour les remettre)
+  const showClock = !(P.regle || P.choix) && EP.horloge === true;
   document.getElementById('clock').style.display = showClock ? 'block' : 'none';
   if (P.lieu) LIEU = P.lieu; else if (P.vue && EP.lieux_auto !== false) LIEU = (EP.lieux || {})[P.vue] || LIEUX[P.vue] || LIEU;
   document.getElementById('lieu').textContent = LIEU || EP.lieu || '';
@@ -344,7 +345,7 @@ window.seek = function (t) {
   document.getElementById('tm').textContent = hms(EP.heure || '03:00:00', t);
   // texte d'accroche écrit en haut de l'écran pendant les 3 premières secondes (21/11 : objectif 1 000 vues, retenir dès 0 s)
   const hk = document.getElementById('hook');
-  if (hk) { const d = EP.texte_accroche_duree || 3.2, o = EP.texte_accroche && t < d + 0.3 ? Math.min(1, (d + 0.3 - t) / 0.3) : 0;
+  if (hk) { const d = EP.texte_accroche_duree || 3.2, o = EP.texte_accroche && EP.accroche_haut === true && t < d + 0.3 ? Math.min(1, (d + 0.3 - t) / 0.3) : 0;
     hk.innerHTML = o ? `<span>${esc(EP.texte_accroche)}</span>` : ''; hk.style.opacity = o; }
   sub.innerHTML = subs(t);
   sub.style.top = P.choix ? '1290px' : P.regle ? '1300px' : '1590px';
