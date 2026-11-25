@@ -1,0 +1,3 @@
+done shot 2 140 frames
+done shot 6 94 frames
+done shot 10 130 frames

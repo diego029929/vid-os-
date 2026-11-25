@@ -1,0 +1,22 @@
+00 [1.00] OK  lu : Pourquoi on dit que la Première Guerre mondiale est une guerre totale ?
+            entendu : Pourquoi on dit que la Première Guerre mondiale est une guerre totale ?
+01 [1.00] OK  lu : Parce qu'elle ne se joue pas seulement sur le front.
+            entendu : parce qu'elle ne se joue pas seulement sur le front.
+02 [0.65] ??  lu : De dix-neuf cent quatorze à dix-neuf cent dix-huit, des millions de soldats vivent dans les tranchées.
+            entendu : de 1914 à 1918, des millions de soldats vivent dans les tranchées.
+03 [1.00] OK  lu : Mais derrière eux, tout le pays travaille pour la guerre.
+            entendu : mais derrière eux, tout le pays travaille pour la guerre.
+04 [1.00] OK  lu : Dans les usines, on fabrique des obus jour et nuit.
+            entendu : Dans les usines, on fabrique des obus jour et nuit.
+05 [1.00] OK  lu : Les femmes remplacent les hommes partis au front.
+            entendu : Les femmes remplacent les hommes partis au front.
+06 [1.00] OK  lu : Les journaux sont censurés, et la propagande promet la victoire.
+            entendu : Les journaux sont censurés et la propagande promet la victoire.
+07 [1.00] OK  lu : Même les colonies envoient des soldats.
+            entendu : Même les colonies envoient des soldats.
+08 [0.90] ??  lu : Au total, près de dix millions de soldats sont morts.
+            entendu : Au total, près de 10 millions de soldats sont morts.
+09 [1.00] OK  lu : Une guerre totale, c'est ça : toute la société est mobilisée.
+            entendu : Une guerre totale, c'est ça, toute la société est mobilisée.
+10 [1.00] OK  lu : Tu saurais l'expliquer au brevet ? Oui ou non ?
+            entendu : Tu saurais l'expliquer au brevet ? Oui ou non ?

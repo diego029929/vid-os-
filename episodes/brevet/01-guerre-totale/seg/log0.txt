@@ -1,0 +1,3 @@
+done shot 0 89 frames
+done shot 4 68 frames
+done shot 8 72 frames
