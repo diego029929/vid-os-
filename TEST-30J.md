@@ -1,17 +1,21 @@
 # Test 30 jours : horreur vs explications scolaires
 
 > Décidé avec Fio le 25/11/2026. But : arrêter de chercher « la niche pas saturée » et
-> laisser les chiffres choisir. Le 25/12, on garde la piste qui gagne et on arrête l'autre.
+> laisser les chiffres choisir.
+>
+> **Changement du 25/11 au soir (Fio) : l'horreur s'arrête.** Le compte @4_youchoose_4 est vidé et
+> devient la chaîne scolaire (pas de 2e compte). La piste A ne publie plus : ses chiffres des
+> 10 dernières vidéos servent de **point de référence**, et le scolaire doit faire mieux.
 > Ce fichier ne change rien à ROUTINE.md tant que Fio n'a pas validé l'épisode pilote (étape 0).
 
 ## Les deux pistes
 
-| | A · Horreur (en cours) | B · Explications scolaires (nouveau) |
+| | A · Horreur (ARRÊTÉE le 25/11, sert de référence) | B · Explications scolaires (nouveau) |
 |---|---|---|
-| Compte | @4_youchoose_4 (TikTok + Insta) | **compte séparé** (voir « Décisions de Fio ») |
+| Compte | @4_youchoose_4 (TikTok + Insta) | **le même compte**, vidé, renommé, bio changée |
 | Style | « Nuit & téléphone » (`engine/nuit.py`) | stick-figure (skill `stick-figure`), monde cartoon coloré |
 | Voix | Pocket TTS `estelle` | la même (`voix-pocket-tts`), jamais Kokoro ni ElevenLabs |
-| Rythme | 3/jour (12h, 17h, 20h), comme aujourd'hui | **1/jour à 18h** (après les cours), 30 vidéos |
+| Rythme | 3/jour jusqu'au 25/11 | **1/jour à 18h** (après les cours), 30 vidéos |
 | Durée | 25-40 s | 35-45 s |
 | Public | 16-25 ans, le soir | collégiens de 3e (14-15 ans), révisions du brevet |
 
@@ -20,14 +24,15 @@
 
 ## Règle de décision (fixée AVANT de publier, on ne la change pas en route)
 
-On compare les **10 dernières vidéos** de chaque piste le 25/12 (les premières servent à « chauffer » le compte B).
+Le 25/12, on compare les **10 dernières vidéos scolaires** aux **10 dernières vidéos d'horreur** (du 22 au 25/11,
+chiffres dans `series/insights.md`). Les premières vidéos scolaires servent à « réapprendre » le compte à TikTok.
 
 1. **Rétention** = temps moyen ÷ durée. C'est le critère n°1 (c'est ce qui fait pousser TikTok).
 2. **Abonnés gagnés pour 1 000 vues.**
 3. **Vues médianes** (la médiane, pas la moyenne : une vidéo chanceuse ne doit pas tout fausser).
 
-- B gagne si elle bat A sur **au moins 2 critères sur 3** → B devient la chaîne principale, A passe à 1/jour ou s'arrête.
-- A gagne si elle bat B sur au moins 2 critères sur 3 → on arrête B.
+- B gagne si elle bat A sur **au moins 2 critères sur 3** → on continue le scolaire (passage à 2/jour, puis le programme de 4e).
+- A gagne sur au moins 2 critères sur 3 → le scolaire ne marche pas mieux : on en reparle avec Fio (reprendre l'horreur, autre angle).
 - Si l'écart est < 20 % partout → égalité : on garde celle qui demande le moins de travail par vidéo.
 
 **Arrêt anticipé** : si au jour 15, B fait moins de 50 vues de médiane sur 7 vidéos d'affilée, on refait 3 vidéos
@@ -90,5 +95,14 @@ Ordre = ordre du programme, pour que les élèves suivent la série du début à
 
 ## Décisions de Fio (à remplir)
 
-- [ ] Compte B : nouveau compte TikTok créé par Fio ? (Zernio gratuit = 2 comptes, déjà pris par la piste A)
+- [x] Compte : le même (@4_youchoose_4), vidé de l'horreur (Fio, 25/11).
+- [ ] Les 78 vidéos supprimées par Fio dans les applis TikTok et Instagram (Zernio ne peut pas : voir plus bas).
+- [ ] Nouveau nom, photo et bio du compte.
 - [ ] Pilote validé ?
+
+## Pourquoi les vidéos se suppriment à la main
+
+Doc Zernio (docs.zernio.com, lu le 25/11) : `DELETE /v1/posts/{id}` refuse les posts publiés, et
+`POST /v1/posts/{id}/unpublish` « n'est pas pris en charge sur Instagram ni TikTok ». Aucune API ne retire
+une vidéo déjà en ligne sur ces deux réseaux : il faut le faire dans les applis. Ne PAS supprimer les posts
+dans Zernio : ça effacerait aussi leurs statistiques, qui servent de référence au test.
