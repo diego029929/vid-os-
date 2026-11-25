@@ -676,3 +676,31 @@ creux à 11 h, 13 h-14 h et après 21 h).
   Rendus : POV 3 fois, histoire 1 fois, Phare 2 fois (≈ 5 min chacun).
 - Programmé (Zernio, TikTok + Instagram) : POV voiture 12h (18,7 s), histoire « La lettre » 17h (29,3 s), Le Phare p1 20h (33,3 s).
 - Essai 3D non refait (toujours en attente de l'avis de Fio).
+
+### 25/11 (3 vidéos : 12h sms, 17h règles, 20h Le Phare p2)
+
+- Comptes Zernio OK, les 3 posts du 24/11 publiés (TikTok + Instagram).
+- **Stats 24/11 (≈ 10-18 h de recul)** — TikTok vues / likes / temps moyen / complétion, puis Insta vues / temps moyen :
+  - POV voiture 12h : 198 / 6 / 4,0 s / 4,3 % (vidéo de 18,7 s) — Insta 166 / 6,4 s ;
+  - histoire « La lettre » 17h : 221 / 3 / 4,6 s / 2,9 % — Insta 119 / 3,8 s ;
+  - **Le Phare p1 20h : 224 / 4 / 2 commentaires / 1 abonné / 13,1 s / 4,3 %** — Insta 140 / 7,3 s (meilleur temps moyen
+    TikTok depuis le 29/10 : 39 % de la vidéo).
+- Aucune vidéo bloquée le 24/11 (3/3 diffusées, contre 1 bloquée sur 6 le 23/11 et 4 sur 6 le 22/11) : 3 vidéos/jour aide.
+  0 vidéo > 1 000 vues TikTok sur 7 jours (0/36).
+- Lecture : les deux meilleurs temps moyens sont maintenant `sms` (10,3 s, 23/11) et `serie` partie 1 avec un SMS d'un proche
+  au 1er plan (13,1 s). Point commun : un écran de téléphone qu'on lit dès la 1re seconde. Le plan refait `sms` à 12h.
+- Vote Le Phare p1 : 1 seul votant (« 1 ») → moins de 3 votes = tirage au sort : 2 (sortir rejoindre papa).
+- Plan du jour (series/plans/2026-11-25.json) suivi tel quel : sms (nb, bruit), règles (vhs, règle affichée, chez mamie),
+  Le Phare p2 (bleu, image impossible).
+- Test du spectateur : sms 7/10 → corrigé (raison du lit partagé : cauchemar), règles 6/10 → fin réécrite (la voix de la cave
+  était celle de mamie : « tu cours chez elle quand même ? oui ou non »), Phare p2 6/10 → rappel « photo prise du haut du phare »
+  juste avant le choix, double qui entre dans l'eau.
+- Voix Pocket, mal lus et changés : « Écris lit ou téléphone » (« une ligne ou téléphone » → « Écris un ou deux »), « Photo reçue »
+  (« Poto ») → « Elle t'envoie une photo », « vibre sous l'oreiller » (« vibre au sous ») → « vibre dans le noir », « Contre ton
+  oreille » (« contre ton héros ») et « une voix chuchote » (« une boîte ») → « Et dans ton lit, elle murmure », « Il crie »
+  (lu « Écris » 3/3) → « Ton père hurle », « chambre de mamie » en fin de phrase (« Mani », « Manu ») → « réveiller ta grand-mère ».
+  Nouveau : tester TOUTES les phrases seules (3 tirages) avant le 1er rendu a évité 2 rendus sur 3.
+- Volume : règles à -16,2 LUFS (check.py FAIL) → normalisé -14 LUFS (`loudness.py`), mis en ligne en regles-003b.
+- Rendus : sms 5 fois, règles 1 fois, Phare 2 fois (« Écris un ou deux » avalé au 1er).
+- Programmé (Zernio, TikTok + Instagram) : sms « Ma sœur » 12h (31,5 s), règles « Chez mamie » 17h (37,4 s), Le Phare p2 20h (34,4 s).
+- Essai 3D non refait (toujours en attente de l'avis de Fio). Voix : toujours estelle (Fio n'a pas encore choisi A ou B).

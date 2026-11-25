@@ -1,0 +1,166 @@
+{
+ "jour": "2026-11-25",
+ "creneaux": [
+  {
+   "heure": "12:00",
+   "format": "sms",
+   "moteur": "nuit",
+   "ambiance": "nb",
+   "accroche": "bruit",
+   "duree": [
+    25,
+    40
+   ],
+   "raison": "NOUVEAUTÉ à tester (pas encore assez de stats)"
+  },
+  {
+   "heure": "17:00",
+   "format": "regles",
+   "moteur": "nuit",
+   "ambiance": "vhs",
+   "accroche": "regle_affichee",
+   "duree": [
+    30,
+    42
+   ],
+   "raison": "NOUVEAUTÉ à tester (pas encore assez de stats)"
+  },
+  {
+   "heure": "20:00",
+   "format": "serie",
+   "moteur": "nuit",
+   "series": "le-phare",
+   "prefix": "phare",
+   "partie": 2,
+   "derniere": false,
+   "ambiance": "bleu",
+   "accroche": "image_impossible",
+   "raison": "série gardée (score 0.55), partie 2/3"
+  }
+ ],
+ "series_arretees": [],
+ "coupes": {},
+ "scores_formats": {
+  "ancien": {
+   "score": 0.613,
+   "videos": 4
+  },
+  "serie": {
+   "score": 0.499,
+   "videos": 21
+  },
+  "gta-dessin": {
+   "score": 0.377,
+   "videos": 2
+  },
+  "edit": {
+   "score": 0.562,
+   "videos": 5
+  },
+  "histoire": {
+   "score": 0.293,
+   "videos": 2
+  },
+  "sms": {
+   "score": 0.624,
+   "videos": 1
+  },
+  "regles": {
+   "score": 0.236,
+   "videos": 1
+  }
+ },
+ "scores_ambiances": {
+  "nuit": {
+   "score": 0.488,
+   "videos": 23
+  },
+  "sepia": {
+   "score": 0.314,
+   "videos": 1
+  },
+  "nb": {
+   "score": 0.624,
+   "videos": 1
+  },
+  "vert": {
+   "score": 0.236,
+   "videos": 1
+  },
+  "vhs": {
+   "score": 0.273,
+   "videos": 1
+  }
+ },
+ "scores_accroches": {
+  "chiffre_heure": {
+   "score": 0.314,
+   "videos": 1
+  },
+  "appel_inconnu": {
+   "score": 0.399,
+   "videos": 1
+  },
+  "bruit": {
+   "score": 0.624,
+   "videos": 1
+  },
+  "regle_affichee": {
+   "score": 0.236,
+   "videos": 1
+  },
+  "image_impossible": {
+   "score": 0.273,
+   "videos": 1
+  }
+ },
+ "meilleures_7j": [
+  {
+   "fichier": "episodes/gta6-edit-02.json",
+   "score": 0.751,
+   "follows": 1,
+   "vues": 392,
+   "retention": 0.348
+  },
+  {
+   "fichier": "episodes/coupure-01.json",
+   "score": 0.698,
+   "follows": 0,
+   "vues": 412,
+   "retention": 0.194
+  },
+  {
+   "fichier": "episodes/tunnel-03.json",
+   "score": 0.678,
+   "follows": 1,
+   "vues": 385,
+   "retention": 0.187
+  },
+  {
+   "fichier": "episodes/gta6-edit-08.json",
+   "score": 0.629,
+   "follows": 0,
+   "vues": 385,
+   "retention": 0.257
+  },
+  {
+   "fichier": "episodes/sms-001.json",
+   "score": 0.624,
+   "follows": 0,
+   "vues": 397,
+   "retention": 0.358
+  }
+ ],
+ "objectif_1000_vues_7j": "0 vidéo(s) sur 36 ont passé 1 000 vues TikTok",
+ "bloquees_7j": [
+  "episodes/coupure-02.json",
+  "episodes/ferry-02.json",
+  "episodes/voisin-01.json",
+  "episodes/camping-01.json",
+  "episodes/gta6-edit-06.json",
+  "episodes/baby-02.json",
+  "episodes/regles-001.json",
+  "episodes/pov-001.json",
+  "episodes/gta6-edit-07.json"
+ ]
+}

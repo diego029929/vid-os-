@@ -605,6 +605,36 @@
    "format": "serie",
    "ambiance": "bleu",
    "accroche": "sms_proche"
+  },
+  {
+   "series": "sms-ma-soeur",
+   "episode": 1,
+   "file": "episodes/sms-002.json",
+   "slot": "2026-11-25T12:00:00 Europe/Paris",
+   "zernio_id": "6b066f8b6e3f6e6b5e300c26",
+   "format": "sms",
+   "ambiance": "nb",
+   "accroche": "bruit"
+  },
+  {
+   "series": "regles-chez-mamie",
+   "episode": 1,
+   "file": "episodes/regles-003.json",
+   "slot": "2026-11-25T17:00:00 Europe/Paris",
+   "zernio_id": "6b0675cf4f7526f3245c5e5e",
+   "format": "regles",
+   "ambiance": "vhs",
+   "accroche": "regle_affichee"
+  },
+  {
+   "series": "le-phare",
+   "episode": 2,
+   "file": "episodes/phare-02.json",
+   "slot": "2026-11-25T20:00:00 Europe/Paris",
+   "zernio_id": "6b0677a5b12ee5d97c3ae8dd",
+   "format": "serie",
+   "ambiance": "bleu",
+   "accroche": "image_impossible"
   }
  ],
  "survis_next": 15,
@@ -781,6 +811,11 @@
    "deux": 0,
    "resultat": 2,
    "tirage": true
+  },
+  "le-phare-1": {
+   "1": 1,
+   "2": 0,
+   "decision": "2 (tirage au sort, moins de 3 votes)"
   }
  },
  "previous_series": "jacques-a-dit",
@@ -970,7 +1005,7 @@
    "series_file": "series/le-phare.md",
    "prefix": "phare",
    "episode_count": 3,
-   "next_episode": 2,
+   "next_episode": 3,
    "ambiance": "bleu"
   }
  ],
@@ -1044,6 +1079,6 @@
  },
  "variation": {
   "coupes": {},
-  "dernier_plan": "2026-11-24"
+  "dernier_plan": "2026-11-25"
  }
 }
