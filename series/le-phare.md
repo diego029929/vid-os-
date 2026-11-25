@@ -11,3 +11,4 @@ Décors : `mer` (phare), `salon` (maison du phare), `chambre` (+ téléphone : s
 | Partie | Situation | Vote final |
 |---|---|---|
 | 1 (24/11, `episodes/phare-01.json`) | SMS de ton père disparu : « ne regarde pas la mer » ; la règle des volets ; minuit : le phare éteint s'allume ; son numéro appelle, on n'entend que les vagues ; une silhouette en ciré jaune avance sur la plage, photo de toi à la fenêtre envoyée du même numéro ; elle crie ton surnom | 1 : fermer les volets / 2 : sortir rejoindre papa |
+| 2 (25/11, `episodes/phare-02.json`) | Vote p1 : 1 seul votant → tirage : 2 (sortir). Photo de toi sur la plage prise du haut du phare ; le ciré jaune t'attend au bord de l'eau ; SMS de papa « je suis dans le phare » ; la silhouette a ton visage ; papa hurle de monter avant que la lumière s'éteigne ; ton double entre dans l'eau | 1 : monter au phare / 2 : suivre ton double dans l'eau |
