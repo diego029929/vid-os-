@@ -1,0 +1,67 @@
+{
+ "style": "nuit",
+ "format": "pov",
+ "ambiance": "rouge",
+ "accroche": "chiffre_heure",
+ "series": "POV",
+ "etiquette": "POV",
+ "heure": "03:33:00",
+ "title": "POV : il est 3 h 33 et quelqu'un monte l'escalier",
+ "caption": "Tu l'as vu au début ? 👀👇 #horreur #pov #creepy #pourtoi",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Trois heures trente-trois. Quelqu'un *monte* l'escalier.",
+   "vue": "escalier",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.3
+   },
+   "sfx": "toc"
+  },
+  {
+   "voice": "Toute ta famille dort.",
+   "vue": "chambre",
+   "hero": "peur",
+   "cadre": "gros"
+  },
+  {
+   "voice": "Les pas s'arrêtent devant ta porte.",
+   "objet": {
+    "type": "porte"
+   },
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Sous la porte, tu vois deux pieds nus qui ne bougent plus.",
+   "vue": "couloir",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.5,
+    "y": 1150
+   },
+   "flicker": true
+  },
+  {
+   "voice": "Puis les pas redescendent. Et tout recommence.",
+   "vue": "escalier",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.3
+   },
+   "flicker": true
+  },
+  {
+   "voice": "Trois heures trente-trois. Quelqu'un *monte* l'escalier.",
+   "vue": "escalier",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.3
+   },
+   "sfx": "toc"
+  }
+ ],
+ "texte_accroche": "POV : tu entends des pas à 3 h 33"
+}

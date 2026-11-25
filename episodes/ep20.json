@@ -1,0 +1,1292 @@
+{
+ "series": "L'HÔTEL DES NEIGES",
+ "day": 1,
+ "subtitle": "PARTIE 5",
+ "clock_start": 10800,
+ "title": "Partie 5 · Le réceptionniste frappe à chaque porte. Tu fuis ou tu te caches ?",
+ "caption": "Il imite la voix de ton amie et frappe à ta porte. Tu fuis par le toit ou tu te caches ? 👇 Partie 5 de L'Hôtel des neiges. #horreur #histoire #hotel #chamonix",
+ "style": 2,
+ "beats": [
+  {
+   "text": "L'ASCENSEUR REDESCEND VERS LE SOUS-SOL. SANS TOI.",
+   "scene": "ascenseur",
+   "params": {
+    "floor": "-1",
+    "dark": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "TU AS CHOISI DE RESTER. INÈS EST QUELQUE PART EN BAS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "PRESQUE PERSONNE NE PASSE CETTE *NUIT*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "TROIS HEURES DU MATIN. LA NEIGE BLOQUE L'HÔTEL, PRÈS DE CHAMONIX.",
+   "scene": "chambre",
+   "char": {
+    "pose": "sit",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "expr": "side",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "lamp": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "UN BRUIT DE PAS. TU REGARDES PAR LE TROU DE LA SERRURE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "AU BOUT DU COULOIR, LE RÉCEPTIONNISTE SORT DE L'ASCENSEUR.",
+   "scene": "couloir",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "side",
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "long": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "IL A QUITTÉ SON COMPTOIR. IL NE LE QUITTE JAMAIS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "DERRIÈRE TOI, LE CADRE DES RÈGLES DE L'HÔTEL.",
+   "scene": "porte",
+   "params": {
+    "seed": 2
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "RÈGLE NUMÉRO CINQ : « SI LE RÉCEPTIONNISTE QUITTE SON COMPTOIR, *CACHE-TOI*. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "IL SOURIT. ET IL FRAPPE À CHAQUE PORTE, UNE PAR UNE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "sfx": [
+    [
+     "knock",
+     0,
+     1.0
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "« AIDE-MOI ! C'EST MOI, INÈS ! JE SUIS DANS LE COULOIR ! »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     120,
+     200
+    ]
+   },
+   "shake": 4,
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "C'EST LA VOIX D'INÈS. MAIS C'EST SA BOUCHE À LUI QUI BOUGE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "DANS TA CHAMBRE, UNE SEULE CACHETTE : LE PLACARD.",
+   "scene": "chambre",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "scared",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "lamp": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "ET LA FENÊTRE DONNE SUR LE TOIT ENNEIGÉ. TU POURRAIS FUIR.",
+   "scene": "fenetre",
+   "params": {
+    "moon": [
+     0.7,
+     0.25
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "IL FRAPPE À LA PORTE JUSTE À CÔTÉ DE LA TIENNE.",
+   "scene": "couloir",
+   "params": {
+    "dark": true,
+    "red": true
+   },
+   "sfx": [
+    [
+     "knock",
+     0,
+     1.0
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "TU COURS SUR LE TOIT, OU TU TE CACHES DANS LE *PLACARD* ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "COURIR SUR LE TOIT",
+    "b": "TE CACHER"
+   },
+   "dur": 2.8,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "COURIR SUR LE TOIT",
+    "b": "TE CACHER",
+    "countdown": 3
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU OUVRES LA FENÊTRE. TU SAUTES SUR LE TOIT.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "COURIR SUR LE TOIT",
+    "b": "TE CACHER",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "LA NEIGE CÈDE SOUS TES PIEDS.",
+   "scene": "fenetre",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "shake": 6,
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "TU GLISSES VERS LE VIDE. TU N'AS RIEN POUR T'ACCROCHER.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "shake": 10,
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "À LA FENÊTRE, IL TE REGARDE TOMBER. IL SOURIT.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "TU ES *MORT*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "text": "TU TE GLISSES DANS LE PLACARD. TU RETIENS TON SOUFFLE.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "COURIR SUR LE TOIT",
+    "b": "TE CACHER",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "LA PORTE DE TA CHAMBRE S'OUVRE. TOUTE SEULE.",
+   "scene": "porte",
+   "params": {
+    "seed": 5
+   },
+   "sfx": [
+    [
+     "knock",
+     0,
+     1.0
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "IL ENTRE. IL REGARDE TON LIT VIDE.",
+   "scene": "chambre",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "side",
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "lamp": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "PAR LA FENTE DU PLACARD, TU VOIS SES CHAUSSURES.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "IL S'ARRÊTE PILE DEVANT LE PLACARD.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "EN BAS, LE TÉLÉPHONE DE LA RÉCEPTION SE MET À SONNER.",
+   "scene": "escalier",
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "IL SOUPIRE : « UN CLIENT M'APPELLE. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "IL REPART DANS LE COULOIR.",
+   "scene": "couloir",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "long": true
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU SORS DU PLACARD ET TU REGARDES TA MONTRE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "CINQ HEURES CINQUANTE-NEUF. DEUX HEURES ONT DISPARU.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "AU BOUT DU COULOIR, LA SORTIE DE SECOURS BRILLE EN VERT.",
+   "scene": "couloir",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "normal",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "green": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "TU AS LA CLÉ. IL TE RESTE UNE MINUTE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "DERRIÈRE TOI, UNE PETITE VOIX : « ATTENDS-MOI ! »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     120,
+     200
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "C'EST INÈS. ELLE EST GELÉE. ELLE BOITE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "« MA VALISE ! JE NE PARS PAS SANS MA VALISE ! »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     120,
+     200
+    ]
+   },
+   "shake": 4,
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "SA VALISE EST EN BAS, À LA RÉCEPTION. LÀ OÙ IL EST.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "SI TU L'ATTENDS, TU RATES PEUT-ÊTRE SIX HEURES.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "TU ATTENDS INÈS, OU TU PARS SANS ELLE ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "ATTENDRE INÈS",
+    "b": "PARTIR SEUL"
+   },
+   "dur": 2.8,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TON CHOIX ? LA RÉPONSE DANS LA *PARTIE 6*.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "ATTENDRE INÈS",
+    "b": "PARTIR SEUL"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "scene": "fenetre",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  }
+ ]
+}

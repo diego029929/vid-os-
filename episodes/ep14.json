@@ -1,0 +1,1558 @@
+{
+ "series": "LE TRAIN DE NUIT",
+ "day": 1,
+ "subtitle": "PARTIE 5",
+ "clock_start": 12780,
+ "title": "Partie 5 · Lila frappe derrière la porte du wagon 13. Tu ouvres ?",
+ "caption": "Partie 5 du Train de nuit, près d'Avignon. Règle : il n'y a jamais de wagon 13. Tu ouvres ou tu avances? A ou B 👇 #histoire #horreur #train #avignon",
+ "style": 2,
+ "beats": [
+  {
+   "text": "PRÈS D'AVIGNON, À *3 H 33*, UNE PORTE TREMBLE.",
+   "scene": "porte",
+   "params": {
+    "seed": 6
+   },
+   "sfx": [
+    [
+     "knock",
+     0,
+     1.0
+    ]
+   ],
+   "shake": 6,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "SUR CETTE PORTE, UN NUMÉRO PEINT EN ROUGE : *TREIZE*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ET DERRIÈRE, LA VOIX DE LILA. « OUVRE-MOI! »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "TU L'OUVRES, OU TU LA LAISSES DERRIÈRE TOI ?",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "TU ES SEUL DANS UN TRAIN DE NUIT QUI NE S'ARRÊTE JAMAIS.",
+   "scene": "wagon",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "L'HORLOGE DU WAGON EST BLOQUÉE. DEHORS, TOUT EST NOIR.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "LILA, LA FILLE EN SWEAT VERT, EST TA SEULE AMIE ICI.",
+   "scene": "wagon",
+   "char": {
+    "pose": "sit",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "ELLE T'A DÉJÀ SAUVÉ LA VIE DEUX FOIS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "MAIS AU-DESSUS DE LA PORTE, IL Y A L'AFFICHE DES RÈGLES.",
+   "scene": "porte",
+   "params": {
+    "seed": 2
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "RÈGLE NUMÉRO CINQ : « IL N'Y A *JAMAIS* DE WAGON TREIZE. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "ET CE TRAIN N'A QUE DOUZE WAGONS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "TU LES AS COMPTÉS EN MONTANT. DOUZE. PAS UN DE PLUS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "LES COUPS REPRENNENT. PLUS FORTS. PLUS VITE.",
+   "scene": "porte",
+   "params": {
+    "seed": 6
+   },
+   "sfx": [
+    [
+     "knock",
+     0,
+     1.0
+    ]
+   ],
+   "shake": 8,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "« S'IL TE PLAÎT! IL ARRIVE! »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TA MAIN SE POSE SUR LA POIGNÉE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "TU OUVRES OU TU *AVANCES* ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "OUVRIR",
+    "b": "AVANCER",
+    "countdown": 3
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU OUVRES LA PORTE TREIZE.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "OUVRIR",
+    "b": "AVANCER",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "DERRIÈRE, UN WAGON PLONGÉ DANS UNE LUMIÈRE ROUGE.",
+   "scene": "wagon",
+   "params": {
+    "dark": true,
+    "red": true
+   },
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "IL N'Y A PERSONNE. PAS DE LILA.",
+   "scene": "wagon",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "dark": true,
+    "red": true
+   },
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "SUR LES SIÈGES, DES SWEATS ORANGE, POSÉS EN RANG.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.4,
+     0.2
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "LA VOIX CONTINUE, MAIS ELLE VIENT DE DERRIÈRE TOI.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     90,
+     90,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "LA PORTE CLAQUE. TU ES ENFERMÉ DEDANS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "shake": 10,
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU ES *MORT*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "text": "TU LÂCHES LA POIGNÉE. TU RECULES.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "OUVRIR",
+    "b": "AVANCER",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "DERRIÈRE LA PORTE, LA VOIX DE LILA CHANGE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "ELLE DEVIENT GRAVE. TRÈS GRAVE. PUIS ELLE RIT.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     -0.5,
+     0
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "CE N'ÉTAIT PAS LILA.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "LA POIGNÉE DE LA PORTE TREIZE TOURNE TOUTE SEULE.",
+   "scene": "porte",
+   "params": {
+    "seed": 6
+   },
+   "sfx": [
+    [
+     "glitch",
+     0,
+     0.5
+    ]
+   ],
+   "glitch": 0.3,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "TU COURS VERS L'AVANT DU TRAIN.",
+   "scene": "wagon",
+   "char": {
+    "pose": "stand",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU OUVRES LA PORTE DU WAGON SUIVANT.",
+   "scene": "porte",
+   "params": {
+    "seed": 4
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "WAGON DOUZE. VIDE.",
+   "scene": "wagon",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "WAGON ONZE. VIDE AUSSI.",
+   "scene": "wagon",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "LES WAGONS DÉFILENT, TOUS PAREILS, TOUS DÉSERTS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "DERRIÈRE TOI, QUELQU'UN MARCHE. DE PLUS EN PLUS PRÈS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "ET DANS LE WAGON DEUX, QUELQU'UN T'ATTEND.",
+   "scene": "wagon",
+   "char": {
+    "pose": "sit",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "LA VRAIE LILA EST LÀ, EN LARMES.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "« JE ME SUIS PERDUE DANS LE NOIR. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "« J'AI COMPTÉ JUSQU'À SEPT, ET JE ME SUIS RÉVEILLÉE ICI. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "TU LUI MONTRES LE BILLET TROUVÉ SUR SA PLACE. IL EST À TON NOM.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.5,
+     0
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     220,
+     120
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "« ALORS C'EST TOI. C'EST TOI QU'IL ATTENDAIT. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ],
+    "look": [
+     0,
+     0
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "« QUI? QUI M'ATTENDAIT? »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ELLE MONTRE LA DERNIÈRE PORTE. « LE CONDUCTEUR. »",
+   "scene": "wagon",
+   "char": {
+    "pose": "stand",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "LA PORTE DE LA CABINE EST ENTROUVERTE.",
+   "scene": "porte",
+   "params": {
+    "seed": 7
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "UNE LUMIÈRE PÂLE PASSE PAR L'OUVERTURE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.2
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     220,
+     120
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "ET TU ENTENDS QUELQU'UN FREDONNER DANS LA CABINE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "« SUR L'AFFICHE, IL RESTE UNE DERNIÈRE RÈGLE. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "« NE REGARDE *JAMAIS* LE CONDUCTEUR. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU T'APPROCHES. DANS LA CABINE, UNE SILHOUETTE EST ASSISE.",
+   "scene": "wagon",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "LE TRAIN ACCÉLÈRE. LA SILHOUETTE NE BOUGE PAS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "shake": 6,
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "TU REGARDES LE CONDUCTEUR, OU TU PRENDS LES COMMANDES ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "REGARDER",
+    "b": "PRENDRE LES COMMANDES"
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "dur": 2.8,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "A OU B? RÉPONDS EN *COMMENTAIRE*.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "REGARDER",
+    "b": "PRENDRE LES COMMANDES"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "scene": "fenetre",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  }
+ ]
+}

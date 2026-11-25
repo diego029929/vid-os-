@@ -1,0 +1,1514 @@
+{
+ "series": "L'HÔTEL DES NEIGES",
+ "day": 1,
+ "subtitle": "PARTIE 1",
+ "clock_start": 0,
+ "title": "Partie 1 · Le téléphone de ta chambre sonne après minuit. Tu décroches ?",
+ "caption": "Partie 1 de L'Hôtel des neiges, près de Chamonix. Règle : ne décroche jamais le téléphone après minuit. Tu décroches ? A ou B 👇 #histoire #horreur #hotel #chamonix",
+ "style": 2,
+ "beats": [
+  {
+   "text": "CHAMONIX, *MINUIT*. LE TÉLÉPHONE DE TA CHAMBRE SONNE.",
+   "scene": "chambre",
+   "char": {
+    "pose": "sit",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide"
+   },
+   "params": {
+    "lamp": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "DEHORS, LA TEMPÊTE DE NEIGE A BLOQUÉ TOUTES LES ROUTES.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "SUR TA TABLE DE NUIT, IL Y A UNE CARTE DE L'HÔTEL.",
+   "scene": "radio",
+   "params": {
+    "on": false
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "« NE DÉCROCHEZ *JAMAIS* LE TÉLÉPHONE APRÈS MINUIT. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "TU ES ARRIVÉ CE SOIR À L'HÔTEL DES NEIGES. SEUL.",
+   "scene": "couloir",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "À TON ARRIVÉE, LE RÉCEPTIONNISTE TE DONNE LA CHAMBRE DEUX CENT QUATORZE.",
+   "scene": "couloir",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     170,
+     30,
+     45
+    ],
+    "expr": "side"
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "IL SOURIT : « LISEZ BIEN LES RÈGLES. ET DORMEZ. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "« ET SURTOUT, NE QUITTEZ PAS VOTRE CHAMBRE. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "LE TÉLÉPHONE SONNE TOUJOURS. CINQ FOIS. SIX FOIS.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "PUIS LE RÉPONDEUR SE MET EN MARCHE.",
+   "scene": "radio",
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "« ICI LA RÉCEPTION. IL Y A UN INCENDIE À VOTRE ÉTAGE. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "« DÉCROCHEZ, ET ON VIENT VOUS CHERCHER. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "LA VOIX EST CALME. BEAUCOUP TROP CALME.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "TU RESPIRES. PAS D'ODEUR DE FUMÉE. RIEN.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "MAIS SOUS TA PORTE, UNE LUMIÈRE ORANGE DANSE.",
+   "scene": "porte",
+   "params": {
+    "seed": 3
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "LE TÉLÉPHONE SONNE ENCORE. PLUS FORT.",
+   "scene": "chambre",
+   "char": {
+    "pose": "sit",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "params": {
+    "lamp": true
+   },
+   "shake": 5,
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "TU DÉCROCHES OU TU LAISSES *SONNER* ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "DÉCROCHER",
+    "b": "LAISSER SONNER",
+    "countdown": 3
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU DÉCROCHES. « ALLÔ ? JE SUIS LÀ ! »",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "DÉCROCHER",
+    "b": "LAISSER SONNER",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "AU BOUT DU FIL, QUELQU'UN RESPIRE. TRÈS LENTEMENT.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "PUIS UNE VOIX MURMURE : « MERCI. ON ARRIVE. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     170,
+     30,
+     45
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "LA POIGNÉE DE TA PORTE SE MET À TOURNER.",
+   "scene": "porte",
+   "params": {
+    "seed": 5
+   },
+   "shake": 8,
+   "sfx": [
+    [
+     "knock",
+     0,
+     1.0
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "TU ES *MORT*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "text": "TU NE TOUCHES PAS AU TÉLÉPHONE.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "DÉCROCHER",
+    "b": "LAISSER SONNER",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU TE CACHES SOUS LA COUETTE. TU COMPTES LES SONNERIES.",
+   "scene": "chambre",
+   "char": {
+    "pose": "sit",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "closed"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "DIX. ONZE. DOUZE. PUIS PLUS RIEN.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "LA LUMIÈRE ORANGE SOUS LA PORTE S'ÉTEINT.",
+   "scene": "couloir",
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "DANS LE COULOIR, LES PAS REPARTENT.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "TU ATTENDS. UNE MINUTE. PUIS DEUX.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "TU TE LÈVES. TU REGARDES PAR LE JUDAS.",
+   "scene": "chambre",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "side"
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "LE COULOIR DE L'HÔTEL EST VIDE. PAS DE FUMÉE. PERSONNE.",
+   "scene": "couloir",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "MAIS QUELQU'UN A GLISSÉ UN PAPIER SOUS TA PORTE.",
+   "scene": "porte",
+   "params": {
+    "seed": 2
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "UNE ÉCRITURE PRESSÉE, À L'ENCRE ROUGE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "« LA CHAMBRE DEUX CENT QUATORZE *N'EXISTE PAS*. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "TU REGARDES TA CLÉ. DEUX CENT QUATORZE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "LE NUMÉRO EST POURTANT SUR TA PORTE. TU L'AS VU EN ENTRANT.",
+   "scene": "porte",
+   "params": {
+    "seed": 8
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "EN BAS DU PAPIER, UN PRÉNOM : INÈS. CHAMBRE DEUX CENT DOUZE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "C'EST LA CHAMBRE JUSTE À CÔTÉ. TU COLLES L'OREILLE CONTRE LE MUR.",
+   "scene": "chambre",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "DE L'AUTRE CÔTÉ, UNE FILLE PLEURE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     120,
+     200
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "TU CHUCHOTES : « INÈS ? C'EST TOI ? »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "LES PLEURS S'ARRÊTENT D'UN COUP.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "« NE SORS PAS DE TA CHAMBRE AVANT SIX HEURES. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "« DANS CET HÔTEL, SEULES LES RÈGLES TE GARDENT EN VIE. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     120,
+     200
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "SOUDAIN, UN TÉLÉPHONE SE REMET À SONNER.",
+   "scene": "chambre",
+   "char": {
+    "pose": "sit",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide"
+   },
+   "params": {
+    "lamp": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "MAIS CETTE FOIS, CE N'EST PAS LE TIEN.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "C'EST CELUI DE LA CHAMBRE D'INÈS.",
+   "scene": "porte",
+   "params": {
+    "seed": 7
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "ET À TRAVERS LE MUR, TU L'ENTENDS DÉCROCHER.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "shake": 6,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "« ALLÔ ? MAMAN ? C'EST TOI ? »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     120,
+     200
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "PUIS PLUS RIEN. UN SILENCE TOTAL.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "TU SORS POUR LA SAUVER, OU TU RESTES ENFERMÉ ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "SORTIR",
+    "b": "RESTER"
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "dur": 2.8,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "SORTIR",
+    "b": "RESTER"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "scene": "fenetre",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  }
+ ]
+}

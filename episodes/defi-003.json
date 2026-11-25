@@ -1,0 +1,32 @@
+{
+ "type": "intrus",
+ "title": "Défi · Trouve le visage intrus (3 niveaux)",
+ "caption": "Un seul visage est différent 😀 Trouve-le en 5 secondes…\nÉcris ton score 👇\n#trouvelintrus #defi #jeu #casse-tete #emoji",
+ "hook": "TROUVE L'INTRUS",
+ "voice_hook": "Un seul visage est différent. Trouve-le. Le niveau trois va te rendre fou.",
+ "levels": [
+  {
+   "crowd": "😀",
+   "target": "😡",
+   "cols": 6,
+   "rows": 7,
+   "seconds": 5
+  },
+  {
+   "crowd": "😄",
+   "target": "😆",
+   "cols": 8,
+   "rows": 10,
+   "seconds": 5
+  },
+  {
+   "crowd": "😀",
+   "target": "😃",
+   "cols": 10,
+   "rows": 12,
+   "seconds": 6
+  }
+ ],
+ "end": "T'AS TROUVÉ LES 3 ?",
+ "voice_end": "Écris ton score en commentaire, et abonne-toi pour jouer demain."
+}

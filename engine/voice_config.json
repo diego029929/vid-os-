@@ -1,0 +1,16 @@
+{
+  "voice": "pocket",
+  "reference": "ref-pierre-moyen.wav",
+  "effect": "leger",
+  "tempo": 0.92,
+  "tight": true,
+  "pitch": 1.0,
+  "speed": 1.0,
+  "description": "A man speaks with a deep, raspy, gravelly voice in a dark and menacing tone, at a moderate pace. Very clear audio.",
+  "seed": 1,
+  "exaggeration": 0.6,
+  "cfg": 0.4,
+  "note": "22/11 nuit, Fio : « celle-là est nulle, installe un skill pour les voix, à toi de choisir » → Kyutai Pocket TTS (pip install pocket-tts, gratuit, local), modèle french, voix native « estelle », effet leger, tempo 0.92 (Pocket parle vite). Skill : .claude/skills/voix-pocket-tts. Avant : Piper fr_FR-upmc-medium loc. 0 + megaphone tempo 1.1 (remettre voice=fr_FR-upmc-medium, effect=megaphone, tempo=1.1 pour revenir).",
+  "speaker": 0,
+  "pocket_voice": "estelle"
+}

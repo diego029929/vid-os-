@@ -1,0 +1,621 @@
+{
+ "series": "APRÈS LA FIN",
+ "day": 3,
+ "subtitle": "RÈGLE N°2 · TON PRÉNOM",
+ "clock_start": 86340,
+ "title": "Après minuit, une voix t'appelle par ton prénom. Tu réponds ?",
+ "caption": "Jour 3 après la fin. Ce n'était pas ta sœur derrière la porte... et maintenant la voix connaît ton prénom. A ou B 👇 #histoire #apocalypse #survie #creepy #choix #pourtoi",
+ "beats": [
+  {
+   "scene": "door",
+   "dur": 2.79,
+   "text": "CE N'ÉTAIT *PAS* TA SŒUR.",
+   "text_y": 0.86,
+   "text_size": 120,
+   "params": {
+    "sky": "vert"
+   },
+   "flash_in": true,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "door",
+   "dur": 2.79,
+   "text": "TA SŒUR EST PARTIE IL Y A *3 JOURS*.",
+   "text_y": 0.86,
+   "text_size": 110,
+   "params": {
+    "sky": "vert"
+   },
+   "zoom": 1.12
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.79,
+   "text": "LA CHOSE A FRAPPÉ TOUTE LA NUIT.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 1.91,
+   "text": "PUIS PLUS RIEN.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.29,
+   "text": "IL EST *23 H 59*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "radio",
+   "dur": 2.03,
+   "text": "LA RADIO GRÉSILLE.",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "radio",
+   "dur": 2.16,
+   "text": "« ICI LA STATION *7*. »",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.6
+    ]
+   ],
+   "zoom": 1.1
+  },
+  {
+   "scene": "radio",
+   "dur": 2.03,
+   "text": "« NOUVELLE RÈGLE. »",
+   "text_y": 0.8,
+   "zoom": 1.12
+  },
+  {
+   "scene": "dark",
+   "dur": 1.65,
+   "text": "RÈGLE N°2 :",
+   "text_y": 0.5,
+   "text_size": 170,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.03,
+   "text": "APRÈS *MINUIT*,",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     40,
+     40,
+     120
+    ]
+   }
+  },
+  {
+   "scene": "dark",
+   "dur": 2.79,
+   "text": "NE RÉPONDS *JAMAIS* À TON PRÉNOM.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     40,
+     40,
+     120
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.54,
+   "text": "MÊME SI LA VOIX EST *GENTILLE*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     40,
+     40,
+     120
+    ]
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "bunker",
+   "dur": 1.91,
+   "text": "MINUIT PILE.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.5
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.29,
+   "text": "TU ESSAIES DE *DORMIR*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "closed",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.03,
+   "text": "TOC... TOC...",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "shake": 10,
+   "voice": "",
+   "sfx": [
+    [
+     "knock",
+     0.05,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.16,
+   "text": "ÇA VIENT DU *MUR*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.12
+  },
+  {
+   "scene": "dark",
+   "dur": 2.54,
+   "text": "« TU DORS ? »",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     120,
+     10,
+     10
+    ]
+   },
+   "glitch": 0.1,
+   "zoom": 1.15
+  },
+  {
+   "scene": "dark",
+   "dur": 2.54,
+   "text": "LA VOIX DIT *TON PRÉNOM*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     120,
+     10,
+     10
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.79,
+   "text": "« C'EST MAMAN. RÉPONDS-MOI. »",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     120,
+     10,
+     10
+    ]
+   },
+   "zoom": 1.18,
+   "text_size": 120
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.54,
+   "text": "TA MÈRE... ÉTAIT *EN VILLE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9,
+    "tremble": true
+   }
+  },
+  {
+   "scene": "dark",
+   "dur": 3.0,
+   "text": "TU FAIS QUOI ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "RÉPONDRE",
+    "b": "TE BOUCHER LES OREILLES",
+    "countdown": 3
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ],
+    [
+     "heart",
+     1,
+     1.0
+    ],
+    [
+     "heart",
+     2,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "RÉPONDRE",
+    "b": "TE BOUCHER LES OREILLES",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.03,
+   "text": "« MAMAN ?... »",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.2,
+   "record": "bad"
+  },
+  {
+   "scene": "dark",
+   "dur": 2.03,
+   "text": "*MAUVAIS CHOIX*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     255,
+     40,
+     40
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "scale": 0.7,
+    "y": 0.98
+   },
+   "flash_in": true,
+   "glitch": 0.4,
+   "glitch_end": true,
+   "sfx": [
+    [
+     "glitch",
+     0,
+     1.0
+    ],
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "bad"
+  },
+  {
+   "type": "rewind",
+   "of": "bad",
+   "dur": 1.5,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "RÉPONDRE",
+    "b": "TE BOUCHER LES OREILLES",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "hide",
+   "dur": 2.54,
+   "text": "TU TE BOUCHES LES *OREILLES*.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "closed",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   }
+  },
+  {
+   "scene": "hide",
+   "dur": 2.29,
+   "text": "TU COMPTES DANS TA TÊTE.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "closed",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "hide",
+   "dur": 2.29,
+   "text": "LA VOIX CRIE *PLUS FORT*.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "scared",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92,
+    "tremble": true
+   },
+   "shake": 8
+  },
+  {
+   "scene": "hide",
+   "dur": 2.16,
+   "text": "PUIS ELLE *PLEURE*.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "scared",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "hide",
+   "dur": 2.16,
+   "text": "TU NE RÉPONDS *PAS*.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "suspicious",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.54,
+   "text": "3 H DU MATIN. *SILENCE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "radio",
+   "dur": 2.03,
+   "text": "LA RADIO REPREND...",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "radio",
+   "dur": 2.54,
+   "text": "« ICI LA STATION 7... SI VOUS... »",
+   "text_y": 0.8,
+   "text_size": 120,
+   "glitch": 0.2
+  },
+  {
+   "scene": "dark",
+   "dur": 2.79,
+   "text": "PUIS LA RADIO SE *COUPE NET*.",
+   "text_y": 0.5,
+   "flash_in": true,
+   "sfx": [
+    [
+     "glitch",
+     0,
+     0.8
+    ],
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.79,
+   "text": "ET DEHORS, UNE *LUMIÈRE* APPROCHE.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "light": 0.6
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "dark",
+   "dur": 3.6,
+   "text": "LA LAMPE OU LE NOIR ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "ALLUMER TA LAMPE",
+    "b": "RESTER DANS LE NOIR"
+   },
+   "voice": "Tu allumes ta lampe, ou tu restes dans le noir ?",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.05,
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "text_y": 0.5,
+   "text_size": 120
+  },
+  {
+   "scene": "dark",
+   "dur": 2.79,
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "text_y": 0.5
+  }
+ ]
+}

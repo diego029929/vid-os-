@@ -1,0 +1,86 @@
+{
+ "type": "quiz",
+ "title": "Devine le film en emojis · 5 films, t'as combien ?",
+ "caption": "Devine le film avec seulement des emojis 🎬\nÉcris ton score 👇\n#devinelefilm #emoji #quiz #film #defi",
+ "hook": "DEVINE LE FILM",
+ "voice_hook": "Devine le film avec seulement des emojis. Cinq films, de plus en plus durs.",
+ "questions": [
+  {
+   "q": "Film n°1 :",
+   "big": [
+    "👸",
+    "❄️",
+    "⛄"
+   ],
+   "choices": [
+    "Raiponce",
+    "La Reine des neiges",
+    "Vaiana"
+   ],
+   "answer": 1,
+   "voice": "Premier film, trouve-le vite."
+  },
+  {
+   "q": "Film n°2 :",
+   "big": [
+    "🐠",
+    "🔍",
+    "🌊"
+   ],
+   "choices": [
+    "Le Monde de Nemo",
+    "Gang de requins",
+    "La Petite Sirène"
+   ],
+   "answer": 0,
+   "voice": "Deuxième film, un grand classique."
+  },
+  {
+   "q": "Film n°3 :",
+   "big": [
+    "🤠",
+    "🚀",
+    "🧸"
+   ],
+   "choices": [
+    "Cars",
+    "Wall-E",
+    "Toy Story"
+   ],
+   "answer": 2,
+   "voice": "Troisième film, tu l'as sûrement vu."
+  },
+  {
+   "q": "Film n°4 :",
+   "big": [
+    "🧙",
+    "⚡",
+    "👓"
+   ],
+   "choices": [
+    "Le Seigneur des anneaux",
+    "Harry Potter",
+    "Merlin"
+   ],
+   "answer": 1,
+   "voice": "Quatrième film, regarde bien les emojis."
+  },
+  {
+   "q": "Film n°5 :",
+   "big": [
+    "🏠",
+    "🎈",
+    "👴"
+   ],
+   "choices": [
+    "Là-haut",
+    "Coco",
+    "Le Voyage d'Arlo"
+   ],
+   "answer": 0,
+   "voice": "Dernier film, le plus difficile."
+  }
+ ],
+ "end": "T'EN AS TROUVÉ COMBIEN ?",
+ "voice_end": "Écris ton score en commentaire, et abonne-toi pour jouer demain."
+}

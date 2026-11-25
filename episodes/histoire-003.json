@@ -1,0 +1,87 @@
+{
+ "style": "nuit",
+ "format": "histoire",
+ "ambiance": "sepia",
+ "accroche": "question_directe",
+ "series": "LA LETTRE",
+ "etiquette": "HISTOIRE",
+ "heure": "02:59:50",
+ "title": "Une lettre écrite de ta main… datée de demain",
+ "caption": "Tu l'aurais retournée, cette lettre ? ✉️👇\n#fyp #pourtoi #foryou #histoire #frissons #lettre #nouvellemaison #histoiredhorreur #horreur",
+ "texte_accroche": "Ne lis jamais le dos de cette lettre ✉️",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "lieux": {
+  "salon": "NOUVELLE MAISON",
+  "couloir": "ENTRÉE"
+ },
+ "beats": [
+  {
+   "voice": "Tu ouvrirais une lettre écrite de ta main, datée de *demain* ?",
+   "objet": {
+    "type": "lettre",
+    "texte": "25 novembre.\nN'ouvre pas à ta sœur.\n— Toi"
+   }
+  },
+  {
+   "voice": "Tu la trouves sous le plancher de ta nouvelle maison.",
+   "vue": "salon",
+   "hero": "debout",
+   "cadre": "large"
+  },
+  {
+   "voice": "Ton écriture te prévient : cette nuit, à #trois# heures, n'ouvre pas à ta sœur.",
+   "regle": {
+    "n": 1,
+    "txt": "À 3 h, n'ouvre pas\nà ta sœur"
+   }
+  },
+  {
+   "voice": "Trois heures pile. On toque, et la voix de ta sœur t'appelle.",
+   "objet": {
+    "type": "porte",
+    "toc": true
+   },
+   "sfx": "toc"
+  },
+  {
+   "voice": "Message de ta sœur : je dors chez moi, à Lille.",
+   "tel": {
+    "type": "sms",
+    "de": "Léa",
+    "lignes": [
+     "Je dors chez moi, à Lille.",
+     "Pourquoi ?"
+    ]
+   }
+  },
+  {
+   "voice": "Derrière la porte, la voix supplie : ouvre-moi, s'il te plaît.",
+   "vue": "couloir",
+   "hero": "peur",
+   "ombre": {
+    "x": 0.7
+   },
+   "flicker": true
+  },
+  {
+   "voice": "Alors tu retournes la lettre. Au dos, une autre écriture : la porte, c'était pour t'occuper. Je suis déjà *entré*.",
+   "objet": {
+    "type": "lettre",
+    "texte": "La porte, c'était\npour t'occuper.\nJe suis déjà entré."
+   },
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Juste derrière toi, quelqu'un *sourit*. Et toi, tu te serais retourné ?",
+   "vue": "salon",
+   "hero": "peur",
+   "cadre": "gros",
+   "ombre": {
+    "x": 0.25
+   },
+   "flicker": true
+  }
+ ]
+}

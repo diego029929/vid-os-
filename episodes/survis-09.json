@@ -1,0 +1,547 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°9",
+ "clock_start": 82800,
+ "title": "SURVIS ? N°9 · L'ascenseur s'arrête au 13e étage. Ton immeuble n'en a que 12. Tu sors ?",
+ "caption": "Ta mère t'appelle depuis un étage qui n'existe pas. Tu sors de l'ascenseur ? 👇 (N°8 : il fallait partir.) SURVIS ? N°9 #survie #horreur #paris #histoire",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "ascenseur",
+   "text": "À PARIS, L'ASCENSEUR S'ARRÊTE AU *TREIZIÈME* ÉTAGE.",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "floor": "13",
+    "floor_btn": 5
+   },
+   "shake": 3,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "hall",
+   "text": "TON IMMEUBLE N'A QUE DOUZE ÉTAGES.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "floor": "13"
+   }
+  },
+  {
+   "scene": "papier",
+   "text": "L'AFFICHE DU GARDIEN : « AU 13, NE SORS PAS. APPUIE SUR 1. »",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "params": {
+    "wall": "metal",
+    "title": "AVIS DU GARDIEN",
+    "lines": [
+     "SI L'ASCENSEUR",
+     "S'ARRÊTE AU 13 :",
+     "NE SORS PAS.",
+     "APPUIE SUR 1."
+    ]
+   },
+   "voice": "L'AFFICHE DU GARDIEN : AU TREIZE, NE SORS PAS. APPUIE SUR UN."
+  },
+  {
+   "scene": "palier",
+   "text": "LES PORTES S'OUVRENT SUR TON COULOIR.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   },
+   "params": {
+    "long": true
+   }
+  },
+  {
+   "scene": "palier",
+   "text": "TA PORTE EST *OUVERTE*.",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   },
+   "params": {
+    "etage": "13"
+   }
+  },
+  {
+   "scene": "palier",
+   "text": "TA MÈRE T'APPELLE : « VIENS MANGER, C'EST PRÊT ! »",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     200,
+     60,
+     90
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   },
+   "params": {
+    "etage": "13"
+   }
+  },
+  {
+   "scene": "ascenseur",
+   "text": "TU APPUIES SUR 1. LE BOUTON NE S'ALLUME *PAS*.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "floor": "13",
+    "floor_btn": 9
+   },
+   "voice": "TU APPUIES SUR UN. LE BOUTON NE S'ALLUME PAS."
+  },
+  {
+   "scene": "ascenseur",
+   "text": "TU SORS REJOINDRE TA MÈRE, OU TU RESTES DANS L'*ASCENSEUR* ?",
+   "choice": {
+    "a": "SORTIR",
+    "b": "RESTER DEDANS"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "floor": "13",
+    "dark": true
+   },
+   "dur": 2.8
+  },
+  {
+   "scene": "ascenseur",
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "SORTIR",
+    "b": "RESTER DEDANS",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "floor": "13",
+    "dark": true
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "palier",
+   "text": "TU SORS DANS LE COULOIR.",
+   "choice": {
+    "a": "SORTIR",
+    "b": "RESTER DEDANS",
+    "picked": "A"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1"
+  },
+  {
+   "scene": "palier",
+   "text": "TA MÈRE S'APPROCHE. ELLE N'A PAS DE *VISAGE*.",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     25,
+     25,
+     30
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "red": true
+   },
+   "shake": 5,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1"
+  },
+  {
+   "scene": "palier",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ],
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "ascenseur",
+   "text": "TU RESTES DEDANS. AU DIXIÈME ESSAI, LE BOUTON 1 S'ALLUME.",
+   "choice": {
+    "a": "SORTIR",
+    "b": "RESTER DEDANS",
+    "picked": "B"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "floor": "13",
+    "floor_btn": 0
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "voice": "TU RESTES DEDANS. AU DIXIÈME ESSAI, LE BOUTON UN S'ALLUME."
+  },
+  {
+   "scene": "palier",
+   "text": "TA MÈRE COURT VERS TOI. LES PORTES SE *FERMENT*.",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   },
+   "params": {
+    "figure": true,
+    "fig_at": [
+     0.5,
+     0.85
+    ],
+    "fig_size": 1.8,
+    "red": true
+   },
+   "shake": 4
+  },
+  {
+   "scene": "hall",
+   "text": "LE GARDIEN PÂLIT : « TU N'ES PAS SORTI ? »",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "wide",
+    "hoodie": [
+     70,
+     90,
+     120
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   },
+   "params": {
+    "floor": "0",
+    "open": true
+   }
+  },
+  {
+   "scene": "hall",
+   "text": "LE GARDIEN : « TA MÈRE EST À L'HÔPITAL CETTE NUIT. QUI T'APPELAIT ? »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     70,
+     90,
+     120
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   },
+   "params": {
+    "floor": "0"
+   },
+   "voice": "LE GARDIEN : TA MÈRE EST À L'HÔPITAL CETTE NUIT. QUI T'APPELAIT ?"
+  },
+  {
+   "scene": "telephone",
+   "text": "TON PORTABLE SONNE : « *MAMAN* ».",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "mode": "call",
+    "contact": "Maman",
+    "sleeve": [
+     235,
+     120,
+     35
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "TU DÉCROCHES, OU TU LAISSES *SONNER* ?",
+   "choice": {
+    "a": "DÉCROCHER",
+    "b": "LAISSER SONNER"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "mode": "call",
+    "contact": "Maman",
+    "sleeve": [
+     235,
+     120,
+     35
+    ]
+   },
+   "dur": 2.8
+  },
+  {
+   "scene": "telephone",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LE *N°10*.",
+   "choice": {
+    "a": "DÉCROCHER",
+    "b": "LAISSER SONNER"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "mode": "call",
+    "contact": "Maman",
+    "sleeve": [
+     235,
+     120,
+     35
+    ]
+   },
+   "dur": 3.2
+  },
+  {
+   "scene": "fenetre",
+   "text": "ABONNE-TOI POUR LE N° *SUIVANT*.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "voice": "ABONNE-TOI POUR LA PROCHAINE VIDÉO."
+  }
+ ]
+}

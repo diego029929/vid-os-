@@ -1,0 +1,33 @@
+{
+ "series": "APRÈS LA FIN",
+ "style": 2,
+ "day": 6,
+ "subtitle": "PARTIE 8",
+ "clock_start": 22320,
+ "title": "Partie 8 · Deux radios, deux règles contraires. Tu crois laquelle ?",
+ "caption": "Essai nouveau style. Deux radios, deux règles contraires. Tu crois laquelle ? A ou B 👇 #histoire #apocalypse #survie #creepy #pourtoi",
+ "beats": [
+  {"scene": "rue", "text": "IMAGINE. IL EST *6 H 12*.", "char": {"pose": "stand", "expr": "side", "hoodie": [235,120,35], "head": [0.5, 0.42, 0.13]}, "cam": {"z": [1.0, 1.12]}, "sfx": [["hit", 0, 0.7]]},
+  {"scene": "rue", "text": "T'AS PLUS D'*ABRI*.", "char": {"pose": "stand", "expr": "normal", "hoodie": [235,120,35], "head": [0.5, 0.40, 0.16]}, "cam": {"z": [1.1, 1.18], "y": [0.5, 0.46]}},
+  {"scene": "flou", "text": "ET TON CARNET DIT QUE LA *STATION 7 MENT*.", "char": {"pose": "face", "expr": "side", "hoodie": [235,120,35], "head": [0.5, 0.36, 0.3]}, "cam": {"z": [1.06, 1.14]}},
+  {"scene": "radio", "text": "DANS TA POCHE, LA RADIO *GRÉSILLE*.", "cam": {"z": [1.0, 1.15], "x": [0.45, 0.55]}, "sfx": [["radio", 0, 0.7]]},
+  {"scene": "radio", "text": "UNE NOUVELLE VOIX PARLE.", "cam": {"z": [1.2, 1.3], "x": [0.6, 0.62], "y": [0.5, 0.48]}},
+  {"scene": "flou", "params": {"light": [120, 255, 140]}, "text": "« LA STATION 7 *N'EXISTE PAS*. »", "char": {"pose": "face", "expr": "wide", "look": [0.6, 0], "hoodie": [235,120,35], "head": [0.5, 0.36, 0.3]}, "cam": {"z": [1.04, 1.16]}, "sfx": [["hit", 0, 0.6]]},
+  {"scene": "flou", "params": {"light": [120, 255, 140]}, "text": "« SES RÈGLES VOUS *TUENT*. »", "char": {"pose": "face", "expr": "wide", "look": [-0.6, 0], "hoodie": [235,120,35], "head": [0.5, 0.36, 0.3]}, "cam": {"z": [1.16, 1.24]}},
+  {"scene": "radio", "text": "PUIS L'ANCIENNE VOIX REVIENT.", "cam": {"z": [1.1, 1.0]}, "sfx": [["radio", 0, 0.6]], "glitch": 0.15},
+  {"scene": "radio", "text": "« NE CROIS *JAMAIS* LA NOUVELLE VOIX. »", "cam": {"z": [1.15, 1.28], "x": [0.4, 0.38]}},
+  {"scene": "rue", "text": "DEUX RADIOS. DEUX RÈGLES *CONTRAIRES*.", "char": {"pose": "back", "hoodie": [235,120,35], "head": [0.5, 0.52, 0.2]}, "cam": {"z": [1.02, 1.1]}},
+  {"scene": "flou", "text": "TU CROIS *QUI* ?", "text_y": 0.2, "dur": 3.2, "choice": {"a": "L'ANCIENNE VOIX", "b": "LA NOUVELLE VOIX", "countdown": 3}, "sfx": [["heart", 0, 0.8]], "cam": {"z": [1.0, 1.04]}},
+  {"scene": "flou", "text": "TU ÉCOUTES L'ANCIENNE.", "text_y": 0.2, "dur": 1.2, "choice": {"a": "L'ANCIENNE VOIX", "b": "LA NOUVELLE VOIX", "picked": "A"}, "sfx": [["whoosh", 0, 0.7]], "record": "r1", "cam": {"z": [1.0, 1.02]}},
+  {"scene": "rue", "text": "ELLE TE DIT DE RESTER DANS LA RUE.", "char": {"pose": "stand", "expr": "normal", "hoodie": [235,120,35], "head": [0.5, 0.42, 0.14]}, "record": "r1", "cam": {"z": [1.0, 1.1]}},
+  {"scene": "rue", "params": {"seed": 4}, "text": "LES SILHOUETTES *SE RAPPROCHENT*.", "char": {"pose": "face", "expr": "scared", "hoodie": [235,120,35], "head": [0.5, 0.36, 0.3]}, "record": "r1", "shake": 10, "cam": {"z": [1.05, 1.2]}, "sfx": [["boom", 0, 0.6]]},
+  {"type": "rewind", "of": "r1", "dur": 1.3, "sfx": [["rewind", 0, 0.9]]},
+  {"scene": "flou", "text": "TU ÉCOUTES LA NOUVELLE.", "text_y": 0.2, "choice": {"a": "L'ANCIENNE VOIX", "b": "LA NOUVELLE VOIX", "picked": "B"}, "sfx": [["whoosh", 0, 0.7]], "cam": {"z": [1.0, 1.02]}},
+  {"scene": "radio", "text": "ELLE TE DONNE DES *COORDONNÉES*.", "cam": {"z": [1.05, 1.2], "x": [0.6, 0.65]}},
+  {"scene": "rue", "params": {"green": true}, "text": "UN BÂTIMENT, À DEUX RUES D'ICI.", "char": {"pose": "back", "hoodie": [235,120,35], "head": [0.5, 0.55, 0.17]}, "cam": {"z": [1.0, 1.12], "y": [0.5, 0.45]}},
+  {"scene": "flou", "text": "MAIS ELLE CONNAÎT *TON PRÉNOM*.", "char": {"pose": "face", "expr": "wide", "hoodie": [235,120,35], "head": [0.5, 0.36, 0.3]}, "cam": {"z": [1.08, 1.2]}, "sfx": [["hit", 0, 0.8]]},
+  {"scene": "flou", "text": "TU Y VAS, OU TU RESTES CACHÉ ?", "text_y": 0.2, "dur": 2.6, "choice": {"a": "Y ALLER", "b": "RESTER CACHÉ"}, "cam": {"z": [1.0, 1.04]}},
+  {"scene": "flou", "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.", "text_y": 0.2, "choice": {"a": "Y ALLER", "b": "RESTER CACHÉ"}, "cam": {"z": [1.04, 1.06]}},
+  {"scene": "fenetre", "text": "ABONNE-TOI POUR LA *SUITE*.", "char": {"pose": "back", "hoodie": [235,120,35], "head": [0.5, 0.5, 0.22]}, "cam": {"z": [1.0, 1.1]}}
+ ]
+}

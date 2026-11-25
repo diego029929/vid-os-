@@ -1,0 +1,65 @@
+{
+ "type": "quiz",
+ "title": "Vrai ou faux · 5 affirmations, t'as combien ?",
+ "caption": "Vrai ou faux ? 5 faits étonnants 🤯\nÉcris ton score 👇\n#vraioufaux #quiz #culturegenerale #lesaviezvous #pourtoi",
+ "hook": "VRAI OU FAUX ?",
+ "questions": [
+  {
+   "q": "Le soleil est une étoile.",
+   "choices": [
+    "VRAI",
+    "FAUX"
+   ],
+   "answer": 0,
+   "emoji": "☀️",
+   "voice": "Le soleil est une étoile. Vrai ou faux ?",
+   "seconds": 3
+  },
+  {
+   "q": "Les chauves-souris sont aveugles.",
+   "choices": [
+    "VRAI",
+    "FAUX"
+   ],
+   "answer": 1,
+   "emoji": "🦇",
+   "voice": "Les chauves-souris sont aveugles. Vrai ou faux ?",
+   "seconds": 3
+  },
+  {
+   "q": "Le poisson rouge a 3 secondes de mémoire.",
+   "choices": [
+    "VRAI",
+    "FAUX"
+   ],
+   "answer": 1,
+   "emoji": "🐠",
+   "voice": "Le poisson rouge a trois secondes de mémoire ?",
+   "seconds": 3
+  },
+  {
+   "q": "La tour Eiffel grandit quand il fait chaud.",
+   "choices": [
+    "VRAI",
+    "FAUX"
+   ],
+   "answer": 0,
+   "emoji": "🗼",
+   "voice": "La tour Eiffel grandit quand il fait chaud ?",
+   "seconds": 3
+  },
+  {
+   "q": "Pour les botanistes, la banane est une baie.",
+   "choices": [
+    "VRAI",
+    "FAUX"
+   ],
+   "answer": 0,
+   "emoji": "🍌",
+   "voice": "Pour les botanistes, la banane est une baie ?",
+   "seconds": 3
+  }
+ ],
+ "end": "T'AS EU COMBIEN SUR 5 ?",
+ "voice_end": "Écris ton score en commentaire, et abonne-toi."
+}

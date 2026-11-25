@@ -1,0 +1,104 @@
+{
+ "style": "nuit",
+ "format": "serie",
+ "ambiance": "nuit",
+ "accroche": "appel_inconnu",
+ "series": "LE BABYPHONE",
+ "etiquette": "PARTIE 3",
+ "heure": "03:19:50",
+ "title": "Partie 3 · Ton propre numéro t'appelle à 3 h 20",
+ "caption": "Par la fenêtre (1) ou tu appelles mamie (2) ? 👶📞 La suite si vous êtes nombreux à voter 👇\n#fyp #pourtoi #foryou #horreur #peur #babyphone #appelmystere #3h #maisonhantee",
+ "vote": "La suite si vous êtes nombreux à voter",
+ "texte_accroche": "Mon propre numéro m'appelle à 3 h 20 📞",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "SARAH": {
+   "couleur": "#e0607e",
+   "cheveux": true
+  }
+ },
+ "lieux": {
+  "chambre": "TA CHAMBRE D'ENFANT",
+  "escalier": "ESCALIER DE LA CAVE"
+ },
+ "beats": [
+  {
+   "voice": "Trois heures vingt. Ton téléphone sonne. C'est ton *propre* numéro.",
+   "tel": {
+    "type": "appel",
+    "nom": "Moi",
+    "num": "Mon numéro"
+   }
+  },
+  {
+   "voice": "Dix minutes plus tôt, tu as rebranché le vieux babyphone de mamie.",
+   "vue": "chambre",
+   "hero": "debout",
+   "hx": 0.6,
+   "cadre": "pousse"
+  },
+  {
+   "voice": "La règle de mamie : s'il parle la nuit, ne le débranche jamais.",
+   "regle": {
+    "n": 1,
+    "txt": "S'il parle la nuit,\nne le débranche\njamais"
+   }
+  },
+  {
+   "voice": "Avant, des petits pas montaient de la cave. Maintenant, ils sont redescendus.",
+   "vue": "escalier",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.35
+   },
+   "sfx": "boom"
+  },
+  {
+   "voice": "Tu décroches. Une petite voix éclate de *rire*.",
+   "tel": {
+    "type": "appel",
+    "nom": "Moi",
+    "num": "Mon numéro"
+   },
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Message de ta sœur Sarah : le babyphone a deux côtés. Où est l'autre ?",
+   "tel": {
+    "type": "sms",
+    "de": "Sarah",
+    "lignes": [
+     "Le babyphone a deux côtés.",
+     "Le micro est à la cave.",
+     "Et le haut-parleur ?"
+    ]
+   }
+  },
+  {
+   "voice": "L'autre côté, le haut-parleur, est sous ton oreiller. Sa lumière *verte* s'allume.",
+   "vue": "chambre",
+   "hero": "peur",
+   "cadre": "gros",
+   "flicker": true
+  },
+  {
+   "voice": "La voix d'enfant sort maintenant de ton *oreiller*.",
+   "vue": "chambre",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.7
+   },
+   "rouge_lum": true,
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Tu jettes le babyphone par la fenêtre, ou alors, tu appelles mamie ? Écris #un# ou #deux#.",
+   "choix": {
+    "a": "Le jeter par la fenêtre",
+    "b": "Appeler mamie"
+   }
+  }
+ ]
+}

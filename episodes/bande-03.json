@@ -1,0 +1,119 @@
+{
+ "style": "nuit",
+ "series": "LA BANDE",
+ "etiquette": "PARTIE 3",
+ "heure": "02:19:30",
+ "title": "Partie 3 · Une cassette à ton nom démarre dans la voiture",
+ "caption": "Tu sautes de la voiture (1) ou tu fais semblant de rien (2) ? Le plus de votes décide la suite 👇 #horreur #histoire #creepy #pourtoi",
+ "vote": "La suite si vous êtes nombreux à voter",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "INÈS": {
+   "couleur": "#5fb85a",
+   "cheveux": true,
+   "voix": "ref-femme-2.wav"
+  }
+ },
+ "beats": [
+  {
+   "voice": "Deux heures vingt. Ton amie Inès t'écrit : je t'attends à la voiture, *dépêche-toi*.",
+   "tel": {
+    "type": "sms",
+    "de": "Inès",
+    "lignes": [
+     "Je t'attends à la voiture.",
+     "Dépêche-toi !!"
+    ]
+   }
+  },
+  {
+   "voice": "Cette nuit, tu étais au sous-sol d'un vieux sanatorium avec ton amie Inès, à écouter une cassette.",
+   "vue": "escalier",
+   "hero": "marche",
+   "flicker": true
+  },
+  {
+   "voice": "Sur le mur : ne laisse jamais la cassette arriver au bout, sinon quelqu'un disparaît. Et la cassette est arrivée au bout.",
+   "regle": {
+    "n": 1,
+    "txt": "Ne laisse jamais\nla cassette\narriver au bout"
+   }
+  },
+  {
+   "voice": "Inès t'attend dehors, et vous montez dans sa voiture.",
+   "vue": "foret",
+   "hero": "debout",
+   "hx": 0.65,
+   "pluie": true,
+   "persos": [
+    {
+     "nom": "INÈS",
+     "x": 0.35,
+     "etat": "debout"
+    }
+   ]
+  },
+  {
+   "voice": "Elle démarre, et une autre cassette se lance toute *seule*.",
+   "vue": "voiture",
+   "hero": "peur",
+   "hx": 0.5,
+   "sfx": "boom"
+  },
+  {
+   "voice": "Sur l'étiquette : ton prénom, et la date d'aujourd'hui.",
+   "objet": {
+    "type": "cassette",
+    "texte": "TOI 17/11"
+   }
+  },
+  {
+   "voice": "La voix de la cassette dit : cette nuit, ce n'est pas ton amie qui *conduit*.",
+   "vue": "voiture",
+   "hero": "peur",
+   "cadre": "gros",
+   "flicker": true
+  },
+  {
+   "voice": "Ton téléphone sonne : c'est un appel d'Inès.",
+   "tel": {
+    "type": "appel",
+    "nom": "Inès",
+    "num": "06 71 20 45 98"
+   }
+  },
+  {
+   "voice": "C'est moi, Inès. Je suis toujours dans la cave. Ne monte pas dans cette voiture.",
+   "qui": "INÈS",
+   "vue": "cave",
+   "hero": "absent",
+   "persos": [
+    {
+     "nom": "INÈS",
+     "x": 0.5,
+     "etat": "peur"
+    }
+   ],
+   "flicker": true
+  },
+  {
+   "voice": "Alors, qui conduit, à côté de toi ? Ses yeux ne bougent plus, et elle sourit.",
+   "vue": "voiture",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.4
+   },
+   "flicker": true,
+   "rouge_lum": true
+  },
+  {
+   "voice": "Vite, tu sautes de la voiture en marche, ou tu fais semblant de rien ? Écris #un# ou #deux#. La suite si vous êtes nombreux à voter.",
+   "choix": {
+    "a": "Sauter de la voiture",
+    "b": "Faire semblant de rien"
+   }
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "jour": "2026-11-24",
+ "creneaux": [
+  {
+   "heure": "12:00",
+   "format": "pov",
+   "moteur": "nuit",
+   "ambiance": "rouge",
+   "accroche": "chiffre_heure",
+   "duree": [
+    12,
+    20
+   ],
+   "raison": "NOUVEAUTÉ à tester (pas encore assez de stats)"
+  },
+  {
+   "heure": "17:00",
+   "format": "histoire",
+   "moteur": "nuit",
+   "ambiance": "sepia",
+   "accroche": "question_directe",
+   "duree": [
+    25,
+    32
+   ],
+   "raison": "NOUVEAUTÉ à tester (pas encore assez de stats)"
+  },
+  {
+   "heure": "20:00",
+   "format": "serie",
+   "moteur": "nuit",
+   "ambiance": "bleu",
+   "accroche": "sms_proche",
+   "duree": [
+    30,
+    40
+   ],
+   "raison": "format qui marche (score moyen 0.49 sur 20 vidéos)",
+   "partie": 1,
+   "nouvelle_serie": true
+  }
+ ],
+ "series_arretees": [],
+ "coupes": {},
+ "scores_formats": {
+  "ancien": {
+   "score": 0.538,
+   "videos": 6
+  },
+  "serie": {
+   "score": 0.49,
+   "videos": 20
+  },
+  "gta-dessin": {
+   "score": 0.367,
+   "videos": 2
+  },
+  "edit": {
+   "score": 0.551,
+   "videos": 5
+  },
+  "histoire": {
+   "score": 0.305,
+   "videos": 1
+  }
+ },
+ "scores_ambiances": {
+  "nuit": {
+   "score": 0.479,
+   "videos": 22
+  },
+  "sepia": {
+   "score": 0.305,
+   "videos": 1
+  }
+ },
+ "scores_accroches": {
+  "chiffre_heure": {
+   "score": 0.305,
+   "videos": 1
+  }
+ },
+ "meilleures_7j": [
+  {
+   "fichier": "episodes/gta6-edit-02.json",
+   "score": 0.738,
+   "follows": 1,
+   "vues": 390,
+   "retention": 0.349
+  },
+  {
+   "fichier": "episodes/station-03.json",
+   "score": 0.728,
+   "follows": 0,
+   "vues": 470,
+   "retention": 0.203
+  },
+  {
+   "fichier": "episodes/photo-03.json",
+   "score": 0.728,
+   "follows": 0,
+   "vues": 468,
+   "retention": 0.212
+  },
+  {
+   "fichier": "episodes/coupure-01.json",
+   "score": 0.677,
+   "follows": 0,
+   "vues": 412,
+   "retention": 0.194
+  },
+  {
+   "fichier": "episodes/tunnel-03.json",
+   "score": 0.653,
+   "follows": 1,
+   "vues": 385,
+   "retention": 0.187
+  }
+ ],
+ "objectif_1000_vues_7j": "0 vidéo(s) sur 37 ont passé 1 000 vues TikTok",
+ "bloquees_7j": [
+  "episodes/coupure-02.json",
+  "episodes/ferry-02.json",
+  "episodes/voisin-01.json",
+  "episodes/camping-01.json",
+  "episodes/gta6-edit-06.json",
+  "episodes/baby-02.json",
+  "episodes/regles-001.json",
+  "episodes/pov-001.json",
+  "episodes/gta6-edit-07.json"
+ ]
+}

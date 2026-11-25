@@ -1,0 +1,767 @@
+{
+ "series": "JACQUES A DIT",
+ "day": 1,
+ "subtitle": "PARTIE 4",
+ "clock_start": 12000,
+ "style": 2,
+ "counter_label": "DISPARUS",
+ "counter_start": 1,
+ "mood": "bleu",
+ "title": "Partie 4 · « Jacques a dit : choisis qui je prends. Ta grand-mère, ou toi. »",
+ "caption": "Jacques te laisse choisir : ta grand-mère ou toi. Le choix avec le plus de votes décide la partie 5 👇 (Vous avez voté : on la laisse à l'église.) #horreur #histoire #saintmalo #bretagne",
+ "beats": [
+  {
+   "scene": "eglise",
+   "text": "VOUS AVEZ VOTÉ : TU LAISSES TA GRAND-MÈRE DANS L'*ÉGLISE*.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     110,
+     170
+    ]
+   },
+   "shake": 1,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "LES HAUT-PARLEURS : « JACQUES A DIT : RETOURNE À LA STATION-*SERVICE*. »",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "PRÈS DE SAINT-MALO, LES HAUT-PARLEURS DE L'ÉGLISE DONNENT LES ORDRES DE JACQUES TOUTE LA NUIT.",
+   "params": {
+    "hour": 3
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "RÈGLE NUMÉRO UN : SI L'ORDRE COMMENCE PAR « JACQUES A DIT », TU *OBÉIS*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 1,
+    "text": "« JACQUES A DIT » : TU OBÉIS."
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_maison",
+   "text": "RÈGLE NUMÉRO DEUX : SANS « JACQUES A DIT », TU NE LE FAIS *PAS*.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "side",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 2,
+    "text": "SANS « JACQUES A DIT » : TU NE LE FAIS PAS."
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "CELUI QUI SE TROMPE DISPARAÎT. COMME LÉA, TA VOISINE.",
+   "params": {
+    "sweat": true,
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_maison",
+   "text": "DANS TOUTES LES MAISONS, LES TÉLÉPHONES SONNENT EN MÊME *TEMPS*.",
+   "params": {
+    "attic": false
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_cabine",
+   "text": "SUR LE PORT, UN PÊCHEUR DÉCROCHE LA CABINE *TÉLÉPHONIQUE*.",
+   "params": {
+    "ring": false,
+    "person": [
+     150,
+     130,
+     40
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_port",
+   "text": "UNE VOIX DANS LE TÉLÉPHONE : « JACQUES A DIT : PARS EN *MER*. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     210,
+     190,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_port",
+   "text": "IL Y A « JACQUES A DIT ». ALORS LE PÊCHEUR OBÉIT.",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "LES HAUT-PARLEURS HURLENT : « JACQUES N'A JAMAIS DIT ÇA ! »",
+   "params": {
+    "hour": 3,
+    "red": true
+   },
+   "mood": "rouge",
+   "shake": 4,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_port",
+   "text": "LE BATEAU DISPARAÎT DANS LE NOIR. LE PÊCHEUR AUSSI.",
+   "params": {
+    "dark": true,
+    "phare": false,
+    "leaving": true
+   },
+   "count": 2,
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_port",
+   "text": "LE TÉLÉPHONE A IMITÉ LA VOIX DE *JACQUES*.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "RÈGLE NUMÉRO TROIS : SEULS LES HAUT-PARLEURS DE L'ÉGLISE DISENT *VRAI*.",
+   "params": {
+    "hour": 3
+   },
+   "rule": {
+    "n": 3,
+    "text": "SEULS LES HAUT-PARLEURS DE L'ÉGLISE DISENT VRAI."
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "TU T'ENFERMES DANS LA STATION-SERVICE.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "side",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "TON PORTABLE SONNE. C'EST LE NUMÉRO DE TA *GRAND-MÈRE*.",
+   "params": {
+    "mode": "call",
+    "contact": "Mamie",
+    "sleeve": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "SA VOIX : « JACQUES A DIT : SORS DE LA *STATION*. »",
+   "params": {
+    "mode": "chat",
+    "contact": "Mamie",
+    "sleeve": [
+     235,
+     120,
+     35
+    ],
+    "messages": [
+     [
+      "lui",
+      "Jacques a dit :"
+     ],
+     [
+      "lui",
+      "sors de la station."
+     ]
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "EN MÊME TEMPS, LES HAUT-PARLEURS : « JACQUES A DIT : RESTE *DEDANS*. »",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "DEUX ORDRES. SEULS LES HAUT-PARLEURS DISENT VRAI. ALORS TU *RESTES*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 3,
+    "text": "SEULS LES HAUT-PARLEURS DE L'ÉGLISE DISENT VRAI."
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "SOUDAIN, UNE MAIN FRAPPE CONTRE LA *VITRE*.",
+   "params": {
+    "hand": true,
+    "dark": true
+   },
+   "shake": 4,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "DEHORS, LA VOIX DE TA GRAND-MÈRE : « OUVRE-MOI, J'AI *FROID*. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "eglise",
+   "text": "POURTANT, TA GRAND-MÈRE DORT À L'ÉGLISE. ET IL N'Y A PAS « JACQUES A DIT ». TU N'OUVRES *PAS*.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "closed",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 2,
+    "text": "SANS « JACQUES A DIT » : TU NE LE FAIS PAS."
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "DEVANT LA STATION, UN VOISIN ÉCOUTE SON TÉLÉPHONE : « JACQUES A DIT : COURS. » IL COURT. ET IL *DISPARAÎT*.",
+   "params": {
+    "figure": true,
+    "fig_at": [
+     0.5,
+     0.82
+    ],
+    "fig_size": 0.8
+   },
+   "count": 3,
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "À QUATRE HEURES, LA CLOCHE DE L'ÉGLISE *SONNE*.",
+   "params": {
+    "hour": 4
+   },
+   "mood": "noir",
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_jacques",
+   "text": "PAR LA VITRE, TU VOIS JACQUES SUR LA PLACE. UNE SILHOUETTE SANS *VISAGE*.",
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "LES HAUT-PARLEURS : « JACQUES A DIT : CHOISIS QUI JE PRENDS AVANT L'*AUBE*. »",
+   "params": {
+    "jacques": true
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "eglise",
+   "text": "« TA GRAND-MÈRE, QUI DORT DANS L'ÉGLISE. OU TOI. »",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     110,
+     170
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "C'EST UN VRAI ORDRE DE JACQUES. TU DOIS RÉPONDRE À VOIX HAUTE.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "scared",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 1,
+    "text": "« JACQUES A DIT » : TU OBÉIS."
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "eglise",
+   "text": "SI TU CHOISIS TA GRAND-MÈRE, JACQUES LA PREND. TOI, TU VIS.",
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "SI TU TE CHOISIS, ELLE VIT. ET TOI, TU REJOINS LES DISPARUS. LÀ OÙ EST *LÉA*.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "TA GRAND-MÈRE, OU TOI ? LE PLUS DE VOTES DÉCIDE LA *PARTIE 5*.",
+   "choice": {
+    "a": "MA GRAND-MÈRE",
+    "b": "MOI"
+   },
+   "text_y": 0.2,
+   "params": {
+    "dark": true
+   },
+   "dur": 2.8,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_station",
+   "text": "ÉCRIS A OU B EN *COMMENTAIRE*.",
+   "voice": "ÉCRIS TON CHOIX EN COMMENTAIRE.",
+   "choice": {
+    "a": "MA GRAND-MÈRE",
+    "b": "MOI",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "params": {
+    "dark": true
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_remparts",
+   "text": "ABONNE-TOI POUR NE PAS RATER LA *PARTIE 5*.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  }
+ ]
+}

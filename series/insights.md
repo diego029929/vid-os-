@@ -1,0 +1,706 @@
+# Résultats TikTok et ajustements
+
+Mis à jour par la routine quotidienne à partir des statistiques Metricool.
+
+## Retours de Fio (30/10)
+
+- Garder le compte à rebours visuel, supprimer le bip des secondes.
+- La question finale doit porter sur un nouveau choix non résolu.
+- Vidéos plus longues : viser 85 à 95 secondes.
+- Adapter le contenu au fil du temps selon les résultats.
+
+## Statistiques par épisode
+
+| Ép. | Publié | Durée | Vues TikTok | Likes | Comm. | Partages | Score | Reel : vues / likes / temps moyen | Jugé ? |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 30/10 14:06 | 60 s | 217 | 9 | 0 | 0 | 217 | 120 / 4 / 9,1 s | oui |
+| 2 | 31/10 10:04 | 90 s | 893 | 36 | 1 | 0 | 898 | 163 / 1 / 14,8 s | oui |
+| 3 | 31/10 12:04 | 90 s | 823 | 28 | 1 | 0 | 828 | 118 / 3 / 6,8 s | oui |
+| 4 | 31/10 17:05 | 90 s | 844 | 20 | 1 | 0 | 849 | 109 / 0 / 5,4 s | oui |
+| 5 | 01/11 10:04 | 86 s | 855 | 31 | 1 | 0 | 860 | 126 / 1 / 8,0 s | oui |
+| 6 | 01/11 12:03 | 87 s | 793 | 16 | 1 | 0 | 798 | 123 / 0 / 6,1 s | oui |
+| 7 | 01/11 17:05 | 88 s | 784 | 22 | 1 | 0 | 789 | 132 / 0 / 6,5 s | oui |
+| 8 | 01/11 22:22 | 67 s (1er style 2) | 858 | 24 | 0 | 1 | 863 | 157 / 4 / 13,3 s | oui |
+| 9 | 02/11 10:05 | 83 s (style 2) | 823 | 60 | 1 | 0 | 828 | 161 / 0 / 14,2 s | oui |
+| 10 | 02/11 12:04 | 73 s (court, style 2) | 854 | 89 | 0 | 0 | 854 | 263 / 6 / 14,9 s | oui |
+| 11 | 02/11 18:08 | 88 s (style 2) | 787 | 65 | 1 | 2 | 802 | **1758 / 72 / 29,1 s** | oui |
+| 12 | 03/11 10:06 | 89 s (accroche lieu) | 750 | 26 | 0 | 1 | 755 | 552 / 22 / 22,5 s | oui |
+| 13 | 03/11 12:03 | 86 s (accroche dialogue) | 808 | 88 | 0 | 0 | 808 | 215 / 3 / 14,5 s | oui |
+| 14 | 03/11 18:12 | 91 s (accroche lieu) | 792 | 10 | 1 | 5 | 822 | 173 / 5 / 13,0 s | oui |
+| 15 | 04/11 10:06 | 89 s (accroche dialogue) | 746 | 57 | 2 | 1 | 761 | 200 / 6 / 12,7 s | presque (44 h) |
+| 16 | 04/11 12:05 | 89 s (accroche lieu) | 895 | 62 | 0 | 3 | 910 | 357 / 1 / **68,3 s** | presque (43 h) |
+| 17 | 04/11 18:06 | 94 s (accroche dialogue) | 784 | 23 | 0 | 0 | 784 | 148 / 1 / 9,0 s | non (36 h) |
+| 18 | 05/11 10:05 | 93 s (teaser défi) | 771 | 47 | 0 | 0 | 771 | pas encore remonté | non (20 h) |
+| 19 | 05/11 12:04 | 93 s (teaser promesse) | 775 | 37 | 0 | 0 | 775 | pas encore remonté | non (18 h) |
+| 20 | 05/11 18:00 | (teaser défi) | pas encore remonté | | | | | | non |
+| 21 | 06/11 10:00 | Hôtel partie 6 (teaser défi, bonne réponse B) | | | | | | | |
+| 22 | 06/11 12:00 | Jacques a dit partie 1 (accroche lieu, teaser promesse, B) | | | | | | | |
+| 23 | 06/11 18:00 | Jacques a dit partie 2 (accroche dialogue, teaser défi, B) | | | | | | | |
+
+Vidéos courtes « SURVIS ? » (test lancé le 03/11, bilan le 06/11) :
+
+| Courte | Publié | Durée | Vues TikTok | Likes | Comm. | Partages | Score | Reel : vues / likes / temps moyen | Jugé ? |
+|---|---|---|---|---|---|---|---|---|---|
+| N°1 | 03/11 15:02 | 42 s | 804 | 62 | 1 | 2 | 819 | 506 / 19 / 14,1 s | oui |
+| N°2 | 03/11 20:30 | 37 s | 817 | 40 | 1 | 1 | 827 | 197 / 5 / 10,1 s | oui |
+| N°3 | 04/11 15:04 | 37 s (accroche dialogue) | 798 | 71 | 1 | 0 | 803 | 181 / 2 / 10,6 s | presque (39 h) |
+| N°4 | 04/11 20:31 | 42 s (accroche lieu) | 859 | 46 | 2 | 4 | 889 | 156 / 1 / 8,9 s | non (33 h) |
+| N°5 | 05/11 15:05 | 43 s (teaser défi) | 754 | 18 | 0 | 0 | 754 | pas encore remonté | non (15 h) |
+| N°6 | 05/11 20:30 | (teaser promesse) | pas encore remonté | | | | | | non |
+| N°7 | 06/11 15:00 | Nantes (teaser promesse, bonne réponse A) | | | | | | | |
+| N°8 | 06/11 20:30 | Lille (teaser défi, bonne réponse A) | | | | | | | |
+
+(Relevé du 06/11 5h50, 14 jours. Médiane des scores TikTok ép. 12 à 19 : 780 ; courtes N°1 à 4 : 823.)
+
+Score = vues × (1 + 5 × (commentaires + partages) / vues).
+
+Vidéos plus anciennes du compte (avant la série, relevé du 31/10 sur 14 jours) :
+
+| Publié | Durée | Vues | Likes | Commentaires | Partages | Légende |
+|---|---|---|---|---|---|---|
+| 29/10 01:00 | 96 s | 2104 | 90 | 5 | 1 | #histoire |
+| 29/10 09:59 | 97 s | 770 | 41 | 4 | 0 | #histoire |
+| 29/10 14:15 | 87 s | 722 | 33 | 4 | 0 | #histoire |
+| 29/10 14:56 | 64 s | 1008 | 41 | 4 | 0 | #histoire |
+| 29/10 19:16 | 56 s | 752 | 55 | 6 | 0 | #histoire |
+| 29/10 21:39 | 50 s | 780 | 51 | 5 | 0 | #histoire |
+| 29/10 21:57 | 39 s | 815 | 39 | 13 | 2 | #histoire |
+| 29/10 23:42 | 45 s | 58 | 1 | 1 | 0 | ascenseur / creepypasta |
+
+Metricool ne remonte pas encore le temps de visionnage ni le taux de
+complétion pour ce compte.
+
+## Meilleurs horaires TikTok (Metricool, audience du compte)
+
+Pics chaque jour à **10 h**, **12 h** et **18 h** (18 h > 17 h tous les jours ;
+creux à 11 h, 13 h-14 h et après 21 h).
+
+## Règles actives
+
+- Vidéos de 85 à 95 s (les plus longues du compte font au moins aussi bien).
+- Question finale simple « A ou B ? » sur un nouveau dilemme.
+- Ouverture par la réponse de l'épisode précédent.
+- Jamais de fond blanc au début (retour de Fio du 31/10) : ouverture depuis le noir.
+- Titre « Partie N · ... » et « PARTIE N » à l'écran (à partir du 01/11).
+- Commentaires < 1 % : le dilemme peut être évoqué tôt, mais JAMAIS avec une formule d'ouverture fixe (« tu vas devoir choisir... ») : Fio (02/11) ne veut pas d'ouverture répétée d'un épisode à l'autre. Voir ROUTINE.md, « Accroche ».
+
+## Conclusions et changements appliqués
+
+### 31/10 (épisodes 2, 3, 4)
+
+- Pas encore de chiffres pour la série elle-même : on garde le format sans
+  changement radical.
+- Les vidéos longues (~90 s) du compte font au moins aussi bien que les
+  courtes (meilleur score : 96 s, 2104 vues) : on garde 85–95 s.
+- La plus courte (39 s) a fait le plus de commentaires (13) : on garde une
+  question finale simple et directe (« A ou B ? Réponds en commentaire »).
+- Changements appliqués : chaque épisode commence par la réponse à la
+  question précédente, et se termine sur le prochain choix montré avec les
+  cartes A/B sans réponse. Nouveaux décors : silhouette dans la rue,
+  lumière à la fenêtre, abri dans le noir.
+- À surveiller demain : vues et commentaires de l'ép. 1 (TikTok + Reel).
+
+### 01/11 (épisodes 5, 6, 7)
+
+- Chiffres du 01/11 7h (14 jours) : ép. 2 = 820 vues, ép. 3 = 761 vues
+  sur TikTok, au niveau des meilleures vidéos du compte (médiane du compte
+  ≈ 790). L'ép. 1 (version 60 s) n'a fait que 139 vues. Aucune vidéo de la
+  série n'a encore 48 h de recul : pas de règle déclenchée officiellement.
+- Point faible clair : **les commentaires** (1 pour ~800 vues, soit 0,1 %,
+  loin des 1 %). Instagram : temps moyen 6 à 14 s sur 90 s, les gens
+  décrochent tôt.
+- **Test du jour : annoncer le dilemme dès l'ouverture.** Ép. 5 et ép. 7 =
+  version A (dans les 5 premières secondes : « ce soir, tu vas devoir
+  choisir… ») ; ép. 6 = version B témoin (dilemme seulement au milieu et à
+  la fin). Comparer les commentaires et le score dans 48 h.
+- Changé pour les 3 : 10 premières secondes plus rapides (plans de 2,2 à
+  2,6 s au lieu de 2,5 à 3,4 s), nouveau personnage (survivant au sweat
+  vert qui ne cligne pas des yeux), nouveaux décors : lumière verte
+  flottante dans la rue, carnet ouvert.
+- À surveiller le 02/11 : score des ép. 2-4 (enfin jugeables), et
+  commentaires ép. 5/7 vs ép. 6.
+
+### 02/11 (épisode 9 = fin d'« Après la fin », épisodes 10-11 = « Le Train de nuit » parties 1-2)
+
+- TikTok très stable : ép. 2 à 5 entre 798 et 866 vues (médiane du score
+  825), ép. 6 un peu en dessous (685, 83 % de la médiane, pas < 50 %).
+- **Test d'hier (dilemme annoncé dès l'ouverture)** : ép. 5 (version A)
+  829 de score et 1 commentaire, ép. 6 (version B témoin) 685 et 0
+  commentaire. Avantage à la version A (+21 %), pas encore +30 % ; ép. 7
+  pas encore remonté. Comme les commentaires restent < 1 % des vues, la
+  règle « dilemme posé au début ET à la fin » s'applique de toute façon :
+  **les 3 vidéos du jour l'annoncent dans la 2e phrase**.
+- **Instagram : temps moyen 5 à 14 s sur 90 s** (< 40 % de la durée) : la
+  règle demande de raccourcir et d'accélérer le début. Plutôt que de tout
+  raccourcir d'un coup (Fio veut ~1 min 30), **test du jour = la
+  longueur** : ép. 10 version courte (74 s), ép. 9 (84 s) et ép. 11 (89 s) version
+  normale. Comparer score TikTok et temps moyen Reel dans 48 h.
+- Nouveautés : nouvelle série « Le Train de nuit » (6 épisodes), nouveaux
+  décors `wagon` (intérieur de train) et `escalier`, personnage « sans
+  visage » (expression `none`).
+- À surveiller le 03/11 : ép. 7 et 8 (premier style 2), ép. 9-11, et
+  surtout ép. 10 (court) contre ép. 11 (normal).
+
+### 03/11 (épisodes 12-14 = « Le Train de nuit » parties 3-5, + courtes SURVIS ? N°1 et N°2)
+
+- TikTok toujours plat : ép. 2 à 10 entre 766 et 888 vues (médiane du
+  score 812). Aucune vidéo < 50 % de la médiane.
+- **Le style 2 plaît** : likes ép. 9 = 60 et ép. 10 = 85 (7 à 11 % des
+  vues) contre 15 à 35 avant. Sur Instagram, temps moyen ép. 8-9 = 11-13 s
+  contre 5-7 s pour les ép. 5-7 (rétention 54-63 % contre 43 %). On garde.
+- **Test longueur (ép. 10 court 73 s vs ép. 9/11 ~85-89 s)** : 766 contre
+  808 vues TikTok, mais plus de likes sur le court. Pas de différence
+  nette (et ép. 11 pas remonté) : on reste à 85-95 s (règle de Fio).
+- **Commentaires toujours ~0** (0 à 1 pour 800 vues) : c'est le vrai point
+  faible. Réponse du jour : les 2 courtes « SURVIS ? » (une histoire
+  complète en 35 s, question finale où les deux réponses se défendent),
+  et dans les épisodes le dilemme posé dès la 3e-4e phrase, sans formule
+  fixe.
+- **Test du jour (épisodes) : l'accroche.** Ép. 12 et 14 = version
+  « lieu + urgence » (« ENTRE LYON ET MARSEILLE, LES PORTES DU TRAIN
+  S'OUVRENT », « PRÈS D'AVIGNON, À 3 H 33, UNE PORTE TREMBLE ») ; ép. 13
+  = version « réplique de dialogue » (« NE CRIE PAS. SURTOUT, NE CRIE
+  PAS. »). Le train a maintenant un trajet réel (Paris-Nice), conseil de
+  la fiche de Fio.
+- À surveiller le 04/11 : ép. 10-11 (enfin jugeables), commentaires des
+  courtes N°1-2 contre épisodes 12-14.
+
+### 04/11 (épisode 15 = fin du « Train de nuit », épisodes 16-17 = « L'Hôtel des neiges » parties 1-2, + courtes SURVIS ? N°3 et N°4)
+
+- TikTok toujours stable : ép. 2 à 13 entre 735 et 893 vues (médiane du
+  score 828). Aucune vidéo < 50 % de la médiane. Ép. 14 (12 h de recul)
+  a déjà **5 partages**, record de la série.
+- **Instagram : l'ép. 11 décolle** : 1758 vues (10 fois plus que les
+  autres), 72 likes, temps moyen 29 s (contre 6-15 s). Il ouvrait sur
+  « IL EST 3 H 33. T'ES SEUL DANS UN TRAIN DE NUIT » et annonçait le
+  dilemme dès la 2e phrase. Un seul cas : à confirmer, mais ça montre
+  qu'une vidéo de la série peut percer sur Instagram.
+- **Courtes vs épisodes (premier jour)** : SURVIS ? N°1 (15 h) = 761 vues
+  et 60 likes en 15 h, déjà au niveau d'un épisode, avec 1 commentaire
+  et 1 partage. N°2 (20 h 30) = 311 vues en 9 h, plus lent (créneau du
+  soir, creux après 21 h). Pas de conclusion avant le bilan du 06/11.
+- **Test accroche (lieu vs dialogue)** : ép. 13 (dialogue « NE CRIE
+  PAS ») = 781 vues, **85 likes** ; ép. 12 (lieu « ENTRE LYON ET
+  MARSEILLE ») = 735 vues, 25 likes. Le dialogue fait 3 fois plus de
+  likes mais le score n'a pas +30 % : **le test continue** aujourd'hui
+  pour avoir une 2e mesure : ép. 15 et 17 + N°3 = dialogue, ép. 16 + N°4
+  = lieu + urgence.
+- Commentaires toujours < 1 % : questions finales gardées très
+  clivantes (rentrer chez toi ou déchirer le billet, sortir sauver
+  Inès ou rester enfermé).
+- Nouveautés : fin du « Train de nuit » (partie 6), nouvelle série
+  « L'Hôtel des neiges » (Chamonix, 6 épisodes, `series/l-hotel-des-neiges.md`),
+  nouveau décor `couloir` (couloir d'hôtel).
+- À surveiller le 05/11 : ép. 13-14 et N°1-2 (enfin jugeables), Reels de
+  la série du Train (ép. 11 confirmé ou accident ?).
+
+### 05/11 (épisodes 18-20 = « L'Hôtel des neiges » parties 3-5, + courtes SURVIS ? N°5 et N°6)
+
+- TikTok toujours stable : ép. 2 à 16 entre 739 et 895 vues (médiane du
+  score ≈ 820). Ép. 17 (12 h de recul) = 278 vues, à juger demain.
+- **Courtes vs épisodes (jugeables : N°1-2 contre ép. 12-14)** : TikTok à
+  égalité (N°1 = 798 vues, score 813 ; N°2 = 810, score 820 ; ép. 12-14 =
+  755 à 821). N°3 (15 h de recul) = 769 vues et 71 likes, déjà au niveau.
+  Instagram : N°1 = 500 vues (temps moyen 14 s sur 42 s = 33 %), N°2 = 194
+  (10 s) ; épisodes 170 à 550 (13-22 s sur 90 s = 15-25 %). Les courtes
+  font autant de vues pour 2 fois moins de durée et sont mieux regardées
+  en proportion. Commentaires : 1 par vidéo des deux côtés. Bilan final
+  demain 06/11 avec N°3-4.
+- **Test accroche (dialogue vs lieu) : fin, pas de gagnant.** 2e mesure :
+  ép. 15 (dialogue) 739 vues / 57 likes, ép. 16 (lieu) 848 / 60, N°3
+  (dialogue) 769 / 71. Le dialogue garde un peu plus de likes, mais aucun
+  score à +30 %. Les deux formes restent permises, en alternance.
+- **Premier jour des leviers « abonnés / commentaires »** (ROUTINE.md,
+  04/11 nuit) sur les 5 vidéos : « ÉCRIS A OU B EN COMMENTAIRE, VITE »
+  pendant le compte à rebours, teaser au plan 3, fin coupée sur le
+  dilemme (« LA RÉPONSE DANS LA PARTIE X+1 » / « DANS LE N° SUIVANT »),
+  premier commentaire automatique, légende qui commence par une question,
+  couverture à 0,6 s (« PARTIE X »). À mesurer : commentaires > 1 %.
+- **Test du jour = forme du teaser** (plan 3) : « défi » (ép. 18
+  « PRESQUE TOUT LE MONDE MEURT DANS CET ESCALIER », ép. 20, N°5) contre
+  « promesse » (ép. 19 « CE QUI VA SUIVRE, PERSONNE NE LE VOIT VENIR »,
+  N°6 « LE PIRE T'ATTEND EN BAS DE CHEZ TOI »).
+- Bonne réponse tirée au sort : ép. 18 = B, ép. 19 = A, ép. 20 = B,
+  N°5 = A, N°6 = B.
+- Courtes enchaînées : N°6 commence par la réponse de N°5 (on démarre la
+  voiture) puis raconte une histoire complète (parking à Strasbourg).
+- Voix Parler (1er jour) : « A OU B » est mal lu (« ça oublie », « au biais »)
+  → remplacé à la voix par « ÉCRIS TON CHOIX EN COMMENTAIRE » et « TON
+  CHOIX ? LA RÉPONSE DANS… » (les cartes A/B restent à l'écran). Mots
+  aussi mal lus : « HALL », « REZ-DE-CHAUSSÉE », « L'ESCALIER ? » en
+  ouverture, « DEUX CENT DOUZE » (lu « 812 »), « LES PHARES T'AVALENT »,
+  « SUR TA PORTE ». Parler fait aussi des répliques presque vides : le
+  serveur renvoie maintenant un silence court et le moteur refait la
+  réplique (avant : plantage du rendu). Rendu ≈ 12-20 min par vidéo.
+
+### 06/11 (épisode 21 = fin de « L'Hôtel des neiges », épisodes 22-23 = nouvelle série « Jacques a dit » parties 1-2, + courtes SURVIS ? N°7 et N°8)
+
+- **Bilan du test courtes vs épisodes (3 jours, demandé pour aujourd'hui)** :
+  - TikTok : courtes N°1-4 = 798 à 859 vues, score médian **823** ;
+    épisodes 12-19 = 746 à 895 vues, score médian **780**. Courtes +6 % :
+    pas de gagnant net (seuil +30 % non atteint). La meilleure courte
+    (N°4, 2 commentaires, 4 partages) bat la plupart des épisodes ; le
+    meilleur épisode reste l'ép. 16 (partie 1 de l'Hôtel, 895 vues).
+  - Instagram : courtes 156 à 506 vues, temps moyen 9-14 s sur ~40 s
+    (21-34 % de la vidéo) ; épisodes 148 à 552 vues, 9-23 s sur 90 s
+    (10-25 %), sauf l'ép. 16 (68 s de temps moyen, record absolu).
+  - Commentaires : toujours ≈ 1 par vidéo des deux côtés (< 1 %).
+  - Conclusion : les courtes font autant de vues pour 2 fois moins de
+    durée et de rendu, et sont mieux regardées en proportion. Les
+    parties 1 (ép. 10, 16) font partie des meilleurs épisodes : les
+    débuts de série attirent. Proposition à Fio : garder les 2 courtes,
+    c'est Fio qui décide.
+- Leviers commentaires (1er jour le 05/11) : pas encore jugeables.
+- **Test du jour = forme du teaser (2e mesure)** : défi (ép. 21, 23, N°8)
+  contre promesse (ép. 22, N°7). Le teaser du 05/11 n'est pas encore remonté.
+- Bonne réponse tirée au sort : ép. 21 = B, ép. 22 = B, ép. 23 = B,
+  N°7 = A, N°8 = A.
+- Nouvelle série « Jacques a dit » (village près de Saint-Malo, jeu
+  d'enfants qui tourne mal, `series/jacques-a-dit.md`), 6 épisodes.
+  Décor principal différent chaque vidéo (couloir → rue/chambre → bois/station).
+- Voix « 3-A » (narrateur LibriVox) : premier jour de publication.
+- Contrôle voix (Whisper) : 4 rendus refaits pour des mots mal lus
+  (« PARTIR » dans « laissé partir personne », « VITE ! » en ouverture,
+  « TU TE TAIS. » trop court, « DEUX LONGS BRAS NOIRS SORTENT DE L'OMBRE »,
+  « GRÉSILLENT ») ; les courtes faisaient 50-53 s, raccourcies à 43 s.
+  À éviter avec la voix 3-A : répliques de 3 mots ou moins, « VITE » seul,
+  « GRÉSILLER ».
+
+### 08/11 (partie 2 déjà rendue à 10h, N°9 à 12h, partie 3 = ép. 24 à 17h, N°10 à 20h — tout via Zernio, TikTok + Instagram)
+
+- Comptes Zernio OK (pas de reconnexion), N°8 et partie 1 du 07/11 bien publiées sur les deux réseaux.
+- Stats Metricool (TikTok) remontées depuis le 06/11 : ép. 18 = 773 vues / 47 likes, ép. 19 = 783 / 37, N°5 = 781 / 21,
+  N°7 (via Zernio, 18 h de recul) = 279 vues. Toujours ≈ 0 commentaire. Les vidéos publiées par Zernio n'apparaissent
+  pas encore dans Metricool : à vérifier demain (sinon lire les vues via Zernio).
+- Courtes vs épisodes : pas de nouvel écart (≈ 780-870 vues des deux côtés) ; on garde 2 + 2.
+- **Nouvelle méthode dès aujourd'hui (Fio, 08/11)** : test du spectateur extérieur, refait jusqu'à clarté ≥ 8.
+  - Partie 3 : 6 → 6,5 → **8** /10 (corrigé : où on est dès la 1re phrase, règle « même si c'est une voix que tu
+    connais », indice « mon chéri » avant le choix, dilemme final avec un prix des deux côtés).
+  - N°9 : 7 → 7 → **9** /10 (bouton qui marche « au dixième essai », gardien qui dit « alors qui t'appelait au 13 ? »).
+  - N°10 : 7 → 7 → **8** /10 (agent essoufflé qui explique la respiration, menace concrète pour le choix final).
+- Relecture LanguageTool : 1 faute corrigée (« descend jusqu'en bas »).
+- Bonne réponse tirée au sort : B, B, B → dernière inversée : N°9 = B, partie 3 = B, N°10 = A.
+- Décors : 7 nouveaux dessinés (papier = affiche en gros plan, hall d'immeuble, palier du 13e, jad_station intérieur,
+  jad_maison, rame de métro, métro qui arrive). Plus de 1/3 de flou : partie 3 = 5 flou sur 46 plans, courtes = 0.
+- Réponse de la courte précédente : mise dans la légende (« N°8 : il fallait partir ») pour garder l'accroche en 1re seconde.
+- Rendus : N°9 refait 3 fois (52,9 s trop long → coupé ; « PARIS. » lu « Ah » et « N° SUIVANT » lu « nain re-suivant »
+  → « À PARIS, » et voix « ABONNE-TOI POUR LA PROCHAINE VIDÉO »). Partie 3 refaite 1 fois (« SWEAT » lu « souhait » →
+  « PULL »). N°10 refait 1 fois (45,2 s → 43,0 s). Finales : N°9 42,1 s, partie 3 92,2 s, N°10 43,0 s, toutes à ≈ -15 LUFS.
+- Repère durée (voix 3-A) : ≈ 22 caractères lus par seconde + 13 s de plans fixes (choix, rembobinage).
+  Courte ≤ 650 caractères, épisode 1 600-1 800 caractères. À calculer AVANT le rendu.
+- À éviter avec la voix 3-A : « N° » à la voix (dire « numéro » ou autre chose), mot anglais « sweat », ville seule en
+  début de phrase (« PARIS. »).
+
+### 09/11 (partie 4 = ép. 25 à 10h, N°11 à 12h, partie 5 = ép. 26 à 17h, N°12 à 20h — Zernio, TikTok + Instagram)
+
+- Comptes Zernio OK, les 4 vidéos du 08/11 publiées sur les deux réseaux.
+- **Stats lues directement dans Zernio** (`GET /v1/analytics`, plus besoin de Metricool) et commentaires via
+  `GET /v1/inbox/comments/{platformPostId}?accountId=…`. TikTok (≈ 12-18 h de recul) : partie 2 = 779 vues / 28 likes /
+  5 abonnés, N°9 = 750 / 32, partie 3 = 756 / 38 / 2 commentaires, N°10 = 539 / 9. Partie 1 (07/11) = 919 vues, 5 partages.
+  Instagram : 140-200 vues, temps moyen 6-12 s. Courtes vs épisodes : toujours ≈ égal (≈ 750-830 vues).
+- **Vote de la partie 3** : 1 seule voix (« je la laisse ») → moins de 3 votes, tirage au sort = « la laisser » aussi.
+- **Partie 4 = 1re vidéo au format « Line 9 »** (ligne droite, 3 cartes de règles, compteur DISPARUS 1→3, lumière
+  bleu→rouge→noir, vote final). Spectateur extérieur : 6 → 7 → **8/10** (corrigé : Jacques et l'église présentés dès le
+  début, la fausse grand-mère expliquée, l'option « moi » rendue désirable : « là où est Léa »).
+- **Nouvelle voix grave (choix de Fio ce matin)** : tout a été refait avec. Elle est ≈ 12 % plus lente que la voix 3-A :
+  partie 4 = 99,7 s (88,8 s avant) avec 1 990 caractères. Nouveau repère : ≈ 20 caractères lus/s ; épisode « Line 9 »
+  ≤ 1 750 caractères, courte ≤ 690 caractères.
+- Cartes de règles : ne pas les mettre sur un gros plan visage (elles cachent les yeux) → plan de dos ou en pied.
+- Voix : « TU FIXES LE REFLET » lu « tu chiques ce reflet » → « TU REGARDES TON REFLET ».
+- Bonne réponse tirée au sort : N°11 = A, N°12 = A (N°10 : « rentrer à pied », N°11 : « courir », tirés au sort).
+- Décors : 6 nouveaux (jad_port, jad_cabine, miroir, couloir_appart, interphone, facade).
+- **Partie 5 (ép. 26, 17h)** : vote de la partie 4 = 1 A (« À ») / 1 B (« Bbbbbbn ») → tirage = « moi ». Écrite à 14h
+  après lecture des commentaires. Spectateur extérieur : 6 → 6 → 7 → 7 → **7/10** (pas de contradiction restante, juste
+  des questions de suspense ; publiée quand même pour tenir 17h — à faire mieux : écrire plus tôt). « VILLAGE » mal
+  prononcé (« gilange ») → « PLACE DE L'ÉGLISE ». Durée 97,8 s.
+- Décors : +2 (jad_ombres, jad_porte) → 8 nouveaux aujourd'hui.
+- Partie 4 après 4 h : TikTok 329 vues / 13 likes / 2 commentaires (2 votes), Instagram temps moyen 13 s (meilleur que la veille).
+
+### 10/11 (partie 6 = ép. 27 à 10h, N°13 à 12h, nouvelle série « Le Refuge » partie 1 = ép. 28 à 17h, N°14 à 20h — Zernio, TikTok + Instagram)
+
+- Comptes Zernio OK (pas de reconnexion), les 4 vidéos du 09/11 publiées sur les deux réseaux.
+- **Stats Zernio (≈ 9-15 h de recul)** : TikTok partie 4 = 247 vues / 19 likes / 2 commentaires, N°11 = 258 / 9,
+  partie 5 = 236 / 14, N°12 = 276 / 10. Instagram 134-171 vues, temps moyen 7-17 s (N°11 : 17,5 s, record des courtes).
+  **Alerte : les vidéos du 09/11 sont à ≈ 250 vues TikTok contre ≈ 760 pour celles du 08/11 au même âge** (1er jour de
+  la nouvelle voix grave). À revérifier demain avec 48 h de recul avant de conclure (voix ? heure ? algorithme ?).
+  Courtes vs épisodes : toujours à égalité (≈ 250 des deux côtés).
+- **Vote de la partie 5** : 0 commentaire (TikTok et Instagram) → tirage au sort = **Léa**.
+- Fin de « Jacques a dit » (partie 6) : vote final A jouer avec Léa / B rester avec ta grand-mère, « LE PLUS DE VOTES
+  DÉCIDE LA SUITE » (pas de « fin de série »).
+- **Nouvelle série « Le Refuge »** (Vosges, refuge + livre d'or qui écrit la suite), films source : The Ritual (2017)
+  et Resolution (2012). 6 décors propres (`ref_*`) dessinés avant l'épisode 1.
+- Spectateur extérieur : partie 6 = 4 → 6 → 6 → 6,5 (dernières corrections non retestées pour tenir 10h ; la reprise de contexte d'une
+  fin de série est difficile ; leçon : présenter la situation et les personnages dans les 3 premières lignes) ;
+  Refuge p1 = 6 → **7/10** (+ corrections : le livre prédit AVANT que ça arrive, Nora revient sans bois) ;
+  N°13 = **7/10** (radio présentée, portière qui claque) ; N°14 = **7/10** (choix « lui répondre » au lieu de
+  « tendre la perche »). « NUMÉRO QUINZE » pas compris par un nouveau spectateur → « LA RÉPONSE DANS LA PROCHAINE VIDÉO ».
+- Bonne réponse tirée au sort : N°13 = B (tout éteindre), N°14 = A (allumer). Réponses des questions finales tirées au
+  sort (0 commentaire) : N°12 = regarder par le judas, N°13 = rouler jusqu'à chez toi.
+- Décors : 12 nouveaux (jad_passage, jad_mains, habitacle, autoradio, vestiaire, bassin_nuit + 6 `ref_*`).
+- Rendus : partie 6 = 89,4 s (1 rendu) ; N°13 = 43,0 s (refaite 2 fois : le visage du rétroviseur était caché par l'horloge →
+  rétroviseur descendu dans le décor) ; Refuge p1 = 94,5 s (refaite 3 fois : texte du livre coupé par le cadrage → une seule
+  page centrée ; lac trop sombre en ambiance rouge → plan `ref_veilleur` ; « PERSONNE NE FRAPPE PLUS » et « LE FEU MEURT »
+  mal prononcés → « LES COUPS ONT CESSÉ », « LE FEU S'ÉTEINT ») ; N°14 = 44,3 s. Toutes à ≈ -15,5 LUFS, contrôle OK.
+- Leçon décors : l'horloge et le compteur couvrent les ≈ 15 % du haut de l'image : ne rien mettre d'important au-dessus de
+  v ≈ 0.25 dans un décor ; l'ambiance « rouge » assombrit beaucoup les décors de nuit (lac) : préférer un décor éclairé.
+
+### 11/11 (1er jour des « défis » : intrus 10h, quiz film 12h, intrus 18h, quiz culture G 20h — Zernio, TikTok + Instagram)
+
+- Comptes Zernio OK (pas de reconnexion), les 4 vidéos du 10/11 publiées sur les deux réseaux.
+- **Stats Zernio (≈ 10-20 h de recul, dernières vidéos « séries »)** : TikTok 10/11 = 275 (partie 6), 314 (N°13),
+  247 (Refuge p1), 50 (N°14, 10 h de recul) ; Instagram 138-149, temps moyen Insta 5,9-11,8 s, complétion TikTok 0,7-2 %.
+  09/11 à 48 h : TikTok 247-293, toujours ≈ 250 (le plateau à 250 se confirme, plus bas que les ≈ 760 du 08/11).
+  Courtes vs épisodes : égalité. Ces chiffres servent de point de départ pour juger les défis (bilan le 14/11).
+- Défis du jour : intrus fruits (🍌/🍎, 🍊/🍑, 🍎/🍅), devine le film (Reine des neiges, Nemo, Toy Story, Harry Potter,
+  Là-haut), intrus visages (😀/😡, 😄/😆, 😀/😃), culture G (bissextile, Pacifique, Joconde, Au, pieuvre = 3 cœurs).
+- Rendus : les quiz font 50 s avec la voix (et pas 38 s : la voix lit chaque question avant le minuteur). Le moteur sort
+  ≈ -17 LUFS → normalisé à -14 avec ffmpeg loudnorm (check_video demandait -14). Chatterbox a ajouté du charabia après
+  « Quel est le plus grand océan du monde ? » et répété « la Joconde » en fin de phrase (2 rendus) → phrases réécrites
+  (« Quel océan est le plus grand de la planète ? », « La Joconde, quel peintre l'a faite ? »). « Défi de demain » était
+  lu « déchi » → `voice_end` = « … abonne-toi pour jouer demain. » « Fruit » mal lu → hook « l'intrus caché au milieu des bananes ».
+- Zernio : `scheduledFor` avec `timezone` refusé (« Invalid date ») → envoyer l'heure UTC « AAAA-MM-JJTHH:MM:00.000Z » (Paris − 1 h en hiver).
+
+### 12/11 (quiz géo 10h, devine en 4 indices #1 12h, devine en 4 indices #2 18h, vrai ou faux 20h)
+
+- Comptes Zernio OK, les 5 posts du 11/11 publiés sur les deux réseaux.
+- **Stats 11/11 (≈ 12-24 h de recul)** — TikTok vues / temps moyen / complétion, Instagram vues / temps moyen :
+  - intrus fruits 10h : 253 / 6,4 s / 2,3 % — Insta 435 / 8,7 s (1 commentaire de chaque côté) ;
+  - devine le film 12h : 262 / 7,2 s / 1,9 % — Insta 207 / 9,0 s (1 commentaire TikTok) ;
+  - intrus visages 18h : 260 / 4,5 s / 0,4 % — Insta 174 / 6,7 s (le pire temps moyen) ;
+  - Fruits n°1 18h : 248 / **14,6 s / 8,6 %** — Insta 192 / 12,0 s, **6 partages** (le meilleur temps et le seul partagé) ;
+  - quiz culture G 20h : 258 / 6,9 s — Insta 305 / 10,8 s, 8 likes TikTok.
+- Lecture : toujours le plateau de ≈ 250 vues TikTok, aucun défi n'en sort encore. Le format fruits garde le mieux
+  (2× le temps moyen des défis) mais Fio l'a jugé « horrible » → reste suspendu (à reparler au bilan du 14/11).
+- Défis du jour : quiz géo (Madrid, drapeau 🇯🇵, Loire, Ottawa, Canberra), indices animal (🐘 éléphant), indices pays
+  (🇧🇷 Brésil), vrai/faux (soleil = étoile V, chauves-souris aveugles F, poisson rouge 3 s F, tour Eiffel grandit V, banane = baie V).
+  Quiz raccourcis : plus de `voice_hook`, 3 s par question, `voice_end` sans « défi ».
+- Son : loudnorm seul donnait une crête à -0,3 dB (« saturé ») → chaîne utilisée :
+  `loudnorm=I=-14:TP=-2:LRA=11,aresample=44100,alimiter=limit=0.7:level=false` (≈ -15,5 LUFS, crête -1,4 dB, contrôle OK).
+- Voix des quiz : sans `voice_hook`, Chatterbox répète la fin des questions courtes en « … de l'Espagne ? » / « … de
+  l'Australie ? » (« de l'Espagne ? De l'Espagne ? », vu 3 fois) et a mal lu « c'est laquelle ? » → tournure
+  « Quelle ville est la capitale espagnole / australienne ? » (propre). Éviter les questions qui finissent par « de + pays ».
+  Quiz = ≈ 41 s (la voix lit chaque question avant les 3 s du minuteur).
+
+### 13/11 (quiz nostalgie 10h, devine en 4 indices #3 pizza 12h, #4 Canada 18h, quiz culture G 20h)
+
+- Comptes Zernio OK, les 4 posts du 12/11 publiés sur les deux réseaux.
+- **Stats 12/11 (≈ 8-20 h de recul)** — TikTok vues / likes / commentaires / temps moyen / complétion, puis Instagram :
+  - quiz géo 10h (42 s) : 313 / 10 / 1 / 9,4 s / 3,9 % — Insta 147 / 5,7 s ;
+  - indices #1 éléphant 12h (18 s) : 277 / 5 / **3** / 5,8 s / 6,3 % — Insta 166 / 8,1 s ;
+  - indices #2 Brésil 18h (18 s) : 280 / **11** / 1 / 8,5 s / **17,0 %** — Insta 158 / 7,6 s ;
+  - vrai ou faux 20h (42 s) : 260 / 4 / 0 / 11,5 s / 4,9 % — Insta 150 / 8,2 s.
+  11/11 à ≈ 36 h : quiz culture G Insta 441 (le meilleur Insta), Fruits n°1 Insta 250 / 6 partages.
+- Lecture : toujours le plateau ≈ 260-310 vues TikTok. Les « 4 indices » (18 s) ont la meilleure complétion (17 %
+  pour le Brésil) et 4 commentaires sur 5 de la journée : format à garder. Rien ne change aujourd'hui (pas assez de
+  recul, bilan le 14/11).
+- Défis du jour : nostalgie (Bob l'éponge = ananas, Pikachu, DS = 2 écrans, Totally Spies = 3, Tamagotchi = Japon),
+  indices 🍕 pizza, indices 🇨🇦 Canada, culture G (araignée 8 pattes, Mercure, 1969, 206 os, Vatican).
+- Voix : la 1re question courte d'un quiz est encore répétée (« … dans quelle maison ? Dans quelle maison ? », vu 2 fois,
+  confirmé en synthèse seule) → « Dans quoi vit Bob l'éponge, au fond de la mer ? » propre. « Quel est le Pokémon préféré
+  de Sacha ? » suivi de charabia → « Sacha a quel Pokémon sur son épaule ? ». « Nintendo DS » lu « Nintendo D » →
+  écrire « Nintendo dé esse » dans `voice`. Astuce : tester une phrase douteuse seule (voice.synth + Whisper, ≈ 30 s)
+  avant de relancer le rendu complet.
+
+### 14/11 (nouveau concept : Bataille de pays 10h + 18h, Tu préfères 12h + 20h)
+
+- Comptes Zernio OK, les 4 posts du 13/11 publiés sur les deux réseaux.
+- **Stats 13/11 (≈ 8-20 h de recul)** — TikTok vues / likes / commentaires / temps moyen / complétion, puis Instagram :
+  - quiz nostalgie 10h : 256 / 6 / 0 / 4,3 s / 0 % — Insta 126 / 4,9 s (le pire de la journée) ;
+  - indices #3 pizza 12h : **353** / 5 / 2 / 7,5 s / 9,9 % — Insta 167 / 8,5 s ;
+  - indices #4 Canada 18h : 262 / 7 / 1 / 6,6 s / 11,3 % — Insta 149 / 6,7 s ;
+  - quiz culture G 20h : 247 / 8 / 1 / 7,0 s / 2,0 % — Insta 159 / 7,6 s.
+  12/11 à ≈ 36 h : rien n'a bougé (quiz géo 329, Brésil 285 / 16,7 %).
+- Lecture : 4e jour de suite au plateau ≈ 250-350 vues : confirme la décision de la nuit (nouveau concept, à garder
+  jusqu'au 28/11). Les « 4 indices » restent les meilleurs en complétion, mais sans sortir du plateau.
+- Vidéos du jour (préparées d'avance) : bataille-001 « 16 PAYS, 1 SEUL SURVIVANT » (ode, gagnant Espagne, graine 58,
+  35 s), bataille-002 « QUEL PAYS D'AFRIQUE GAGNE ? » (elise, gagnant Maroc, graine 22, 37 s), tp-001 « ta vie »,
+  tp-002 « bouffe ».
+- Contrôle : check_video signale un « silence > 1,5 s » à la fin des batailles = la carte du gagnant après l'accord
+  final (pas de voix dans ce format) → normal, publié. Rendu bataille ≈ 1 min ; Tu préfères ≈ 6 min (+ 1 min la
+  1re fois pour télécharger le modèle). Ne pas lancer Whisper pendant un rendu Chatterbox (rendu 4× plus lent).
+- Voix Tu préfères : « revenir dix ans en arrière » mal articulé (« rejunir ») → « retourner dix ans dans le passé » ;
+  « plus jamais de pâtes ou plus jamais de pain » : « pain » final lu « teint » / remplacé par « pâtes » → option
+  changée en « plus jamais de baguette » ; « manger un insecte grillé » lu « crié » → « un insecte vivant ».
+  Éviter les mots d'une syllabe ou en « -illé » en fin de question. La synthèse est la même d'un essai à l'autre
+  (même phrase = même son) : tester une nouvelle tournure seule (voice.synth + Whisper medium) avant le rendu.
+- 14/11 13h : Fio a écrit « C'est nul » (sans dire lequel). Premiers chiffres : bataille #1 229 vues TikTok en 3 h, Tu préfères #1 85 vues en 1 h. Sans réponse à 17h, le Tu préfères #2 de 20h a été annulé et remplacé par bataille-003 « EUROPE : QUI SURVIT ? » (Grèce gagne). tp-002 reste dans le dépôt (non publié). Demander à Fio ce qui est nul avant la routine suivante.
+
+### 15/11 (retour aux séries d'horreur COURTES : 4 séries de 3 épisodes de ≈ 40 s, 10h/12h/18h/20h)
+
+- Comptes Zernio OK, les 4 posts du 14/11 publiés sur les deux réseaux.
+- **Stats 14/11 (≈ 8-20 h de recul)** — TikTok vues / likes / commentaires / partages / temps moyen / complétion, puis Instagram :
+  - bataille-001 10h (35 s) : 314 / 6 / 0 / 0 / 8,4 s / 2,8 % — Insta 141 / 14,1 s ;
+  - tp-001 « ta vie » 12h (60 s) : 249 / **10** / 1 / 0 / 9,1 s / 0,8 % — Insta 134 / **15,3 s** ;
+  - bataille-002 18h (37 s) : **336** / 4 / 0 / 1 / 7,6 s / 2,6 % — Insta 119 / 10,8 s ;
+  - bataille-003 20h (33 s) : 276 / 6 / 0 / 0 / 6,4 s / 2,2 % — Insta 116 / 7,3 s.
+- Lecture : toujours le plateau 250-340 vues TikTok ; le nouveau concept n'a rien débloqué en un jour, et Fio l'a
+  trouvé « nul » → arrêté (décision de Fio du 14/11 au soir). Retour aux séries, mais en 40 s (les anciens épisodes
+  de 90 s perdaient les gens à 6-14 s) avec l'animation 2. À juger sur le cycle entier (15-17/11).
+- Cycle 1 : « La Station » (10h, Vacancy + Kairo), « L'eau du septième » (12h, Dark Water), « La Bande » (18h,
+  Session 9), « La Photo » (20h, Lake Mungo). 6 décors neufs : eau_plafond, eau_septieme, bnd_facade, bnd_magneto,
+  pho_maison, pho_photo.
+- Test du spectateur extérieur : 1er jet 6-7/10 (fille « déjà montée » alors que le choix A dit « monter » ;
+  « bande » flou → « cassette » ; mot de Mamie alors que B = « la montrer à Mamie »). Après correction : 8 / 8 / 8.
+- Voix (Whisper medium) : « ce qu'Inès va faire » lu « ce qu'il n'est à faire » → « raconte la nuit d'Inès » ;
+  « une fille que personne… » lu « une chie » → « une inconnue que personne… » ; « et crie : » lu « écrites » →
+  « Elle a peur : ». Rendu ≈ 6 min par épisode de 40 s (bien plus rapide que prévu). Programmé : 10h, 12h, 18h, 20h.
+
+### 16/11 (cycle 1, parties 2 ; 1er jour du style « Nuit & téléphone », engine/nuit.py)
+
+- Comptes Zernio OK, les 4 posts du 15/11 publiés sur TikTok et Instagram.
+- **Stats 15/11 (≈ 10-20 h de recul)** — TikTok vues / likes / commentaires / enregistrements / temps moyen / complétion, puis Instagram vues / temps moyen / skip :
+  - La Station p1 10h : 256 / **27** / 1 / 2 / **8,6 s** / **7,5 %** — Insta 135 / 6,1 s / 60 % ;
+  - L'eau du septième p1 12h : 256 / 10 / 0 / 2 / 7,3 s / 3,8 % — Insta 117 / 7,6 s / 52 % (2 commentaires) ;
+  - La Bande p1 18h : 231 / 6 / 0 / 2 / 5,8 s / 1,3 % — Insta 125 / 4,5 s / **74 %** (le pire) ;
+  - La Photo p1 20h : 247 / 13 / 0 / 1 / 6,4 s / 2,4 % — Insta 126 / 7,0 s / 43 %.
+- Lecture : toujours le plateau ≈ 250 vues, mais La Station = record de likes depuis longtemps (27) et meilleure
+  complétion (7,5 %). La Bande (accroche « une vieille cassette porte le prénom… », sans téléphone) perd le plus
+  vite → aujourd'hui chaque épisode ouvre sur un écran de téléphone ou un objet + une question.
+- Votes partie 1 : Station 1 commentaire « je tape un sprint » (= B courir) ; Eau 2 × « partir » sur Insta (= B
+  quitter) ; Bande 0 ; Photo 0. Moins de 3 votes partout → tirage au sort : B, B, B, B (identique aux votes reçus).
+- Test du spectateur : 1er jet clarté 6 / 5 / 7 / 7 (règles non reliées à l'action, « lampe qui filme », hall
+  inondé alors que la règle interdit l'eau, « 18 ans » pas dit) ; 2e jet 7 / 7 / 6 / 8,5, corrections du 2e avis
+  appliquées (source de chaque règle dite, « pare-brise », siège vide avant le choix, « clac : la cassette est
+  arrivée au bout », « en direct »).
+- Voix (Whisper medium) : « Tu montes voir Jade » lu « On te voit Jade » → « Dans la chambre de Jade… » ; « Rose veut
+  te voir » lu « ne te voit pas » → « Rose veut te parler ». Fin « Écris un ou deux » parfois entendue « et crie » par
+  Whisper (déjà le cas avant, compréhensible à l'oreille).
+- Style nuit : rendu ≈ 6-7 min par épisode ; 770 caractères lus ≈ 50 s (plus lent que prévu : ≈ 15,5 car./s avec les
+  bruitages et pauses) → viser ≤ 730 caractères. Bande et Photo étaient à 50,5 s : fin coupée à 49,8 s + loudnorm
+  (I=-13, TP=-3, alimiter 0.65 level=false) car check_video signalait -17,1 LUFS.
+- Programmé (Zernio, TikTok + Instagram) : Station p2 10h, Eau p2 12h, Bande p2 18h, Photo p2 20h.
+
+### 17/11 (cycle 1, parties 3 = dernières ; 1er jour de la voix de femme Piper upmc + mégaphone)
+
+- Comptes Zernio OK, les 4 posts du 16/11 publiés sur TikTok et Instagram.
+- **Stats 16/11 (≈ 8-20 h de recul)** — TikTok vues / likes / commentaires / partages / temps moyen / complétion, puis Instagram vues / temps moyen :
+  - La Station p2 10h : **265** / **16** / 1 / 0 / **8,6 s** / 3,6 % — Insta 131 / **9,5 s** ;
+  - L'eau du septième p2 12h : 231 / 9 / 1 / 0 / 8,4 s / **4,9 %** — Insta 118 / 8,9 s ;
+  - La Bande p2 18h : 240 / 5 / 0 / 0 / 4,1 s / 2,0 % — Insta 107 / 3,5 s (encore la pire) ;
+  - La Photo p2 20h : 244 / 8 / 0 / 0 / 6,0 s / 2,8 % — Insta 127 / 7,9 s.
+- Lecture : plateau ≈ 230-265 vues. Le style nuit garde le temps moyen (8-9 s pour Station et Eau, mieux sur
+  Insta qu'en p1), mais La Bande décroche dès les premières secondes (accroche « cassette » = objet, pas de question).
+  Toujours presque aucun commentaire (2 en tout) → le vote seul ne suffit pas à faire commenter.
+- Votes partie 2 : Station 1 commentaire « 1 » (= monter dans la voiture) ; Eau 1 commentaire « 2 » (= casser la
+  vitre) ; Bande 0 ; Photo 0. Moins de 3 votes → tirage au sort, en suivant le vote reçu quand il y en a un :
+  Station 1, Eau 2, Bande 2 (remonter dehors), Photo 2 (rester avec Mamie).
+- Test du spectateur : 1er jet clarté 6 / 5 / 6 / 5 (« la chose » floue, règle posée en même temps que son échec,
+  « règle numéro deux » sans règle 1, Rose jamais présentée) ; 2e jet 7 / 6 / 6 / 7 ; 3e jet 8 / 7 / 7 / 8, puis
+  corrections ciblées (Eau : comment la main a touché l'eau ; Bande : Inès était avec toi, la règle dit pourquoi).
+- Voix Piper (1er jour) : une phrase qui COMMENCE par « Tu … » est mal entendue (« Suroule », « Sui écrit », « Sur
+  l'arrivée ») → commencer par un autre mot (« Alors, tu… », « Vite, tu… ») ; les questions finales en « Tu … ou … ? »
+  passent. Piper ≈ 18,5 car./s (800 car. = 43,6 s).
+- Autres pièges Piper vus aujourd'hui (corrigés en changeant la phrase, testée seule avec voice.synth + Whisper) :
+  « tu as glissé dans le hall » (illisible), « Minuit quarante » en tout début (« Mimikaran »), « la cave » + « Elle
+  est arrivée au bout » dans une phrase longue, « Inès t'écrit » (« Nest écrit » → « Ton amie Inès t'écrit »),
+  « n'ouvre pas » (« m'ouvre pas » → « ne lui ouvre surtout pas »), mot d'une syllabe en fin (« vite »).
+  Durées : 45,0 / 43,4 / 49,1 / 49,8 s (≈ 800-840 car. avec les répliques Chatterbox) → viser ≤ 780 caractères.
+- Programmé (Zernio, TikTok + Instagram) : Station p3 10h, Eau p3 12h, Bande p3 18h, Photo p3 20h. Cycle 1 FINI :
+  le 18/11, 4 nouvelles séries.
+
+### 18/11 (cycle 2, parties 1 : La Coupure, Le Tunnel, Chambre neuf, Le Ferry)
+
+- Comptes Zernio OK, les 4 posts du 17/11 publiés sur TikTok et Instagram.
+- **Stats 17/11 (≈ 8-19 h de recul)** — TikTok vues / likes / commentaires / enregistrements / temps moyen / complétion, puis Instagram vues / temps moyen / skip :
+  - La Station p3 10h : **270** / **17** / 0 / 2 / **8,5 s** / **5,3 %** — Insta **189** / 9,0 s / 53 % ;
+  - L'eau du septième p3 12h : 260 / 6 / 1 / 1 / 8,0 s / 4,0 % — Insta 145 / 5,4 s / 63 % ;
+  - La Bande p3 18h : 241 / 6 / 0 / **4** / 4,8 s / 0,8 % — Insta 152 / 6,1 s / 53 % ;
+  - La Photo p3 20h : 247 / 8 / 0 / 1 / 8,2 s / 2,0 % — Insta 160 / **10,6 s** / 54 %.
+- Lecture : 1er jour de la voix de femme Piper : vues stables (≈ 240-270 TikTok) et Instagram en hausse
+  (145-189 contre 107-131 la veille). La Station reste la meilleure sur les 3 parties (double qui imite, accroche
+  SMS + règle claire). La Bande reste la pire (4,8 s). Les vidéos de 49 s (Bande, Photo) ont la complétion la plus
+  basse → cycle 2 visé à 700-780 caractères (≈ 40-45 s).
+- Ce qui change pour le cycle 2 : 4 séries qui reprennent la recette de La Station (1er plan = SMS/notif + question,
+  règle claire dite par quelqu'un, menace qui imite un proche ou un lieu), 4 lieux différents (maison en Ardèche,
+  tunnel à Toulouse, hôpital en Normandie, ferry vers la Corse).
+- Votes partie 3 : Eau 1 commentaire « 1 » ; les autres 0. Cycle 1 fini (pas de suite prévue).
+- Test du spectateur : 1er jet clarté 6 / 8 / 7 / 7 (Coupure : règle « ne sors pas » alors que le choix est d'ouvrir
+  → règle « n'ouvre jamais la porte » ; Chambre 9 : aller voir seul n'avait aucune raison → moniteur qui bipe +
+  Nadia qui ne répond pas) ; 2e jet 6 / 8 / 7 avec corrections appliquées (photo « quelqu'un est assis à ta
+  place… il te ressemble », Clara paniquée, pull laissé sur la couchette, pas mouillés dans l'escalier).
+- Voix Piper : NON identique d'un rendu à l'autre (Le Tunnel rendu 4 fois). Mal lus : « pendant une coupure »
+  (« quand on coupe l'heure »), « de dos. Pourtant » , « maison louée » (« mouée »), « Toulouse » en fin de
+  phrase (« Touss »), « par ton surnom d'enfant », « une voix t'appelle », « sur ton biper », « vieille dame »
+  (« vieille Anne »), « ferry de nuit » (« nuire »), « pull » (« poule ») → « gilet », « sweat » (« souhait »).
+- Programmé (Zernio, TikTok + Instagram) : Coupure p1 10h, Tunnel p1 12h, Chambre neuf p1 18h, Ferry p1 20h.
+  Durées 46,3 / 43,1 / 42,3 / 40,4 s.
+
+### 19/11 (cycle 2, parties 2 + 1ers clips GTA 6 à 8h/9h)
+
+- Comptes Zernio OK, les 4 posts du 18/11 publiés sur TikTok et Instagram ; gta6-01/02 programmés (8h, 9h).
+- **Stats 18/11 (≈ 10-20 h de recul)** — TikTok vues / likes / commentaires / partages / temps moyen / complétion, puis Instagram vues / temps moyen :
+  - La Coupure p1 10h : 218 / 8 / **3** / 0 / 9,0 s / 6,6 % — Insta **187** / 9,1 s ;
+  - Le Tunnel p1 12h : 220 / **18** / 1 / **2** / **9,8 s** / **7,4 %** — Insta 153 / 7,6 s ;
+  - Chambre neuf p1 18h : 255 / 5 / 0 / 0 / 4,4 s / 2,3 % — Insta 136 / 4,9 s ;
+  - Le Ferry p1 20h : 233 / 12 / 0 / 1 / 6,4 s / 1,6 % — Insta 145 / 7,2 s.
+- Lecture : vues toujours au plateau (≈ 220-255 TikTok), mais Le Tunnel et La Coupure ont les meilleurs temps
+  moyens depuis le style nuit (9-10 s) et La Coupure a eu 3 vrais votes (1er vote ≥ 3 depuis longtemps). Les deux
+  commencent par un SMS d'un proche qui ne devrait pas pouvoir écrire. Chambre neuf (1er plan = alerte de biper,
+  pas un proche) décroche dès 4 s → pour les parties 3 et le cycle 3 : 1er plan = message d'un PROCHE nommé.
+- Votes partie 1 : Coupure **3 × « 2 »** (laisser fermé, vrai vote) ; Tunnel 1 × « 1 » (< 3 → on suit le vote reçu :
+  entrer) ; Chambre neuf 0 → tirage 2 (réveiller Nadia) ; Ferry 0 → tirage 1 (monter sur le pont).
+- Test du spectateur : Tunnel 8/10 et Chambre neuf 8/10 au 2e jet ; Coupure et Ferry réécrits 3 fois (accroche
+  qui renvoyait à la partie 1, règle qui ne servait à rien, choix « piège »).
+- Voix Piper : tous les rendus en `--verif` (3 essais par phrase). Mal lus aujourd'hui (changés) : « la lampe de ton
+  téléphone » (« langue »), « supplie » (« suit »), « Clara et toi louez » (« Clara, toi loué »), « dit ton prénom »,
+  « j'en reviens. Il n'y a personne » (« je reviens digni »), « la chambre neuf est vide » (« neuf févide »),
+  « sauve-toi » (« sauf toi »), « te tourne le dos. C'est ta veste » (« le dos de ta veste »), « c'est moi qui serai
+  toi ». Whisper écrit « ami » pour « amie », « fosse » pour « fausse » (son correct en écoute découpée).
+- Programmé (Zernio, TikTok + Instagram) : Coupure p2 10h, Tunnel p2 12h, Chambre neuf p2 18h, Ferry p2 20h
+  (+ gta6-01 8h, gta6-02 9h déjà programmés). Durées 45,8 / 46,0 / 45,9 / 43,3 s.
+
+### 20/11 (cycle 2, parties 3 = dernières)
+
+- Comptes Zernio OK ; les 6 posts du 19/11 (2 clips GTA + 4 parties 2) publiés sur TikTok et Instagram ; edit GTA Lucia 9h déjà programmé.
+- **Stats 19/11 (≈ 10-20 h de recul)** — TikTok vues / likes / com. / partages / temps moyen / complétion, puis Insta vues / temps moyen :
+  - gta6-01 8h : 236 / 3 / 0 / 0 / 4,2 s / 1,2 % — Insta 152 / 3,8 s ;
+  - gta6-02 9h : 236 / 4 / 0 / 0 / 5,0 s / 1,5 % — Insta 168 / 6,0 s ;
+  - La Coupure p2 10h : **4** / 1 / 0 / 0 / 3,8 s — Insta 162 / 7,4 s ;
+  - Le Tunnel p2 12h : 230 / 4 / 0 / 0 / 4,4 s — Insta 137 / 4,8 s ;
+  - Chambre neuf p2 18h : 217 / 4 / 0 / 1 / 4,5 s / 2,4 % — Insta 147 / **8,8 s** ;
+  - Le Ferry p2 20h : **3** / 0 / 0 / 0 / 2,9 s — Insta 131 / 7,4 s.
+- Lecture : 2 vidéos TikTok sur 6 bloquées à 3-4 vues (Coupure p2, Ferry p2) alors qu'Instagram les montre normalement → TikTok
+  les a sans doute retenues (contrôle ou faible diffusion) ; à revérifier le 21/11. Les parties 2 retiennent moins que les
+  parties 1 sur TikTok (4,4 s contre 9-10 s) : un épisode qui commence par la suite d'une autre vidéo décroche plus vite.
+  Les clips GTA (format dessiné, arrêté) n'ont pas fait mieux que les séries.
+- Votes partie 2 : 0 partout → tirages : Coupure 1, Tunnel 2, Chambre neuf 1, Ferry 2.
+- Test du spectateur : 5 passages (clarté finale ≈ 7-8/10 ; le Ferry, avec 3 filles au même visage, reste le plus dur à
+  suivre). Corrigé : « règle numéro deux » sans règle 1 (→ « la règle de X »), choix sans prix, renvois aux parties d'avant.
+- Durée : Piper ≈ 17,5 car./s en `--verif` → 880 car. = 50,5 s (refusé par check_video). Viser **≤ 830 car.**
+- Voix Piper, mal lus aujourd'hui (changés) : « Ta mère t'écrit : rentre » (« t'écriste »), « la peur te fait chuchoter »
+  (« la porte »), « Elle s'enfuit » (le « Elle » disparaît), « Tu hésites » en début de phrase (« puis hésite »),
+  « n'est pas moi. Viens seul » (« moins bien seule »), « tire-la dehors » (« si elle adore »), « c'est toi qui es de
+  trop » (« qui l'aide trop »). Whisper écrit « ami » pour « amie », « fosse » pour « fausse » (son correct).
+
+### 21/11 (cycle 3, parties 1 : Le Babyphone, Le Voisin, Le Camping, L'Auberge + edits GTA 03/04)
+
+- Comptes Zernio OK ; les 5 posts du 20/11 (edit Lucia 9h + 4 parties 3) publiés sur TikTok et Instagram.
+- **Stats 20/11 (≈ 10-20 h de recul)** — TikTok vues / likes / com. / partages / temps moyen / complétion, puis Insta vues / temps moyen :
+  - edit GTA Lucia 9h : 216 / 8 / 0 / 0 / 5,3 s / 3,0 % (vidéo de 17 s) — Insta 170 / 6,1 s ;
+  - La Coupure p3 10h : 228 / 8 / 0 / 0 / 9,1 s / 2,4 % — Insta 155 / 9,3 s ;
+  - Le Tunnel p3 12h : 230 / **11** / 1 / 0 / 8,5 s / **5,5 %** — Insta 154 / 8,3 s / 2 partages ;
+  - Chambre neuf p3 18h : 233 / 4 / 0 / 0 / 4,6 s — Insta 133 / 5,9 s ;
+  - Le Ferry p3 20h : 228 / 3 / 1 / 0 / 4,2 s — Insta 149 / 4,8 s.
+- Coupure p2 et Ferry p2 (19/11) toujours à 5 vues TikTok : TikTok ne les a jamais diffusées (Insta normal). Les parties 3 sont
+  revenues à ≈ 230 → ce n'était pas le compte, seulement ces 2 vidéos.
+- Commentaires : Tunnel p3 « 2 jamais je le touche » ; Ferry p3 « Ecoute hugo et suite stp » (1re demande de suite écrite).
+- Lecture : plateau ≈ 230 vues TikTok. Le Tunnel et La Coupure (1er plan = message d'un proche) restent les meilleurs temps
+  (8,5-9 s). Gardé pour le cycle 3 : 1er plan = SMS d'un PROCHE nommé, et une règle qui s'oppose à l'avertissement du proche
+  dans le vote (le spectateur extérieur trouve ces votes les plus clairs).
+- Edits GTA : Lucia (captures + vrai morceau) = 8 likes, 3 % de complétion, mieux que les clips dessinés (4 likes). 21/11 :
+  Jason (8h, Trap Bells) et Vice City (9h, Miami Trap), captures officielles toutes les deux.
+- Test du spectateur : 3 passages. Voisin (5/10 → 7/10) : trop de rebondissements à la fin → vocal de Yanis retiré, voix dans
+  le mur qui demande ton prénom (lien avec la règle). Babyphone (6 → 7) : règle changée en « ne le débranche jamais » pour
+  donner un prix au choix 2. Camping 7-8, Auberge 8.
+- Voix Piper, mal lus aujourd'hui (changés) : « camping » (« cap-win », « capini » → « camp du lac »), « guirlande » (2 fois
+  « dialande » → « lampe »), « cache-toi dans ta tente » (« cache pas ton attente »), « tentes. Ceux qui » (« temple »),
+  « repasse à vingt-deux heures » (« opasse avant »), « imitait maman » (« mit ta maman »), « branché à la cave » (« et la
+  cave »), « Yanis » (« Yanny » → Karim), « glissé une lettre » (« bissé »), « Dans le hall » (« dans le LOL »),
+  « vibre : ta voiture » (« vibre en ta »), « tombe en panne » (« tombant panne »), « partie il y a vingt ans » (« lily à »).
+  « chuchoter / chuchote » parfois « chuter / chute » (→ « murmurer »). Tester chaque phrase seule AVANT le rendu (script
+  rapide : voice.synth + megaphone + Whisper medium, ≈ 3 min pour 33 phrases) a évité 2 rendus de plus.
+- Programmé (Zernio, TikTok + Instagram) : edit Jason 8h, edit Vice City 9h, Babyphone p1 10h, Voisin p1 12h, Camping p1 18h,
+  Auberge p1 20h. Durées 17,6 / 16,7 / 44,5 / 44,4 / 46,1 / 44,2 s. Camping rendu 4 fois (phrases mal lues), Babyphone 3 fois.
+
+### 22/11 (rotation pilotée par plan.py, 1re journée ; voix Pocket TTS « estelle » ; edits GTA 05/06)
+
+- Comptes Zernio OK, les 6 posts du 21/11 publiés.
+- **Stats 21/11 (≈ 10-20 h de recul)** — TikTok vues / likes / temps moyen / complétion, puis Insta vues / temps moyen :
+  - edit Jason 8h : 226 / 25 / 2,6 s / 0,8 % — Insta 135 / 3,0 s ;
+  - edit Vice City 9h : 233 / 19 / 3,0 s / 1,6 % — Insta 100 / 3,3 s ;
+  - Babyphone p1 10h : 224 / 3 / 6,4 s / 2,4 % — Insta 157 / 9,7 s ;
+  - Voisin p1 12h : **13** / 1 / 9,0 s — Insta 165 / 9,4 s (bloquée par TikTok) ;
+  - Camping p1 18h : **2** / 0 — Insta 152 / 8,9 s (bloquée par TikTok) ;
+  - Auberge p1 20h : 207 / 3 / 6,7 s / 2,2 % — Insta 140 / 7,7 s.
+- 0 commentaire, 0 partage sur les 6. 0 vidéo sur 33 au-dessus de 1 000 vues TikTok (7 jours).
+- Lecture : 2 parties 1 sur 4 bloquées le même jour (trop semblables entre elles : même format, même légende type
+  « Tu … (1) ou … (2) ? »). Les edits GTA gardent le meilleur taux de likes (≈ 10 %) mais 3 s de temps moyen.
+- **Plan du jour** (series/plans/2026-11-22.json) : 1 seule série gardée (Babyphone, score 0,50) ; Voisin, Camping, Auberge
+  arrêtées. Nouveautés : `regles` (12h, ambiance rouge), `histoire` (18h, sepia), `pov` (20h, bleu). Chaque vidéo a une
+  1re image, une légende et des hashtags différents (8-9 hashtags, § 0 quater).
+- Corrections au rendu : « station » = abri de bus dans nuit.js → la vidéo règles devient « bus de nuit » (pas métro) ;
+  décor `mer` = phare → POV au « port gelé ».
+- Voix Pocket « estelle » (1er jour) : mal lus et changés : « si une voix t'appelle » (« boîte à pêle »), « Laquelle tu
+  briserais » (« la quête » → « Quelle règle tu briserais »), « ta voix chuchote » en début (« ta boîte »), « magnétophone »
+  (« manettophone » → « vieux micro »), « mille neuf cent quatre-vingt-quatorze » (→ « a trente ans »). Whisper sur la vidéo
+  entière se trompe parfois sur « une voix dit » : découpée seule, la phrase est juste.
+- Rendus : babyphone 8 min 40 (1er téléchargement des modèles), les autres ≈ 5 min.
+
+### 23/11 (plan.py jour 2 ; edits GTA 07/08 ; Babyphone p3, sms, règles hôpital, histoire miroir)
+
+- Comptes Zernio OK, les 6 posts du 22/11 publiés (TikTok + Instagram).
+- **Stats 22/11 (≈ 10-20 h de recul)** — TikTok vues / likes / temps moyen / complétion, puis Insta vues / temps moyen :
+  - edit Leonida 8h : 228 / 5 / 3,8 s / 2,4 % — Insta 142 / 4,4 s ;
+  - edit persos 9h : **2** / 0 — Insta 131 / 4,3 s (bloquée TikTok) ;
+  - Babyphone p2 10h : **3** / 0 — Insta 157 / 6,8 s (bloquée TikTok) ;
+  - règles bus de nuit 12h : **5** / 1 / 13,9 s — Insta 128 / 4,5 s (bloquée TikTok) ;
+  - histoire La Cassette 18h : 208 / 6 / 3,4 s / 3,7 % — Insta 132 / 4,0 s ;
+  - POV port gelé 20h : **6** / 0 / 5,1 s — Insta 137 / 5,3 s (bloquée TikTok).
+- 0 commentaire, 0 partage. 0 vidéo sur 35 au-dessus de 1 000 vues TikTok (7 jours). Vote Babyphone p2 : 0 vote → tirage : 2.
+- **Alerte** : 4 vidéos sur 6 jamais diffusées par TikTok le 22/11 (2-6 vues), contre 2 sur 6 le 21/11. Instagram reste stable
+  (≈ 130-160). Le blocage TikTok touche maintenant tous les formats (edit, série, règles, pov) : ce n'est plus « des vidéos qui
+  se ressemblent ». Hypothèse principale : trop de publications par jour (6) pour un petit compte, toutes par API et marquées IA.
+  Signalé à Fio (proposition : passer à 3 vidéos/jour). Pas changé sans son accord.
+- Plan du jour (series/plans/2026-11-23.json) suivi tel quel : Babyphone p3 (accroche appel_inconnu), sms (nb, bruit),
+  règles (vert, règle affichée), histoire (vhs, image impossible). Edits : bande-annonce « action » 8h, captures « Jason & Lucia » 9h.
+- Test du spectateur : sms 8/10, histoire miroir 8/10, Babyphone 5/10 → corrigé (pas de la cave rappelés, « ta sœur Sarah »,
+  haut-parleur sous l'oreiller), règles hôpital 6/10 → corrigé (interphone qui sonne, lumière verte qui arrive, choix 1/2 à la fin).
+- Voix Pocket, mal lus et changés : « une petite voix rit » (« voirie » → « éclate de rire »), « table de nuit » (« table Nénie »).
+- Voix, 2e vérification (Whisper sur des morceaux de 4-5 s) : « la petite voix ne vient plus » (« la poule boite »),
+  « La lumière clignote. Ton reflet lève la main » (« la lumière finit »), « Elle ajoute » (« à la joute »), « Et il sourit » en fin
+  de phrase (« il s'ouvre ») → changés. Le Miroir rendu 4 fois, Babyphone 2 fois. La vidéo entière transcrite d'un bloc cache ces
+  erreurs : toujours retranscrire par morceaux de 5 s.
+- Programmé (Zernio, TikTok + Instagram) : edit action 8h, edit Jason & Lucia 9h, Babyphone p3 10h, sms « Les clés » 12h,
+  règles hôpital 18h, histoire « Le miroir » 20h. Durées 15,9 / 16,7 / 32,4 / 28,6 / 34,3 / 25,0 s.
+- Essai 3D non refait (toujours en attente de l'avis de Fio sur celui du 22/11).
+
+### 24/11 (1er jour à 3 vidéos : 12h POV, 17h histoire, 20h série Le Phare p1)
+
+- Comptes Zernio OK, les 6 posts du 23/11 publiés (TikTok + Instagram).
+- **Stats 23/11 (≈ 10-22 h de recul)** — TikTok vues / likes / temps moyen / complétion, puis Insta vues / temps moyen :
+  - edit action 8h : **9** / 0 / 2,6 s (bloquée TikTok) — Insta 186 / 3,9 s ;
+  - edit Jason & Lucia 9h : 216 / 18 / 3,4 s / 1,2 % — Insta 169 / 4,9 s ;
+  - Babyphone p3 10h : 223 / 5 / 3,6 s / 0,8 % — Insta 153 / 6,7 s ;
+  - **sms « Les clés » 12h : 227 / 6 / 1 commentaire / 10,3 s / 10,4 %** — Insta 169 / 10,0 s (meilleure rétention depuis des jours, 36 % de la vidéo) ;
+  - règles hôpital 18h : 231 / 4 / 3,9 s / 1,5 % — Insta 128 / 4,4 s ;
+  - histoire « Le miroir » 20h : 210 / 6 / 3,5 s / 1,2 % — Insta 139 / 3,8 s.
+- Seulement 1 vidéo sur 6 bloquée (contre 4 sur 6 le 22/11). 0 vidéo > 1 000 vues TikTok sur 7 jours (0/37).
+- Lecture : le format `sms` (conversation lue à l'écran) tient 3 fois plus longtemps que tout le reste (10 s contre 3-4 s),
+  sur TikTok comme sur Instagram. À refaire dès que le plan le permet (plan.py ne l'a pas encore noté : 1 seule vidéo).
+- Plan du jour (series/plans/2026-11-24.json) suivi : POV voiture (rouge, chiffre_heure), histoire « La lettre » (sepia,
+  question_directe), nouvelle série « Le Phare » p1 (bleu, sms_proche, The Endless). Babyphone terminé le 23/11.
+- Test du spectateur : POV 8/10, histoire 6/10 → corrigé (« te prévient », sms de la sœur simplifié, chute « la porte, c'était
+  pour t'occuper », question finale liée à la peur), Phare 8/10 → photo « du même numéro », silhouette qui crie ton surnom.
+- Voix Pocket, mal lus et changés : « Quatre heures dix » (lu « quatre à dix », 2 rendus) → « Quatre heures du matin ».
+- Voix Pocket, aussi : « Au bout du fil » (lu « au bout du film / du coup ») → « Tu décroches : juste le bruit des vagues ».
+  Rendus : POV 3 fois, histoire 1 fois, Phare 2 fois (≈ 5 min chacun).
+- Programmé (Zernio, TikTok + Instagram) : POV voiture 12h (18,7 s), histoire « La lettre » 17h (29,3 s), Le Phare p1 20h (33,3 s).
+- Essai 3D non refait (toujours en attente de l'avis de Fio).
+
+### 25/11 (3 vidéos : 12h sms, 17h règles, 20h Le Phare p2)
+
+- Comptes Zernio OK, les 3 posts du 24/11 publiés (TikTok + Instagram).
+- **Stats 24/11 (≈ 10-18 h de recul)** — TikTok vues / likes / temps moyen / complétion, puis Insta vues / temps moyen :
+  - POV voiture 12h : 198 / 6 / 4,0 s / 4,3 % (vidéo de 18,7 s) — Insta 166 / 6,4 s ;
+  - histoire « La lettre » 17h : 221 / 3 / 4,6 s / 2,9 % — Insta 119 / 3,8 s ;
+  - **Le Phare p1 20h : 224 / 4 / 2 commentaires / 1 abonné / 13,1 s / 4,3 %** — Insta 140 / 7,3 s (meilleur temps moyen
+    TikTok depuis le 29/10 : 39 % de la vidéo).
+- Aucune vidéo bloquée le 24/11 (3/3 diffusées, contre 1 bloquée sur 6 le 23/11 et 4 sur 6 le 22/11) : 3 vidéos/jour aide.
+  0 vidéo > 1 000 vues TikTok sur 7 jours (0/36).
+- Lecture : les deux meilleurs temps moyens sont maintenant `sms` (10,3 s, 23/11) et `serie` partie 1 avec un SMS d'un proche
+  au 1er plan (13,1 s). Point commun : un écran de téléphone qu'on lit dès la 1re seconde. Le plan refait `sms` à 12h.
+- Vote Le Phare p1 : 1 seul votant (« 1 ») → moins de 3 votes = tirage au sort : 2 (sortir rejoindre papa).
+- Plan du jour (series/plans/2026-11-25.json) suivi tel quel : sms (nb, bruit), règles (vhs, règle affichée, chez mamie),
+  Le Phare p2 (bleu, image impossible).
+- Test du spectateur : sms 7/10 → corrigé (raison du lit partagé : cauchemar), règles 6/10 → fin réécrite (la voix de la cave
+  était celle de mamie : « tu cours chez elle quand même ? oui ou non »), Phare p2 6/10 → rappel « photo prise du haut du phare »
+  juste avant le choix, double qui entre dans l'eau.
+- Voix Pocket, mal lus et changés : « Écris lit ou téléphone » (« une ligne ou téléphone » → « Écris un ou deux »), « Photo reçue »
+  (« Poto ») → « Elle t'envoie une photo », « vibre sous l'oreiller » (« vibre au sous ») → « vibre dans le noir », « Contre ton
+  oreille » (« contre ton héros ») et « une voix chuchote » (« une boîte ») → « Et dans ton lit, elle murmure », « Il crie »
+  (lu « Écris » 3/3) → « Ton père hurle », « chambre de mamie » en fin de phrase (« Mani », « Manu ») → « réveiller ta grand-mère ».
+  Nouveau : tester TOUTES les phrases seules (3 tirages) avant le 1er rendu a évité 2 rendus sur 3.
+- Volume : règles à -16,2 LUFS (check.py FAIL) → normalisé -14 LUFS (`loudness.py`), mis en ligne en regles-003b.
+- Rendus : sms 5 fois, règles 1 fois, Phare 2 fois (« Écris un ou deux » avalé au 1er).
+- Programmé (Zernio, TikTok + Instagram) : sms « Ma sœur » 12h (31,5 s), règles « Chez mamie » 17h (37,4 s), Le Phare p2 20h (34,4 s).
+- Essai 3D non refait (toujours en attente de l'avis de Fio). Voix : toujours estelle (Fio n'a pas encore choisi A ou B).

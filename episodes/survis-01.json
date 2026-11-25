@@ -1,0 +1,695 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°1",
+ "clock_start": 720,
+ "title": "SURVIS? N°1 · Ton petit frère sonne à minuit. Tu réponds ?",
+ "caption": "SURVIS? N°1. Lyon, minuit. Règle de la concierge : ne réponds jamais à l'interphone après minuit. Et toi, tu fais quoi? A ou B 👇 #survie #horreur #lyon #histoire",
+ "style": 2,
+ "beats": [
+  {
+   "text": "LYON, MINUIT DOUZE. L'INTERPHONE *SONNE*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "DANS TON IMMEUBLE, PERSONNE NE SONNE À CETTE HEURE.",
+   "scene": "porte",
+   "params": {
+    "seed": 2
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "SUR TA PORTE, IL Y A UN MOT DE LA CONCIERGE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "« NE RÉPONDEZ *JAMAIS* À L'INTERPHONE APRÈS MINUIT. »",
+   "scene": "notebook",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "L'INTERPHONE SONNE ENCORE. PLUS LONGTEMPS.",
+   "scene": "chambre",
+   "char": {
+    "pose": "stand",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "PUIS UNE VOIX SORT DU HAUT-PARLEUR.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.5,
+     0
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "« C'EST MOI, TON PETIT FRÈRE! J'AI FROID, OUVRE! »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     200,
+     60,
+     60
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "MAIS TON FRÈRE DORT CHEZ TES PARENTS, CE SOIR.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     150,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU RÉPONDS OU *PAS* ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "RÉPONDRE",
+    "b": "NE RIEN DIRE",
+    "countdown": 3
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "TU APPUIES SUR LE BOUTON. « J'ARRIVE! »",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "RÉPONDRE",
+    "b": "NE RIEN DIRE",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "EN BAS, LA PORTE DE L'IMMEUBLE S'OUVRE.",
+   "scene": "porte",
+   "params": {
+    "seed": 4
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "DES PAS MONTENT L'ESCALIER. TRÈS VITE.",
+   "scene": "escalier",
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "ILS S'ARRÊTENT JUSTE DEVANT TA PORTE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     90,
+     90,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "shake": 10,
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "TU ES *MORT*.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "text": "TU NE TOUCHES À RIEN. TU NE DIS RIEN.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "RÉPONDRE",
+    "b": "NE RIEN DIRE",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "DANS LE HAUT-PARLEUR, LA VOIX DE TON FRÈRE SE MET À RIRE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     200,
+     60,
+     60
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "text": "PUIS ELLE DIT TON PRÉNOM. TRÈS LENTEMENT.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "LE SILENCE REVIENT. TU RESPIRES ENFIN.",
+   "scene": "chambre",
+   "char": {
+    "pose": "sit",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "text": "MAIS QUELQU'UN FRAPPE À TA PORTE. TROIS COUPS.",
+   "scene": "porte",
+   "params": {
+    "seed": 6
+   },
+   "sfx": [
+    [
+     "knock",
+     0,
+     1.0
+    ]
+   ],
+   "shake": 6,
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "text": "IL EST DÉJÀ DANS L'IMMEUBLE.",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     0
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "text": "« C'EST MOI. OUVRE. J'AI SI FROID. »",
+   "scene": "flou",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     200,
+     60,
+     60
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "text": "TU REGARDES PAR LE JUDAS, OU TU APPELLES TON FRÈRE ?",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "LE JUDAS",
+    "b": "APPELER TON FRÈRE"
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "dur": 2.8,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "A OU B? DIS-LE EN *COMMENTAIRE*.",
+   "scene": "flou",
+   "text_y": 0.2,
+   "choice": {
+    "a": "LE JUDAS",
+    "b": "APPELER TON FRÈRE"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "text": "ABONNE-TOI POUR LE *N°2*.",
+   "scene": "fenetre",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "voice": "ABONNE-TOI POUR LE NUMÉRO DEUX.",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  }
+ ]
+}

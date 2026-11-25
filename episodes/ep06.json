@@ -1,0 +1,601 @@
+{
+ "series": "APRÈS LA FIN",
+ "day": 5,
+ "subtitle": "PARTIE 6 · RÈGLE N°6",
+ "clock_start": 81000,
+ "title": "Partie 6 · Une lumière verte te montre de la nourriture. Tu la suis ?",
+ "caption": "Partie 6 d'Après la fin. Une lumière verte flotte dans la rue et mène à un magasin plein... trop facile ? A ou B 👇 #histoire #apocalypse #survie #horreur #pourtoi",
+ "beats": [
+  {
+   "scene": "hide",
+   "dur": 2.3,
+   "text": "CEUX QUI ONT DIT *B* AVAIENT RAISON.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "closed",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "door",
+   "dur": 2.4,
+   "text": "IL VOULAIT JUSTE QUE TU *PARLES*.",
+   "text_y": 0.86,
+   "zoom": 1.1
+  },
+  {
+   "scene": "door",
+   "dur": 2.2,
+   "text": "TU N'AS RIEN DIT. IL EST *PARTI*.",
+   "text_y": 0.86
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.4,
+   "text": "MAIS IL T'A LAISSÉ *FAIM*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.4,
+   "text": "PLUS QU'*UNE* BOÎTE DE CONSERVE.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "radio",
+   "dur": 2.2,
+   "text": "LA RADIO GRÉSILLE.",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "radio",
+   "dur": 2.6,
+   "text": "« LA NUIT, ELLES *BRILLENT*. »",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.6
+    ]
+   ],
+   "zoom": 1.12
+  },
+  {
+   "scene": "dark",
+   "dur": 1.6,
+   "text": "RÈGLE N°6 :",
+   "text_y": 0.5,
+   "text_size": 150,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.1,
+   "text": "NE SUIS *JAMAIS*",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     90,
+     90,
+     90
+    ]
+   }
+  },
+  {
+   "scene": "dark",
+   "dur": 2.6,
+   "text": "UNE LUMIÈRE *VERTE*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     90,
+     90,
+     90
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "MINUIT. TU SORS EN *SILENCE*.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   }
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "ET AU BOUT DE LA RUE...",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit",
+    "orb": [
+     0.7,
+     0.55
+    ]
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "flash_in": true,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "UNE PETITE LUMIÈRE *VERTE*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit",
+    "orb": [
+     0.7,
+     0.55
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.15
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "ELLE FLOTTE VERS LE *MAGASIN*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit",
+    "orb": [
+     0.62,
+     0.6
+    ]
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   }
+  },
+  {
+   "scene": "city",
+   "dur": 2.8,
+   "text": "LA VITRINE EST *PLEINE* DE NOURRITURE.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit",
+    "orb": [
+     0.62,
+     0.6
+    ]
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.12
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "L'AUTRE CHEMIN EST *TOUT NOIR*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.0,
+   "text": "TU FAIS QUOI ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "SUIVRE LA LUMIÈRE",
+    "b": "LE CHEMIN SOMBRE",
+    "countdown": 3
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ],
+    [
+     "heart",
+     1,
+     1.0
+    ],
+    [
+     "heart",
+     2,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "SUIVRE LA LUMIÈRE",
+    "b": "LE CHEMIN SOMBRE",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.4,
+   "text": "TU SUIS LA LUMIÈRE...",
+   "text_y": 0.3,
+   "params": {
+    "sky": "vert",
+    "orb": [
+     0.5,
+     0.5
+    ]
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.35,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.2,
+   "record": "bad"
+  },
+  {
+   "scene": "city",
+   "dur": 2.2,
+   "text": "LA VITRINE EST *VIDE*. ELLE T'ATTENDAIT.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "vert",
+    "figure": [
+     0.62,
+     1.6
+    ]
+   },
+   "shake": 12,
+   "sfx": [
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ],
+   "record": "bad"
+  },
+  {
+   "scene": "dark",
+   "dur": 2.2,
+   "text": "*MAUVAIS CHOIX*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     255,
+     40,
+     40
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "scale": 0.7,
+    "y": 0.98
+   },
+   "flash_in": true,
+   "glitch": 0.4,
+   "glitch_end": true,
+   "sfx": [
+    [
+     "glitch",
+     0,
+     1.0
+    ],
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "bad"
+  },
+  {
+   "type": "rewind",
+   "of": "bad",
+   "dur": 1.5,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "SUIVRE LA LUMIÈRE",
+    "b": "LE CHEMIN SOMBRE",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "TU PRENDS LE CHEMIN *SOMBRE*.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "closed",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "city",
+   "dur": 2.4,
+   "text": "DERRIÈRE TOI, LA LUMIÈRE *S'ÉTEINT*.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "nuit",
+    "orb": [
+     0.85,
+     0.62
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "UNE VIEILLE *PHARMACIE*. LA PORTE EST OUVERTE.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.6,
+   "text": "DES CONSERVES. DE L'EAU. *ENFIN*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "dark": 0.3
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.2,
+   "text": "TU REMPLIS TON SAC. *VITE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "dark": 0.3
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "notebook",
+   "dur": 2.6,
+   "text": "ET SUR LE COMPTOIR... UN *CARNET*.",
+   "text_y": 0.28,
+   "text_size": 120,
+   "zoom": 1.1
+  },
+  {
+   "scene": "notebook",
+   "dur": 2.6,
+   "text": "TU L'OUVRES.",
+   "text_y": 0.28,
+   "text_size": 120,
+   "zoom": 1.18
+  },
+  {
+   "scene": "notebook",
+   "dur": 2.9,
+   "text": "C'EST *TON* ÉCRITURE.",
+   "text_y": 0.28,
+   "text_size": 120,
+   "params": {
+    "red": true
+   },
+   "zoom": 1.28,
+   "flash_in": true,
+   "glitch": 0.2,
+   "sfx": [
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.4,
+   "text": "TU N'ES *JAMAIS* VENU ICI.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit",
+    "dark": 0.3
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9,
+    "tremble": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.6,
+   "text": "LE CARNET ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "LE LIRE",
+    "b": "LE BRÛLER"
+   },
+   "voice": "Ce carnet, tu ne l'as jamais écrit. Tu le lis, ou tu le brûles ?",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.3,
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "text_y": 0.5,
+   "text_size": 120
+  },
+  {
+   "scene": "dark",
+   "dur": 3.0,
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "text_y": 0.5
+  }
+ ]
+}

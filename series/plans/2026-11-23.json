@@ -1,0 +1,142 @@
+{
+ "jour": "2026-11-23",
+ "creneaux": [
+  {
+   "heure": "08:00",
+   "format": "edit",
+   "moteur": "edit",
+   "consigne": "Edit GTA 6, thème jamais traité (§ 1 ter).",
+   "raison": "créneau fixe (demande de Fio)"
+  },
+  {
+   "heure": "09:00",
+   "format": "edit",
+   "moteur": "edit",
+   "consigne": "Edit GTA 6, thème jamais traité (§ 1 ter).",
+   "raison": "créneau fixe (demande de Fio)"
+  },
+  {
+   "heure": "10:00",
+   "format": "serie",
+   "moteur": "nuit",
+   "series": "le-babyphone",
+   "prefix": "baby",
+   "partie": 3,
+   "derniere": true,
+   "ambiance": "nuit",
+   "accroche": "appel_inconnu",
+   "raison": "série gardée (score 0.35), partie 3/3"
+  },
+  {
+   "heure": "12:00",
+   "format": "sms",
+   "moteur": "nuit",
+   "ambiance": "nb",
+   "accroche": "bruit",
+   "duree": [
+    25,
+    40
+   ],
+   "raison": "NOUVEAUTÉ à tester (pas encore assez de stats)"
+  },
+  {
+   "heure": "18:00",
+   "format": "regles",
+   "moteur": "nuit",
+   "ambiance": "vert",
+   "accroche": "regle_affichee",
+   "duree": [
+    30,
+    42
+   ],
+   "raison": "NOUVEAUTÉ à tester (pas encore assez de stats)"
+  },
+  {
+   "heure": "20:00",
+   "format": "histoire",
+   "moteur": "nuit",
+   "ambiance": "vhs",
+   "accroche": "image_impossible",
+   "duree": [
+    25,
+    32
+   ],
+   "raison": "rotation"
+  }
+ ],
+ "series_arretees": [],
+ "coupes": {},
+ "scores_formats": {
+  "ancien": {
+   "score": 0.504,
+   "videos": 8
+  },
+  "serie": {
+   "score": 0.488,
+   "videos": 20
+  },
+  "gta-dessin": {
+   "score": 0.363,
+   "videos": 2
+  },
+  "edit": {
+   "score": 0.531,
+   "videos": 4
+  }
+ },
+ "scores_ambiances": {
+  "nuit": {
+   "score": 0.476,
+   "videos": 22
+  }
+ },
+ "scores_accroches": {},
+ "meilleures_7j": [
+  {
+   "fichier": "episodes/station-03.json",
+   "score": 0.738,
+   "follows": 0,
+   "vues": 470,
+   "retention": 0.203
+  },
+  {
+   "fichier": "episodes/photo-03.json",
+   "score": 0.73,
+   "follows": 0,
+   "vues": 468,
+   "retention": 0.21
+  },
+  {
+   "fichier": "episodes/gta6-edit-02.json",
+   "score": 0.728,
+   "follows": 1,
+   "vues": 388,
+   "retention": 0.351
+  },
+  {
+   "fichier": "episodes/coupure-01.json",
+   "score": 0.676,
+   "follows": 0,
+   "vues": 410,
+   "retention": 0.195
+  },
+  {
+   "fichier": "episodes/tunnel-03.json",
+   "score": 0.634,
+   "follows": 1,
+   "vues": 384,
+   "retention": 0.185
+  }
+ ],
+ "objectif_1000_vues_7j": "0 vidéo(s) sur 35 ont passé 1 000 vues TikTok",
+ "bloquees_7j": [
+  "episodes/coupure-02.json",
+  "episodes/ferry-02.json",
+  "episodes/voisin-01.json",
+  "episodes/camping-01.json",
+  "episodes/gta6-edit-06.json",
+  "episodes/baby-02.json",
+  "episodes/regles-001.json",
+  "episodes/pov-001.json"
+ ]
+}

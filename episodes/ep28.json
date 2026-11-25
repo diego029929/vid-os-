@@ -1,0 +1,788 @@
+{
+ "series": "LE REFUGE",
+ "day": 1,
+ "subtitle": "PARTIE 1",
+ "clock_start": 79200,
+ "style": 2,
+ "counter_label": "COUPS À LA PORTE",
+ "counter_start": 0,
+ "mood": "bleu",
+ "title": "Partie 1 · Dans ce refuge, le livre d'or écrit ce qui va t'arriver",
+ "caption": "Le feu s'éteint et dehors, une chose a ta voix. Tu sors chercher du bois (A) ou tu brûles le livre (B) ? Le plus de votes décide la partie 2 👇 #horreur #histoire #vosges #refuge",
+ "beats": [
+  {
+   "scene": "ref_livre",
+   "text": "DANS CE REFUGE, LE LIVRE D'OR ÉCRIT CE QUI VA T'*ARRIVER*.",
+   "params": {
+    "lines": [
+     "22 H : TU LIS CETTE PAGE."
+    ],
+    "new": true,
+    "date": "10 NOVEMBRE"
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "ref_sentier",
+   "text": "EN FORÊT, DANS LES VOSGES, TU MARCHES AVEC NORA, TON AMIE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "marque": true
+   },
+   "meteo": "neige",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "ref_sentier",
+   "text": "LE BROUILLARD TOMBE. VOUS PERDEZ LE SENTIER.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     70,
+     170,
+     90
+    ],
+    "expr": "side"
+   },
+   "meteo": "neige",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "ref_refuge",
+   "text": "AU BORD D'UN LAC, ENTRE LES SAPINS, UN REFUGE EN BOIS.",
+   "params": {
+    "neige": true
+   },
+   "meteo": "neige",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "DEDANS, PERSONNE. MAIS LE POÊLE EST ENCORE *CHAUD*.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "side"
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "PAR TERRE, UN SAC À DOS ROUGE. MAIS PERSONNE AVEC.",
+   "params": {
+    "sac": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "ref_livre",
+   "text": "SUR LA TABLE, LE LIVRE D'OR. LA DERNIÈRE PAGE DONNE DEUX RÈGLES.",
+   "params": {
+    "lines": [
+     "RÈGLE 1 : N'OUVRE PAS.",
+     "RÈGLE 2 : GARDE LE FEU."
+    ],
+    "new": false,
+    "date": "10 NOVEMBRE"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "RÈGLE NUMÉRO UN : SI ON FRAPPE APRÈS MINUIT, N'OUVRE *PAS*.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "side"
+   },
+   "rule": {
+    "n": 1,
+    "text": "SI ON FRAPPE APRÈS MINUIT, N'OUVRE PAS."
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "RÈGLE NUMÉRO DEUX : GARDE LE POÊLE ALLUMÉ, SINON LA CHOSE *ENTRE*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 2,
+    "text": "GARDE LE FEU, SINON LA CHOSE ENTRE."
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "ref_livre",
+   "text": "UNE LIGNE S'ÉCRIT TOUTE SEULE : « ONZE HEURES : NORA *RIGOLE*. »",
+   "params": {
+    "lines": [
+     "RÈGLE 2 : GARDE LE FEU.",
+     "23 H : NORA RIGOLE."
+    ],
+    "new": true,
+    "date": "10 NOVEMBRE"
+   },
+   "shake": 2,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "PILE À ONZE HEURES, NORA RIGOLE : « C'EST UNE BLAGUE. »",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     70,
+     170,
+     90
+    ],
+    "expr": "normal"
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "ref_livre",
+   "text": "UNE AUTRE LIGNE S'ÉCRIT : « LE BOIS VA *MANQUER*. »",
+   "params": {
+    "lines": [
+     "23 H : NORA RIGOLE.",
+     "23 H 20 : LE BOIS MANQUE."
+    ],
+    "new": true,
+    "date": "10 NOVEMBRE"
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "LE FEU DU POÊLE BAISSE. IL RESTE DEUX BÛCHES.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     70,
+     170,
+     90
+    ],
+    "expr": "scared"
+   },
+   "mood": "rouge",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "ref_refuge",
+   "text": "LE TAS DE BOIS EST DEHORS, CONTRE LE MUR.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     70,
+     170,
+     90
+    ]
+   },
+   "params": {
+    "neige": true
+   },
+   "meteo": "neige",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "ref_veilleur",
+   "text": "NORA VA EN CHERCHER. AU BORD DU LAC, QUELQUE CHOSE EST DEBOUT.",
+   "params": {
+    "size": 0.9
+   },
+   "meteo": "neige",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "ref_veilleur",
+   "text": "UNE SILHOUETTE IMMENSE, AVEC DES BOIS DE CERF SUR LA TÊTE.",
+   "params": {
+    "close": true
+   },
+   "shake": 3,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "TU CRIES : « NORA, *RENTRE* ! »",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "ref_refuge",
+   "text": "NORA REVIENT EN COURANT, SANS LE BOIS. TU FERMES LA PORTE.",
+   "params": {
+    "neige": true,
+    "traces": true
+   },
+   "meteo": "neige",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "SUR TON TÉLÉPHONE : MINUIT PILE.",
+   "params": {
+    "mode": "lock",
+    "time": "00:00",
+    "date": "mardi 10 novembre",
+    "sleeve": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "TOC. TOC. TOC. QUELQU'UN FRAPPE À LA PORTE.",
+   "voice": "TROIS COUPS. QUELQU'UN FRAPPE À LA PORTE.",
+   "count": 1,
+   "shake": 4,
+   "sfx": [
+    [
+     "knock",
+     0,
+     0.9
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "UNE VOIX DEHORS : « NORA, C'EST MOI. *OUVRE*. »",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     70,
+     170,
+     90
+    ],
+    "expr": "wide"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "C'EST TA VOIX. MAIS TOI, TU ES DEDANS.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide"
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "LA VOIX FRAPPE ENCORE : « VITE, J'AI *FROID* ! »",
+   "count": 2,
+   "shake": 4,
+   "sfx": [
+    [
+     "knock",
+     0,
+     0.9
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "RÈGLE NUMÉRO UN : APRÈS MINUIT, ON N'OUVRE PAS. VOUS N'OUVREZ PAS.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     70,
+     170,
+     90
+    ],
+    "expr": "scared"
+   },
+   "rule": {
+    "n": 1,
+    "text": "SI ON FRAPPE APRÈS MINUIT, N'OUVRE PAS."
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "À LA FENÊTRE, UN VISAGE PÂLE. C'EST LE *TIEN*.",
+   "params": {
+    "visage": true
+   },
+   "count": 3,
+   "shake": 3,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "LE FEU S'ÉTEINT. IL NE RESTE QU'UNE BRAISE. LA CHOSE VA ENTRER.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 2,
+    "text": "GARDE LE FEU, SINON LA CHOSE ENTRE."
+   },
+   "mood": "noir",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "ref_livre",
+   "text": "LE LIVRE ÉCRIT : « MINUIT DIX : L'UN DE VOUS VA *SORTIR*. »",
+   "params": {
+    "lines": [
+     "23 H 20 : LE BOIS MANQUE.",
+     "0 H 10 : L'UN DE VOUS SORT."
+    ],
+    "new": true,
+    "date": "10 NOVEMBRE"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "NORA : « ET SI ON JETAIT CE LIVRE MAUDIT SUR LA BRAISE ? ÇA ARRÊTERAIT PEUT-ÊTRE TOUT. »",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     70,
+     170,
+     90
+    ],
+    "expr": "side"
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "ref_refuge",
+   "text": "LES COUPS ONT CESSÉ. MAIS DEHORS, LA CHOSE QUI A TA VOIX T'ATTEND.",
+   "params": {
+    "neige": true,
+    "dark": true,
+    "veilleur": true
+   },
+   "meteo": "neige",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "ref_livre",
+   "text": "SI TU LE BRÛLES, PLUS AUCUNE LIGNE NE TE PRÉVIENDRA DE RIEN.",
+   "params": {
+    "lines": [
+     "0 H 10 : L'UN DE VOUS SORT."
+    ],
+    "new": true,
+    "date": "10 NOVEMBRE"
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "A : TU SORS CHERCHER DU BOIS. B : TU BRÛLES LE LIVRE.",
+   "choice": {
+    "a": "SORTIR",
+    "b": "BRÛLER LE LIVRE"
+   },
+   "text_y": 0.2,
+   "dur": 3.8,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "ref_dortoir",
+   "text": "LE PLUS DE VOTES DÉCIDE LA PARTIE 2. ÉCRIS A OU B EN *COMMENTAIRE*.",
+   "voice": "LE PLUS DE VOTES DÉCIDE LA PARTIE DEUX. ÉCRIS TON CHOIX EN COMMENTAIRE.",
+   "choice": {
+    "a": "SORTIR",
+    "b": "BRÛLER LE LIVRE",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.6,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "ref_veilleur",
+   "text": "ABONNE-TOI POUR NE PAS RATER LA *PARTIE 2*.",
+   "voice": "ABONNE-TOI POUR NE PAS RATER LA PARTIE DEUX.",
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  }
+ ]
+}

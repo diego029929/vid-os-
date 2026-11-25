@@ -1,0 +1,636 @@
+{
+ "series": "APRÈS LA FIN",
+ "day": 5,
+ "subtitle": "PARTIE 5 · RÈGLE N°5",
+ "clock_start": 66600,
+ "title": "Partie 5 · Un survivant frappe à ta porte. Tu lui ouvres ?",
+ "caption": "Partie 5 d'Après la fin. Un inconnu frappe : il a faim, il a froid... mais regarde bien ses yeux. Tu ouvres ou pas ? A ou B 👇 #histoire #apocalypse #survie #creepy #pourtoi",
+ "beats": [
+  {
+   "scene": "hide",
+   "dur": 2.3,
+   "text": "CEUX QUI ONT DIT *B* ONT SURVÉCU.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "closed",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.6,
+   "text": "MAIS CE SOIR, TU VAS DEVOIR *CHOISIR*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     90,
+     90,
+     90
+    ]
+   }
+  },
+  {
+   "scene": "door",
+   "dur": 2.4,
+   "text": "OUVRIR À UN INCONNU... OU PAS ?",
+   "text_y": 0.86,
+   "zoom": 1.12,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.2,
+   "text": "TU AS ATTENDU *DES HEURES*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.2,
+   "text": "AU MATIN, ELLE ÉTAIT *PARTIE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "radio",
+   "dur": 2.2,
+   "text": "LA RADIO SE RALLUME.",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "radio",
+   "dur": 2.6,
+   "text": "« ATTENTION AUX *SURVIVANTS*. »",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.6
+    ]
+   ],
+   "zoom": 1.12
+  },
+  {
+   "scene": "dark",
+   "dur": 1.6,
+   "text": "RÈGLE N°5 :",
+   "text_y": 0.5,
+   "text_size": 150,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.1,
+   "text": "UN SURVIVANT QUI *NE CLIGNE PAS*",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     90,
+     90,
+     90
+    ]
+   }
+  },
+  {
+   "scene": "dark",
+   "dur": 2.6,
+   "text": "DES YEUX N'EN EST *PAS UN*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     90,
+     90,
+     90
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.4,
+   "text": "LE SOIR TOMBE. JOUR *5*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "door",
+   "dur": 1.8,
+   "text": "TOC. TOC. TOC.",
+   "text_y": 0.86,
+   "voice": "",
+   "sfx": [
+    [
+     "knock",
+     0,
+     1.0
+    ]
+   ],
+   "zoom": 1.1
+  },
+  {
+   "scene": "door",
+   "dur": 2.6,
+   "text": "« IL Y A QUELQU'UN ? J'AI *FAIM*... »",
+   "text_y": 0.86
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "UN HOMME. SEUL. SWEAT *VERT*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit"
+   },
+   "char2": {
+    "expr": "normal",
+    "x": 0.62,
+    "scale": 0.85,
+    "y": 0.97,
+    "hoodie": [
+     70,
+     110,
+     80
+    ]
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "city",
+   "dur": 2.4,
+   "text": "IL TIENT À PEINE *DEBOUT*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit"
+   },
+   "char2": {
+    "expr": "normal",
+    "x": 0.62,
+    "scale": 0.85,
+    "y": 0.97,
+    "hoodie": [
+     70,
+     110,
+     80
+    ]
+   }
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "« JE T'EN SUPPLIE. IL FAIT *FROID*. »",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit"
+   },
+   "char2": {
+    "expr": "normal",
+    "x": 0.62,
+    "scale": 0.85,
+    "y": 0.97,
+    "hoodie": [
+     70,
+     110,
+     80
+    ]
+   },
+   "zoom": 1.15
+  },
+  {
+   "scene": "dark",
+   "dur": 3.0,
+   "text": "TU FAIS QUOI ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "LE LAISSER ENTRER",
+    "b": "REGARDER SES YEUX",
+    "countdown": 3
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ],
+    [
+     "heart",
+     1,
+     1.0
+    ],
+    [
+     "heart",
+     2,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "LE LAISSER ENTRER",
+    "b": "REGARDER SES YEUX",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.4,
+   "text": "TU OUVRES. IL ENTRE.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "char2": {
+    "expr": "stare",
+    "x": 0.7,
+    "scale": 0.8,
+    "y": 0.9,
+    "hoodie": [
+     70,
+     110,
+     80
+    ]
+   },
+   "record": "bad"
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.2,
+   "text": "IL TE *FIXE*. SANS CLIGNER.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9,
+    "tremble": true
+   },
+   "char2": {
+    "expr": "stare",
+    "x": 0.6,
+    "scale": 0.85,
+    "y": 0.92,
+    "hoodie": [
+     70,
+     110,
+     80
+    ]
+   },
+   "zoom": 1.2,
+   "shake": 10,
+   "sfx": [
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ],
+   "record": "bad"
+  },
+  {
+   "scene": "dark",
+   "dur": 2.2,
+   "text": "*MAUVAIS CHOIX*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     255,
+     40,
+     40
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "scale": 0.7,
+    "y": 0.98
+   },
+   "flash_in": true,
+   "glitch": 0.4,
+   "glitch_end": true,
+   "sfx": [
+    [
+     "glitch",
+     0,
+     1.0
+    ],
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "bad"
+  },
+  {
+   "type": "rewind",
+   "of": "bad",
+   "dur": 1.5,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "LE LAISSER ENTRER",
+    "b": "REGARDER SES YEUX",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "TU REGARDES PAR LA *FENTE*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit"
+   },
+   "char2": {
+    "expr": "stare",
+    "x": 0.5,
+    "scale": 1.1,
+    "y": 1.0,
+    "hoodie": [
+     70,
+     110,
+     80
+    ]
+   },
+   "zoom": 1.2
+  },
+  {
+   "scene": "city",
+   "dur": 2.4,
+   "text": "TU COMPTES. 5... 10... 15...",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit"
+   },
+   "char2": {
+    "expr": "stare",
+    "x": 0.5,
+    "scale": 1.1,
+    "y": 1.0,
+    "hoodie": [
+     70,
+     110,
+     80
+    ]
+   },
+   "zoom": 1.3,
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.6,
+   "text": "IL N'A *PAS CLIGNÉ* UNE SEULE FOIS.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "nuit"
+   },
+   "char2": {
+    "expr": "stare",
+    "x": 0.5,
+    "scale": 1.2,
+    "y": 1.02,
+    "hoodie": [
+     70,
+     110,
+     80
+    ]
+   },
+   "zoom": 1.4,
+   "glitch": 0.15,
+   "sfx": [
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "hide",
+   "dur": 2.4,
+   "text": "TU NE BOUGES *PLUS*.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "closed",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "hide",
+   "dur": 2.4,
+   "text": "TU RETIENS TA *RESPIRATION*.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "closed",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   }
+  },
+  {
+   "scene": "door",
+   "dur": 2.4,
+   "text": "IL ATTEND. LONGTEMPS.",
+   "text_y": 0.86
+  },
+  {
+   "scene": "door",
+   "dur": 2.4,
+   "text": "SON OMBRE NE BOUGE *PAS*.",
+   "text_y": 0.86,
+   "zoom": 1.1
+  },
+  {
+   "scene": "door",
+   "dur": 2.4,
+   "text": "PUIS IL *CHUCHOTE*...",
+   "text_y": 0.86,
+   "zoom": 1.15
+  },
+  {
+   "scene": "dark",
+   "dur": 2.9,
+   "text": "« LÉA TE DIT *BONJOUR*. »",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     255,
+     40,
+     40
+    ]
+   },
+   "flash_in": true,
+   "glitch": 0.2,
+   "sfx": [
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.6,
+   "text": "LÉA. LE PRÉNOM DE *TA SŒUR*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "nuit"
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9,
+    "tremble": true
+   },
+   "zoom": 1.15,
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.6,
+   "text": "TU LUI PARLES ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "DEMANDER OÙ EST LÉA",
+    "b": "NE RIEN DIRE"
+   },
+   "voice": "Il connaît ta sœur. Tu lui demandes où elle est, ou tu ne dis rien ?",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.3,
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "text_y": 0.5,
+   "text_size": 120
+  },
+  {
+   "scene": "dark",
+   "dur": 3.0,
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "text_y": 0.5
+  }
+ ]
+}

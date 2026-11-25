@@ -1,0 +1,13 @@
+{
+  "type": "intrus",
+  "title": "Défi · Trouve le chat caché (3 niveaux)",
+  "caption": "Trouve le chat caché en 5 secondes 🐱 Le niveau 3 est vraiment dur… Écris ton score 👇 #trouvelintrus #defi #jeu #casse-tete #quiz",
+  "hook": "TROUVE LE CHAT",
+  "voice_hook": "Trouve le chat caché. Trois niveaux. Le dernier est vraiment dur.",
+  "levels": [
+    {"crowd": "🐶", "target": "🐱", "cols": 6, "rows": 7, "seconds": 5},
+    {"crowd": "🦁", "target": "🐱", "cols": 8, "rows": 10, "seconds": 5},
+    {"crowd": "😺", "target": "🐱", "cols": 9, "rows": 11, "seconds": 6}
+  ],
+  "end": "T'AS TROUVÉ LES 3 ?"
+}

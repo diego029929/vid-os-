@@ -1,0 +1,619 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°10",
+ "clock_start": 0,
+ "title": "SURVIS ? N°10 · « Ne te retourne pas, je suis derrière toi. » Tu te retournes ?",
+ "caption": "Un message : « Ne te retourne pas, je suis derrière toi. » Tu te retournes ? 👇 (N°9 : il fallait laisser sonner.) SURVIS ? N°10 #survie #horreur #toulouse #histoire",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "telephone",
+   "text": "UN NUMÉRO INCONNU : « NE TE *RETOURNE* PAS. »",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "mode": "chat",
+    "contact": "Inconnu",
+    "sleeve": [
+     235,
+     120,
+     35
+    ],
+    "messages": [
+     [
+      "lui",
+      "Ne te retourne pas."
+     ]
+    ]
+   },
+   "shake": 2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "metro",
+   "text": "TOULOUSE, MINUIT. TU ES SEUL SUR LE QUAI.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "text": "CAPITOLE",
+    "tunnel": false
+   }
+  },
+  {
+   "scene": "metro",
+   "text": "DERRIÈRE TOI, QUELQU'UN *RESPIRE*.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "params": {
+    "text": "CAPITOLE",
+    "tunnel": false
+   }
+  },
+  {
+   "scene": "papier",
+   "text": "SUR LE MUR, UNE AFFICHE : « APRÈS MINUIT, NE MONTE JAMAIS DANS UN MÉTRO *VIDE*. »",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   },
+   "params": {
+    "wall": "carrelage",
+    "title": "AVIS",
+    "lines": [
+     "APRÈS MINUIT,",
+     "NE MONTE JAMAIS",
+     "DANS UN MÉTRO VIDE."
+    ]
+   }
+  },
+  {
+   "scene": "metro_arrive",
+   "text": "UN MÉTRO ARRIVE. IL EST *VIDE*.",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   },
+   "params": {
+    "station": "CAPITOLE"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "telephone",
+   "text": "NOUVEAU MESSAGE : « MONTE *DEDANS*. »",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   },
+   "params": {
+    "mode": "chat",
+    "contact": "Inconnu",
+    "sleeve": [
+     235,
+     120,
+     35
+    ],
+    "messages": [
+     [
+      "lui",
+      "Ne te retourne pas."
+     ],
+     [
+      "lui",
+      "Monte dans le métro."
+     ]
+    ]
+   }
+  },
+  {
+   "scene": "metro",
+   "text": "LE SOUFFLE SE RAPPROCHE DE TON *COU*.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "text": "CAPITOLE",
+    "tunnel": false
+   },
+   "shake": 3
+  },
+  {
+   "scene": "metro_arrive",
+   "text": "TU TE RETOURNES, OU TU MONTES DANS LE MÉTRO *VIDE* ?",
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "MONTER"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "doors": true,
+    "dark": true
+   },
+   "dur": 2.8
+  },
+  {
+   "scene": "metro_arrive",
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "MONTER",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "doors": true,
+    "dark": true
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "rame",
+   "text": "TU MONTES DANS LE MÉTRO.",
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "MONTER",
+    "picked": "B"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1"
+  },
+  {
+   "scene": "rame",
+   "text": "LES LUMIÈRES S'ÉTEIGNENT.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "wide",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "record": "r1"
+  },
+  {
+   "scene": "rame",
+   "text": "DES MAINS NOIRES SE POSENT SUR LES *VITRES*.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "params": {
+    "dark": true,
+    "hands": true,
+    "red": true
+   },
+   "shake": 5,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1"
+  },
+  {
+   "scene": "rame",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ],
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "metro",
+   "text": "TU TE RETOURNES D'UN COUP.",
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "MONTER",
+    "picked": "A"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "text": "CAPITOLE",
+    "tunnel": false
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "metro",
+   "text": "UN AGENT DU MÉTRO, À BOUT DE SOUFFLE.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "wide",
+    "hoodie": [
+     210,
+     200,
+     40
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   },
+   "params": {
+    "text": "CAPITOLE",
+    "tunnel": false
+   }
+  },
+  {
+   "scene": "metro",
+   "text": "L'AGENT : « CEUX QUI MONTENT NE REVIENNENT *JAMAIS*. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     210,
+     200,
+     40
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   },
+   "params": {
+    "text": "CAPITOLE",
+    "tunnel": false
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "LE NUMÉRO INCONNU : « DEMAIN, LE MÉTRO SERA VIDE. »",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   },
+   "params": {
+    "mode": "chat",
+    "contact": "Inconnu",
+    "sleeve": [
+     235,
+     120,
+     35
+    ],
+    "messages": [
+     [
+      "lui",
+      "Dommage."
+     ],
+     [
+      "lui",
+      "Demain soir,"
+     ],
+     [
+      "lui",
+      "le dernier métro"
+     ],
+     [
+      "lui",
+      "sera vide."
+     ]
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "« ET À PIED, JE T'ATTENDS DANS TA *RUE*. »",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   },
+   "params": {
+    "mode": "chat",
+    "contact": "Inconnu",
+    "sleeve": [
+     235,
+     120,
+     35
+    ],
+    "messages": [
+     [
+      "lui",
+      "Demain soir,"
+     ],
+     [
+      "lui",
+      "le dernier métro"
+     ],
+     [
+      "lui",
+      "sera vide."
+     ],
+     [
+      "lui",
+      "Et à pied,"
+     ],
+     [
+      "lui",
+      "je t'attends dans ta rue."
+     ]
+    ],
+    "crack": true
+   }
+  },
+  {
+   "scene": "metro",
+   "text": "DEMAIN, TU PRENDS LE MÉTRO VIDE, OU TU RENTRES À *PIED* ?",
+   "choice": {
+    "a": "MONTER",
+    "b": "RENTRER À PIED"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true,
+    "text": "CAPITOLE",
+    "tunnel": false
+   },
+   "dur": 2.8
+  },
+  {
+   "scene": "metro",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LE *N°11*.",
+   "choice": {
+    "a": "MONTER",
+    "b": "RENTRER À PIED"
+   },
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "params": {
+    "dark": true,
+    "text": "CAPITOLE",
+    "tunnel": false
+   },
+   "dur": 3.2
+  },
+  {
+   "scene": "toit",
+   "text": "ABONNE-TOI POUR LE N° *SUIVANT*.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   },
+   "voice": "ABONNE-TOI POUR LA PROCHAINE VIDÉO."
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "style": "nuit",
+ "format": "serie",
+ "ambiance": "bleu",
+ "accroche": "sms_proche",
+ "series": "LE PHARE",
+ "etiquette": "PARTIE 1",
+ "heure": "23:59:48",
+ "title": "Partie 1 · Ton père disparu en mer t'écrit : ne regarde pas la mer",
+ "caption": "Les volets (1) ou la plage (2) ? 🌊 Le plus de votes décide la partie 2\n#fyp #pourtoi #foryou #horreur #peur #phare #bretagne #mer #histoiredhorreur",
+ "vote": "Le plus de votes décide la partie 2",
+ "texte_accroche": "Mon père a disparu en mer… il m'écrit ce soir 🌊",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "lieux": {
+  "mer": "LE PHARE",
+  "salon": "MAISON DU PHARE",
+  "chambre": "TA CHAMBRE"
+ },
+ "beats": [
+  {
+   "voice": "Message de ton père : ce soir, ne regarde surtout pas la *mer*.",
+   "tel": {
+    "type": "sms",
+    "de": "Papa",
+    "lignes": [
+     "Ce soir, ne regarde",
+     "surtout pas la mer."
+    ]
+   }
+  },
+  {
+   "voice": "Ton père a disparu en mer l'hiver dernier, près de son phare.",
+   "vue": "mer",
+   "hero": "dos",
+   "neige": true
+  },
+  {
+   "voice": "Cette nuit, tu dors seul dans sa maison.",
+   "vue": "salon",
+   "hero": "debout"
+  },
+  {
+   "voice": "Sur la porte, il a écrit : quand le phare s'allume, ferme les volets.",
+   "regle": {
+    "n": 1,
+    "txt": "Quand le phare s'allume,\nferme les volets"
+   }
+  },
+  {
+   "voice": "À minuit, le vieux phare s'allume. Il est éteint depuis un an.",
+   "vue": "mer",
+   "hero": "absent",
+   "flicker": true,
+   "neige": true,
+   "sfx": "boom"
+  },
+  {
+   "voice": "Ton téléphone sonne. C'est le numéro de ton père.",
+   "tel": {
+    "type": "appel",
+    "nom": "Papa",
+    "num": "06 12 48 90 33"
+   }
+  },
+  {
+   "voice": "Tu décroches : juste le bruit des *vagues*.",
+   "vue": "chambre",
+   "hero": "peur",
+   "cadre": "gros",
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Sur la plage, quelqu'un avance vers la maison, dans le noir.",
+   "vue": "mer",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.4
+   },
+   "neige": true
+  },
+  {
+   "voice": "Puis une photo arrive du même numéro : toi, à la fenêtre.",
+   "tel": {
+    "type": "photo",
+    "vue": "salon",
+    "ombre": false
+   }
+  },
+  {
+   "voice": "La silhouette porte le ciré jaune de ton père. Elle crie ton surnom.",
+   "vue": "mer",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.6
+   },
+   "flicker": true,
+   "neige": true
+  },
+  {
+   "voice": "Tu fermes les volets, ou alors, tu sors rejoindre ton père ? Écris #un# ou #deux#.",
+   "choix": {
+    "a": "Fermer les volets",
+    "b": "Sortir rejoindre papa"
+   }
+  }
+ ]
+}

@@ -1,0 +1,455 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°13",
+ "clock_start": 7200,
+ "style": 2,
+ "title": "SURVIS ? N°13 · Dans le tunnel, les phares d'en face s'éteignent.",
+ "caption": "Dans le tunnel, les phares d'en face s'éteignent. Pleins phares ou tout éteindre ? 👇 (N°12 : il fallait regarder par le judas.) SURVIS ? N°13 #survie #horreur #marseille #histoire",
+ "beats": [
+  {
+   "scene": "habitacle",
+   "text": "DANS UN TUNNEL DE MARSEILLE, LES PHARES D'EN FACE S'*ÉTEIGNENT*.",
+   "params": {
+    "lights": true,
+    "oncoming": true
+   },
+   "shake": 2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "autoradio",
+   "text": "RADIO TRAFIC : « PHARES ÉTEINTS EN FACE ? DES CHOSES SONT SUR LA ROUTE. »",
+   "params": {
+    "text": "ILS SONT SUR LA ROUTE"
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "autoradio",
+   "text": "« ILS MARCHENT VERS LA *LUMIÈRE*. »",
+   "params": {
+    "text": "ILS VONT VERS LA LUMIÈRE",
+    "red": true
+   },
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "voiture",
+   "text": "DEVANT TOI, DES FORMES BOUGENT DANS LE NOIR.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "tunnel",
+   "text": "MAIS SANS PHARES, TU RISQUES DE LES PERCUTER.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "habitacle",
+   "text": "PLEINS PHARES POUR VOIR, OU TOUT *ÉTEINDRE* ?",
+   "choice": {
+    "a": "PLEINS PHARES",
+    "b": "TOUT ÉTEINDRE"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "habitacle",
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "PLEINS PHARES",
+    "b": "TOUT ÉTEINDRE",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "habitacle",
+   "text": "TU METS LES PLEINS PHARES.",
+   "choice": {
+    "a": "PLEINS PHARES",
+    "b": "TOUT ÉTEINDRE",
+    "picked": "A"
+   },
+   "text_y": 0.2,
+   "params": {
+    "full": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "habitacle",
+   "text": "DES DIZAINES DE VISAGES BLANCS TE FIXENT.",
+   "params": {
+    "full": true,
+    "crowd": true
+   },
+   "shake": 5,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "voiture",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide"
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ],
+    "dark": true
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "record": "r1",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "habitacle",
+   "text": "TU ÉTEINS TOUT. TU ROULES AU PAS.",
+   "choice": {
+    "a": "PLEINS PHARES",
+    "b": "TOUT ÉTEINDRE",
+    "picked": "B"
+   },
+   "text_y": 0.2,
+   "params": {
+    "dark": true
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "habitacle",
+   "text": "DES MAINS GLISSENT SUR LES VITRES. UNE PORTIÈRE *CLAQUE*.",
+   "params": {
+    "dark": true,
+    "crowd": true
+   },
+   "shake": 3,
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "voiture",
+   "text": "TU RETIENS TON SOUFFLE. ELLES PASSENT.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "closed"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "tunnel",
+   "text": "LA SORTIE. TU RALLUMES TES PHARES.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "habitacle",
+   "text": "DANS LE RÉTROVISEUR, UN VISAGE BLANC, SUR TA BANQUETTE *ARRIÈRE*.",
+   "params": {
+    "lights": true,
+    "mirror_face": true
+   },
+   "shake": 4,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "habitacle",
+   "text": "TU T'ARRÊTES, OU TU ROULES JUSQU'À CHEZ *TOI* ?",
+   "choice": {
+    "a": "T'ARRÊTER",
+    "b": "ROULER"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "params": {
+    "lights": true,
+    "mirror_face": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "habitacle",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LA PROCHAINE *VIDÉO*.",
+   "choice": {
+    "a": "T'ARRÊTER",
+    "b": "ROULER"
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "params": {
+    "lights": true,
+    "mirror_face": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "tunnel",
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "params": {
+    "figure": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "style": "nuit",
+ "format": "sms",
+ "ambiance": "nb",
+ "accroche": "image_impossible",
+ "series": "LA PHOTO",
+ "etiquette": "MESSAGES",
+ "heure": "03:11:50",
+ "heure_tel": "3:12",
+ "title": "Ton meilleur ami t'envoie une photo de toi… en train de dormir",
+ "caption": "Tu réponds quoi à Sami ? 👇 #horreur #sms #creepy #pourtoi",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Trois heures douze. Ton meilleur ami Sami t'envoie une photo.",
+   "tel": {
+    "type": "notif",
+    "app": "MESSAGES",
+    "titre": "Sami",
+    "texte": "📷 Photo",
+    "heure": "3:12"
+   }
+  },
+  {
+   "voice": "Sur la photo, c'est toi, en train de *dormir*, dans ton lit.",
+   "tel": {
+    "type": "photo",
+    "vue": "chambre"
+   }
+  },
+  {
+   "voice": "Tu lui écris : c'est quoi cette blague ?",
+   "tel": {
+    "type": "sms",
+    "de": "Sami",
+    "lignes": [
+     "C'est quoi cette blague ?"
+    ],
+    "moi": [
+     0
+    ]
+   }
+  },
+  {
+   "voice": "Sami répond : ce n'est pas moi. Je l'ai reçue d'un numéro inconnu.",
+   "tel": {
+    "type": "sms",
+    "de": "Sami",
+    "lignes": [
+     "C'est quoi cette blague ?",
+     "C'est pas moi.",
+     "Un numéro inconnu me l'a envoyée."
+    ],
+    "moi": [
+     0
+    ]
+   }
+  },
+  {
+   "voice": "Tu regardes ta chambre. Personne.",
+   "vue": "chambre",
+   "hero": "peur",
+   "cadre": "gros",
+   "flicker": true
+  },
+  {
+   "voice": "Puis Sami écrit encore : la photo vient d'arriver, il y a *une minute*.",
+   "tel": {
+    "type": "sms",
+    "de": "Sami",
+    "lignes": [
+     "Attends.",
+     "Elle date d'il y a une minute."
+    ]
+   }
+  },
+  {
+   "voice": "Et une deuxième photo arrive : toi, debout, en train de lire ce message.",
+   "tel": {
+    "type": "photo",
+    "vue": "chambre",
+    "ombre": true
+   },
+   "sfx": "message"
+  }
+ ],
+ "texte_accroche": "Mon meilleur ami m'a envoyé une photo de moi en train de dormir"
+}

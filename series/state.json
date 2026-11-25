@@ -1,0 +1,1084 @@
+{
+ "current_series": "le-refuge",
+ "series_file": "series/le-refuge.md",
+ "series_episode_count": 5,
+ "next_episode_in_series": 2,
+ "next_global_episode": 29,
+ "published": [
+  {
+   "global": 1,
+   "series": "apres-la-fin",
+   "episode": 1,
+   "file": "episodes/ep01.json",
+   "slot": "2026-10-30T13:31:00 Europe/Paris"
+  },
+  {
+   "global": 2,
+   "series": "apres-la-fin",
+   "episode": 2,
+   "file": "episodes/ep02.json",
+   "slot": "2026-10-31T10:00:00 Europe/Paris"
+  },
+  {
+   "global": 3,
+   "series": "apres-la-fin",
+   "episode": 3,
+   "file": "episodes/ep03.json",
+   "slot": "2026-10-31T12:00:00 Europe/Paris"
+  },
+  {
+   "global": 4,
+   "series": "apres-la-fin",
+   "episode": 4,
+   "file": "episodes/ep04.json",
+   "slot": "2026-10-31T17:00:00 Europe/Paris"
+  },
+  {
+   "global": 5,
+   "series": "apres-la-fin",
+   "episode": 5,
+   "file": "episodes/ep05.json",
+   "slot": "2026-11-01T10:00:00 Europe/Paris"
+  },
+  {
+   "global": 6,
+   "series": "apres-la-fin",
+   "episode": 6,
+   "file": "episodes/ep06.json",
+   "slot": "2026-11-01T12:00:00 Europe/Paris"
+  },
+  {
+   "global": 7,
+   "series": "apres-la-fin",
+   "episode": 7,
+   "file": "episodes/ep07.json",
+   "slot": "2026-11-01T17:00:00 Europe/Paris"
+  },
+  {
+   "global": 8,
+   "series": "apres-la-fin",
+   "episode": 8,
+   "file": "episodes/ep08.json",
+   "slot": "2026-11-01T22:21:00 Europe/Paris",
+   "note": "style 2, publié à la demande de Fio (rendu ep08s2, version avant ajout de 8 plans)"
+  },
+  {
+   "global": 9,
+   "series": "apres-la-fin",
+   "episode": 9,
+   "file": "episodes/ep09.json",
+   "slot": "2026-11-02T10:00:00 Europe/Paris",
+   "metricool_id": 413663078
+  },
+  {
+   "global": 10,
+   "series": "le-train-de-nuit",
+   "episode": 1,
+   "file": "episodes/ep10.json",
+   "slot": "2026-11-02T12:00:00 Europe/Paris",
+   "metricool_id": 413729690,
+   "note": "test longueur : version courte (74 s)"
+  },
+  {
+   "global": 11,
+   "series": "le-train-de-nuit",
+   "episode": 2,
+   "file": "episodes/ep11.json",
+   "slot": "2026-11-02T18:00:00 Europe/Paris",
+   "metricool_id": 413767918
+  },
+  {
+   "global": 12,
+   "series": "le-train-de-nuit",
+   "episode": 3,
+   "file": "episodes/ep12.json",
+   "slot": "2026-11-03T10:00:00 Europe/Paris",
+   "metricool_id": 414914050
+  },
+  {
+   "global": 13,
+   "series": "le-train-de-nuit",
+   "episode": 4,
+   "file": "episodes/ep13.json",
+   "slot": "2026-11-03T12:00:00 Europe/Paris",
+   "metricool_id": 414972736
+  },
+  {
+   "global": 14,
+   "series": "le-train-de-nuit",
+   "episode": 5,
+   "file": "episodes/ep14.json",
+   "slot": "2026-11-03T18:00:00 Europe/Paris",
+   "metricool_id": 415095205
+  },
+  {
+   "global": 15,
+   "series": "le-train-de-nuit",
+   "episode": 6,
+   "file": "episodes/ep15.json",
+   "slot": "2026-11-04T10:00:00 Europe/Paris",
+   "metricool_id": 416147511,
+   "note": "accroche dialogue"
+  },
+  {
+   "global": 16,
+   "series": "l-hotel-des-neiges",
+   "episode": 1,
+   "file": "episodes/ep16.json",
+   "slot": "2026-11-04T12:00:00 Europe/Paris",
+   "metricool_id": 416224058,
+   "note": "accroche lieu"
+  },
+  {
+   "global": 17,
+   "series": "l-hotel-des-neiges",
+   "episode": 2,
+   "file": "episodes/ep17.json",
+   "slot": "2026-11-04T18:00:00 Europe/Paris",
+   "metricool_id": 416246232,
+   "note": "accroche dialogue"
+  },
+  {
+   "global": 18,
+   "series": "l-hotel-des-neiges",
+   "episode": 3,
+   "file": "episodes/ep18.json",
+   "slot": "2026-11-05T10:00:00 Europe/Paris",
+   "note": "teaser défi",
+   "metricool_id": 417384833
+  },
+  {
+   "global": 19,
+   "series": "l-hotel-des-neiges",
+   "episode": 4,
+   "file": "episodes/ep19.json",
+   "slot": "2026-11-05T12:00:00 Europe/Paris",
+   "note": "teaser promesse",
+   "metricool_id": 417446802
+  },
+  {
+   "global": 20,
+   "series": "l-hotel-des-neiges",
+   "episode": 5,
+   "file": "episodes/ep20.json",
+   "slot": "2026-11-05T18:00:00 Europe/Paris",
+   "note": "teaser défi",
+   "metricool_id": 417612707
+  },
+  {
+   "global": 22,
+   "series": "jacques-a-dit",
+   "episode": 1,
+   "file": "episodes/ep22.json",
+   "slot": "2026-11-07T17:00:00 Europe/Paris",
+   "note": "TikTok + Instagram via Zernio ; refusé par Metricool le 06/11",
+   "zernio_id": "6aef1cade5d093e15a6e7bf3"
+  },
+  {
+   "global": 23,
+   "series": "jacques-a-dit",
+   "episode": 2,
+   "file": "episodes/ep23.json",
+   "slot": "2026-11-08T10:00:00 Europe/Paris",
+   "zernio_id": "6aeffdbc56e86ea318b9368c",
+   "note": "rendu le 06/11 (son -19 LUFS), gardé par Fio"
+  },
+  {
+   "global": 24,
+   "series": "jacques-a-dit",
+   "episode": 3,
+   "file": "episodes/ep24.json",
+   "slot": "2026-11-08T17:00:00 Europe/Paris",
+   "zernio_id": "6af02abd737cabd3a1aa2cf7",
+   "note": "1re vidéo avec test du spectateur extérieur (clarté 8/10)"
+  },
+  {
+   "global": 25,
+   "series": "jacques-a-dit",
+   "episode": 4,
+   "file": "episodes/ep25.json",
+   "slot": "2026-11-09T10:00:00 Europe/Paris",
+   "zernio_id": "6af182d8d11ebe14e52da9bd",
+   "note": "1re partie au format « Line 9 », nouvelle voix grave ; vote partie 3 = la laisser (1 voix + tirage)",
+   "tiktok_url": "https://www.tiktok.com/@4_youchoose_4/video/7706094284008738080",
+   "instagram_url": "https://www.instagram.com/reel/Dfg9jfUgmNu/"
+  },
+  {
+   "global": 26,
+   "series": "jacques-a-dit",
+   "episode": 5,
+   "file": "episodes/ep26.json",
+   "slot": "2026-11-09T17:00:00 Europe/Paris",
+   "zernio_id": "6af1d3aaa1f01d103df87a1e",
+   "note": "vote partie 4 : 1 A / 1 B → tirage = « moi » ; spectateur extérieur 7/10"
+  },
+  {
+   "global": 27,
+   "series": "jacques-a-dit",
+   "episode": 6,
+   "file": "episodes/ep27.json",
+   "slot": "2026-11-10T10:00:00 Europe/Paris",
+   "zernio_id": "6af2b099cbd677ee039575f6",
+   "note": "vote partie 5 : 0 vote → tirage = Léa ; dernier épisode, vote « jouer avec Léa / rester » décide la suite",
+   "tiktok_url": "https://www.tiktok.com/@4_youchoose_4/video/7706465599924227360",
+   "instagram_url": "https://www.instagram.com/reel/Dfjicjikqij/"
+  },
+  {
+   "global": 28,
+   "series": "le-refuge",
+   "episode": 1,
+   "file": "episodes/ep28.json",
+   "slot": "2026-11-10T17:00:00 Europe/Paris",
+   "zernio_id": "6af2eb14d48b0f93a64327de",
+   "note": "1re partie de « Le Refuge » ; vote A sortir / B brûler le livre"
+  },
+  {
+   "series": "la-station",
+   "episode": 1,
+   "file": "episodes/station-01.json",
+   "slot": "2026-11-15T10:00:00 Europe/Paris",
+   "zernio_id": "6af9475186c6bcf08ac77f93"
+  },
+  {
+   "series": "l-eau-du-septieme",
+   "episode": 1,
+   "file": "episodes/eau-01.json",
+   "slot": "2026-11-15T12:00:00 Europe/Paris",
+   "zernio_id": "6af9475286c6bcf08ac77fa9"
+  },
+  {
+   "series": "la-bande",
+   "episode": 1,
+   "file": "episodes/bande-01.json",
+   "slot": "2026-11-15T18:00:00 Europe/Paris",
+   "zernio_id": "6af94d58ef1ad71733777df3"
+  },
+  {
+   "series": "la-photo",
+   "episode": 1,
+   "file": "episodes/photo-01.json",
+   "slot": "2026-11-15T20:00:00 Europe/Paris",
+   "zernio_id": "6af94d59ef1ad71733777df9"
+  },
+  {
+   "series": "la-station",
+   "episode": 2,
+   "file": "episodes/station-02.json",
+   "slot": "2026-11-16T10:00:00 Europe/Paris",
+   "zernio_id": "6afa94161857f9d34e4f8641"
+  },
+  {
+   "series": "l-eau-du-septieme",
+   "episode": 2,
+   "file": "episodes/eau-02.json",
+   "slot": "2026-11-16T12:00:00 Europe/Paris",
+   "zernio_id": "6afa94171857f9d34e4f864b"
+  },
+  {
+   "series": "la-bande",
+   "episode": 2,
+   "file": "episodes/bande-02.json",
+   "slot": "2026-11-16T18:00:00 Europe/Paris",
+   "zernio_id": "6afa9747966f71e3e8024c71"
+  },
+  {
+   "series": "la-photo",
+   "episode": 2,
+   "file": "episodes/photo-02.json",
+   "slot": "2026-11-16T20:00:00 Europe/Paris",
+   "zernio_id": "6afa974809acce61cfdd6c60"
+  },
+  {
+   "series": "la-station",
+   "episode": 3,
+   "file": "episodes/station-03.json",
+   "slot": "2026-11-17T10:00:00 Europe/Paris",
+   "zernio_id": "6afbe053ad7b0c74e969bd22"
+  },
+  {
+   "series": "l-eau-du-septieme",
+   "episode": 3,
+   "file": "episodes/eau-03.json",
+   "slot": "2026-11-17T12:00:00 Europe/Paris",
+   "zernio_id": "6afbe2b3195388ac8547d933"
+  },
+  {
+   "series": "la-bande",
+   "episode": 3,
+   "file": "episodes/bande-03.json",
+   "slot": "2026-11-17T18:00:00 Europe/Paris",
+   "zernio_id": "6afbe5af2ffec3a0916935f5"
+  },
+  {
+   "series": "la-photo",
+   "episode": 3,
+   "file": "episodes/photo-03.json",
+   "slot": "2026-11-17T20:00:00 Europe/Paris",
+   "zernio_id": "6afbe873ff763f317e7d70ce"
+  },
+  {
+   "series": "la-coupure",
+   "episode": 1,
+   "file": "episodes/coupure-01.json",
+   "slot": "2026-11-18T10:00:00 Europe/Paris",
+   "zernio_id": "6afd3abd89b0bbe4316e8808"
+  },
+  {
+   "series": "le-tunnel",
+   "episode": 1,
+   "file": "episodes/tunnel-01.json",
+   "slot": "2026-11-18T12:00:00 Europe/Paris",
+   "zernio_id": "6afd3faccb1c9a0cc2345cf9"
+  },
+  {
+   "series": "chambre-neuf",
+   "episode": 1,
+   "file": "episodes/chambre9-01.json",
+   "slot": "2026-11-18T18:00:00 Europe/Paris",
+   "zernio_id": "6afd3c57a44e92206e46bbb3"
+  },
+  {
+   "series": "le-ferry",
+   "episode": 1,
+   "file": "episodes/ferry-01.json",
+   "slot": "2026-11-18T20:00:00 Europe/Paris",
+   "zernio_id": "6afd3c57a44e92206e46bbbb"
+  },
+  {
+   "series": "gta6",
+   "episode": 1,
+   "file": "episodes/gta6-01.json",
+   "slot": "2026-11-19T08:00:00 Europe/Paris",
+   "zernio_id": "6afe3cf916f3e1768f629ebf"
+  },
+  {
+   "series": "gta6",
+   "episode": 2,
+   "file": "episodes/gta6-02.json",
+   "slot": "2026-11-19T09:00:00 Europe/Paris",
+   "zernio_id": "6afe3cfa74baae2e2777d565"
+  },
+  {
+   "series": "la-coupure",
+   "episode": 2,
+   "file": "episodes/coupure-02.json",
+   "slot": "2026-11-19T10:00:00 Europe/Paris",
+   "zernio_id": "6afe84a14892cd39aac3feb7"
+  },
+  {
+   "series": "le-tunnel",
+   "episode": 2,
+   "file": "episodes/tunnel-02.json",
+   "slot": "2026-11-19T12:00:00 Europe/Paris",
+   "zernio_id": "6afe8227791dfc4cd3544eeb"
+  },
+  {
+   "series": "chambre-neuf",
+   "episode": 2,
+   "file": "episodes/chambre9-02.json",
+   "slot": "2026-11-19T18:00:00 Europe/Paris",
+   "zernio_id": "6afe8c5fa9ab6ec13bd2288c"
+  },
+  {
+   "series": "le-ferry",
+   "episode": 2,
+   "file": "episodes/ferry-02.json",
+   "slot": "2026-11-19T20:00:00 Europe/Paris",
+   "zernio_id": "6afe8a9de169c9010f3ce453"
+  },
+  {
+   "series": "gta6-edit",
+   "episode": 2,
+   "file": "episodes/gta6-edit-02.json",
+   "slot": "2026-11-20T09:00:00 Europe/Paris",
+   "zernio_id": "6aff21508480905cd1cb810b",
+   "note": "musique Miami Trap (Hasenchat, CC BY-SA 3.0)"
+  },
+  {
+   "series": "la-coupure",
+   "episode": 3,
+   "file": "episodes/coupure-03.json",
+   "slot": "2026-11-20T10:00:00 Europe/Paris",
+   "zernio_id": "6affd922c009ff7c0fa42413"
+  },
+  {
+   "series": "le-tunnel",
+   "episode": 3,
+   "file": "episodes/tunnel-03.json",
+   "slot": "2026-11-20T12:00:00 Europe/Paris",
+   "zernio_id": "6affe0265de2b601f9aae922"
+  },
+  {
+   "series": "chambre-neuf",
+   "episode": 3,
+   "file": "episodes/chambre9-03.json",
+   "slot": "2026-11-20T18:00:00 Europe/Paris",
+   "zernio_id": "6affeab59f632370d3aa9a8a"
+  },
+  {
+   "series": "le-ferry",
+   "episode": 3,
+   "file": "episodes/ferry-03.json",
+   "slot": "2026-11-20T20:00:00 Europe/Paris",
+   "zernio_id": "6affed6bc6270ed89224f7c1"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-03",
+   "file": "episodes/gta6-edit-03.json",
+   "slot": "2026-11-21T08:00:00 Europe/Paris",
+   "zernio_id": "6b0122a636ccbb117a7433b4"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-04",
+   "file": "episodes/gta6-edit-04.json",
+   "slot": "2026-11-21T09:00:00 Europe/Paris",
+   "zernio_id": "6b0122a736ccbb117a7433bb"
+  },
+  {
+   "series": "le-babyphone",
+   "episode": 1,
+   "file": "episodes/baby-01.json",
+   "slot": "2026-11-21T10:00:00 Europe/Paris",
+   "zernio_id": "6b01287aa4540f260221a0fa"
+  },
+  {
+   "series": "le-voisin",
+   "episode": 1,
+   "file": "episodes/voisin-01.json",
+   "slot": "2026-11-21T12:00:00 Europe/Paris",
+   "zernio_id": "6b0129868d2cfa5c5f792b4f"
+  },
+  {
+   "series": "le-camping",
+   "episode": 1,
+   "file": "episodes/camping-01.json",
+   "slot": "2026-11-21T18:00:00 Europe/Paris",
+   "zernio_id": "6b013838d7a48871e2f4c4cc"
+  },
+  {
+   "series": "l-auberge",
+   "episode": 1,
+   "file": "episodes/auberge-01.json",
+   "slot": "2026-11-21T20:00:00 Europe/Paris",
+   "zernio_id": "6b0136d35d27c99096858092"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-05",
+   "file": "episodes/gta6-edit-05.json",
+   "slot": "2026-11-22T08:00:00 Europe/Paris",
+   "zernio_id": "6b02754aa479bd0cb8850109",
+   "format": "edit"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-06",
+   "file": "episodes/gta6-edit-06.json",
+   "slot": "2026-11-22T09:00:00 Europe/Paris",
+   "zernio_id": "6b02754a9c2e86c539657f1f",
+   "format": "edit"
+  },
+  {
+   "series": "le-babyphone",
+   "episode": 2,
+   "file": "episodes/baby-02.json",
+   "slot": "2026-11-22T10:00:00 Europe/Paris",
+   "zernio_id": "6b027794a479bd0cb8850705",
+   "format": "serie",
+   "ambiance": "nuit",
+   "accroche": "question_directe"
+  },
+  {
+   "series": "regles-bus-de-nuit",
+   "episode": 1,
+   "file": "episodes/regles-001.json",
+   "slot": "2026-11-22T12:00:00 Europe/Paris",
+   "zernio_id": "6b027cfc5d47d99aee8163f0",
+   "format": "regles",
+   "ambiance": "rouge",
+   "accroche": "regle_affichee"
+  },
+  {
+   "series": "la-cassette",
+   "episode": 1,
+   "file": "episodes/histoire-001.json",
+   "slot": "2026-11-22T18:00:00 Europe/Paris",
+   "zernio_id": "6b028131464fce2554d6fcaa",
+   "format": "histoire",
+   "ambiance": "sepia",
+   "accroche": "chiffre_heure"
+  },
+  {
+   "series": "pov-port-gele",
+   "episode": 1,
+   "file": "episodes/pov-001.json",
+   "slot": "2026-11-22T20:00:00 Europe/Paris",
+   "zernio_id": "6b028267362b63fd5eddc271",
+   "format": "pov",
+   "ambiance": "bleu",
+   "accroche": "sms_proche"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-07",
+   "file": "episodes/gta6-edit-07.json",
+   "slot": "2026-11-23T08:00:00 Europe/Paris",
+   "zernio_id": "6b03c7143eb626614287ffbc",
+   "format": "edit"
+  },
+  {
+   "series": "gta6",
+   "episode": "edit-08",
+   "file": "episodes/gta6-edit-08.json",
+   "slot": "2026-11-23T09:00:00 Europe/Paris",
+   "zernio_id": "6b03c715849daf44ac036475",
+   "format": "edit"
+  },
+  {
+   "series": "le-babyphone",
+   "episode": 3,
+   "file": "episodes/baby-03.json",
+   "slot": "2026-11-23T10:00:00 Europe/Paris",
+   "zernio_id": "6b03d6a9817b0cf1e80bac33",
+   "format": "serie",
+   "ambiance": "nuit",
+   "accroche": "appel_inconnu"
+  },
+  {
+   "series": "sms-les-cles",
+   "episode": 1,
+   "file": "episodes/sms-001.json",
+   "slot": "2026-11-23T12:00:00 Europe/Paris",
+   "zernio_id": "6b03d23987a8833a2de4f386",
+   "format": "sms",
+   "ambiance": "nb",
+   "accroche": "bruit"
+  },
+  {
+   "series": "regles-hopital",
+   "episode": 1,
+   "file": "episodes/regles-002.json",
+   "slot": "2026-11-23T18:00:00 Europe/Paris",
+   "zernio_id": "6b03d239af3cfea024827c2c",
+   "format": "regles",
+   "ambiance": "vert",
+   "accroche": "regle_affichee"
+  },
+  {
+   "series": "histoire-le-miroir",
+   "episode": 1,
+   "file": "episodes/histoire-002.json",
+   "slot": "2026-11-23T20:00:00 Europe/Paris",
+   "zernio_id": "6b03dd56670ab0c2f5726be7",
+   "format": "histoire",
+   "ambiance": "vhs",
+   "accroche": "image_impossible"
+  },
+  {
+   "series": "pov-voiture",
+   "episode": 1,
+   "file": "episodes/pov-002.json",
+   "slot": "2026-11-24T12:00:00 Europe/Paris",
+   "zernio_id": "6b051b586e923bb02b554aa0",
+   "format": "pov",
+   "ambiance": "rouge",
+   "accroche": "chiffre_heure"
+  },
+  {
+   "series": "histoire-la-lettre",
+   "episode": 1,
+   "file": "episodes/histoire-003.json",
+   "slot": "2026-11-24T17:00:00 Europe/Paris",
+   "zernio_id": "6b051c5044b6137654e2b03b",
+   "format": "histoire",
+   "ambiance": "sepia",
+   "accroche": "question_directe"
+  },
+  {
+   "series": "le-phare",
+   "episode": 1,
+   "file": "episodes/phare-01.json",
+   "slot": "2026-11-24T20:00:00 Europe/Paris",
+   "zernio_id": "6b05c935319e789d502fdd9b",
+   "format": "serie",
+   "ambiance": "bleu",
+   "accroche": "sms_proche"
+  },
+  {
+   "series": "sms-ma-soeur",
+   "episode": 1,
+   "file": "episodes/sms-002.json",
+   "slot": "2026-11-25T12:00:00 Europe/Paris",
+   "zernio_id": "6b066f8b6e3f6e6b5e300c26",
+   "format": "sms",
+   "ambiance": "nb",
+   "accroche": "bruit"
+  },
+  {
+   "series": "regles-chez-mamie",
+   "episode": 1,
+   "file": "episodes/regles-003.json",
+   "slot": "2026-11-25T17:00:00 Europe/Paris",
+   "zernio_id": "6b0675cf4f7526f3245c5e5e",
+   "format": "regles",
+   "ambiance": "vhs",
+   "accroche": "regle_affichee"
+  },
+  {
+   "series": "le-phare",
+   "episode": 2,
+   "file": "episodes/phare-02.json",
+   "slot": "2026-11-25T20:00:00 Europe/Paris",
+   "zernio_id": "6b0677a5b12ee5d97c3ae8dd",
+   "format": "serie",
+   "ambiance": "bleu",
+   "accroche": "image_impossible"
+  }
+ ],
+ "survis_next": 15,
+ "survis_published": [
+  {
+   "n": 1,
+   "file": "episodes/survis-01.json",
+   "slot": "2026-11-03T15:00:00 Europe/Paris",
+   "metricool_id": 414990451
+  },
+  {
+   "n": 2,
+   "file": "episodes/survis-02.json",
+   "slot": "2026-11-03T20:30:00 Europe/Paris",
+   "metricool_id": 415056265
+  },
+  {
+   "n": 3,
+   "file": "episodes/survis-03.json",
+   "slot": "2026-11-04T15:00:00 Europe/Paris",
+   "metricool_id": 416179699
+  },
+  {
+   "n": 4,
+   "file": "episodes/survis-04.json",
+   "slot": "2026-11-04T20:30:00 Europe/Paris",
+   "metricool_id": 416192016
+  },
+  {
+   "n": 5,
+   "file": "episodes/survis-05.json",
+   "slot": "2026-11-05T15:00:00 Europe/Paris",
+   "metricool_id": 417533136
+  },
+  {
+   "n": 6,
+   "file": "episodes/survis-06.json",
+   "slot": "2026-11-05T20:30:00 Europe/Paris",
+   "metricool_id": 417588008
+  },
+  {
+   "n": 7,
+   "file": "episodes/survis-07.json",
+   "slot": "2026-11-07T13:40:00 Europe/Paris",
+   "note": "publié tout de suite via Zernio à la demande de Fio (12h Metricool refusé)",
+   "zernio_id": "6aef1c2f81374a6a33e18b7c",
+   "tiktok_url": "https://www.tiktok.com/@4_youchoose_4/video/7705408552696827169",
+   "instagram_url": "https://www.instagram.com/reel/DfcNFznE_tf/"
+  },
+  {
+   "n": 8,
+   "file": "episodes/survis-08.json",
+   "slot": "2026-11-07T20:00:00 Europe/Paris",
+   "zernio_id": "6aef1ec542a1f8d58622db07",
+   "note": "TikTok + Instagram via Zernio"
+  },
+  {
+   "n": 9,
+   "file": "episodes/survis-09.json",
+   "slot": "2026-11-08T12:00:00 Europe/Paris",
+   "zernio_id": "6af01d075358c22775720b01"
+  },
+  {
+   "n": 10,
+   "file": "episodes/survis-10.json",
+   "slot": "2026-11-08T20:00:00 Europe/Paris",
+   "zernio_id": "6af031c53833bdba31c6b6a3"
+  },
+  {
+   "n": 11,
+   "file": "episodes/survis-11.json",
+   "slot": "2026-11-09T12:00:00 Europe/Paris",
+   "zernio_id": "6af18f2dfe78cf9ede3ed0d3"
+  },
+  {
+   "n": 12,
+   "file": "episodes/survis-12.json",
+   "slot": "2026-11-09T20:00:00 Europe/Paris",
+   "zernio_id": "6af191c806e9af8093a09f1e"
+  },
+  {
+   "n": 13,
+   "file": "episodes/survis-13.json",
+   "slot": "2026-11-10T12:00:00 Europe/Paris",
+   "zernio_id": "6af2d7e599c2b56dc869dbc0"
+  },
+  {
+   "n": 14,
+   "file": "episodes/survis-14.json",
+   "slot": "2026-11-10T20:00:00 Europe/Paris",
+   "zernio_id": "6af2c9f89eeff8021ea24174"
+  }
+ ],
+ "ready_not_published": [
+  {
+   "file": "episodes/ep21.json",
+   "video": "/mnt/project-files/videos/06-11/10h-hotel-partie6.mp4",
+   "what": "Hôtel des neiges partie 6 (fin de série, pas reprogrammée)"
+  }
+ ],
+ "media_note": "18/11 : branche media = coupure-01, tunnel-01-v2, chambre9-01, ferry-01 ; à supprimer à la prochaine routine, après publication",
+ "votes": {
+  "partie3": {
+   "A_laisser": 1,
+   "B_emmener": 0,
+   "result": "la laisser (moins de 3 votes : tirage au sort, même résultat)"
+  },
+  "partie4": {
+   "A_ma_grand_mere": 1,
+   "B_moi": 1,
+   "result": "moi (moins de 3 votes : tirage au sort)"
+  },
+  "partie5": {
+   "A_lea": 0,
+   "B_theo": 0,
+   "result": "Léa (0 vote : tirage au sort)"
+  },
+  "jacques_partie6": {
+   "A": "jouer avec Léa",
+   "B": "rester avec ta grand-mère",
+   "result": "à lire (série finie : servira si on fait une suite)"
+  },
+  "cycle1_partie1": {
+   "station": "A te retourner / B courir",
+   "eau": "A monter la rejoindre / B quitter l'immeuble",
+   "bande": "A arrêter la cassette / B courir chercher Inès",
+   "photo": "A effacer la photo / B demander à Mamie qui elle est",
+   "result": "16/11 : <3 votes partout → tirage au sort : station B courir (1 com. B), eau B quitter (2 com. B), bande B courir chercher Inès (0), photo B demander à Mamie (0)"
+  },
+  "cycle1_partie2": {
+   "station": "1 monter dans la voiture / 2 rester dans la boutique",
+   "eau": "1 descendre à la cave / 2 casser la vitre",
+   "bande": "1 avancer vers la voix / 2 remonter dehors",
+   "photo": "1 sauver Jade / 2 rester avec Mamie",
+   "result": "17/11 : <3 votes partout → tirage au sort en suivant le vote reçu : station 1 voiture (1 com. « 1 »), eau 2 casser la vitre (1 com. « 2 »), bande 2 remonter dehors (0), photo 2 rester avec Mamie (0)"
+  },
+  "cycle1_partie3": {
+   "station": "1 répondre à ta mère malgré la règle / 2 te taire",
+   "eau": "1 chercher sa poupée / 2 prendre le train",
+   "bande": "1 sauter de la voiture / 2 faire semblant de rien",
+   "photo": "1 ouvrir à Jade / 2 la laisser dehors",
+   "result": "dernières parties : à lire le 18/11 (sert si une suite est faite) | 18/11 : Eau 1 com. « 1 », autres 0 ; cycle 1 fini, pas de suite."
+  },
+  "cycle2_partie1": {
+   "coupure": "1 ouvrir à Clara / 2 laisser fermé",
+   "tunnel": "1 entrer dans le tunnel / 2 appeler ta mère d'abord",
+   "chambre9": "1 aller voir seul / 2 monter réveiller Nadia",
+   "ferry": "1 monter sur le pont / 2 t'enfermer dans ta cabine",
+   "result": "19/11 : Coupure 3 × « 2 » (vrai vote → laisser fermé) ; Tunnel 1 × « 1 » (< 3, on suit le vote reçu → entrer) ; Chambre neuf 0 → tirage 2 (réveiller Nadia) ; Ferry 0 → tirage 1 (monter sur le pont)"
+  },
+  "cycle2_partie2": {
+   "coupure": "1 répondre à Clara / 2 fuir par le jardin sans un mot",
+   "tunnel": "1 creuser le mur / 2 rentrer à la maison",
+   "chambre9": "1 descendre à la chambre 9 / 2 rester avec cette Nadia",
+   "ferry": "1 lancer la bouée à Hugo / 2 poursuivre ta double",
+   "result": "20/11 : 0 vote partout (TikTok + Insta) → tirage : Coupure 1 (répondre à Clara), Tunnel 2 (rentrer), Chambre neuf 1 (descendre), Ferry 2 (poursuivre ta double)"
+  },
+  "cycle2_partie3": {
+   "coupure": "1 sauver Clara dans le noir / 2 rester à l'abri",
+   "tunnel": "1 serrer Malik / 2 retourner au tunnel",
+   "chambre9": "1 croire celle du lit (fermer à clé) / 2 ouvrir au couloir",
+   "ferry": "1 obéir à Hugo / 2 suivre la fille trempée",
+   "result": "21/11 : Tunnel 1 × « 2 » (laisser ta mère / retourner au tunnel) ; Ferry 1 com. « écoute Hugo et suite stp » (1) ; autres 0. Cycle 2 fini."
+  },
+  "cycle3_partie1": {
+   "baby": "1 descendre à la cave / 2 débrancher malgré la règle",
+   "voisin": "1 ouvrir le placard / 2 sonner chez le voisin",
+   "camping": "1 entrer dans la tente de Tom / 2 courir à la voiture",
+   "auberge": "1 finir l'assiette / 2 se lever de table",
+   "result": "22/11 : 0 commentaire sur les 4 parties 1 → tirage au sort. Babyphone : 2 (débrancher). Voisin, Camping, Auberge arrêtées par le plan (1 série max)."
+  },
+  "baby-02": {
+   "un": 0,
+   "deux": 0,
+   "resultat": 2,
+   "tirage": true
+  },
+  "le-phare-1": {
+   "1": 1,
+   "2": 0,
+   "decision": "2 (tirage au sort, moins de 3 votes)"
+  }
+ },
+ "previous_series": "jacques-a-dit",
+ "parallel_note": "Depuis le 15/11 : 4 séries de 3 épisodes en parallèle (voir ROUTINE.md). Les séries vides (null) sont à créer par la routine.",
+ "concept": "Séries d'horreur courtes (3 épisodes de 35-45 s), 4 en parallèle, animation 2 — depuis le 15/11 (demande de Fio le 14/11)",
+ "defi_next": 13,
+ "defis": [
+  {
+   "numero": 1,
+   "format": "intrus",
+   "theme": "fruits",
+   "date": "2026-11-11",
+   "heure": "10:00",
+   "zernio_id": "6af3f875d4278104918612e9",
+   "fichier": "episodes/defi-001.json"
+  },
+  {
+   "numero": 2,
+   "format": "quiz",
+   "theme": "devine le film",
+   "date": "2026-11-11",
+   "heure": "12:00",
+   "zernio_id": "6af3f87d2a2ca7957def65f8",
+   "fichier": "episodes/defi-002.json"
+  },
+  {
+   "numero": 3,
+   "format": "intrus",
+   "theme": "visages",
+   "date": "2026-11-11",
+   "heure": "18:00",
+   "zernio_id": "6af3f87e48c87e886027f3ea",
+   "fichier": "episodes/defi-003.json"
+  },
+  {
+   "numero": 4,
+   "format": "quiz",
+   "theme": "culture G",
+   "date": "2026-11-11",
+   "heure": "20:00",
+   "zernio_id": "6af3f9e110e580b26dc93ad9",
+   "fichier": "episodes/defi-004.json"
+  },
+  {
+   "numero": 1,
+   "format": "fruits",
+   "theme": "Pomme, Banane, Fraise : tromperie + couteau",
+   "date": "2026-11-11",
+   "heure": "18:00",
+   "zernio_id": "6af4503581ff350489383494",
+   "fichier": "episodes/fruits-001.json",
+   "remplace": "defi-003 (intrus visages)"
+  },
+  {
+   "numero": 5,
+   "format": "quiz",
+   "theme": "géographie",
+   "date": "2026-11-12",
+   "heure": "10:00",
+   "zernio_id": "6af5496e620d757196432eb6",
+   "fichier": "episodes/defi-005.json"
+  },
+  {
+   "numero": 6,
+   "format": "indices",
+   "theme": "animal (éléphant)",
+   "date": "2026-11-12",
+   "heure": "12:00",
+   "zernio_id": "6af5446a9986967fd7c8a420",
+   "fichier": "episodes/defi-006.json"
+  },
+  {
+   "numero": 7,
+   "format": "indices",
+   "theme": "pays (Brésil)",
+   "date": "2026-11-12",
+   "heure": "18:00",
+   "zernio_id": "6af5446a0d22a17f804266fa",
+   "fichier": "episodes/defi-007.json"
+  },
+  {
+   "numero": 8,
+   "format": "quiz",
+   "theme": "vrai ou faux",
+   "date": "2026-11-12",
+   "heure": "20:00",
+   "zernio_id": "6af5496f0841d8cf51d70b07",
+   "fichier": "episodes/defi-008.json"
+  },
+  {
+   "numero": 9,
+   "format": "quiz",
+   "theme": "nostalgie années 2000",
+   "date": "2026-11-13",
+   "heure": "10:00",
+   "zernio_id": "6af69b24835da144f43db6ef",
+   "fichier": "episodes/defi-009.json"
+  },
+  {
+   "numero": 10,
+   "format": "indices",
+   "theme": "plat (pizza)",
+   "date": "2026-11-13",
+   "heure": "12:00",
+   "zernio_id": "6af69b255f376f70c3d71495",
+   "fichier": "episodes/defi-010.json"
+  },
+  {
+   "numero": 11,
+   "format": "indices",
+   "theme": "pays (Canada)",
+   "date": "2026-11-13",
+   "heure": "18:00",
+   "zernio_id": "6af69b2653dc5d8f0e31490d",
+   "fichier": "episodes/defi-011.json"
+  },
+  {
+   "numero": 12,
+   "format": "quiz",
+   "theme": "culture G",
+   "date": "2026-11-13",
+   "heure": "20:00",
+   "zernio_id": "6af69b26835da144f43db6fa",
+   "fichier": "episodes/defi-012.json"
+  },
+  {
+   "numero": 1,
+   "format": "bataille",
+   "theme": "16 PAYS, 1 SEUL SURVIVANT (monde)",
+   "gagnant": "Espagne",
+   "graine": 58,
+   "date": "2026-11-14",
+   "heure": "10:00",
+   "zernio_id": "6af7e7ba5a9b95079ae64cfa",
+   "fichier": "episodes/bataille-001.json"
+  },
+  {
+   "numero": 1,
+   "format": "tupreferes",
+   "theme": "ta vie",
+   "date": "2026-11-14",
+   "heure": "12:00",
+   "zernio_id": "6af7f0aa44735e3eac4de87d",
+   "fichier": "episodes/tp-001.json"
+  },
+  {
+   "numero": 2,
+   "format": "bataille",
+   "theme": "QUEL PAYS D'AFRIQUE GAGNE ?",
+   "gagnant": "Maroc",
+   "graine": 22,
+   "date": "2026-11-14",
+   "heure": "18:00",
+   "zernio_id": "6af7e7bb6e11e24530f17f98",
+   "fichier": "episodes/bataille-002.json"
+  },
+  {
+   "numero": 2,
+   "format": "tupreferes",
+   "theme": "bouffe",
+   "date": "2026-11-14",
+   "heure": "20:00",
+   "zernio_id": "6af7f354c9a10a0d59dfde44",
+   "fichier": "episodes/tp-002.json",
+   "annule": "14/11 17h : Fio a écrit « C'est nul » à 13h sans préciser ; remplacé par bataille-003 (Tu préfères #1 = 85 vues TikTok en 1 h, bataille #1 = 229 en 3 h)"
+  },
+  {
+   "numero": 3,
+   "format": "bataille",
+   "theme": "EUROPE : QUI SURVIT ?",
+   "gagnant": "Grèce",
+   "graine": 46,
+   "date": "2026-11-14",
+   "heure": "20:00",
+   "zernio_id": "6af885d5474f3c769be325a9",
+   "fichier": "episodes/bataille-003.json"
+  }
+ ],
+ "fruits_next": 2,
+ "film_next": 2,
+ "tp_next": 3,
+ "bataille_next": 4,
+ "parallel_series": [
+  {
+   "slot": "20:00",
+   "series": "le-phare",
+   "series_file": "series/le-phare.md",
+   "prefix": "phare",
+   "episode_count": 3,
+   "next_episode": 3,
+   "ambiance": "bleu"
+  }
+ ],
+ "cycle2": "18/11 au 20/11 : La Coupure 10h, Le Tunnel 12h, Chambre neuf 18h, Le Ferry 20h. Le 21/11 : 4 nouvelles séries.",
+ "gta6": {
+  "slots": [
+   "08:00",
+   "09:00"
+  ],
+  "note": "Clips GTA 6 en plus des 4 séries (demande de Fio, 19/11). Voir ROUTINE.md § 1 ter.",
+  "deja_traite": [
+   "sortie 19/11, prix, taille, plateformes, PC, pack Vintage Vice City (gta6-01)",
+   "13 ans d'attente, reports (gta6-02)",
+   "Lucia edit, captures (gta6-edit-02)",
+   "Jason edit, captures (gta6-edit-03, 21/11 8h, Trap Bells)",
+   "Vice City edit, captures (gta6-edit-04, 21/11 9h, Miami Trap)",
+   "Leonida (Keys, marais, Ambrosia, Port Gellhorn, Kalaga), captures (gta6-edit-05, 22/11 8h, Miami Trap)",
+   "Persos secondaires (Boobie, Brian, Real Dimez, Raul, DreQuan, Cal), captures (gta6-edit-06, 22/11 9h, Trap Bells)",
+   "Action de la bande-annonce (poursuites, explosions, braquages), extraits (gta6-edit-07, 23/11 8h, Trap Bells)",
+   "Jason & Lucia en duo, captures (gta6-edit-08, 23/11 9h, Miami Trap)"
+  ],
+  "format": "edit (vraies images officielles, sans voix, vrai morceau CC BY-SA) depuis le 20/11",
+  "next_edit": 9,
+  "note_19_11": "Fio 19/11 : beat maison NUL, edit bande-annonce de 8h annulé, garder Lucia edit. Musique = vrais morceaux Creative Commons."
+ },
+ "previous_parallel_series": [
+  "la-coupure",
+  "le-tunnel",
+  "chambre-neuf",
+  "le-ferry",
+  {
+   "slot": "12:00",
+   "series": "le-voisin",
+   "series_file": "series/le-voisin.md",
+   "prefix": "voisin",
+   "episode_count": 3,
+   "next_episode": 2,
+   "arretee": "2026-11-22"
+  },
+  {
+   "slot": "18:00",
+   "series": "le-camping",
+   "series_file": "series/le-camping.md",
+   "prefix": "camping",
+   "episode_count": 3,
+   "next_episode": 2,
+   "arretee": "2026-11-22"
+  },
+  {
+   "slot": "20:00",
+   "series": "l-auberge",
+   "series_file": "series/l-auberge.md",
+   "prefix": "auberge",
+   "episode_count": 3,
+   "next_episode": 2,
+   "arretee": "2026-11-22"
+  },
+  {
+   "slot": "10:00",
+   "series": "le-babyphone",
+   "series_file": "series/le-babyphone.md",
+   "prefix": "baby",
+   "episode_count": 3,
+   "next_episode": 4,
+   "terminee": "2026-11-23"
+  }
+ ],
+ "cycle3": {
+  "dates": "21/11 → 23/11",
+  "nouvelles_series": "24/11"
+ },
+ "variation": {
+  "coupes": {},
+  "dernier_plan": "2026-11-25"
+ }
+}

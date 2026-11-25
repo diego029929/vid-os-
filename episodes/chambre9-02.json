@@ -1,0 +1,128 @@
+{
+ "style": "nuit",
+ "series": "CHAMBRE NEUF",
+ "etiquette": "PARTIE 2",
+ "heure": "03:09:40",
+ "title": "Partie 2 · L'infirmière est devant toi, mais elle appelle de la chambre 9",
+ "caption": "Tu descends aider la Nadia du téléphone (1) ou tu restes avec celle qui est devant toi (2) ? Le plus de votes décide la partie 3 👇 #horreur #histoire #creepy #pourtoi",
+ "vote": "Le plus de votes décide la partie 3",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "NADIA": {
+   "couleur": "#8a6fd1",
+   "cheveux": true
+  }
+ },
+ "lieux": {
+  "hopital": "HÔPITAL · NORMANDIE",
+  "couloir": "ÉTAGE",
+  "escalier": "ESCALIER"
+ },
+ "beats": [
+  {
+   "voice": "Une alerte s'affiche : la chambre neuf appelle à l'*aide*.",
+   "tel": {
+    "type": "notif",
+    "app": "BIPER",
+    "titre": "Chambre 9",
+    "texte": "Appel patient",
+    "heure": "3:09"
+   }
+  },
+  {
+   "voice": "C'est ta première garde de nuit, dans un petit hôpital de Normandie.",
+   "vue": "hopital",
+   "hero": "debout",
+   "hx": 0.6,
+   "flicker": true
+  },
+  {
+   "voice": "Et la dame de la chambre neuf est morte hier soir.",
+   "objet": {
+    "type": "porte"
+   }
+  },
+  {
+   "voice": "Nadia, l'infirmière de nuit, t'a laissé une règle : si la chambre neuf sonne, n'y va jamais seul.",
+   "regle": {
+    "n": 1,
+    "txt": "Chambre 9 sonne ?\nN'y va jamais\nseul"
+   }
+  },
+  {
+   "voice": "Alors, tu montes l'escalier pour réveiller Nadia.",
+   "vue": "escalier",
+   "hero": "marche",
+   "hx": 0.5
+  },
+  {
+   "voice": "En haut, Nadia est assise dans le noir. Elle ne se retourne pas.",
+   "vue": "couloir",
+   "hero": "dos",
+   "hx": 0.7,
+   "persos": [
+    {
+     "nom": "NADIA",
+     "x": 0.35,
+     "etat": "dos"
+    }
+   ],
+   "flicker": true
+  },
+  {
+   "voice": "Elle murmure : je suis déjà descendue voir, et il n'y avait personne.",
+   "vue": "couloir",
+   "hero": "peur",
+   "cadre": "gros",
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Au même moment, ton téléphone sonne : Nadia t'appelle depuis la chambre *neuf*.",
+   "tel": {
+    "type": "appel",
+    "nom": "Nadia",
+    "num": "Chambre 9"
+   }
+  },
+  {
+   "voice": "Au téléphone, Nadia chuchote : attention, la femme à côté de toi n'est pas moi.",
+   "vue": "couloir",
+   "hero": "peur",
+   "hx": 0.7,
+   "persos": [
+    {
+     "nom": "NADIA",
+     "x": 0.35,
+     "etat": "dos"
+    }
+   ],
+   "rouge_lum": true
+  },
+  {
+   "voice": "Devant toi, l'autre Nadia se lève lentement, et tourne enfin la *tête*.",
+   "vue": "couloir",
+   "hero": "peur",
+   "hx": 0.7,
+   "persos": [
+    {
+     "nom": "NADIA",
+     "x": 0.35,
+     "etat": "debout"
+    }
+   ],
+   "ombre": {
+    "x": 0.15
+   },
+   "flicker": true
+  },
+  {
+   "voice": "Tu descends aider la Nadia du téléphone, ou tu restes avec celle qui est devant toi ? Écris #un# ou #deux#.",
+   "choix": {
+    "a": "Descendre à la chambre 9",
+    "b": "Rester avec cette Nadia"
+   }
+  }
+ ]
+}

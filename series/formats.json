@@ -1,0 +1,129 @@
+{
+ "_note": "Catalogue des formats pour la rotation (engine/plan.py). statut : actif | interdit. Les formats 'interdit' ont été jugés nuls par Fio : ne JAMAIS les remettre. Un format peut être ajouté ici (statut actif) : plan.py le teste tout seul.",
+ "formats": {
+  "serie": {
+   "statut": "actif",
+   "moteur": "nuit",
+   "duree": [
+    30,
+    40
+   ],
+   "desc": "Série d'horreur en 3 parties (ROUTINE.md § 1), vote 1/2 à la fin. 1 SEULE série à la fois (22/11, recherche sur les vidéos virales)."
+  },
+  "histoire": {
+   "statut": "actif",
+   "moteur": "nuit",
+   "duree": [
+    25,
+    32
+   ],
+   "desc": "Histoire COMPLÈTE en une vidéo, chute finale (twist) au dernier plan, pas de vote ni de partie 2. Fin = question « T'aurais fait quoi ? »."
+  },
+  "sms": {
+   "statut": "actif",
+   "moteur": "nuit",
+   "duree": [
+    25,
+    40
+   ],
+   "desc": "Histoire racontée par une conversation de téléphone : ≥ 70 % des plans sont des écrans `tel` (sms, appel, notif, localiser, photo), quelques plans décor. Fin sur le dernier message qui glace."
+  },
+  "regles": {
+   "statut": "actif",
+   "moteur": "nuit",
+   "duree": [
+    30,
+    42
+   ],
+   "desc": "« Les 5 règles de… » (veilleur de nuit, résidence, train de nuit…). Chaque règle = carte `regle` puis 1 plan qui la montre. Fin : « Laquelle tu briserais en premier ? Écris le numéro. »"
+  },
+  "pov": {
+   "statut": "actif",
+   "moteur": "nuit",
+   "duree": [
+    12,
+    20
+   ],
+   "desc": "POV très court : 4 à 6 plans, une seule peur, la dernière image renvoie à la première (la vidéo boucle). Pas de vote, pas d'horloge si besoin (`\"horloge\": false`)."
+  },
+  "edit": {
+   "statut": "pause",
+   "moteur": "edit",
+   "duree": [
+    15,
+    20
+   ],
+   "creneaux_fixes": [
+    "08:00",
+    "09:00"
+   ],
+   "desc": "Edit GTA 6 (ROUTINE.md § 1 ter) : vraies images officielles, vrai morceau CC BY / BY-SA, sans voix. Un thème différent à chaque fois.",
+   "pause": "23/11 : Fio « les edits GTA sont vraiment mal faits » → arrêtés jusqu'à ce qu'ils soient refaits proprement (sur le modèle de vrais edits viraux) ET validés par Fio."
+  },
+  "3d": {
+   "statut": "essai",
+   "moteur": "zach3d",
+   "duree": [
+    25,
+    32
+   ],
+   "desc": "Cartoon 3D façon Zack D. Films (skill zach-d-films, ROUTINE.md § 00). EN ESSAI : 1 vidéo par jour livrée à Fio dans /mnt/project-files/essais-3d/, PAS publiée tant que Fio n'a pas dit oui (alors passer statut à actif)."
+  },
+  "intrus": {
+   "statut": "interdit",
+   "desc": "Trouve l'intrus (Fio 11/11 : « vraiment nul »)"
+  },
+  "devine-film": {
+   "statut": "interdit",
+   "desc": "Devine le film en emojis (Fio 11/11 : nul)"
+  },
+  "fruits": {
+   "statut": "interdit",
+   "desc": "Fruits dessinés / films de fruits (Fio : « horribles »)"
+  },
+  "bataille": {
+   "statut": "interdit",
+   "desc": "Bataille de pays (Fio 14/11 : nul)"
+  },
+  "tu-preferes": {
+   "statut": "interdit",
+   "desc": "Tu préfères (Fio 14/11 : nul)"
+  },
+  "quiz": {
+   "statut": "interdit",
+   "desc": "Quiz / 4 indices / vrai-faux (arrêtés le 14/11, Fio a demandé les séries d'horreur)"
+  },
+  "survis": {
+   "statut": "interdit",
+   "desc": "SURVIS ? (arrêté le 10/11)"
+  },
+  "gta-dessin": {
+   "statut": "interdit",
+   "desc": "Clips GTA dessinés avec voix (Fio 19/11 : « pas ça »)"
+  },
+  "realiste": {
+   "statut": "interdit",
+   "desc": "Style réaliste IA (Fio 15/11 : le dessin était mieux)"
+  }
+ },
+ "ambiances": {
+  "_note": "Teinte de l'image des plans décor (engine/nuit.js, champ \"ambiance\" du JSON). Les écrans de téléphone, règles et choix ne changent pas.",
+  "nuit": "violet de nuit (le style d'origine)",
+  "rouge": "tout vire au rouge sang",
+  "vert": "vert maladif (néons, hôpital, forêt)",
+  "bleu": "bleu glacé (hiver, mer, neige)",
+  "sepia": "vieux film jauni (souvenirs, cassettes, maisons anciennes)",
+  "nb": "noir et blanc contrasté (found footage)",
+  "vhs": "cassette VHS : couleurs baveuses, lignes et grain"
+ },
+ "accroches": {
+  "_note": "Type de la 1re phrase + 1er plan (champ \"accroche\" du JSON).",
+  "sms_proche": "1er plan = SMS d'un proche nommé (maman, ton frère…) qui dit quelque chose d'impossible",
+  "appel_inconnu": "1er plan = appel entrant d'un numéro (ou de « Moi »)",
+  "regle_affichee": "1er plan = la règle, puis on la voit déjà enfreinte",
+  "question_directe": "1re phrase = question au spectateur (« Tu ouvrirais à ta propre voix ? »)",
+  "chiffre_heure": "1re phrase = une heure ou un chiffre précis (« Trois heures douze. La porte s'ouvre toute seule. »)",
+  "bruit": "1er plan = objet plein écran + bruitage (toc, vibreur, cassette) avant toute phrase longue",
+  "image_impossible": "1er plan = photo / reflet / localiser qui montre quelque chose d'impossible"
+ }
+}

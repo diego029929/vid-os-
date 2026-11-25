@@ -1,0 +1,73 @@
+{
+ "style": "nuit",
+ "format": "regles",
+ "ambiance": "vert",
+ "accroche": "regle_affichee",
+ "series": "VEILLEUR DE NUIT",
+ "etiquette": "RÈGLES",
+ "heure": "00:00:00",
+ "title": "Les 4 règles du veilleur de nuit de l'hôpital",
+ "caption": "Laquelle tu briserais en premier ? Écris le numéro 👇 #horreur #regles #creepy #pourtoi",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Premier soir comme veilleur de nuit à l'hôpital. Il y a quatre règles.",
+   "vue": "hopital",
+   "hero": "debout"
+  },
+  {
+   "voice": "Règle numéro un : le couloir B reste toujours éteint.",
+   "regle": {
+    "n": 1,
+    "txt": "Le couloir B\nreste éteint"
+   }
+  },
+  {
+   "voice": "Pourtant, à deux heures, la lumière du couloir B *s'allume*.",
+   "vue": "couloir",
+   "hero": "peur",
+   "flicker": true
+  },
+  {
+   "voice": "Règle numéro deux : ne réponds jamais au téléphone de la chambre neuf.",
+   "regle": {
+    "n": 2,
+    "txt": "Ne réponds jamais\nà la chambre 9"
+   }
+  },
+  {
+   "voice": "La chambre neuf est vide depuis dix ans. Et le téléphone sonne.",
+   "tel": {
+    "type": "appel",
+    "nom": "Chambre 9",
+    "num": "poste 109"
+   }
+  },
+  {
+   "voice": "Règle numéro trois : si une infirmière te demande ton prénom, mens.",
+   "regle": {
+    "n": 3,
+    "txt": "Une infirmière demande\nton prénom ? Mens."
+   }
+  },
+  {
+   "voice": "Règle numéro quatre : à cinq heures, ne regarde jamais dans le miroir.",
+   "regle": {
+    "n": 4,
+    "txt": "À 5 h, ne regarde\npas le miroir"
+   }
+  },
+  {
+   "voice": "Laquelle tu briserais en premier ? Écris le numéro.",
+   "vue": "sdb",
+   "hero": "dos",
+   "reflet": true,
+   "ombre": {
+    "x": 0.7
+   }
+  }
+ ],
+ "texte_accroche": "Ne fais jamais ce boulot de nuit 🏥"
+}

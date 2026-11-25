@@ -1,0 +1,765 @@
+{
+ "series": "JACQUES A DIT",
+ "day": 1,
+ "subtitle": "PARTIE 6",
+ "clock_start": 21300,
+ "style": 2,
+ "counter_label": "VOIX DERRIÈRE TOI",
+ "counter_start": 0,
+ "mood": "bleu",
+ "title": "Partie 6 · Ne te retourne pas : derrière toi, la voix de Théo t'appelle",
+ "caption": "Léa retourne chercher Théo ce soir. Tu joues avec elle (A) ou tu restes avec ta grand-mère (B) ? Le plus de votes décide la suite 👇 (Partie 5 : pas assez de votes, le hasard a choisi Léa.) #horreur #histoire #saintmalo #bretagne",
+ "beats": [
+  {
+   "scene": "jad_clocher",
+   "text": "LES HAUT-PARLEURS : « JACQUES A DIT : À L'AUBE, QUITTE LE VILLAGE DES DISPARUS AVEC UNE SEULE *PERSONNE*. »",
+   "params": {
+    "hour": 6,
+    "red": true
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "HIER SOIR, JACQUES VOULAIT PRENDRE TA GRAND-MÈRE. TU AS PRIS SA PLACE.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "params": {
+    "n": 3
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "TE VOILÀ DANS LE VILLAGE DES DISPARUS. LE CIEL EST *ROUGE*.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide",
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "n": 4
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_jacques",
+   "text": "ICI, JACQUES COMMANDE : UN HOMME SANS VISAGE.",
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "RÈGLE NUMÉRO UN : SI L'ORDRE COMMENCE PAR « JACQUES A DIT », TU *OBÉIS*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 1,
+    "text": "« JACQUES A DIT » : TU OBÉIS."
+   },
+   "params": {
+    "n": 4
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "RÈGLE NUMÉRO DEUX : SANS « JACQUES A DIT », TU NE LE FAIS *PAS*.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "side"
+   },
+   "rule": {
+    "n": 2,
+    "text": "SANS « JACQUES A DIT » : TU NE LE FAIS PAS."
+   },
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "TU CHOISIS LÉA, TA VOISINE, POUR RENTRER AVEC TOI.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ],
+    "expr": "scared"
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "SON PETIT FRÈRE THÉO A DIT SON PROPRE PRÉNOM. ICI, ÇA TRANSFORME EN *OMBRE*.",
+   "params": {
+    "shadow": true
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_mains",
+   "text": "TU PRENDS LA MAIN DE LÉA. DANS L'ÉGLISE DES DISPARUS, LA SORTIE S'OUVRE.",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_passage",
+   "text": "LES HAUT-PARLEURS : « JACQUES A DIT : NE VOUS RETOURNEZ JAMAIS, SINON VOUS RESTEZ ICI. »",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 3,
+    "text": "NE VOUS RETOURNEZ JAMAIS."
+   },
+   "params": {
+    "n": 4
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_passage",
+   "text": "DANS LE COULOIR, DES OMBRES TENDENT LES BRAS.",
+   "params": {
+    "n": 6,
+    "voix": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "DERRIÈRE VOUS, UNE VOIX D'ENFANT : « ATTENDS-*MOI* ! »",
+   "params": {
+    "of": "jad_passage",
+    "light": [
+     255,
+     60,
+     50
+    ]
+   },
+   "count": 1,
+   "mood": "rouge",
+   "shake": 3,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_passage",
+   "text": "C'EST LA VOIX DE THÉO. OU JACQUES QUI L'*IMITE*.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide",
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "n": 5
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_passage",
+   "text": "L'ORDRE ÉTAIT CLAIR : NE VOUS RETOURNEZ JAMAIS. TU REGARDES DEVANT TOI.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 3,
+    "text": "NE VOUS RETOURNEZ JAMAIS."
+   },
+   "params": {
+    "n": 5
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LA VOIX : « LÉA, RETOURNE-TOI. JUSTE UNE *FOIS*. »",
+   "params": {
+    "of": "jad_passage",
+    "light": [
+     255,
+     60,
+     50
+    ]
+   },
+   "count": 2,
+   "shake": 3,
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_passage",
+   "text": "LÉA PLEURE : « C'EST MON FRÈRE... »",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ],
+    "expr": "scared"
+   },
+   "params": {
+    "n": 3
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_mains",
+   "text": "LÉA RALENTIT. ELLE VA SE RETOURNER.",
+   "params": {
+    "shadow": true
+   },
+   "count": 3,
+   "shake": 4,
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_passage",
+   "text": "TU LA TIRES : « IL N'A PAS DIT JACQUES A DIT. NE LE FAIS *PAS* ! »",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "params": {
+    "n": 6
+   },
+   "shake": 4,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_passage",
+   "text": "VOUS SORTEZ SANS VOUS RETOURNER. DERRIÈRE, LA VOIX *HURLE*.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 2,
+    "text": "SANS « JACQUES A DIT » : TU NE LE FAIS PAS."
+   },
+   "params": {
+    "n": 6,
+    "voix": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_remparts",
+   "text": "L'AUBE SUR SAINT-MALO. VOUS ÊTES CHEZ LES VIVANTS.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "wide"
+   },
+   "params": {
+    "aube": true
+   },
+   "mood": "bleu",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_maison",
+   "text": "TA GRAND-MÈRE T'ATTEND DEVANT SA *MAISON*.",
+   "params": {
+    "aube": true,
+    "open": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "SUR L'ÉGLISE, LES MÊMES HAUT-PARLEURS. LE JEU RECOMMENCE CE SOIR À *MINUIT*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "aube": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "ILS ANNONCENT : « JOUE TOUTE LA NUIT POUR UNE OMBRE, ET ELLE REVIENDRA. »",
+   "params": {
+    "n": 1
+   },
+   "mood": "noir",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "MAIS L'ANNONCE NE COMMENCE PAS PAR « JACQUES A DIT ». C'EST PEUT-ÊTRE UN *PIÈGE*.",
+   "params": {
+    "hour": 6,
+    "aube": true,
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "LÉA : « CE SOIR, JE JOUE POUR THÉO. TU JOUES AVEC MOI ? »",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ],
+    "expr": "wide"
+   },
+   "params": {
+    "aube": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_maison",
+   "text": "SI TU JOUES ET QUE TU RATES UN ORDRE, TU DEVIENS UNE OMBRE.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "params": {
+    "aube": true
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_remparts",
+   "text": "SI TU RESTES, LÉA JOUE SEULE. ET ELLE PEUT Y RESTER.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "aube": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "A : TU JOUES AVEC LÉA. B : TU RESTES AVEC TA GRAND-MÈRE.",
+   "choice": {
+    "a": "JOUER AVEC LÉA",
+    "b": "RESTER"
+   },
+   "text_y": 0.2,
+   "dur": 4.0,
+   "params": {
+    "aube": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_place",
+   "text": "LE PLUS DE VOTES DÉCIDE LA SUITE. ÉCRIS A OU B EN *COMMENTAIRE*.",
+   "voice": "LE PLUS DE VOTES DÉCIDE LA SUITE. ÉCRIS TON CHOIX EN COMMENTAIRE.",
+   "choice": {
+    "a": "JOUER AVEC LÉA",
+    "b": "RESTER",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.6,
+   "params": {
+    "aube": true
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_jacques",
+   "text": "ABONNE-TOI POUR NE PAS RATER LA *SUITE*.",
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  }
+ ]
+}

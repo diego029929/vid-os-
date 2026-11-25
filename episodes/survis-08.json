@@ -1,0 +1,584 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°8",
+ "clock_start": 82800,
+ "title": "SURVIS ? N°8 · L'enfant dit qu'un monsieur est sous son lit. Tu regardes ?",
+ "caption": "Tu gardes un enfant à Lille et il dit qu'un monsieur est sous son lit. Tu regardes ? 👇 SURVIS ? N°8 #survie #horreur #lille #histoire",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "flou",
+   "text": "TU AS TOUT DÉBRANCHÉ. ÇA A SONNÉ QUAND MÊME.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "of": "porte",
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "PRESQUE PERSONNE NE SORT *VIVANT* DE CETTE MAISON.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "chambre",
+   "text": "LILLE, ONZE HEURES DU SOIR. TU GARDES LE PETIT LÉO.",
+   "char": {
+    "pose": "sit",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "expr": "normal",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "lamp": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "cuisine",
+   "text": "SUR LE FRIGO, UN MOT DE SES PARENTS.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "fridge": false
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« S'IL PARLE D'UN MONSIEUR SOUS SON LIT, NE REGARDE PAS. ALLUME LE *COULOIR*. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LÉO T'APPELLE : « IL Y A UN MONSIEUR SOUS MON LIT. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     90,
+     200,
+     120
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     120,
+     200
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LÉO CHUCHOTE : « IL DIT QU'IL VEUT TE VOIR. »",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     90,
+     200,
+     120
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU ALLUMES LE COULOIR, OU TU REGARDES SOUS LE *LIT* ?",
+   "choice": {
+    "a": "ALLUMER LE COULOIR",
+    "b": "REGARDER SOUS LE LIT"
+   },
+   "dur": 2.8,
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ÉCRIS VITE TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "ALLUMER LE COULOIR",
+    "b": "REGARDER SOUS LE LIT",
+    "countdown": 3
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU TE PENCHES SOUS LE LIT.",
+   "choice": {
+    "a": "ALLUMER LE COULOIR",
+    "b": "REGARDER SOUS LE LIT",
+    "picked": "B"
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "DES MAINS NOIRES T'ATTRAPENT LE COU.",
+   "char": {
+    "pose": "face",
+    "expr": "none",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     25,
+     25,
+     30
+    ]
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "shake": 6,
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "flou",
+   "text": "TU COURS ALLUMER LE COULOIR.",
+   "choice": {
+    "a": "ALLUMER LE COULOIR",
+    "b": "REGARDER SOUS LE LIT",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "couloir",
+   "text": "LA LUMIÈRE S'ALLUME. LE SILENCE REVIENT.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "long": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "À MINUIT, SES PARENTS RENTRENT.",
+   "params": {
+    "seed": 5
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LA MÈRE SOURIT : « LÉO DORT CHEZ SA GRAND-MÈRE CE SOIR. »",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     200,
+     60,
+     90
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ALORS QUI DORT DANS LA CHAMBRE ?",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "shake": 3,
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU RETOURNES DANS LA CHAMBRE, OU TU T'EN *VAS* ?",
+   "choice": {
+    "a": "Y RETOURNER",
+    "b": "T'EN ALLER"
+   },
+   "dur": 2.8,
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LE *N°9*.",
+   "choice": {
+    "a": "Y RETOURNER",
+    "b": "T'EN ALLER"
+   },
+   "dur": 3.2,
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "params": {
+    "moon": [
+     0.3,
+     0.2
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "type": "film",
+ "title": "Il reçoit des SMS envoyés par lui-même… depuis demain 📱🍐",
+ "caption": "Nico reçoit des messages de lui-même… envoyés depuis demain 📱🍐\nTu aurais ouvert la porte ? 👇\n#fruits #histoire #film #suspense #pourtoi",
+ "hook": "IL REÇOIT DES SMS DE DEMAIN",
+ "cast": {
+  "nico": {
+   "fruit": "poire",
+   "nom": "Nico",
+   "voix": "homme1",
+   "look": "a young man with short brown hair wearing a black sweater and jeans"
+  },
+  "samia": {
+   "fruit": "fraise",
+   "nom": "Samia",
+   "voix": "femme1",
+   "look": "a young woman with long dark hair wearing a white blouse"
+  },
+  "buraliste": {
+   "fruit": "orange",
+   "nom": "Buraliste",
+   "voix": "homme2",
+   "look": "a chubby middle-aged man with a grey cardigan"
+  },
+  "patron": {
+   "fruit": "pomme",
+   "nom": "Patron",
+   "voix": "grave",
+   "look": "a single older businessman with grey hair wearing a dark navy suit and red tie, seen from a distance"
+  }
+ },
+ "shots": [
+  {
+   "who": "nico",
+   "text": "Attends. Ce message vient de moi. Et il est daté de demain.",
+   "emo": "surpris",
+   "lieu": "in a small Paris bedroom in the morning, unmade bed",
+   "action": "holding a smartphone",
+   "sfx": "dun",
+   "seed": 1
+  },
+  {
+   "who": "nico",
+   "text": "Il dit : ne prends surtout pas le bus de huit heures.",
+   "emo": "peur",
+   "lieu": "in a small Paris bedroom in the morning",
+   "action": "looking at a smartphone"
+  },
+  {
+   "who": "samia",
+   "text": "Nico, t'as vu ? Le bus de huit heures a pris feu sur l'autoroute !",
+   "emo": "surpris",
+   "lieu": "in a bright open space office with computers"
+  },
+  {
+   "who": "nico",
+   "text": "Ouais. Je sais.",
+   "voice": "Ouais, ouais. Je sais.",
+   "emo": "malin",
+   "lieu": "in a bright open space office with computers"
+  },
+  {
+   "who": "nico",
+   "text": "Nouveau message : joue le sept, le quatorze et le trente-deux.",
+   "emo": "surpris",
+   "lieu": "on a Paris street with cafes",
+   "action": "holding a smartphone"
+  },
+  {
+   "who": "buraliste",
+   "text": "Monsieur, vous avez les trois bons numéros. C'est le gros lot !",
+   "emo": "surpris",
+   "lieu": "inside a small French tobacco shop behind the counter, lottery tickets"
+  },
+  {
+   "who": "nico",
+   "text": "Je le savais depuis hier.",
+   "emo": "content",
+   "lieu": "inside a small French tobacco shop",
+   "action": "holding a lottery ticket"
+  },
+  {
+   "who": "patron",
+   "text": "Nico, comment tu fais pour avoir toujours raison ?",
+   "emo": "surpris",
+   "lieu": "standing in a luxury office with big windows over Paris",
+   "seed": 3
+  },
+  {
+   "who": "nico",
+   "text": "Disons que je vois un peu l'avenir.",
+   "emo": "malin",
+   "lieu": "in a luxury office with big windows over Paris",
+   "action": "wearing a new suit"
+  },
+  {
+   "who": "patron",
+   "text": "Alors à partir de demain, c'est toi le directeur.",
+   "emo": "content",
+   "lieu": "standing in a luxury office with big windows over Paris",
+   "seed": 3
+  },
+  {
+   "who": "nico",
+   "text": "Une semaine. Il m'a fallu une seule semaine pour tout avoir.",
+   "emo": "content",
+   "lieu": "in a huge luxury apartment living room at night, leather sofa, chandelier",
+   "action": "sitting on a sofa"
+  },
+  {
+   "who": "nico",
+   "text": "Encore un message. Mais celui-là est bizarre.",
+   "emo": "peur",
+   "lieu": "in a huge luxury apartment at night, dim light",
+   "action": "looking at a smartphone"
+  },
+  {
+   "who": "nico",
+   "text": "Il dit : surtout, n'ouvre pas la porte.",
+   "emo": "peur",
+   "lieu": "in a huge luxury apartment at night, dim light",
+   "action": "looking at a smartphone",
+   "sfx": "dun"
+  },
+  {
+   "who": "nico",
+   "text": "Qui est là, à cette heure-ci ?",
+   "emo": "peur",
+   "lieu": "in a dark apartment hallway at night facing the front door",
+   "sfx": "knock"
+  },
+  {
+   "who": "nico",
+   "off": true,
+   "text": "C'est moi, Nico. Ouvre. Il faut que je te parle de demain.",
+   "lieu": "a closed wooden apartment front door at night, light under the door, dark and mysterious",
+   "sfx": "dun"
+  }
+ ],
+ "end": "À SUIVRE…",
+ "end_sub": "TU AURAIS OUVERT ?"
+}

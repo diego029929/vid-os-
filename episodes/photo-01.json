@@ -1,0 +1,292 @@
+{
+ "series": "LA PHOTO",
+ "day": 1,
+ "subtitle": "PARTIE 1",
+ "style": 2,
+ "clock_start": 36000,
+ "mood": "bleu",
+ "counter_label": null,
+ "title": "Partie 1 · Une inconnue sur toutes les photos de ta soirée",
+ "caption": "Sur toutes tes photos, une fille que personne n'a invitée… Tu effaces la photo (A) ou tu demandes à Mamie qui elle est (B) ? Le plus de votes décide la partie 2 👇 #horreur #histoire #creepy #pourtoi",
+ "beats": [
+  {
+   "scene": "pho_photo",
+   "text": "SUR TOUTES LES PHOTOS DE TA FÊTE, UNE INCONNUE QUE PERSONNE N'A *INVITÉE*.",
+   "voice": "Sur toutes les photos de ta fête, il y a une inconnue que personne n'a invitée.",
+   "params": {
+    "fille": true,
+    "where": "fond",
+    "date": "14 NOV. · 23:12"
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.16
+    ]
+   }
+  },
+  {
+   "scene": "pho_maison",
+   "text": "TU AS FÊTÉ TES DIX-HUIT ANS CHEZ TA GRAND-MÈRE, EN *BRETAGNE*.",
+   "voice": "Tu as fêté tes dix-huit ans chez ta grand-mère, en Bretagne.",
+   "params": {
+    "fete": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "cuisine",
+   "text": "CE MATIN, TA COUSINE JADE REGARDE LES PHOTOS AVEC TOI.",
+   "voice": "Ce matin, ta cousine Jade regarde les photos avec toi.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.62,
+     0.22
+    ],
+    "hoodie": [
+     60,
+     160,
+     120
+    ],
+    "expr": "side"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.18
+    ]
+   }
+  },
+  {
+   "scene": "pho_photo",
+   "text": "PHOTO 1 : UNE FILLE EN ROBE BLANCHE, TOUT AU FOND DU *JARDIN*.",
+   "voice": "Première photo : une fille en robe blanche, au fond du jardin.",
+   "params": {
+    "fille": true,
+    "where": "fond"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.2
+    ],
+    "x": [
+     0.46,
+     0.56
+    ]
+   }
+  },
+  {
+   "scene": "pho_photo",
+   "text": "PHOTO 2 : SON VISAGE EST COLLÉ À LA FENÊTRE DE TA *CHAMBRE*.",
+   "voice": "Deuxième photo : son visage est collé à la fenêtre de ta chambre.",
+   "params": {
+    "fille": true,
+    "where": "fenetre"
+   },
+   "cam": {
+    "z": [
+     1.06,
+     1.22
+    ],
+    "y": [
+     0.46,
+     0.4
+    ]
+   }
+  },
+  {
+   "scene": "pho_photo",
+   "text": "PHOTO 3 : ELLE EST DERRIÈRE JADE, LA MAIN SUR SON *ÉPAULE*.",
+   "voice": "Troisième photo : elle est derrière Jade, la main sur son épaule.",
+   "params": {
+    "fille": true,
+    "where": "epaule"
+   },
+   "mood": "rouge",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.2,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "pho_maison",
+   "text": "PAR LA FENÊTRE, UNE SILHOUETTE BLANCHE TRAVERSE LE *JARDIN*.",
+   "voice": "Par la fenêtre, une silhouette blanche traverse le jardin.",
+   "params": {
+    "fete": false,
+    "dark": true
+   },
+   "meteo": "pluie",
+   "eclair": true,
+   "passant": {
+    "y": 0.86,
+    "h": 0.24,
+    "sens": -1
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.18
+    ]
+   }
+  },
+  {
+   "scene": "salon",
+   "text": "MAMIE : « NE PRENDS PLUS DE *PHOTO*, ELLE SE RAPPROCHE ! »",
+   "voice": "Ta grand-mère voit les photos. Elle a peur : ne prends plus de photo, elle se rapproche !",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.62,
+     0.22
+    ],
+    "hoodie": [
+     150,
+     150,
+     165
+    ],
+    "expr": "wide",
+    "parle": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.14
+    ]
+   }
+  },
+  {
+   "scene": "cuisine",
+   "text": "JADE CROIT À UNE BLAGUE : « ALLEZ, UN *SELFIE* ! »",
+   "voice": "Jade croit à une blague : allez, un selfie, juste nous deux !",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.62,
+     0.22
+    ],
+    "hoodie": [
+     60,
+     160,
+     120
+    ],
+    "expr": "normal",
+    "parle": true
+   },
+   "cam": {
+    "z": [
+     1.06,
+     1.2
+    ]
+   }
+  },
+  {
+   "scene": "pho_photo",
+   "text": "SUR L'ÉCRAN, LA FILLE EST ENTRE VOUS DEUX. ET ELLE *SOURIT*.",
+   "voice": "Sur l'écran, la fille est entre vous deux. Et cette fois, elle sourit.",
+   "params": {
+    "fille": true,
+    "where": "milieu"
+   },
+   "rule": {
+    "n": 1,
+    "text": "NE PRENDS PLUS DE PHOTO."
+   },
+   "sfx": [
+    [
+     "glitch",
+     0,
+     0.6
+    ]
+   ],
+   "glitch": 0.12,
+   "shake": 3,
+   "mood": "noir",
+   "cam": {
+    "z": [
+     1.02,
+     1.22
+    ]
+   }
+  },
+  {
+   "scene": "pho_photo",
+   "text": "A : TU EFFACES LA PHOTO. B : TU DEMANDES À MAMIE QUI ELLE EST.",
+   "choice": {
+    "a": "EFFACER",
+    "b": "DEMANDER"
+   },
+   "text_y": 0.2,
+   "dur": 4.6,
+   "mood": "rouge",
+   "no_whip": true,
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ]
+   },
+   "params": {
+    "fille": true,
+    "where": "milieu"
+   }
+  },
+  {
+   "scene": "pho_photo",
+   "text": "LE PLUS DE VOTES DÉCIDE LA PARTIE DEUX. ÉCRIS TON CHOIX EN *COMMENTAIRE*.",
+   "voice": "Le plus de votes décide la partie deux. Écris ton choix en commentaire.",
+   "choice": {
+    "a": "EFFACER",
+    "b": "DEMANDER",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.6,
+   "mood": "rouge",
+   "no_whip": true,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ]
+   },
+   "params": {
+    "fille": true,
+    "where": "milieu"
+   }
+  }
+ ]
+}

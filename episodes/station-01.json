@@ -1,0 +1,291 @@
+{
+ "series": "LA STATION",
+ "day": 1,
+ "subtitle": "PARTIE 1",
+ "style": 2,
+ "clock_start": 10800,
+ "mood": "bleu",
+ "counter_label": null,
+ "title": "Partie 1 · La station-service où une voix connaît ton prénom",
+ "caption": "Une voix t'appelle par ton prénom… c'est celle de ta mère. Tu te retournes (A) ou tu cours (B) ? Le plus de votes décide la partie 2 👇 #horreur #histoire #creepy #pourtoi",
+ "beats": [
+  {
+   "scene": "telephone",
+   "text": "TROIS HEURES DU MATIN. UN MESSAGE : « NE T'ARRÊTE PAS À LA *STATION*. »",
+   "voice": "Trois heures du matin. Un message s'affiche : ne t'arrête pas à la station.",
+   "params": {
+    "mode": "lock",
+    "time": "03:00",
+    "date": "SAMEDI 15 NOVEMBRE",
+    "notif": [
+     "INCONNU",
+     "NE T'ARRÊTE PAS À LA STATION."
+    ]
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.16
+    ]
+   }
+  },
+  {
+   "scene": "voiture",
+   "text": "TU ROULES SEUL EN PLEINE CAMPAGNE. LE VOYANT D'ESSENCE CLIGNOTE.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.62,
+     0.22
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "side"
+   },
+   "meteo": "pluie",
+   "cam": {
+    "z": [
+     1.04,
+     1.18
+    ]
+   }
+  },
+  {
+   "scene": "station",
+   "text": "UNE SEULE STATION EST OUVERTE. TOUTES LES LUMIÈRES SONT ALLUMÉES.",
+   "meteo": "pluie",
+   "eclair": true,
+   "cam": {
+    "z": [
+     1.18,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "station",
+   "text": "TU FAIS LE PLEIN. LE COMPTEUR TOURNE PLUS VITE QUE LA NORMALE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.55,
+     0.18
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "meteo": "pluie",
+   "cam": {
+    "z": [
+     1.04,
+     1.16
+    ],
+    "x": [
+     0.46,
+     0.54
+    ]
+   }
+  },
+  {
+   "scene": "supermarche",
+   "text": "DANS LA BOUTIQUE, PERSONNE. JUSTE UNE AFFICHE SUR LA CAISSE.",
+   "cam": {
+    "z": [
+     1.04,
+     1.2
+    ]
+   }
+  },
+  {
+   "scene": "papier",
+   "text": "« SI ON T'APPELLE PAR TON PRÉNOM, NE RÉPONDS *JAMAIS*. »",
+   "voice": "Si quelqu'un t'appelle par ton prénom, surtout, ne réponds jamais.",
+   "params": {
+    "title": "AVIS",
+    "lines": [
+     "SI ON T'APPELLE",
+     "PAR TON PRÉNOM,",
+     "NE RÉPONDS JAMAIS."
+    ],
+    "wall": "carrelage"
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.14
+    ]
+   }
+  },
+  {
+   "scene": "supermarche",
+   "text": "AU BOUT DU RAYON, QUELQU'UN PASSE. IL MARCHE EXACTEMENT COMME TOI.",
+   "passant": {
+    "y": 0.62,
+    "h": 0.26
+   },
+   "mood": "rouge",
+   "cam": {
+    "z": [
+     1.06,
+     1.2
+    ]
+   }
+  },
+  {
+   "scene": "supermarche",
+   "text": "DERRIÈRE TOI, UNE VOIX DOUCE DIT TON *PRÉNOM*.",
+   "char": {
+    "pose": "face",
+    "head": [
+     0.5,
+     0.4,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "expr": "scared"
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "shake": 3,
+   "cam": {
+    "z": [
+     1.04,
+     1.2
+    ]
+   }
+  },
+  {
+   "scene": "supermarche",
+   "text": "C'EST LA VOIX DE TA MÈRE.",
+   "voice": "Tu la reconnais. C'est la voix de ta mère.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.55,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 1,
+    "text": "SI ON T'APPELLE PAR TON PRÉNOM, NE RÉPONDS JAMAIS."
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.24
+    ]
+   }
+  },
+  {
+   "scene": "telephone",
+   "text": "TON TÉLÉPHONE VIBRE. C'EST ELLE : « JE DORS, TOUT VA BIEN ? »",
+   "voice": "Ton téléphone vibre. C'est ta mère qui écrit : je dors, tout va bien ?",
+   "params": {
+    "mode": "chat",
+    "contact": "MAMAN",
+    "messages": [
+     [
+      "lui",
+      "Je dors. Tout va bien ?"
+     ]
+    ]
+   },
+   "sfx": [
+    [
+     "glitch",
+     0,
+     0.5
+    ]
+   ],
+   "glitch": 0.12,
+   "cam": {
+    "z": [
+     1.02,
+     1.16
+    ]
+   }
+  },
+  {
+   "scene": "supermarche",
+   "text": "A : TU TE RETOURNES. B : TU COURS À LA VOITURE.",
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "COURIR"
+   },
+   "text_y": 0.2,
+   "dur": 4.0,
+   "mood": "rouge",
+   "no_whip": true,
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ]
+   }
+  },
+  {
+   "scene": "supermarche",
+   "text": "LE PLUS DE VOTES DÉCIDE LA PARTIE DEUX. ÉCRIS TON CHOIX EN *COMMENTAIRE*.",
+   "voice": "Le plus de votes décide la partie deux. Écris ton choix en commentaire.",
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "COURIR",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.6,
+   "mood": "rouge",
+   "no_whip": true,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ]
+   }
+  }
+ ]
+}

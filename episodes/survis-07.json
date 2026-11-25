@@ -1,0 +1,594 @@
+{
+ "series": "SURVIS ?",
+ "day": 1,
+ "subtitle": "N°7",
+ "clock_start": 3600,
+ "title": "SURVIS ? N°7 · Il te demande l'heure pour la 3e fois. Tu réponds ?",
+ "caption": "Le même homme te demande l'heure trois fois dans le brouillard. Tu réponds ou tu te tais ? 👇 SURVIS ? N°7 #survie #horreur #nantes #histoire",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "flou",
+   "text": "TU T'ES CACHÉ. AU MATIN, TON SAC ÉTAIT SUR LE PAILLASSON.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "of": "porte",
+    "light": [
+     170,
+     110,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "LE PIRE, CE SERA LA TROISIÈME *QUESTION*.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "rue",
+   "text": "NANTES, UNE HEURE DU MATIN. UN BROUILLARD ÉPAIS SUR LES QUAIS.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "seed": 7
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "UN HOMME SORT DU BROUILLARD : « VOUS AVEZ L'HEURE ? »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     90,
+     90,
+     105
+    ]
+   },
+   "params": {
+    "light": [
+     150,
+     200,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU RÉPONDS : « UNE HEURE. » IL REPART.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "rue",
+   "text": "CENT MÈTRES PLUS LOIN, LE MÊME HOMME : « VOUS AVEZ L'HEURE ? »",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "normal",
+    "hoodie": [
+     90,
+     90,
+     105
+    ]
+   },
+   "params": {
+    "seed": 3
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "UNE AFFICHE DIT : « S'IL DEMANDE L'HEURE TROIS FOIS, NE RÉPONDS *PLUS*. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "of": "porte",
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TROISIÈME FOIS : « VOUS AVEZ L'HEURE ? »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     90,
+     90,
+     105
+    ]
+   },
+   "shake": 2,
+   "params": {
+    "light": [
+     120,
+     255,
+     140
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU TE TAIS, OU TU LUI *RÉPONDS* ?",
+   "choice": {
+    "a": "TE TAIRE",
+    "b": "RÉPONDRE"
+   },
+   "dur": 2.8,
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "VITE, ÉCRIS TON CHOIX EN *COMMENTAIRE* !",
+   "choice": {
+    "a": "TE TAIRE",
+    "b": "RÉPONDRE",
+    "countdown": 3
+   },
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU RÉPONDS : « UNE HEURE DIX. »",
+   "choice": {
+    "a": "TE TAIRE",
+    "b": "RÉPONDRE",
+    "picked": "B"
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "IL SOURIT : « MERCI. C'ÉTAIT TA DERNIÈRE HEURE. »",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     90,
+     90,
+     105
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "shake": 5,
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU ES *MORT*.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ],
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "flou",
+   "text": "TU NE DIS RIEN. PAS UN MOT.",
+   "choice": {
+    "a": "TE TAIRE",
+    "b": "RÉPONDRE",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "IL RECULE DANS LE BROUILLARD.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     90,
+     90,
+     105
+    ]
+   },
+   "params": {
+    "of": "rue",
+    "light": [
+     120,
+     140,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "chambre",
+   "text": "CHEZ TOI, L'HORLOGE S'EST ARRÊTÉE À UNE HEURE DIX.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "wide",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "lamp": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "ET L'INTERPHONE SONNE : « VOUS AVEZ L'HEURE ? »",
+   "params": {
+    "seed": 2
+   },
+   "sfx": [
+    [
+     "knock",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU DÉCROCHES L'INTERPHONE, OU TU DÉBRANCHES *TOUT* ?",
+   "choice": {
+    "a": "DÉCROCHER",
+    "b": "TOUT DÉBRANCHER"
+   },
+   "dur": 2.8,
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TON CHOIX ? LA RÉPONSE DANS LE *N°8*.",
+   "choice": {
+    "a": "DÉCROCHER",
+    "b": "TOUT DÉBRANCHER"
+   },
+   "dur": 3.2,
+   "text_y": 0.2,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "ABONNE-TOI POUR NE PAS LA *RATER*.",
+   "params": {
+    "moon": [
+     0.6,
+     0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  }
+ ]
+}

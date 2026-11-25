@@ -1,0 +1,800 @@
+{
+ "series": "JACQUES A DIT",
+ "day": 1,
+ "subtitle": "PARTIE 5",
+ "clock_start": 16800,
+ "style": 2,
+ "counter_label": "OMBRES",
+ "counter_start": 6,
+ "mood": "bleu",
+ "title": "Partie 5 · Tu ne ramènes qu'une personne : Léa, ou son petit frère devenu une ombre ?",
+ "caption": "Tu peux ramener une seule personne : Léa, ou son petit frère Théo. Le choix avec le plus de votes décide la partie 6 👇 (Vote de la partie 4 : égalité, le tirage a dit « moi ».) #horreur #histoire #saintmalo #bretagne",
+ "beats": [
+  {
+   "scene": "eglise",
+   "text": "JACQUES TE FAIT CHOISIR QUI IL PREND : TA GRAND-MÈRE OU TOI. VOUS AVEZ VOTÉ « *MOI* ».",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "shake": 3,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "eglise",
+   "text": "ELLE EST SAUVÉE. ET TOI, TU DISPARAIS.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     110,
+     170
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "TU TE RÉVEILLES SUR LA PLACE DE L'ÉGLISE. LE CIEL EST *ROUGE*.",
+   "params": {
+    "n": 0
+   },
+   "mood": "rouge",
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "C'EST LE VILLAGE DES DISPARUS. LE MÊME VILLAGE, DE L'AUTRE CÔTÉ.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "ICI AUSSI, LES HAUT-PARLEURS DONNENT LES ORDRES DE JACQUES, L'HOMME SANS VISAGE QUI MÈNE LE JEU.",
+   "params": {
+    "hour": 4,
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "RÈGLE NUMÉRO UN : SI L'ORDRE COMMENCE PAR « JACQUES A DIT », TU *OBÉIS*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 1,
+    "text": "« JACQUES A DIT » : TU OBÉIS."
+   },
+   "params": {
+    "n": 2
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "RÈGLE NUMÉRO DEUX : SANS « JACQUES A DIT », TU NE LE FAIS *PAS*.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "side",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 2,
+    "text": "SANS « JACQUES A DIT » : TU NE LE FAIS PAS."
+   },
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "UNE MAIN T'ATTRAPE LE BRAS. C'EST LÉA, TA VOISINE DISPARUE.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ]
+   },
+   "params": {
+    "red": true
+   },
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "LÉA CHUCHOTE LA RÈGLE D'ICI : « NE DIS JAMAIS TON *PRÉNOM*. »",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "side",
+    "hoodie": [
+     60,
+     120,
+     230
+    ]
+   },
+   "rule": {
+    "n": 3,
+    "text": "ICI, NE DIS JAMAIS TON PRÉNOM."
+   },
+   "params": {
+    "red": true,
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "« CEUX QUI LE DISENT DEVIENNENT DES *OMBRES*. »",
+   "params": {
+    "n": 7
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "LÉA : « MON PETIT FRÈRE THÉO EST ICI AUSSI. IL A DIX ANS. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ]
+   },
+   "params": {
+    "n": 3
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "THÉO EST LÀ, CACHÉ DERRIÈRE ELLE. IL TREMBLE.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "scared",
+    "hoodie": [
+     230,
+     200,
+     60
+    ]
+   },
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_clocher",
+   "text": "À CINQ HEURES DU MATIN, LES HAUT-PARLEURS S'ALLUMENT.",
+   "params": {
+    "hour": 5,
+    "red": true
+   },
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "UNE VOIX : « C'EST MAMIE. DIS-MOI TON PRÉNOM, MON *PETIT*. »",
+   "params": {
+    "n": 5
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "LA VOIX DE TA GRAND-MÈRE. OU JACQUES QUI L'*IMITE*.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "MAIS IL N'Y A PAS « JACQUES A DIT ». ET ICI, ON NE DIT JAMAIS SON PRÉNOM.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "closed",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "rule": {
+    "n": 3,
+    "text": "ICI, NE DIS JAMAIS TON PRÉNOM."
+   },
+   "params": {
+    "n": 3
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "TU SERRES LES DENTS. TU NE DIS RIEN.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "red": true,
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "THÉO, PAUVRE GOSSE, RÉPOND : « C'EST MOI, *THÉO* ! »",
+   "params": {
+    "n": 4
+   },
+   "shake": 2,
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "THÉO DEVIENT NOIR. UNE *OMBRE*.",
+   "params": {
+    "of": "jad_ombres",
+    "light": [
+     255,
+     60,
+     50
+    ]
+   },
+   "count": 7,
+   "shake": 5,
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_ruelle",
+   "text": "LÉA PLEURE : « C'ÉTAIT MON PETIT *FRÈRE*. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ]
+   },
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_jacques",
+   "text": "SOUS LE LAMPADAIRE, JACQUES REGARDE. IL N'A PAS DE VISAGE.",
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "LES HAUT-PARLEURS : « JACQUES A DIT : VIENS À L'*ÉGLISE*. »",
+   "params": {
+    "n": 6,
+    "porte": true
+   },
+   "mood": "noir",
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "TU OBÉIS. DANS L'ÉGLISE, UNE PORTE BRILLE. ELLE NE S'OUVRE QU'À L'AUBE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "DERRIÈRE CETTE PORTE, LE VRAI VILLAGE. ET TA *GRAND-MÈRE*.",
+   "char": {
+    "pose": "stand",
+    "head": [
+     0.5,
+     0.42,
+     0.14
+    ],
+    "expr": "wide",
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "« JACQUES A DIT : À L'AUBE, TU RENTRES. ET TU RAMÈNES UNE SEULE PERSONNE AVEC TOI. MÊME UNE OMBRE. »",
+   "params": {
+    "shadow": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "LÉA, VIVANTE, OU THÉO, SON PETIT FRÈRE DEVENU UNE OMBRE.",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "LÉA TE SUPPLIE : « PRENDS THÉO. S'IL TE *PLAÎT*. »",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     60,
+     120,
+     230
+    ]
+   },
+   "params": {
+    "shadow": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "jad_ombres",
+   "text": "SI TU PRENDS LÉA, THÉO RESTE UNE OMBRE POUR TOUJOURS.",
+   "params": {
+    "n": 1
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "SI TU PRENDS THÉO, LÉA RESTE ICI POUR TOUJOURS. ET PERSONNE NE SAIT CE QUE DEVIENT UNE OMBRE QUI *SORT*.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     -0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "LÉA, OU THÉO ? LE PLUS DE VOTES DÉCIDE LA *PARTIE 6*.",
+   "choice": {
+    "a": "LÉA",
+    "b": "THÉO"
+   },
+   "text_y": 0.2,
+   "dur": 2.8,
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_porte",
+   "text": "ÉCRIS A OU B EN *COMMENTAIRE*.",
+   "voice": "ÉCRIS TON CHOIX EN COMMENTAIRE.",
+   "choice": {
+    "a": "LÉA",
+    "b": "THÉO",
+    "countdown": 3
+   },
+   "text_y": 0.2,
+   "dur": 3.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "jad_remparts",
+   "text": "ABONNE-TOI POUR NE PAS RATER LA *PARTIE 6*.",
+   "params": {
+    "red": true
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  }
+ ]
+}

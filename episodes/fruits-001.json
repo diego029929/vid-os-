@@ -1,0 +1,118 @@
+{
+ "type": "fruits",
+ "title": "Elle découvre que Banane la trompe avec Fraise 🍌🍓",
+ "caption": "Banane sent la fraise… et Pomme a tout compris 🍎🍌🍓\nTeam Pomme ou Team Fraise ? 👇\n#fruits #drame #humour #histoire #pourtoi",
+ "lieu": "cuisine",
+ "hook": "IL SENT LA FRAISE…",
+ "cast": {
+  "pomme": {
+   "fruit": "pomme",
+   "nom": "Pomme",
+   "voix": "femme1",
+   "couleur": [
+    255,
+    90,
+    90
+   ]
+  },
+  "banane": {
+   "fruit": "banane",
+   "nom": "Banane",
+   "voix": "homme1",
+   "couleur": [
+    255,
+    214,
+    10
+   ]
+  },
+  "fraise": {
+   "fruit": "fraise",
+   "nom": "Fraise",
+   "voix": "femme2",
+   "couleur": [
+    255,
+    140,
+    190
+   ]
+  }
+ },
+ "lines": [
+  {
+   "who": "pomme",
+   "text": "Banane ! Pourquoi tu sens la fraise ?",
+   "emo": "colere",
+   "sfx": "choc"
+  },
+  {
+   "who": "banane",
+   "text": "Mais non, je sens la banane, comme d'habitude !",
+   "emo": "surpris"
+  },
+  {
+   "who": "pomme",
+   "text": "Ne me mens pas. Je t'ai vu dans le frigo avec elle.",
+   "emo": "colere"
+  },
+  {
+   "who": "banane",
+   "text": "On parlait juste de la température, je te jure !",
+   "emo": "peur"
+  },
+  {
+   "who": "fraise",
+   "text": "Arrête de mentir, mon chou. Dis-lui la vérité.",
+   "emo": "malin",
+   "shot": "duo",
+   "sfx": "dun"
+  },
+  {
+   "who": "pomme",
+   "text": "Mon chou ? Tu l'appelles mon chou ?",
+   "emo": "surpris",
+   "sfx": "choc"
+  },
+  {
+   "who": "banane",
+   "text": "Pomme, attends, je peux tout t'expliquer.",
+   "emo": "triste"
+  },
+  {
+   "who": "pomme",
+   "text": "Trois semaines dans la même corbeille, et tu me fais ça.",
+   "emo": "pleure",
+   "retry": 1
+  },
+  {
+   "who": "fraise",
+   "text": "Il dit que tu es trop acide.",
+   "emo": "malin"
+  },
+  {
+   "who": "pomme",
+   "text": "Acide ? C'est le citron qui est acide !",
+   "emo": "colere",
+   "sfx": "choc"
+  },
+  {
+   "who": "banane",
+   "text": "Chut ! Attendez. Vous entendez ce bruit ?",
+   "emo": "peur",
+   "shot": "duo",
+   "sfx": "tiroir"
+  },
+  {
+   "who": "fraise",
+   "text": "C'est le tiroir. Celui des couteaux.",
+   "emo": "peur",
+   "retry": 1
+  },
+  {
+   "who": "pomme",
+   "text": "Oh non. On est dimanche. C'est le jour de la salade.",
+   "emo": "peur",
+   "shot": "duo"
+  }
+ ],
+ "twist": "couteau",
+ "end": "TEAM POMME OU TEAM FRAISE ?"
+}

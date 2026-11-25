@@ -1,0 +1,112 @@
+{
+ "style": "nuit",
+ "series": "LE BABYPHONE",
+ "etiquette": "PARTIE 1",
+ "heure": "02:59:48",
+ "title": "Partie 1 · Le vieux babyphone de ta grand-mère chuchote ton prénom",
+ "caption": "Tu descends voir la cave (1) ou tu le débranches malgré la règle (2) ? Le plus de votes décide la partie 2 👇 #horreur #histoire #creepy #pourtoi",
+ "vote": "Le plus de votes décide la partie 2",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "persos": {
+  "SARAH": {
+   "couleur": "#e0607e",
+   "cheveux": true
+  }
+ },
+ "lieux": {
+  "salon": "MAISON DE MAMIE",
+  "chambre": "TA CHAMBRE D'ENFANT",
+  "escalier": "ESCALIER",
+  "cave": "CAVE"
+ },
+ "beats": [
+  {
+   "voice": "Message de ta sœur Sarah : surtout, ne rebranche pas le vieux babyphone de mamie.",
+   "tel": {
+    "type": "sms",
+    "de": "Sarah",
+    "lignes": [
+     "Surtout, ne rebranche pas le vieux babyphone de mamie."
+    ]
+   }
+  },
+  {
+   "voice": "Ce week-end, tu gardes seule la maison de ta grand-mère, en Alsace.",
+   "vue": "salon",
+   "hero": "debout",
+   "hx": 0.5
+  },
+  {
+   "voice": "Dans ton ancienne chambre d'enfant, quelqu'un a rebranché le babyphone. Sa lumière est *verte*.",
+   "vue": "chambre",
+   "hero": "debout",
+   "hx": 0.6,
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Sur l'étiquette, ta grand-mère a écrit : la nuit, s'il parle, ne le débranche jamais.",
+   "regle": {
+    "n": 1,
+    "txt": "S'il parle la nuit,\nne le débranche\njamais"
+   }
+  },
+  {
+   "voice": "À #trois# heures du matin, un souffle sort du babyphone.",
+   "objet": {
+    "type": "horloge",
+    "heure": "3:00"
+   },
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Puis une voix d'enfant chuchote ton prénom, tout doucement.",
+   "vue": "chambre",
+   "hero": "peur",
+   "cadre": "gros",
+   "flicker": true
+  },
+  {
+   "voice": "L'émetteur, lui, est resté en bas, dans la *cave*.",
+   "vue": "escalier",
+   "hero": "dos",
+   "hx": 0.5,
+   "ombre": {
+    "x": 0.3
+   }
+  },
+  {
+   "voice": "Ton téléphone sonne : c'est Sarah, réveillée en pleine nuit à Strasbourg.",
+   "tel": {
+    "type": "appel",
+    "nom": "Sarah",
+    "num": "Sarah"
+   }
+  },
+  {
+   "voice": "Sarah pleure : quand on était petites, cette voix copiait celle de *maman*.",
+   "vue": "chambre",
+   "hero": "sonne",
+   "hx": 0.5,
+   "flicker": true
+  },
+  {
+   "voice": "La petite voix reprend : viens jouer en bas, comme avant.",
+   "vue": "cave",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.5
+   },
+   "rouge_lum": true,
+   "sfx": "souffle"
+  },
+  {
+   "voice": "Tu descends à la cave, ou alors, tu débranches le babyphone malgré la règle ? Écris #un# ou #deux#.",
+   "choix": {
+    "a": "Descendre à la cave",
+    "b": "Débrancher le babyphone"
+   }
+  }
+ ]
+}

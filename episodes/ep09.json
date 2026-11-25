@@ -1,0 +1,1426 @@
+{
+ "series": "APRÈS LA FIN",
+ "day": 7,
+ "subtitle": "PARTIE 9",
+ "clock_start": 21480,
+ "title": "Partie 9 · Ta sœur t'appelle dans ton dos. Tu te retournes ?",
+ "caption": "Partie 9, fin de la saison 1 d'Après la fin. Dans l'escalier, la voix de ta sœur te supplie de te retourner. Tu le fais ou pas ? Et à la fin… A ou B 👇 #histoire #apocalypse #survie #creepy #pourtoi",
+ "style": 2,
+ "beats": [
+  {
+   "scene": "rue",
+   "text": "IMAGINE. LE MONDE A FINI IL Y A *SEPT JOURS*.",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "stand",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "green": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "CE MATIN, TU VAS DEVOIR CHOISIR : *TE RETOURNER* OU PAS.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "rue",
+   "text": "EN HAUT D'UN IMMEUBLE, UNE LUMIÈRE VERTE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "green": true,
+    "seed": 4
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "radio",
+   "text": "UNE VOIX À LA RADIO T'A DIT DE VENIR ICI.",
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.5
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ELLE DIT QUE *TA SŒUR* T'ATTEND LÀ-HAUT.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.5,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TA SŒUR A DISPARU LE PREMIER JOUR.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     180,
+     120,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "rue",
+   "text": "DEPUIS, TU SURVIS GRÂCE AUX RÈGLES DE LA RADIO.",
+   "char": {
+    "pose": "stand",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "TU ENTRES. LA PORTE DU HALL EST OUVERTE.",
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "escalier",
+   "text": "DEVANT TOI, UN ESCALIER QUI MONTE DANS LE NOIR.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "radio",
+   "text": "TA RADIO SE RALLUME TOUTE SEULE.",
+   "glitch": 0.2,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.6
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "C'EST LA STATION 7, CELLE QUI DONNE LES RÈGLES.",
+   "voice": "C'EST LA STATION SEPT, CELLE QUI DONNE LES RÈGLES.",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« NE TE RETOURNE *JAMAIS* DANS L'ESCALIER. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "radio",
+   "text": "« MÊME SI QUELQU'UN T'APPELLE. »",
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "escalier",
+   "text": "TU MONTES LES MARCHES, LENTEMENT.",
+   "char": {
+    "pose": "stand",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "escalier",
+   "text": "PREMIER ÉTAGE. DEUXIÈME. TROISIÈME.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "seed": 3
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "CHAQUE PAS FAIT UN BRUIT ÉNORME.",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ET LÀ, DANS TON DOS, UNE VOIX.",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     -0.6,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« ATTENDS-MOI ! C'EST MOI, TA SŒUR ! »",
+   "shake": 6,
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "escalier",
+   "text": "C'EST SA VOIX. EXACTEMENT SA VOIX.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ELLE PLEURE. ELLE TE SUPPLIE DE LA REGARDER.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU TE *RETOURNES* ?",
+   "dur": 3.2,
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "CONTINUER",
+    "countdown": 3
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.8
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "TU TE RETOURNES.",
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "CONTINUER",
+    "picked": "A"
+   },
+   "record": "r1",
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.02
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "escalier",
+   "text": "IL N'Y A PERSONNE DANS L'ESCALIER.",
+   "record": "r1",
+   "char": {
+    "pose": "stand",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.42,
+     0.15
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "dark": true
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "MAIS LA VOIX CONTINUE, JUSTE À CÔTÉ DE TON OREILLE.",
+   "record": "r1",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.6,
+     0
+    ]
+   },
+   "params": {
+    "light": [
+     180,
+     120,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "escalier",
+   "text": "LA LUMIÈRE DU HAUT S'ÉTEINT D'UN COUP.",
+   "record": "r1",
+   "sfx": [
+    [
+     "boom",
+     0,
+     0.5
+    ]
+   ],
+   "params": {
+    "dark": true,
+    "seed": 2
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ET DES PAS DESCENDENT VERS TOI.",
+   "record": "r1",
+   "shake": 10,
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "radio",
+   "text": "TA SŒUR N'A JAMAIS ÉTÉ DERRIÈRE TOI.",
+   "record": "r1",
+   "glitch": 0.3,
+   "shake": 6,
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "type": "rewind",
+   "of": "r1",
+   "dur": 1.3,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "flou",
+   "text": "TU CONTINUES. SANS TE RETOURNER.",
+   "choice": {
+    "a": "TE RETOURNER",
+    "b": "CONTINUER",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.02
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "escalier",
+   "text": "LA VOIX CRIE. PUIS ELLE SE MET À *RIRE*.",
+   "shake": 5,
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU FERMES LES YEUX ET TU MONTES.",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "escalier",
+   "text": "QUATRIÈME ÉTAGE. CINQUIÈME. PLUS UN BRUIT.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "seed": 5
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "DERNIER ÉTAGE. UNE PORTE, DE LA LUMIÈRE DESSOUS.",
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "TU POUSSES LA PORTE.",
+   "voice": "TU POUSSES LA PORTE.",
+   "cam": {
+    "z": [
+     1.1,
+     1.3
+    ]
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "radio",
+   "text": "DEDANS, UNE VRAIE RADIO, AVEC UN MICRO.",
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "chambre",
+   "text": "ET ASSISE DEVANT LE MICRO, *TA SŒUR*.",
+   "char": {
+    "pose": "sit",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.45,
+     0.16
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "lamp": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ELLE EST VIVANTE. ELLE TE SOURIT.",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU VEUX COURIR VERS ELLE.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ELLE LÈVE LA MAIN. « NE BOUGE PAS. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     180,
+     120,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "radio",
+   "text": "« LA STATION 7, C'EST *MOI*. »",
+   "voice": "LA STATION SEPT, C'EST MOI.",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TOUTES LES RÈGLES À LA RADIO, C'ÉTAIT ELLE.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0.5,
+     0
+    ]
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« JE T'AI GUIDÉ JUSQU'ICI. ÉTAPE PAR ÉTAPE. »",
+   "char": {
+    "pose": "face",
+    "expr": "normal",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« TU AS DÉJÀ VÉCU *CETTE SEMAINE*. »",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     180,
+     120,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« ET À CHAQUE FOIS, TU AS OUVERT LA PORTE. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« ET À CHAQUE FOIS, TU M'AS PERDUE. »",
+   "char": {
+    "pose": "face",
+    "expr": "closed",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "fenetre",
+   "text": "PAR LA FENÊTRE, LE CIEL REDEVIENT *VERT*.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "green": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  },
+  {
+   "scene": "porte",
+   "text": "ET EN BAS, QUELQU'UN FRAPPE. FORT.",
+   "sfx": [
+    [
+     "knock",
+     0,
+     0.9
+    ]
+   ],
+   "shake": 4,
+   "params": {
+    "green": true
+   },
+   "cam": {
+    "z": [
+     1.02,
+     1.1
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« SI TU OUVRES, TOUT VA RECOMMENCER. »",
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "« SI TU RESTES, TU PRENDS MA PLACE AU MICRO. »",
+   "char": {
+    "pose": "face",
+    "expr": "side",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     150,
+     90,
+     220
+    ]
+   },
+   "params": {
+    "light": [
+     180,
+     120,
+     255
+    ]
+   },
+   "cam": {
+    "z": [
+     1.14,
+     1.04
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "ET PERSONNE NE SAIT CE QU'ELLE DEVIENT.",
+   "char": {
+    "pose": "face",
+    "expr": "wide",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ],
+    "look": [
+     0,
+     0.3
+    ]
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.12
+    ],
+    "x": [
+     0.47,
+     0.53
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "CETTE FOIS, C'EST LA DERNIÈRE CHANCE.",
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.6
+    ]
+   ],
+   "char": {
+    "pose": "face",
+    "expr": "scared",
+    "head": [
+     0.5,
+     0.36,
+     0.3
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "light": [
+     255,
+     70,
+     60
+    ]
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.2
+    ],
+    "y": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "scene": "flou",
+   "text": "TU OUVRES, OU TU PRENDS LE MICRO ?",
+   "dur": 2.6,
+   "choice": {
+    "a": "OUVRIR LA PORTE",
+    "b": "PRENDRE LE MICRO"
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     0.7
+    ]
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.04
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "flou",
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "choice": {
+    "a": "OUVRIR LA PORTE",
+    "b": "PRENDRE LE MICRO"
+   },
+   "cam": {
+    "z": [
+     1.04,
+     1.06
+    ]
+   },
+   "text_y": 0.2
+  },
+  {
+   "scene": "fenetre",
+   "text": "FIN DE LA SAISON 1. ABONNE-TOI POUR LA *SUITE*.",
+   "voice": "FIN DE LA SAISON UN. ABONNE-TOI POUR LA SUITE.",
+   "char": {
+    "pose": "back",
+    "head": [
+     0.5,
+     0.52,
+     0.2
+    ],
+    "hoodie": [
+     235,
+     120,
+     35
+    ]
+   },
+   "params": {
+    "green": true
+   },
+   "cam": {
+    "z": [
+     1.18,
+     1.08
+    ],
+    "x": [
+     0.53,
+     0.48
+    ]
+   }
+  }
+ ]
+}

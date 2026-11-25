@@ -1,0 +1,70 @@
+{
+ "type": "quiz",
+ "title": "Quiz nostalgie années 2000 · 5 questions, t'as combien ?",
+ "caption": "Tu as grandi dans les années 2000 ? Prouve-le 📼\nÉcris ton score 👇\n#nostalgie #annees2000 #quiz #enfance #pourtoi",
+ "hook": "QUIZ NOSTALGIE",
+ "questions": [
+  {
+   "q": "Où habite Bob l'éponge ?",
+   "choices": [
+    "Un rocher",
+    "Un ananas",
+    "Une coquille"
+   ],
+   "answer": 1,
+   "emoji": "🍍",
+   "voice": "Dans quoi vit Bob l'éponge, au fond de la mer ?",
+   "seconds": 3
+  },
+  {
+   "q": "Quel est le Pokémon de Sacha ?",
+   "choices": [
+    "Pikachu",
+    "Salamèche",
+    "Évoli"
+   ],
+   "answer": 0,
+   "emoji": "⚡",
+   "voice": "Sacha a quel Pokémon sur son épaule ?",
+   "seconds": 3
+  },
+  {
+   "q": "Combien d'écrans a la Nintendo DS ?",
+   "choices": [
+    "Un",
+    "Trois",
+    "Deux"
+   ],
+   "answer": 2,
+   "emoji": "🎮",
+   "voice": "La console Nintendo dé esse avait combien d'écrans ?",
+   "seconds": 3
+  },
+  {
+   "q": "Combien d'espionnes dans Totally Spies ?",
+   "choices": [
+    "Trois",
+    "Quatre",
+    "Deux"
+   ],
+   "answer": 0,
+   "emoji": "🕵️",
+   "voice": "Elles sont combien dans Totally Spies ?",
+   "seconds": 3
+  },
+  {
+   "q": "Le Tamagotchi a été inventé…",
+   "choices": [
+    "en Chine",
+    "au Japon",
+    "en Corée"
+   ],
+   "answer": 1,
+   "emoji": "🥚",
+   "voice": "Le Tamagotchi a été inventé où ?",
+   "seconds": 3
+  }
+ ],
+ "end": "T'AS EU COMBIEN SUR 5 ?",
+ "voice_end": "Écris ton score en commentaire, et abonne-toi."
+}

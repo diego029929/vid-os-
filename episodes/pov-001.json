@@ -1,0 +1,75 @@
+{
+ "style": "nuit",
+ "format": "pov",
+ "ambiance": "bleu",
+ "accroche": "sms_proche",
+ "series": "POV",
+ "etiquette": "POV",
+ "heure": "04:02:00",
+ "title": "POV : ton frère disparu t'écrit depuis sous la glace",
+ "caption": "Tu lui aurais répondu ? 🧊👇\n#fyp #pourtoi #foryou #pov #peur #histoiredhorreur #glace #hiver #sms",
+ "texte_accroche": "POV : ton frère, disparu l'hiver dernier, t'écrit 🧊",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "lieux": {
+  "mer": "PORT GELÉ"
+ },
+ "beats": [
+  {
+   "voice": "Message de ton frère : je suis sous la glace. Ouvre-moi.",
+   "tel": {
+    "type": "sms",
+    "de": "Mon frère",
+    "lignes": [
+     "Je suis sous la glace.",
+     "Ouvre-moi."
+    ]
+   }
+  },
+  {
+   "voice": "Ton frère a disparu sur ce port gelé, l'hiver dernier.",
+   "vue": "mer",
+   "hero": "peur",
+   "cadre": "gros",
+   "neige": true
+  },
+  {
+   "voice": "Sous tes pieds, la glace se met à *craquer*.",
+   "vue": "mer",
+   "hero": "debout",
+   "hx": 0.5,
+   "neige": true,
+   "sfx": "boom"
+  },
+  {
+   "voice": "Sous la glace, quelqu'un frappe trois coups.",
+   "vue": "mer",
+   "hero": "absent",
+   "ombre": {
+    "x": 0.5
+   },
+   "neige": true,
+   "flicker": true,
+   "sfx": "toc"
+  },
+  {
+   "voice": "Puis ton téléphone vibre encore.",
+   "vue": "mer",
+   "hero": "sonne",
+   "hx": 0.5,
+   "neige": true
+  },
+  {
+   "voice": "Message de ton frère : je suis sous la glace. Ouvre-moi.",
+   "tel": {
+    "type": "sms",
+    "de": "Mon frère",
+    "lignes": [
+     "Je suis sous la glace.",
+     "Ouvre-moi."
+    ]
+   }
+  }
+ ]
+}

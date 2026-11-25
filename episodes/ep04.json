@@ -1,0 +1,641 @@
+{
+ "series": "APRÈS LA FIN",
+ "day": 4,
+ "subtitle": "RÈGLE N°4 · LES SILHOUETTES",
+ "clock_start": 30600,
+ "title": "Une silhouette immobile dans la rue. Tu la regardes ?",
+ "caption": "Jour 4 après la fin. Plus rien à manger, il faut sortir... et quelqu'un attend au milieu de la rue. A ou B 👇 #histoire #apocalypse #survie #creepy #choix #pourtoi",
+ "beats": [
+  {
+   "scene": "hide",
+   "dur": 3.38,
+   "text": "CEUX QUI ONT DIT *B* ONT SURVÉCU.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "closed",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   },
+   "flash_in": true,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.9
+    ]
+   ]
+  },
+  {
+   "scene": "hide",
+   "dur": 2.68,
+   "text": "TU N'AS PAS BOUGÉ DE LA NUIT.",
+   "text_y": 0.32,
+   "char": {
+    "expr": "suspicious",
+    "pose": "crouch",
+    "scale": 0.8,
+    "y": 0.92
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.82,
+   "text": "AU MATIN, LES PAS SONT *PARTIS*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.54,
+   "text": "MAIS TON SAC EST *VIDE*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "bunker",
+   "dur": 2.26,
+   "text": "PLUS RIEN À *MANGER*.",
+   "text_y": 0.4,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.28,
+    "scale": 0.8,
+    "y": 0.9
+   }
+  },
+  {
+   "scene": "radio",
+   "dur": 2.26,
+   "text": "LA RADIO SE RALLUME.",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "radio",
+   "dur": 2.26,
+   "text": "« ICI LA STATION *7*. »",
+   "text_y": 0.8,
+   "sfx": [
+    [
+     "radio",
+     0,
+     0.6
+    ]
+   ],
+   "zoom": 1.1
+  },
+  {
+   "scene": "radio",
+   "dur": 2.54,
+   "text": "« SI VOUS DEVEZ SORTIR... »",
+   "text_y": 0.8,
+   "zoom": 1.14
+  },
+  {
+   "scene": "dark",
+   "dur": 1.83,
+   "text": "RÈGLE N°4 :",
+   "text_y": 0.5,
+   "text_size": 150,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.7
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 2.26,
+   "text": "NE REGARDE *JAMAIS*",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     90,
+     90,
+     90
+    ]
+   }
+  },
+  {
+   "scene": "dark",
+   "dur": 2.82,
+   "text": "LES SILHOUETTES *IMMOBILES*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     90,
+     90,
+     90
+    ]
+   },
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.6
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.82,
+   "text": "TU SORS. LA VILLE EST *GRISE*.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   }
+  },
+  {
+   "scene": "city",
+   "dur": 2.54,
+   "text": "PAS UN BRUIT. PAS UN OISEAU.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "city",
+   "dur": 2.82,
+   "text": "LE MAGASIN EST AU BOUT DE LA RUE.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   }
+  },
+  {
+   "scene": "city",
+   "dur": 2.4,
+   "text": "ET AU MILIEU DE LA RUE...",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.68,
+     1.0
+    ]
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "flash_in": true,
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.54,
+   "text": "QUELQU'UN. *IMMOBILE*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.68,
+     1.0
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.15
+  },
+  {
+   "scene": "city",
+   "dur": 2.11,
+   "text": "IL TE *FIXE*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.68,
+     1.0
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97,
+    "tremble": true
+   },
+   "zoom": 1.2,
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.0,
+   "text": "TU FAIS QUOI ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "LE REGARDER EN FACE",
+    "b": "BAISSER LES YEUX",
+    "countdown": 3
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ],
+    [
+     "heart",
+     1,
+     1.0
+    ],
+    [
+     "heart",
+     2,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "LE REGARDER EN FACE",
+    "b": "BAISSER LES YEUX",
+    "picked": "A"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.54,
+   "text": "TU LE REGARDES DANS LES YEUX...",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.62,
+     1.4
+    ]
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.25,
+   "record": "bad"
+  },
+  {
+   "scene": "city",
+   "dur": 2.11,
+   "text": "IL EST *DEVANT TOI*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.45,
+     2.0
+    ]
+   },
+   "shake": 12,
+   "sfx": [
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ],
+   "record": "bad"
+  },
+  {
+   "scene": "dark",
+   "dur": 2.26,
+   "text": "*MAUVAIS CHOIX*.",
+   "text_y": 0.5,
+   "params": {
+    "glow": [
+     255,
+     40,
+     40
+    ]
+   },
+   "char": {
+    "expr": "scared",
+    "scale": 0.7,
+    "y": 0.98
+   },
+   "flash_in": true,
+   "glitch": 0.4,
+   "glitch_end": true,
+   "sfx": [
+    [
+     "glitch",
+     0,
+     1.0
+    ],
+    [
+     "boom",
+     0,
+     0.6
+    ]
+   ],
+   "record": "bad"
+  },
+  {
+   "type": "rewind",
+   "of": "bad",
+   "dur": 1.5,
+   "sfx": [
+    [
+     "rewind",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 0.9,
+   "choice": {
+    "a": "LE REGARDER EN FACE",
+    "b": "BAISSER LES YEUX",
+    "picked": "B"
+   },
+   "sfx": [
+    [
+     "whoosh",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.4,
+   "text": "TU BAISSES LES *YEUX*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.68,
+     1.0
+    ]
+   },
+   "char": {
+    "expr": "closed",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   }
+  },
+  {
+   "scene": "city",
+   "dur": 3.1,
+   "text": "TU MARCHES. UN PAS. PUIS UN AUTRE.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.68,
+     1.0
+    ]
+   },
+   "char": {
+    "expr": "closed",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.1,
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.68,
+   "text": "TU PASSES *À CÔTÉ* DE LUI.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.45,
+     1.3
+    ]
+   },
+   "char": {
+    "expr": "closed",
+    "x": 0.2,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.26,
+   "text": "IL NE BOUGE PAS.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   }
+  },
+  {
+   "scene": "city",
+   "dur": 3.1,
+   "text": "AU MAGASIN, *3 BOÎTES* DE CONSERVE.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "normal",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   }
+  },
+  {
+   "scene": "city",
+   "dur": 2.11,
+   "text": "TU RENTRES. *VITE*.",
+   "text_y": 0.42,
+   "params": {
+    "sky": "gris"
+   },
+   "char": {
+    "expr": "suspicious",
+    "x": 0.3,
+    "scale": 0.85,
+    "y": 0.97
+   },
+   "zoom": 1.1
+  },
+  {
+   "scene": "door",
+   "dur": 2.54,
+   "text": "TU ARRIVES DEVANT L'ABRI...",
+   "text_y": 0.86,
+   "params": {},
+   "zoom": 1.1
+  },
+  {
+   "scene": "city",
+   "dur": 2.82,
+   "text": "ET LA SILHOUETTE EST *LÀ*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.5,
+     1.5
+    ]
+   },
+   "flash_in": true,
+   "glitch": 0.15,
+   "sfx": [
+    [
+     "hit",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "city",
+   "dur": 2.82,
+   "text": "DEVANT TA PORTE. *IMMOBILE*.",
+   "text_y": 0.3,
+   "params": {
+    "sky": "gris",
+    "figure": [
+     0.5,
+     1.5
+    ]
+   },
+   "zoom": 1.15,
+   "sfx": [
+    [
+     "heart",
+     0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.6,
+   "text": "TU FAIS QUOI ?",
+   "text_y": 0.235,
+   "text_size": 90,
+   "choice": {
+    "a": "PASSER LES YEUX BAISSÉS",
+    "b": "ATTENDRE QU'ELLE PARTE"
+   },
+   "voice": "Elle bloque l'entrée. Tu passes à côté les yeux baissés, ou tu attends qu'elle parte ?",
+   "sfx": [
+    [
+     "hit",
+     0,
+     0.8
+    ]
+   ]
+  },
+  {
+   "scene": "dark",
+   "dur": 3.38,
+   "text": "A OU B ? RÉPONDS EN *COMMENTAIRE*.",
+   "text_y": 0.5,
+   "text_size": 120
+  },
+  {
+   "scene": "dark",
+   "dur": 3.1,
+   "text": "ABONNE-TOI POUR LA *SUITE*.",
+   "text_y": 0.5
+  }
+ ]
+}
