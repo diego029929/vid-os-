@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "mcp__Metricool_Social_Media_Management__createScheduledPost"
-    ]
-  }
-}
