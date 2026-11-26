@@ -5,7 +5,7 @@ Cocher `[x]` + date quand c'est publié. Source à noter pour tout chiffre, loi 
 ## Premier lot (scripts écrits le 26/11, doc « Kit vidéos astuces argent »)
 - [ ] Les abonnements oubliés : trier les prélèvements, résiliation en ligne « en trois clics » pour un contrat pris en ligne (loi du 16/08/2022, en vigueur le 01/06/2023, service-public.fr) — modèle `episodes/argent/argent-001.json`
 - [ ] La règle des 30 jours avant un achat non essentiel
-- [ ] Le pièges des rayons : produits les plus chers à hauteur des yeux
+- [ ] Le piège des rayons : produits les plus chers à hauteur des yeux
 - [ ] Comparer le prix au kilo / au litre (affichage obligatoire en magasin)
 - [ ] Jamais faire les courses le ventre vide + liste
 - [ ] La règle 50/30/20 (commencer petit si 20 % c'est trop)

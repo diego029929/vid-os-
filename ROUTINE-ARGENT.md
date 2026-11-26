@@ -27,8 +27,9 @@
   n'utilises plus. Ouvre ton appli bancaire. » avec ces réglages puis avec `VOICE_EXAG=0.35` et `0.7`,
   retranscrire chacune avec Whisper medium, garder la plus claire ET la moins monotone (écouter le débit : pas de
   mot avalé, pas de pause bizarre), écrire le réglage gardé et pourquoi dans `argent/voix-ok.txt`, puis l'utiliser.
-  Si Chatterbox ne s'installe pas ou bégaie sur 3 phrases d'affilée : passer à Pocket `cosette`
-  (`VOICE=pocket`, `pocket_voice` via `voice_config`… ou `pocket-tts --voice cosette`), le dire dans le résumé.
+  Si Chatterbox ne s'installe pas ou bégaie sur 3 phrases d'affilée : passer à Pocket (`export VOICE=pocket
+  VOICE_FX=leger VOICE_TEMPO=0.95` et `"pocket_voice": "cosette"` dans `engine/voice_config.json` sur la branche
+  `argent` seulement), et le dire dans le résumé.
 - Chaque phrase est vérifiée avec Whisper (règles de `ROUTINE.md` § 4) : mot répété, bégayé ou mal lu = relancer
   (jusqu'à 3 fois), puis changer la tournure. Écrire les nombres en lettres dans `voice` (« neuf euros
   quatre-vingt-dix-neuf »), les sigles en clair. Ne jamais publier une voix défectueuse.
