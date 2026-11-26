@@ -258,9 +258,13 @@ const OBJ = {
 };
 
 // ------------------------------------------------------------------ cartes
+// thème « argent » (26/11, 2e chaîne astuces argent) : carte verte, étiquette dorée « ASTUCE N° »
+const ARGENT = EP.theme == 'argent';
 function regle(t, n, txt, label) { const a = ease(t / 0.25);
-  return `<div class="card"></div><div style="position:absolute;top:700px;left:60px;right:60px;text-align:center;transform:scale(${0.85 + 0.15 * a});opacity:${a}">
-    <span style="display:inline-block;background:#e0202a;color:#fff;font-family:Anton;font-size:84px;padding:6px 40px;border-radius:14px;border:4px solid #ff8a8f">${label ? esc(label) : 'RÈGLE N°' + n}</span>
+  const bg = ARGENT ? ' style="background:radial-gradient(circle at 50% 45%,#0f6b45 0%,#073823 55%,#021a10 100%)"' : '';
+  const tag = ARGENT ? 'background:#f5c400;color:#14110a;border:4px solid #ffe27a' : 'background:#e0202a;color:#fff;border:4px solid #ff8a8f';
+  return `<div class="card"${bg}></div><div style="position:absolute;top:700px;left:60px;right:60px;text-align:center;transform:scale(${0.85 + 0.15 * a});opacity:${a}">
+    <span style="display:inline-block;${tag};font-family:Anton;font-size:84px;padding:6px 40px;border-radius:14px">${label ? esc(label) : (ARGENT ? 'ASTUCE N°' : 'RÈGLE N°') + n}</span>
     <div style="font-family:Anton;color:#fff;font-size:112px;margin-top:40px;line-height:1.05;text-transform:uppercase">${esc(txt).replace(/\n/g, '<br>')}</div></div>`; }
 function choix(t, a1, a2) { const p = k => ease((t - 0.15 * k) / 0.3);
   return `<div class="card" style="background:radial-gradient(circle at 50% 45%,#1a1747,#07061a)"></div>
@@ -287,7 +291,7 @@ function hms(base, t) { const [h, m, s] = base.split(':').map(Number); const x =
 // ------------------------------------------------------------------ une image
 const AMB = { nuit: '', rouge: 'hue-rotate(115deg) saturate(1.5) brightness(.95)', vert: 'hue-rotate(-140deg) saturate(.9) brightness(.92)',
   bleu: 'hue-rotate(-40deg) saturate(1.25)', sepia: 'sepia(.9) saturate(1.2) contrast(1.1) brightness(.92)',
-  nb: 'grayscale(1) contrast(1.35) brightness(.95)', vhs: 'sepia(.35) saturate(1.6) contrast(1.2) hue-rotate(-20deg) blur(.7px)' };
+  nb: 'grayscale(1) contrast(1.35) brightness(.95)', jour: 'brightness(1.55) saturate(1.2) sepia(.12)', vhs: 'sepia(.35) saturate(1.6) contrast(1.2) hue-rotate(-20deg) blur(.7px)' };
 const LIEUX = { rue: 'RUE', chambre: 'CHAMBRE', couloir: 'COULOIR', salon: 'SALON', cuisine: 'CUISINE', escalier: 'ESCALIER', foret: 'FORÊT', station: 'STATION', mer: 'PLAGE', hopital: 'HÔPITAL', cave: 'CAVE', voiture: 'VOITURE', sdb: 'SALLE DE BAIN', vice: 'VICE CITY', gamer: 'CHEZ TOI' };
 let LIEU = (EP.beats0 || '');
 for (const b of BEATS) if (b.lieu || b.vue) { LIEU = b.lieu || (EP.lieux || {})[b.vue] || LIEUX[b.vue] || ''; break; }
