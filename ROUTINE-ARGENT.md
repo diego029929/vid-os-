@@ -6,7 +6,8 @@
 >   **TikTok seulement** (pas d'Instagram) ;
 > - **publier directement**, sans attendre de validation ;
 > - **3 vidéos par jour à 10:00, 18:00 et 20:00 (Europe/Paris)** ;
-> - « attention au choix de la voix, c'est presque le plus important, fais une voix naturelle ».
+> - « attention au choix de la voix, c'est presque le plus important, fais une voix naturelle » ;
+> - **vidéos d'environ 1 minute** (55-65 s) et « pense à utiliser les skills, ça peut beaucoup servir » (§ 2 bis).
 >
 > La routine horreur (`ROUTINE.md`) est en pause depuis le 25/11 : ne pas la relancer, ne pas publier d'horreur.
 > Ce fichier prime sur `ROUTINE.md` et `brand-profile.md` pour tout ce qui touche aux vidéos argent.
@@ -34,19 +35,40 @@
   (jusqu'à 3 fois), puis changer la tournure. Écrire les nombres en lettres dans `voice` (« neuf euros
   quatre-vingt-dix-neuf »), les sigles en clair. Ne jamais publier une voix défectueuse.
 
-## 2. Le format « astuce » (25-35 s)
+## 2. Le format « astuce » (55-65 s, environ 1 minute)
 
 Modèle : `episodes/argent/argent-001.json`. Champs : `"style": "nuit"`, **`"theme": "argent"`** (cartes vertes,
 étiquette dorée « ASTUCE N° »), `"format": "astuce"`, `"ambiance": "jour"` (décors éclaircis), `"accroche"`.
 1. **1re seconde = un détail concret qui touche le portefeuille**, montré à l'écran : notification de banque,
    ticket de caisse, relevé, étiquette de prix (`tel` : `notif`, `sms` comme liste). Jamais un décor vide.
 2. 1re phrase lue ≤ 10 mots, commence à 0 s, tutoiement.
-3. 1 à 3 cartes `regle` (= « ASTUCE N° ») avec ≤ 6 mots chacune ; entre elles, un plan qui montre l'astuce.
+3. 3 à 5 cartes `regle` (= « ASTUCE N° ») avec ≤ 6 mots chacune ; entre elles, 1 à 2 plans qui montrent l'astuce
+   (exemple chiffré, écran de téléphone, décor). Un plan = 2 à 4 s : à 1 minute, il faut ≈ 18-25 plans pour garder
+   le rythme. Le modèle `argent-001.json` fait ≈ 30 s : l'allonger avec plus d'astuces ou un exemple concret,
+   jamais avec du remplissage. ≈ 900-1 000 caractères lus au total.
 4. Fin : question à réponse d'1 mot ou d'1 chiffre (« Combien t'en as trouvé ? Écris le chiffre »). Si possible,
    la dernière image rappelle la première (boucle).
 5. Légende courte + 1 emoji + 8-10 hashtags : `#fyp #pourtoi #foryou` + 2-3 parmi `#argent #economies #astuce
    #budget #epargne #bonplan` + 2-3 précis au sujet. Jamais deux fois la même légende ni le même 1er plan le même jour.
 6. `"video_made_with_ai": true` dans Zernio (voix de synthèse).
+
+## 2 bis. Les skills (`.claude/skills/`, demande de Fio) : LES LIRE VRAIMENT à chaque étape
+
+| Étape | Skills |
+|---|---|
+| Choisir les sujets (lundi, ou si la banque manque d'idées) | `last30days` (Reddit/YouTube gratuits, sans clé), `viral-reverse-engineering`, `tiktok-growth` |
+| 1re phrase + `texte_accroche` | `hook-writer` (3 variantes, garder la meilleure) |
+| Script d'1 minute | `tiktok-script`, `short-form-video-script`, `storytelling-and-narrative` (mini-histoire : problème → astuce → résultat chiffré) |
+| Bruitages (notification, caisse, pièce) | `sound-effects` |
+| Titres, transitions, cartes plus vivantes | `hyperframes-registry`, `motion-design` (seulement pour habiller le style actuel) |
+| Contrôle technique | `ffmpeg-skill` (`check.py --platform tiktok`, 0 failed), `platform-specs-and-validation` |
+| Légende + hashtags | `caption-writer`, `hashtag-strategy` |
+| Stats du matin et ajustements | `analytics-and-reporting`, `experimentation-and-ab-testing`, `tiktok-growth` |
+
+Les skills aident, ce fichier gagne en cas de conflit (voix, durée, règles de contenu). Ignorer les parties
+« horreur » de `brand-profile.md` ; ne pas lancer d'interview `brand-profile`/`voice-builder`. Les étapes
+indépendantes (écriture des 3 scripts, test du spectateur) peuvent se faire avec des agents en parallèle ; les
+rendus restent un à la fois. Dans le résumé à Fio : une ligne sur les skills qui ont servi.
 
 ## 3. Règles de contenu (obligatoires)
 
@@ -72,7 +94,7 @@ Modèle : `episodes/argent/argent-001.json`. Champs : `"style": "nuit"`, **`"the
 4. Relecture `python3 engine/check_script.py <f>` + test du spectateur (`ROUTINE.md` § 5 étape 4 : « clarté » et
    « j'ai appris un truc utile » ≥ 8/10, sinon corriger).
 5. Rendu UN À LA FOIS (brouillon + planche, puis rendu complet) dans l'ordre 10h, 18h, 20h.
-6. Contrôles `ROUTINE.md` § 5 étape 7 (planche regardée, Whisper, `check_video.py --min 22 --max 38`, -14 LUFS).
+6. Contrôles `ROUTINE.md` § 5 étape 7 (planche regardée, Whisper, `check_video.py --min 52 --max 68`, -14 LUFS).
 7. Branche `media` (§ 5 étape 8, worktree, sans push forcé), puis **programmer dans Zernio** comme § 5 étape 9
    mais `platforms` = TikTok seul, `scheduledFor` à 10:00 / 18:00 / 20:00 Paris (UTC = Paris − 1 h en hiver,
    − 2 h en été) ; heure passée → `publishNow`. Vérifier `GET /v1/posts/{id}`.
