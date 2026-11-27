@@ -1,0 +1,134 @@
+{
+ "style": "nuit",
+ "theme": "argent",
+ "format": "astuce",
+ "ambiance": "jour",
+ "accroche": "notif_facture",
+ "series": "ASTUCES ARGENT",
+ "etiquette": "ASTUCE",
+ "heure": "19:58:00",
+ "heure_tel": "19:58",
+ "title": "Tes appareils éteints te coûtent encore de l'argent",
+ "caption": "Combien de petites lumières chez toi ? Écris le chiffre 💡 #fyp #pourtoi #foryou #economies #budget #electricite #facture #economiedenergie #astuce",
+ "texte_accroche": "Éteint… mais il consomme encore 💡",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Tes appareils éteints te coûtent encore de l'*argent*.",
+   "tel": {
+    "type": "notif",
+    "app": "ÉLECTRICITÉ",
+    "titre": "Nouvelle facture",
+    "texte": "Ta facture d'électricité est disponible",
+    "heure": "19:58",
+    "date": "vendredi 27 novembre"
+   }
+  },
+  {
+   "voice": "La télé, la box, la console, les chargeurs.",
+   "vue": "salon",
+   "hero": "debout"
+  },
+  {
+   "voice": "En veille, ils consomment de l'électricité, le jour comme la nuit.",
+   "vue": "salon",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Première astuce : repère les petites lumières allumées chez toi.",
+   "regle": {
+    "n": 1,
+    "txt": "Les petites\nlumières"
+   }
+  },
+  {
+   "voice": "Ce soir, éteins la lumière et fais le tour de chez toi.",
+   "vue": "couloir",
+   "hero": "marche"
+  },
+  {
+   "voice": "Un voyant allumé, ou un écran qui affiche l'heure : l'appareil est en veille.",
+   "tel": {
+    "type": "sms",
+    "de": "Ma liste",
+    "lignes": [
+     "Box internet · voyant allumé",
+     "Télé · voyant rouge",
+     "Console · en veille",
+     "Micro-ondes · horloge",
+     "Chargeurs · branchés"
+    ],
+    "moi": [],
+    "rythme": 0.5
+   }
+  },
+  {
+   "voice": "Deuxième astuce : la multiprise avec un interrupteur.",
+   "regle": {
+    "n": 2,
+    "txt": "Multiprise à\ninterrupteur"
+   }
+  },
+  {
+   "voice": "Branche dessus la télé, la console et les enceintes.",
+   "vue": "salon",
+   "hero": "debout"
+  },
+  {
+   "voice": "Troisième astuce : débranche les chargeurs qui ne chargent rien.",
+   "regle": {
+    "n": 3,
+    "txt": "Débranche les\nchargeurs"
+   }
+  },
+  {
+   "voice": "Mais le frigo et le congélateur, on ne les coupe jamais.",
+   "vue": "cuisine",
+   "hero": "debout"
+  },
+  {
+   "voice": "Dernière astuce : regarde les réglages de ta télé et de ta console.",
+   "regle": {
+    "n": 4,
+    "txt": "Le mode\néconomie"
+   }
+  },
+  {
+   "voice": "Beaucoup ont un mode économie d'énergie, ou une mise en veille automatique.",
+   "tel": {
+    "type": "notif",
+    "app": "RÉGLAGES",
+    "titre": "Économie d'énergie",
+    "texte": "Mise en veille automatique : activée",
+    "heure": "20:01",
+    "date": "vendredi 27 novembre"
+   }
+  },
+  {
+   "voice": "D'après l'Ademe, ça peut économiser jusqu'à #quinze pour cent# de la facture, hors chauffage et eau chaude.",
+   "lu": "D'après l'Adème, ça peut économiser jusqu'à quinze pour cent de la facture, hors chauffage et eau chaude.",
+   "tel": {
+    "type": "notif",
+    "app": "ÉCONOMIES",
+    "titre": "Couper les veilles",
+    "texte": "Jusqu'à 15 % de la facture d'électricité (hors chauffage et eau chaude) · source : Ademe",
+    "heure": "20:02",
+    "date": "vendredi 27 novembre"
+   }
+  },
+  {
+   "voice": "Combien de petites lumières tu as trouvées chez toi ? Écris le #chiffre#.",
+   "tel": {
+    "type": "notif",
+    "app": "ÉLECTRICITÉ",
+    "titre": "Nouvelle facture",
+    "texte": "Ta facture d'électricité est disponible",
+    "heure": "20:03",
+    "date": "vendredi 27 novembre"
+   }
+  }
+ ]
+}

@@ -21,7 +21,7 @@
   Ton posé et chaleureux, comme un ami qui donne un bon plan. Pas d'effet radio/mégaphone.
 - Variables à exporter AVANT chaque rendu (elles écrasent `engine/voice_config.json`, qui reste celui de l'horreur) :
   ```bash
-  export VOICE=chatterbox VOICE_REF=ref-narrateur-grave.wav VOICE_EXAG=0.5 VOICE_CFG=0.5 VOICE_FX=aucun VOICE_TEMPO=1.05
+  export VOICE=chatterbox VOICE_REF=ref-narrateur-grave.wav VOICE_EXAG=0.5 VOICE_CFG=0.5 VOICE_FX=aucun VOICE_TEMPO=1.15
   ```
 - **Jamais** Pocket `estelle` (Fio : « nulle »), jamais Piper, jamais une voix payante ou clonée d'un vrai créateur.
 - Le 1er jour (fichier `argent/voix-ok.txt` absent) : générer la phrase « Tu paies sûrement un abonnement que tu

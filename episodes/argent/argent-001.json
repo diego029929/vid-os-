@@ -6,26 +6,171 @@
  "accroche": "notif_banque",
  "series": "ASTUCES ARGENT",
  "etiquette": "ASTUCE",
- "heure": "18:40:00",
- "heure_tel": "18:42",
+ "heure": "9:58:00",
+ "heure_tel": "9:58",
  "title": "Tu paies sûrement un abonnement que tu n'utilises plus",
- "caption": "Combien t'en as trouvé ? Écris le chiffre 👇 #argent #economies #astuce #budget #abonnement #fyp #pourtoi #foryou",
+ "caption": "Combien t'en as trouvé ? Écris le chiffre 👇 #fyp #pourtoi #foryou #argent #economies #budget #abonnement #resiliation #astuce",
  "texte_accroche": "Tu paies un truc que tu n'utilises plus 💸",
- "hero": {"couleur": "#22b3a0"},
+ "hero": {
+  "couleur": "#22b3a0"
+ },
  "beats": [
-  {"voice": "Tu paies sûrement un abonnement que tu n'utilises *plus*.",
-   "tel": {"type": "notif", "app": "BANQUE", "titre": "Prélèvement effectué", "texte": "Appli sport premium · 9,99 €", "heure": "18:42", "date": "jeudi 26 novembre"}},
-  {"voice": "Ouvre ton appli bancaire et regarde les prélèvements du mois dernier.",
-   "vue": "salon", "hero": "debout"},
-  {"voice": "Streaming, appli de sport, stockage en ligne, essai gratuit oublié.",
-   "tel": {"type": "sms", "de": "Relevé du mois", "lignes": ["Streaming · 13,49 €", "Appli sport · 9,99 €", "Stockage photos · 2,99 €", "Essai gratuit · 7,99 €"], "moi": []}},
-  {"voice": "Pose-toi une seule question pour chacun.",
-   "regle": {"n": 1, "txt": "Je m'en suis servi\nce mois-ci ?"}},
-  {"voice": "Si la réponse est non, tu le *résilies*. Ce soir.",
-   "regle": {"n": 2, "txt": "Non ?\nJe résilie ce soir"}},
-  {"voice": "En France, un abonnement pris en ligne doit pouvoir se résilier en ligne, en quelques clics.",
-   "vue": "chambre", "hero": "debout"},
-  {"voice": "Combien tu en as trouvé ? Écris le #chiffre# en commentaire.",
-   "tel": {"type": "notif", "app": "BANQUE", "titre": "Abonnement résilié", "texte": "Appli sport premium · plus de prélèvement", "heure": "18:47", "date": "jeudi 26 novembre"}}
+  {
+   "voice": "Tu paies sûrement un abonnement que tu n'utilises *plus*.",
+   "tel": {
+    "type": "notif",
+    "app": "BANQUE",
+    "titre": "Prélèvement effectué",
+    "texte": "Appli sport premium · 9,99 €",
+    "heure": "9:58",
+    "date": "vendredi 27 novembre"
+   },
+   "retry": 1
+  },
+  {
+   "voice": "une plateforme de films, une application de sport, un stockage de photos.",
+   "tel": {
+    "type": "sms",
+    "de": "Relevé du mois",
+    "lignes": [
+     "Streaming · 13,49 €",
+     "Appli sport · 9,99 €",
+     "Stockage photos · 2,99 €",
+     "Essai gratuit · 7,99 €"
+    ],
+    "moi": [],
+    "rythme": 0.6
+   }
+  },
+  {
+   "voice": "Rien que ces quatre-là : trente-quatre euros par mois.",
+   "tel": {
+    "type": "notif",
+    "app": "CALCULATRICE",
+    "titre": "Total du mois",
+    "texte": "34,46 € de prélèvements",
+    "heure": "9:59",
+    "date": "vendredi 27 novembre"
+   }
+  },
+  {
+   "voice": "Sur une année, c'est plus de #quatre cents euros#.",
+   "vue": "salon",
+   "hero": "peur",
+   "cadre": "gros",
+   "retry": 1
+  },
+  {
+   "voice": "Première astuce : ouvre l'application de ta banque ce soir.",
+   "regle": {
+    "n": 1,
+    "txt": "Ouvre l'appli\nde ta banque"
+   },
+   "retry": 2
+  },
+  {
+   "voice": "Regarde les prélèvements des trois derniers mois.",
+   "tel": {
+    "type": "sms",
+    "de": "Prélèvements · 3 mois",
+    "lignes": [
+     "Loyer · 01/11",
+     "Streaming · 05/11",
+     "Appli sport · 08/11",
+     "Stockage photos · 12/11",
+     "Essai gratuit · 15/11"
+    ],
+    "moi": [],
+    "rythme": 0.25
+   }
+  },
+  {
+   "voice": "Deuxième astuce : note chaque abonnement sur une liste.",
+   "regle": {
+    "n": 2,
+    "txt": "Note chaque\nabonnement"
+   }
+  },
+  {
+   "voice": "Le nom, le prix, et la dernière fois que tu l'as utilisé.",
+   "tel": {
+    "type": "sms",
+    "de": "Ma liste",
+    "lignes": [
+     "Streaming · 13,49 € · hier",
+     "Appli sport · 9,99 € · juin",
+     "Stockage · 2,99 € · ?",
+     "Essai gratuit · 7,99 € · jamais"
+    ],
+    "moi": [],
+    "rythme": 0.6
+   }
+  },
+  {
+   "voice": "Troisième astuce : je m'en suis servi ce mois-ci ?",
+   "regle": {
+    "n": 3,
+    "txt": "Je m'en sers\nvraiment ?"
+   }
+  },
+  {
+   "voice": "Si c'est non, tu le *résilies*, ce soir même.",
+   "vue": "salon",
+   "hero": "marche"
+  },
+  {
+   "voice": "Quatrième astuce : résilier en ligne.",
+   "regle": {
+    "n": 4,
+    "txt": "Résilie\nen ligne"
+   }
+  },
+  {
+   "voice": "En France, depuis juin deux mille vingt-trois, un abonnement pris en ligne se résilie aussi en ligne.",
+   "vue": "chambre",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Cherche le bouton Résilier ou Mon abonnement dans ton compte.",
+   "tel": {
+    "type": "notif",
+    "app": "ABONNEMENT",
+    "titre": "Mon abonnement",
+    "texte": "Bouton : Résilier mon contrat",
+    "heure": "10:01",
+    "date": "vendredi 27 novembre"
+   },
+   "lu": "Cherche le bouton « Résilier » ou « Mon abonnement » dans ton compte."
+  },
+  {
+   "voice": "Dernière astuce : attention aux essais gratuits.",
+   "regle": {
+    "n": 5,
+    "txt": "Les essais\ngratuits"
+   }
+  },
+  {
+   "voice": "Dès le premier jour, mets un rappel la veille de la fin.",
+   "tel": {
+    "type": "notif",
+    "app": "CALENDRIER",
+    "titre": "Rappel",
+    "texte": "Fin de l'essai gratuit demain",
+    "heure": "10:02",
+    "date": "vendredi 27 novembre"
+   }
+  },
+  {
+   "voice": "Combien tu en as trouvé ? Écris le #chiffre# en commentaire.",
+   "tel": {
+    "type": "notif",
+    "app": "BANQUE",
+    "titre": "Abonnement résilié",
+    "texte": "Appli sport premium · plus de prélèvement",
+    "heure": "10:03",
+    "date": "vendredi 27 novembre"
+   }
+  }
  ]
 }

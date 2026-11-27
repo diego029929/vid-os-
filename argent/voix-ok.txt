@@ -1,0 +1,16 @@
+Test du 27/11/2026 (phrase : « Tu paies sûrement un abonnement que tu n'utilises plus. Ouvre ton appli bancaire. »)
+Chatterbox multilingue, ref-narrateur-grave.wav, CFG 0.5, FX aucun, tempo 1.05.
+- EXAG 0.35 : texte juste (Whisper medium), mais plus plat (variation de hauteur ≈ 9 Hz).
+- EXAG 0.5  : texte juste, plus vivant (variation ≈ 14 Hz), débit régulier, pas de mot avalé.  ← GARDÉ
+- EXAG 0.7  : « appli » entendu « appui » → mal lu.
+Réglage gardé : VOICE_EXAG=0.5 (celui de ROUTINE-ARGENT.md § 1).
+Note : la graine Chatterbox dépend du texte + "retry" du plan, donc --verif refait 3 fois le même tirage ;
+pour relancer une phrase ratée, mettre "retry": 1 (puis 2) sur le plan, ou changer la tournure.
+
+27/11 après le 1er rendu : à VOICE_TEMPO=1.05 la vidéo faisait 81 s → passé à VOICE_TEMPO=1.15 et ≈ 900-1 000
+caractères lus (16-18 plans) pour tenir 56-62 s. Le son final sort à ≈ -17 LUFS : repasser l'audio dans
+`loudnorm=I=-14:TP=-1.5` (vidéo copiée) avant de publier.
+Mots que Chatterbox lit mal : « appli » (entendu « appui ») → dire « application » ; « compare toujours au même
+poids » / « le même poids » (entendu « qu'on part », « manopois ») → « la même quantité » ; « essai gratuit » en
+fin d'énumération (« et c'est gratuit »). Certaines phrases ont un bruit parasite avant/après les mots : le
+contrôle Whisper doit aussi regarder le son avant le 1er mot et après le dernier, pas seulement le texte.

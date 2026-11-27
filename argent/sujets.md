@@ -3,13 +3,13 @@
 Cocher `[x]` + date quand c'est publié. Source à noter pour tout chiffre, loi ou date.
 
 ## Premier lot (scripts écrits le 26/11, doc « Kit vidéos astuces argent »)
-- [ ] Les abonnements oubliés : trier les prélèvements, résiliation en ligne « en trois clics » pour un contrat pris en ligne (loi du 16/08/2022, en vigueur le 01/06/2023, service-public.fr) — modèle `episodes/argent/argent-001.json`
+- [x] (27/11, 10:00, argent-001) Les abonnements oubliés : trier les prélèvements, résiliation en ligne « en trois clics » pour un contrat pris en ligne (loi du 16/08/2022, en vigueur le 01/06/2023, service-public.fr) — modèle `episodes/argent/argent-001.json`
 - [ ] La règle des 30 jours avant un achat non essentiel
 - [ ] Le piège des rayons : produits les plus chers à hauteur des yeux
-- [ ] Comparer le prix au kilo / au litre (affichage obligatoire en magasin)
+- [x] (27/11, 18:00, argent-002) Comparer le prix au kilo / au litre (affichage obligatoire en magasin ; source : DGCCRF, economie.gouv.fr « L'information sur les prix » + service-public.fr F34344 « Affichage des prix ») — exemples chiffrés inventés et présentés comme « exemple »
 - [ ] Jamais faire les courses le ventre vide + liste
 - [ ] La règle 50/30/20 (commencer petit si 20 % c'est trop)
-- [ ] Les appareils en veille + multiprise à interrupteur
+- [x] (27/11, 20:00, argent-003) Les appareils en veille + multiprise à interrupteur (source : ADEME, agirpourlatransition.ademe.fr « 20 solutions pour réduire sa consommation d'électricité » ; « jusqu'à 15 % de la facture d'électricité hors chauffage et eau chaude » : economie.gouv.fr/particuliers/reduire-facture-electricite, qui cite l'Ademe)
 
 ## Idées à faire
 - [ ] Le « prix barré » : comparer au prix réel des semaines d'avant

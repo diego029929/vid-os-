@@ -1,6 +1,55 @@
 {
  "zernio_tiktok_account": "6aef19cf4f6bb8199749fd84",
- "creneaux": ["10:00", "18:00", "20:00"],
- "next_episode": 1,
- "published": []
+ "creneaux": [
+  "10:00",
+  "18:00",
+  "20:00"
+ ],
+ "next_episode": 4,
+ "published": [
+  {
+   "file": "episodes/argent/argent-001.json",
+   "date": "2026-11-27",
+   "creneau": "10:00",
+   "sujet": "abonnements oubliés",
+   "title": "Tu paies sûrement un abonnement que tu n'utilises plus",
+   "accroche": "notif_banque",
+   "texte_accroche": "Tu paies un truc que tu n'utilises plus 💸",
+   "zernio_id": "6b09220441bcbed0ddad16d2",
+   "format": "astuce",
+   "ambiance": "jour"
+  },
+  {
+   "file": "episodes/argent/argent-002.json",
+   "date": "2026-11-27",
+   "creneau": "18:00",
+   "sujet": "prix au kilo / lots",
+   "title": "Le grand format n'est pas toujours le moins cher",
+   "accroche": "etiquette_prix",
+   "texte_accroche": "Le gros paquet, pas toujours moins cher 🛒",
+   "zernio_id": "6b0923d4b4e7248c9fa4414d",
+   "format": "astuce",
+   "ambiance": "jour"
+  },
+  {
+   "file": "episodes/argent/argent-003.json",
+   "date": "2026-11-27",
+   "creneau": "20:00",
+   "sujet": "appareils en veille",
+   "title": "Tes appareils éteints te coûtent encore de l'argent",
+   "accroche": "notif_facture",
+   "texte_accroche": "Éteint… mais il consomme encore 💡",
+   "zernio_id": "6b0922f652810da635620945",
+   "format": "astuce",
+   "ambiance": "jour"
+  }
+ ],
+ "voix": {
+  "VOICE": "chatterbox",
+  "VOICE_REF": "ref-narrateur-grave.wav",
+  "VOICE_EXAG": 0.5,
+  "VOICE_CFG": 0.5,
+  "VOICE_FX": "aucun",
+  "VOICE_TEMPO": 1.15
+ }
 }

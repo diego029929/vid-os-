@@ -1,0 +1,156 @@
+{
+ "style": "nuit",
+ "theme": "argent",
+ "format": "astuce",
+ "ambiance": "jour",
+ "accroche": "etiquette_prix",
+ "series": "ASTUCES ARGENT",
+ "etiquette": "ASTUCE",
+ "heure": "17:58:00",
+ "heure_tel": "17:58",
+ "title": "Le grand format n'est pas toujours le moins cher",
+ "caption": "Tu regardais déjà le prix au kilo ? Oui ou non 🛒 #fyp #pourtoi #foryou #economies #bonplan #courses #prixaukilo #supermarche #astuce",
+ "texte_accroche": "Le gros paquet, pas toujours moins cher 🛒",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Le grand format n'est pas toujours le plus *économique*.",
+   "tel": {
+    "type": "sms",
+    "de": "Étiquette du rayon",
+    "lignes": [
+     "Café moulu · 1 kg",
+     "13,90 €",
+     "Prix au kg : 13,90 €"
+    ],
+    "moi": []
+   }
+  },
+  {
+   "voice": "On croit que le gros paquet revient forcément moins cher.",
+   "vue": "cuisine",
+   "hero": "debout"
+  },
+  {
+   "voice": "Première astuce : cherche le prix au kilo, écrit en petit sous le prix.",
+   "regle": {
+    "n": 1,
+    "txt": "Le prix\nau kilo"
+   },
+   "retry": 1
+  },
+  {
+   "voice": "Il est sur l'étiquette, au kilo ou au litre.",
+   "tel": {
+    "type": "sms",
+    "de": "Étiquette du rayon",
+    "lignes": [
+     "Café moulu · 250 g",
+     "3,20 €",
+     "Prix au kg : 12,80 €"
+    ],
+    "moi": []
+   }
+  },
+  {
+   "voice": "En France, le magasin doit l'afficher pour la plupart des produits.",
+   "vue": "cuisine",
+   "hero": "debout"
+  },
+  {
+   "voice": "Deuxième astuce : compare les prix pour la même quantité.",
+   "regle": {
+    "n": 2,
+    "txt": "Même quantité,\nmême calcul"
+   }
+  },
+  {
+   "voice": "Le petit paquet de café : douze euros quatre-vingts le kilo.",
+   "tel": {
+    "type": "sms",
+    "de": "Petit paquet",
+    "lignes": [
+     "250 g · 3,20 €",
+     "= 12,80 € le kilo"
+    ],
+    "moi": []
+   }
+  },
+  {
+   "voice": "Le grand paquet : treize euros quatre-vingt-dix le kilo.",
+   "tel": {
+    "type": "sms",
+    "de": "Grand paquet",
+    "lignes": [
+     "1 kg · 13,90 €",
+     "= 13,90 € le kilo"
+    ],
+    "moi": []
+   }
+  },
+  {
+   "voice": "Dans cet exemple, le grand format coûte plus cher au kilo.",
+   "vue": "cuisine",
+   "hero": "peur"
+  },
+  {
+   "voice": "Troisième astuce : méfie-toi des lots.",
+   "regle": {
+    "n": 3,
+    "txt": "Méfie-toi\ndes lots"
+   }
+  },
+  {
+   "voice": "Trois yaourts pour cinq euros quarante, ça a l'air d'une affaire.",
+   "tel": {
+    "type": "sms",
+    "de": "Rayon frais",
+    "lignes": [
+     "Lot de 3 · 5,40 €",
+     "À l'unité · 1,70 €"
+    ],
+    "moi": []
+   }
+  },
+  {
+   "voice": "Mais à l'unité, c'est un euro soixante-dix. Trois fois, ça fait cinq euros dix.",
+   "tel": {
+    "type": "sms",
+    "de": "Calcul",
+    "lignes": [
+     "3 × 1,70 € = 5,10 €",
+     "Lot : 5,40 €",
+     "Le lot coûte plus cher"
+    ],
+    "moi": []
+   }
+  },
+  {
+   "voice": "Quatrième astuce : sors la calculatrice de ton téléphone.",
+   "regle": {
+    "n": 4,
+    "txt": "Sors la\ncalculatrice"
+   }
+  },
+  {
+   "voice": "Dix secondes devant le rayon, sur les produits que tu achètes le plus.",
+   "vue": "rue",
+   "hero": "marche"
+  },
+  {
+   "voice": "Tu regardais déjà le prix au kilo ? Réponds par #oui# ou par #non#.",
+   "tel": {
+    "type": "sms",
+    "de": "Étiquette du rayon",
+    "lignes": [
+     "Café moulu · 1 kg",
+     "13,90 €",
+     "Prix au kg : 13,90 €"
+    ],
+    "moi": []
+   }
+  }
+ ]
+}
