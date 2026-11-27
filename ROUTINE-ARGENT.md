@@ -23,6 +23,7 @@
   ```bash
   export VOICE=chatterbox VOICE_REF=ref-narrateur-grave.wav VOICE_EXAG=0.5 VOICE_CFG=0.5 VOICE_FX=aucun VOICE_TEMPO=1.15
   ```
+- **Lire `argent/voix-ok.txt` avant d'écrire** (mots que Chatterbox lit mal, durée, volume -14 LUFS à refaire après le rendu).
 - **Jamais** Pocket `estelle` (Fio : « nulle »), jamais Piper, jamais une voix payante ou clonée d'un vrai créateur.
 - Le 1er jour (fichier `argent/voix-ok.txt` absent) : générer la phrase « Tu paies sûrement un abonnement que tu
   n'utilises plus. Ouvre ton appli bancaire. » avec ces réglages puis avec `VOICE_EXAG=0.35` et `0.7`,
