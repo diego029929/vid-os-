@@ -1,0 +1,128 @@
+{
+ "style": "nuit",
+ "theme": "argent",
+ "format": "astuce",
+ "ambiance": "jour",
+ "accroche": "notif_thermostat",
+ "series": "ASTUCES ARGENT",
+ "etiquette": "ASTUCE",
+ "heure": "19:58:00",
+ "heure_tel": "19:58",
+ "title": "Un degré en moins, sept euros gardés sur cent",
+ "caption": "Ton thermostat est réglé sur combien ? Écris le chiffre 🌡️ #fyp #pourtoi #foryou #economies #astuce #chauffage #facture #hiver #economiedenergie",
+ "texte_accroche": "1 degré en moins = 7 € sur 100 🌡️",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Un degré en moins, c'est sept euros gardés sur *cent*.",
+   "tel": {
+    "type": "notif",
+    "app": "THERMOSTAT",
+    "titre": "Chauffage en marche",
+    "texte": "Température réglée : 21 °C",
+    "heure": "19:58",
+    "date": "samedi 28 novembre"
+   },
+   "cadre": "zoom"
+  },
+  {
+   "voice": "D'après le gouvernement, un degré en moins, c'est #sept pour cent# d'énergie en moins.",
+   "tel": {
+    "type": "notif",
+    "app": "ÉCONOMIES",
+    "titre": "1 °C en moins",
+    "texte": "= 7 % d'énergie économisée · source : ecologie.gouv.fr",
+    "heure": "19:59",
+    "date": "samedi 28 novembre"
+   },
+   "retry": 1
+  },
+  {
+   "voice": "Et sur mille euros d'énergie par an, environ six cent soixante partent dans le chauffage.",
+   "vue": "salon",
+   "hero": "debout"
+  },
+  {
+   "voice": "Première astuce : dix-neuf degrés maximum dans les pièces à vivre.",
+   "regle": {
+    "n": 1,
+    "txt": "19 °C\nmaximum"
+   }
+  },
+  {
+   "voice": "C'est le réglage conseillé. Avec un pull en plus, tu ne sens presque pas la différence.",
+   "vue": "salon",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Deuxième astuce : baisse le chauffage quand tu pars de chez toi.",
+   "regle": {
+    "n": 2,
+    "txt": "Baisse en\npartant"
+   },
+   "retry": 1
+  },
+  {
+   "voice": "Et aussi la nuit. Un thermostat programmable peut le faire tout seul.",
+   "vue": "chambre",
+   "hero": "debout"
+  },
+  {
+   "voice": "Bien réglé, il peut faire baisser la consommation jusqu'à #quinze pour cent# par an.",
+   "tel": {
+    "type": "notif",
+    "app": "THERMOSTAT",
+    "titre": "Programme activé",
+    "texte": "Nuit et absence : température plus basse",
+    "heure": "20:00",
+    "date": "samedi 28 novembre"
+   },
+   "retry": 1
+  },
+  {
+   "voice": "Troisième astuce : le soir, ferme les volets et les rideaux épais.",
+   "regle": {
+    "n": 3,
+    "txt": "Ferme les\nvolets"
+   }
+  },
+  {
+   "voice": "Ça garde la chaleur à l'intérieur.",
+   "vue": "salon",
+   "hero": "debout"
+  },
+  {
+   "voice": "Dernière astuce : si tes radiateurs marchent à l'eau, purge-les.",
+   "regle": {
+    "n": 4,
+    "txt": "Purge les\nradiateurs"
+   }
+  },
+  {
+   "voice": "Avec une petite clé, on enlève l'air coincé dedans, et ils chauffent mieux.",
+   "vue": "couloir",
+   "hero": "debout"
+  },
+  {
+   "voice": "Et évite les petits chauffages d'appoint branchés en plus : ils consomment beaucoup.",
+   "vue": "chambre",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Chez toi, le thermostat est réglé sur combien ? Écris le #chiffre#.",
+   "tel": {
+    "type": "notif",
+    "app": "THERMOSTAT",
+    "titre": "Chauffage en marche",
+    "texte": "Température réglée : 21 °C",
+    "heure": "19:58",
+    "date": "samedi 28 novembre"
+   },
+   "cadre": "zoom"
+  }
+ ]
+}

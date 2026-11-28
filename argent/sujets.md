@@ -12,18 +12,18 @@ Cocher `[x]` + date quand c'est publié. Source à noter pour tout chiffre, loi 
 - [x] (27/11, 20:00, argent-003) Les appareils en veille + multiprise à interrupteur (source : ADEME, agirpourlatransition.ademe.fr « 20 solutions pour réduire sa consommation d'électricité » ; « jusqu'à 15 % de la facture d'électricité hors chauffage et eau chaude » : economie.gouv.fr/particuliers/reduire-facture-electricite, qui cite l'Ademe)
 
 ## Idées à faire
-- [ ] Le « prix barré » : comparer au prix réel des semaines d'avant
+- [x] (28/11, 10:00, argent-004) Le « prix barré » : prix de référence = prix pratiqué au moins 30 jours avant la promo ; réductions successives = prix d'avant la 1re baisse (source : service-public.fr F34344 « Affichage des prix : règles à respecter ») ; SignalConso = site officiel de signalement
 - [ ] Payer en liquide pour les sorties : on dépense moins (enveloppe)
 - [ ] Forfait mobile : comparer chaque année, les petits forfaits suffisent souvent
 - [ ] Chèque énergie : vérifier si on y a droit (service-public.fr)
 - [ ] Mesurer sa conso d'eau : douche plutôt que bain, mousseur sur le robinet
-- [ ] Les dates : « à consommer de préférence avant » ≠ « à consommer jusqu'au » (anti-gaspi)
+- [x] (28/11, 18:00, argent-005) Les dates : DLC « à consommer jusqu'au » (limite impérative : viandes, poissons, charcuterie, plats cuisinés réfrigérés, certains produits laitiers) ≠ DDM « à consommer de préférence avant » (pas dangereux après, peut perdre goût ; café, lait, jus, gâteaux secs, conserves, pâtes, riz, sucre, farine). Source : economie.gouv.fr/particuliers/date-limite-consommation-dlc-ddm
 - [ ] Applis anti-gaspi (paniers d'invendus) — sans citer de marque en mal
 - [ ] Assurances en double (carte bancaire, téléphone, box)
 - [ ] Les frais bancaires : lire sa plaquette tarifaire, comparer
 - [ ] Le Livret A : épargne de précaution, taux fixé par l'État (vérifier le taux du jour)
 - [ ] Cuisiner en grande quantité le dimanche (batch cooking)
 - [ ] Les marques distributeur souvent faites par les mêmes usines (formuler prudemment, pas de marque citée)
-- [ ] Baisser le chauffage d'1 °C : économie d'énergie (chiffre ADEME à vérifier)
+- [x] (28/11, 20:00, argent-006) Baisser le chauffage d'1 °C = 7 % d'énergie en moins ; 19 °C maximum ; thermostat programmable jusqu'à 15 %/an ; volets/rideaux épais ; purger les radiateurs ; éviter les chauffages d'appoint. Source : ecologie.gouv.fr « Chaque geste compte » (version FALC, PDF)
 - [ ] Vendre ce qu'on n'utilise plus (vêtements, objets)
 - [ ] Bibliothèque municipale : livres, films, jeux gratuits ou presque

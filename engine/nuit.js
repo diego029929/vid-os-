@@ -325,6 +325,8 @@ window.seek = function (t) {
     const c = P.cadre || (P.tel ? 'tel' : 'large');
     if (c == 'gros') { zoom = 1.9 + 0.05 * lt; ox = VW * (P.hx ?? 0.5); oy = (P.hy ?? 1260) - 40; }
     else if (c == 'tel') { zoom = 0.9 + 0.1 * intro + 0.01 * lt; }
+    // 28/11 (argent) : « zoom » = gros plan sur la notification du téléphone, lisible dès la 1re seconde
+    else if (c == 'zoom') { zoom = 1.72 + 0.14 * intro + 0.01 * lt; oy = 905; }
     else if (c == 'pousse') { zoom = 1 + 0.06 * lt; ox = VW * (P.hx ?? 0.5); oy = 1250; }
     else zoom = 1.02 + 0.015 * lt;
     if (P.hero == 'sonne' && c != 'gros') zoom = 1 + 0.25 * ease(lt / 1.5), ox = VW * (P.hx ?? 0.5), oy = 1250;

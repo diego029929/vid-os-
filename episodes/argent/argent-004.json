@@ -1,0 +1,135 @@
+{
+ "style": "nuit",
+ "theme": "argent",
+ "format": "astuce",
+ "ambiance": "jour",
+ "accroche": "notif_promo",
+ "series": "ASTUCES ARGENT",
+ "etiquette": "ASTUCE",
+ "heure": "09:58:00",
+ "heure_tel": "09:58",
+ "title": "Ce prix barré, il est peut-être faux",
+ "caption": "Déjà acheté une promo qui n'en était pas une ? Oui ou non 🏷️ #fyp #pourtoi #foryou #bonplan #economies #astuce #blackfriday #promo #prixbarre",
+ "texte_accroche": "Ce prix barré est peut-être faux 🏷️",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Ce prix barré, il est peut-être *faux*.",
+   "tel": {
+    "type": "notif",
+    "app": "PROMO",
+    "titre": "−50 % · Black Friday",
+    "texte": "Casque audio : 59,99 € au lieu de 119,99 €",
+    "heure": "9:58",
+    "date": "samedi 28 novembre"
+   },
+   "cadre": "zoom"
+  },
+  {
+   "voice": "Ce week-end, les promos de fin novembre sont partout.",
+   "vue": "rue",
+   "hero": "marche"
+  },
+  {
+   "voice": "Mais un gros pourcentage, ça ne veut pas dire une bonne affaire.",
+   "vue": "salon",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Première astuce : vérifie le prix barré.",
+   "regle": {
+    "n": 1,
+    "txt": "Le vrai\nprix d'avant"
+   }
+  },
+  {
+   "voice": "En France, le prix barré doit être le prix le plus bas des #trente derniers jours# avant la promo.",
+   "tel": {
+    "type": "notif",
+    "app": "RÈGLE",
+    "titre": "Le prix barré",
+    "texte": "= le prix le plus bas des 30 jours avant la promo · source : code de la consommation",
+    "heure": "10:00",
+    "date": "samedi 28 novembre"
+   }
+  },
+  {
+   "voice": "Et si le prix a baissé plusieurs fois, c'est le prix d'avant la première baisse qui compte.",
+   "vue": "salon",
+   "hero": "debout"
+  },
+  {
+   "voice": "Deuxième astuce : oublie le pourcentage, regarde le prix final.",
+   "regle": {
+    "n": 2,
+    "txt": "Regarde le\nprix final"
+   }
+  },
+  {
+   "voice": "Moins cinquante pour cent sur un prix trop haut, ça peut rester *cher*.",
+   "lu": "Moins cinquante pour cent sur un prix trop haut, ça peut rester cher.",
+   "vue": "chambre",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Troisième astuce : compare le même produit dans trois magasins.",
+   "regle": {
+    "n": 3,
+    "txt": "Compare\nailleurs"
+   }
+  },
+  {
+   "voice": "Même modèle, même référence, et pourtant le prix final change.",
+   "tel": {
+    "type": "sms",
+    "de": "Même casque (exemple)",
+    "lignes": [
+     "Magasin A · 59,99 €",
+     "Site B · 54,90 €",
+     "Magasin C · 64,99 €"
+    ],
+    "moi": [],
+    "rythme": 0.5
+   }
+  },
+  {
+   "voice": "Dernière astuce : mets l'article dans ton panier, et attends un jour.",
+   "regle": {
+    "n": 4,
+    "txt": "Attends\nun jour"
+   }
+  },
+  {
+   "voice": "Si tu en as encore besoin demain, tu l'achètes sans regret.",
+   "vue": "chambre",
+   "hero": "debout"
+  },
+  {
+   "voice": "Et si un prix barré te semble faux, tu peux le signaler à l'État, sur le site Signal Conso.",
+   "tel": {
+    "type": "notif",
+    "app": "SIGNALCONSO",
+    "titre": "Signaler un problème",
+    "texte": "Le site officiel de l'État pour signaler un souci avec un magasin",
+    "heure": "10:01",
+    "date": "samedi 28 novembre"
+   }
+  },
+  {
+   "voice": "Toi, tu as déjà acheté une promo qui n'en était pas une ? Réponds #oui# ou #non#.",
+   "tel": {
+    "type": "notif",
+    "app": "PROMO",
+    "titre": "−50 % · Black Friday",
+    "texte": "Casque audio : 59,99 € au lieu de 119,99 €",
+    "heure": "9:58",
+    "date": "samedi 28 novembre"
+   },
+   "cadre": "zoom"
+  }
+ ]
+}

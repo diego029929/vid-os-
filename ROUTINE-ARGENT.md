@@ -42,6 +42,8 @@ Modèle : `episodes/argent/argent-001.json`. Champs : `"style": "nuit"`, **`"the
 étiquette dorée « ASTUCE N° »), `"format": "astuce"`, `"ambiance": "jour"` (décors éclaircis), `"accroche"`.
 1. **1re seconde = un détail concret qui touche le portefeuille**, montré à l'écran : notification de banque,
    ticket de caisse, relevé, étiquette de prix (`tel` : `notif`, `sms` comme liste). Jamais un décor vide.
+   Depuis le 28/11 : 1er plan avec `"cadre": "zoom"` (gros plan sur la notification, lisible sur mobile ; le 27/11,
+   70 % des gens partaient avant 2 s avec la notification en petit). Le dernier plan reprend le même `tel` + `zoom` (boucle).
 2. 1re phrase lue ≤ 10 mots, commence à 0 s, tutoiement.
 3. 3 à 5 cartes `regle` (= « ASTUCE N° ») avec ≤ 6 mots chacune ; entre elles, 1 à 2 plans qui montrent l'astuce
    (exemple chiffré, écran de téléphone, décor). Un plan = 2 à 4 s : à 1 minute, il faut ≈ 18-25 plans pour garder

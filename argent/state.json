@@ -5,7 +5,7 @@
   "18:00",
   "20:00"
  ],
- "next_episode": 4,
+ "next_episode": 7,
  "published": [
   {
    "file": "episodes/argent/argent-001.json",
@@ -42,6 +42,45 @@
    "zernio_id": "6b0922f652810da635620945",
    "format": "astuce",
    "ambiance": "jour"
+  },
+  {
+   "file": "episodes/argent/argent-004.json",
+   "date": "2026-11-28",
+   "creneau": "10:00",
+   "sujet": "prix barrés / promos",
+   "title": "Ce prix barré, il est peut-être faux",
+   "accroche": "notif_promo",
+   "texte_accroche": "Ce prix barré est peut-être faux 🏷️",
+   "zernio_id": "6b0a5edb4b2df15c6e3fc1ff",
+   "format": "astuce",
+   "ambiance": "jour",
+   "cadre_accroche": "zoom"
+  },
+  {
+   "file": "episodes/argent/argent-005.json",
+   "date": "2026-11-28",
+   "creneau": "18:00",
+   "sujet": "DLC / DDM (dates sur les aliments)",
+   "title": "Tu jettes sûrement des pâtes encore bonnes",
+   "accroche": "notif_date",
+   "texte_accroche": "Date dépassée… mais encore bon ? 🍝",
+   "zernio_id": "6b0a67046b8a90c3c4fad020",
+   "format": "astuce",
+   "ambiance": "jour",
+   "cadre_accroche": "zoom"
+  },
+  {
+   "file": "episodes/argent/argent-006.json",
+   "date": "2026-11-28",
+   "creneau": "20:00",
+   "sujet": "chauffage (1 °C en moins)",
+   "title": "Un degré en moins, sept euros gardés sur cent",
+   "accroche": "notif_thermostat",
+   "texte_accroche": "1 degré en moins = 7 € sur 100 🌡️",
+   "zernio_id": "6b0a6c8e8b05506a21e12cb6",
+   "format": "astuce",
+   "ambiance": "jour",
+   "cadre_accroche": "zoom"
   }
  ],
  "voix": {

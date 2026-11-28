@@ -14,3 +14,13 @@ Mots que Chatterbox lit mal : « appli » (entendu « appui ») → dire « appl
 poids » / « le même poids » (entendu « qu'on part », « manopois ») → « la même quantité » ; « essai gratuit » en
 fin d'énumération (« et c'est gratuit »). Certaines phrases ont un bruit parasite avant/après les mots : le
 contrôle Whisper doit aussi regarder le son avant le 1er mot et après le dernier, pas seulement le texte.
+
+28/11 : nouveaux mots mal lus par Chatterbox (à éviter) : « comprends le prix » (→ « qu'on prend ») ; « Signal Conso » seul
+en fin de phrase (→ « console », ou « .com » avec retry 1) → « signaler à l'État, sur le site Signal Conso » passe ;
+« des pâtes encore bonnes » (→ « en carbone ») → « des pâtes qui sont encore bonnes » ; « jusqu'au. » en fin de groupe
+(→ « jusqu'où ») → « à consommer jusqu'au, puis la date » ; « mets devant » (→ « maille ») → « place devant » ;
+« gaspillage » (→ « casse-pillage ») ; « un degré en moins » au milieu d'une phrase (→ « au moins ») → retry 1 ;
+« les pièces où tu vis » (→ « au Tugis ») → « les pièces à vivre » ; « jusqu'à quinze » (→ « juste à ») → retry 1.
+Méthode qui a bien marché : pré-contrôler CHAQUE phrase avant le rendu (même graine que le rendu = texte + retry) avec
+Whisper medium, corriger, puis rendre une seule fois. Les chiffres que Whisper écrit en chiffres (« 7 % ») sont justes.
+Durée : ≈ 17 plans / 985 caractères = 72 s (trop long) ; 14-15 plans / 920-950 caractères = 58-65 s.

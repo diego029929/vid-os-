@@ -1,0 +1,148 @@
+{
+ "style": "nuit",
+ "theme": "argent",
+ "format": "astuce",
+ "ambiance": "jour",
+ "accroche": "notif_date",
+ "series": "ASTUCES ARGENT",
+ "etiquette": "ASTUCE",
+ "heure": "17:58:00",
+ "heure_tel": "17:58",
+ "title": "Tu jettes sûrement des pâtes qui sont encore bonnes",
+ "caption": "Combien de produits jetés trop tôt cette semaine ? Écris le chiffre 🍝 #fyp #pourtoi #foryou #economies #astuce #antigaspi #courses #dlc #budget",
+ "texte_accroche": "Date dépassée… mais encore bon ? 🍝",
+ "hero": {
+  "couleur": "#22b3a0"
+ },
+ "beats": [
+  {
+   "voice": "Tu jettes sûrement des pâtes qui sont encore *bonnes*.",
+   "tel": {
+    "type": "notif",
+    "app": "PLACARD",
+    "titre": "Date dépassée",
+    "texte": "Pâtes · à consommer de préférence avant le 12 novembre",
+    "heure": "17:58",
+    "date": "samedi 28 novembre"
+   },
+   "cadre": "zoom"
+  },
+  {
+   "voice": "Sur les emballages, il y a deux dates, et elles ne veulent pas dire la même chose.",
+   "vue": "cuisine",
+   "hero": "debout"
+  },
+  {
+   "voice": "Première astuce : repère la date stricte.",
+   "regle": {
+    "n": 1,
+    "txt": "À consommer\njusqu'au"
+   }
+  },
+  {
+   "voice": "Celle-là, c'est une limite stricte : une fois passée, on ne mange pas.",
+   "vue": "cuisine",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "On la trouve sur la viande, le poisson, la charcuterie et certains produits laitiers.",
+   "tel": {
+    "type": "sms",
+    "de": "Date stricte",
+    "lignes": [
+     "Viande",
+     "Poisson",
+     "Charcuterie",
+     "Plats cuisinés au frais",
+     "Certains produits laitiers"
+    ],
+    "moi": [],
+    "rythme": 0.5
+   }
+  },
+  {
+   "voice": "Deuxième astuce : repère la date souple.",
+   "regle": {
+    "n": 2,
+    "txt": "De préférence\navant"
+   }
+  },
+  {
+   "voice": "Là, c'est écrit : à consommer de préférence avant.",
+   "vue": "cuisine",
+   "hero": "debout"
+  },
+  {
+   "voice": "Après cette date, l'aliment ne devient pas *dangereux*.",
+   "lu": "Après cette date, l'aliment ne devient pas dangereux.",
+   "vue": "salon",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Il peut juste avoir perdu un peu de goût.",
+   "vue": "cuisine",
+   "hero": "debout"
+  },
+  {
+   "voice": "Ça concerne les pâtes, le riz, le café, le sucre, la farine, les gâteaux secs et les conserves.",
+   "tel": {
+    "type": "sms",
+    "de": "De préférence avant",
+    "lignes": [
+     "Pâtes · riz",
+     "Café · sucre",
+     "Farine",
+     "Gâteaux secs",
+     "Conserves"
+    ],
+    "moi": [],
+    "rythme": 0.5
+   }
+  },
+  {
+   "voice": "Troisième astuce : si c'est la date souple, regarde et sens le produit.",
+   "regle": {
+    "n": 3,
+    "txt": "Regarde\net sens"
+   }
+  },
+  {
+   "voice": "Si l'aspect et l'odeur sont normaux, tu peux en général le manger.",
+   "tel": {
+    "type": "notif",
+    "app": "ANTI-GASPI",
+    "titre": "Date dépassée ≠ danger",
+    "texte": "Après la date « de préférence avant », l'aliment peut être consommé · source : economie.gouv.fr",
+    "heure": "18:00",
+    "date": "samedi 28 novembre"
+   }
+  },
+  {
+   "voice": "Sauf une conserve toute gonflée : celle-là, tu la jettes.",
+   "vue": "cuisine",
+   "hero": "debout",
+   "cadre": "pousse"
+  },
+  {
+   "voice": "Dernière astuce : place devant les produits avec la date la plus proche.",
+   "regle": {
+    "n": 4,
+    "txt": "La date proche\ndevant"
+   }
+  },
+  {
+   "voice": "Combien de produits tu as jetés trop tôt cette semaine ? Écris le #chiffre#.",
+   "tel": {
+    "type": "notif",
+    "app": "PLACARD",
+    "titre": "Date dépassée",
+    "texte": "Pâtes · à consommer de préférence avant le 12 novembre",
+    "heure": "17:58",
+    "date": "samedi 28 novembre"
+   },
+   "cadre": "zoom"
+  }
+ ]
+}
